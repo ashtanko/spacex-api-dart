@@ -11,6 +11,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  api:
+    path: api
   flutter_bloc: ^8.0.1
   hydrated_bloc: ^8.1.0
   logger: ^1.1.0
