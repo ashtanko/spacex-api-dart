@@ -28,6 +28,8 @@ class CompanyInfo with _$CompanyInfo {
 
   factory CompanyInfo.fromJson(Map<String, dynamic> json) =>
       _$CompanyInfoFromJson(json);
+
+  String get getLocation => '${headquarters?.city}, ${headquarters?.state}';
 }
 
 @freezed

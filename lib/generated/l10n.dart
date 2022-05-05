@@ -179,6 +179,16 @@ class S {
       args: [],
     );
   }
+
+  /// `Founded in {founded} by {founder}`
+  String spacexCompanyFounded(Object founded, Object founder) {
+    return Intl.message(
+      'Founded in $founded by $founder',
+      name: 'spacexCompanyFounded',
+      desc: '',
+      args: [founded, founder],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

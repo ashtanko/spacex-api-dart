@@ -22,6 +22,8 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static String m0(id) => "Beispielartikel ${id}";
 
+  static String m1(founded, founder) => "Founded in ${founded} by ${founder}";
+
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "appTitle":
@@ -36,6 +38,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "lightThemeTitle": MessageLookupByLibrary.simpleMessage("Licht-Thema"),
         "messagesTitle": MessageLookupByLibrary.simpleMessage("Nachrichten"),
         "settingsTitle": MessageLookupByLibrary.simpleMessage("Einstellungen"),
+        "spacexCompanyFounded": m1,
         "systemThemeTitle":
             MessageLookupByLibrary.simpleMessage("System-Thema"),
         "themeTitle": MessageLookupByLibrary.simpleMessage("Thema"),

@@ -36,5 +36,6 @@
   "error": "Error",
   "@error": {},
   "emptyList": "Empty list",
-  "@emptyList": {}
+  "@emptyList": {},
+  "spacexCompanyFounded": "Founded in {founded} by {founder}"
 }
