@@ -1,5 +1,6 @@
 import 'package:flutter_bloc_app_template/index.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:sprintf/sprintf.dart';
 
 import '../helpers/data.dart';
 
@@ -28,11 +29,15 @@ void main() {
       var month = '${date.month}';
       if (date.month < 10) {
         month = '0${date.month}';
-      } else {
-        month = '${date.month}';
       }
 
-      final format = '${date.year}-$month-${date.day} 22:18:04Z';
+      var day = '${date.day}';
+      if (date.day < 10) {
+        day = '0${date.day}';
+      }
+
+      final format = sprintf('%d-%s-%s 22:18:04Z', [date.year, month, day]);
+
       final message = Email(
         sender: 'Ralph Edwards',
         subject: 'The results to our user testing',
