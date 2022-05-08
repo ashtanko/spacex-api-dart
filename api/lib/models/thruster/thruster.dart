@@ -1,3 +1,4 @@
+import 'package:api/models/unit/unit.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'thruster.freezed.dart';
@@ -20,16 +21,4 @@ class Thruster with _$Thruster {
 
   factory Thruster.fromJson(Map<String, dynamic> json) =>
       _$ThrusterFromJson(json);
-}
-
-@freezed
-class Thrust with _$Thrust {
-  const factory Thrust({
-    @Default(0.4) num kN,
-    @Default(90) num lbf,
-  }) = _Thrust;
-
-  const Thrust._();
-
-  factory Thrust.fromJson(Map<String, dynamic> json) => _$ThrustFromJson(json);
 }

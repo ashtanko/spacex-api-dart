@@ -90,23 +90,6 @@ class RocketVehicle with _$RocketVehicle {
 }
 
 @freezed
-class SecondStage with _$SecondStage {
-  const factory SecondStage({
-    @Default(Thrust()) Thrust thrust,
-    dynamic payloads,
-    @Default(false) bool reusable,
-    @Default(0) num engines,
-    @JsonKey(name: 'fuel_amount_tons') @Default(0) num fuelAmountTons,
-    @JsonKey(name: 'burn_time_sec') @Default(0) num burnTimeSec,
-  }) = _SecondStage;
-
-  const SecondStage._();
-
-  factory SecondStage.fromJson(Map<String, dynamic> json) =>
-      _$SecondStageFromJson(json);
-}
-
-@freezed
 class ShipVehicle with _$ShipVehicle {
   const factory ShipVehicle({
     required String id,

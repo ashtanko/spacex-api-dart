@@ -5,6 +5,43 @@ part 'unit.freezed.dart';
 part 'unit.g.dart';
 
 @freezed
+class CompositeFairing with _$CompositeFairing {
+  const factory CompositeFairing({
+    @JsonKey(name: 'height') Height? height,
+    @JsonKey(name: 'diameter') Diameter? diameter,
+  }) = _CompositeFairing;
+
+  const CompositeFairing._();
+
+  factory CompositeFairing.fromJson(Map<String, dynamic> json) =>
+      _$CompositeFairingFromJson(json);
+}
+
+@freezed
+class Thrust with _$Thrust {
+  const factory Thrust({
+    @JsonKey(name: 'kN') @Default(0) num kN,
+    @JsonKey(name: 'lbf') @Default(0) num lbf,
+  }) = _Thrust;
+
+  const Thrust._();
+
+  factory Thrust.fromJson(Map<String, dynamic> json) => _$ThrustFromJson(json);
+}
+
+@freezed
+class Height with _$Height {
+  const factory Height({
+    @JsonKey(name: 'meters') @Default(0) num meters,
+    @JsonKey(name: 'feet') @Default(0) num feet,
+  }) = _Height;
+
+  const Height._();
+
+  factory Height.fromJson(Map<String, dynamic> json) => _$HeightFromJson(json);
+}
+
+@freezed
 class Mass with _$Mass {
   const factory Mass({
     @JsonKey(name: 'kg') @Default(0) num kg,
@@ -45,10 +82,10 @@ class Diameter with _$Diameter {
 @freezed
 class PayloadWeight with _$PayloadWeight {
   const factory PayloadWeight({
-    @Default('') String id,
-    @Default('') String name,
-    @Default(0) num kg,
-    @Default(0) num lb,
+    @JsonKey(name: 'id') String? id,
+    @JsonKey(name: 'name') String? name,
+    @JsonKey(name: 'kg') @Default(0) num kg,
+    @JsonKey(name: 'lb') @Default(0) num lb,
   }) = _PayloadWeight;
 
   const PayloadWeight._();

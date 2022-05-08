@@ -6,6 +6,42 @@ part of 'unit.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
+_$_CompositeFairing _$$_CompositeFairingFromJson(Map<String, dynamic> json) =>
+    _$_CompositeFairing(
+      height: json['height'] == null
+          ? null
+          : Height.fromJson(json['height'] as Map<String, dynamic>),
+      diameter: json['diameter'] == null
+          ? null
+          : Diameter.fromJson(json['diameter'] as Map<String, dynamic>),
+    );
+
+Map<String, dynamic> _$$_CompositeFairingToJson(_$_CompositeFairing instance) =>
+    <String, dynamic>{
+      'height': instance.height,
+      'diameter': instance.diameter,
+    };
+
+_$_Thrust _$$_ThrustFromJson(Map<String, dynamic> json) => _$_Thrust(
+      kN: json['kN'] as num? ?? 0,
+      lbf: json['lbf'] as num? ?? 0,
+    );
+
+Map<String, dynamic> _$$_ThrustToJson(_$_Thrust instance) => <String, dynamic>{
+      'kN': instance.kN,
+      'lbf': instance.lbf,
+    };
+
+_$_Height _$$_HeightFromJson(Map<String, dynamic> json) => _$_Height(
+      meters: json['meters'] as num? ?? 0,
+      feet: json['feet'] as num? ?? 0,
+    );
+
+Map<String, dynamic> _$$_HeightToJson(_$_Height instance) => <String, dynamic>{
+      'meters': instance.meters,
+      'feet': instance.feet,
+    };
+
 _$_Mass _$$_MassFromJson(Map<String, dynamic> json) => _$_Mass(
       kg: json['kg'] as num? ?? 0,
       lb: json['lb'] as num? ?? 0,
@@ -40,8 +76,8 @@ Map<String, dynamic> _$$_DiameterToJson(_$_Diameter instance) =>
 
 _$_PayloadWeight _$$_PayloadWeightFromJson(Map<String, dynamic> json) =>
     _$_PayloadWeight(
-      id: json['id'] as String? ?? '',
-      name: json['name'] as String? ?? '',
+      id: json['id'] as String?,
+      name: json['name'] as String?,
       kg: json['kg'] as num? ?? 0,
       lb: json['lb'] as num? ?? 0,
     );

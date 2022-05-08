@@ -123,28 +123,6 @@ Map<String, dynamic> _$$_RocketVehicleToJson(_$_RocketVehicle instance) =>
       'engines': instance.engines,
     };
 
-_$_SecondStage _$$_SecondStageFromJson(Map<String, dynamic> json) =>
-    _$_SecondStage(
-      thrust: json['thrust'] == null
-          ? const Thrust()
-          : Thrust.fromJson(json['thrust'] as Map<String, dynamic>),
-      payloads: json['payloads'],
-      reusable: json['reusable'] as bool? ?? false,
-      engines: json['engines'] as num? ?? 0,
-      fuelAmountTons: json['fuel_amount_tons'] as num? ?? 0,
-      burnTimeSec: json['burn_time_sec'] as num? ?? 0,
-    );
-
-Map<String, dynamic> _$$_SecondStageToJson(_$_SecondStage instance) =>
-    <String, dynamic>{
-      'thrust': instance.thrust,
-      'payloads': instance.payloads,
-      'reusable': instance.reusable,
-      'engines': instance.engines,
-      'fuel_amount_tons': instance.fuelAmountTons,
-      'burn_time_sec': instance.burnTimeSec,
-    };
-
 _$_ShipVehicle _$$_ShipVehicleFromJson(Map<String, dynamic> json) =>
     _$_ShipVehicle(
       id: json['id'] as String,

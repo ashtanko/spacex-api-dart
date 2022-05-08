@@ -28,13 +28,3 @@ Map<String, dynamic> _$$_ThrusterToJson(_$_Thruster instance) =>
       'isp': instance.isp,
       'thrust': instance.thrust,
     };
-
-_$_Thrust _$$_ThrustFromJson(Map<String, dynamic> json) => _$_Thrust(
-      kN: json['kN'] as num? ?? 0.4,
-      lbf: json['lbf'] as num? ?? 90,
-    );
-
-Map<String, dynamic> _$$_ThrustToJson(_$_Thrust instance) => <String, dynamic>{
-      'kN': instance.kN,
-      'lbf': instance.lbf,
-    };
