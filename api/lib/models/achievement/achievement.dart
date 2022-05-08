@@ -1,7 +1,6 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'achievement.freezed.dart';
-
 part 'achievement.g.dart';
 
 /// Auxiliary model to storage specific SpaceX's achievements.

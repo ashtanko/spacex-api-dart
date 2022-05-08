@@ -42,10 +42,12 @@ const $CompositeFairing = _$CompositeFairingTearOff();
 mixin _$CompositeFairing {
   @JsonKey(name: 'height')
   Height? get height => throw _privateConstructorUsedError;
+
   @JsonKey(name: 'diameter')
   Diameter? get diameter => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+
   @JsonKey(ignore: true)
   $CompositeFairingCopyWith<CompositeFairing> get copyWith =>
       throw _privateConstructorUsedError;
@@ -56,11 +58,13 @@ abstract class $CompositeFairingCopyWith<$Res> {
   factory $CompositeFairingCopyWith(
           CompositeFairing value, $Res Function(CompositeFairing) then) =
       _$CompositeFairingCopyWithImpl<$Res>;
+
   $Res call(
       {@JsonKey(name: 'height') Height? height,
       @JsonKey(name: 'diameter') Diameter? diameter});
 
   $HeightCopyWith<$Res>? get height;
+
   $DiameterCopyWith<$Res>? get diameter;
 }
 
@@ -70,6 +74,7 @@ class _$CompositeFairingCopyWithImpl<$Res>
   _$CompositeFairingCopyWithImpl(this._value, this._then);
 
   final CompositeFairing _value;
+
   // ignore: unused_field
   final $Res Function(CompositeFairing) _then;
 
@@ -119,6 +124,7 @@ abstract class _$CompositeFairingCopyWith<$Res>
   factory _$CompositeFairingCopyWith(
           _CompositeFairing value, $Res Function(_CompositeFairing) then) =
       __$CompositeFairingCopyWithImpl<$Res>;
+
   @override
   $Res call(
       {@JsonKey(name: 'height') Height? height,
@@ -126,6 +132,7 @@ abstract class _$CompositeFairingCopyWith<$Res>
 
   @override
   $HeightCopyWith<$Res>? get height;
+
   @override
   $DiameterCopyWith<$Res>? get diameter;
 }
@@ -212,6 +219,7 @@ abstract class _CompositeFairing extends CompositeFairing {
   const factory _CompositeFairing(
       {@JsonKey(name: 'height') Height? height,
       @JsonKey(name: 'diameter') Diameter? diameter}) = _$_CompositeFairing;
+
   const _CompositeFairing._() : super._();
 
   factory _CompositeFairing.fromJson(Map<String, dynamic> json) =
@@ -220,9 +228,11 @@ abstract class _CompositeFairing extends CompositeFairing {
   @override
   @JsonKey(name: 'height')
   Height? get height;
+
   @override
   @JsonKey(name: 'diameter')
   Diameter? get diameter;
+
   @override
   @JsonKey(ignore: true)
   _$CompositeFairingCopyWith<_CompositeFairing> get copyWith =>
@@ -257,10 +267,12 @@ const $Thrust = _$ThrustTearOff();
 mixin _$Thrust {
   @JsonKey(name: 'kN')
   num get kN => throw _privateConstructorUsedError;
+
   @JsonKey(name: 'lbf')
   num get lbf => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+
   @JsonKey(ignore: true)
   $ThrustCopyWith<Thrust> get copyWith => throw _privateConstructorUsedError;
 }
@@ -269,6 +281,7 @@ mixin _$Thrust {
 abstract class $ThrustCopyWith<$Res> {
   factory $ThrustCopyWith(Thrust value, $Res Function(Thrust) then) =
       _$ThrustCopyWithImpl<$Res>;
+
   $Res call({@JsonKey(name: 'kN') num kN, @JsonKey(name: 'lbf') num lbf});
 }
 
@@ -277,6 +290,7 @@ class _$ThrustCopyWithImpl<$Res> implements $ThrustCopyWith<$Res> {
   _$ThrustCopyWithImpl(this._value, this._then);
 
   final Thrust _value;
+
   // ignore: unused_field
   final $Res Function(Thrust) _then;
 
@@ -302,6 +316,7 @@ class _$ThrustCopyWithImpl<$Res> implements $ThrustCopyWith<$Res> {
 abstract class _$ThrustCopyWith<$Res> implements $ThrustCopyWith<$Res> {
   factory _$ThrustCopyWith(_Thrust value, $Res Function(_Thrust) then) =
       __$ThrustCopyWithImpl<$Res>;
+
   @override
   $Res call({@JsonKey(name: 'kN') num kN, @JsonKey(name: 'lbf') num lbf});
 }
@@ -384,6 +399,7 @@ class _$_Thrust extends _Thrust {
 abstract class _Thrust extends Thrust {
   const factory _Thrust(
       {@JsonKey(name: 'kN') num kN, @JsonKey(name: 'lbf') num lbf}) = _$_Thrust;
+
   const _Thrust._() : super._();
 
   factory _Thrust.fromJson(Map<String, dynamic> json) = _$_Thrust.fromJson;
@@ -391,9 +407,11 @@ abstract class _Thrust extends Thrust {
   @override
   @JsonKey(name: 'kN')
   num get kN;
+
   @override
   @JsonKey(name: 'lbf')
   num get lbf;
+
   @override
   @JsonKey(ignore: true)
   _$ThrustCopyWith<_Thrust> get copyWith => throw _privateConstructorUsedError;
@@ -428,10 +446,12 @@ const $Height = _$HeightTearOff();
 mixin _$Height {
   @JsonKey(name: 'meters')
   num get meters => throw _privateConstructorUsedError;
+
   @JsonKey(name: 'feet')
   num get feet => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+
   @JsonKey(ignore: true)
   $HeightCopyWith<Height> get copyWith => throw _privateConstructorUsedError;
 }
@@ -440,6 +460,7 @@ mixin _$Height {
 abstract class $HeightCopyWith<$Res> {
   factory $HeightCopyWith(Height value, $Res Function(Height) then) =
       _$HeightCopyWithImpl<$Res>;
+
   $Res call(
       {@JsonKey(name: 'meters') num meters, @JsonKey(name: 'feet') num feet});
 }
@@ -449,6 +470,7 @@ class _$HeightCopyWithImpl<$Res> implements $HeightCopyWith<$Res> {
   _$HeightCopyWithImpl(this._value, this._then);
 
   final Height _value;
+
   // ignore: unused_field
   final $Res Function(Height) _then;
 
@@ -474,6 +496,7 @@ class _$HeightCopyWithImpl<$Res> implements $HeightCopyWith<$Res> {
 abstract class _$HeightCopyWith<$Res> implements $HeightCopyWith<$Res> {
   factory _$HeightCopyWith(_Height value, $Res Function(_Height) then) =
       __$HeightCopyWithImpl<$Res>;
+
   @override
   $Res call(
       {@JsonKey(name: 'meters') num meters, @JsonKey(name: 'feet') num feet});
@@ -559,6 +582,7 @@ abstract class _Height extends Height {
   const factory _Height(
       {@JsonKey(name: 'meters') num meters,
       @JsonKey(name: 'feet') num feet}) = _$_Height;
+
   const _Height._() : super._();
 
   factory _Height.fromJson(Map<String, dynamic> json) = _$_Height.fromJson;
@@ -566,9 +590,11 @@ abstract class _Height extends Height {
   @override
   @JsonKey(name: 'meters')
   num get meters;
+
   @override
   @JsonKey(name: 'feet')
   num get feet;
+
   @override
   @JsonKey(ignore: true)
   _$HeightCopyWith<_Height> get copyWith => throw _privateConstructorUsedError;
@@ -602,10 +628,12 @@ const $Mass = _$MassTearOff();
 mixin _$Mass {
   @JsonKey(name: 'kg')
   num get kg => throw _privateConstructorUsedError;
+
   @JsonKey(name: 'lb')
   num get lb => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+
   @JsonKey(ignore: true)
   $MassCopyWith<Mass> get copyWith => throw _privateConstructorUsedError;
 }
@@ -614,6 +642,7 @@ mixin _$Mass {
 abstract class $MassCopyWith<$Res> {
   factory $MassCopyWith(Mass value, $Res Function(Mass) then) =
       _$MassCopyWithImpl<$Res>;
+
   $Res call({@JsonKey(name: 'kg') num kg, @JsonKey(name: 'lb') num lb});
 }
 
@@ -622,6 +651,7 @@ class _$MassCopyWithImpl<$Res> implements $MassCopyWith<$Res> {
   _$MassCopyWithImpl(this._value, this._then);
 
   final Mass _value;
+
   // ignore: unused_field
   final $Res Function(Mass) _then;
 
@@ -647,6 +677,7 @@ class _$MassCopyWithImpl<$Res> implements $MassCopyWith<$Res> {
 abstract class _$MassCopyWith<$Res> implements $MassCopyWith<$Res> {
   factory _$MassCopyWith(_Mass value, $Res Function(_Mass) then) =
       __$MassCopyWithImpl<$Res>;
+
   @override
   $Res call({@JsonKey(name: 'kg') num kg, @JsonKey(name: 'lb') num lb});
 }
@@ -728,6 +759,7 @@ class _$_Mass extends _Mass {
 abstract class _Mass extends Mass {
   const factory _Mass(
       {@JsonKey(name: 'kg') num kg, @JsonKey(name: 'lb') num lb}) = _$_Mass;
+
   const _Mass._() : super._();
 
   factory _Mass.fromJson(Map<String, dynamic> json) = _$_Mass.fromJson;
@@ -735,9 +767,11 @@ abstract class _Mass extends Mass {
   @override
   @JsonKey(name: 'kg')
   num get kg;
+
   @override
   @JsonKey(name: 'lb')
   num get lb;
+
   @override
   @JsonKey(ignore: true)
   _$MassCopyWith<_Mass> get copyWith => throw _privateConstructorUsedError;
@@ -772,10 +806,12 @@ const $CubicLen = _$CubicLenTearOff();
 mixin _$CubicLen {
   @JsonKey(name: 'cubic_meters')
   num get meters => throw _privateConstructorUsedError;
+
   @JsonKey(name: 'cubic_feet')
   num get feet => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+
   @JsonKey(ignore: true)
   $CubicLenCopyWith<CubicLen> get copyWith =>
       throw _privateConstructorUsedError;
@@ -785,6 +821,7 @@ mixin _$CubicLen {
 abstract class $CubicLenCopyWith<$Res> {
   factory $CubicLenCopyWith(CubicLen value, $Res Function(CubicLen) then) =
       _$CubicLenCopyWithImpl<$Res>;
+
   $Res call(
       {@JsonKey(name: 'cubic_meters') num meters,
       @JsonKey(name: 'cubic_feet') num feet});
@@ -795,6 +832,7 @@ class _$CubicLenCopyWithImpl<$Res> implements $CubicLenCopyWith<$Res> {
   _$CubicLenCopyWithImpl(this._value, this._then);
 
   final CubicLen _value;
+
   // ignore: unused_field
   final $Res Function(CubicLen) _then;
 
@@ -820,6 +858,7 @@ class _$CubicLenCopyWithImpl<$Res> implements $CubicLenCopyWith<$Res> {
 abstract class _$CubicLenCopyWith<$Res> implements $CubicLenCopyWith<$Res> {
   factory _$CubicLenCopyWith(_CubicLen value, $Res Function(_CubicLen) then) =
       __$CubicLenCopyWithImpl<$Res>;
+
   @override
   $Res call(
       {@JsonKey(name: 'cubic_meters') num meters,
@@ -906,6 +945,7 @@ abstract class _CubicLen extends CubicLen {
   const factory _CubicLen(
       {@JsonKey(name: 'cubic_meters') num meters,
       @JsonKey(name: 'cubic_feet') num feet}) = _$_CubicLen;
+
   const _CubicLen._() : super._();
 
   factory _CubicLen.fromJson(Map<String, dynamic> json) = _$_CubicLen.fromJson;
@@ -913,9 +953,11 @@ abstract class _CubicLen extends CubicLen {
   @override
   @JsonKey(name: 'cubic_meters')
   num get meters;
+
   @override
   @JsonKey(name: 'cubic_feet')
   num get feet;
+
   @override
   @JsonKey(ignore: true)
   _$CubicLenCopyWith<_CubicLen> get copyWith =>
@@ -948,9 +990,11 @@ const $Diameter = _$DiameterTearOff();
 /// @nodoc
 mixin _$Diameter {
   num get meters => throw _privateConstructorUsedError;
+
   num get feet => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+
   @JsonKey(ignore: true)
   $DiameterCopyWith<Diameter> get copyWith =>
       throw _privateConstructorUsedError;
@@ -960,6 +1004,7 @@ mixin _$Diameter {
 abstract class $DiameterCopyWith<$Res> {
   factory $DiameterCopyWith(Diameter value, $Res Function(Diameter) then) =
       _$DiameterCopyWithImpl<$Res>;
+
   $Res call({num meters, num feet});
 }
 
@@ -968,6 +1013,7 @@ class _$DiameterCopyWithImpl<$Res> implements $DiameterCopyWith<$Res> {
   _$DiameterCopyWithImpl(this._value, this._then);
 
   final Diameter _value;
+
   // ignore: unused_field
   final $Res Function(Diameter) _then;
 
@@ -993,6 +1039,7 @@ class _$DiameterCopyWithImpl<$Res> implements $DiameterCopyWith<$Res> {
 abstract class _$DiameterCopyWith<$Res> implements $DiameterCopyWith<$Res> {
   factory _$DiameterCopyWith(_Diameter value, $Res Function(_Diameter) then) =
       __$DiameterCopyWithImpl<$Res>;
+
   @override
   $Res call({num meters, num feet});
 }
@@ -1072,14 +1119,17 @@ class _$_Diameter extends _Diameter {
 
 abstract class _Diameter extends Diameter {
   const factory _Diameter({num meters, num feet}) = _$_Diameter;
+
   const _Diameter._() : super._();
 
   factory _Diameter.fromJson(Map<String, dynamic> json) = _$_Diameter.fromJson;
 
   @override
   num get meters;
+
   @override
   num get feet;
+
   @override
   @JsonKey(ignore: true)
   _$DiameterCopyWith<_Diameter> get copyWith =>
@@ -1119,14 +1169,18 @@ const $PayloadWeight = _$PayloadWeightTearOff();
 mixin _$PayloadWeight {
   @JsonKey(name: 'id')
   String? get id => throw _privateConstructorUsedError;
+
   @JsonKey(name: 'name')
   String? get name => throw _privateConstructorUsedError;
+
   @JsonKey(name: 'kg')
   num get kg => throw _privateConstructorUsedError;
+
   @JsonKey(name: 'lb')
   num get lb => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+
   @JsonKey(ignore: true)
   $PayloadWeightCopyWith<PayloadWeight> get copyWith =>
       throw _privateConstructorUsedError;
@@ -1137,6 +1191,7 @@ abstract class $PayloadWeightCopyWith<$Res> {
   factory $PayloadWeightCopyWith(
           PayloadWeight value, $Res Function(PayloadWeight) then) =
       _$PayloadWeightCopyWithImpl<$Res>;
+
   $Res call(
       {@JsonKey(name: 'id') String? id,
       @JsonKey(name: 'name') String? name,
@@ -1150,6 +1205,7 @@ class _$PayloadWeightCopyWithImpl<$Res>
   _$PayloadWeightCopyWithImpl(this._value, this._then);
 
   final PayloadWeight _value;
+
   // ignore: unused_field
   final $Res Function(PayloadWeight) _then;
 
@@ -1187,6 +1243,7 @@ abstract class _$PayloadWeightCopyWith<$Res>
   factory _$PayloadWeightCopyWith(
           _PayloadWeight value, $Res Function(_PayloadWeight) then) =
       __$PayloadWeightCopyWithImpl<$Res>;
+
   @override
   $Res call(
       {@JsonKey(name: 'id') String? id,
@@ -1301,6 +1358,7 @@ abstract class _PayloadWeight extends PayloadWeight {
       @JsonKey(name: 'name') String? name,
       @JsonKey(name: 'kg') num kg,
       @JsonKey(name: 'lb') num lb}) = _$_PayloadWeight;
+
   const _PayloadWeight._() : super._();
 
   factory _PayloadWeight.fromJson(Map<String, dynamic> json) =
@@ -1309,15 +1367,19 @@ abstract class _PayloadWeight extends PayloadWeight {
   @override
   @JsonKey(name: 'id')
   String? get id;
+
   @override
   @JsonKey(name: 'name')
   String? get name;
+
   @override
   @JsonKey(name: 'kg')
   num get kg;
+
   @override
   @JsonKey(name: 'lb')
   num get lb;
+
   @override
   @JsonKey(ignore: true)
   _$PayloadWeightCopyWith<_PayloadWeight> get copyWith =>
@@ -1351,9 +1413,11 @@ const $Isp = _$IspTearOff();
 mixin _$Isp {
   @JsonKey(name: 'sea_level')
   num get seaLevel => throw _privateConstructorUsedError;
+
   num get vacuum => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+
   @JsonKey(ignore: true)
   $IspCopyWith<Isp> get copyWith => throw _privateConstructorUsedError;
 }
@@ -1362,6 +1426,7 @@ mixin _$Isp {
 abstract class $IspCopyWith<$Res> {
   factory $IspCopyWith(Isp value, $Res Function(Isp) then) =
       _$IspCopyWithImpl<$Res>;
+
   $Res call({@JsonKey(name: 'sea_level') num seaLevel, num vacuum});
 }
 
@@ -1370,6 +1435,7 @@ class _$IspCopyWithImpl<$Res> implements $IspCopyWith<$Res> {
   _$IspCopyWithImpl(this._value, this._then);
 
   final Isp _value;
+
   // ignore: unused_field
   final $Res Function(Isp) _then;
 
@@ -1395,6 +1461,7 @@ class _$IspCopyWithImpl<$Res> implements $IspCopyWith<$Res> {
 abstract class _$IspCopyWith<$Res> implements $IspCopyWith<$Res> {
   factory _$IspCopyWith(_Isp value, $Res Function(_Isp) then) =
       __$IspCopyWithImpl<$Res>;
+
   @override
   $Res call({@JsonKey(name: 'sea_level') num seaLevel, num vacuum});
 }
@@ -1475,6 +1542,7 @@ class _$_Isp extends _Isp {
 abstract class _Isp extends Isp {
   const factory _Isp({@JsonKey(name: 'sea_level') num seaLevel, num vacuum}) =
       _$_Isp;
+
   const _Isp._() : super._();
 
   factory _Isp.fromJson(Map<String, dynamic> json) = _$_Isp.fromJson;
@@ -1482,8 +1550,10 @@ abstract class _Isp extends Isp {
   @override
   @JsonKey(name: 'sea_level')
   num get seaLevel;
+
   @override
   num get vacuum;
+
   @override
   @JsonKey(ignore: true)
   _$IspCopyWith<_Isp> get copyWith => throw _privateConstructorUsedError;
@@ -1515,9 +1585,11 @@ const $KnotPound = _$KnotPoundTearOff();
 /// @nodoc
 mixin _$KnotPound {
   num get kN => throw _privateConstructorUsedError;
+
   num get lbf => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+
   @JsonKey(ignore: true)
   $KnotPoundCopyWith<KnotPound> get copyWith =>
       throw _privateConstructorUsedError;
@@ -1527,6 +1599,7 @@ mixin _$KnotPound {
 abstract class $KnotPoundCopyWith<$Res> {
   factory $KnotPoundCopyWith(KnotPound value, $Res Function(KnotPound) then) =
       _$KnotPoundCopyWithImpl<$Res>;
+
   $Res call({num kN, num lbf});
 }
 
@@ -1535,6 +1608,7 @@ class _$KnotPoundCopyWithImpl<$Res> implements $KnotPoundCopyWith<$Res> {
   _$KnotPoundCopyWithImpl(this._value, this._then);
 
   final KnotPound _value;
+
   // ignore: unused_field
   final $Res Function(KnotPound) _then;
 
@@ -1561,6 +1635,7 @@ abstract class _$KnotPoundCopyWith<$Res> implements $KnotPoundCopyWith<$Res> {
   factory _$KnotPoundCopyWith(
           _KnotPound value, $Res Function(_KnotPound) then) =
       __$KnotPoundCopyWithImpl<$Res>;
+
   @override
   $Res call({num kN, num lbf});
 }
@@ -1640,6 +1715,7 @@ class _$_KnotPound extends _KnotPound {
 
 abstract class _KnotPound extends KnotPound {
   const factory _KnotPound({num kN, num lbf}) = _$_KnotPound;
+
   const _KnotPound._() : super._();
 
   factory _KnotPound.fromJson(Map<String, dynamic> json) =
@@ -1647,8 +1723,10 @@ abstract class _KnotPound extends KnotPound {
 
   @override
   num get kN;
+
   @override
   num get lbf;
+
   @override
   @JsonKey(ignore: true)
   _$KnotPoundCopyWith<_KnotPound> get copyWith =>

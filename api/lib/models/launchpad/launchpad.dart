@@ -1,7 +1,6 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'launchpad.freezed.dart';
-
 part 'launchpad.g.dart';
 
 @freezed

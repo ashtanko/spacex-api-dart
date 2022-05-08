@@ -42,10 +42,12 @@ const $Trunk = _$TrunkTearOff();
 mixin _$Trunk {
   @JsonKey(name: 'trunk_volume')
   TrunkVolume get volume => throw _privateConstructorUsedError;
+
   @JsonKey(name: 'cargo')
   Cargo get cargo => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+
   @JsonKey(ignore: true)
   $TrunkCopyWith<Trunk> get copyWith => throw _privateConstructorUsedError;
 }
@@ -54,11 +56,13 @@ mixin _$Trunk {
 abstract class $TrunkCopyWith<$Res> {
   factory $TrunkCopyWith(Trunk value, $Res Function(Trunk) then) =
       _$TrunkCopyWithImpl<$Res>;
+
   $Res call(
       {@JsonKey(name: 'trunk_volume') TrunkVolume volume,
       @JsonKey(name: 'cargo') Cargo cargo});
 
   $TrunkVolumeCopyWith<$Res> get volume;
+
   $CargoCopyWith<$Res> get cargo;
 }
 
@@ -67,6 +71,7 @@ class _$TrunkCopyWithImpl<$Res> implements $TrunkCopyWith<$Res> {
   _$TrunkCopyWithImpl(this._value, this._then);
 
   final Trunk _value;
+
   // ignore: unused_field
   final $Res Function(Trunk) _then;
 
@@ -106,6 +111,7 @@ class _$TrunkCopyWithImpl<$Res> implements $TrunkCopyWith<$Res> {
 abstract class _$TrunkCopyWith<$Res> implements $TrunkCopyWith<$Res> {
   factory _$TrunkCopyWith(_Trunk value, $Res Function(_Trunk) then) =
       __$TrunkCopyWithImpl<$Res>;
+
   @override
   $Res call(
       {@JsonKey(name: 'trunk_volume') TrunkVolume volume,
@@ -113,6 +119,7 @@ abstract class _$TrunkCopyWith<$Res> implements $TrunkCopyWith<$Res> {
 
   @override
   $TrunkVolumeCopyWith<$Res> get volume;
+
   @override
   $CargoCopyWith<$Res> get cargo;
 }
@@ -197,6 +204,7 @@ abstract class _Trunk extends Trunk {
   const factory _Trunk(
       {@JsonKey(name: 'trunk_volume') TrunkVolume volume,
       @JsonKey(name: 'cargo') Cargo cargo}) = _$_Trunk;
+
   const _Trunk._() : super._();
 
   factory _Trunk.fromJson(Map<String, dynamic> json) = _$_Trunk.fromJson;
@@ -204,9 +212,11 @@ abstract class _Trunk extends Trunk {
   @override
   @JsonKey(name: 'trunk_volume')
   TrunkVolume get volume;
+
   @override
   @JsonKey(name: 'cargo')
   Cargo get cargo;
+
   @override
   @JsonKey(ignore: true)
   _$TrunkCopyWith<_Trunk> get copyWith => throw _privateConstructorUsedError;
@@ -241,10 +251,12 @@ const $TrunkVolume = _$TrunkVolumeTearOff();
 mixin _$TrunkVolume {
   @JsonKey(name: 'cubic_meters')
   num get cubicMeters => throw _privateConstructorUsedError;
+
   @JsonKey(name: 'cubic_feet')
   num get cubicFeet => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+
   @JsonKey(ignore: true)
   $TrunkVolumeCopyWith<TrunkVolume> get copyWith =>
       throw _privateConstructorUsedError;
@@ -255,6 +267,7 @@ abstract class $TrunkVolumeCopyWith<$Res> {
   factory $TrunkVolumeCopyWith(
           TrunkVolume value, $Res Function(TrunkVolume) then) =
       _$TrunkVolumeCopyWithImpl<$Res>;
+
   $Res call(
       {@JsonKey(name: 'cubic_meters') num cubicMeters,
       @JsonKey(name: 'cubic_feet') num cubicFeet});
@@ -265,6 +278,7 @@ class _$TrunkVolumeCopyWithImpl<$Res> implements $TrunkVolumeCopyWith<$Res> {
   _$TrunkVolumeCopyWithImpl(this._value, this._then);
 
   final TrunkVolume _value;
+
   // ignore: unused_field
   final $Res Function(TrunkVolume) _then;
 
@@ -292,6 +306,7 @@ abstract class _$TrunkVolumeCopyWith<$Res>
   factory _$TrunkVolumeCopyWith(
           _TrunkVolume value, $Res Function(_TrunkVolume) then) =
       __$TrunkVolumeCopyWithImpl<$Res>;
+
   @override
   $Res call(
       {@JsonKey(name: 'cubic_meters') num cubicMeters,
@@ -380,6 +395,7 @@ abstract class _TrunkVolume extends TrunkVolume {
   const factory _TrunkVolume(
       {@JsonKey(name: 'cubic_meters') num cubicMeters,
       @JsonKey(name: 'cubic_feet') num cubicFeet}) = _$_TrunkVolume;
+
   const _TrunkVolume._() : super._();
 
   factory _TrunkVolume.fromJson(Map<String, dynamic> json) =
@@ -388,9 +404,11 @@ abstract class _TrunkVolume extends TrunkVolume {
   @override
   @JsonKey(name: 'cubic_meters')
   num get cubicMeters;
+
   @override
   @JsonKey(name: 'cubic_feet')
   num get cubicFeet;
+
   @override
   @JsonKey(ignore: true)
   _$TrunkVolumeCopyWith<_TrunkVolume> get copyWith =>
@@ -428,10 +446,12 @@ const $Cargo = _$CargoTearOff();
 mixin _$Cargo {
   @JsonKey(name: 'solar_array')
   num get solarArray => throw _privateConstructorUsedError;
+
   @JsonKey(name: 'unpressurized_cargo')
   bool get isUnpressurizedCargo => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+
   @JsonKey(ignore: true)
   $CargoCopyWith<Cargo> get copyWith => throw _privateConstructorUsedError;
 }
@@ -440,6 +460,7 @@ mixin _$Cargo {
 abstract class $CargoCopyWith<$Res> {
   factory $CargoCopyWith(Cargo value, $Res Function(Cargo) then) =
       _$CargoCopyWithImpl<$Res>;
+
   $Res call(
       {@JsonKey(name: 'solar_array') num solarArray,
       @JsonKey(name: 'unpressurized_cargo') bool isUnpressurizedCargo});
@@ -450,6 +471,7 @@ class _$CargoCopyWithImpl<$Res> implements $CargoCopyWith<$Res> {
   _$CargoCopyWithImpl(this._value, this._then);
 
   final Cargo _value;
+
   // ignore: unused_field
   final $Res Function(Cargo) _then;
 
@@ -475,6 +497,7 @@ class _$CargoCopyWithImpl<$Res> implements $CargoCopyWith<$Res> {
 abstract class _$CargoCopyWith<$Res> implements $CargoCopyWith<$Res> {
   factory _$CargoCopyWith(_Cargo value, $Res Function(_Cargo) then) =
       __$CargoCopyWithImpl<$Res>;
+
   @override
   $Res call(
       {@JsonKey(name: 'solar_array') num solarArray,
@@ -564,6 +587,7 @@ abstract class _Cargo extends Cargo {
           {@JsonKey(name: 'solar_array') num solarArray,
           @JsonKey(name: 'unpressurized_cargo') bool isUnpressurizedCargo}) =
       _$_Cargo;
+
   const _Cargo._() : super._();
 
   factory _Cargo.fromJson(Map<String, dynamic> json) = _$_Cargo.fromJson;
@@ -571,9 +595,11 @@ abstract class _Cargo extends Cargo {
   @override
   @JsonKey(name: 'solar_array')
   num get solarArray;
+
   @override
   @JsonKey(name: 'unpressurized_cargo')
   bool get isUnpressurizedCargo;
+
   @override
   @JsonKey(ignore: true)
   _$CargoCopyWith<_Cargo> get copyWith => throw _privateConstructorUsedError;

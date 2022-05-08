@@ -52,20 +52,27 @@ const $Crew = _$CrewTearOff();
 mixin _$Crew {
   @JsonKey(name: 'id')
   String get id => throw _privateConstructorUsedError;
+
   @JsonKey(name: 'name')
   String get name => throw _privateConstructorUsedError;
+
   @JsonKey(name: 'agency')
   String get agency => throw _privateConstructorUsedError;
+
   @JsonKey(name: 'image')
   String get image => throw _privateConstructorUsedError;
+
   @JsonKey(name: 'wikipedia')
   String get wikipedia => throw _privateConstructorUsedError;
+
   @JsonKey(name: 'launches')
   List<String> get launches => throw _privateConstructorUsedError;
+
   @JsonKey(name: 'status')
   String get status => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+
   @JsonKey(ignore: true)
   $CrewCopyWith<Crew> get copyWith => throw _privateConstructorUsedError;
 }
@@ -74,6 +81,7 @@ mixin _$Crew {
 abstract class $CrewCopyWith<$Res> {
   factory $CrewCopyWith(Crew value, $Res Function(Crew) then) =
       _$CrewCopyWithImpl<$Res>;
+
   $Res call(
       {@JsonKey(name: 'id') String id,
       @JsonKey(name: 'name') String name,
@@ -89,6 +97,7 @@ class _$CrewCopyWithImpl<$Res> implements $CrewCopyWith<$Res> {
   _$CrewCopyWithImpl(this._value, this._then);
 
   final Crew _value;
+
   // ignore: unused_field
   final $Res Function(Crew) _then;
 
@@ -139,6 +148,7 @@ class _$CrewCopyWithImpl<$Res> implements $CrewCopyWith<$Res> {
 abstract class _$CrewCopyWith<$Res> implements $CrewCopyWith<$Res> {
   factory _$CrewCopyWith(_Crew value, $Res Function(_Crew) then) =
       __$CrewCopyWithImpl<$Res>;
+
   @override
   $Res call(
       {@JsonKey(name: 'id') String id,
@@ -289,6 +299,7 @@ abstract class _Crew extends Crew {
       @JsonKey(name: 'wikipedia') String wikipedia,
       @JsonKey(name: 'launches') List<String> launches,
       @JsonKey(name: 'status') String status}) = _$_Crew;
+
   const _Crew._() : super._();
 
   factory _Crew.fromJson(Map<String, dynamic> json) = _$_Crew.fromJson;
@@ -296,24 +307,31 @@ abstract class _Crew extends Crew {
   @override
   @JsonKey(name: 'id')
   String get id;
+
   @override
   @JsonKey(name: 'name')
   String get name;
+
   @override
   @JsonKey(name: 'agency')
   String get agency;
+
   @override
   @JsonKey(name: 'image')
   String get image;
+
   @override
   @JsonKey(name: 'wikipedia')
   String get wikipedia;
+
   @override
   @JsonKey(name: 'launches')
   List<String> get launches;
+
   @override
   @JsonKey(name: 'status')
   String get status;
+
   @override
   @JsonKey(ignore: true)
   _$CrewCopyWith<_Crew> get copyWith => throw _privateConstructorUsedError;

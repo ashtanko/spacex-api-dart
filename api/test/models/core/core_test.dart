@@ -62,7 +62,7 @@ void main() {
           landingAttempt: true,
           landingSuccess: true,
           landingType: 'ASDS',
-          landpad: '5e9e3032383ecb6bb234e7ca'
+          landpad: '5e9e3032383ecb6bb234e7ca',
         ),
       );
     });

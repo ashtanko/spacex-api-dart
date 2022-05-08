@@ -3,7 +3,6 @@ import 'package:api/models/landing_legs/landing_legs.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'rocket.freezed.dart';
-
 part 'rocket.g.dart';
 
 @freezed

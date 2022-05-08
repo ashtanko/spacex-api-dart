@@ -23,8 +23,9 @@ void main() {
         }),
         Achievement(
           links: const AchievementLinks(
-              article:
-                  'http://www.spacex.com/news/2013/02/11/flight-4-launch-update-0'),
+            article:
+                'http://www.spacex.com/news/2013/02/11/flight-4-launch-update-0',
+          ),
           name: 'Falcon reaches Earth orbit',
           date: DateTime.parse('2008-09-28T23:15:00Z'),
           details:

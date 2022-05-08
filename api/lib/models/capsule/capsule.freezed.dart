@@ -56,19 +56,28 @@ const $Capsule = _$CapsuleTearOff();
 mixin _$Capsule {
   @JsonKey(name: 'reuse_count')
   int get reuseCount => throw _privateConstructorUsedError;
+
   @JsonKey(name: 'water_landings')
   int get waterLandings => throw _privateConstructorUsedError;
+
   @JsonKey(name: 'land_landings')
   int get landLandings => throw _privateConstructorUsedError;
+
   @JsonKey(name: 'last_update')
   String? get lastUpdate => throw _privateConstructorUsedError;
+
   List<String> get launches => throw _privateConstructorUsedError;
+
   String get serial => throw _privateConstructorUsedError;
+
   String get status => throw _privateConstructorUsedError;
+
   String get type => throw _privateConstructorUsedError;
+
   String get id => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+
   @JsonKey(ignore: true)
   $CapsuleCopyWith<Capsule> get copyWith => throw _privateConstructorUsedError;
 }
@@ -77,6 +86,7 @@ mixin _$Capsule {
 abstract class $CapsuleCopyWith<$Res> {
   factory $CapsuleCopyWith(Capsule value, $Res Function(Capsule) then) =
       _$CapsuleCopyWithImpl<$Res>;
+
   $Res call(
       {@JsonKey(name: 'reuse_count') int reuseCount,
       @JsonKey(name: 'water_landings') int waterLandings,
@@ -94,6 +104,7 @@ class _$CapsuleCopyWithImpl<$Res> implements $CapsuleCopyWith<$Res> {
   _$CapsuleCopyWithImpl(this._value, this._then);
 
   final Capsule _value;
+
   // ignore: unused_field
   final $Res Function(Capsule) _then;
 
@@ -154,6 +165,7 @@ class _$CapsuleCopyWithImpl<$Res> implements $CapsuleCopyWith<$Res> {
 abstract class _$CapsuleCopyWith<$Res> implements $CapsuleCopyWith<$Res> {
   factory _$CapsuleCopyWith(_Capsule value, $Res Function(_Capsule) then) =
       __$CapsuleCopyWithImpl<$Res>;
+
   @override
   $Res call(
       {@JsonKey(name: 'reuse_count') int reuseCount,
@@ -334,6 +346,7 @@ abstract class _Capsule extends Capsule {
       String status,
       String type,
       required String id}) = _$_Capsule;
+
   const _Capsule._() : super._();
 
   factory _Capsule.fromJson(Map<String, dynamic> json) = _$_Capsule.fromJson;
@@ -341,25 +354,34 @@ abstract class _Capsule extends Capsule {
   @override
   @JsonKey(name: 'reuse_count')
   int get reuseCount;
+
   @override
   @JsonKey(name: 'water_landings')
   int get waterLandings;
+
   @override
   @JsonKey(name: 'land_landings')
   int get landLandings;
+
   @override
   @JsonKey(name: 'last_update')
   String? get lastUpdate;
+
   @override
   List<String> get launches;
+
   @override
   String get serial;
+
   @override
   String get status;
+
   @override
   String get type;
+
   @override
   String get id;
+
   @override
   @JsonKey(ignore: true)
   _$CapsuleCopyWith<_Capsule> get copyWith =>

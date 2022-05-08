@@ -47,14 +47,19 @@ const $Achievement = _$AchievementTearOff();
 /// @nodoc
 mixin _$Achievement {
   String get id => throw _privateConstructorUsedError;
+
   @JsonKey(name: 'title')
   String? get name => throw _privateConstructorUsedError;
+
   String? get details => throw _privateConstructorUsedError;
+
   AchievementLinks? get links => throw _privateConstructorUsedError;
+
   @JsonKey(name: 'event_date_utc')
   DateTime? get date => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+
   @JsonKey(ignore: true)
   $AchievementCopyWith<Achievement> get copyWith =>
       throw _privateConstructorUsedError;
@@ -65,6 +70,7 @@ abstract class $AchievementCopyWith<$Res> {
   factory $AchievementCopyWith(
           Achievement value, $Res Function(Achievement) then) =
       _$AchievementCopyWithImpl<$Res>;
+
   $Res call(
       {String id,
       @JsonKey(name: 'title') String? name,
@@ -80,6 +86,7 @@ class _$AchievementCopyWithImpl<$Res> implements $AchievementCopyWith<$Res> {
   _$AchievementCopyWithImpl(this._value, this._then);
 
   final Achievement _value;
+
   // ignore: unused_field
   final $Res Function(Achievement) _then;
 
@@ -133,6 +140,7 @@ abstract class _$AchievementCopyWith<$Res>
   factory _$AchievementCopyWith(
           _Achievement value, $Res Function(_Achievement) then) =
       __$AchievementCopyWithImpl<$Res>;
+
   @override
   $Res call(
       {String id,
@@ -259,6 +267,7 @@ abstract class _Achievement extends Achievement {
       String? details,
       AchievementLinks? links,
       @JsonKey(name: 'event_date_utc') DateTime? date}) = _$_Achievement;
+
   const _Achievement._() : super._();
 
   factory _Achievement.fromJson(Map<String, dynamic> json) =
@@ -266,16 +275,21 @@ abstract class _Achievement extends Achievement {
 
   @override
   String get id;
+
   @override
   @JsonKey(name: 'title')
   String? get name;
+
   @override
   String? get details;
+
   @override
   AchievementLinks? get links;
+
   @override
   @JsonKey(name: 'event_date_utc')
   DateTime? get date;
+
   @override
   @JsonKey(ignore: true)
   _$AchievementCopyWith<_Achievement> get copyWith =>
@@ -309,6 +323,7 @@ mixin _$AchievementLinks {
   String? get article => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+
   @JsonKey(ignore: true)
   $AchievementLinksCopyWith<AchievementLinks> get copyWith =>
       throw _privateConstructorUsedError;
@@ -319,6 +334,7 @@ abstract class $AchievementLinksCopyWith<$Res> {
   factory $AchievementLinksCopyWith(
           AchievementLinks value, $Res Function(AchievementLinks) then) =
       _$AchievementLinksCopyWithImpl<$Res>;
+
   $Res call({String? article});
 }
 
@@ -328,6 +344,7 @@ class _$AchievementLinksCopyWithImpl<$Res>
   _$AchievementLinksCopyWithImpl(this._value, this._then);
 
   final AchievementLinks _value;
+
   // ignore: unused_field
   final $Res Function(AchievementLinks) _then;
 
@@ -350,6 +367,7 @@ abstract class _$AchievementLinksCopyWith<$Res>
   factory _$AchievementLinksCopyWith(
           _AchievementLinks value, $Res Function(_AchievementLinks) then) =
       __$AchievementLinksCopyWithImpl<$Res>;
+
   @override
   $Res call({String? article});
 }
@@ -419,6 +437,7 @@ class _$_AchievementLinks extends _AchievementLinks {
 
 abstract class _AchievementLinks extends AchievementLinks {
   const factory _AchievementLinks({String? article}) = _$_AchievementLinks;
+
   const _AchievementLinks._() : super._();
 
   factory _AchievementLinks.fromJson(Map<String, dynamic> json) =
@@ -426,6 +445,7 @@ abstract class _AchievementLinks extends AchievementLinks {
 
   @override
   String? get article;
+
   @override
   @JsonKey(ignore: true)
   _$AchievementLinksCopyWith<_AchievementLinks> get copyWith =>
