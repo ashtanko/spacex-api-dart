@@ -1,6 +1,5 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'unit.dart';
@@ -12,11 +11,32 @@ part of 'unit.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 CompositeFairing _$CompositeFairingFromJson(Map<String, dynamic> json) {
   return _CompositeFairing.fromJson(json);
 }
+
+/// @nodoc
+class _$CompositeFairingTearOff {
+  const _$CompositeFairingTearOff();
+
+  _CompositeFairing call(
+      {@JsonKey(name: 'height') Height? height,
+      @JsonKey(name: 'diameter') Diameter? diameter}) {
+    return _CompositeFairing(
+      height: height,
+      diameter: diameter,
+    );
+  }
+
+  CompositeFairing fromJson(Map<String, Object?> json) {
+    return CompositeFairing.fromJson(json);
+  }
+}
+
+/// @nodoc
+const $CompositeFairing = _$CompositeFairingTearOff();
 
 /// @nodoc
 mixin _$CompositeFairing {
@@ -171,7 +191,6 @@ class _$_CompositeFairing extends _CompositeFairing {
             const DeepCollectionEquality().equals(other.diameter, diameter));
   }
 
-  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -191,9 +210,8 @@ class _$_CompositeFairing extends _CompositeFairing {
 
 abstract class _CompositeFairing extends CompositeFairing {
   const factory _CompositeFairing(
-          {@JsonKey(name: 'height') final Height? height,
-          @JsonKey(name: 'diameter') final Diameter? diameter}) =
-      _$_CompositeFairing;
+      {@JsonKey(name: 'height') Height? height,
+      @JsonKey(name: 'diameter') Diameter? diameter}) = _$_CompositeFairing;
   const _CompositeFairing._() : super._();
 
   factory _CompositeFairing.fromJson(Map<String, dynamic> json) =
@@ -201,10 +219,10 @@ abstract class _CompositeFairing extends CompositeFairing {
 
   @override
   @JsonKey(name: 'height')
-  Height? get height => throw _privateConstructorUsedError;
+  Height? get height;
   @override
   @JsonKey(name: 'diameter')
-  Diameter? get diameter => throw _privateConstructorUsedError;
+  Diameter? get diameter;
   @override
   @JsonKey(ignore: true)
   _$CompositeFairingCopyWith<_CompositeFairing> get copyWith =>
@@ -214,6 +232,26 @@ abstract class _CompositeFairing extends CompositeFairing {
 Thrust _$ThrustFromJson(Map<String, dynamic> json) {
   return _Thrust.fromJson(json);
 }
+
+/// @nodoc
+class _$ThrustTearOff {
+  const _$ThrustTearOff();
+
+  _Thrust call(
+      {@JsonKey(name: 'kN') num kN = 0, @JsonKey(name: 'lbf') num lbf = 0}) {
+    return _Thrust(
+      kN: kN,
+      lbf: lbf,
+    );
+  }
+
+  Thrust fromJson(Map<String, Object?> json) {
+    return Thrust.fromJson(json);
+  }
+}
+
+/// @nodoc
+const $Thrust = _$ThrustTearOff();
 
 /// @nodoc
 mixin _$Thrust {
@@ -326,7 +364,6 @@ class _$_Thrust extends _Thrust {
             const DeepCollectionEquality().equals(other.lbf, lbf));
   }
 
-  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -346,18 +383,17 @@ class _$_Thrust extends _Thrust {
 
 abstract class _Thrust extends Thrust {
   const factory _Thrust(
-      {@JsonKey(name: 'kN') final num kN,
-      @JsonKey(name: 'lbf') final num lbf}) = _$_Thrust;
+      {@JsonKey(name: 'kN') num kN, @JsonKey(name: 'lbf') num lbf}) = _$_Thrust;
   const _Thrust._() : super._();
 
   factory _Thrust.fromJson(Map<String, dynamic> json) = _$_Thrust.fromJson;
 
   @override
   @JsonKey(name: 'kN')
-  num get kN => throw _privateConstructorUsedError;
+  num get kN;
   @override
   @JsonKey(name: 'lbf')
-  num get lbf => throw _privateConstructorUsedError;
+  num get lbf;
   @override
   @JsonKey(ignore: true)
   _$ThrustCopyWith<_Thrust> get copyWith => throw _privateConstructorUsedError;
@@ -366,6 +402,27 @@ abstract class _Thrust extends Thrust {
 Height _$HeightFromJson(Map<String, dynamic> json) {
   return _Height.fromJson(json);
 }
+
+/// @nodoc
+class _$HeightTearOff {
+  const _$HeightTearOff();
+
+  _Height call(
+      {@JsonKey(name: 'meters') num meters = 0,
+      @JsonKey(name: 'feet') num feet = 0}) {
+    return _Height(
+      meters: meters,
+      feet: feet,
+    );
+  }
+
+  Height fromJson(Map<String, Object?> json) {
+    return Height.fromJson(json);
+  }
+}
+
+/// @nodoc
+const $Height = _$HeightTearOff();
 
 /// @nodoc
 mixin _$Height {
@@ -481,7 +538,6 @@ class _$_Height extends _Height {
             const DeepCollectionEquality().equals(other.feet, feet));
   }
 
-  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -501,18 +557,18 @@ class _$_Height extends _Height {
 
 abstract class _Height extends Height {
   const factory _Height(
-      {@JsonKey(name: 'meters') final num meters,
-      @JsonKey(name: 'feet') final num feet}) = _$_Height;
+      {@JsonKey(name: 'meters') num meters,
+      @JsonKey(name: 'feet') num feet}) = _$_Height;
   const _Height._() : super._();
 
   factory _Height.fromJson(Map<String, dynamic> json) = _$_Height.fromJson;
 
   @override
   @JsonKey(name: 'meters')
-  num get meters => throw _privateConstructorUsedError;
+  num get meters;
   @override
   @JsonKey(name: 'feet')
-  num get feet => throw _privateConstructorUsedError;
+  num get feet;
   @override
   @JsonKey(ignore: true)
   _$HeightCopyWith<_Height> get copyWith => throw _privateConstructorUsedError;
@@ -521,6 +577,26 @@ abstract class _Height extends Height {
 Mass _$MassFromJson(Map<String, dynamic> json) {
   return _Mass.fromJson(json);
 }
+
+/// @nodoc
+class _$MassTearOff {
+  const _$MassTearOff();
+
+  _Mass call(
+      {@JsonKey(name: 'kg') num kg = 0, @JsonKey(name: 'lb') num lb = 0}) {
+    return _Mass(
+      kg: kg,
+      lb: lb,
+    );
+  }
+
+  Mass fromJson(Map<String, Object?> json) {
+    return Mass.fromJson(json);
+  }
+}
+
+/// @nodoc
+const $Mass = _$MassTearOff();
 
 /// @nodoc
 mixin _$Mass {
@@ -632,7 +708,6 @@ class _$_Mass extends _Mass {
             const DeepCollectionEquality().equals(other.lb, lb));
   }
 
-  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -652,18 +727,17 @@ class _$_Mass extends _Mass {
 
 abstract class _Mass extends Mass {
   const factory _Mass(
-      {@JsonKey(name: 'kg') final num kg,
-      @JsonKey(name: 'lb') final num lb}) = _$_Mass;
+      {@JsonKey(name: 'kg') num kg, @JsonKey(name: 'lb') num lb}) = _$_Mass;
   const _Mass._() : super._();
 
   factory _Mass.fromJson(Map<String, dynamic> json) = _$_Mass.fromJson;
 
   @override
   @JsonKey(name: 'kg')
-  num get kg => throw _privateConstructorUsedError;
+  num get kg;
   @override
   @JsonKey(name: 'lb')
-  num get lb => throw _privateConstructorUsedError;
+  num get lb;
   @override
   @JsonKey(ignore: true)
   _$MassCopyWith<_Mass> get copyWith => throw _privateConstructorUsedError;
@@ -672,6 +746,27 @@ abstract class _Mass extends Mass {
 CubicLen _$CubicLenFromJson(Map<String, dynamic> json) {
   return _CubicLen.fromJson(json);
 }
+
+/// @nodoc
+class _$CubicLenTearOff {
+  const _$CubicLenTearOff();
+
+  _CubicLen call(
+      {@JsonKey(name: 'cubic_meters') num meters = 0,
+      @JsonKey(name: 'cubic_feet') num feet = 0}) {
+    return _CubicLen(
+      meters: meters,
+      feet: feet,
+    );
+  }
+
+  CubicLen fromJson(Map<String, Object?> json) {
+    return CubicLen.fromJson(json);
+  }
+}
+
+/// @nodoc
+const $CubicLen = _$CubicLenTearOff();
 
 /// @nodoc
 mixin _$CubicLen {
@@ -790,7 +885,6 @@ class _$_CubicLen extends _CubicLen {
             const DeepCollectionEquality().equals(other.feet, feet));
   }
 
-  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -810,18 +904,18 @@ class _$_CubicLen extends _CubicLen {
 
 abstract class _CubicLen extends CubicLen {
   const factory _CubicLen(
-      {@JsonKey(name: 'cubic_meters') final num meters,
-      @JsonKey(name: 'cubic_feet') final num feet}) = _$_CubicLen;
+      {@JsonKey(name: 'cubic_meters') num meters,
+      @JsonKey(name: 'cubic_feet') num feet}) = _$_CubicLen;
   const _CubicLen._() : super._();
 
   factory _CubicLen.fromJson(Map<String, dynamic> json) = _$_CubicLen.fromJson;
 
   @override
   @JsonKey(name: 'cubic_meters')
-  num get meters => throw _privateConstructorUsedError;
+  num get meters;
   @override
   @JsonKey(name: 'cubic_feet')
-  num get feet => throw _privateConstructorUsedError;
+  num get feet;
   @override
   @JsonKey(ignore: true)
   _$CubicLenCopyWith<_CubicLen> get copyWith =>
@@ -831,6 +925,25 @@ abstract class _CubicLen extends CubicLen {
 Diameter _$DiameterFromJson(Map<String, dynamic> json) {
   return _Diameter.fromJson(json);
 }
+
+/// @nodoc
+class _$DiameterTearOff {
+  const _$DiameterTearOff();
+
+  _Diameter call({num meters = 0.0, num feet = 0}) {
+    return _Diameter(
+      meters: meters,
+      feet: feet,
+    );
+  }
+
+  Diameter fromJson(Map<String, Object?> json) {
+    return Diameter.fromJson(json);
+  }
+}
+
+/// @nodoc
+const $Diameter = _$DiameterTearOff();
 
 /// @nodoc
 mixin _$Diameter {
@@ -919,11 +1032,11 @@ class _$_Diameter extends _Diameter {
   factory _$_Diameter.fromJson(Map<String, dynamic> json) =>
       _$$_DiameterFromJson(json);
 
-  @override
   @JsonKey()
+  @override
   final num meters;
-  @override
   @JsonKey()
+  @override
   final num feet;
 
   @override
@@ -940,7 +1053,6 @@ class _$_Diameter extends _Diameter {
             const DeepCollectionEquality().equals(other.feet, feet));
   }
 
-  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -959,15 +1071,15 @@ class _$_Diameter extends _Diameter {
 }
 
 abstract class _Diameter extends Diameter {
-  const factory _Diameter({final num meters, final num feet}) = _$_Diameter;
+  const factory _Diameter({num meters, num feet}) = _$_Diameter;
   const _Diameter._() : super._();
 
   factory _Diameter.fromJson(Map<String, dynamic> json) = _$_Diameter.fromJson;
 
   @override
-  num get meters => throw _privateConstructorUsedError;
+  num get meters;
   @override
-  num get feet => throw _privateConstructorUsedError;
+  num get feet;
   @override
   @JsonKey(ignore: true)
   _$DiameterCopyWith<_Diameter> get copyWith =>
@@ -977,6 +1089,31 @@ abstract class _Diameter extends Diameter {
 PayloadWeight _$PayloadWeightFromJson(Map<String, dynamic> json) {
   return _PayloadWeight.fromJson(json);
 }
+
+/// @nodoc
+class _$PayloadWeightTearOff {
+  const _$PayloadWeightTearOff();
+
+  _PayloadWeight call(
+      {@JsonKey(name: 'id') String? id,
+      @JsonKey(name: 'name') String? name,
+      @JsonKey(name: 'kg') num kg = 0,
+      @JsonKey(name: 'lb') num lb = 0}) {
+    return _PayloadWeight(
+      id: id,
+      name: name,
+      kg: kg,
+      lb: lb,
+    );
+  }
+
+  PayloadWeight fromJson(Map<String, Object?> json) {
+    return PayloadWeight.fromJson(json);
+  }
+}
+
+/// @nodoc
+const $PayloadWeight = _$PayloadWeightTearOff();
 
 /// @nodoc
 mixin _$PayloadWeight {
@@ -1139,7 +1276,6 @@ class _$_PayloadWeight extends _PayloadWeight {
             const DeepCollectionEquality().equals(other.lb, lb));
   }
 
-  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -1161,10 +1297,10 @@ class _$_PayloadWeight extends _PayloadWeight {
 
 abstract class _PayloadWeight extends PayloadWeight {
   const factory _PayloadWeight(
-      {@JsonKey(name: 'id') final String? id,
-      @JsonKey(name: 'name') final String? name,
-      @JsonKey(name: 'kg') final num kg,
-      @JsonKey(name: 'lb') final num lb}) = _$_PayloadWeight;
+      {@JsonKey(name: 'id') String? id,
+      @JsonKey(name: 'name') String? name,
+      @JsonKey(name: 'kg') num kg,
+      @JsonKey(name: 'lb') num lb}) = _$_PayloadWeight;
   const _PayloadWeight._() : super._();
 
   factory _PayloadWeight.fromJson(Map<String, dynamic> json) =
@@ -1172,16 +1308,16 @@ abstract class _PayloadWeight extends PayloadWeight {
 
   @override
   @JsonKey(name: 'id')
-  String? get id => throw _privateConstructorUsedError;
+  String? get id;
   @override
   @JsonKey(name: 'name')
-  String? get name => throw _privateConstructorUsedError;
+  String? get name;
   @override
   @JsonKey(name: 'kg')
-  num get kg => throw _privateConstructorUsedError;
+  num get kg;
   @override
   @JsonKey(name: 'lb')
-  num get lb => throw _privateConstructorUsedError;
+  num get lb;
   @override
   @JsonKey(ignore: true)
   _$PayloadWeightCopyWith<_PayloadWeight> get copyWith =>
@@ -1191,6 +1327,25 @@ abstract class _PayloadWeight extends PayloadWeight {
 Isp _$IspFromJson(Map<String, dynamic> json) {
   return _Isp.fromJson(json);
 }
+
+/// @nodoc
+class _$IspTearOff {
+  const _$IspTearOff();
+
+  _Isp call({@JsonKey(name: 'sea_level') num seaLevel = 0, num vacuum = 0}) {
+    return _Isp(
+      seaLevel: seaLevel,
+      vacuum: vacuum,
+    );
+  }
+
+  Isp fromJson(Map<String, Object?> json) {
+    return Isp.fromJson(json);
+  }
+}
+
+/// @nodoc
+const $Isp = _$IspTearOff();
 
 /// @nodoc
 mixin _$Isp {
@@ -1282,8 +1437,8 @@ class _$_Isp extends _Isp {
   @override
   @JsonKey(name: 'sea_level')
   final num seaLevel;
-  @override
   @JsonKey()
+  @override
   final num vacuum;
 
   @override
@@ -1300,7 +1455,6 @@ class _$_Isp extends _Isp {
             const DeepCollectionEquality().equals(other.vacuum, vacuum));
   }
 
-  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -1319,18 +1473,17 @@ class _$_Isp extends _Isp {
 }
 
 abstract class _Isp extends Isp {
-  const factory _Isp(
-      {@JsonKey(name: 'sea_level') final num seaLevel,
-      final num vacuum}) = _$_Isp;
+  const factory _Isp({@JsonKey(name: 'sea_level') num seaLevel, num vacuum}) =
+      _$_Isp;
   const _Isp._() : super._();
 
   factory _Isp.fromJson(Map<String, dynamic> json) = _$_Isp.fromJson;
 
   @override
   @JsonKey(name: 'sea_level')
-  num get seaLevel => throw _privateConstructorUsedError;
+  num get seaLevel;
   @override
-  num get vacuum => throw _privateConstructorUsedError;
+  num get vacuum;
   @override
   @JsonKey(ignore: true)
   _$IspCopyWith<_Isp> get copyWith => throw _privateConstructorUsedError;
@@ -1339,6 +1492,25 @@ abstract class _Isp extends Isp {
 KnotPound _$KnotPoundFromJson(Map<String, dynamic> json) {
   return _KnotPound.fromJson(json);
 }
+
+/// @nodoc
+class _$KnotPoundTearOff {
+  const _$KnotPoundTearOff();
+
+  _KnotPound call({num kN = 0, num lbf = 0}) {
+    return _KnotPound(
+      kN: kN,
+      lbf: lbf,
+    );
+  }
+
+  KnotPound fromJson(Map<String, Object?> json) {
+    return KnotPound.fromJson(json);
+  }
+}
+
+/// @nodoc
+const $KnotPound = _$KnotPoundTearOff();
 
 /// @nodoc
 mixin _$KnotPound {
@@ -1428,11 +1600,11 @@ class _$_KnotPound extends _KnotPound {
   factory _$_KnotPound.fromJson(Map<String, dynamic> json) =>
       _$$_KnotPoundFromJson(json);
 
-  @override
   @JsonKey()
+  @override
   final num kN;
-  @override
   @JsonKey()
+  @override
   final num lbf;
 
   @override
@@ -1449,7 +1621,6 @@ class _$_KnotPound extends _KnotPound {
             const DeepCollectionEquality().equals(other.lbf, lbf));
   }
 
-  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -1468,16 +1639,16 @@ class _$_KnotPound extends _KnotPound {
 }
 
 abstract class _KnotPound extends KnotPound {
-  const factory _KnotPound({final num kN, final num lbf}) = _$_KnotPound;
+  const factory _KnotPound({num kN, num lbf}) = _$_KnotPound;
   const _KnotPound._() : super._();
 
   factory _KnotPound.fromJson(Map<String, dynamic> json) =
       _$_KnotPound.fromJson;
 
   @override
-  num get kN => throw _privateConstructorUsedError;
+  num get kN;
   @override
-  num get lbf => throw _privateConstructorUsedError;
+  num get lbf;
   @override
   @JsonKey(ignore: true)
   _$KnotPoundCopyWith<_KnotPound> get copyWith =>

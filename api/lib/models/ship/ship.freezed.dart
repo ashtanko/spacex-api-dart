@@ -1,6 +1,5 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'ship.dart';
@@ -12,11 +11,70 @@ part of 'ship.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 Ship _$ShipFromJson(Map<String, dynamic> json) {
   return _Ship.fromJson(json);
 }
+
+/// @nodoc
+class _$ShipTearOff {
+  const _$ShipTearOff();
+
+  _Ship call(
+      {@JsonKey(name: 'id') String id = '',
+      @JsonKey(name: 'legacy_id') String legacyID = '',
+      @JsonKey(name: 'model') String model = '',
+      @JsonKey(name: 'type') String type = '',
+      @JsonKey(name: 'roles') List<String> roles = const [],
+      @JsonKey(name: 'imo') int imo = 0,
+      @JsonKey(name: 'mmsi') int mmsi = 0,
+      @JsonKey(name: 'abs') int abs = 0,
+      @JsonKey(name: 'class') int clazz = 0,
+      @JsonKey(name: 'mass_kg') int massKg = 0,
+      @JsonKey(name: 'mass_lbs') int massLbs = 0,
+      @JsonKey(name: 'year_built') int yearBuilt = 0,
+      @JsonKey(name: 'home_port') String homePort = '',
+      @JsonKey(name: 'status') String status = '',
+      @JsonKey(name: 'latitude') double? latitude,
+      @JsonKey(name: 'longitude') double? longitude,
+      @JsonKey(name: 'link') String link = '',
+      @JsonKey(name: 'image') String image = '',
+      @JsonKey(name: 'name') String name = '',
+      @JsonKey(name: 'active') bool isActive = false,
+      @JsonKey(name: 'launches') List<String> launches = const []}) {
+    return _Ship(
+      id: id,
+      legacyID: legacyID,
+      model: model,
+      type: type,
+      roles: roles,
+      imo: imo,
+      mmsi: mmsi,
+      abs: abs,
+      clazz: clazz,
+      massKg: massKg,
+      massLbs: massLbs,
+      yearBuilt: yearBuilt,
+      homePort: homePort,
+      status: status,
+      latitude: latitude,
+      longitude: longitude,
+      link: link,
+      image: image,
+      name: name,
+      isActive: isActive,
+      launches: launches,
+    );
+  }
+
+  Ship fromJson(Map<String, Object?> json) {
+    return Ship.fromJson(json);
+  }
+}
+
+/// @nodoc
+const $Ship = _$ShipTearOff();
 
 /// @nodoc
 mixin _$Ship {
@@ -376,7 +434,7 @@ class _$_Ship extends _Ship {
       @JsonKey(name: 'legacy_id') this.legacyID = '',
       @JsonKey(name: 'model') this.model = '',
       @JsonKey(name: 'type') this.type = '',
-      @JsonKey(name: 'roles') final List<String> roles = const [],
+      @JsonKey(name: 'roles') this.roles = const [],
       @JsonKey(name: 'imo') this.imo = 0,
       @JsonKey(name: 'mmsi') this.mmsi = 0,
       @JsonKey(name: 'abs') this.abs = 0,
@@ -392,10 +450,8 @@ class _$_Ship extends _Ship {
       @JsonKey(name: 'image') this.image = '',
       @JsonKey(name: 'name') this.name = '',
       @JsonKey(name: 'active') this.isActive = false,
-      @JsonKey(name: 'launches') final List<String> launches = const []})
-      : _roles = roles,
-        _launches = launches,
-        super._();
+      @JsonKey(name: 'launches') this.launches = const []})
+      : super._();
 
   factory _$_Ship.fromJson(Map<String, dynamic> json) => _$$_ShipFromJson(json);
 
@@ -411,15 +467,9 @@ class _$_Ship extends _Ship {
   @override
   @JsonKey(name: 'type')
   final String type;
-  @JsonKey(name: 'roles')
-  final List<String> _roles;
   @override
   @JsonKey(name: 'roles')
-  List<String> get roles {
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_roles);
-  }
-
+  final List<String> roles;
   @override
   @JsonKey(name: 'imo')
   final int imo;
@@ -465,14 +515,9 @@ class _$_Ship extends _Ship {
   @override
   @JsonKey(name: 'active')
   final bool isActive;
-  @JsonKey(name: 'launches')
-  final List<String> _launches;
   @override
   @JsonKey(name: 'launches')
-  List<String> get launches {
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_launches);
-  }
+  final List<String> launches;
 
   @override
   String toString() {
@@ -507,7 +552,6 @@ class _$_Ship extends _Ship {
             const DeepCollectionEquality().equals(other.launches, launches));
   }
 
-  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
@@ -547,94 +591,94 @@ class _$_Ship extends _Ship {
 
 abstract class _Ship extends Ship {
   const factory _Ship(
-      {@JsonKey(name: 'id') final String id,
-      @JsonKey(name: 'legacy_id') final String legacyID,
-      @JsonKey(name: 'model') final String model,
-      @JsonKey(name: 'type') final String type,
-      @JsonKey(name: 'roles') final List<String> roles,
-      @JsonKey(name: 'imo') final int imo,
-      @JsonKey(name: 'mmsi') final int mmsi,
-      @JsonKey(name: 'abs') final int abs,
-      @JsonKey(name: 'class') final int clazz,
-      @JsonKey(name: 'mass_kg') final int massKg,
-      @JsonKey(name: 'mass_lbs') final int massLbs,
-      @JsonKey(name: 'year_built') final int yearBuilt,
-      @JsonKey(name: 'home_port') final String homePort,
-      @JsonKey(name: 'status') final String status,
-      @JsonKey(name: 'latitude') final double? latitude,
-      @JsonKey(name: 'longitude') final double? longitude,
-      @JsonKey(name: 'link') final String link,
-      @JsonKey(name: 'image') final String image,
-      @JsonKey(name: 'name') final String name,
-      @JsonKey(name: 'active') final bool isActive,
-      @JsonKey(name: 'launches') final List<String> launches}) = _$_Ship;
+      {@JsonKey(name: 'id') String id,
+      @JsonKey(name: 'legacy_id') String legacyID,
+      @JsonKey(name: 'model') String model,
+      @JsonKey(name: 'type') String type,
+      @JsonKey(name: 'roles') List<String> roles,
+      @JsonKey(name: 'imo') int imo,
+      @JsonKey(name: 'mmsi') int mmsi,
+      @JsonKey(name: 'abs') int abs,
+      @JsonKey(name: 'class') int clazz,
+      @JsonKey(name: 'mass_kg') int massKg,
+      @JsonKey(name: 'mass_lbs') int massLbs,
+      @JsonKey(name: 'year_built') int yearBuilt,
+      @JsonKey(name: 'home_port') String homePort,
+      @JsonKey(name: 'status') String status,
+      @JsonKey(name: 'latitude') double? latitude,
+      @JsonKey(name: 'longitude') double? longitude,
+      @JsonKey(name: 'link') String link,
+      @JsonKey(name: 'image') String image,
+      @JsonKey(name: 'name') String name,
+      @JsonKey(name: 'active') bool isActive,
+      @JsonKey(name: 'launches') List<String> launches}) = _$_Ship;
   const _Ship._() : super._();
 
   factory _Ship.fromJson(Map<String, dynamic> json) = _$_Ship.fromJson;
 
   @override
   @JsonKey(name: 'id')
-  String get id => throw _privateConstructorUsedError;
+  String get id;
   @override
   @JsonKey(name: 'legacy_id')
-  String get legacyID => throw _privateConstructorUsedError;
+  String get legacyID;
   @override
   @JsonKey(name: 'model')
-  String get model => throw _privateConstructorUsedError;
+  String get model;
   @override
   @JsonKey(name: 'type')
-  String get type => throw _privateConstructorUsedError;
+  String get type;
   @override
   @JsonKey(name: 'roles')
-  List<String> get roles => throw _privateConstructorUsedError;
+  List<String> get roles;
   @override
   @JsonKey(name: 'imo')
-  int get imo => throw _privateConstructorUsedError;
+  int get imo;
   @override
   @JsonKey(name: 'mmsi')
-  int get mmsi => throw _privateConstructorUsedError;
+  int get mmsi;
   @override
   @JsonKey(name: 'abs')
-  int get abs => throw _privateConstructorUsedError;
+  int get abs;
   @override
   @JsonKey(name: 'class')
-  int get clazz => throw _privateConstructorUsedError;
+  int get clazz;
   @override
   @JsonKey(name: 'mass_kg')
-  int get massKg => throw _privateConstructorUsedError;
+  int get massKg;
   @override
   @JsonKey(name: 'mass_lbs')
-  int get massLbs => throw _privateConstructorUsedError;
+  int get massLbs;
   @override
   @JsonKey(name: 'year_built')
-  int get yearBuilt => throw _privateConstructorUsedError;
+  int get yearBuilt;
   @override
   @JsonKey(name: 'home_port')
-  String get homePort => throw _privateConstructorUsedError;
+  String get homePort;
   @override
   @JsonKey(name: 'status')
-  String get status => throw _privateConstructorUsedError;
+  String get status;
   @override
   @JsonKey(name: 'latitude')
-  double? get latitude => throw _privateConstructorUsedError;
+  double? get latitude;
   @override
   @JsonKey(name: 'longitude')
-  double? get longitude => throw _privateConstructorUsedError;
+  double? get longitude;
   @override
   @JsonKey(name: 'link')
-  String get link => throw _privateConstructorUsedError;
+  String get link;
   @override
   @JsonKey(name: 'image')
-  String get image => throw _privateConstructorUsedError;
+  String get image;
   @override
   @JsonKey(name: 'name')
-  String get name => throw _privateConstructorUsedError;
+  String get name;
   @override
   @JsonKey(name: 'active')
-  bool get isActive => throw _privateConstructorUsedError;
+  bool get isActive;
   @override
   @JsonKey(name: 'launches')
-  List<String> get launches => throw _privateConstructorUsedError;
+  List<String> get launches;
   @override
   @JsonKey(ignore: true)
   _$ShipCopyWith<_Ship> get copyWith => throw _privateConstructorUsedError;

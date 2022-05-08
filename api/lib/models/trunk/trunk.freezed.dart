@@ -1,6 +1,5 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'trunk.dart';
@@ -12,11 +11,32 @@ part of 'trunk.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 Trunk _$TrunkFromJson(Map<String, dynamic> json) {
   return _Trunk.fromJson(json);
 }
+
+/// @nodoc
+class _$TrunkTearOff {
+  const _$TrunkTearOff();
+
+  _Trunk call(
+      {@JsonKey(name: 'trunk_volume') TrunkVolume volume = const TrunkVolume(),
+      @JsonKey(name: 'cargo') Cargo cargo = const Cargo()}) {
+    return _Trunk(
+      volume: volume,
+      cargo: cargo,
+    );
+  }
+
+  Trunk fromJson(Map<String, Object?> json) {
+    return Trunk.fromJson(json);
+  }
+}
+
+/// @nodoc
+const $Trunk = _$TrunkTearOff();
 
 /// @nodoc
 mixin _$Trunk {
@@ -156,7 +176,6 @@ class _$_Trunk extends _Trunk {
             const DeepCollectionEquality().equals(other.cargo, cargo));
   }
 
-  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -176,18 +195,18 @@ class _$_Trunk extends _Trunk {
 
 abstract class _Trunk extends Trunk {
   const factory _Trunk(
-      {@JsonKey(name: 'trunk_volume') final TrunkVolume volume,
-      @JsonKey(name: 'cargo') final Cargo cargo}) = _$_Trunk;
+      {@JsonKey(name: 'trunk_volume') TrunkVolume volume,
+      @JsonKey(name: 'cargo') Cargo cargo}) = _$_Trunk;
   const _Trunk._() : super._();
 
   factory _Trunk.fromJson(Map<String, dynamic> json) = _$_Trunk.fromJson;
 
   @override
   @JsonKey(name: 'trunk_volume')
-  TrunkVolume get volume => throw _privateConstructorUsedError;
+  TrunkVolume get volume;
   @override
   @JsonKey(name: 'cargo')
-  Cargo get cargo => throw _privateConstructorUsedError;
+  Cargo get cargo;
   @override
   @JsonKey(ignore: true)
   _$TrunkCopyWith<_Trunk> get copyWith => throw _privateConstructorUsedError;
@@ -196,6 +215,27 @@ abstract class _Trunk extends Trunk {
 TrunkVolume _$TrunkVolumeFromJson(Map<String, dynamic> json) {
   return _TrunkVolume.fromJson(json);
 }
+
+/// @nodoc
+class _$TrunkVolumeTearOff {
+  const _$TrunkVolumeTearOff();
+
+  _TrunkVolume call(
+      {@JsonKey(name: 'cubic_meters') num cubicMeters = 0,
+      @JsonKey(name: 'cubic_feet') num cubicFeet = 0}) {
+    return _TrunkVolume(
+      cubicMeters: cubicMeters,
+      cubicFeet: cubicFeet,
+    );
+  }
+
+  TrunkVolume fromJson(Map<String, Object?> json) {
+    return TrunkVolume.fromJson(json);
+  }
+}
+
+/// @nodoc
+const $TrunkVolume = _$TrunkVolumeTearOff();
 
 /// @nodoc
 mixin _$TrunkVolume {
@@ -319,7 +359,6 @@ class _$_TrunkVolume extends _TrunkVolume {
             const DeepCollectionEquality().equals(other.cubicFeet, cubicFeet));
   }
 
-  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -339,8 +378,8 @@ class _$_TrunkVolume extends _TrunkVolume {
 
 abstract class _TrunkVolume extends TrunkVolume {
   const factory _TrunkVolume(
-      {@JsonKey(name: 'cubic_meters') final num cubicMeters,
-      @JsonKey(name: 'cubic_feet') final num cubicFeet}) = _$_TrunkVolume;
+      {@JsonKey(name: 'cubic_meters') num cubicMeters,
+      @JsonKey(name: 'cubic_feet') num cubicFeet}) = _$_TrunkVolume;
   const _TrunkVolume._() : super._();
 
   factory _TrunkVolume.fromJson(Map<String, dynamic> json) =
@@ -348,10 +387,10 @@ abstract class _TrunkVolume extends TrunkVolume {
 
   @override
   @JsonKey(name: 'cubic_meters')
-  num get cubicMeters => throw _privateConstructorUsedError;
+  num get cubicMeters;
   @override
   @JsonKey(name: 'cubic_feet')
-  num get cubicFeet => throw _privateConstructorUsedError;
+  num get cubicFeet;
   @override
   @JsonKey(ignore: true)
   _$TrunkVolumeCopyWith<_TrunkVolume> get copyWith =>
@@ -361,6 +400,29 @@ abstract class _TrunkVolume extends TrunkVolume {
 Cargo _$CargoFromJson(Map<String, dynamic> json) {
   return _Cargo.fromJson(json);
 }
+
+/// @nodoc
+class _$CargoTearOff {
+  const _$CargoTearOff();
+
+  _Cargo call(
+      {@JsonKey(name: 'solar_array')
+          num solarArray = 0,
+      @JsonKey(name: 'unpressurized_cargo')
+          bool isUnpressurizedCargo = false}) {
+    return _Cargo(
+      solarArray: solarArray,
+      isUnpressurizedCargo: isUnpressurizedCargo,
+    );
+  }
+
+  Cargo fromJson(Map<String, Object?> json) {
+    return Cargo.fromJson(json);
+  }
+}
+
+/// @nodoc
+const $Cargo = _$CargoTearOff();
 
 /// @nodoc
 mixin _$Cargo {
@@ -480,7 +542,6 @@ class _$_Cargo extends _Cargo {
                 .equals(other.isUnpressurizedCargo, isUnpressurizedCargo));
   }
 
-  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -500,20 +561,19 @@ class _$_Cargo extends _Cargo {
 
 abstract class _Cargo extends Cargo {
   const factory _Cargo(
-      {@JsonKey(name: 'solar_array')
-          final num solarArray,
-      @JsonKey(name: 'unpressurized_cargo')
-          final bool isUnpressurizedCargo}) = _$_Cargo;
+          {@JsonKey(name: 'solar_array') num solarArray,
+          @JsonKey(name: 'unpressurized_cargo') bool isUnpressurizedCargo}) =
+      _$_Cargo;
   const _Cargo._() : super._();
 
   factory _Cargo.fromJson(Map<String, dynamic> json) = _$_Cargo.fromJson;
 
   @override
   @JsonKey(name: 'solar_array')
-  num get solarArray => throw _privateConstructorUsedError;
+  num get solarArray;
   @override
   @JsonKey(name: 'unpressurized_cargo')
-  bool get isUnpressurizedCargo => throw _privateConstructorUsedError;
+  bool get isUnpressurizedCargo;
   @override
   @JsonKey(ignore: true)
   _$CargoCopyWith<_Cargo> get copyWith => throw _privateConstructorUsedError;

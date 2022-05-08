@@ -1,6 +1,5 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'engine.dart';
@@ -12,11 +11,61 @@ part of 'engine.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 Engine _$EngineFromJson(Map<String, dynamic> json) {
   return _Engine.fromJson(json);
 }
+
+/// @nodoc
+class _$EngineTearOff {
+  const _$EngineTearOff();
+
+  _Engine call(
+      {@JsonKey(name: 'isp')
+          Isp isp = const Isp(),
+      @JsonKey(name: 'thrust_sea_level')
+          KnotPound thrustSeaLevel = const KnotPound(),
+      @JsonKey(name: 'thrust_vacuum')
+          KnotPound thrustVacuum = const KnotPound(),
+      @JsonKey(name: 'number')
+          num number = 0,
+      @JsonKey(name: 'type')
+          String type = 'merlin',
+      @JsonKey(name: 'version')
+          String version = '',
+      @JsonKey(name: 'layout')
+          String layout = 'single',
+      @JsonKey(name: 'engine_loss_max')
+          num engineLossMax = 0,
+      @JsonKey(name: 'propellant_1')
+          String firstPropellant = 'liquid oxygen',
+      @JsonKey(name: 'propellant_2')
+          String secondPropellant = 'RP-1 kerosene',
+      @JsonKey(name: 'thrust_to_weight')
+          num thrustToWeight = 0}) {
+    return _Engine(
+      isp: isp,
+      thrustSeaLevel: thrustSeaLevel,
+      thrustVacuum: thrustVacuum,
+      number: number,
+      type: type,
+      version: version,
+      layout: layout,
+      engineLossMax: engineLossMax,
+      firstPropellant: firstPropellant,
+      secondPropellant: secondPropellant,
+      thrustToWeight: thrustToWeight,
+    );
+  }
+
+  Engine fromJson(Map<String, Object?> json) {
+    return Engine.fromJson(json);
+  }
+}
+
+/// @nodoc
+const $Engine = _$EngineTearOff();
 
 /// @nodoc
 mixin _$Engine {
@@ -354,7 +403,6 @@ class _$_Engine extends _Engine {
                 .equals(other.thrustToWeight, thrustToWeight));
   }
 
-  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -383,54 +431,54 @@ class _$_Engine extends _Engine {
 
 abstract class _Engine extends Engine {
   const factory _Engine(
-      {@JsonKey(name: 'isp') final Isp isp,
-      @JsonKey(name: 'thrust_sea_level') final KnotPound thrustSeaLevel,
-      @JsonKey(name: 'thrust_vacuum') final KnotPound thrustVacuum,
-      @JsonKey(name: 'number') final num number,
-      @JsonKey(name: 'type') final String type,
-      @JsonKey(name: 'version') final String version,
-      @JsonKey(name: 'layout') final String layout,
-      @JsonKey(name: 'engine_loss_max') final num engineLossMax,
-      @JsonKey(name: 'propellant_1') final String firstPropellant,
-      @JsonKey(name: 'propellant_2') final String secondPropellant,
-      @JsonKey(name: 'thrust_to_weight') final num thrustToWeight}) = _$_Engine;
+      {@JsonKey(name: 'isp') Isp isp,
+      @JsonKey(name: 'thrust_sea_level') KnotPound thrustSeaLevel,
+      @JsonKey(name: 'thrust_vacuum') KnotPound thrustVacuum,
+      @JsonKey(name: 'number') num number,
+      @JsonKey(name: 'type') String type,
+      @JsonKey(name: 'version') String version,
+      @JsonKey(name: 'layout') String layout,
+      @JsonKey(name: 'engine_loss_max') num engineLossMax,
+      @JsonKey(name: 'propellant_1') String firstPropellant,
+      @JsonKey(name: 'propellant_2') String secondPropellant,
+      @JsonKey(name: 'thrust_to_weight') num thrustToWeight}) = _$_Engine;
   const _Engine._() : super._();
 
   factory _Engine.fromJson(Map<String, dynamic> json) = _$_Engine.fromJson;
 
   @override
   @JsonKey(name: 'isp')
-  Isp get isp => throw _privateConstructorUsedError;
+  Isp get isp;
   @override
   @JsonKey(name: 'thrust_sea_level')
-  KnotPound get thrustSeaLevel => throw _privateConstructorUsedError;
+  KnotPound get thrustSeaLevel;
   @override
   @JsonKey(name: 'thrust_vacuum')
-  KnotPound get thrustVacuum => throw _privateConstructorUsedError;
+  KnotPound get thrustVacuum;
   @override
   @JsonKey(name: 'number')
-  num get number => throw _privateConstructorUsedError;
+  num get number;
   @override
   @JsonKey(name: 'type')
-  String get type => throw _privateConstructorUsedError;
+  String get type;
   @override
   @JsonKey(name: 'version')
-  String get version => throw _privateConstructorUsedError;
+  String get version;
   @override
   @JsonKey(name: 'layout')
-  String get layout => throw _privateConstructorUsedError;
+  String get layout;
   @override
   @JsonKey(name: 'engine_loss_max')
-  num get engineLossMax => throw _privateConstructorUsedError;
+  num get engineLossMax;
   @override
   @JsonKey(name: 'propellant_1')
-  String get firstPropellant => throw _privateConstructorUsedError;
+  String get firstPropellant;
   @override
   @JsonKey(name: 'propellant_2')
-  String get secondPropellant => throw _privateConstructorUsedError;
+  String get secondPropellant;
   @override
   @JsonKey(name: 'thrust_to_weight')
-  num get thrustToWeight => throw _privateConstructorUsedError;
+  num get thrustToWeight;
   @override
   @JsonKey(ignore: true)
   _$EngineCopyWith<_Engine> get copyWith => throw _privateConstructorUsedError;

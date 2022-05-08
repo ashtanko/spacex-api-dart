@@ -1,6 +1,5 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'payload.dart';
@@ -12,11 +11,54 @@ part of 'payload.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 Payload _$PayloadFromJson(Map<String, dynamic> json) {
   return _Payload.fromJson(json);
 }
+
+/// @nodoc
+class _$PayloadTearOff {
+  const _$PayloadTearOff();
+
+  _Payload call(
+      {Capsule? capsule,
+      String? name,
+      bool reused = false,
+      String? customer,
+      String? nationality,
+      String? manufacturer,
+      num? mass,
+      String? orbit,
+      num? periapsis,
+      num? apoapsis,
+      num? inclination,
+      num? period,
+      String? id}) {
+    return _Payload(
+      capsule: capsule,
+      name: name,
+      reused: reused,
+      customer: customer,
+      nationality: nationality,
+      manufacturer: manufacturer,
+      mass: mass,
+      orbit: orbit,
+      periapsis: periapsis,
+      apoapsis: apoapsis,
+      inclination: inclination,
+      period: period,
+      id: id,
+    );
+  }
+
+  Payload fromJson(Map<String, Object?> json) {
+    return Payload.fromJson(json);
+  }
+}
+
+/// @nodoc
+const $Payload = _$PayloadTearOff();
 
 /// @nodoc
 mixin _$Payload {
@@ -285,8 +327,8 @@ class _$_Payload extends _Payload {
   final Capsule? capsule;
   @override
   final String? name;
-  @override
   @JsonKey()
+  @override
   final bool reused;
   @override
   final String? customer;
@@ -337,7 +379,6 @@ class _$_Payload extends _Payload {
             const DeepCollectionEquality().equals(other.id, id));
   }
 
-  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -368,49 +409,49 @@ class _$_Payload extends _Payload {
 
 abstract class _Payload extends Payload {
   const factory _Payload(
-      {final Capsule? capsule,
-      final String? name,
-      final bool reused,
-      final String? customer,
-      final String? nationality,
-      final String? manufacturer,
-      final num? mass,
-      final String? orbit,
-      final num? periapsis,
-      final num? apoapsis,
-      final num? inclination,
-      final num? period,
-      final String? id}) = _$_Payload;
+      {Capsule? capsule,
+      String? name,
+      bool reused,
+      String? customer,
+      String? nationality,
+      String? manufacturer,
+      num? mass,
+      String? orbit,
+      num? periapsis,
+      num? apoapsis,
+      num? inclination,
+      num? period,
+      String? id}) = _$_Payload;
   const _Payload._() : super._();
 
   factory _Payload.fromJson(Map<String, dynamic> json) = _$_Payload.fromJson;
 
   @override
-  Capsule? get capsule => throw _privateConstructorUsedError;
+  Capsule? get capsule;
   @override
-  String? get name => throw _privateConstructorUsedError;
+  String? get name;
   @override
-  bool get reused => throw _privateConstructorUsedError;
+  bool get reused;
   @override
-  String? get customer => throw _privateConstructorUsedError;
+  String? get customer;
   @override
-  String? get nationality => throw _privateConstructorUsedError;
+  String? get nationality;
   @override
-  String? get manufacturer => throw _privateConstructorUsedError;
+  String? get manufacturer;
   @override
-  num? get mass => throw _privateConstructorUsedError;
+  num? get mass;
   @override
-  String? get orbit => throw _privateConstructorUsedError;
+  String? get orbit;
   @override
-  num? get periapsis => throw _privateConstructorUsedError;
+  num? get periapsis;
   @override
-  num? get apoapsis => throw _privateConstructorUsedError;
+  num? get apoapsis;
   @override
-  num? get inclination => throw _privateConstructorUsedError;
+  num? get inclination;
   @override
-  num? get period => throw _privateConstructorUsedError;
+  num? get period;
   @override
-  String? get id => throw _privateConstructorUsedError;
+  String? get id;
   @override
   @JsonKey(ignore: true)
   _$PayloadCopyWith<_Payload> get copyWith =>

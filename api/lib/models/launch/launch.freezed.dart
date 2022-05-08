@@ -1,6 +1,5 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'launch.dart';
@@ -12,11 +11,78 @@ part of 'launch.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 Launch _$LaunchFromJson(Map<String, dynamic> json) {
   return _Launch.fromJson(json);
 }
+
+/// @nodoc
+class _$LaunchTearOff {
+  const _$LaunchTearOff();
+
+  _Launch call(
+      {required String id,
+      bool tbd = false,
+      @JsonKey(name: 'auto_update') bool autoUpdate = false,
+      List<Core> cores = const [],
+      bool upcoming = false,
+      @JsonKey(name: 'date_precision') String datePrecision = '',
+      @JsonKey(name: 'date_local') String dateLocal = '',
+      @JsonKey(name: 'date_unix') int dateUnix = 0,
+      @JsonKey(name: 'date_utc') String dateUtc = '',
+      @JsonKey(name: 'name') String name = '',
+      @JsonKey(name: 'flight_number') int flightNumber = 0,
+      @JsonKey(name: 'launchpad') String launchpad = '',
+      @JsonKey(name: 'payloads') List<String> payloads = const [],
+      @JsonKey(name: 'capsules') List<Capsule> capsules = const [],
+      @JsonKey(name: 'crew') List<String> crew = const [],
+      @JsonKey(name: 'details') String details = '',
+      @JsonKey(name: 'failures') List<LaunchFailure> failures = const [],
+      @JsonKey(name: 'success') bool success = false,
+      @JsonKey(name: 'rocket') String rocket = '',
+      @JsonKey(name: 'window') int window = 0,
+      @JsonKey(name: 'net') bool net = false,
+      @JsonKey(name: 'static_fire_date_unix') int staticFireDateUnix = 0,
+      @JsonKey(name: 'static_fire_date_utc') String staticFireDateUtc = '',
+      @JsonKey(name: 'links') LaunchLinks? links,
+      @JsonKey(name: 'fairings') Fairings? fairings}) {
+    return _Launch(
+      id: id,
+      tbd: tbd,
+      autoUpdate: autoUpdate,
+      cores: cores,
+      upcoming: upcoming,
+      datePrecision: datePrecision,
+      dateLocal: dateLocal,
+      dateUnix: dateUnix,
+      dateUtc: dateUtc,
+      name: name,
+      flightNumber: flightNumber,
+      launchpad: launchpad,
+      payloads: payloads,
+      capsules: capsules,
+      crew: crew,
+      details: details,
+      failures: failures,
+      success: success,
+      rocket: rocket,
+      window: window,
+      net: net,
+      staticFireDateUnix: staticFireDateUnix,
+      staticFireDateUtc: staticFireDateUtc,
+      links: links,
+      fairings: fairings,
+    );
+  }
+
+  Launch fromJson(Map<String, Object?> json) {
+    return Launch.fromJson(json);
+  }
+}
+
+/// @nodoc
+const $Launch = _$LaunchTearOff();
 
 /// @nodoc
 mixin _$Launch {
@@ -458,7 +524,7 @@ class _$_Launch extends _Launch {
       {required this.id,
       this.tbd = false,
       @JsonKey(name: 'auto_update') this.autoUpdate = false,
-      final List<Core> cores = const [],
+      this.cores = const [],
       this.upcoming = false,
       @JsonKey(name: 'date_precision') this.datePrecision = '',
       @JsonKey(name: 'date_local') this.dateLocal = '',
@@ -467,11 +533,11 @@ class _$_Launch extends _Launch {
       @JsonKey(name: 'name') this.name = '',
       @JsonKey(name: 'flight_number') this.flightNumber = 0,
       @JsonKey(name: 'launchpad') this.launchpad = '',
-      @JsonKey(name: 'payloads') final List<String> payloads = const [],
-      @JsonKey(name: 'capsules') final List<Capsule> capsules = const [],
-      @JsonKey(name: 'crew') final List<String> crew = const [],
+      @JsonKey(name: 'payloads') this.payloads = const [],
+      @JsonKey(name: 'capsules') this.capsules = const [],
+      @JsonKey(name: 'crew') this.crew = const [],
       @JsonKey(name: 'details') this.details = '',
-      @JsonKey(name: 'failures') final List<LaunchFailure> failures = const [],
+      @JsonKey(name: 'failures') this.failures = const [],
       @JsonKey(name: 'success') this.success = false,
       @JsonKey(name: 'rocket') this.rocket = '',
       @JsonKey(name: 'window') this.window = 0,
@@ -480,34 +546,24 @@ class _$_Launch extends _Launch {
       @JsonKey(name: 'static_fire_date_utc') this.staticFireDateUtc = '',
       @JsonKey(name: 'links') this.links,
       @JsonKey(name: 'fairings') this.fairings})
-      : _cores = cores,
-        _payloads = payloads,
-        _capsules = capsules,
-        _crew = crew,
-        _failures = failures,
-        super._();
+      : super._();
 
   factory _$_Launch.fromJson(Map<String, dynamic> json) =>
       _$$_LaunchFromJson(json);
 
   @override
   final String id;
-  @override
   @JsonKey()
+  @override
   final bool tbd;
   @override
   @JsonKey(name: 'auto_update')
   final bool autoUpdate;
-  final List<Core> _cores;
-  @override
   @JsonKey()
-  List<Core> get cores {
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_cores);
-  }
-
   @override
+  final List<Core> cores;
   @JsonKey()
+  @override
   final bool upcoming;
   @override
   @JsonKey(name: 'date_precision')
@@ -530,47 +586,21 @@ class _$_Launch extends _Launch {
   @override
   @JsonKey(name: 'launchpad')
   final String launchpad;
-  @JsonKey(name: 'payloads')
-  final List<String> _payloads;
   @override
   @JsonKey(name: 'payloads')
-  List<String> get payloads {
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_payloads);
-  }
-
-  @JsonKey(name: 'capsules')
-  final List<Capsule> _capsules;
+  final List<String> payloads;
   @override
   @JsonKey(name: 'capsules')
-  List<Capsule> get capsules {
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_capsules);
-  }
-
-//@JsonKey(name: 'ships') @Default([]) List<Ship> ships,
+  final List<Capsule> capsules;
+  @override //@JsonKey(name: 'ships') @Default([]) List<Ship> ships,
   @JsonKey(name: 'crew')
-  final List<String> _crew;
-//@JsonKey(name: 'ships') @Default([]) List<Ship> ships,
-  @override
-  @JsonKey(name: 'crew')
-  List<String> get crew {
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_crew);
-  }
-
+  final List<String> crew;
   @override
   @JsonKey(name: 'details')
   final String details;
-  @JsonKey(name: 'failures')
-  final List<LaunchFailure> _failures;
   @override
   @JsonKey(name: 'failures')
-  List<LaunchFailure> get failures {
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_failures);
-  }
-
+  final List<LaunchFailure> failures;
   @override
   @JsonKey(name: 'success')
   final bool success;
@@ -638,7 +668,6 @@ class _$_Launch extends _Launch {
             const DeepCollectionEquality().equals(other.fairings, fairings));
   }
 
-  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
@@ -682,106 +711,106 @@ class _$_Launch extends _Launch {
 
 abstract class _Launch extends Launch {
   const factory _Launch(
-      {required final String id,
-      final bool tbd,
-      @JsonKey(name: 'auto_update') final bool autoUpdate,
-      final List<Core> cores,
-      final bool upcoming,
-      @JsonKey(name: 'date_precision') final String datePrecision,
-      @JsonKey(name: 'date_local') final String dateLocal,
-      @JsonKey(name: 'date_unix') final int dateUnix,
-      @JsonKey(name: 'date_utc') final String dateUtc,
-      @JsonKey(name: 'name') final String name,
-      @JsonKey(name: 'flight_number') final int flightNumber,
-      @JsonKey(name: 'launchpad') final String launchpad,
-      @JsonKey(name: 'payloads') final List<String> payloads,
-      @JsonKey(name: 'capsules') final List<Capsule> capsules,
-      @JsonKey(name: 'crew') final List<String> crew,
-      @JsonKey(name: 'details') final String details,
-      @JsonKey(name: 'failures') final List<LaunchFailure> failures,
-      @JsonKey(name: 'success') final bool success,
-      @JsonKey(name: 'rocket') final String rocket,
-      @JsonKey(name: 'window') final int window,
-      @JsonKey(name: 'net') final bool net,
-      @JsonKey(name: 'static_fire_date_unix') final int staticFireDateUnix,
-      @JsonKey(name: 'static_fire_date_utc') final String staticFireDateUtc,
-      @JsonKey(name: 'links') final LaunchLinks? links,
-      @JsonKey(name: 'fairings') final Fairings? fairings}) = _$_Launch;
+      {required String id,
+      bool tbd,
+      @JsonKey(name: 'auto_update') bool autoUpdate,
+      List<Core> cores,
+      bool upcoming,
+      @JsonKey(name: 'date_precision') String datePrecision,
+      @JsonKey(name: 'date_local') String dateLocal,
+      @JsonKey(name: 'date_unix') int dateUnix,
+      @JsonKey(name: 'date_utc') String dateUtc,
+      @JsonKey(name: 'name') String name,
+      @JsonKey(name: 'flight_number') int flightNumber,
+      @JsonKey(name: 'launchpad') String launchpad,
+      @JsonKey(name: 'payloads') List<String> payloads,
+      @JsonKey(name: 'capsules') List<Capsule> capsules,
+      @JsonKey(name: 'crew') List<String> crew,
+      @JsonKey(name: 'details') String details,
+      @JsonKey(name: 'failures') List<LaunchFailure> failures,
+      @JsonKey(name: 'success') bool success,
+      @JsonKey(name: 'rocket') String rocket,
+      @JsonKey(name: 'window') int window,
+      @JsonKey(name: 'net') bool net,
+      @JsonKey(name: 'static_fire_date_unix') int staticFireDateUnix,
+      @JsonKey(name: 'static_fire_date_utc') String staticFireDateUtc,
+      @JsonKey(name: 'links') LaunchLinks? links,
+      @JsonKey(name: 'fairings') Fairings? fairings}) = _$_Launch;
   const _Launch._() : super._();
 
   factory _Launch.fromJson(Map<String, dynamic> json) = _$_Launch.fromJson;
 
   @override
-  String get id => throw _privateConstructorUsedError;
+  String get id;
   @override
-  bool get tbd => throw _privateConstructorUsedError;
+  bool get tbd;
   @override
   @JsonKey(name: 'auto_update')
-  bool get autoUpdate => throw _privateConstructorUsedError;
+  bool get autoUpdate;
   @override
-  List<Core> get cores => throw _privateConstructorUsedError;
+  List<Core> get cores;
   @override
-  bool get upcoming => throw _privateConstructorUsedError;
+  bool get upcoming;
   @override
   @JsonKey(name: 'date_precision')
-  String get datePrecision => throw _privateConstructorUsedError;
+  String get datePrecision;
   @override
   @JsonKey(name: 'date_local')
-  String get dateLocal => throw _privateConstructorUsedError;
+  String get dateLocal;
   @override
   @JsonKey(name: 'date_unix')
-  int get dateUnix => throw _privateConstructorUsedError;
+  int get dateUnix;
   @override
   @JsonKey(name: 'date_utc')
-  String get dateUtc => throw _privateConstructorUsedError;
+  String get dateUtc;
   @override
   @JsonKey(name: 'name')
-  String get name => throw _privateConstructorUsedError;
+  String get name;
   @override
   @JsonKey(name: 'flight_number')
-  int get flightNumber => throw _privateConstructorUsedError;
+  int get flightNumber;
   @override
   @JsonKey(name: 'launchpad')
-  String get launchpad => throw _privateConstructorUsedError;
+  String get launchpad;
   @override
   @JsonKey(name: 'payloads')
-  List<String> get payloads => throw _privateConstructorUsedError;
+  List<String> get payloads;
   @override
   @JsonKey(name: 'capsules')
-  List<Capsule> get capsules => throw _privateConstructorUsedError;
+  List<Capsule> get capsules;
   @override //@JsonKey(name: 'ships') @Default([]) List<Ship> ships,
   @JsonKey(name: 'crew')
-  List<String> get crew => throw _privateConstructorUsedError;
+  List<String> get crew;
   @override
   @JsonKey(name: 'details')
-  String get details => throw _privateConstructorUsedError;
+  String get details;
   @override
   @JsonKey(name: 'failures')
-  List<LaunchFailure> get failures => throw _privateConstructorUsedError;
+  List<LaunchFailure> get failures;
   @override
   @JsonKey(name: 'success')
-  bool get success => throw _privateConstructorUsedError;
+  bool get success;
   @override
   @JsonKey(name: 'rocket')
-  String get rocket => throw _privateConstructorUsedError;
+  String get rocket;
   @override
   @JsonKey(name: 'window')
-  int get window => throw _privateConstructorUsedError;
+  int get window;
   @override
   @JsonKey(name: 'net')
-  bool get net => throw _privateConstructorUsedError;
+  bool get net;
   @override
   @JsonKey(name: 'static_fire_date_unix')
-  int get staticFireDateUnix => throw _privateConstructorUsedError;
+  int get staticFireDateUnix;
   @override
   @JsonKey(name: 'static_fire_date_utc')
-  String get staticFireDateUtc => throw _privateConstructorUsedError;
+  String get staticFireDateUtc;
   @override
   @JsonKey(name: 'links')
-  LaunchLinks? get links => throw _privateConstructorUsedError;
+  LaunchLinks? get links;
   @override
   @JsonKey(name: 'fairings')
-  Fairings? get fairings => throw _privateConstructorUsedError;
+  Fairings? get fairings;
   @override
   @JsonKey(ignore: true)
   _$LaunchCopyWith<_Launch> get copyWith => throw _privateConstructorUsedError;
@@ -790,6 +819,39 @@ abstract class _Launch extends Launch {
 LaunchLinks _$LaunchLinksFromJson(Map<String, dynamic> json) {
   return _LaunchLinks.fromJson(json);
 }
+
+/// @nodoc
+class _$LaunchLinksTearOff {
+  const _$LaunchLinksTearOff();
+
+  _LaunchLinks call(
+      {LaunchPatch? patch,
+      LaunchReddit? reddit,
+      LaunchFlickr? flickr,
+      String? presskit,
+      String? webcast,
+      @JsonKey(name: 'youtube_id') String? youtubeID,
+      @JsonKey(name: 'article') String? article,
+      @JsonKey(name: 'wikipedia') String? wikipedia}) {
+    return _LaunchLinks(
+      patch: patch,
+      reddit: reddit,
+      flickr: flickr,
+      presskit: presskit,
+      webcast: webcast,
+      youtubeID: youtubeID,
+      article: article,
+      wikipedia: wikipedia,
+    );
+  }
+
+  LaunchLinks fromJson(Map<String, Object?> json) {
+    return LaunchLinks.fromJson(json);
+  }
+}
+
+/// @nodoc
+const $LaunchLinks = _$LaunchLinksTearOff();
 
 /// @nodoc
 mixin _$LaunchLinks {
@@ -1060,7 +1122,6 @@ class _$_LaunchLinks extends _LaunchLinks {
             const DeepCollectionEquality().equals(other.wikipedia, wikipedia));
   }
 
-  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -1086,38 +1147,38 @@ class _$_LaunchLinks extends _LaunchLinks {
 
 abstract class _LaunchLinks extends LaunchLinks {
   const factory _LaunchLinks(
-      {final LaunchPatch? patch,
-      final LaunchReddit? reddit,
-      final LaunchFlickr? flickr,
-      final String? presskit,
-      final String? webcast,
-      @JsonKey(name: 'youtube_id') final String? youtubeID,
-      @JsonKey(name: 'article') final String? article,
-      @JsonKey(name: 'wikipedia') final String? wikipedia}) = _$_LaunchLinks;
+      {LaunchPatch? patch,
+      LaunchReddit? reddit,
+      LaunchFlickr? flickr,
+      String? presskit,
+      String? webcast,
+      @JsonKey(name: 'youtube_id') String? youtubeID,
+      @JsonKey(name: 'article') String? article,
+      @JsonKey(name: 'wikipedia') String? wikipedia}) = _$_LaunchLinks;
   const _LaunchLinks._() : super._();
 
   factory _LaunchLinks.fromJson(Map<String, dynamic> json) =
       _$_LaunchLinks.fromJson;
 
   @override
-  LaunchPatch? get patch => throw _privateConstructorUsedError;
+  LaunchPatch? get patch;
   @override
-  LaunchReddit? get reddit => throw _privateConstructorUsedError;
+  LaunchReddit? get reddit;
   @override
-  LaunchFlickr? get flickr => throw _privateConstructorUsedError;
+  LaunchFlickr? get flickr;
   @override
-  String? get presskit => throw _privateConstructorUsedError;
+  String? get presskit;
   @override
-  String? get webcast => throw _privateConstructorUsedError;
+  String? get webcast;
   @override
   @JsonKey(name: 'youtube_id')
-  String? get youtubeID => throw _privateConstructorUsedError;
+  String? get youtubeID;
   @override
   @JsonKey(name: 'article')
-  String? get article => throw _privateConstructorUsedError;
+  String? get article;
   @override
   @JsonKey(name: 'wikipedia')
-  String? get wikipedia => throw _privateConstructorUsedError;
+  String? get wikipedia;
   @override
   @JsonKey(ignore: true)
   _$LaunchLinksCopyWith<_LaunchLinks> get copyWith =>
@@ -1127,6 +1188,26 @@ abstract class _LaunchLinks extends LaunchLinks {
 LaunchFailure _$LaunchFailureFromJson(Map<String, dynamic> json) {
   return _LaunchFailure.fromJson(json);
 }
+
+/// @nodoc
+class _$LaunchFailureTearOff {
+  const _$LaunchFailureTearOff();
+
+  _LaunchFailure call({int? time, int? altitude, String? reason}) {
+    return _LaunchFailure(
+      time: time,
+      altitude: altitude,
+      reason: reason,
+    );
+  }
+
+  LaunchFailure fromJson(Map<String, Object?> json) {
+    return LaunchFailure.fromJson(json);
+  }
+}
+
+/// @nodoc
+const $LaunchFailure = _$LaunchFailureTearOff();
 
 /// @nodoc
 mixin _$LaunchFailure {
@@ -1254,7 +1335,6 @@ class _$_LaunchFailure extends _LaunchFailure {
             const DeepCollectionEquality().equals(other.reason, reason));
   }
 
-  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -1274,21 +1354,19 @@ class _$_LaunchFailure extends _LaunchFailure {
 }
 
 abstract class _LaunchFailure extends LaunchFailure {
-  const factory _LaunchFailure(
-      {final int? time,
-      final int? altitude,
-      final String? reason}) = _$_LaunchFailure;
+  const factory _LaunchFailure({int? time, int? altitude, String? reason}) =
+      _$_LaunchFailure;
   const _LaunchFailure._() : super._();
 
   factory _LaunchFailure.fromJson(Map<String, dynamic> json) =
       _$_LaunchFailure.fromJson;
 
   @override
-  int? get time => throw _privateConstructorUsedError;
+  int? get time;
   @override
-  int? get altitude => throw _privateConstructorUsedError;
+  int? get altitude;
   @override
-  String? get reason => throw _privateConstructorUsedError;
+  String? get reason;
   @override
   @JsonKey(ignore: true)
   _$LaunchFailureCopyWith<_LaunchFailure> get copyWith =>
@@ -1298,6 +1376,31 @@ abstract class _LaunchFailure extends LaunchFailure {
 LaunchDetails _$LaunchDetailsFromJson(Map<String, dynamic> json) {
   return _LaunchDetails.fromJson(json);
 }
+
+/// @nodoc
+class _$LaunchDetailsTearOff {
+  const _$LaunchDetailsTearOff();
+
+  _LaunchDetails call(
+      {required int flightNumber,
+      required String name,
+      required DateTime date,
+      required String id}) {
+    return _LaunchDetails(
+      flightNumber: flightNumber,
+      name: name,
+      date: date,
+      id: id,
+    );
+  }
+
+  LaunchDetails fromJson(Map<String, Object?> json) {
+    return LaunchDetails.fromJson(json);
+  }
+}
+
+/// @nodoc
+const $LaunchDetails = _$LaunchDetailsTearOff();
 
 /// @nodoc
 mixin _$LaunchDetails {
@@ -1445,7 +1548,6 @@ class _$_LaunchDetails extends _LaunchDetails {
             const DeepCollectionEquality().equals(other.id, id));
   }
 
-  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -1467,23 +1569,23 @@ class _$_LaunchDetails extends _LaunchDetails {
 
 abstract class _LaunchDetails extends LaunchDetails {
   const factory _LaunchDetails(
-      {required final int flightNumber,
-      required final String name,
-      required final DateTime date,
-      required final String id}) = _$_LaunchDetails;
+      {required int flightNumber,
+      required String name,
+      required DateTime date,
+      required String id}) = _$_LaunchDetails;
   const _LaunchDetails._() : super._();
 
   factory _LaunchDetails.fromJson(Map<String, dynamic> json) =
       _$_LaunchDetails.fromJson;
 
   @override
-  int get flightNumber => throw _privateConstructorUsedError;
+  int get flightNumber;
   @override
-  String get name => throw _privateConstructorUsedError;
+  String get name;
   @override
-  DateTime get date => throw _privateConstructorUsedError;
+  DateTime get date;
   @override
-  String get id => throw _privateConstructorUsedError;
+  String get id;
   @override
   @JsonKey(ignore: true)
   _$LaunchDetailsCopyWith<_LaunchDetails> get copyWith =>
@@ -1493,6 +1595,26 @@ abstract class _LaunchDetails extends LaunchDetails {
 LaunchFlickr _$LaunchFlickrFromJson(Map<String, dynamic> json) {
   return _LaunchFlickr.fromJson(json);
 }
+
+/// @nodoc
+class _$LaunchFlickrTearOff {
+  const _$LaunchFlickrTearOff();
+
+  _LaunchFlickr call(
+      {List<String> original = const [], List<String> small = const []}) {
+    return _LaunchFlickr(
+      original: original,
+      small: small,
+    );
+  }
+
+  LaunchFlickr fromJson(Map<String, Object?> json) {
+    return LaunchFlickr.fromJson(json);
+  }
+}
+
+/// @nodoc
+const $LaunchFlickr = _$LaunchFlickrTearOff();
 
 /// @nodoc
 mixin _$LaunchFlickr {
@@ -1580,31 +1702,18 @@ class __$LaunchFlickrCopyWithImpl<$Res> extends _$LaunchFlickrCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_LaunchFlickr extends _LaunchFlickr {
-  const _$_LaunchFlickr(
-      {final List<String> original = const [],
-      final List<String> small = const []})
-      : _original = original,
-        _small = small,
-        super._();
+  const _$_LaunchFlickr({this.original = const [], this.small = const []})
+      : super._();
 
   factory _$_LaunchFlickr.fromJson(Map<String, dynamic> json) =>
       _$$_LaunchFlickrFromJson(json);
 
-  final List<String> _original;
-  @override
   @JsonKey()
-  List<String> get original {
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_original);
-  }
-
-  final List<String> _small;
   @override
+  final List<String> original;
   @JsonKey()
-  List<String> get small {
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_small);
-  }
+  @override
+  final List<String> small;
 
   @override
   String toString() {
@@ -1620,7 +1729,6 @@ class _$_LaunchFlickr extends _LaunchFlickr {
             const DeepCollectionEquality().equals(other.small, small));
   }
 
-  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -1639,18 +1747,17 @@ class _$_LaunchFlickr extends _LaunchFlickr {
 }
 
 abstract class _LaunchFlickr extends LaunchFlickr {
-  const factory _LaunchFlickr(
-      {final List<String> original,
-      final List<String> small}) = _$_LaunchFlickr;
+  const factory _LaunchFlickr({List<String> original, List<String> small}) =
+      _$_LaunchFlickr;
   const _LaunchFlickr._() : super._();
 
   factory _LaunchFlickr.fromJson(Map<String, dynamic> json) =
       _$_LaunchFlickr.fromJson;
 
   @override
-  List<String> get original => throw _privateConstructorUsedError;
+  List<String> get original;
   @override
-  List<String> get small => throw _privateConstructorUsedError;
+  List<String> get small;
   @override
   @JsonKey(ignore: true)
   _$LaunchFlickrCopyWith<_LaunchFlickr> get copyWith =>
@@ -1660,6 +1767,25 @@ abstract class _LaunchFlickr extends LaunchFlickr {
 LaunchPatch _$LaunchPatchFromJson(Map<String, dynamic> json) {
   return _LaunchPatch.fromJson(json);
 }
+
+/// @nodoc
+class _$LaunchPatchTearOff {
+  const _$LaunchPatchTearOff();
+
+  _LaunchPatch call({String? small, String? large}) {
+    return _LaunchPatch(
+      small: small,
+      large: large,
+    );
+  }
+
+  LaunchPatch fromJson(Map<String, Object?> json) {
+    return LaunchPatch.fromJson(json);
+  }
+}
+
+/// @nodoc
+const $LaunchPatch = _$LaunchPatchTearOff();
 
 /// @nodoc
 mixin _$LaunchPatch {
@@ -1771,7 +1897,6 @@ class _$_LaunchPatch extends _LaunchPatch {
             const DeepCollectionEquality().equals(other.large, large));
   }
 
-  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -1790,17 +1915,16 @@ class _$_LaunchPatch extends _LaunchPatch {
 }
 
 abstract class _LaunchPatch extends LaunchPatch {
-  const factory _LaunchPatch({final String? small, final String? large}) =
-      _$_LaunchPatch;
+  const factory _LaunchPatch({String? small, String? large}) = _$_LaunchPatch;
   const _LaunchPatch._() : super._();
 
   factory _LaunchPatch.fromJson(Map<String, dynamic> json) =
       _$_LaunchPatch.fromJson;
 
   @override
-  String? get small => throw _privateConstructorUsedError;
+  String? get small;
   @override
-  String? get large => throw _privateConstructorUsedError;
+  String? get large;
   @override
   @JsonKey(ignore: true)
   _$LaunchPatchCopyWith<_LaunchPatch> get copyWith =>
@@ -1810,6 +1934,28 @@ abstract class _LaunchPatch extends LaunchPatch {
 LaunchReddit _$LaunchRedditFromJson(Map<String, dynamic> json) {
   return _LaunchReddit.fromJson(json);
 }
+
+/// @nodoc
+class _$LaunchRedditTearOff {
+  const _$LaunchRedditTearOff();
+
+  _LaunchReddit call(
+      {String? campaign, String? launch, String? media, String? recovery}) {
+    return _LaunchReddit(
+      campaign: campaign,
+      launch: launch,
+      media: media,
+      recovery: recovery,
+    );
+  }
+
+  LaunchReddit fromJson(Map<String, Object?> json) {
+    return LaunchReddit.fromJson(json);
+  }
+}
+
+/// @nodoc
+const $LaunchReddit = _$LaunchRedditTearOff();
 
 /// @nodoc
 mixin _$LaunchReddit {
@@ -1952,7 +2098,6 @@ class _$_LaunchReddit extends _LaunchReddit {
             const DeepCollectionEquality().equals(other.recovery, recovery));
   }
 
-  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -1974,23 +2119,23 @@ class _$_LaunchReddit extends _LaunchReddit {
 
 abstract class _LaunchReddit extends LaunchReddit {
   const factory _LaunchReddit(
-      {final String? campaign,
-      final String? launch,
-      final String? media,
-      final String? recovery}) = _$_LaunchReddit;
+      {String? campaign,
+      String? launch,
+      String? media,
+      String? recovery}) = _$_LaunchReddit;
   const _LaunchReddit._() : super._();
 
   factory _LaunchReddit.fromJson(Map<String, dynamic> json) =
       _$_LaunchReddit.fromJson;
 
   @override
-  String? get campaign => throw _privateConstructorUsedError;
+  String? get campaign;
   @override
-  String? get launch => throw _privateConstructorUsedError;
+  String? get launch;
   @override
-  String? get media => throw _privateConstructorUsedError;
+  String? get media;
   @override
-  String? get recovery => throw _privateConstructorUsedError;
+  String? get recovery;
   @override
   @JsonKey(ignore: true)
   _$LaunchRedditCopyWith<_LaunchReddit> get copyWith =>

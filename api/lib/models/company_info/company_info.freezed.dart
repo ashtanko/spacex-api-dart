@@ -1,6 +1,5 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'company_info.dart';
@@ -12,11 +11,54 @@ part of 'company_info.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 CompanyInfo _$CompanyInfoFromJson(Map<String, dynamic> json) {
   return _CompanyInfo.fromJson(json);
 }
+
+/// @nodoc
+class _$CompanyInfoTearOff {
+  const _$CompanyInfoTearOff();
+
+  _CompanyInfo call(
+      {required String id,
+      Headquarter? headquarters,
+      Links? links,
+      String fullName = 'Space Exploration Technologies Corporation',
+      String name = 'SpaceX',
+      String founder = 'Elon Musk',
+      int founded = 2002,
+      int employees = 9500,
+      String ceo = 'Elon Musk',
+      String cto = 'Elon Musk',
+      String coo = 'Gwynne Shotwell',
+      num valuation = 74000000000,
+      @JsonKey(name: 'summary') String? details}) {
+    return _CompanyInfo(
+      id: id,
+      headquarters: headquarters,
+      links: links,
+      fullName: fullName,
+      name: name,
+      founder: founder,
+      founded: founded,
+      employees: employees,
+      ceo: ceo,
+      cto: cto,
+      coo: coo,
+      valuation: valuation,
+      details: details,
+    );
+  }
+
+  CompanyInfo fromJson(Map<String, Object?> json) {
+    return CompanyInfo.fromJson(json);
+  }
+}
+
+/// @nodoc
+const $CompanyInfo = _$CompanyInfoTearOff();
 
 /// @nodoc
 mixin _$CompanyInfo {
@@ -307,32 +349,32 @@ class _$_CompanyInfo extends _CompanyInfo {
   final Headquarter? headquarters;
   @override
   final Links? links;
-  @override
   @JsonKey()
+  @override
   final String fullName;
-  @override
   @JsonKey()
+  @override
   final String name;
-  @override
   @JsonKey()
+  @override
   final String founder;
-  @override
   @JsonKey()
+  @override
   final int founded;
-  @override
   @JsonKey()
+  @override
   final int employees;
-  @override
   @JsonKey()
+  @override
   final String ceo;
-  @override
   @JsonKey()
+  @override
   final String cto;
-  @override
   @JsonKey()
+  @override
   final String coo;
-  @override
   @JsonKey()
+  @override
   final num valuation;
   @override
   @JsonKey(name: 'summary')
@@ -364,7 +406,6 @@ class _$_CompanyInfo extends _CompanyInfo {
             const DeepCollectionEquality().equals(other.details, details));
   }
 
-  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -395,51 +436,51 @@ class _$_CompanyInfo extends _CompanyInfo {
 
 abstract class _CompanyInfo extends CompanyInfo {
   const factory _CompanyInfo(
-      {required final String id,
-      final Headquarter? headquarters,
-      final Links? links,
-      final String fullName,
-      final String name,
-      final String founder,
-      final int founded,
-      final int employees,
-      final String ceo,
-      final String cto,
-      final String coo,
-      final num valuation,
-      @JsonKey(name: 'summary') final String? details}) = _$_CompanyInfo;
+      {required String id,
+      Headquarter? headquarters,
+      Links? links,
+      String fullName,
+      String name,
+      String founder,
+      int founded,
+      int employees,
+      String ceo,
+      String cto,
+      String coo,
+      num valuation,
+      @JsonKey(name: 'summary') String? details}) = _$_CompanyInfo;
   const _CompanyInfo._() : super._();
 
   factory _CompanyInfo.fromJson(Map<String, dynamic> json) =
       _$_CompanyInfo.fromJson;
 
   @override
-  String get id => throw _privateConstructorUsedError;
+  String get id;
   @override
-  Headquarter? get headquarters => throw _privateConstructorUsedError;
+  Headquarter? get headquarters;
   @override
-  Links? get links => throw _privateConstructorUsedError;
+  Links? get links;
   @override
-  String get fullName => throw _privateConstructorUsedError;
+  String get fullName;
   @override
-  String get name => throw _privateConstructorUsedError;
+  String get name;
   @override
-  String get founder => throw _privateConstructorUsedError;
+  String get founder;
   @override
-  int get founded => throw _privateConstructorUsedError;
+  int get founded;
   @override
-  int get employees => throw _privateConstructorUsedError;
+  int get employees;
   @override
-  String get ceo => throw _privateConstructorUsedError;
+  String get ceo;
   @override
-  String get cto => throw _privateConstructorUsedError;
+  String get cto;
   @override
-  String get coo => throw _privateConstructorUsedError;
+  String get coo;
   @override
-  num get valuation => throw _privateConstructorUsedError;
+  num get valuation;
   @override
   @JsonKey(name: 'summary')
-  String? get details => throw _privateConstructorUsedError;
+  String? get details;
   @override
   @JsonKey(ignore: true)
   _$CompanyInfoCopyWith<_CompanyInfo> get copyWith =>
@@ -449,6 +490,29 @@ abstract class _CompanyInfo extends CompanyInfo {
 Headquarter _$HeadquarterFromJson(Map<String, dynamic> json) {
   return _Headquarter.fromJson(json);
 }
+
+/// @nodoc
+class _$HeadquarterTearOff {
+  const _$HeadquarterTearOff();
+
+  _Headquarter call(
+      {String address = 'Rocket Road',
+      String city = 'Hawthorne',
+      String state = 'California'}) {
+    return _Headquarter(
+      address: address,
+      city: city,
+      state: state,
+    );
+  }
+
+  Headquarter fromJson(Map<String, Object?> json) {
+    return Headquarter.fromJson(json);
+  }
+}
+
+/// @nodoc
+const $Headquarter = _$HeadquarterTearOff();
 
 /// @nodoc
 mixin _$Headquarter {
@@ -556,14 +620,14 @@ class _$_Headquarter extends _Headquarter {
   factory _$_Headquarter.fromJson(Map<String, dynamic> json) =>
       _$$_HeadquarterFromJson(json);
 
-  @override
   @JsonKey()
+  @override
   final String address;
-  @override
   @JsonKey()
+  @override
   final String city;
-  @override
   @JsonKey()
+  @override
   final String state;
 
   @override
@@ -581,7 +645,6 @@ class _$_Headquarter extends _Headquarter {
             const DeepCollectionEquality().equals(other.state, state));
   }
 
-  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -601,21 +664,19 @@ class _$_Headquarter extends _Headquarter {
 }
 
 abstract class _Headquarter extends Headquarter {
-  const factory _Headquarter(
-      {final String address,
-      final String city,
-      final String state}) = _$_Headquarter;
+  const factory _Headquarter({String address, String city, String state}) =
+      _$_Headquarter;
   const _Headquarter._() : super._();
 
   factory _Headquarter.fromJson(Map<String, dynamic> json) =
       _$_Headquarter.fromJson;
 
   @override
-  String get address => throw _privateConstructorUsedError;
+  String get address;
   @override
-  String get city => throw _privateConstructorUsedError;
+  String get city;
   @override
-  String get state => throw _privateConstructorUsedError;
+  String get state;
   @override
   @JsonKey(ignore: true)
   _$HeadquarterCopyWith<_Headquarter> get copyWith =>
@@ -625,6 +686,32 @@ abstract class _Headquarter extends Headquarter {
 Links _$LinksFromJson(Map<String, dynamic> json) {
   return _Links.fromJson(json);
 }
+
+/// @nodoc
+class _$LinksTearOff {
+  const _$LinksTearOff();
+
+  _Links call(
+      {String website = 'https://www.spacex.com/',
+      String flickr = 'https://www.flickr.com/photos/spacex/',
+      String twitter = 'https://twitter.com/SpaceX',
+      @JsonKey(name: 'elon_twitter')
+          String elonTwitter = 'https://twitter.com/elonmusk'}) {
+    return _Links(
+      website: website,
+      flickr: flickr,
+      twitter: twitter,
+      elonTwitter: elonTwitter,
+    );
+  }
+
+  Links fromJson(Map<String, Object?> json) {
+    return Links.fromJson(json);
+  }
+}
+
+/// @nodoc
+const $Links = _$LinksTearOff();
 
 /// @nodoc
 mixin _$Links {
@@ -749,14 +836,14 @@ class _$_Links extends _Links {
   factory _$_Links.fromJson(Map<String, dynamic> json) =>
       _$$_LinksFromJson(json);
 
-  @override
   @JsonKey()
+  @override
   final String website;
-  @override
   @JsonKey()
+  @override
   final String flickr;
-  @override
   @JsonKey()
+  @override
   final String twitter;
   @override
   @JsonKey(name: 'elon_twitter')
@@ -779,7 +866,6 @@ class _$_Links extends _Links {
                 .equals(other.elonTwitter, elonTwitter));
   }
 
-  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -801,23 +887,23 @@ class _$_Links extends _Links {
 
 abstract class _Links extends Links {
   const factory _Links(
-      {final String website,
-      final String flickr,
-      final String twitter,
-      @JsonKey(name: 'elon_twitter') final String elonTwitter}) = _$_Links;
+      {String website,
+      String flickr,
+      String twitter,
+      @JsonKey(name: 'elon_twitter') String elonTwitter}) = _$_Links;
   const _Links._() : super._();
 
   factory _Links.fromJson(Map<String, dynamic> json) = _$_Links.fromJson;
 
   @override
-  String get website => throw _privateConstructorUsedError;
+  String get website;
   @override
-  String get flickr => throw _privateConstructorUsedError;
+  String get flickr;
   @override
-  String get twitter => throw _privateConstructorUsedError;
+  String get twitter;
   @override
   @JsonKey(name: 'elon_twitter')
-  String get elonTwitter => throw _privateConstructorUsedError;
+  String get elonTwitter;
   @override
   @JsonKey(ignore: true)
   _$LinksCopyWith<_Links> get copyWith => throw _privateConstructorUsedError;

@@ -1,6 +1,5 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'launchpad.dart';
@@ -12,11 +11,52 @@ part of 'launchpad.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 LaunchpadDetails _$LaunchpadDetailsFromJson(Map<String, dynamic> json) {
   return _LaunchpadDetails.fromJson(json);
 }
+
+/// @nodoc
+class _$LaunchpadDetailsTearOff {
+  const _$LaunchpadDetailsTearOff();
+
+  _LaunchpadDetails call(
+      {String? name,
+      String? fullName,
+      String? locality,
+      String? region,
+      double? latitude,
+      double? longitude,
+      int? launchAttempts,
+      int? launchSuccesses,
+      String? status,
+      String? details,
+      String? imageUrl,
+      String? id}) {
+    return _LaunchpadDetails(
+      name: name,
+      fullName: fullName,
+      locality: locality,
+      region: region,
+      latitude: latitude,
+      longitude: longitude,
+      launchAttempts: launchAttempts,
+      launchSuccesses: launchSuccesses,
+      status: status,
+      details: details,
+      imageUrl: imageUrl,
+      id: id,
+    );
+  }
+
+  LaunchpadDetails fromJson(Map<String, Object?> json) {
+    return LaunchpadDetails.fromJson(json);
+  }
+}
+
+/// @nodoc
+const $LaunchpadDetails = _$LaunchpadDetailsTearOff();
 
 /// @nodoc
 mixin _$LaunchpadDetails {
@@ -309,7 +349,6 @@ class _$_LaunchpadDetails extends _LaunchpadDetails {
             const DeepCollectionEquality().equals(other.id, id));
   }
 
-  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -339,47 +378,47 @@ class _$_LaunchpadDetails extends _LaunchpadDetails {
 
 abstract class _LaunchpadDetails extends LaunchpadDetails {
   const factory _LaunchpadDetails(
-      {final String? name,
-      final String? fullName,
-      final String? locality,
-      final String? region,
-      final double? latitude,
-      final double? longitude,
-      final int? launchAttempts,
-      final int? launchSuccesses,
-      final String? status,
-      final String? details,
-      final String? imageUrl,
-      final String? id}) = _$_LaunchpadDetails;
+      {String? name,
+      String? fullName,
+      String? locality,
+      String? region,
+      double? latitude,
+      double? longitude,
+      int? launchAttempts,
+      int? launchSuccesses,
+      String? status,
+      String? details,
+      String? imageUrl,
+      String? id}) = _$_LaunchpadDetails;
   const _LaunchpadDetails._() : super._();
 
   factory _LaunchpadDetails.fromJson(Map<String, dynamic> json) =
       _$_LaunchpadDetails.fromJson;
 
   @override
-  String? get name => throw _privateConstructorUsedError;
+  String? get name;
   @override
-  String? get fullName => throw _privateConstructorUsedError;
+  String? get fullName;
   @override
-  String? get locality => throw _privateConstructorUsedError;
+  String? get locality;
   @override
-  String? get region => throw _privateConstructorUsedError;
+  String? get region;
   @override
-  double? get latitude => throw _privateConstructorUsedError;
+  double? get latitude;
   @override
-  double? get longitude => throw _privateConstructorUsedError;
+  double? get longitude;
   @override
-  int? get launchAttempts => throw _privateConstructorUsedError;
+  int? get launchAttempts;
   @override
-  int? get launchSuccesses => throw _privateConstructorUsedError;
+  int? get launchSuccesses;
   @override
-  String? get status => throw _privateConstructorUsedError;
+  String? get status;
   @override
-  String? get details => throw _privateConstructorUsedError;
+  String? get details;
   @override
-  String? get imageUrl => throw _privateConstructorUsedError;
+  String? get imageUrl;
   @override
-  String? get id => throw _privateConstructorUsedError;
+  String? get id;
   @override
   @JsonKey(ignore: true)
   _$LaunchpadDetailsCopyWith<_LaunchpadDetails> get copyWith =>

@@ -1,6 +1,5 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'achievement.dart';
@@ -12,11 +11,38 @@ part of 'achievement.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 Achievement _$AchievementFromJson(Map<String, dynamic> json) {
   return _Achievement.fromJson(json);
 }
+
+/// @nodoc
+class _$AchievementTearOff {
+  const _$AchievementTearOff();
+
+  _Achievement call(
+      {required String id,
+      @JsonKey(name: 'title') String? name,
+      String? details,
+      AchievementLinks? links,
+      @JsonKey(name: 'event_date_utc') DateTime? date}) {
+    return _Achievement(
+      id: id,
+      name: name,
+      details: details,
+      links: links,
+      date: date,
+    );
+  }
+
+  Achievement fromJson(Map<String, Object?> json) {
+    return Achievement.fromJson(json);
+  }
+}
+
+/// @nodoc
+const $Achievement = _$AchievementTearOff();
 
 /// @nodoc
 mixin _$Achievement {
@@ -206,7 +232,6 @@ class _$_Achievement extends _Achievement {
             const DeepCollectionEquality().equals(other.date, date));
   }
 
-  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -229,28 +254,28 @@ class _$_Achievement extends _Achievement {
 
 abstract class _Achievement extends Achievement {
   const factory _Achievement(
-      {required final String id,
-      @JsonKey(name: 'title') final String? name,
-      final String? details,
-      final AchievementLinks? links,
-      @JsonKey(name: 'event_date_utc') final DateTime? date}) = _$_Achievement;
+      {required String id,
+      @JsonKey(name: 'title') String? name,
+      String? details,
+      AchievementLinks? links,
+      @JsonKey(name: 'event_date_utc') DateTime? date}) = _$_Achievement;
   const _Achievement._() : super._();
 
   factory _Achievement.fromJson(Map<String, dynamic> json) =
       _$_Achievement.fromJson;
 
   @override
-  String get id => throw _privateConstructorUsedError;
+  String get id;
   @override
   @JsonKey(name: 'title')
-  String? get name => throw _privateConstructorUsedError;
+  String? get name;
   @override
-  String? get details => throw _privateConstructorUsedError;
+  String? get details;
   @override
-  AchievementLinks? get links => throw _privateConstructorUsedError;
+  AchievementLinks? get links;
   @override
   @JsonKey(name: 'event_date_utc')
-  DateTime? get date => throw _privateConstructorUsedError;
+  DateTime? get date;
   @override
   @JsonKey(ignore: true)
   _$AchievementCopyWith<_Achievement> get copyWith =>
@@ -260,6 +285,24 @@ abstract class _Achievement extends Achievement {
 AchievementLinks _$AchievementLinksFromJson(Map<String, dynamic> json) {
   return _AchievementLinks.fromJson(json);
 }
+
+/// @nodoc
+class _$AchievementLinksTearOff {
+  const _$AchievementLinksTearOff();
+
+  _AchievementLinks call({String? article}) {
+    return _AchievementLinks(
+      article: article,
+    );
+  }
+
+  AchievementLinks fromJson(Map<String, Object?> json) {
+    return AchievementLinks.fromJson(json);
+  }
+}
+
+/// @nodoc
+const $AchievementLinks = _$AchievementLinksTearOff();
 
 /// @nodoc
 mixin _$AchievementLinks {
@@ -359,7 +402,6 @@ class _$_AchievementLinks extends _AchievementLinks {
             const DeepCollectionEquality().equals(other.article, article));
   }
 
-  @JsonKey(ignore: true)
   @override
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(article));
@@ -376,15 +418,14 @@ class _$_AchievementLinks extends _AchievementLinks {
 }
 
 abstract class _AchievementLinks extends AchievementLinks {
-  const factory _AchievementLinks({final String? article}) =
-      _$_AchievementLinks;
+  const factory _AchievementLinks({String? article}) = _$_AchievementLinks;
   const _AchievementLinks._() : super._();
 
   factory _AchievementLinks.fromJson(Map<String, dynamic> json) =
       _$_AchievementLinks.fromJson;
 
   @override
-  String? get article => throw _privateConstructorUsedError;
+  String? get article;
   @override
   @JsonKey(ignore: true)
   _$AchievementLinksCopyWith<_AchievementLinks> get copyWith =>

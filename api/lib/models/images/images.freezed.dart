@@ -1,6 +1,5 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'images.dart';
@@ -12,11 +11,29 @@ part of 'images.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 Images _$ImagesFromJson(Map<String, dynamic> json) {
   return _Images.fromJson(json);
 }
+
+/// @nodoc
+class _$ImagesTearOff {
+  const _$ImagesTearOff();
+
+  _Images call({@JsonKey(name: 'large') List<String> large = const []}) {
+    return _Images(
+      large: large,
+    );
+  }
+
+  Images fromJson(Map<String, Object?> json) {
+    return Images.fromJson(json);
+  }
+}
+
+/// @nodoc
+const $Images = _$ImagesTearOff();
 
 /// @nodoc
 mixin _$Images {
@@ -89,21 +106,14 @@ class __$ImagesCopyWithImpl<$Res> extends _$ImagesCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_Images extends _Images {
-  const _$_Images({@JsonKey(name: 'large') final List<String> large = const []})
-      : _large = large,
-        super._();
+  const _$_Images({@JsonKey(name: 'large') this.large = const []}) : super._();
 
   factory _$_Images.fromJson(Map<String, dynamic> json) =>
       _$$_ImagesFromJson(json);
 
-  @JsonKey(name: 'large')
-  final List<String> _large;
   @override
   @JsonKey(name: 'large')
-  List<String> get large {
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_large);
-  }
+  final List<String> large;
 
   @override
   String toString() {
@@ -118,7 +128,6 @@ class _$_Images extends _Images {
             const DeepCollectionEquality().equals(other.large, large));
   }
 
-  @JsonKey(ignore: true)
   @override
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(large));
@@ -135,7 +144,7 @@ class _$_Images extends _Images {
 }
 
 abstract class _Images extends Images {
-  const factory _Images({@JsonKey(name: 'large') final List<String> large}) =
+  const factory _Images({@JsonKey(name: 'large') List<String> large}) =
       _$_Images;
   const _Images._() : super._();
 
@@ -143,7 +152,7 @@ abstract class _Images extends Images {
 
   @override
   @JsonKey(name: 'large')
-  List<String> get large => throw _privateConstructorUsedError;
+  List<String> get large;
   @override
   @JsonKey(ignore: true)
   _$ImagesCopyWith<_Images> get copyWith => throw _privateConstructorUsedError;

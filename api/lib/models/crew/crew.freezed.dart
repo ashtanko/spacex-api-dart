@@ -1,6 +1,5 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'crew.dart';
@@ -12,11 +11,42 @@ part of 'crew.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 Crew _$CrewFromJson(Map<String, dynamic> json) {
   return _Crew.fromJson(json);
 }
+
+/// @nodoc
+class _$CrewTearOff {
+  const _$CrewTearOff();
+
+  _Crew call(
+      {@JsonKey(name: 'id') String id = '',
+      @JsonKey(name: 'name') String name = '',
+      @JsonKey(name: 'agency') String agency = '',
+      @JsonKey(name: 'image') String image = '',
+      @JsonKey(name: 'wikipedia') String wikipedia = '',
+      @JsonKey(name: 'launches') List<String> launches = const [],
+      @JsonKey(name: 'status') String status = ''}) {
+    return _Crew(
+      id: id,
+      name: name,
+      agency: agency,
+      image: image,
+      wikipedia: wikipedia,
+      launches: launches,
+      status: status,
+    );
+  }
+
+  Crew fromJson(Map<String, Object?> json) {
+    return Crew.fromJson(json);
+  }
+}
+
+/// @nodoc
+const $Crew = _$CrewTearOff();
 
 /// @nodoc
 mixin _$Crew {
@@ -181,10 +211,9 @@ class _$_Crew extends _Crew {
       @JsonKey(name: 'agency') this.agency = '',
       @JsonKey(name: 'image') this.image = '',
       @JsonKey(name: 'wikipedia') this.wikipedia = '',
-      @JsonKey(name: 'launches') final List<String> launches = const [],
+      @JsonKey(name: 'launches') this.launches = const [],
       @JsonKey(name: 'status') this.status = ''})
-      : _launches = launches,
-        super._();
+      : super._();
 
   factory _$_Crew.fromJson(Map<String, dynamic> json) => _$$_CrewFromJson(json);
 
@@ -203,15 +232,9 @@ class _$_Crew extends _Crew {
   @override
   @JsonKey(name: 'wikipedia')
   final String wikipedia;
-  @JsonKey(name: 'launches')
-  final List<String> _launches;
   @override
   @JsonKey(name: 'launches')
-  List<String> get launches {
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_launches);
-  }
-
+  final List<String> launches;
   @override
   @JsonKey(name: 'status')
   final String status;
@@ -235,7 +258,6 @@ class _$_Crew extends _Crew {
             const DeepCollectionEquality().equals(other.status, status));
   }
 
-  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -260,38 +282,38 @@ class _$_Crew extends _Crew {
 
 abstract class _Crew extends Crew {
   const factory _Crew(
-      {@JsonKey(name: 'id') final String id,
-      @JsonKey(name: 'name') final String name,
-      @JsonKey(name: 'agency') final String agency,
-      @JsonKey(name: 'image') final String image,
-      @JsonKey(name: 'wikipedia') final String wikipedia,
-      @JsonKey(name: 'launches') final List<String> launches,
-      @JsonKey(name: 'status') final String status}) = _$_Crew;
+      {@JsonKey(name: 'id') String id,
+      @JsonKey(name: 'name') String name,
+      @JsonKey(name: 'agency') String agency,
+      @JsonKey(name: 'image') String image,
+      @JsonKey(name: 'wikipedia') String wikipedia,
+      @JsonKey(name: 'launches') List<String> launches,
+      @JsonKey(name: 'status') String status}) = _$_Crew;
   const _Crew._() : super._();
 
   factory _Crew.fromJson(Map<String, dynamic> json) = _$_Crew.fromJson;
 
   @override
   @JsonKey(name: 'id')
-  String get id => throw _privateConstructorUsedError;
+  String get id;
   @override
   @JsonKey(name: 'name')
-  String get name => throw _privateConstructorUsedError;
+  String get name;
   @override
   @JsonKey(name: 'agency')
-  String get agency => throw _privateConstructorUsedError;
+  String get agency;
   @override
   @JsonKey(name: 'image')
-  String get image => throw _privateConstructorUsedError;
+  String get image;
   @override
   @JsonKey(name: 'wikipedia')
-  String get wikipedia => throw _privateConstructorUsedError;
+  String get wikipedia;
   @override
   @JsonKey(name: 'launches')
-  List<String> get launches => throw _privateConstructorUsedError;
+  List<String> get launches;
   @override
   @JsonKey(name: 'status')
-  String get status => throw _privateConstructorUsedError;
+  String get status;
   @override
   @JsonKey(ignore: true)
   _$CrewCopyWith<_Crew> get copyWith => throw _privateConstructorUsedError;
