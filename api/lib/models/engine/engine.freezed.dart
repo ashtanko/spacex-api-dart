@@ -71,39 +71,28 @@ const $Engine = _$EngineTearOff();
 mixin _$Engine {
   @JsonKey(name: 'isp')
   Isp get isp => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'thrust_sea_level')
   KnotPound get thrustSeaLevel => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'thrust_vacuum')
   KnotPound get thrustVacuum => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'number')
   num get number => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'type')
   String get type => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'version')
   String get version => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'layout')
   String get layout => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'engine_loss_max')
   num get engineLossMax => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'propellant_1')
   String get firstPropellant => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'propellant_2')
   String get secondPropellant => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'thrust_to_weight')
   num get thrustToWeight => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
   @JsonKey(ignore: true)
   $EngineCopyWith<Engine> get copyWith => throw _privateConstructorUsedError;
 }
@@ -112,7 +101,6 @@ mixin _$Engine {
 abstract class $EngineCopyWith<$Res> {
   factory $EngineCopyWith(Engine value, $Res Function(Engine) then) =
       _$EngineCopyWithImpl<$Res>;
-
   $Res call(
       {@JsonKey(name: 'isp') Isp isp,
       @JsonKey(name: 'thrust_sea_level') KnotPound thrustSeaLevel,
@@ -127,9 +115,7 @@ abstract class $EngineCopyWith<$Res> {
       @JsonKey(name: 'thrust_to_weight') num thrustToWeight});
 
   $IspCopyWith<$Res> get isp;
-
   $KnotPoundCopyWith<$Res> get thrustSeaLevel;
-
   $KnotPoundCopyWith<$Res> get thrustVacuum;
 }
 
@@ -138,7 +124,6 @@ class _$EngineCopyWithImpl<$Res> implements $EngineCopyWith<$Res> {
   _$EngineCopyWithImpl(this._value, this._then);
 
   final Engine _value;
-
   // ignore: unused_field
   final $Res Function(Engine) _then;
 
@@ -230,7 +215,6 @@ class _$EngineCopyWithImpl<$Res> implements $EngineCopyWith<$Res> {
 abstract class _$EngineCopyWith<$Res> implements $EngineCopyWith<$Res> {
   factory _$EngineCopyWith(_Engine value, $Res Function(_Engine) then) =
       __$EngineCopyWithImpl<$Res>;
-
   @override
   $Res call(
       {@JsonKey(name: 'isp') Isp isp,
@@ -247,10 +231,8 @@ abstract class _$EngineCopyWith<$Res> implements $EngineCopyWith<$Res> {
 
   @override
   $IspCopyWith<$Res> get isp;
-
   @override
   $KnotPoundCopyWith<$Res> get thrustSeaLevel;
-
   @override
   $KnotPoundCopyWith<$Res> get thrustVacuum;
 }
@@ -460,7 +442,6 @@ abstract class _Engine extends Engine {
       @JsonKey(name: 'propellant_1') String firstPropellant,
       @JsonKey(name: 'propellant_2') String secondPropellant,
       @JsonKey(name: 'thrust_to_weight') num thrustToWeight}) = _$_Engine;
-
   const _Engine._() : super._();
 
   factory _Engine.fromJson(Map<String, dynamic> json) = _$_Engine.fromJson;
@@ -468,47 +449,36 @@ abstract class _Engine extends Engine {
   @override
   @JsonKey(name: 'isp')
   Isp get isp;
-
   @override
   @JsonKey(name: 'thrust_sea_level')
   KnotPound get thrustSeaLevel;
-
   @override
   @JsonKey(name: 'thrust_vacuum')
   KnotPound get thrustVacuum;
-
   @override
   @JsonKey(name: 'number')
   num get number;
-
   @override
   @JsonKey(name: 'type')
   String get type;
-
   @override
   @JsonKey(name: 'version')
   String get version;
-
   @override
   @JsonKey(name: 'layout')
   String get layout;
-
   @override
   @JsonKey(name: 'engine_loss_max')
   num get engineLossMax;
-
   @override
   @JsonKey(name: 'propellant_1')
   String get firstPropellant;
-
   @override
   @JsonKey(name: 'propellant_2')
   String get secondPropellant;
-
   @override
   @JsonKey(name: 'thrust_to_weight')
   num get thrustToWeight;
-
   @override
   @JsonKey(ignore: true)
   _$EngineCopyWith<_Engine> get copyWith => throw _privateConstructorUsedError;

@@ -45,18 +45,14 @@ const $Fairings = _$FairingsTearOff();
 /// @nodoc
 mixin _$Fairings {
   bool get reused => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'recovery_attempt')
   bool get recoveryAttempt => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'recovered')
   bool get recovered => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'ships')
   List<String> get ships => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
   @JsonKey(ignore: true)
   $FairingsCopyWith<Fairings> get copyWith =>
       throw _privateConstructorUsedError;
@@ -66,7 +62,6 @@ mixin _$Fairings {
 abstract class $FairingsCopyWith<$Res> {
   factory $FairingsCopyWith(Fairings value, $Res Function(Fairings) then) =
       _$FairingsCopyWithImpl<$Res>;
-
   $Res call(
       {bool reused,
       @JsonKey(name: 'recovery_attempt') bool recoveryAttempt,
@@ -79,7 +74,6 @@ class _$FairingsCopyWithImpl<$Res> implements $FairingsCopyWith<$Res> {
   _$FairingsCopyWithImpl(this._value, this._then);
 
   final Fairings _value;
-
   // ignore: unused_field
   final $Res Function(Fairings) _then;
 
@@ -115,7 +109,6 @@ class _$FairingsCopyWithImpl<$Res> implements $FairingsCopyWith<$Res> {
 abstract class _$FairingsCopyWith<$Res> implements $FairingsCopyWith<$Res> {
   factory _$FairingsCopyWith(_Fairings value, $Res Function(_Fairings) then) =
       __$FairingsCopyWithImpl<$Res>;
-
   @override
   $Res call(
       {bool reused,
@@ -229,26 +222,21 @@ abstract class _Fairings extends Fairings {
       @JsonKey(name: 'recovery_attempt') bool recoveryAttempt,
       @JsonKey(name: 'recovered') bool recovered,
       @JsonKey(name: 'ships') List<String> ships}) = _$_Fairings;
-
   const _Fairings._() : super._();
 
   factory _Fairings.fromJson(Map<String, dynamic> json) = _$_Fairings.fromJson;
 
   @override
   bool get reused;
-
   @override
   @JsonKey(name: 'recovery_attempt')
   bool get recoveryAttempt;
-
   @override
   @JsonKey(name: 'recovered')
   bool get recovered;
-
   @override
   @JsonKey(name: 'ships')
   List<String> get ships;
-
   @override
   @JsonKey(ignore: true)
   _$FairingsCopyWith<_Fairings> get copyWith =>

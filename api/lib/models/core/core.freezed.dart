@@ -77,60 +77,40 @@ const $Core = _$CoreTearOff();
 /// @nodoc
 mixin _$Core {
   String? get id => throw _privateConstructorUsedError;
-
   int get block => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'reuse_count')
   int get reuseCount => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'rtls_attempts')
   int get rtlsAttempts => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'rtls_landings')
   int get rtlsLandings => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'asds_attempts')
   int get asdsAttempts => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'asds_landings')
   int get asdsLandings => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'last_update')
   String get lastUpdate => throw _privateConstructorUsedError;
-
   List<String> get launches => throw _privateConstructorUsedError;
-
   String? get serial => throw _privateConstructorUsedError;
-
   String? get status => throw _privateConstructorUsedError;
-
   String? get core => throw _privateConstructorUsedError;
-
   int get flight => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'gridfins')
   bool get hasGridfins => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'legs')
   bool get hasLegs => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'reused')
   bool get reused => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'landing_attempt')
   bool get landingAttempt => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'landing_success')
   bool? get landingSuccess => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'landing_type')
   String? get landingType => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'landpad')
   String? get landpad => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
   @JsonKey(ignore: true)
   $CoreCopyWith<Core> get copyWith => throw _privateConstructorUsedError;
 }
@@ -139,7 +119,6 @@ mixin _$Core {
 abstract class $CoreCopyWith<$Res> {
   factory $CoreCopyWith(Core value, $Res Function(Core) then) =
       _$CoreCopyWithImpl<$Res>;
-
   $Res call(
       {String? id,
       int block,
@@ -168,7 +147,6 @@ class _$CoreCopyWithImpl<$Res> implements $CoreCopyWith<$Res> {
   _$CoreCopyWithImpl(this._value, this._then);
 
   final Core _value;
-
   // ignore: unused_field
   final $Res Function(Core) _then;
 
@@ -284,7 +262,6 @@ class _$CoreCopyWithImpl<$Res> implements $CoreCopyWith<$Res> {
 abstract class _$CoreCopyWith<$Res> implements $CoreCopyWith<$Res> {
   factory _$CoreCopyWith(_Core value, $Res Function(_Core) then) =
       __$CoreCopyWithImpl<$Res>;
-
   @override
   $Res call(
       {String? id,
@@ -611,84 +588,63 @@ abstract class _Core extends Core {
       @JsonKey(name: 'landing_success') bool? landingSuccess,
       @JsonKey(name: 'landing_type') String? landingType,
       @JsonKey(name: 'landpad') String? landpad}) = _$_Core;
-
   const _Core._() : super._();
 
   factory _Core.fromJson(Map<String, dynamic> json) = _$_Core.fromJson;
 
   @override
   String? get id;
-
   @override
   int get block;
-
   @override
   @JsonKey(name: 'reuse_count')
   int get reuseCount;
-
   @override
   @JsonKey(name: 'rtls_attempts')
   int get rtlsAttempts;
-
   @override
   @JsonKey(name: 'rtls_landings')
   int get rtlsLandings;
-
   @override
   @JsonKey(name: 'asds_attempts')
   int get asdsAttempts;
-
   @override
   @JsonKey(name: 'asds_landings')
   int get asdsLandings;
-
   @override
   @JsonKey(name: 'last_update')
   String get lastUpdate;
-
   @override
   List<String> get launches;
-
   @override
   String? get serial;
-
   @override
   String? get status;
-
   @override
   String? get core;
-
   @override
   int get flight;
-
   @override
   @JsonKey(name: 'gridfins')
   bool get hasGridfins;
-
   @override
   @JsonKey(name: 'legs')
   bool get hasLegs;
-
   @override
   @JsonKey(name: 'reused')
   bool get reused;
-
   @override
   @JsonKey(name: 'landing_attempt')
   bool get landingAttempt;
-
   @override
   @JsonKey(name: 'landing_success')
   bool? get landingSuccess;
-
   @override
   @JsonKey(name: 'landing_type')
   String? get landingType;
-
   @override
   @JsonKey(name: 'landpad')
   String? get landpad;
-
   @override
   @JsonKey(ignore: true)
   _$CoreCopyWith<_Core> get copyWith => throw _privateConstructorUsedError;

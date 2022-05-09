@@ -114,84 +114,57 @@ const $RoadsterVehicle = _$RoadsterVehicleTearOff();
 /// @nodoc
 mixin _$RoadsterVehicle {
   String get id => throw _privateConstructorUsedError;
-
   String? get details => throw _privateConstructorUsedError;
-
   String? get video => throw _privateConstructorUsedError;
-
   String? get wikipedia => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'flickr_images')
   List<String?> get images => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'mars_distance_mi')
   num get marsDistanceMi => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'mars_distance_km')
   num get marsDistanceKm => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'earth_distance_mi')
   num get earthDistanceMi => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'earth_distance_km')
   num get earthDistanceKm => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'speed_mph')
   num get speedMph => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'speed_kph')
   num get speedKph => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'period_days')
   num get periodDays => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'periapsis_arg')
   num get periapsisArg => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'longitude')
   num get longitude => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'inclination')
   num get inclination => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'eccentricity')
   num get eccentricity => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'semi_major_axis_au')
   num get semiMajorAxisAu => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'periapsis_au')
   num get periapsisAu => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'apoapsis_au')
   num get apoapsisAu => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'orbit_type')
   String get orbitYype => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'epoch_jd')
   num get epochJd => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'norad_id')
   num get noradId => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'launch_mass_lbs')
   num get launchMassLbs => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'launch_mass_kg')
   num get launchMassKg => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'launch_date_unix')
   num get launchDateUnix => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'launch_date_utc')
   String get launchDateUtc => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'name')
   String get name => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
   @JsonKey(ignore: true)
   $RoadsterVehicleCopyWith<RoadsterVehicle> get copyWith =>
       throw _privateConstructorUsedError;
@@ -202,7 +175,6 @@ abstract class $RoadsterVehicleCopyWith<$Res> {
   factory $RoadsterVehicleCopyWith(
           RoadsterVehicle value, $Res Function(RoadsterVehicle) then) =
       _$RoadsterVehicleCopyWithImpl<$Res>;
-
   $Res call(
       {String id,
       String? details,
@@ -239,7 +211,6 @@ class _$RoadsterVehicleCopyWithImpl<$Res>
   _$RoadsterVehicleCopyWithImpl(this._value, this._then);
 
   final RoadsterVehicle _value;
-
   // ignore: unused_field
   final $Res Function(RoadsterVehicle) _then;
 
@@ -392,7 +363,6 @@ abstract class _$RoadsterVehicleCopyWith<$Res>
   factory _$RoadsterVehicleCopyWith(
           _RoadsterVehicle value, $Res Function(_RoadsterVehicle) then) =
       __$RoadsterVehicleCopyWithImpl<$Res>;
-
   @override
   $Res call(
       {String id,
@@ -841,7 +811,6 @@ abstract class _RoadsterVehicle extends RoadsterVehicle {
       @JsonKey(name: 'launch_date_unix') num launchDateUnix,
       @JsonKey(name: 'launch_date_utc') String launchDateUtc,
       @JsonKey(name: 'name') String name}) = _$_RoadsterVehicle;
-
   const _RoadsterVehicle._() : super._();
 
   factory _RoadsterVehicle.fromJson(Map<String, dynamic> json) =
@@ -849,108 +818,81 @@ abstract class _RoadsterVehicle extends RoadsterVehicle {
 
   @override
   String get id;
-
   @override
   String? get details;
-
   @override
   String? get video;
-
   @override
   String? get wikipedia;
-
   @override
   @JsonKey(name: 'flickr_images')
   List<String?> get images;
-
   @override
   @JsonKey(name: 'mars_distance_mi')
   num get marsDistanceMi;
-
   @override
   @JsonKey(name: 'mars_distance_km')
   num get marsDistanceKm;
-
   @override
   @JsonKey(name: 'earth_distance_mi')
   num get earthDistanceMi;
-
   @override
   @JsonKey(name: 'earth_distance_km')
   num get earthDistanceKm;
-
   @override
   @JsonKey(name: 'speed_mph')
   num get speedMph;
-
   @override
   @JsonKey(name: 'speed_kph')
   num get speedKph;
-
   @override
   @JsonKey(name: 'period_days')
   num get periodDays;
-
   @override
   @JsonKey(name: 'periapsis_arg')
   num get periapsisArg;
-
   @override
   @JsonKey(name: 'longitude')
   num get longitude;
-
   @override
   @JsonKey(name: 'inclination')
   num get inclination;
-
   @override
   @JsonKey(name: 'eccentricity')
   num get eccentricity;
-
   @override
   @JsonKey(name: 'semi_major_axis_au')
   num get semiMajorAxisAu;
-
   @override
   @JsonKey(name: 'periapsis_au')
   num get periapsisAu;
-
   @override
   @JsonKey(name: 'apoapsis_au')
   num get apoapsisAu;
-
   @override
   @JsonKey(name: 'orbit_type')
   String get orbitYype;
-
   @override
   @JsonKey(name: 'epoch_jd')
   num get epochJd;
-
   @override
   @JsonKey(name: 'norad_id')
   num get noradId;
-
   @override
   @JsonKey(name: 'launch_mass_lbs')
   num get launchMassLbs;
-
   @override
   @JsonKey(name: 'launch_mass_kg')
   num get launchMassKg;
-
   @override
   @JsonKey(name: 'launch_date_unix')
   num get launchDateUnix;
-
   @override
   @JsonKey(name: 'launch_date_utc')
   String get launchDateUtc;
-
   @override
   @JsonKey(name: 'name')
   String get name;
-
   @override
   @JsonKey(ignore: true)
   _$RoadsterVehicleCopyWith<_RoadsterVehicle> get copyWith =>
@@ -1027,53 +969,36 @@ const $RocketVehicle = _$RocketVehicleTearOff();
 /// @nodoc
 mixin _$RocketVehicle {
   String get id => throw _privateConstructorUsedError;
-
   String get description => throw _privateConstructorUsedError;
-
   String get wikipedia => throw _privateConstructorUsedError;
-
   String get company => throw _privateConstructorUsedError;
-
   String get country => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'first_flight')
   String get firstFlight => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'success_rate_pct')
   num get successRatePct => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'cost_per_launch')
   num get costPerLaunch => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'boosters')
   num get boosters => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'stages')
   num get stages => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'active')
   bool get isActive => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'type')
   String get type => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'name')
   String get name => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'flickr_images')
   List<String> get images => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'payload_weights')
   List<PayloadWeight> get payloadWeights => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'landing_legs')
   dynamic get landingLegs => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'engines')
   Engine get engines => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
   @JsonKey(ignore: true)
   $RocketVehicleCopyWith<RocketVehicle> get copyWith =>
       throw _privateConstructorUsedError;
@@ -1084,7 +1009,6 @@ abstract class $RocketVehicleCopyWith<$Res> {
   factory $RocketVehicleCopyWith(
           RocketVehicle value, $Res Function(RocketVehicle) then) =
       _$RocketVehicleCopyWithImpl<$Res>;
-
   $Res call(
       {String id,
       String description,
@@ -1113,7 +1037,6 @@ class _$RocketVehicleCopyWithImpl<$Res>
   _$RocketVehicleCopyWithImpl(this._value, this._then);
 
   final RocketVehicle _value;
-
   // ignore: unused_field
   final $Res Function(RocketVehicle) _then;
 
@@ -1223,7 +1146,6 @@ abstract class _$RocketVehicleCopyWith<$Res>
   factory _$RocketVehicleCopyWith(
           _RocketVehicle value, $Res Function(_RocketVehicle) then) =
       __$RocketVehicleCopyWithImpl<$Res>;
-
   @override
   $Res call(
       {String id,
@@ -1515,7 +1437,6 @@ abstract class _RocketVehicle extends RocketVehicle {
       @JsonKey(name: 'payload_weights') List<PayloadWeight> payloadWeights,
       @JsonKey(name: 'landing_legs') dynamic landingLegs,
       @JsonKey(name: 'engines') Engine engines}) = _$_RocketVehicle;
-
   const _RocketVehicle._() : super._();
 
   factory _RocketVehicle.fromJson(Map<String, dynamic> json) =
@@ -1523,67 +1444,50 @@ abstract class _RocketVehicle extends RocketVehicle {
 
   @override
   String get id;
-
   @override
   String get description;
-
   @override
   String get wikipedia;
-
   @override
   String get company;
-
   @override
   String get country;
-
   @override
   @JsonKey(name: 'first_flight')
   String get firstFlight;
-
   @override
   @JsonKey(name: 'success_rate_pct')
   num get successRatePct;
-
   @override
   @JsonKey(name: 'cost_per_launch')
   num get costPerLaunch;
-
   @override
   @JsonKey(name: 'boosters')
   num get boosters;
-
   @override
   @JsonKey(name: 'stages')
   num get stages;
-
   @override
   @JsonKey(name: 'active')
   bool get isActive;
-
   @override
   @JsonKey(name: 'type')
   String get type;
-
   @override
   @JsonKey(name: 'name')
   String get name;
-
   @override
   @JsonKey(name: 'flickr_images')
   List<String> get images;
-
   @override
   @JsonKey(name: 'payload_weights')
   List<PayloadWeight> get payloadWeights;
-
   @override
   @JsonKey(name: 'landing_legs')
   dynamic get landingLegs;
-
   @override
   @JsonKey(name: 'engines')
   Engine get engines;
-
   @override
   @JsonKey(ignore: true)
   _$RocketVehicleCopyWith<_RocketVehicle> get copyWith =>
@@ -1659,70 +1563,48 @@ const $ShipVehicle = _$ShipVehicleTearOff();
 /// @nodoc
 mixin _$ShipVehicle {
   String get id => throw _privateConstructorUsedError;
-
   List<String> get launches => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'active')
   bool get isActive => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'name')
   String get name => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'image')
   String get image => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'link')
   String get link => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'longitude')
   dynamic get longitude => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'latitude')
   dynamic get latitude => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'course_deg')
   num? get courseDeg => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'speed_kn')
   num? get speedKn => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'status')
   String get status => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'home_port')
   String get homePort => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'year_built')
   int get yearBuilt => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'mass_lbs')
   int get massLbs => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'mass_kg')
   int get massKg => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'class')
   int get vehicleClass => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'abs')
   int get abs => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'imo')
   int get imo => throw _privateConstructorUsedError;
-
   List<String> get roles => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'type')
   String get type => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'model')
   String? get model => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'legacy_id')
   String get legacyId => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
   @JsonKey(ignore: true)
   $ShipVehicleCopyWith<ShipVehicle> get copyWith =>
       throw _privateConstructorUsedError;
@@ -1733,7 +1615,6 @@ abstract class $ShipVehicleCopyWith<$Res> {
   factory $ShipVehicleCopyWith(
           ShipVehicle value, $Res Function(ShipVehicle) then) =
       _$ShipVehicleCopyWithImpl<$Res>;
-
   $Res call(
       {String id,
       List<String> launches,
@@ -1764,7 +1645,6 @@ class _$ShipVehicleCopyWithImpl<$Res> implements $ShipVehicleCopyWith<$Res> {
   _$ShipVehicleCopyWithImpl(this._value, this._then);
 
   final ShipVehicle _value;
-
   // ignore: unused_field
   final $Res Function(ShipVehicle) _then;
 
@@ -1892,7 +1772,6 @@ abstract class _$ShipVehicleCopyWith<$Res>
   factory _$ShipVehicleCopyWith(
           _ShipVehicle value, $Res Function(_ShipVehicle) then) =
       __$ShipVehicleCopyWithImpl<$Res>;
-
   @override
   $Res call(
       {String id,
@@ -2242,7 +2121,6 @@ abstract class _ShipVehicle extends ShipVehicle {
       @JsonKey(name: 'type') String type,
       @JsonKey(name: 'model') String? model,
       @JsonKey(name: 'legacy_id') String legacyId}) = _$_ShipVehicle;
-
   const _ShipVehicle._() : super._();
 
   factory _ShipVehicle.fromJson(Map<String, dynamic> json) =
@@ -2250,89 +2128,67 @@ abstract class _ShipVehicle extends ShipVehicle {
 
   @override
   String get id;
-
   @override
   List<String> get launches;
-
   @override
   @JsonKey(name: 'active')
   bool get isActive;
-
   @override
   @JsonKey(name: 'name')
   String get name;
-
   @override
   @JsonKey(name: 'image')
   String get image;
-
   @override
   @JsonKey(name: 'link')
   String get link;
-
   @override
   @JsonKey(name: 'longitude')
   dynamic get longitude;
-
   @override
   @JsonKey(name: 'latitude')
   dynamic get latitude;
-
   @override
   @JsonKey(name: 'course_deg')
   num? get courseDeg;
-
   @override
   @JsonKey(name: 'speed_kn')
   num? get speedKn;
-
   @override
   @JsonKey(name: 'status')
   String get status;
-
   @override
   @JsonKey(name: 'home_port')
   String get homePort;
-
   @override
   @JsonKey(name: 'year_built')
   int get yearBuilt;
-
   @override
   @JsonKey(name: 'mass_lbs')
   int get massLbs;
-
   @override
   @JsonKey(name: 'mass_kg')
   int get massKg;
-
   @override
   @JsonKey(name: 'class')
   int get vehicleClass;
-
   @override
   @JsonKey(name: 'abs')
   int get abs;
-
   @override
   @JsonKey(name: 'imo')
   int get imo;
-
   @override
   List<String> get roles;
-
   @override
   @JsonKey(name: 'type')
   String get type;
-
   @override
   @JsonKey(name: 'model')
   String? get model;
-
   @override
   @JsonKey(name: 'legacy_id')
   String get legacyId;
-
   @override
   @JsonKey(ignore: true)
   _$ShipVehicleCopyWith<_ShipVehicle> get copyWith =>
@@ -2397,54 +2253,37 @@ const $DragonVehicle = _$DragonVehicleTearOff();
 /// @nodoc
 mixin _$DragonVehicle {
   String get id => throw _privateConstructorUsedError;
-
   String get description => throw _privateConstructorUsedError;
-
   String get wikipedia => throw _privateConstructorUsedError;
-
   List<Thruster> get thrusters => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'dry_mass_lb')
   int get dryMassLb => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'dry_mass_kg')
   int get dryMassKg => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'orbit_duration_yr')
   int get orbitDurationYr => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'sidewall_angle_deg')
   int get sidewallAngleDeg => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'crew_capacity')
   int get crewCapacity => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'active')
   bool get isActive => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'type')
   String get type => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'name')
   String get name => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'flickr_images')
   List<String> get images => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'first_flight')
   String get firstFlight => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'diameter')
   Diameter get diameter => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'height_w_trunk')
   Diameter get heightWTrunk => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'trunk')
   Trunk get trunk => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
   @JsonKey(ignore: true)
   $DragonVehicleCopyWith<DragonVehicle> get copyWith =>
       throw _privateConstructorUsedError;
@@ -2455,7 +2294,6 @@ abstract class $DragonVehicleCopyWith<$Res> {
   factory $DragonVehicleCopyWith(
           DragonVehicle value, $Res Function(DragonVehicle) then) =
       _$DragonVehicleCopyWithImpl<$Res>;
-
   $Res call(
       {String id,
       String description,
@@ -2476,9 +2314,7 @@ abstract class $DragonVehicleCopyWith<$Res> {
       @JsonKey(name: 'trunk') Trunk trunk});
 
   $DiameterCopyWith<$Res> get diameter;
-
   $DiameterCopyWith<$Res> get heightWTrunk;
-
   $TrunkCopyWith<$Res> get trunk;
 }
 
@@ -2488,7 +2324,6 @@ class _$DragonVehicleCopyWithImpl<$Res>
   _$DragonVehicleCopyWithImpl(this._value, this._then);
 
   final DragonVehicle _value;
-
   // ignore: unused_field
   final $Res Function(DragonVehicle) _then;
 
@@ -2612,7 +2447,6 @@ abstract class _$DragonVehicleCopyWith<$Res>
   factory _$DragonVehicleCopyWith(
           _DragonVehicle value, $Res Function(_DragonVehicle) then) =
       __$DragonVehicleCopyWithImpl<$Res>;
-
   @override
   $Res call(
       {String id,
@@ -2635,10 +2469,8 @@ abstract class _$DragonVehicleCopyWith<$Res>
 
   @override
   $DiameterCopyWith<$Res> get diameter;
-
   @override
   $DiameterCopyWith<$Res> get heightWTrunk;
-
   @override
   $TrunkCopyWith<$Res> get trunk;
 }
@@ -2910,7 +2742,6 @@ abstract class _DragonVehicle extends DragonVehicle {
       @JsonKey(name: 'diameter') Diameter diameter,
       @JsonKey(name: 'height_w_trunk') Diameter heightWTrunk,
       @JsonKey(name: 'trunk') Trunk trunk}) = _$_DragonVehicle;
-
   const _DragonVehicle._() : super._();
 
   factory _DragonVehicle.fromJson(Map<String, dynamic> json) =
@@ -2918,68 +2749,51 @@ abstract class _DragonVehicle extends DragonVehicle {
 
   @override
   String get id;
-
   @override
   String get description;
-
   @override
   String get wikipedia;
-
   @override
   List<Thruster> get thrusters;
-
   @override
   @JsonKey(name: 'dry_mass_lb')
   int get dryMassLb;
-
   @override
   @JsonKey(name: 'dry_mass_kg')
   int get dryMassKg;
-
   @override
   @JsonKey(name: 'orbit_duration_yr')
   int get orbitDurationYr;
-
   @override
   @JsonKey(name: 'sidewall_angle_deg')
   int get sidewallAngleDeg;
-
   @override
   @JsonKey(name: 'crew_capacity')
   int get crewCapacity;
-
   @override
   @JsonKey(name: 'active')
   bool get isActive;
-
   @override
   @JsonKey(name: 'type')
   String get type;
-
   @override
   @JsonKey(name: 'name')
   String get name;
-
   @override
   @JsonKey(name: 'flickr_images')
   List<String> get images;
-
   @override
   @JsonKey(name: 'first_flight')
   String get firstFlight;
-
   @override
   @JsonKey(name: 'diameter')
   Diameter get diameter;
-
   @override
   @JsonKey(name: 'height_w_trunk')
   Diameter get heightWTrunk;
-
   @override
   @JsonKey(name: 'trunk')
   Trunk get trunk;
-
   @override
   @JsonKey(ignore: true)
   _$DragonVehicleCopyWith<_DragonVehicle> get copyWith =>

@@ -61,31 +61,19 @@ const $LaunchpadDetails = _$LaunchpadDetailsTearOff();
 /// @nodoc
 mixin _$LaunchpadDetails {
   String? get name => throw _privateConstructorUsedError;
-
   String? get fullName => throw _privateConstructorUsedError;
-
   String? get locality => throw _privateConstructorUsedError;
-
   String? get region => throw _privateConstructorUsedError;
-
   double? get latitude => throw _privateConstructorUsedError;
-
   double? get longitude => throw _privateConstructorUsedError;
-
   int? get launchAttempts => throw _privateConstructorUsedError;
-
   int? get launchSuccesses => throw _privateConstructorUsedError;
-
   String? get status => throw _privateConstructorUsedError;
-
   String? get details => throw _privateConstructorUsedError;
-
   String? get imageUrl => throw _privateConstructorUsedError;
-
   String? get id => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
   @JsonKey(ignore: true)
   $LaunchpadDetailsCopyWith<LaunchpadDetails> get copyWith =>
       throw _privateConstructorUsedError;
@@ -96,7 +84,6 @@ abstract class $LaunchpadDetailsCopyWith<$Res> {
   factory $LaunchpadDetailsCopyWith(
           LaunchpadDetails value, $Res Function(LaunchpadDetails) then) =
       _$LaunchpadDetailsCopyWithImpl<$Res>;
-
   $Res call(
       {String? name,
       String? fullName,
@@ -118,7 +105,6 @@ class _$LaunchpadDetailsCopyWithImpl<$Res>
   _$LaunchpadDetailsCopyWithImpl(this._value, this._then);
 
   final LaunchpadDetails _value;
-
   // ignore: unused_field
   final $Res Function(LaunchpadDetails) _then;
 
@@ -196,7 +182,6 @@ abstract class _$LaunchpadDetailsCopyWith<$Res>
   factory _$LaunchpadDetailsCopyWith(
           _LaunchpadDetails value, $Res Function(_LaunchpadDetails) then) =
       __$LaunchpadDetailsCopyWithImpl<$Res>;
-
   @override
   $Res call(
       {String? name,
@@ -405,7 +390,6 @@ abstract class _LaunchpadDetails extends LaunchpadDetails {
       String? details,
       String? imageUrl,
       String? id}) = _$_LaunchpadDetails;
-
   const _LaunchpadDetails._() : super._();
 
   factory _LaunchpadDetails.fromJson(Map<String, dynamic> json) =
@@ -413,40 +397,28 @@ abstract class _LaunchpadDetails extends LaunchpadDetails {
 
   @override
   String? get name;
-
   @override
   String? get fullName;
-
   @override
   String? get locality;
-
   @override
   String? get region;
-
   @override
   double? get latitude;
-
   @override
   double? get longitude;
-
   @override
   int? get launchAttempts;
-
   @override
   int? get launchSuccesses;
-
   @override
   String? get status;
-
   @override
   String? get details;
-
   @override
   String? get imageUrl;
-
   @override
   String? get id;
-
   @override
   @JsonKey(ignore: true)
   _$LaunchpadDetailsCopyWith<_LaunchpadDetails> get copyWith =>
