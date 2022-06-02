@@ -2,6 +2,7 @@ import 'package:api/api.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'launch.freezed.dart';
+
 part 'launch.g.dart';
 
 enum LaunchStatus { retired, active, unknown }
@@ -37,21 +38,6 @@ class Launch with _$Launch {
         String staticFireDateUtc,
     @JsonKey(name: 'links') LaunchLinks? links,
     @JsonKey(name: 'fairings') Fairings? fairings,
-
-    // @Default([]) List<String> launches,
-    // @Default('') String? details,
-    // @JsonKey(name: 'wikipedia') @Default('') String? wiki,
-    // @JsonKey(name: 'landing_successes') @Default(0) int landingSuccessesCount,
-    // @JsonKey(name: 'landing_attempts') @Default(0) int landingAttemptsCount,
-    // @JsonKey(name: 'longitude') @Default(0.0) double longitude,
-    // @JsonKey(name: 'latitude') @Default(0.0) double latitude,
-    // @JsonKey(name: 'region') @Default('') String region,
-    // @JsonKey(name: 'locality') @Default('') String locality,
-    // @JsonKey(name: 'type') @Default('') String type,
-    // @JsonKey(name: 'status') @Default(LaunchStatus.unknown) LaunchStatus status,
-    // @JsonKey(name: 'full_name') @Default('') String fullName,
-    // @JsonKey(name: 'name') @Default('') String name,
-    // @JsonKey(name: 'images') Images? images,
   }) = _Launch;
 
   const Launch._();

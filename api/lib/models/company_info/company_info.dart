@@ -1,6 +1,7 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'company_info.freezed.dart';
+
 part 'company_info.g.dart';
 
 /// General information about SpaceX's company data.

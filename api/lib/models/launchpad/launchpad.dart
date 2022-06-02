@@ -1,6 +1,7 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'launchpad.freezed.dart';
+
 part 'launchpad.g.dart';
 
 @freezed
@@ -24,14 +25,4 @@ class LaunchpadDetails with _$LaunchpadDetails {
 
   factory LaunchpadDetails.fromJson(Map<String, dynamic> json) =>
       _$LaunchpadDetailsFromJson(json);
-
-// LatLng get coordinates => LatLng(latitude, longitude);
-//
-// String get getStatus => toBeginningOfSentenceCase(status);
-//
-// String get getCoordinates =>
-//     '${coordinates.latitude.toStringAsPrecision(5)},  ${coordinates.longitude.toStringAsPrecision(5)}';
-//
-// String get getSuccessfulLaunches => '$launchSuccesses/$launchAttempts';
-
 }

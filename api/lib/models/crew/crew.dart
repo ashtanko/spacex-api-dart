@@ -1,6 +1,7 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'crew.freezed.dart';
+
 part 'crew.g.dart';
 
 @freezed

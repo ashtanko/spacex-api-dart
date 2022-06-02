@@ -1,6 +1,7 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'core.freezed.dart';
+
 part 'core.g.dart';
 
 /// Auxiliary model to storage details about a core in a particular mission.

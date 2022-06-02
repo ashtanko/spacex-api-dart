@@ -1,6 +1,7 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'fairings.freezed.dart';
+
 part 'fairings.g.dart';
 
 @freezed
