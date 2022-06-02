@@ -18,13 +18,6 @@ class Achievement with _$Achievement {
 
   factory Achievement.fromJson(Map<String, dynamic> json) =>
       _$AchievementFromJson(json);
-
-  // String get getDate =>
-  //     DateFormat.yMMMMd().format(date ?? DateTime.now());
-
-  bool get hasLink => links?.article != null;
-
-  String get getLink => links?.article ?? '';
 }
 
 @freezed
