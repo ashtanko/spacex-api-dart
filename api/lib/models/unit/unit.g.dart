@@ -18,8 +18,8 @@ _$_CompositeFairing _$$_CompositeFairingFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$$_CompositeFairingToJson(_$_CompositeFairing instance) =>
     <String, dynamic>{
-      'height': instance.height,
-      'diameter': instance.diameter,
+      'height': instance.height?.toJson(),
+      'diameter': instance.diameter?.toJson(),
     };
 
 _$_Thrust _$$_ThrustFromJson(Map<String, dynamic> json) => _$_Thrust(

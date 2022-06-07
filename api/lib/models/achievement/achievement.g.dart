@@ -24,7 +24,7 @@ Map<String, dynamic> _$$_AchievementToJson(_$_Achievement instance) =>
       'id': instance.id,
       'title': instance.name,
       'details': instance.details,
-      'links': instance.links,
+      'links': instance.links?.toJson(),
       'event_date_utc': instance.date?.toIso8601String(),
     };
 

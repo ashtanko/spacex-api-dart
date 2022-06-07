@@ -3,6 +3,10 @@ import 'package:test/test.dart';
 
 void main() {
   group('Engine', () {
+    test('supports value comparison', () {
+      expect(const Engine(), const Engine());
+    });
+
     test('is correctly generated from a JSON', () {
       expect(
         Engine.fromJson(const {

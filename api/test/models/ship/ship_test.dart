@@ -3,6 +3,10 @@ import 'package:test/test.dart';
 
 void main() {
   group('Ship', () {
+    test('supports value comparison', () {
+      expect(const Ship(id: '0'), const Ship(id: '0'));
+    });
+
     test('is correctly generated from a JSON', () {
       expect(
         Ship.fromJson(const {

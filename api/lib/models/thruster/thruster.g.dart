@@ -26,5 +26,5 @@ Map<String, dynamic> _$$_ThrusterToJson(_$_Thruster instance) =>
       'fuel_1': instance.firstFuel,
       'fuel_2': instance.secondFuel,
       'isp': instance.isp,
-      'thrust': instance.thrust,
+      'thrust': instance.thrust.toJson(),
     };

@@ -4,6 +4,10 @@ import 'package:test/test.dart';
 
 void main() {
   group('Starlink', () {
+    test('supports value comparison', () {
+      expect(const Starlink(), const Starlink());
+    });
+
     test('is correctly generated from a JSON', () {
       expect(
         _getMockStarlink(),

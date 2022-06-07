@@ -4,6 +4,10 @@ import 'package:test/test.dart';
 
 void main() {
   group('Rocket', () {
+    test('supports value comparison', () {
+      expect(const Rocket(id: '0'), const Rocket(id: '0'));
+    });
+
     test('is correctly generated from a JSON', () {
       expect(
         Rocket.fromJson(const {

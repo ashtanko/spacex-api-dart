@@ -31,8 +31,8 @@ _$_CompanyInfo _$$_CompanyInfoFromJson(Map<String, dynamic> json) =>
 Map<String, dynamic> _$$_CompanyInfoToJson(_$_CompanyInfo instance) =>
     <String, dynamic>{
       'id': instance.id,
-      'headquarters': instance.headquarters,
-      'links': instance.links,
+      'headquarters': instance.headquarters?.toJson(),
+      'links': instance.links?.toJson(),
       'fullName': instance.fullName,
       'name': instance.name,
       'founder': instance.founder,

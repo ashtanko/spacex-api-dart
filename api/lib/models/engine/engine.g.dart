@@ -28,9 +28,9 @@ _$_Engine _$$_EngineFromJson(Map<String, dynamic> json) => _$_Engine(
     );
 
 Map<String, dynamic> _$$_EngineToJson(_$_Engine instance) => <String, dynamic>{
-      'isp': instance.isp,
-      'thrust_sea_level': instance.thrustSeaLevel,
-      'thrust_vacuum': instance.thrustVacuum,
+      'isp': instance.isp.toJson(),
+      'thrust_sea_level': instance.thrustSeaLevel.toJson(),
+      'thrust_vacuum': instance.thrustVacuum.toJson(),
       'number': instance.number,
       'type': instance.type,
       'version': instance.version,

@@ -26,7 +26,7 @@ _$_Payload _$$_PayloadFromJson(Map<String, dynamic> json) => _$_Payload(
 
 Map<String, dynamic> _$$_PayloadToJson(_$_Payload instance) =>
     <String, dynamic>{
-      'capsule': instance.capsule,
+      'capsule': instance.capsule?.toJson(),
       'name': instance.name,
       'reused': instance.reused,
       'customer': instance.customer,

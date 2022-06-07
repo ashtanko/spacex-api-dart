@@ -28,5 +28,5 @@ Map<String, dynamic> _$$_StarlinkToJson(_$_Starlink instance) =>
       'latitude': instance.latitude,
       'longitude': instance.longitude,
       'velocity_kms': instance.velocityKms,
-      'spaceTrack': instance.spaceTrack,
+      'spaceTrack': instance.spaceTrack?.toJson(),
     };

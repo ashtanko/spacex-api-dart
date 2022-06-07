@@ -16,8 +16,8 @@ _$_Trunk _$$_TrunkFromJson(Map<String, dynamic> json) => _$_Trunk(
     );
 
 Map<String, dynamic> _$$_TrunkToJson(_$_Trunk instance) => <String, dynamic>{
-      'trunk_volume': instance.volume,
-      'cargo': instance.cargo,
+      'trunk_volume': instance.volume.toJson(),
+      'cargo': instance.cargo.toJson(),
     };
 
 _$_TrunkVolume _$$_TrunkVolumeFromJson(Map<String, dynamic> json) =>

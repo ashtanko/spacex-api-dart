@@ -17,7 +17,7 @@ _$_RocketPayload _$$_RocketPayloadFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$$_RocketPayloadToJson(_$_RocketPayload instance) =>
     <String, dynamic>{
-      'composite_fairing': instance.compositeFairing,
+      'composite_fairing': instance.compositeFairing?.toJson(),
       'option_1': instance.option1,
     };
 
@@ -38,8 +38,8 @@ _$_FirstStage _$$_FirstStageFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$$_FirstStageToJson(_$_FirstStage instance) =>
     <String, dynamic>{
-      'thrust_sea_level': instance.thrustSeaLevel,
-      'thrust_vacuum': instance.thrustVacuum,
+      'thrust_sea_level': instance.thrustSeaLevel.toJson(),
+      'thrust_vacuum': instance.thrustVacuum.toJson(),
       'reusable': instance.reusable,
       'engines': instance.engines,
       'fuel_amount_tons': instance.fuelAmountTons,
@@ -62,8 +62,8 @@ _$_SecondStage _$$_SecondStageFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$$_SecondStageToJson(_$_SecondStage instance) =>
     <String, dynamic>{
-      'thrust': instance.thrust,
-      'payloads': instance.payloads,
+      'thrust': instance.thrust?.toJson(),
+      'payloads': instance.payloads?.toJson(),
       'reusable': instance.reusable,
       'engines': instance.engines,
       'fuel_amount_tons': instance.fuelAmountTons,
@@ -116,14 +116,15 @@ _$_Rocket _$$_RocketFromJson(Map<String, dynamic> json) => _$_Rocket(
     );
 
 Map<String, dynamic> _$$_RocketToJson(_$_Rocket instance) => <String, dynamic>{
-      'height': instance.height,
-      'diameter': instance.diameter,
-      'mass': instance.mass,
-      'first_stage': instance.firstStage,
-      'second_stage': instance.secondStage,
-      'engines': instance.engines,
-      'landing_legs': instance.landingLegs,
-      'payload_weights': instance.payloadWeights,
+      'height': instance.height?.toJson(),
+      'diameter': instance.diameter?.toJson(),
+      'mass': instance.mass?.toJson(),
+      'first_stage': instance.firstStage?.toJson(),
+      'second_stage': instance.secondStage?.toJson(),
+      'engines': instance.engines?.toJson(),
+      'landing_legs': instance.landingLegs?.toJson(),
+      'payload_weights':
+          instance.payloadWeights.map((e) => e.toJson()).toList(),
       'flickr_images': instance.flickrImages,
       'name': instance.name,
       'type': instance.type,

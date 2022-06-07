@@ -118,9 +118,10 @@ Map<String, dynamic> _$$_RocketVehicleToJson(_$_RocketVehicle instance) =>
       'type': instance.type,
       'name': instance.name,
       'flickr_images': instance.images,
-      'payload_weights': instance.payloadWeights,
+      'payload_weights':
+          instance.payloadWeights.map((e) => e.toJson()).toList(),
       'landing_legs': instance.landingLegs,
-      'engines': instance.engines,
+      'engines': instance.engines.toJson(),
     };
 
 _$_ShipVehicle _$$_ShipVehicleFromJson(Map<String, dynamic> json) =>
@@ -220,7 +221,7 @@ Map<String, dynamic> _$$_DragonVehicleToJson(_$_DragonVehicle instance) =>
       'id': instance.id,
       'description': instance.description,
       'wikipedia': instance.wikipedia,
-      'thrusters': instance.thrusters,
+      'thrusters': instance.thrusters.map((e) => e.toJson()).toList(),
       'dry_mass_lb': instance.dryMassLb,
       'dry_mass_kg': instance.dryMassKg,
       'orbit_duration_yr': instance.orbitDurationYr,
@@ -231,7 +232,7 @@ Map<String, dynamic> _$$_DragonVehicleToJson(_$_DragonVehicle instance) =>
       'name': instance.name,
       'flickr_images': instance.images,
       'first_flight': instance.firstFlight,
-      'diameter': instance.diameter,
-      'height_w_trunk': instance.heightWTrunk,
-      'trunk': instance.trunk,
+      'diameter': instance.diameter.toJson(),
+      'height_w_trunk': instance.heightWTrunk.toJson(),
+      'trunk': instance.trunk.toJson(),
     };

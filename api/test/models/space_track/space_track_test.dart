@@ -2,7 +2,11 @@ import 'package:api/models/space_track/space_track.dart';
 import 'package:test/test.dart';
 
 void main() {
-  group('Ship', () {
+  group('SpaceTrack', () {
+    test('supports value comparison', () {
+      expect(const SpaceTrack(), const SpaceTrack());
+    });
+
     test('is correctly generated from a JSON', () {
       expect(
         SpaceTrack.fromJson(const {

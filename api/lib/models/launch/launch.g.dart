@@ -56,7 +56,7 @@ Map<String, dynamic> _$$_LaunchToJson(_$_Launch instance) => <String, dynamic>{
       'id': instance.id,
       'tbd': instance.tbd,
       'auto_update': instance.autoUpdate,
-      'cores': instance.cores,
+      'cores': instance.cores.map((e) => e.toJson()).toList(),
       'upcoming': instance.upcoming,
       'date_precision': instance.datePrecision,
       'date_local': instance.dateLocal,
@@ -66,18 +66,18 @@ Map<String, dynamic> _$$_LaunchToJson(_$_Launch instance) => <String, dynamic>{
       'flight_number': instance.flightNumber,
       'launchpad': instance.launchpad,
       'payloads': instance.payloads,
-      'capsules': instance.capsules,
+      'capsules': instance.capsules.map((e) => e.toJson()).toList(),
       'crew': instance.crew,
       'details': instance.details,
-      'failures': instance.failures,
+      'failures': instance.failures.map((e) => e.toJson()).toList(),
       'success': instance.success,
       'rocket': instance.rocket,
       'window': instance.window,
       'net': instance.net,
       'static_fire_date_unix': instance.staticFireDateUnix,
       'static_fire_date_utc': instance.staticFireDateUtc,
-      'links': instance.links,
-      'fairings': instance.fairings,
+      'links': instance.links?.toJson(),
+      'fairings': instance.fairings?.toJson(),
     };
 
 _$_LaunchLinks _$$_LaunchLinksFromJson(Map<String, dynamic> json) =>
@@ -100,9 +100,9 @@ _$_LaunchLinks _$$_LaunchLinksFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$$_LaunchLinksToJson(_$_LaunchLinks instance) =>
     <String, dynamic>{
-      'patch': instance.patch,
-      'reddit': instance.reddit,
-      'flickr': instance.flickr,
+      'patch': instance.patch?.toJson(),
+      'reddit': instance.reddit?.toJson(),
+      'flickr': instance.flickr?.toJson(),
       'presskit': instance.presskit,
       'webcast': instance.webcast,
       'youtube_id': instance.youtubeID,
