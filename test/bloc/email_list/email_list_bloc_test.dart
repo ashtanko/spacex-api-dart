@@ -1,6 +1,7 @@
 import 'package:bloc_test/bloc_test.dart';
 import 'package:flutter_bloc_app_template/index.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:logger/logger.dart';
 import 'package:mockito/mockito.dart';
 
 import '../../helpers/data.dart';
@@ -53,7 +54,7 @@ void main() {
 
     setUp(() {
       repository = MockEmailListRepository();
-      bloc = EmailListBloc(messagesRepository: repository);
+      bloc = EmailListBloc(messagesRepository: repository, logger: Logger());
     });
 
     tearDown(() => bloc.close());
@@ -102,8 +103,9 @@ void main() {
       blocTest<EmailListBloc, EmailListState>(
         'can throw an exception',
         build: () {
-          when(repository.loadData())
-              .thenThrow(Exception('something went wrong'));
+          when(repository.loadData()).thenThrow(
+            Exception('something went wrong'),
+          );
           return bloc;
         },
         act: (bloc) async => bloc.add(
