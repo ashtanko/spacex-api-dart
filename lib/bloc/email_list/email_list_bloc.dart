@@ -35,6 +35,7 @@ class EmailListBloc extends Bloc<EmailListEvent, EmailListState> {
         .getCapsule('5e9e2c5bf35918ed873b2664');
 
     logger.d(capsule);
+
     try {
       final items = await messagesRepository.loadData();
 

@@ -1,4 +1,4 @@
-export 'achievement/achievement.dart';
+export 'achievement/achievement_model.dart';
 export 'capsule/capsule.dart';
 export 'company_info/company_info.dart';
 export 'core/core.dart';

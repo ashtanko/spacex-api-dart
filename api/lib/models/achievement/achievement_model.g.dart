@@ -1,13 +1,13 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'achievement.dart';
+part of 'achievement_model.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_Achievement _$$_AchievementFromJson(Map<String, dynamic> json) =>
-    _$_Achievement(
+_$_AchievementModel _$$_AchievementModelFromJson(Map<String, dynamic> json) =>
+    _$_AchievementModel(
       id: json['id'] as String,
       name: json['title'] as String?,
       details: json['details'] as String?,
@@ -19,7 +19,7 @@ _$_Achievement _$$_AchievementFromJson(Map<String, dynamic> json) =>
           : DateTime.parse(json['event_date_utc'] as String),
     );
 
-Map<String, dynamic> _$$_AchievementToJson(_$_Achievement instance) =>
+Map<String, dynamic> _$$_AchievementModelToJson(_$_AchievementModel instance) =>
     <String, dynamic>{
       'id': instance.id,
       'title': instance.name,

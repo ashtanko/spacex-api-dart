@@ -2,7 +2,7 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
-part of 'achievement.dart';
+part of 'achievement_model.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -13,21 +13,21 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
-Achievement _$AchievementFromJson(Map<String, dynamic> json) {
-  return _Achievement.fromJson(json);
+AchievementModel _$AchievementModelFromJson(Map<String, dynamic> json) {
+  return _AchievementModel.fromJson(json);
 }
 
 /// @nodoc
-class _$AchievementTearOff {
-  const _$AchievementTearOff();
+class _$AchievementModelTearOff {
+  const _$AchievementModelTearOff();
 
-  _Achievement call(
+  _AchievementModel call(
       {required String id,
       @JsonKey(name: 'title') String? name,
       String? details,
       AchievementLinks? links,
       @JsonKey(name: 'event_date_utc') DateTime? date}) {
-    return _Achievement(
+    return _AchievementModel(
       id: id,
       name: name,
       details: details,
@@ -36,16 +36,16 @@ class _$AchievementTearOff {
     );
   }
 
-  Achievement fromJson(Map<String, Object?> json) {
-    return Achievement.fromJson(json);
+  AchievementModel fromJson(Map<String, Object?> json) {
+    return AchievementModel.fromJson(json);
   }
 }
 
 /// @nodoc
-const $Achievement = _$AchievementTearOff();
+const $AchievementModel = _$AchievementModelTearOff();
 
 /// @nodoc
-mixin _$Achievement {
+mixin _$AchievementModel {
   String get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'title')
   String? get name => throw _privateConstructorUsedError;
@@ -56,15 +56,15 @@ mixin _$Achievement {
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $AchievementCopyWith<Achievement> get copyWith =>
+  $AchievementModelCopyWith<AchievementModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $AchievementCopyWith<$Res> {
-  factory $AchievementCopyWith(
-          Achievement value, $Res Function(Achievement) then) =
-      _$AchievementCopyWithImpl<$Res>;
+abstract class $AchievementModelCopyWith<$Res> {
+  factory $AchievementModelCopyWith(
+          AchievementModel value, $Res Function(AchievementModel) then) =
+      _$AchievementModelCopyWithImpl<$Res>;
   $Res call(
       {String id,
       @JsonKey(name: 'title') String? name,
@@ -76,12 +76,13 @@ abstract class $AchievementCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$AchievementCopyWithImpl<$Res> implements $AchievementCopyWith<$Res> {
-  _$AchievementCopyWithImpl(this._value, this._then);
+class _$AchievementModelCopyWithImpl<$Res>
+    implements $AchievementModelCopyWith<$Res> {
+  _$AchievementModelCopyWithImpl(this._value, this._then);
 
-  final Achievement _value;
+  final AchievementModel _value;
   // ignore: unused_field
-  final $Res Function(Achievement) _then;
+  final $Res Function(AchievementModel) _then;
 
   @override
   $Res call({
@@ -128,11 +129,11 @@ class _$AchievementCopyWithImpl<$Res> implements $AchievementCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$AchievementCopyWith<$Res>
-    implements $AchievementCopyWith<$Res> {
-  factory _$AchievementCopyWith(
-          _Achievement value, $Res Function(_Achievement) then) =
-      __$AchievementCopyWithImpl<$Res>;
+abstract class _$AchievementModelCopyWith<$Res>
+    implements $AchievementModelCopyWith<$Res> {
+  factory _$AchievementModelCopyWith(
+          _AchievementModel value, $Res Function(_AchievementModel) then) =
+      __$AchievementModelCopyWithImpl<$Res>;
   @override
   $Res call(
       {String id,
@@ -146,14 +147,15 @@ abstract class _$AchievementCopyWith<$Res>
 }
 
 /// @nodoc
-class __$AchievementCopyWithImpl<$Res> extends _$AchievementCopyWithImpl<$Res>
-    implements _$AchievementCopyWith<$Res> {
-  __$AchievementCopyWithImpl(
-      _Achievement _value, $Res Function(_Achievement) _then)
-      : super(_value, (v) => _then(v as _Achievement));
+class __$AchievementModelCopyWithImpl<$Res>
+    extends _$AchievementModelCopyWithImpl<$Res>
+    implements _$AchievementModelCopyWith<$Res> {
+  __$AchievementModelCopyWithImpl(
+      _AchievementModel _value, $Res Function(_AchievementModel) _then)
+      : super(_value, (v) => _then(v as _AchievementModel));
 
   @override
-  _Achievement get _value => super._value as _Achievement;
+  _AchievementModel get _value => super._value as _AchievementModel;
 
   @override
   $Res call({
@@ -163,7 +165,7 @@ class __$AchievementCopyWithImpl<$Res> extends _$AchievementCopyWithImpl<$Res>
     Object? links = freezed,
     Object? date = freezed,
   }) {
-    return _then(_Achievement(
+    return _then(_AchievementModel(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -190,8 +192,8 @@ class __$AchievementCopyWithImpl<$Res> extends _$AchievementCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_Achievement extends _Achievement {
-  const _$_Achievement(
+class _$_AchievementModel extends _AchievementModel {
+  const _$_AchievementModel(
       {required this.id,
       @JsonKey(name: 'title') this.name,
       this.details,
@@ -199,8 +201,8 @@ class _$_Achievement extends _Achievement {
       @JsonKey(name: 'event_date_utc') this.date})
       : super._();
 
-  factory _$_Achievement.fromJson(Map<String, dynamic> json) =>
-      _$$_AchievementFromJson(json);
+  factory _$_AchievementModel.fromJson(Map<String, dynamic> json) =>
+      _$$_AchievementModelFromJson(json);
 
   @override
   final String id;
@@ -217,14 +219,14 @@ class _$_Achievement extends _Achievement {
 
   @override
   String toString() {
-    return 'Achievement(id: $id, name: $name, details: $details, links: $links, date: $date)';
+    return 'AchievementModel(id: $id, name: $name, details: $details, links: $links, date: $date)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _Achievement &&
+            other is _AchievementModel &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality().equals(other.name, name) &&
             const DeepCollectionEquality().equals(other.details, details) &&
@@ -243,26 +245,26 @@ class _$_Achievement extends _Achievement {
 
   @JsonKey(ignore: true)
   @override
-  _$AchievementCopyWith<_Achievement> get copyWith =>
-      __$AchievementCopyWithImpl<_Achievement>(this, _$identity);
+  _$AchievementModelCopyWith<_AchievementModel> get copyWith =>
+      __$AchievementModelCopyWithImpl<_AchievementModel>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_AchievementToJson(this);
+    return _$$_AchievementModelToJson(this);
   }
 }
 
-abstract class _Achievement extends Achievement {
-  const factory _Achievement(
+abstract class _AchievementModel extends AchievementModel {
+  const factory _AchievementModel(
       {required String id,
       @JsonKey(name: 'title') String? name,
       String? details,
       AchievementLinks? links,
-      @JsonKey(name: 'event_date_utc') DateTime? date}) = _$_Achievement;
-  const _Achievement._() : super._();
+      @JsonKey(name: 'event_date_utc') DateTime? date}) = _$_AchievementModel;
+  const _AchievementModel._() : super._();
 
-  factory _Achievement.fromJson(Map<String, dynamic> json) =
-      _$_Achievement.fromJson;
+  factory _AchievementModel.fromJson(Map<String, dynamic> json) =
+      _$_AchievementModel.fromJson;
 
   @override
   String get id;
@@ -278,7 +280,7 @@ abstract class _Achievement extends Achievement {
   DateTime? get date;
   @override
   @JsonKey(ignore: true)
-  _$AchievementCopyWith<_Achievement> get copyWith =>
+  _$AchievementModelCopyWith<_AchievementModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
