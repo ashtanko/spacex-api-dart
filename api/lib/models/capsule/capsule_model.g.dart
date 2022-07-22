@@ -1,12 +1,13 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'capsule.dart';
+part of 'capsule_model.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_Capsule _$$_CapsuleFromJson(Map<String, dynamic> json) => _$_Capsule(
+_$_CapsuleModel _$$_CapsuleModelFromJson(Map<String, dynamic> json) =>
+    _$_CapsuleModel(
       reuseCount: json['reuse_count'] as int? ?? 0,
       waterLandings: json['water_landings'] as int? ?? 0,
       landLandings: json['land_landings'] as int? ?? 0,
@@ -21,7 +22,7 @@ _$_Capsule _$$_CapsuleFromJson(Map<String, dynamic> json) => _$_Capsule(
       id: json['id'] as String,
     );
 
-Map<String, dynamic> _$$_CapsuleToJson(_$_Capsule instance) =>
+Map<String, dynamic> _$$_CapsuleModelToJson(_$_CapsuleModel instance) =>
     <String, dynamic>{
       'reuse_count': instance.reuseCount,
       'water_landings': instance.waterLandings,

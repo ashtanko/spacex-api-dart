@@ -8,7 +8,7 @@ part of 'capsules.dart';
 
 _$_Capsules _$$_CapsulesFromJson(Map<String, dynamic> json) => _$_Capsules(
       capsules: (json['capsules'] as List<dynamic>?)
-              ?.map((e) => Capsule.fromJson(e as Map<String, dynamic>))
+              ?.map((e) => CapsuleModel.fromJson(e as Map<String, dynamic>))
               .toList() ??
           const [],
     );

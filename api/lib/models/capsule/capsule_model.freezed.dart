@@ -2,7 +2,7 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
-part of 'capsule.dart';
+part of 'capsule_model.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -13,15 +13,15 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
-Capsule _$CapsuleFromJson(Map<String, dynamic> json) {
-  return _Capsule.fromJson(json);
+CapsuleModel _$CapsuleModelFromJson(Map<String, dynamic> json) {
+  return _CapsuleModel.fromJson(json);
 }
 
 /// @nodoc
-class _$CapsuleTearOff {
-  const _$CapsuleTearOff();
+class _$CapsuleModelTearOff {
+  const _$CapsuleModelTearOff();
 
-  _Capsule call(
+  _CapsuleModel call(
       {@JsonKey(name: 'reuse_count') int reuseCount = 0,
       @JsonKey(name: 'water_landings') int waterLandings = 0,
       @JsonKey(name: 'land_landings') int landLandings = 0,
@@ -31,7 +31,7 @@ class _$CapsuleTearOff {
       String status = '',
       String type = '',
       required String id}) {
-    return _Capsule(
+    return _CapsuleModel(
       reuseCount: reuseCount,
       waterLandings: waterLandings,
       landLandings: landLandings,
@@ -44,16 +44,16 @@ class _$CapsuleTearOff {
     );
   }
 
-  Capsule fromJson(Map<String, Object?> json) {
-    return Capsule.fromJson(json);
+  CapsuleModel fromJson(Map<String, Object?> json) {
+    return CapsuleModel.fromJson(json);
   }
 }
 
 /// @nodoc
-const $Capsule = _$CapsuleTearOff();
+const $CapsuleModel = _$CapsuleModelTearOff();
 
 /// @nodoc
-mixin _$Capsule {
+mixin _$CapsuleModel {
   @JsonKey(name: 'reuse_count')
   int get reuseCount => throw _privateConstructorUsedError;
   @JsonKey(name: 'water_landings')
@@ -70,13 +70,15 @@ mixin _$Capsule {
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $CapsuleCopyWith<Capsule> get copyWith => throw _privateConstructorUsedError;
+  $CapsuleModelCopyWith<CapsuleModel> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $CapsuleCopyWith<$Res> {
-  factory $CapsuleCopyWith(Capsule value, $Res Function(Capsule) then) =
-      _$CapsuleCopyWithImpl<$Res>;
+abstract class $CapsuleModelCopyWith<$Res> {
+  factory $CapsuleModelCopyWith(
+          CapsuleModel value, $Res Function(CapsuleModel) then) =
+      _$CapsuleModelCopyWithImpl<$Res>;
   $Res call(
       {@JsonKey(name: 'reuse_count') int reuseCount,
       @JsonKey(name: 'water_landings') int waterLandings,
@@ -90,12 +92,12 @@ abstract class $CapsuleCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$CapsuleCopyWithImpl<$Res> implements $CapsuleCopyWith<$Res> {
-  _$CapsuleCopyWithImpl(this._value, this._then);
+class _$CapsuleModelCopyWithImpl<$Res> implements $CapsuleModelCopyWith<$Res> {
+  _$CapsuleModelCopyWithImpl(this._value, this._then);
 
-  final Capsule _value;
+  final CapsuleModel _value;
   // ignore: unused_field
-  final $Res Function(Capsule) _then;
+  final $Res Function(CapsuleModel) _then;
 
   @override
   $Res call({
@@ -151,9 +153,11 @@ class _$CapsuleCopyWithImpl<$Res> implements $CapsuleCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$CapsuleCopyWith<$Res> implements $CapsuleCopyWith<$Res> {
-  factory _$CapsuleCopyWith(_Capsule value, $Res Function(_Capsule) then) =
-      __$CapsuleCopyWithImpl<$Res>;
+abstract class _$CapsuleModelCopyWith<$Res>
+    implements $CapsuleModelCopyWith<$Res> {
+  factory _$CapsuleModelCopyWith(
+          _CapsuleModel value, $Res Function(_CapsuleModel) then) =
+      __$CapsuleModelCopyWithImpl<$Res>;
   @override
   $Res call(
       {@JsonKey(name: 'reuse_count') int reuseCount,
@@ -168,13 +172,14 @@ abstract class _$CapsuleCopyWith<$Res> implements $CapsuleCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$CapsuleCopyWithImpl<$Res> extends _$CapsuleCopyWithImpl<$Res>
-    implements _$CapsuleCopyWith<$Res> {
-  __$CapsuleCopyWithImpl(_Capsule _value, $Res Function(_Capsule) _then)
-      : super(_value, (v) => _then(v as _Capsule));
+class __$CapsuleModelCopyWithImpl<$Res> extends _$CapsuleModelCopyWithImpl<$Res>
+    implements _$CapsuleModelCopyWith<$Res> {
+  __$CapsuleModelCopyWithImpl(
+      _CapsuleModel _value, $Res Function(_CapsuleModel) _then)
+      : super(_value, (v) => _then(v as _CapsuleModel));
 
   @override
-  _Capsule get _value => super._value as _Capsule;
+  _CapsuleModel get _value => super._value as _CapsuleModel;
 
   @override
   $Res call({
@@ -188,7 +193,7 @@ class __$CapsuleCopyWithImpl<$Res> extends _$CapsuleCopyWithImpl<$Res>
     Object? type = freezed,
     Object? id = freezed,
   }) {
-    return _then(_Capsule(
+    return _then(_CapsuleModel(
       reuseCount: reuseCount == freezed
           ? _value.reuseCount
           : reuseCount // ignore: cast_nullable_to_non_nullable
@@ -231,8 +236,8 @@ class __$CapsuleCopyWithImpl<$Res> extends _$CapsuleCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_Capsule extends _Capsule {
-  const _$_Capsule(
+class _$_CapsuleModel extends _CapsuleModel {
+  const _$_CapsuleModel(
       {@JsonKey(name: 'reuse_count') this.reuseCount = 0,
       @JsonKey(name: 'water_landings') this.waterLandings = 0,
       @JsonKey(name: 'land_landings') this.landLandings = 0,
@@ -244,8 +249,8 @@ class _$_Capsule extends _Capsule {
       required this.id})
       : super._();
 
-  factory _$_Capsule.fromJson(Map<String, dynamic> json) =>
-      _$$_CapsuleFromJson(json);
+  factory _$_CapsuleModel.fromJson(Map<String, dynamic> json) =>
+      _$$_CapsuleModelFromJson(json);
 
   @override
   @JsonKey(name: 'reuse_count')
@@ -276,14 +281,14 @@ class _$_Capsule extends _Capsule {
 
   @override
   String toString() {
-    return 'Capsule(reuseCount: $reuseCount, waterLandings: $waterLandings, landLandings: $landLandings, lastUpdate: $lastUpdate, launches: $launches, serial: $serial, status: $status, type: $type, id: $id)';
+    return 'CapsuleModel(reuseCount: $reuseCount, waterLandings: $waterLandings, landLandings: $landLandings, lastUpdate: $lastUpdate, launches: $launches, serial: $serial, status: $status, type: $type, id: $id)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _Capsule &&
+            other is _CapsuleModel &&
             const DeepCollectionEquality()
                 .equals(other.reuseCount, reuseCount) &&
             const DeepCollectionEquality()
@@ -314,17 +319,17 @@ class _$_Capsule extends _Capsule {
 
   @JsonKey(ignore: true)
   @override
-  _$CapsuleCopyWith<_Capsule> get copyWith =>
-      __$CapsuleCopyWithImpl<_Capsule>(this, _$identity);
+  _$CapsuleModelCopyWith<_CapsuleModel> get copyWith =>
+      __$CapsuleModelCopyWithImpl<_CapsuleModel>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CapsuleToJson(this);
+    return _$$_CapsuleModelToJson(this);
   }
 }
 
-abstract class _Capsule extends Capsule {
-  const factory _Capsule(
+abstract class _CapsuleModel extends CapsuleModel {
+  const factory _CapsuleModel(
       {@JsonKey(name: 'reuse_count') int reuseCount,
       @JsonKey(name: 'water_landings') int waterLandings,
       @JsonKey(name: 'land_landings') int landLandings,
@@ -333,10 +338,11 @@ abstract class _Capsule extends Capsule {
       String serial,
       String status,
       String type,
-      required String id}) = _$_Capsule;
-  const _Capsule._() : super._();
+      required String id}) = _$_CapsuleModel;
+  const _CapsuleModel._() : super._();
 
-  factory _Capsule.fromJson(Map<String, dynamic> json) = _$_Capsule.fromJson;
+  factory _CapsuleModel.fromJson(Map<String, dynamic> json) =
+      _$_CapsuleModel.fromJson;
 
   @override
   @JsonKey(name: 'reuse_count')
@@ -362,6 +368,6 @@ abstract class _Capsule extends Capsule {
   String get id;
   @override
   @JsonKey(ignore: true)
-  _$CapsuleCopyWith<_Capsule> get copyWith =>
+  _$CapsuleModelCopyWith<_CapsuleModel> get copyWith =>
       throw _privateConstructorUsedError;
 }

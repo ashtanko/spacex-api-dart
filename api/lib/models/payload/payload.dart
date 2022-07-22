@@ -8,7 +8,7 @@ part 'payload.g.dart';
 @freezed
 class Payload with _$Payload {
   const factory Payload({
-    Capsule? capsule,
+    CapsuleModel? capsule,
     String? name,
     @Default(false) bool reused,
     String? customer,

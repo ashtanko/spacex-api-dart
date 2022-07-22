@@ -22,7 +22,7 @@ class _$PayloadTearOff {
   const _$PayloadTearOff();
 
   _Payload call(
-      {Capsule? capsule,
+      {CapsuleModel? capsule,
       String? name,
       bool reused = false,
       String? customer,
@@ -62,7 +62,7 @@ const $Payload = _$PayloadTearOff();
 
 /// @nodoc
 mixin _$Payload {
-  Capsule? get capsule => throw _privateConstructorUsedError;
+  CapsuleModel? get capsule => throw _privateConstructorUsedError;
   String? get name => throw _privateConstructorUsedError;
   bool get reused => throw _privateConstructorUsedError;
   String? get customer => throw _privateConstructorUsedError;
@@ -86,7 +86,7 @@ abstract class $PayloadCopyWith<$Res> {
   factory $PayloadCopyWith(Payload value, $Res Function(Payload) then) =
       _$PayloadCopyWithImpl<$Res>;
   $Res call(
-      {Capsule? capsule,
+      {CapsuleModel? capsule,
       String? name,
       bool reused,
       String? customer,
@@ -100,7 +100,7 @@ abstract class $PayloadCopyWith<$Res> {
       num? period,
       String? id});
 
-  $CapsuleCopyWith<$Res>? get capsule;
+  $CapsuleModelCopyWith<$Res>? get capsule;
 }
 
 /// @nodoc
@@ -131,7 +131,7 @@ class _$PayloadCopyWithImpl<$Res> implements $PayloadCopyWith<$Res> {
       capsule: capsule == freezed
           ? _value.capsule
           : capsule // ignore: cast_nullable_to_non_nullable
-              as Capsule?,
+              as CapsuleModel?,
       name: name == freezed
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -184,12 +184,12 @@ class _$PayloadCopyWithImpl<$Res> implements $PayloadCopyWith<$Res> {
   }
 
   @override
-  $CapsuleCopyWith<$Res>? get capsule {
+  $CapsuleModelCopyWith<$Res>? get capsule {
     if (_value.capsule == null) {
       return null;
     }
 
-    return $CapsuleCopyWith<$Res>(_value.capsule!, (value) {
+    return $CapsuleModelCopyWith<$Res>(_value.capsule!, (value) {
       return _then(_value.copyWith(capsule: value));
     });
   }
@@ -201,7 +201,7 @@ abstract class _$PayloadCopyWith<$Res> implements $PayloadCopyWith<$Res> {
       __$PayloadCopyWithImpl<$Res>;
   @override
   $Res call(
-      {Capsule? capsule,
+      {CapsuleModel? capsule,
       String? name,
       bool reused,
       String? customer,
@@ -216,7 +216,7 @@ abstract class _$PayloadCopyWith<$Res> implements $PayloadCopyWith<$Res> {
       String? id});
 
   @override
-  $CapsuleCopyWith<$Res>? get capsule;
+  $CapsuleModelCopyWith<$Res>? get capsule;
 }
 
 /// @nodoc
@@ -248,7 +248,7 @@ class __$PayloadCopyWithImpl<$Res> extends _$PayloadCopyWithImpl<$Res>
       capsule: capsule == freezed
           ? _value.capsule
           : capsule // ignore: cast_nullable_to_non_nullable
-              as Capsule?,
+              as CapsuleModel?,
       name: name == freezed
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -324,7 +324,7 @@ class _$_Payload extends _Payload {
       _$$_PayloadFromJson(json);
 
   @override
-  final Capsule? capsule;
+  final CapsuleModel? capsule;
   @override
   final String? name;
   @JsonKey()
@@ -409,7 +409,7 @@ class _$_Payload extends _Payload {
 
 abstract class _Payload extends Payload {
   const factory _Payload(
-      {Capsule? capsule,
+      {CapsuleModel? capsule,
       String? name,
       bool reused,
       String? customer,
@@ -427,7 +427,7 @@ abstract class _Payload extends Payload {
   factory _Payload.fromJson(Map<String, dynamic> json) = _$_Payload.fromJson;
 
   @override
-  Capsule? get capsule;
+  CapsuleModel? get capsule;
   @override
   String? get name;
   @override

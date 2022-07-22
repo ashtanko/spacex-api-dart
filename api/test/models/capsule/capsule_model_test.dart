@@ -4,7 +4,7 @@ import 'package:test/test.dart';
 void main() {
   group('Capsule', () {
     test('supports value comparison', () {
-      const c1 = Capsule(
+      const c1 = CapsuleModel(
         reuseCount: 1,
         waterLandings: 1,
         landLandings: 0,
@@ -18,7 +18,7 @@ void main() {
         id: '5e9e2c5bf35918ed873b2664',
       );
 
-      const c2 = Capsule(
+      const c2 = CapsuleModel(
         reuseCount: 1,
         waterLandings: 1,
         landLandings: 0,
@@ -37,7 +37,7 @@ void main() {
 
     test('is correctly generated from a JSON', () {
       expect(
-        Capsule.fromJson(const {
+        CapsuleModel.fromJson(const {
           'reuse_count': 1,
           'water_landings': 1,
           'land_landings': 0,
@@ -48,7 +48,7 @@ void main() {
           'type': 'Dragon 1.0',
           'id': '5e9e2c5bf35918ed873b2664'
         }),
-        const Capsule(
+        const CapsuleModel(
           reuseCount: 1,
           waterLandings: 1,
           landLandings: 0,

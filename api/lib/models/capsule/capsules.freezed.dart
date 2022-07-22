@@ -21,7 +21,7 @@ Capsules _$CapsulesFromJson(Map<String, dynamic> json) {
 class _$CapsulesTearOff {
   const _$CapsulesTearOff();
 
-  _Capsules call({List<Capsule> capsules = const []}) {
+  _Capsules call({List<CapsuleModel> capsules = const []}) {
     return _Capsules(
       capsules: capsules,
     );
@@ -37,7 +37,7 @@ const $Capsules = _$CapsulesTearOff();
 
 /// @nodoc
 mixin _$Capsules {
-  List<Capsule> get capsules => throw _privateConstructorUsedError;
+  List<CapsuleModel> get capsules => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -49,7 +49,7 @@ mixin _$Capsules {
 abstract class $CapsulesCopyWith<$Res> {
   factory $CapsulesCopyWith(Capsules value, $Res Function(Capsules) then) =
       _$CapsulesCopyWithImpl<$Res>;
-  $Res call({List<Capsule> capsules});
+  $Res call({List<CapsuleModel> capsules});
 }
 
 /// @nodoc
@@ -68,7 +68,7 @@ class _$CapsulesCopyWithImpl<$Res> implements $CapsulesCopyWith<$Res> {
       capsules: capsules == freezed
           ? _value.capsules
           : capsules // ignore: cast_nullable_to_non_nullable
-              as List<Capsule>,
+              as List<CapsuleModel>,
     ));
   }
 }
@@ -78,7 +78,7 @@ abstract class _$CapsulesCopyWith<$Res> implements $CapsulesCopyWith<$Res> {
   factory _$CapsulesCopyWith(_Capsules value, $Res Function(_Capsules) then) =
       __$CapsulesCopyWithImpl<$Res>;
   @override
-  $Res call({List<Capsule> capsules});
+  $Res call({List<CapsuleModel> capsules});
 }
 
 /// @nodoc
@@ -98,7 +98,7 @@ class __$CapsulesCopyWithImpl<$Res> extends _$CapsulesCopyWithImpl<$Res>
       capsules: capsules == freezed
           ? _value.capsules
           : capsules // ignore: cast_nullable_to_non_nullable
-              as List<Capsule>,
+              as List<CapsuleModel>,
     ));
   }
 }
@@ -113,7 +113,7 @@ class _$_Capsules extends _Capsules {
 
   @JsonKey()
   @override
-  final List<Capsule> capsules;
+  final List<CapsuleModel> capsules;
 
   @override
   String toString() {
@@ -144,13 +144,13 @@ class _$_Capsules extends _Capsules {
 }
 
 abstract class _Capsules extends Capsules {
-  const factory _Capsules({List<Capsule> capsules}) = _$_Capsules;
+  const factory _Capsules({List<CapsuleModel> capsules}) = _$_Capsules;
   const _Capsules._() : super._();
 
   factory _Capsules.fromJson(Map<String, dynamic> json) = _$_Capsules.fromJson;
 
   @override
-  List<Capsule> get capsules;
+  List<CapsuleModel> get capsules;
   @override
   @JsonKey(ignore: true)
   _$CapsulesCopyWith<_Capsules> get copyWith =>

@@ -1,13 +1,13 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-part 'capsule.freezed.dart';
+part 'capsule_model.freezed.dart';
 
-part 'capsule.g.dart';
+part 'capsule_model.g.dart';
 
 /// Details about a specific capsule used in a CRS mission
 @freezed
-class Capsule with _$Capsule {
-  const factory Capsule({
+class CapsuleModel with _$CapsuleModel {
+  const factory CapsuleModel({
     @JsonKey(name: 'reuse_count') @Default(0) int reuseCount,
     @JsonKey(name: 'water_landings') @Default(0) int waterLandings,
     @JsonKey(name: 'land_landings') @Default(0) int landLandings,
@@ -17,10 +17,10 @@ class Capsule with _$Capsule {
     @Default('') String status,
     @Default('') String type,
     required String id,
-  }) = _Capsule;
+  }) = _CapsuleModel;
 
-  const Capsule._();
+  const CapsuleModel._();
 
-  factory Capsule.fromJson(Map<String, dynamic> json) =>
-      _$CapsuleFromJson(json);
+  factory CapsuleModel.fromJson(Map<String, dynamic> json) =>
+      _$CapsuleModelFromJson(json);
 }

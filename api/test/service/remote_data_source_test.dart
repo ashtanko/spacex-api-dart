@@ -1,6 +1,6 @@
 import 'dart:convert';
 
-import 'package:api/models/capsule/capsule.dart';
+import 'package:api/models/capsule/capsule_model.dart';
 import 'package:api/models/capsule/capsules.dart';
 import 'package:api/service/remote_data_source.dart';
 import 'package:api/utils/exception.dart';
@@ -72,7 +72,7 @@ void main() {
     final capsuleJsonString = readJson('helpers/dummy_responses/capsule.json');
 
     final capsule =
-        Capsule.fromJson(jsonDecode(capsuleJsonString) as Map<String, dynamic>);
+        CapsuleModel.fromJson(jsonDecode(capsuleJsonString) as Map<String, dynamic>);
 
     const capsuleId = '5e9e2c5bf35918ed873b2664';
 

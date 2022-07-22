@@ -27,7 +27,7 @@ _$_Launch _$$_LaunchFromJson(Map<String, dynamic> json) => _$_Launch(
               .toList() ??
           const [],
       capsules: (json['capsules'] as List<dynamic>?)
-              ?.map((e) => Capsule.fromJson(e as Map<String, dynamic>))
+              ?.map((e) => CapsuleModel.fromJson(e as Map<String, dynamic>))
               .toList() ??
           const [],
       crew:

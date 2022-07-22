@@ -9,7 +9,7 @@ part of 'payload.dart';
 _$_Payload _$$_PayloadFromJson(Map<String, dynamic> json) => _$_Payload(
       capsule: json['capsule'] == null
           ? null
-          : Capsule.fromJson(json['capsule'] as Map<String, dynamic>),
+          : CapsuleModel.fromJson(json['capsule'] as Map<String, dynamic>),
       name: json['name'] as String?,
       reused: json['reused'] as bool? ?? false,
       customer: json['customer'] as String?,

@@ -35,7 +35,7 @@ class _$LaunchTearOff {
       @JsonKey(name: 'flight_number') int flightNumber = 0,
       @JsonKey(name: 'launchpad') String launchpad = '',
       @JsonKey(name: 'payloads') List<String> payloads = const [],
-      @JsonKey(name: 'capsules') List<Capsule> capsules = const [],
+      @JsonKey(name: 'capsules') List<CapsuleModel> capsules = const [],
       @JsonKey(name: 'crew') List<String> crew = const [],
       @JsonKey(name: 'details') String details = '',
       @JsonKey(name: 'failures') List<LaunchFailure> failures = const [],
@@ -109,7 +109,7 @@ mixin _$Launch {
   @JsonKey(name: 'payloads')
   List<String> get payloads => throw _privateConstructorUsedError;
   @JsonKey(name: 'capsules')
-  List<Capsule> get capsules =>
+  List<CapsuleModel> get capsules =>
       throw _privateConstructorUsedError; //@JsonKey(name: 'ships') @Default([]) List<Ship> ships,
   @JsonKey(name: 'crew')
   List<String> get crew => throw _privateConstructorUsedError;
@@ -157,7 +157,7 @@ abstract class $LaunchCopyWith<$Res> {
       @JsonKey(name: 'flight_number') int flightNumber,
       @JsonKey(name: 'launchpad') String launchpad,
       @JsonKey(name: 'payloads') List<String> payloads,
-      @JsonKey(name: 'capsules') List<Capsule> capsules,
+      @JsonKey(name: 'capsules') List<CapsuleModel> capsules,
       @JsonKey(name: 'crew') List<String> crew,
       @JsonKey(name: 'details') String details,
       @JsonKey(name: 'failures') List<LaunchFailure> failures,
@@ -266,7 +266,7 @@ class _$LaunchCopyWithImpl<$Res> implements $LaunchCopyWith<$Res> {
       capsules: capsules == freezed
           ? _value.capsules
           : capsules // ignore: cast_nullable_to_non_nullable
-              as List<Capsule>,
+              as List<CapsuleModel>,
       crew: crew == freezed
           ? _value.crew
           : crew // ignore: cast_nullable_to_non_nullable
@@ -356,7 +356,7 @@ abstract class _$LaunchCopyWith<$Res> implements $LaunchCopyWith<$Res> {
       @JsonKey(name: 'flight_number') int flightNumber,
       @JsonKey(name: 'launchpad') String launchpad,
       @JsonKey(name: 'payloads') List<String> payloads,
-      @JsonKey(name: 'capsules') List<Capsule> capsules,
+      @JsonKey(name: 'capsules') List<CapsuleModel> capsules,
       @JsonKey(name: 'crew') List<String> crew,
       @JsonKey(name: 'details') String details,
       @JsonKey(name: 'failures') List<LaunchFailure> failures,
@@ -468,7 +468,7 @@ class __$LaunchCopyWithImpl<$Res> extends _$LaunchCopyWithImpl<$Res>
       capsules: capsules == freezed
           ? _value.capsules
           : capsules // ignore: cast_nullable_to_non_nullable
-              as List<Capsule>,
+              as List<CapsuleModel>,
       crew: crew == freezed
           ? _value.crew
           : crew // ignore: cast_nullable_to_non_nullable
@@ -591,7 +591,7 @@ class _$_Launch extends _Launch {
   final List<String> payloads;
   @override
   @JsonKey(name: 'capsules')
-  final List<Capsule> capsules;
+  final List<CapsuleModel> capsules;
   @override //@JsonKey(name: 'ships') @Default([]) List<Ship> ships,
   @JsonKey(name: 'crew')
   final List<String> crew;
@@ -724,7 +724,7 @@ abstract class _Launch extends Launch {
       @JsonKey(name: 'flight_number') int flightNumber,
       @JsonKey(name: 'launchpad') String launchpad,
       @JsonKey(name: 'payloads') List<String> payloads,
-      @JsonKey(name: 'capsules') List<Capsule> capsules,
+      @JsonKey(name: 'capsules') List<CapsuleModel> capsules,
       @JsonKey(name: 'crew') List<String> crew,
       @JsonKey(name: 'details') String details,
       @JsonKey(name: 'failures') List<LaunchFailure> failures,
@@ -777,7 +777,7 @@ abstract class _Launch extends Launch {
   List<String> get payloads;
   @override
   @JsonKey(name: 'capsules')
-  List<Capsule> get capsules;
+  List<CapsuleModel> get capsules;
   @override //@JsonKey(name: 'ships') @Default([]) List<Ship> ships,
   @JsonKey(name: 'crew')
   List<String> get crew;

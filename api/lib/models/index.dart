@@ -1,5 +1,5 @@
 export 'achievement/achievement_model.dart';
-export 'capsule/capsule.dart';
+export 'capsule/capsule_model.dart';
 export 'company_info/company_info.dart';
 export 'core/core.dart';
 export 'crew/crew.dart';

@@ -23,7 +23,7 @@ class Launch with _$Launch {
     @JsonKey(name: 'flight_number') @Default(0) int flightNumber,
     @JsonKey(name: 'launchpad') @Default('') String launchpad,
     @JsonKey(name: 'payloads') @Default([]) List<String> payloads,
-    @JsonKey(name: 'capsules') @Default([]) List<Capsule> capsules,
+    @JsonKey(name: 'capsules') @Default([]) List<CapsuleModel> capsules,
     //@JsonKey(name: 'ships') @Default([]) List<Ship> ships,
     @JsonKey(name: 'crew') @Default([]) List<String> crew,
     @JsonKey(name: 'details') @Default('') String details,
