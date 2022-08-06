@@ -1,6 +1,5 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'company_info.dart';
@@ -12,11 +11,54 @@ part of 'company_info.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 CompanyInfo _$CompanyInfoFromJson(Map<String, dynamic> json) {
   return _CompanyInfo.fromJson(json);
 }
+
+/// @nodoc
+class _$CompanyInfoTearOff {
+  const _$CompanyInfoTearOff();
+
+  _CompanyInfo call(
+      {required String id,
+      Headquarter? headquarters,
+      Links? links,
+      String fullName = 'Space Exploration Technologies Corporation',
+      String name = 'SpaceX',
+      String founder = 'Elon Musk',
+      int founded = 2002,
+      int employees = 9500,
+      String ceo = 'Elon Musk',
+      String cto = 'Elon Musk',
+      String coo = 'Gwynne Shotwell',
+      num valuation = 74000000000,
+      @JsonKey(name: 'summary') String? details}) {
+    return _CompanyInfo(
+      id: id,
+      headquarters: headquarters,
+      links: links,
+      fullName: fullName,
+      name: name,
+      founder: founder,
+      founded: founded,
+      employees: employees,
+      ceo: ceo,
+      cto: cto,
+      coo: coo,
+      valuation: valuation,
+      details: details,
+    );
+  }
+
+  CompanyInfo fromJson(Map<String, Object?> json) {
+    return CompanyInfo.fromJson(json);
+  }
+}
+
+/// @nodoc
+const $CompanyInfo = _$CompanyInfoTearOff();
 
 /// @nodoc
 mixin _$CompanyInfo {
@@ -169,11 +211,11 @@ class _$CompanyInfoCopyWithImpl<$Res> implements $CompanyInfoCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$$_CompanyInfoCopyWith<$Res>
+abstract class _$CompanyInfoCopyWith<$Res>
     implements $CompanyInfoCopyWith<$Res> {
-  factory _$$_CompanyInfoCopyWith(
-          _$_CompanyInfo value, $Res Function(_$_CompanyInfo) then) =
-      __$$_CompanyInfoCopyWithImpl<$Res>;
+  factory _$CompanyInfoCopyWith(
+          _CompanyInfo value, $Res Function(_CompanyInfo) then) =
+      __$CompanyInfoCopyWithImpl<$Res>;
   @override
   $Res call(
       {String id,
@@ -197,14 +239,14 @@ abstract class _$$_CompanyInfoCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_CompanyInfoCopyWithImpl<$Res> extends _$CompanyInfoCopyWithImpl<$Res>
-    implements _$$_CompanyInfoCopyWith<$Res> {
-  __$$_CompanyInfoCopyWithImpl(
-      _$_CompanyInfo _value, $Res Function(_$_CompanyInfo) _then)
-      : super(_value, (v) => _then(v as _$_CompanyInfo));
+class __$CompanyInfoCopyWithImpl<$Res> extends _$CompanyInfoCopyWithImpl<$Res>
+    implements _$CompanyInfoCopyWith<$Res> {
+  __$CompanyInfoCopyWithImpl(
+      _CompanyInfo _value, $Res Function(_CompanyInfo) _then)
+      : super(_value, (v) => _then(v as _CompanyInfo));
 
   @override
-  _$_CompanyInfo get _value => super._value as _$_CompanyInfo;
+  _CompanyInfo get _value => super._value as _CompanyInfo;
 
   @override
   $Res call({
@@ -222,7 +264,7 @@ class __$$_CompanyInfoCopyWithImpl<$Res> extends _$CompanyInfoCopyWithImpl<$Res>
     Object? valuation = freezed,
     Object? details = freezed,
   }) {
-    return _then(_$_CompanyInfo(
+    return _then(_CompanyInfo(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -307,32 +349,32 @@ class _$_CompanyInfo extends _CompanyInfo {
   final Headquarter? headquarters;
   @override
   final Links? links;
-  @override
   @JsonKey()
+  @override
   final String fullName;
-  @override
   @JsonKey()
+  @override
   final String name;
-  @override
   @JsonKey()
+  @override
   final String founder;
-  @override
   @JsonKey()
+  @override
   final int founded;
-  @override
   @JsonKey()
+  @override
   final int employees;
-  @override
   @JsonKey()
+  @override
   final String ceo;
-  @override
   @JsonKey()
+  @override
   final String cto;
-  @override
   @JsonKey()
+  @override
   final String coo;
-  @override
   @JsonKey()
+  @override
   final num valuation;
   @override
   @JsonKey(name: 'summary')
@@ -347,7 +389,7 @@ class _$_CompanyInfo extends _CompanyInfo {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_CompanyInfo &&
+            other is _CompanyInfo &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
                 .equals(other.headquarters, headquarters) &&
@@ -364,7 +406,6 @@ class _$_CompanyInfo extends _CompanyInfo {
             const DeepCollectionEquality().equals(other.details, details));
   }
 
-  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -384,8 +425,8 @@ class _$_CompanyInfo extends _CompanyInfo {
 
   @JsonKey(ignore: true)
   @override
-  _$$_CompanyInfoCopyWith<_$_CompanyInfo> get copyWith =>
-      __$$_CompanyInfoCopyWithImpl<_$_CompanyInfo>(this, _$identity);
+  _$CompanyInfoCopyWith<_CompanyInfo> get copyWith =>
+      __$CompanyInfoCopyWithImpl<_CompanyInfo>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -395,60 +436,83 @@ class _$_CompanyInfo extends _CompanyInfo {
 
 abstract class _CompanyInfo extends CompanyInfo {
   const factory _CompanyInfo(
-      {required final String id,
-      final Headquarter? headquarters,
-      final Links? links,
-      final String fullName,
-      final String name,
-      final String founder,
-      final int founded,
-      final int employees,
-      final String ceo,
-      final String cto,
-      final String coo,
-      final num valuation,
-      @JsonKey(name: 'summary') final String? details}) = _$_CompanyInfo;
+      {required String id,
+      Headquarter? headquarters,
+      Links? links,
+      String fullName,
+      String name,
+      String founder,
+      int founded,
+      int employees,
+      String ceo,
+      String cto,
+      String coo,
+      num valuation,
+      @JsonKey(name: 'summary') String? details}) = _$_CompanyInfo;
   const _CompanyInfo._() : super._();
 
   factory _CompanyInfo.fromJson(Map<String, dynamic> json) =
       _$_CompanyInfo.fromJson;
 
   @override
-  String get id => throw _privateConstructorUsedError;
+  String get id;
   @override
-  Headquarter? get headquarters => throw _privateConstructorUsedError;
+  Headquarter? get headquarters;
   @override
-  Links? get links => throw _privateConstructorUsedError;
+  Links? get links;
   @override
-  String get fullName => throw _privateConstructorUsedError;
+  String get fullName;
   @override
-  String get name => throw _privateConstructorUsedError;
+  String get name;
   @override
-  String get founder => throw _privateConstructorUsedError;
+  String get founder;
   @override
-  int get founded => throw _privateConstructorUsedError;
+  int get founded;
   @override
-  int get employees => throw _privateConstructorUsedError;
+  int get employees;
   @override
-  String get ceo => throw _privateConstructorUsedError;
+  String get ceo;
   @override
-  String get cto => throw _privateConstructorUsedError;
+  String get cto;
   @override
-  String get coo => throw _privateConstructorUsedError;
+  String get coo;
   @override
-  num get valuation => throw _privateConstructorUsedError;
+  num get valuation;
   @override
   @JsonKey(name: 'summary')
-  String? get details => throw _privateConstructorUsedError;
+  String? get details;
   @override
   @JsonKey(ignore: true)
-  _$$_CompanyInfoCopyWith<_$_CompanyInfo> get copyWith =>
+  _$CompanyInfoCopyWith<_CompanyInfo> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 Headquarter _$HeadquarterFromJson(Map<String, dynamic> json) {
   return _Headquarter.fromJson(json);
 }
+
+/// @nodoc
+class _$HeadquarterTearOff {
+  const _$HeadquarterTearOff();
+
+  _Headquarter call(
+      {String address = 'Rocket Road',
+      String city = 'Hawthorne',
+      String state = 'California'}) {
+    return _Headquarter(
+      address: address,
+      city: city,
+      state: state,
+    );
+  }
+
+  Headquarter fromJson(Map<String, Object?> json) {
+    return Headquarter.fromJson(json);
+  }
+}
+
+/// @nodoc
+const $Headquarter = _$HeadquarterTearOff();
 
 /// @nodoc
 mixin _$Headquarter {
@@ -502,24 +566,24 @@ class _$HeadquarterCopyWithImpl<$Res> implements $HeadquarterCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$$_HeadquarterCopyWith<$Res>
+abstract class _$HeadquarterCopyWith<$Res>
     implements $HeadquarterCopyWith<$Res> {
-  factory _$$_HeadquarterCopyWith(
-          _$_Headquarter value, $Res Function(_$_Headquarter) then) =
-      __$$_HeadquarterCopyWithImpl<$Res>;
+  factory _$HeadquarterCopyWith(
+          _Headquarter value, $Res Function(_Headquarter) then) =
+      __$HeadquarterCopyWithImpl<$Res>;
   @override
   $Res call({String address, String city, String state});
 }
 
 /// @nodoc
-class __$$_HeadquarterCopyWithImpl<$Res> extends _$HeadquarterCopyWithImpl<$Res>
-    implements _$$_HeadquarterCopyWith<$Res> {
-  __$$_HeadquarterCopyWithImpl(
-      _$_Headquarter _value, $Res Function(_$_Headquarter) _then)
-      : super(_value, (v) => _then(v as _$_Headquarter));
+class __$HeadquarterCopyWithImpl<$Res> extends _$HeadquarterCopyWithImpl<$Res>
+    implements _$HeadquarterCopyWith<$Res> {
+  __$HeadquarterCopyWithImpl(
+      _Headquarter _value, $Res Function(_Headquarter) _then)
+      : super(_value, (v) => _then(v as _Headquarter));
 
   @override
-  _$_Headquarter get _value => super._value as _$_Headquarter;
+  _Headquarter get _value => super._value as _Headquarter;
 
   @override
   $Res call({
@@ -527,7 +591,7 @@ class __$$_HeadquarterCopyWithImpl<$Res> extends _$HeadquarterCopyWithImpl<$Res>
     Object? city = freezed,
     Object? state = freezed,
   }) {
-    return _then(_$_Headquarter(
+    return _then(_Headquarter(
       address: address == freezed
           ? _value.address
           : address // ignore: cast_nullable_to_non_nullable
@@ -556,14 +620,14 @@ class _$_Headquarter extends _Headquarter {
   factory _$_Headquarter.fromJson(Map<String, dynamic> json) =>
       _$$_HeadquarterFromJson(json);
 
-  @override
   @JsonKey()
+  @override
   final String address;
-  @override
   @JsonKey()
+  @override
   final String city;
-  @override
   @JsonKey()
+  @override
   final String state;
 
   @override
@@ -575,13 +639,12 @@ class _$_Headquarter extends _Headquarter {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_Headquarter &&
+            other is _Headquarter &&
             const DeepCollectionEquality().equals(other.address, address) &&
             const DeepCollectionEquality().equals(other.city, city) &&
             const DeepCollectionEquality().equals(other.state, state));
   }
 
-  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -591,8 +654,8 @@ class _$_Headquarter extends _Headquarter {
 
   @JsonKey(ignore: true)
   @override
-  _$$_HeadquarterCopyWith<_$_Headquarter> get copyWith =>
-      __$$_HeadquarterCopyWithImpl<_$_Headquarter>(this, _$identity);
+  _$HeadquarterCopyWith<_Headquarter> get copyWith =>
+      __$HeadquarterCopyWithImpl<_Headquarter>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -601,30 +664,54 @@ class _$_Headquarter extends _Headquarter {
 }
 
 abstract class _Headquarter extends Headquarter {
-  const factory _Headquarter(
-      {final String address,
-      final String city,
-      final String state}) = _$_Headquarter;
+  const factory _Headquarter({String address, String city, String state}) =
+      _$_Headquarter;
   const _Headquarter._() : super._();
 
   factory _Headquarter.fromJson(Map<String, dynamic> json) =
       _$_Headquarter.fromJson;
 
   @override
-  String get address => throw _privateConstructorUsedError;
+  String get address;
   @override
-  String get city => throw _privateConstructorUsedError;
+  String get city;
   @override
-  String get state => throw _privateConstructorUsedError;
+  String get state;
   @override
   @JsonKey(ignore: true)
-  _$$_HeadquarterCopyWith<_$_Headquarter> get copyWith =>
+  _$HeadquarterCopyWith<_Headquarter> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 Links _$LinksFromJson(Map<String, dynamic> json) {
   return _Links.fromJson(json);
 }
+
+/// @nodoc
+class _$LinksTearOff {
+  const _$LinksTearOff();
+
+  _Links call(
+      {String website = 'https://www.spacex.com/',
+      String flickr = 'https://www.flickr.com/photos/spacex/',
+      String twitter = 'https://twitter.com/SpaceX',
+      @JsonKey(name: 'elon_twitter')
+          String elonTwitter = 'https://twitter.com/elonmusk'}) {
+    return _Links(
+      website: website,
+      flickr: flickr,
+      twitter: twitter,
+      elonTwitter: elonTwitter,
+    );
+  }
+
+  Links fromJson(Map<String, Object?> json) {
+    return Links.fromJson(json);
+  }
+}
+
+/// @nodoc
+const $Links = _$LinksTearOff();
 
 /// @nodoc
 mixin _$Links {
@@ -687,9 +774,9 @@ class _$LinksCopyWithImpl<$Res> implements $LinksCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$$_LinksCopyWith<$Res> implements $LinksCopyWith<$Res> {
-  factory _$$_LinksCopyWith(_$_Links value, $Res Function(_$_Links) then) =
-      __$$_LinksCopyWithImpl<$Res>;
+abstract class _$LinksCopyWith<$Res> implements $LinksCopyWith<$Res> {
+  factory _$LinksCopyWith(_Links value, $Res Function(_Links) then) =
+      __$LinksCopyWithImpl<$Res>;
   @override
   $Res call(
       {String website,
@@ -699,13 +786,13 @@ abstract class _$$_LinksCopyWith<$Res> implements $LinksCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_LinksCopyWithImpl<$Res> extends _$LinksCopyWithImpl<$Res>
-    implements _$$_LinksCopyWith<$Res> {
-  __$$_LinksCopyWithImpl(_$_Links _value, $Res Function(_$_Links) _then)
-      : super(_value, (v) => _then(v as _$_Links));
+class __$LinksCopyWithImpl<$Res> extends _$LinksCopyWithImpl<$Res>
+    implements _$LinksCopyWith<$Res> {
+  __$LinksCopyWithImpl(_Links _value, $Res Function(_Links) _then)
+      : super(_value, (v) => _then(v as _Links));
 
   @override
-  _$_Links get _value => super._value as _$_Links;
+  _Links get _value => super._value as _Links;
 
   @override
   $Res call({
@@ -714,7 +801,7 @@ class __$$_LinksCopyWithImpl<$Res> extends _$LinksCopyWithImpl<$Res>
     Object? twitter = freezed,
     Object? elonTwitter = freezed,
   }) {
-    return _then(_$_Links(
+    return _then(_Links(
       website: website == freezed
           ? _value.website
           : website // ignore: cast_nullable_to_non_nullable
@@ -749,14 +836,14 @@ class _$_Links extends _Links {
   factory _$_Links.fromJson(Map<String, dynamic> json) =>
       _$$_LinksFromJson(json);
 
-  @override
   @JsonKey()
+  @override
   final String website;
-  @override
   @JsonKey()
+  @override
   final String flickr;
-  @override
   @JsonKey()
+  @override
   final String twitter;
   @override
   @JsonKey(name: 'elon_twitter')
@@ -771,7 +858,7 @@ class _$_Links extends _Links {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_Links &&
+            other is _Links &&
             const DeepCollectionEquality().equals(other.website, website) &&
             const DeepCollectionEquality().equals(other.flickr, flickr) &&
             const DeepCollectionEquality().equals(other.twitter, twitter) &&
@@ -779,7 +866,6 @@ class _$_Links extends _Links {
                 .equals(other.elonTwitter, elonTwitter));
   }
 
-  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -790,8 +876,8 @@ class _$_Links extends _Links {
 
   @JsonKey(ignore: true)
   @override
-  _$$_LinksCopyWith<_$_Links> get copyWith =>
-      __$$_LinksCopyWithImpl<_$_Links>(this, _$identity);
+  _$LinksCopyWith<_Links> get copyWith =>
+      __$LinksCopyWithImpl<_Links>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -801,25 +887,24 @@ class _$_Links extends _Links {
 
 abstract class _Links extends Links {
   const factory _Links(
-      {final String website,
-      final String flickr,
-      final String twitter,
-      @JsonKey(name: 'elon_twitter') final String elonTwitter}) = _$_Links;
+      {String website,
+      String flickr,
+      String twitter,
+      @JsonKey(name: 'elon_twitter') String elonTwitter}) = _$_Links;
   const _Links._() : super._();
 
   factory _Links.fromJson(Map<String, dynamic> json) = _$_Links.fromJson;
 
   @override
-  String get website => throw _privateConstructorUsedError;
+  String get website;
   @override
-  String get flickr => throw _privateConstructorUsedError;
+  String get flickr;
   @override
-  String get twitter => throw _privateConstructorUsedError;
+  String get twitter;
   @override
   @JsonKey(name: 'elon_twitter')
-  String get elonTwitter => throw _privateConstructorUsedError;
+  String get elonTwitter;
   @override
   @JsonKey(ignore: true)
-  _$$_LinksCopyWith<_$_Links> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$LinksCopyWith<_Links> get copyWith => throw _privateConstructorUsedError;
 }

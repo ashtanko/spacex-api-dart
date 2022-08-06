@@ -1,6 +1,5 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'rocket.dart';
@@ -12,11 +11,32 @@ part of 'rocket.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 RocketPayload _$RocketPayloadFromJson(Map<String, dynamic> json) {
   return _RocketPayload.fromJson(json);
 }
+
+/// @nodoc
+class _$RocketPayloadTearOff {
+  const _$RocketPayloadTearOff();
+
+  _RocketPayload call(
+      {@JsonKey(name: 'composite_fairing') CompositeFairing? compositeFairing,
+      @JsonKey(name: 'option_1') String? option1}) {
+    return _RocketPayload(
+      compositeFairing: compositeFairing,
+      option1: option1,
+    );
+  }
+
+  RocketPayload fromJson(Map<String, Object?> json) {
+    return RocketPayload.fromJson(json);
+  }
+}
+
+/// @nodoc
+const $RocketPayload = _$RocketPayloadTearOff();
 
 /// @nodoc
 mixin _$RocketPayload {
@@ -82,11 +102,11 @@ class _$RocketPayloadCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$$_RocketPayloadCopyWith<$Res>
+abstract class _$RocketPayloadCopyWith<$Res>
     implements $RocketPayloadCopyWith<$Res> {
-  factory _$$_RocketPayloadCopyWith(
-          _$_RocketPayload value, $Res Function(_$_RocketPayload) then) =
-      __$$_RocketPayloadCopyWithImpl<$Res>;
+  factory _$RocketPayloadCopyWith(
+          _RocketPayload value, $Res Function(_RocketPayload) then) =
+      __$RocketPayloadCopyWithImpl<$Res>;
   @override
   $Res call(
       {@JsonKey(name: 'composite_fairing') CompositeFairing? compositeFairing,
@@ -97,22 +117,22 @@ abstract class _$$_RocketPayloadCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_RocketPayloadCopyWithImpl<$Res>
+class __$RocketPayloadCopyWithImpl<$Res>
     extends _$RocketPayloadCopyWithImpl<$Res>
-    implements _$$_RocketPayloadCopyWith<$Res> {
-  __$$_RocketPayloadCopyWithImpl(
-      _$_RocketPayload _value, $Res Function(_$_RocketPayload) _then)
-      : super(_value, (v) => _then(v as _$_RocketPayload));
+    implements _$RocketPayloadCopyWith<$Res> {
+  __$RocketPayloadCopyWithImpl(
+      _RocketPayload _value, $Res Function(_RocketPayload) _then)
+      : super(_value, (v) => _then(v as _RocketPayload));
 
   @override
-  _$_RocketPayload get _value => super._value as _$_RocketPayload;
+  _RocketPayload get _value => super._value as _RocketPayload;
 
   @override
   $Res call({
     Object? compositeFairing = freezed,
     Object? option1 = freezed,
   }) {
-    return _then(_$_RocketPayload(
+    return _then(_RocketPayload(
       compositeFairing: compositeFairing == freezed
           ? _value.compositeFairing
           : compositeFairing // ignore: cast_nullable_to_non_nullable
@@ -152,13 +172,12 @@ class _$_RocketPayload extends _RocketPayload {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_RocketPayload &&
+            other is _RocketPayload &&
             const DeepCollectionEquality()
                 .equals(other.compositeFairing, compositeFairing) &&
             const DeepCollectionEquality().equals(other.option1, option1));
   }
 
-  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -167,8 +186,8 @@ class _$_RocketPayload extends _RocketPayload {
 
   @JsonKey(ignore: true)
   @override
-  _$$_RocketPayloadCopyWith<_$_RocketPayload> get copyWith =>
-      __$$_RocketPayloadCopyWithImpl<_$_RocketPayload>(this, _$identity);
+  _$RocketPayloadCopyWith<_RocketPayload> get copyWith =>
+      __$RocketPayloadCopyWithImpl<_RocketPayload>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -178,10 +197,8 @@ class _$_RocketPayload extends _RocketPayload {
 
 abstract class _RocketPayload extends RocketPayload {
   const factory _RocketPayload(
-      {@JsonKey(name: 'composite_fairing')
-          final CompositeFairing? compositeFairing,
-      @JsonKey(name: 'option_1')
-          final String? option1}) = _$_RocketPayload;
+      {@JsonKey(name: 'composite_fairing') CompositeFairing? compositeFairing,
+      @JsonKey(name: 'option_1') String? option1}) = _$_RocketPayload;
   const _RocketPayload._() : super._();
 
   factory _RocketPayload.fromJson(Map<String, dynamic> json) =
@@ -189,19 +206,54 @@ abstract class _RocketPayload extends RocketPayload {
 
   @override
   @JsonKey(name: 'composite_fairing')
-  CompositeFairing? get compositeFairing => throw _privateConstructorUsedError;
+  CompositeFairing? get compositeFairing;
   @override
   @JsonKey(name: 'option_1')
-  String? get option1 => throw _privateConstructorUsedError;
+  String? get option1;
   @override
   @JsonKey(ignore: true)
-  _$$_RocketPayloadCopyWith<_$_RocketPayload> get copyWith =>
+  _$RocketPayloadCopyWith<_RocketPayload> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 FirstStage _$FirstStageFromJson(Map<String, dynamic> json) {
   return _FirstStage.fromJson(json);
 }
+
+/// @nodoc
+class _$FirstStageTearOff {
+  const _$FirstStageTearOff();
+
+  _FirstStage call(
+      {@JsonKey(name: 'thrust_sea_level')
+          KnotPound thrustSeaLevel = const KnotPound(),
+      @JsonKey(name: 'thrust_vacuum')
+          KnotPound thrustVacuum = const KnotPound(),
+      @JsonKey(name: 'reusable')
+          bool reusable = false,
+      @JsonKey(name: 'engines')
+          num engines = 0,
+      @JsonKey(name: 'fuel_amount_tons')
+          num fuelAmountTons = 0.0,
+      @JsonKey(name: 'burn_time_sec')
+          int burnTimeSec = 0}) {
+    return _FirstStage(
+      thrustSeaLevel: thrustSeaLevel,
+      thrustVacuum: thrustVacuum,
+      reusable: reusable,
+      engines: engines,
+      fuelAmountTons: fuelAmountTons,
+      burnTimeSec: burnTimeSec,
+    );
+  }
+
+  FirstStage fromJson(Map<String, Object?> json) {
+    return FirstStage.fromJson(json);
+  }
+}
+
+/// @nodoc
+const $FirstStage = _$FirstStageTearOff();
 
 /// @nodoc
 mixin _$FirstStage {
@@ -302,11 +354,10 @@ class _$FirstStageCopyWithImpl<$Res> implements $FirstStageCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$$_FirstStageCopyWith<$Res>
-    implements $FirstStageCopyWith<$Res> {
-  factory _$$_FirstStageCopyWith(
-          _$_FirstStage value, $Res Function(_$_FirstStage) then) =
-      __$$_FirstStageCopyWithImpl<$Res>;
+abstract class _$FirstStageCopyWith<$Res> implements $FirstStageCopyWith<$Res> {
+  factory _$FirstStageCopyWith(
+          _FirstStage value, $Res Function(_FirstStage) then) =
+      __$FirstStageCopyWithImpl<$Res>;
   @override
   $Res call(
       {@JsonKey(name: 'thrust_sea_level') KnotPound thrustSeaLevel,
@@ -323,14 +374,14 @@ abstract class _$$_FirstStageCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_FirstStageCopyWithImpl<$Res> extends _$FirstStageCopyWithImpl<$Res>
-    implements _$$_FirstStageCopyWith<$Res> {
-  __$$_FirstStageCopyWithImpl(
-      _$_FirstStage _value, $Res Function(_$_FirstStage) _then)
-      : super(_value, (v) => _then(v as _$_FirstStage));
+class __$FirstStageCopyWithImpl<$Res> extends _$FirstStageCopyWithImpl<$Res>
+    implements _$FirstStageCopyWith<$Res> {
+  __$FirstStageCopyWithImpl(
+      _FirstStage _value, $Res Function(_FirstStage) _then)
+      : super(_value, (v) => _then(v as _FirstStage));
 
   @override
-  _$_FirstStage get _value => super._value as _$_FirstStage;
+  _FirstStage get _value => super._value as _FirstStage;
 
   @override
   $Res call({
@@ -341,7 +392,7 @@ class __$$_FirstStageCopyWithImpl<$Res> extends _$FirstStageCopyWithImpl<$Res>
     Object? fuelAmountTons = freezed,
     Object? burnTimeSec = freezed,
   }) {
-    return _then(_$_FirstStage(
+    return _then(_FirstStage(
       thrustSeaLevel: thrustSeaLevel == freezed
           ? _value.thrustSeaLevel
           : thrustSeaLevel // ignore: cast_nullable_to_non_nullable
@@ -419,7 +470,7 @@ class _$_FirstStage extends _FirstStage {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_FirstStage &&
+            other is _FirstStage &&
             const DeepCollectionEquality()
                 .equals(other.thrustSeaLevel, thrustSeaLevel) &&
             const DeepCollectionEquality()
@@ -432,7 +483,6 @@ class _$_FirstStage extends _FirstStage {
                 .equals(other.burnTimeSec, burnTimeSec));
   }
 
-  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -445,8 +495,8 @@ class _$_FirstStage extends _FirstStage {
 
   @JsonKey(ignore: true)
   @override
-  _$$_FirstStageCopyWith<_$_FirstStage> get copyWith =>
-      __$$_FirstStageCopyWithImpl<_$_FirstStage>(this, _$identity);
+  _$FirstStageCopyWith<_FirstStage> get copyWith =>
+      __$FirstStageCopyWithImpl<_FirstStage>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -456,12 +506,12 @@ class _$_FirstStage extends _FirstStage {
 
 abstract class _FirstStage extends FirstStage {
   const factory _FirstStage(
-      {@JsonKey(name: 'thrust_sea_level') final KnotPound thrustSeaLevel,
-      @JsonKey(name: 'thrust_vacuum') final KnotPound thrustVacuum,
-      @JsonKey(name: 'reusable') final bool reusable,
-      @JsonKey(name: 'engines') final num engines,
-      @JsonKey(name: 'fuel_amount_tons') final num fuelAmountTons,
-      @JsonKey(name: 'burn_time_sec') final int burnTimeSec}) = _$_FirstStage;
+      {@JsonKey(name: 'thrust_sea_level') KnotPound thrustSeaLevel,
+      @JsonKey(name: 'thrust_vacuum') KnotPound thrustVacuum,
+      @JsonKey(name: 'reusable') bool reusable,
+      @JsonKey(name: 'engines') num engines,
+      @JsonKey(name: 'fuel_amount_tons') num fuelAmountTons,
+      @JsonKey(name: 'burn_time_sec') int burnTimeSec}) = _$_FirstStage;
   const _FirstStage._() : super._();
 
   factory _FirstStage.fromJson(Map<String, dynamic> json) =
@@ -469,31 +519,60 @@ abstract class _FirstStage extends FirstStage {
 
   @override
   @JsonKey(name: 'thrust_sea_level')
-  KnotPound get thrustSeaLevel => throw _privateConstructorUsedError;
+  KnotPound get thrustSeaLevel;
   @override
   @JsonKey(name: 'thrust_vacuum')
-  KnotPound get thrustVacuum => throw _privateConstructorUsedError;
+  KnotPound get thrustVacuum;
   @override
   @JsonKey(name: 'reusable')
-  bool get reusable => throw _privateConstructorUsedError;
+  bool get reusable;
   @override
   @JsonKey(name: 'engines')
-  num get engines => throw _privateConstructorUsedError;
+  num get engines;
   @override
   @JsonKey(name: 'fuel_amount_tons')
-  num get fuelAmountTons => throw _privateConstructorUsedError;
+  num get fuelAmountTons;
   @override
   @JsonKey(name: 'burn_time_sec')
-  int get burnTimeSec => throw _privateConstructorUsedError;
+  int get burnTimeSec;
   @override
   @JsonKey(ignore: true)
-  _$$_FirstStageCopyWith<_$_FirstStage> get copyWith =>
+  _$FirstStageCopyWith<_FirstStage> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 SecondStage _$SecondStageFromJson(Map<String, dynamic> json) {
   return _SecondStage.fromJson(json);
 }
+
+/// @nodoc
+class _$SecondStageTearOff {
+  const _$SecondStageTearOff();
+
+  _SecondStage call(
+      {@JsonKey(name: 'thrust') Thrust? thrust,
+      @JsonKey(name: 'payloads') RocketPayload? payloads,
+      @JsonKey(name: 'reusable') bool reusable = false,
+      @JsonKey(name: 'engines') num engines = 0,
+      @JsonKey(name: 'fuel_amount_tons') num fuelAmountTons = 0.0,
+      @JsonKey(name: 'burn_time_sec') int burnTimeSec = 0}) {
+    return _SecondStage(
+      thrust: thrust,
+      payloads: payloads,
+      reusable: reusable,
+      engines: engines,
+      fuelAmountTons: fuelAmountTons,
+      burnTimeSec: burnTimeSec,
+    );
+  }
+
+  SecondStage fromJson(Map<String, Object?> json) {
+    return SecondStage.fromJson(json);
+  }
+}
+
+/// @nodoc
+const $SecondStage = _$SecondStageTearOff();
 
 /// @nodoc
 mixin _$SecondStage {
@@ -602,11 +681,11 @@ class _$SecondStageCopyWithImpl<$Res> implements $SecondStageCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$$_SecondStageCopyWith<$Res>
+abstract class _$SecondStageCopyWith<$Res>
     implements $SecondStageCopyWith<$Res> {
-  factory _$$_SecondStageCopyWith(
-          _$_SecondStage value, $Res Function(_$_SecondStage) then) =
-      __$$_SecondStageCopyWithImpl<$Res>;
+  factory _$SecondStageCopyWith(
+          _SecondStage value, $Res Function(_SecondStage) then) =
+      __$SecondStageCopyWithImpl<$Res>;
   @override
   $Res call(
       {@JsonKey(name: 'thrust') Thrust? thrust,
@@ -623,14 +702,14 @@ abstract class _$$_SecondStageCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_SecondStageCopyWithImpl<$Res> extends _$SecondStageCopyWithImpl<$Res>
-    implements _$$_SecondStageCopyWith<$Res> {
-  __$$_SecondStageCopyWithImpl(
-      _$_SecondStage _value, $Res Function(_$_SecondStage) _then)
-      : super(_value, (v) => _then(v as _$_SecondStage));
+class __$SecondStageCopyWithImpl<$Res> extends _$SecondStageCopyWithImpl<$Res>
+    implements _$SecondStageCopyWith<$Res> {
+  __$SecondStageCopyWithImpl(
+      _SecondStage _value, $Res Function(_SecondStage) _then)
+      : super(_value, (v) => _then(v as _SecondStage));
 
   @override
-  _$_SecondStage get _value => super._value as _$_SecondStage;
+  _SecondStage get _value => super._value as _SecondStage;
 
   @override
   $Res call({
@@ -641,7 +720,7 @@ class __$$_SecondStageCopyWithImpl<$Res> extends _$SecondStageCopyWithImpl<$Res>
     Object? fuelAmountTons = freezed,
     Object? burnTimeSec = freezed,
   }) {
-    return _then(_$_SecondStage(
+    return _then(_SecondStage(
       thrust: thrust == freezed
           ? _value.thrust
           : thrust // ignore: cast_nullable_to_non_nullable
@@ -713,7 +792,7 @@ class _$_SecondStage extends _SecondStage {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_SecondStage &&
+            other is _SecondStage &&
             const DeepCollectionEquality().equals(other.thrust, thrust) &&
             const DeepCollectionEquality().equals(other.payloads, payloads) &&
             const DeepCollectionEquality().equals(other.reusable, reusable) &&
@@ -724,7 +803,6 @@ class _$_SecondStage extends _SecondStage {
                 .equals(other.burnTimeSec, burnTimeSec));
   }
 
-  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -737,8 +815,8 @@ class _$_SecondStage extends _SecondStage {
 
   @JsonKey(ignore: true)
   @override
-  _$$_SecondStageCopyWith<_$_SecondStage> get copyWith =>
-      __$$_SecondStageCopyWithImpl<_$_SecondStage>(this, _$identity);
+  _$SecondStageCopyWith<_SecondStage> get copyWith =>
+      __$SecondStageCopyWithImpl<_SecondStage>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -748,12 +826,12 @@ class _$_SecondStage extends _SecondStage {
 
 abstract class _SecondStage extends SecondStage {
   const factory _SecondStage(
-      {@JsonKey(name: 'thrust') final Thrust? thrust,
-      @JsonKey(name: 'payloads') final RocketPayload? payloads,
-      @JsonKey(name: 'reusable') final bool reusable,
-      @JsonKey(name: 'engines') final num engines,
-      @JsonKey(name: 'fuel_amount_tons') final num fuelAmountTons,
-      @JsonKey(name: 'burn_time_sec') final int burnTimeSec}) = _$_SecondStage;
+      {@JsonKey(name: 'thrust') Thrust? thrust,
+      @JsonKey(name: 'payloads') RocketPayload? payloads,
+      @JsonKey(name: 'reusable') bool reusable,
+      @JsonKey(name: 'engines') num engines,
+      @JsonKey(name: 'fuel_amount_tons') num fuelAmountTons,
+      @JsonKey(name: 'burn_time_sec') int burnTimeSec}) = _$_SecondStage;
   const _SecondStage._() : super._();
 
   factory _SecondStage.fromJson(Map<String, dynamic> json) =
@@ -761,31 +839,108 @@ abstract class _SecondStage extends SecondStage {
 
   @override
   @JsonKey(name: 'thrust')
-  Thrust? get thrust => throw _privateConstructorUsedError;
+  Thrust? get thrust;
   @override
   @JsonKey(name: 'payloads')
-  RocketPayload? get payloads => throw _privateConstructorUsedError;
+  RocketPayload? get payloads;
   @override
   @JsonKey(name: 'reusable')
-  bool get reusable => throw _privateConstructorUsedError;
+  bool get reusable;
   @override
   @JsonKey(name: 'engines')
-  num get engines => throw _privateConstructorUsedError;
+  num get engines;
   @override
   @JsonKey(name: 'fuel_amount_tons')
-  num get fuelAmountTons => throw _privateConstructorUsedError;
+  num get fuelAmountTons;
   @override
   @JsonKey(name: 'burn_time_sec')
-  int get burnTimeSec => throw _privateConstructorUsedError;
+  int get burnTimeSec;
   @override
   @JsonKey(ignore: true)
-  _$$_SecondStageCopyWith<_$_SecondStage> get copyWith =>
+  _$SecondStageCopyWith<_SecondStage> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 Rocket _$RocketFromJson(Map<String, dynamic> json) {
   return _Rocket.fromJson(json);
 }
+
+/// @nodoc
+class _$RocketTearOff {
+  const _$RocketTearOff();
+
+  _Rocket call(
+      {@JsonKey(name: 'height')
+          Height? height,
+      @JsonKey(name: 'diameter')
+          Diameter? diameter,
+      @JsonKey(name: 'mass')
+          Mass? mass,
+      @JsonKey(name: 'first_stage')
+          FirstStage? firstStage,
+      @JsonKey(name: 'second_stage')
+          SecondStage? secondStage,
+      @JsonKey(name: 'engines')
+          Engine? engines,
+      @JsonKey(name: 'landing_legs')
+          LandingLegs? landingLegs,
+      @JsonKey(name: 'payload_weights')
+          List<PayloadWeight> payloadWeights = const [],
+      @JsonKey(name: 'flickr_images')
+          List<String> flickrImages = const [],
+      String? name,
+      @JsonKey(name: 'type')
+          String? type,
+      @JsonKey(name: 'active')
+          bool active = false,
+      @JsonKey(name: 'stages')
+          num? stages,
+      @JsonKey(name: 'boosters')
+          num? boosters,
+      @JsonKey(name: 'cost_per_launch')
+          num? costPerLaunch,
+      @JsonKey(name: 'success_rate_pct')
+          num? successRatePct,
+      @JsonKey(name: 'first_flight')
+          String? firstFlight,
+      String? country,
+      String? company,
+      String? wikipedia,
+      String? description,
+      required String id}) {
+    return _Rocket(
+      height: height,
+      diameter: diameter,
+      mass: mass,
+      firstStage: firstStage,
+      secondStage: secondStage,
+      engines: engines,
+      landingLegs: landingLegs,
+      payloadWeights: payloadWeights,
+      flickrImages: flickrImages,
+      name: name,
+      type: type,
+      active: active,
+      stages: stages,
+      boosters: boosters,
+      costPerLaunch: costPerLaunch,
+      successRatePct: successRatePct,
+      firstFlight: firstFlight,
+      country: country,
+      company: company,
+      wikipedia: wikipedia,
+      description: description,
+      id: id,
+    );
+  }
+
+  Rocket fromJson(Map<String, Object?> json) {
+    return Rocket.fromJson(json);
+  }
+}
+
+/// @nodoc
+const $Rocket = _$RocketTearOff();
 
 /// @nodoc
 mixin _$Rocket {
@@ -1074,9 +1229,9 @@ class _$RocketCopyWithImpl<$Res> implements $RocketCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$$_RocketCopyWith<$Res> implements $RocketCopyWith<$Res> {
-  factory _$$_RocketCopyWith(_$_Rocket value, $Res Function(_$_Rocket) then) =
-      __$$_RocketCopyWithImpl<$Res>;
+abstract class _$RocketCopyWith<$Res> implements $RocketCopyWith<$Res> {
+  factory _$RocketCopyWith(_Rocket value, $Res Function(_Rocket) then) =
+      __$RocketCopyWithImpl<$Res>;
   @override
   $Res call(
       {@JsonKey(name: 'height') Height? height,
@@ -1119,13 +1274,13 @@ abstract class _$$_RocketCopyWith<$Res> implements $RocketCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_RocketCopyWithImpl<$Res> extends _$RocketCopyWithImpl<$Res>
-    implements _$$_RocketCopyWith<$Res> {
-  __$$_RocketCopyWithImpl(_$_Rocket _value, $Res Function(_$_Rocket) _then)
-      : super(_value, (v) => _then(v as _$_Rocket));
+class __$RocketCopyWithImpl<$Res> extends _$RocketCopyWithImpl<$Res>
+    implements _$RocketCopyWith<$Res> {
+  __$RocketCopyWithImpl(_Rocket _value, $Res Function(_Rocket) _then)
+      : super(_value, (v) => _then(v as _Rocket));
 
   @override
-  _$_Rocket get _value => super._value as _$_Rocket;
+  _Rocket get _value => super._value as _Rocket;
 
   @override
   $Res call({
@@ -1152,7 +1307,7 @@ class __$$_RocketCopyWithImpl<$Res> extends _$RocketCopyWithImpl<$Res>
     Object? description = freezed,
     Object? id = freezed,
   }) {
-    return _then(_$_Rocket(
+    return _then(_Rocket(
       height: height == freezed
           ? _value.height
           : height // ignore: cast_nullable_to_non_nullable
@@ -1182,11 +1337,11 @@ class __$$_RocketCopyWithImpl<$Res> extends _$RocketCopyWithImpl<$Res>
           : landingLegs // ignore: cast_nullable_to_non_nullable
               as LandingLegs?,
       payloadWeights: payloadWeights == freezed
-          ? _value._payloadWeights
+          ? _value.payloadWeights
           : payloadWeights // ignore: cast_nullable_to_non_nullable
               as List<PayloadWeight>,
       flickrImages: flickrImages == freezed
-          ? _value._flickrImages
+          ? _value.flickrImages
           : flickrImages // ignore: cast_nullable_to_non_nullable
               as List<String>,
       name: name == freezed
@@ -1249,47 +1404,29 @@ class __$$_RocketCopyWithImpl<$Res> extends _$RocketCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_Rocket extends _Rocket {
   const _$_Rocket(
-      {@JsonKey(name: 'height')
-          this.height,
-      @JsonKey(name: 'diameter')
-          this.diameter,
-      @JsonKey(name: 'mass')
-          this.mass,
-      @JsonKey(name: 'first_stage')
-          this.firstStage,
-      @JsonKey(name: 'second_stage')
-          this.secondStage,
-      @JsonKey(name: 'engines')
-          this.engines,
-      @JsonKey(name: 'landing_legs')
-          this.landingLegs,
-      @JsonKey(name: 'payload_weights')
-          final List<PayloadWeight> payloadWeights = const [],
-      @JsonKey(name: 'flickr_images')
-          final List<String> flickrImages = const [],
+      {@JsonKey(name: 'height') this.height,
+      @JsonKey(name: 'diameter') this.diameter,
+      @JsonKey(name: 'mass') this.mass,
+      @JsonKey(name: 'first_stage') this.firstStage,
+      @JsonKey(name: 'second_stage') this.secondStage,
+      @JsonKey(name: 'engines') this.engines,
+      @JsonKey(name: 'landing_legs') this.landingLegs,
+      @JsonKey(name: 'payload_weights') this.payloadWeights = const [],
+      @JsonKey(name: 'flickr_images') this.flickrImages = const [],
       this.name,
-      @JsonKey(name: 'type')
-          this.type,
-      @JsonKey(name: 'active')
-          this.active = false,
-      @JsonKey(name: 'stages')
-          this.stages,
-      @JsonKey(name: 'boosters')
-          this.boosters,
-      @JsonKey(name: 'cost_per_launch')
-          this.costPerLaunch,
-      @JsonKey(name: 'success_rate_pct')
-          this.successRatePct,
-      @JsonKey(name: 'first_flight')
-          this.firstFlight,
+      @JsonKey(name: 'type') this.type,
+      @JsonKey(name: 'active') this.active = false,
+      @JsonKey(name: 'stages') this.stages,
+      @JsonKey(name: 'boosters') this.boosters,
+      @JsonKey(name: 'cost_per_launch') this.costPerLaunch,
+      @JsonKey(name: 'success_rate_pct') this.successRatePct,
+      @JsonKey(name: 'first_flight') this.firstFlight,
       this.country,
       this.company,
       this.wikipedia,
       this.description,
       required this.id})
-      : _payloadWeights = payloadWeights,
-        _flickrImages = flickrImages,
-        super._();
+      : super._();
 
   factory _$_Rocket.fromJson(Map<String, dynamic> json) =>
       _$$_RocketFromJson(json);
@@ -1315,22 +1452,12 @@ class _$_Rocket extends _Rocket {
   @override
   @JsonKey(name: 'landing_legs')
   final LandingLegs? landingLegs;
-  final List<PayloadWeight> _payloadWeights;
   @override
   @JsonKey(name: 'payload_weights')
-  List<PayloadWeight> get payloadWeights {
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_payloadWeights);
-  }
-
-  final List<String> _flickrImages;
+  final List<PayloadWeight> payloadWeights;
   @override
   @JsonKey(name: 'flickr_images')
-  List<String> get flickrImages {
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_flickrImages);
-  }
-
+  final List<String> flickrImages;
   @override
   final String? name;
   @override
@@ -1374,7 +1501,7 @@ class _$_Rocket extends _Rocket {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_Rocket &&
+            other is _Rocket &&
             const DeepCollectionEquality().equals(other.height, height) &&
             const DeepCollectionEquality().equals(other.diameter, diameter) &&
             const DeepCollectionEquality().equals(other.mass, mass) &&
@@ -1386,9 +1513,9 @@ class _$_Rocket extends _Rocket {
             const DeepCollectionEquality()
                 .equals(other.landingLegs, landingLegs) &&
             const DeepCollectionEquality()
-                .equals(other._payloadWeights, _payloadWeights) &&
+                .equals(other.payloadWeights, payloadWeights) &&
             const DeepCollectionEquality()
-                .equals(other._flickrImages, _flickrImages) &&
+                .equals(other.flickrImages, flickrImages) &&
             const DeepCollectionEquality().equals(other.name, name) &&
             const DeepCollectionEquality().equals(other.type, type) &&
             const DeepCollectionEquality().equals(other.active, active) &&
@@ -1408,7 +1535,6 @@ class _$_Rocket extends _Rocket {
             const DeepCollectionEquality().equals(other.id, id));
   }
 
-  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
@@ -1419,8 +1545,8 @@ class _$_Rocket extends _Rocket {
         const DeepCollectionEquality().hash(secondStage),
         const DeepCollectionEquality().hash(engines),
         const DeepCollectionEquality().hash(landingLegs),
-        const DeepCollectionEquality().hash(_payloadWeights),
-        const DeepCollectionEquality().hash(_flickrImages),
+        const DeepCollectionEquality().hash(payloadWeights),
+        const DeepCollectionEquality().hash(flickrImages),
         const DeepCollectionEquality().hash(name),
         const DeepCollectionEquality().hash(type),
         const DeepCollectionEquality().hash(active),
@@ -1438,8 +1564,8 @@ class _$_Rocket extends _Rocket {
 
   @JsonKey(ignore: true)
   @override
-  _$$_RocketCopyWith<_$_Rocket> get copyWith =>
-      __$$_RocketCopyWithImpl<_$_Rocket>(this, _$identity);
+  _$RocketCopyWith<_Rocket> get copyWith =>
+      __$RocketCopyWithImpl<_Rocket>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -1449,110 +1575,93 @@ class _$_Rocket extends _Rocket {
 
 abstract class _Rocket extends Rocket {
   const factory _Rocket(
-      {@JsonKey(name: 'height')
-          final Height? height,
-      @JsonKey(name: 'diameter')
-          final Diameter? diameter,
-      @JsonKey(name: 'mass')
-          final Mass? mass,
-      @JsonKey(name: 'first_stage')
-          final FirstStage? firstStage,
-      @JsonKey(name: 'second_stage')
-          final SecondStage? secondStage,
-      @JsonKey(name: 'engines')
-          final Engine? engines,
-      @JsonKey(name: 'landing_legs')
-          final LandingLegs? landingLegs,
-      @JsonKey(name: 'payload_weights')
-          final List<PayloadWeight> payloadWeights,
-      @JsonKey(name: 'flickr_images')
-          final List<String> flickrImages,
-      final String? name,
-      @JsonKey(name: 'type')
-          final String? type,
-      @JsonKey(name: 'active')
-          final bool active,
-      @JsonKey(name: 'stages')
-          final num? stages,
-      @JsonKey(name: 'boosters')
-          final num? boosters,
-      @JsonKey(name: 'cost_per_launch')
-          final num? costPerLaunch,
-      @JsonKey(name: 'success_rate_pct')
-          final num? successRatePct,
-      @JsonKey(name: 'first_flight')
-          final String? firstFlight,
-      final String? country,
-      final String? company,
-      final String? wikipedia,
-      final String? description,
-      required final String id}) = _$_Rocket;
+      {@JsonKey(name: 'height') Height? height,
+      @JsonKey(name: 'diameter') Diameter? diameter,
+      @JsonKey(name: 'mass') Mass? mass,
+      @JsonKey(name: 'first_stage') FirstStage? firstStage,
+      @JsonKey(name: 'second_stage') SecondStage? secondStage,
+      @JsonKey(name: 'engines') Engine? engines,
+      @JsonKey(name: 'landing_legs') LandingLegs? landingLegs,
+      @JsonKey(name: 'payload_weights') List<PayloadWeight> payloadWeights,
+      @JsonKey(name: 'flickr_images') List<String> flickrImages,
+      String? name,
+      @JsonKey(name: 'type') String? type,
+      @JsonKey(name: 'active') bool active,
+      @JsonKey(name: 'stages') num? stages,
+      @JsonKey(name: 'boosters') num? boosters,
+      @JsonKey(name: 'cost_per_launch') num? costPerLaunch,
+      @JsonKey(name: 'success_rate_pct') num? successRatePct,
+      @JsonKey(name: 'first_flight') String? firstFlight,
+      String? country,
+      String? company,
+      String? wikipedia,
+      String? description,
+      required String id}) = _$_Rocket;
   const _Rocket._() : super._();
 
   factory _Rocket.fromJson(Map<String, dynamic> json) = _$_Rocket.fromJson;
 
   @override
   @JsonKey(name: 'height')
-  Height? get height => throw _privateConstructorUsedError;
+  Height? get height;
   @override
   @JsonKey(name: 'diameter')
-  Diameter? get diameter => throw _privateConstructorUsedError;
+  Diameter? get diameter;
   @override
   @JsonKey(name: 'mass')
-  Mass? get mass => throw _privateConstructorUsedError;
+  Mass? get mass;
   @override
   @JsonKey(name: 'first_stage')
-  FirstStage? get firstStage => throw _privateConstructorUsedError;
+  FirstStage? get firstStage;
   @override
   @JsonKey(name: 'second_stage')
-  SecondStage? get secondStage => throw _privateConstructorUsedError;
+  SecondStage? get secondStage;
   @override
   @JsonKey(name: 'engines')
-  Engine? get engines => throw _privateConstructorUsedError;
+  Engine? get engines;
   @override
   @JsonKey(name: 'landing_legs')
-  LandingLegs? get landingLegs => throw _privateConstructorUsedError;
+  LandingLegs? get landingLegs;
   @override
   @JsonKey(name: 'payload_weights')
-  List<PayloadWeight> get payloadWeights => throw _privateConstructorUsedError;
+  List<PayloadWeight> get payloadWeights;
   @override
   @JsonKey(name: 'flickr_images')
-  List<String> get flickrImages => throw _privateConstructorUsedError;
+  List<String> get flickrImages;
   @override
-  String? get name => throw _privateConstructorUsedError;
+  String? get name;
   @override
   @JsonKey(name: 'type')
-  String? get type => throw _privateConstructorUsedError;
+  String? get type;
   @override
   @JsonKey(name: 'active')
-  bool get active => throw _privateConstructorUsedError;
+  bool get active;
   @override
   @JsonKey(name: 'stages')
-  num? get stages => throw _privateConstructorUsedError;
+  num? get stages;
   @override
   @JsonKey(name: 'boosters')
-  num? get boosters => throw _privateConstructorUsedError;
+  num? get boosters;
   @override
   @JsonKey(name: 'cost_per_launch')
-  num? get costPerLaunch => throw _privateConstructorUsedError;
+  num? get costPerLaunch;
   @override
   @JsonKey(name: 'success_rate_pct')
-  num? get successRatePct => throw _privateConstructorUsedError;
+  num? get successRatePct;
   @override
   @JsonKey(name: 'first_flight')
-  String? get firstFlight => throw _privateConstructorUsedError;
+  String? get firstFlight;
   @override
-  String? get country => throw _privateConstructorUsedError;
+  String? get country;
   @override
-  String? get company => throw _privateConstructorUsedError;
+  String? get company;
   @override
-  String? get wikipedia => throw _privateConstructorUsedError;
+  String? get wikipedia;
   @override
-  String? get description => throw _privateConstructorUsedError;
+  String? get description;
   @override
-  String get id => throw _privateConstructorUsedError;
+  String get id;
   @override
   @JsonKey(ignore: true)
-  _$$_RocketCopyWith<_$_Rocket> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$RocketCopyWith<_Rocket> get copyWith => throw _privateConstructorUsedError;
 }

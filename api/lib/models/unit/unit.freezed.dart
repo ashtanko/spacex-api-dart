@@ -1,6 +1,5 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'unit.dart';
@@ -12,11 +11,32 @@ part of 'unit.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 CompositeFairing _$CompositeFairingFromJson(Map<String, dynamic> json) {
   return _CompositeFairing.fromJson(json);
 }
+
+/// @nodoc
+class _$CompositeFairingTearOff {
+  const _$CompositeFairingTearOff();
+
+  _CompositeFairing call(
+      {@JsonKey(name: 'height') Height? height,
+      @JsonKey(name: 'diameter') Diameter? diameter}) {
+    return _CompositeFairing(
+      height: height,
+      diameter: diameter,
+    );
+  }
+
+  CompositeFairing fromJson(Map<String, Object?> json) {
+    return CompositeFairing.fromJson(json);
+  }
+}
+
+/// @nodoc
+const $CompositeFairing = _$CompositeFairingTearOff();
 
 /// @nodoc
 mixin _$CompositeFairing {
@@ -94,11 +114,11 @@ class _$CompositeFairingCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$$_CompositeFairingCopyWith<$Res>
+abstract class _$CompositeFairingCopyWith<$Res>
     implements $CompositeFairingCopyWith<$Res> {
-  factory _$$_CompositeFairingCopyWith(
-          _$_CompositeFairing value, $Res Function(_$_CompositeFairing) then) =
-      __$$_CompositeFairingCopyWithImpl<$Res>;
+  factory _$CompositeFairingCopyWith(
+          _CompositeFairing value, $Res Function(_CompositeFairing) then) =
+      __$CompositeFairingCopyWithImpl<$Res>;
   @override
   $Res call(
       {@JsonKey(name: 'height') Height? height,
@@ -111,22 +131,22 @@ abstract class _$$_CompositeFairingCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_CompositeFairingCopyWithImpl<$Res>
+class __$CompositeFairingCopyWithImpl<$Res>
     extends _$CompositeFairingCopyWithImpl<$Res>
-    implements _$$_CompositeFairingCopyWith<$Res> {
-  __$$_CompositeFairingCopyWithImpl(
-      _$_CompositeFairing _value, $Res Function(_$_CompositeFairing) _then)
-      : super(_value, (v) => _then(v as _$_CompositeFairing));
+    implements _$CompositeFairingCopyWith<$Res> {
+  __$CompositeFairingCopyWithImpl(
+      _CompositeFairing _value, $Res Function(_CompositeFairing) _then)
+      : super(_value, (v) => _then(v as _CompositeFairing));
 
   @override
-  _$_CompositeFairing get _value => super._value as _$_CompositeFairing;
+  _CompositeFairing get _value => super._value as _CompositeFairing;
 
   @override
   $Res call({
     Object? height = freezed,
     Object? diameter = freezed,
   }) {
-    return _then(_$_CompositeFairing(
+    return _then(_CompositeFairing(
       height: height == freezed
           ? _value.height
           : height // ignore: cast_nullable_to_non_nullable
@@ -166,12 +186,11 @@ class _$_CompositeFairing extends _CompositeFairing {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_CompositeFairing &&
+            other is _CompositeFairing &&
             const DeepCollectionEquality().equals(other.height, height) &&
             const DeepCollectionEquality().equals(other.diameter, diameter));
   }
 
-  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -180,8 +199,8 @@ class _$_CompositeFairing extends _CompositeFairing {
 
   @JsonKey(ignore: true)
   @override
-  _$$_CompositeFairingCopyWith<_$_CompositeFairing> get copyWith =>
-      __$$_CompositeFairingCopyWithImpl<_$_CompositeFairing>(this, _$identity);
+  _$CompositeFairingCopyWith<_CompositeFairing> get copyWith =>
+      __$CompositeFairingCopyWithImpl<_CompositeFairing>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -191,9 +210,8 @@ class _$_CompositeFairing extends _CompositeFairing {
 
 abstract class _CompositeFairing extends CompositeFairing {
   const factory _CompositeFairing(
-          {@JsonKey(name: 'height') final Height? height,
-          @JsonKey(name: 'diameter') final Diameter? diameter}) =
-      _$_CompositeFairing;
+      {@JsonKey(name: 'height') Height? height,
+      @JsonKey(name: 'diameter') Diameter? diameter}) = _$_CompositeFairing;
   const _CompositeFairing._() : super._();
 
   factory _CompositeFairing.fromJson(Map<String, dynamic> json) =
@@ -201,19 +219,39 @@ abstract class _CompositeFairing extends CompositeFairing {
 
   @override
   @JsonKey(name: 'height')
-  Height? get height => throw _privateConstructorUsedError;
+  Height? get height;
   @override
   @JsonKey(name: 'diameter')
-  Diameter? get diameter => throw _privateConstructorUsedError;
+  Diameter? get diameter;
   @override
   @JsonKey(ignore: true)
-  _$$_CompositeFairingCopyWith<_$_CompositeFairing> get copyWith =>
+  _$CompositeFairingCopyWith<_CompositeFairing> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 Thrust _$ThrustFromJson(Map<String, dynamic> json) {
   return _Thrust.fromJson(json);
 }
+
+/// @nodoc
+class _$ThrustTearOff {
+  const _$ThrustTearOff();
+
+  _Thrust call(
+      {@JsonKey(name: 'kN') num kN = 0, @JsonKey(name: 'lbf') num lbf = 0}) {
+    return _Thrust(
+      kN: kN,
+      lbf: lbf,
+    );
+  }
+
+  Thrust fromJson(Map<String, Object?> json) {
+    return Thrust.fromJson(json);
+  }
+}
+
+/// @nodoc
+const $Thrust = _$ThrustTearOff();
 
 /// @nodoc
 mixin _$Thrust {
@@ -261,28 +299,28 @@ class _$ThrustCopyWithImpl<$Res> implements $ThrustCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$$_ThrustCopyWith<$Res> implements $ThrustCopyWith<$Res> {
-  factory _$$_ThrustCopyWith(_$_Thrust value, $Res Function(_$_Thrust) then) =
-      __$$_ThrustCopyWithImpl<$Res>;
+abstract class _$ThrustCopyWith<$Res> implements $ThrustCopyWith<$Res> {
+  factory _$ThrustCopyWith(_Thrust value, $Res Function(_Thrust) then) =
+      __$ThrustCopyWithImpl<$Res>;
   @override
   $Res call({@JsonKey(name: 'kN') num kN, @JsonKey(name: 'lbf') num lbf});
 }
 
 /// @nodoc
-class __$$_ThrustCopyWithImpl<$Res> extends _$ThrustCopyWithImpl<$Res>
-    implements _$$_ThrustCopyWith<$Res> {
-  __$$_ThrustCopyWithImpl(_$_Thrust _value, $Res Function(_$_Thrust) _then)
-      : super(_value, (v) => _then(v as _$_Thrust));
+class __$ThrustCopyWithImpl<$Res> extends _$ThrustCopyWithImpl<$Res>
+    implements _$ThrustCopyWith<$Res> {
+  __$ThrustCopyWithImpl(_Thrust _value, $Res Function(_Thrust) _then)
+      : super(_value, (v) => _then(v as _Thrust));
 
   @override
-  _$_Thrust get _value => super._value as _$_Thrust;
+  _Thrust get _value => super._value as _Thrust;
 
   @override
   $Res call({
     Object? kN = freezed,
     Object? lbf = freezed,
   }) {
-    return _then(_$_Thrust(
+    return _then(_Thrust(
       kN: kN == freezed
           ? _value.kN
           : kN // ignore: cast_nullable_to_non_nullable
@@ -321,12 +359,11 @@ class _$_Thrust extends _Thrust {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_Thrust &&
+            other is _Thrust &&
             const DeepCollectionEquality().equals(other.kN, kN) &&
             const DeepCollectionEquality().equals(other.lbf, lbf));
   }
 
-  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -335,8 +372,8 @@ class _$_Thrust extends _Thrust {
 
   @JsonKey(ignore: true)
   @override
-  _$$_ThrustCopyWith<_$_Thrust> get copyWith =>
-      __$$_ThrustCopyWithImpl<_$_Thrust>(this, _$identity);
+  _$ThrustCopyWith<_Thrust> get copyWith =>
+      __$ThrustCopyWithImpl<_Thrust>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -346,27 +383,46 @@ class _$_Thrust extends _Thrust {
 
 abstract class _Thrust extends Thrust {
   const factory _Thrust(
-      {@JsonKey(name: 'kN') final num kN,
-      @JsonKey(name: 'lbf') final num lbf}) = _$_Thrust;
+      {@JsonKey(name: 'kN') num kN, @JsonKey(name: 'lbf') num lbf}) = _$_Thrust;
   const _Thrust._() : super._();
 
   factory _Thrust.fromJson(Map<String, dynamic> json) = _$_Thrust.fromJson;
 
   @override
   @JsonKey(name: 'kN')
-  num get kN => throw _privateConstructorUsedError;
+  num get kN;
   @override
   @JsonKey(name: 'lbf')
-  num get lbf => throw _privateConstructorUsedError;
+  num get lbf;
   @override
   @JsonKey(ignore: true)
-  _$$_ThrustCopyWith<_$_Thrust> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$ThrustCopyWith<_Thrust> get copyWith => throw _privateConstructorUsedError;
 }
 
 Height _$HeightFromJson(Map<String, dynamic> json) {
   return _Height.fromJson(json);
 }
+
+/// @nodoc
+class _$HeightTearOff {
+  const _$HeightTearOff();
+
+  _Height call(
+      {@JsonKey(name: 'meters') num meters = 0,
+      @JsonKey(name: 'feet') num feet = 0}) {
+    return _Height(
+      meters: meters,
+      feet: feet,
+    );
+  }
+
+  Height fromJson(Map<String, Object?> json) {
+    return Height.fromJson(json);
+  }
+}
+
+/// @nodoc
+const $Height = _$HeightTearOff();
 
 /// @nodoc
 mixin _$Height {
@@ -415,29 +471,29 @@ class _$HeightCopyWithImpl<$Res> implements $HeightCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$$_HeightCopyWith<$Res> implements $HeightCopyWith<$Res> {
-  factory _$$_HeightCopyWith(_$_Height value, $Res Function(_$_Height) then) =
-      __$$_HeightCopyWithImpl<$Res>;
+abstract class _$HeightCopyWith<$Res> implements $HeightCopyWith<$Res> {
+  factory _$HeightCopyWith(_Height value, $Res Function(_Height) then) =
+      __$HeightCopyWithImpl<$Res>;
   @override
   $Res call(
       {@JsonKey(name: 'meters') num meters, @JsonKey(name: 'feet') num feet});
 }
 
 /// @nodoc
-class __$$_HeightCopyWithImpl<$Res> extends _$HeightCopyWithImpl<$Res>
-    implements _$$_HeightCopyWith<$Res> {
-  __$$_HeightCopyWithImpl(_$_Height _value, $Res Function(_$_Height) _then)
-      : super(_value, (v) => _then(v as _$_Height));
+class __$HeightCopyWithImpl<$Res> extends _$HeightCopyWithImpl<$Res>
+    implements _$HeightCopyWith<$Res> {
+  __$HeightCopyWithImpl(_Height _value, $Res Function(_Height) _then)
+      : super(_value, (v) => _then(v as _Height));
 
   @override
-  _$_Height get _value => super._value as _$_Height;
+  _Height get _value => super._value as _Height;
 
   @override
   $Res call({
     Object? meters = freezed,
     Object? feet = freezed,
   }) {
-    return _then(_$_Height(
+    return _then(_Height(
       meters: meters == freezed
           ? _value.meters
           : meters // ignore: cast_nullable_to_non_nullable
@@ -477,12 +533,11 @@ class _$_Height extends _Height {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_Height &&
+            other is _Height &&
             const DeepCollectionEquality().equals(other.meters, meters) &&
             const DeepCollectionEquality().equals(other.feet, feet));
   }
 
-  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -491,8 +546,8 @@ class _$_Height extends _Height {
 
   @JsonKey(ignore: true)
   @override
-  _$$_HeightCopyWith<_$_Height> get copyWith =>
-      __$$_HeightCopyWithImpl<_$_Height>(this, _$identity);
+  _$HeightCopyWith<_Height> get copyWith =>
+      __$HeightCopyWithImpl<_Height>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -502,27 +557,46 @@ class _$_Height extends _Height {
 
 abstract class _Height extends Height {
   const factory _Height(
-      {@JsonKey(name: 'meters') final num meters,
-      @JsonKey(name: 'feet') final num feet}) = _$_Height;
+      {@JsonKey(name: 'meters') num meters,
+      @JsonKey(name: 'feet') num feet}) = _$_Height;
   const _Height._() : super._();
 
   factory _Height.fromJson(Map<String, dynamic> json) = _$_Height.fromJson;
 
   @override
   @JsonKey(name: 'meters')
-  num get meters => throw _privateConstructorUsedError;
+  num get meters;
   @override
   @JsonKey(name: 'feet')
-  num get feet => throw _privateConstructorUsedError;
+  num get feet;
   @override
   @JsonKey(ignore: true)
-  _$$_HeightCopyWith<_$_Height> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$HeightCopyWith<_Height> get copyWith => throw _privateConstructorUsedError;
 }
 
 Mass _$MassFromJson(Map<String, dynamic> json) {
   return _Mass.fromJson(json);
 }
+
+/// @nodoc
+class _$MassTearOff {
+  const _$MassTearOff();
+
+  _Mass call(
+      {@JsonKey(name: 'kg') num kg = 0, @JsonKey(name: 'lb') num lb = 0}) {
+    return _Mass(
+      kg: kg,
+      lb: lb,
+    );
+  }
+
+  Mass fromJson(Map<String, Object?> json) {
+    return Mass.fromJson(json);
+  }
+}
+
+/// @nodoc
+const $Mass = _$MassTearOff();
 
 /// @nodoc
 mixin _$Mass {
@@ -570,28 +644,28 @@ class _$MassCopyWithImpl<$Res> implements $MassCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$$_MassCopyWith<$Res> implements $MassCopyWith<$Res> {
-  factory _$$_MassCopyWith(_$_Mass value, $Res Function(_$_Mass) then) =
-      __$$_MassCopyWithImpl<$Res>;
+abstract class _$MassCopyWith<$Res> implements $MassCopyWith<$Res> {
+  factory _$MassCopyWith(_Mass value, $Res Function(_Mass) then) =
+      __$MassCopyWithImpl<$Res>;
   @override
   $Res call({@JsonKey(name: 'kg') num kg, @JsonKey(name: 'lb') num lb});
 }
 
 /// @nodoc
-class __$$_MassCopyWithImpl<$Res> extends _$MassCopyWithImpl<$Res>
-    implements _$$_MassCopyWith<$Res> {
-  __$$_MassCopyWithImpl(_$_Mass _value, $Res Function(_$_Mass) _then)
-      : super(_value, (v) => _then(v as _$_Mass));
+class __$MassCopyWithImpl<$Res> extends _$MassCopyWithImpl<$Res>
+    implements _$MassCopyWith<$Res> {
+  __$MassCopyWithImpl(_Mass _value, $Res Function(_Mass) _then)
+      : super(_value, (v) => _then(v as _Mass));
 
   @override
-  _$_Mass get _value => super._value as _$_Mass;
+  _Mass get _value => super._value as _Mass;
 
   @override
   $Res call({
     Object? kg = freezed,
     Object? lb = freezed,
   }) {
-    return _then(_$_Mass(
+    return _then(_Mass(
       kg: kg == freezed
           ? _value.kg
           : kg // ignore: cast_nullable_to_non_nullable
@@ -629,12 +703,11 @@ class _$_Mass extends _Mass {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_Mass &&
+            other is _Mass &&
             const DeepCollectionEquality().equals(other.kg, kg) &&
             const DeepCollectionEquality().equals(other.lb, lb));
   }
 
-  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -643,8 +716,8 @@ class _$_Mass extends _Mass {
 
   @JsonKey(ignore: true)
   @override
-  _$$_MassCopyWith<_$_Mass> get copyWith =>
-      __$$_MassCopyWithImpl<_$_Mass>(this, _$identity);
+  _$MassCopyWith<_Mass> get copyWith =>
+      __$MassCopyWithImpl<_Mass>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -654,26 +727,46 @@ class _$_Mass extends _Mass {
 
 abstract class _Mass extends Mass {
   const factory _Mass(
-      {@JsonKey(name: 'kg') final num kg,
-      @JsonKey(name: 'lb') final num lb}) = _$_Mass;
+      {@JsonKey(name: 'kg') num kg, @JsonKey(name: 'lb') num lb}) = _$_Mass;
   const _Mass._() : super._();
 
   factory _Mass.fromJson(Map<String, dynamic> json) = _$_Mass.fromJson;
 
   @override
   @JsonKey(name: 'kg')
-  num get kg => throw _privateConstructorUsedError;
+  num get kg;
   @override
   @JsonKey(name: 'lb')
-  num get lb => throw _privateConstructorUsedError;
+  num get lb;
   @override
   @JsonKey(ignore: true)
-  _$$_MassCopyWith<_$_Mass> get copyWith => throw _privateConstructorUsedError;
+  _$MassCopyWith<_Mass> get copyWith => throw _privateConstructorUsedError;
 }
 
 CubicLen _$CubicLenFromJson(Map<String, dynamic> json) {
   return _CubicLen.fromJson(json);
 }
+
+/// @nodoc
+class _$CubicLenTearOff {
+  const _$CubicLenTearOff();
+
+  _CubicLen call(
+      {@JsonKey(name: 'cubic_meters') num meters = 0,
+      @JsonKey(name: 'cubic_feet') num feet = 0}) {
+    return _CubicLen(
+      meters: meters,
+      feet: feet,
+    );
+  }
+
+  CubicLen fromJson(Map<String, Object?> json) {
+    return CubicLen.fromJson(json);
+  }
+}
+
+/// @nodoc
+const $CubicLen = _$CubicLenTearOff();
 
 /// @nodoc
 mixin _$CubicLen {
@@ -724,10 +817,9 @@ class _$CubicLenCopyWithImpl<$Res> implements $CubicLenCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$$_CubicLenCopyWith<$Res> implements $CubicLenCopyWith<$Res> {
-  factory _$$_CubicLenCopyWith(
-          _$_CubicLen value, $Res Function(_$_CubicLen) then) =
-      __$$_CubicLenCopyWithImpl<$Res>;
+abstract class _$CubicLenCopyWith<$Res> implements $CubicLenCopyWith<$Res> {
+  factory _$CubicLenCopyWith(_CubicLen value, $Res Function(_CubicLen) then) =
+      __$CubicLenCopyWithImpl<$Res>;
   @override
   $Res call(
       {@JsonKey(name: 'cubic_meters') num meters,
@@ -735,21 +827,20 @@ abstract class _$$_CubicLenCopyWith<$Res> implements $CubicLenCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_CubicLenCopyWithImpl<$Res> extends _$CubicLenCopyWithImpl<$Res>
-    implements _$$_CubicLenCopyWith<$Res> {
-  __$$_CubicLenCopyWithImpl(
-      _$_CubicLen _value, $Res Function(_$_CubicLen) _then)
-      : super(_value, (v) => _then(v as _$_CubicLen));
+class __$CubicLenCopyWithImpl<$Res> extends _$CubicLenCopyWithImpl<$Res>
+    implements _$CubicLenCopyWith<$Res> {
+  __$CubicLenCopyWithImpl(_CubicLen _value, $Res Function(_CubicLen) _then)
+      : super(_value, (v) => _then(v as _CubicLen));
 
   @override
-  _$_CubicLen get _value => super._value as _$_CubicLen;
+  _CubicLen get _value => super._value as _CubicLen;
 
   @override
   $Res call({
     Object? meters = freezed,
     Object? feet = freezed,
   }) {
-    return _then(_$_CubicLen(
+    return _then(_CubicLen(
       meters: meters == freezed
           ? _value.meters
           : meters // ignore: cast_nullable_to_non_nullable
@@ -789,12 +880,11 @@ class _$_CubicLen extends _CubicLen {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_CubicLen &&
+            other is _CubicLen &&
             const DeepCollectionEquality().equals(other.meters, meters) &&
             const DeepCollectionEquality().equals(other.feet, feet));
   }
 
-  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -803,8 +893,8 @@ class _$_CubicLen extends _CubicLen {
 
   @JsonKey(ignore: true)
   @override
-  _$$_CubicLenCopyWith<_$_CubicLen> get copyWith =>
-      __$$_CubicLenCopyWithImpl<_$_CubicLen>(this, _$identity);
+  _$CubicLenCopyWith<_CubicLen> get copyWith =>
+      __$CubicLenCopyWithImpl<_CubicLen>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -814,27 +904,46 @@ class _$_CubicLen extends _CubicLen {
 
 abstract class _CubicLen extends CubicLen {
   const factory _CubicLen(
-      {@JsonKey(name: 'cubic_meters') final num meters,
-      @JsonKey(name: 'cubic_feet') final num feet}) = _$_CubicLen;
+      {@JsonKey(name: 'cubic_meters') num meters,
+      @JsonKey(name: 'cubic_feet') num feet}) = _$_CubicLen;
   const _CubicLen._() : super._();
 
   factory _CubicLen.fromJson(Map<String, dynamic> json) = _$_CubicLen.fromJson;
 
   @override
   @JsonKey(name: 'cubic_meters')
-  num get meters => throw _privateConstructorUsedError;
+  num get meters;
   @override
   @JsonKey(name: 'cubic_feet')
-  num get feet => throw _privateConstructorUsedError;
+  num get feet;
   @override
   @JsonKey(ignore: true)
-  _$$_CubicLenCopyWith<_$_CubicLen> get copyWith =>
+  _$CubicLenCopyWith<_CubicLen> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 Diameter _$DiameterFromJson(Map<String, dynamic> json) {
   return _Diameter.fromJson(json);
 }
+
+/// @nodoc
+class _$DiameterTearOff {
+  const _$DiameterTearOff();
+
+  _Diameter call({num meters = 0.0, num feet = 0}) {
+    return _Diameter(
+      meters: meters,
+      feet: feet,
+    );
+  }
+
+  Diameter fromJson(Map<String, Object?> json) {
+    return Diameter.fromJson(json);
+  }
+}
+
+/// @nodoc
+const $Diameter = _$DiameterTearOff();
 
 /// @nodoc
 mixin _$Diameter {
@@ -881,30 +990,28 @@ class _$DiameterCopyWithImpl<$Res> implements $DiameterCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$$_DiameterCopyWith<$Res> implements $DiameterCopyWith<$Res> {
-  factory _$$_DiameterCopyWith(
-          _$_Diameter value, $Res Function(_$_Diameter) then) =
-      __$$_DiameterCopyWithImpl<$Res>;
+abstract class _$DiameterCopyWith<$Res> implements $DiameterCopyWith<$Res> {
+  factory _$DiameterCopyWith(_Diameter value, $Res Function(_Diameter) then) =
+      __$DiameterCopyWithImpl<$Res>;
   @override
   $Res call({num meters, num feet});
 }
 
 /// @nodoc
-class __$$_DiameterCopyWithImpl<$Res> extends _$DiameterCopyWithImpl<$Res>
-    implements _$$_DiameterCopyWith<$Res> {
-  __$$_DiameterCopyWithImpl(
-      _$_Diameter _value, $Res Function(_$_Diameter) _then)
-      : super(_value, (v) => _then(v as _$_Diameter));
+class __$DiameterCopyWithImpl<$Res> extends _$DiameterCopyWithImpl<$Res>
+    implements _$DiameterCopyWith<$Res> {
+  __$DiameterCopyWithImpl(_Diameter _value, $Res Function(_Diameter) _then)
+      : super(_value, (v) => _then(v as _Diameter));
 
   @override
-  _$_Diameter get _value => super._value as _$_Diameter;
+  _Diameter get _value => super._value as _Diameter;
 
   @override
   $Res call({
     Object? meters = freezed,
     Object? feet = freezed,
   }) {
-    return _then(_$_Diameter(
+    return _then(_Diameter(
       meters: meters == freezed
           ? _value.meters
           : meters // ignore: cast_nullable_to_non_nullable
@@ -925,11 +1032,11 @@ class _$_Diameter extends _Diameter {
   factory _$_Diameter.fromJson(Map<String, dynamic> json) =>
       _$$_DiameterFromJson(json);
 
-  @override
   @JsonKey()
+  @override
   final num meters;
-  @override
   @JsonKey()
+  @override
   final num feet;
 
   @override
@@ -941,12 +1048,11 @@ class _$_Diameter extends _Diameter {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_Diameter &&
+            other is _Diameter &&
             const DeepCollectionEquality().equals(other.meters, meters) &&
             const DeepCollectionEquality().equals(other.feet, feet));
   }
 
-  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -955,8 +1061,8 @@ class _$_Diameter extends _Diameter {
 
   @JsonKey(ignore: true)
   @override
-  _$$_DiameterCopyWith<_$_Diameter> get copyWith =>
-      __$$_DiameterCopyWithImpl<_$_Diameter>(this, _$identity);
+  _$DiameterCopyWith<_Diameter> get copyWith =>
+      __$DiameterCopyWithImpl<_Diameter>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -965,24 +1071,49 @@ class _$_Diameter extends _Diameter {
 }
 
 abstract class _Diameter extends Diameter {
-  const factory _Diameter({final num meters, final num feet}) = _$_Diameter;
+  const factory _Diameter({num meters, num feet}) = _$_Diameter;
   const _Diameter._() : super._();
 
   factory _Diameter.fromJson(Map<String, dynamic> json) = _$_Diameter.fromJson;
 
   @override
-  num get meters => throw _privateConstructorUsedError;
+  num get meters;
   @override
-  num get feet => throw _privateConstructorUsedError;
+  num get feet;
   @override
   @JsonKey(ignore: true)
-  _$$_DiameterCopyWith<_$_Diameter> get copyWith =>
+  _$DiameterCopyWith<_Diameter> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 PayloadWeight _$PayloadWeightFromJson(Map<String, dynamic> json) {
   return _PayloadWeight.fromJson(json);
 }
+
+/// @nodoc
+class _$PayloadWeightTearOff {
+  const _$PayloadWeightTearOff();
+
+  _PayloadWeight call(
+      {@JsonKey(name: 'id') String? id,
+      @JsonKey(name: 'name') String? name,
+      @JsonKey(name: 'kg') num kg = 0,
+      @JsonKey(name: 'lb') num lb = 0}) {
+    return _PayloadWeight(
+      id: id,
+      name: name,
+      kg: kg,
+      lb: lb,
+    );
+  }
+
+  PayloadWeight fromJson(Map<String, Object?> json) {
+    return PayloadWeight.fromJson(json);
+  }
+}
+
+/// @nodoc
+const $PayloadWeight = _$PayloadWeightTearOff();
 
 /// @nodoc
 mixin _$PayloadWeight {
@@ -1051,11 +1182,11 @@ class _$PayloadWeightCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$$_PayloadWeightCopyWith<$Res>
+abstract class _$PayloadWeightCopyWith<$Res>
     implements $PayloadWeightCopyWith<$Res> {
-  factory _$$_PayloadWeightCopyWith(
-          _$_PayloadWeight value, $Res Function(_$_PayloadWeight) then) =
-      __$$_PayloadWeightCopyWithImpl<$Res>;
+  factory _$PayloadWeightCopyWith(
+          _PayloadWeight value, $Res Function(_PayloadWeight) then) =
+      __$PayloadWeightCopyWithImpl<$Res>;
   @override
   $Res call(
       {@JsonKey(name: 'id') String? id,
@@ -1065,15 +1196,15 @@ abstract class _$$_PayloadWeightCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_PayloadWeightCopyWithImpl<$Res>
+class __$PayloadWeightCopyWithImpl<$Res>
     extends _$PayloadWeightCopyWithImpl<$Res>
-    implements _$$_PayloadWeightCopyWith<$Res> {
-  __$$_PayloadWeightCopyWithImpl(
-      _$_PayloadWeight _value, $Res Function(_$_PayloadWeight) _then)
-      : super(_value, (v) => _then(v as _$_PayloadWeight));
+    implements _$PayloadWeightCopyWith<$Res> {
+  __$PayloadWeightCopyWithImpl(
+      _PayloadWeight _value, $Res Function(_PayloadWeight) _then)
+      : super(_value, (v) => _then(v as _PayloadWeight));
 
   @override
-  _$_PayloadWeight get _value => super._value as _$_PayloadWeight;
+  _PayloadWeight get _value => super._value as _PayloadWeight;
 
   @override
   $Res call({
@@ -1082,7 +1213,7 @@ class __$$_PayloadWeightCopyWithImpl<$Res>
     Object? kg = freezed,
     Object? lb = freezed,
   }) {
-    return _then(_$_PayloadWeight(
+    return _then(_PayloadWeight(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -1138,14 +1269,13 @@ class _$_PayloadWeight extends _PayloadWeight {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_PayloadWeight &&
+            other is _PayloadWeight &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality().equals(other.name, name) &&
             const DeepCollectionEquality().equals(other.kg, kg) &&
             const DeepCollectionEquality().equals(other.lb, lb));
   }
 
-  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -1156,8 +1286,8 @@ class _$_PayloadWeight extends _PayloadWeight {
 
   @JsonKey(ignore: true)
   @override
-  _$$_PayloadWeightCopyWith<_$_PayloadWeight> get copyWith =>
-      __$$_PayloadWeightCopyWithImpl<_$_PayloadWeight>(this, _$identity);
+  _$PayloadWeightCopyWith<_PayloadWeight> get copyWith =>
+      __$PayloadWeightCopyWithImpl<_PayloadWeight>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -1167,10 +1297,10 @@ class _$_PayloadWeight extends _PayloadWeight {
 
 abstract class _PayloadWeight extends PayloadWeight {
   const factory _PayloadWeight(
-      {@JsonKey(name: 'id') final String? id,
-      @JsonKey(name: 'name') final String? name,
-      @JsonKey(name: 'kg') final num kg,
-      @JsonKey(name: 'lb') final num lb}) = _$_PayloadWeight;
+      {@JsonKey(name: 'id') String? id,
+      @JsonKey(name: 'name') String? name,
+      @JsonKey(name: 'kg') num kg,
+      @JsonKey(name: 'lb') num lb}) = _$_PayloadWeight;
   const _PayloadWeight._() : super._();
 
   factory _PayloadWeight.fromJson(Map<String, dynamic> json) =
@@ -1178,25 +1308,44 @@ abstract class _PayloadWeight extends PayloadWeight {
 
   @override
   @JsonKey(name: 'id')
-  String? get id => throw _privateConstructorUsedError;
+  String? get id;
   @override
   @JsonKey(name: 'name')
-  String? get name => throw _privateConstructorUsedError;
+  String? get name;
   @override
   @JsonKey(name: 'kg')
-  num get kg => throw _privateConstructorUsedError;
+  num get kg;
   @override
   @JsonKey(name: 'lb')
-  num get lb => throw _privateConstructorUsedError;
+  num get lb;
   @override
   @JsonKey(ignore: true)
-  _$$_PayloadWeightCopyWith<_$_PayloadWeight> get copyWith =>
+  _$PayloadWeightCopyWith<_PayloadWeight> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 Isp _$IspFromJson(Map<String, dynamic> json) {
   return _Isp.fromJson(json);
 }
+
+/// @nodoc
+class _$IspTearOff {
+  const _$IspTearOff();
+
+  _Isp call({@JsonKey(name: 'sea_level') num seaLevel = 0, num vacuum = 0}) {
+    return _Isp(
+      seaLevel: seaLevel,
+      vacuum: vacuum,
+    );
+  }
+
+  Isp fromJson(Map<String, Object?> json) {
+    return Isp.fromJson(json);
+  }
+}
+
+/// @nodoc
+const $Isp = _$IspTearOff();
 
 /// @nodoc
 mixin _$Isp {
@@ -1243,28 +1392,28 @@ class _$IspCopyWithImpl<$Res> implements $IspCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$$_IspCopyWith<$Res> implements $IspCopyWith<$Res> {
-  factory _$$_IspCopyWith(_$_Isp value, $Res Function(_$_Isp) then) =
-      __$$_IspCopyWithImpl<$Res>;
+abstract class _$IspCopyWith<$Res> implements $IspCopyWith<$Res> {
+  factory _$IspCopyWith(_Isp value, $Res Function(_Isp) then) =
+      __$IspCopyWithImpl<$Res>;
   @override
   $Res call({@JsonKey(name: 'sea_level') num seaLevel, num vacuum});
 }
 
 /// @nodoc
-class __$$_IspCopyWithImpl<$Res> extends _$IspCopyWithImpl<$Res>
-    implements _$$_IspCopyWith<$Res> {
-  __$$_IspCopyWithImpl(_$_Isp _value, $Res Function(_$_Isp) _then)
-      : super(_value, (v) => _then(v as _$_Isp));
+class __$IspCopyWithImpl<$Res> extends _$IspCopyWithImpl<$Res>
+    implements _$IspCopyWith<$Res> {
+  __$IspCopyWithImpl(_Isp _value, $Res Function(_Isp) _then)
+      : super(_value, (v) => _then(v as _Isp));
 
   @override
-  _$_Isp get _value => super._value as _$_Isp;
+  _Isp get _value => super._value as _Isp;
 
   @override
   $Res call({
     Object? seaLevel = freezed,
     Object? vacuum = freezed,
   }) {
-    return _then(_$_Isp(
+    return _then(_Isp(
       seaLevel: seaLevel == freezed
           ? _value.seaLevel
           : seaLevel // ignore: cast_nullable_to_non_nullable
@@ -1288,8 +1437,8 @@ class _$_Isp extends _Isp {
   @override
   @JsonKey(name: 'sea_level')
   final num seaLevel;
-  @override
   @JsonKey()
+  @override
   final num vacuum;
 
   @override
@@ -1301,12 +1450,11 @@ class _$_Isp extends _Isp {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_Isp &&
+            other is _Isp &&
             const DeepCollectionEquality().equals(other.seaLevel, seaLevel) &&
             const DeepCollectionEquality().equals(other.vacuum, vacuum));
   }
 
-  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -1315,8 +1463,8 @@ class _$_Isp extends _Isp {
 
   @JsonKey(ignore: true)
   @override
-  _$$_IspCopyWith<_$_Isp> get copyWith =>
-      __$$_IspCopyWithImpl<_$_Isp>(this, _$identity);
+  _$IspCopyWith<_Isp> get copyWith =>
+      __$IspCopyWithImpl<_Isp>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -1325,26 +1473,44 @@ class _$_Isp extends _Isp {
 }
 
 abstract class _Isp extends Isp {
-  const factory _Isp(
-      {@JsonKey(name: 'sea_level') final num seaLevel,
-      final num vacuum}) = _$_Isp;
+  const factory _Isp({@JsonKey(name: 'sea_level') num seaLevel, num vacuum}) =
+      _$_Isp;
   const _Isp._() : super._();
 
   factory _Isp.fromJson(Map<String, dynamic> json) = _$_Isp.fromJson;
 
   @override
   @JsonKey(name: 'sea_level')
-  num get seaLevel => throw _privateConstructorUsedError;
+  num get seaLevel;
   @override
-  num get vacuum => throw _privateConstructorUsedError;
+  num get vacuum;
   @override
   @JsonKey(ignore: true)
-  _$$_IspCopyWith<_$_Isp> get copyWith => throw _privateConstructorUsedError;
+  _$IspCopyWith<_Isp> get copyWith => throw _privateConstructorUsedError;
 }
 
 KnotPound _$KnotPoundFromJson(Map<String, dynamic> json) {
   return _KnotPound.fromJson(json);
 }
+
+/// @nodoc
+class _$KnotPoundTearOff {
+  const _$KnotPoundTearOff();
+
+  _KnotPound call({num kN = 0, num lbf = 0}) {
+    return _KnotPound(
+      kN: kN,
+      lbf: lbf,
+    );
+  }
+
+  KnotPound fromJson(Map<String, Object?> json) {
+    return KnotPound.fromJson(json);
+  }
+}
+
+/// @nodoc
+const $KnotPound = _$KnotPoundTearOff();
 
 /// @nodoc
 mixin _$KnotPound {
@@ -1391,30 +1557,29 @@ class _$KnotPoundCopyWithImpl<$Res> implements $KnotPoundCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$$_KnotPoundCopyWith<$Res> implements $KnotPoundCopyWith<$Res> {
-  factory _$$_KnotPoundCopyWith(
-          _$_KnotPound value, $Res Function(_$_KnotPound) then) =
-      __$$_KnotPoundCopyWithImpl<$Res>;
+abstract class _$KnotPoundCopyWith<$Res> implements $KnotPoundCopyWith<$Res> {
+  factory _$KnotPoundCopyWith(
+          _KnotPound value, $Res Function(_KnotPound) then) =
+      __$KnotPoundCopyWithImpl<$Res>;
   @override
   $Res call({num kN, num lbf});
 }
 
 /// @nodoc
-class __$$_KnotPoundCopyWithImpl<$Res> extends _$KnotPoundCopyWithImpl<$Res>
-    implements _$$_KnotPoundCopyWith<$Res> {
-  __$$_KnotPoundCopyWithImpl(
-      _$_KnotPound _value, $Res Function(_$_KnotPound) _then)
-      : super(_value, (v) => _then(v as _$_KnotPound));
+class __$KnotPoundCopyWithImpl<$Res> extends _$KnotPoundCopyWithImpl<$Res>
+    implements _$KnotPoundCopyWith<$Res> {
+  __$KnotPoundCopyWithImpl(_KnotPound _value, $Res Function(_KnotPound) _then)
+      : super(_value, (v) => _then(v as _KnotPound));
 
   @override
-  _$_KnotPound get _value => super._value as _$_KnotPound;
+  _KnotPound get _value => super._value as _KnotPound;
 
   @override
   $Res call({
     Object? kN = freezed,
     Object? lbf = freezed,
   }) {
-    return _then(_$_KnotPound(
+    return _then(_KnotPound(
       kN: kN == freezed
           ? _value.kN
           : kN // ignore: cast_nullable_to_non_nullable
@@ -1435,11 +1600,11 @@ class _$_KnotPound extends _KnotPound {
   factory _$_KnotPound.fromJson(Map<String, dynamic> json) =>
       _$$_KnotPoundFromJson(json);
 
-  @override
   @JsonKey()
+  @override
   final num kN;
-  @override
   @JsonKey()
+  @override
   final num lbf;
 
   @override
@@ -1451,12 +1616,11 @@ class _$_KnotPound extends _KnotPound {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_KnotPound &&
+            other is _KnotPound &&
             const DeepCollectionEquality().equals(other.kN, kN) &&
             const DeepCollectionEquality().equals(other.lbf, lbf));
   }
 
-  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -1465,8 +1629,8 @@ class _$_KnotPound extends _KnotPound {
 
   @JsonKey(ignore: true)
   @override
-  _$$_KnotPoundCopyWith<_$_KnotPound> get copyWith =>
-      __$$_KnotPoundCopyWithImpl<_$_KnotPound>(this, _$identity);
+  _$KnotPoundCopyWith<_KnotPound> get copyWith =>
+      __$KnotPoundCopyWithImpl<_KnotPound>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -1475,18 +1639,18 @@ class _$_KnotPound extends _KnotPound {
 }
 
 abstract class _KnotPound extends KnotPound {
-  const factory _KnotPound({final num kN, final num lbf}) = _$_KnotPound;
+  const factory _KnotPound({num kN, num lbf}) = _$_KnotPound;
   const _KnotPound._() : super._();
 
   factory _KnotPound.fromJson(Map<String, dynamic> json) =
       _$_KnotPound.fromJson;
 
   @override
-  num get kN => throw _privateConstructorUsedError;
+  num get kN;
   @override
-  num get lbf => throw _privateConstructorUsedError;
+  num get lbf;
   @override
   @JsonKey(ignore: true)
-  _$$_KnotPoundCopyWith<_$_KnotPound> get copyWith =>
+  _$KnotPoundCopyWith<_KnotPound> get copyWith =>
       throw _privateConstructorUsedError;
 }

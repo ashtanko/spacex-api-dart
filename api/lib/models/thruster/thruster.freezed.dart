@@ -1,6 +1,5 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'thruster.dart';
@@ -12,11 +11,42 @@ part of 'thruster.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 Thruster _$ThrusterFromJson(Map<String, dynamic> json) {
   return _Thruster.fromJson(json);
 }
+
+/// @nodoc
+class _$ThrusterTearOff {
+  const _$ThrusterTearOff();
+
+  _Thruster call(
+      {String type = 'Draco',
+      int amount = 18,
+      int pods = 4,
+      @JsonKey(name: 'fuel_1') String firstFuel = 'nitrogen tetroxide',
+      @JsonKey(name: 'fuel_2') String secondFuel = 'monomethylhydrazine',
+      int isp = 300,
+      Thrust thrust = const Thrust()}) {
+    return _Thruster(
+      type: type,
+      amount: amount,
+      pods: pods,
+      firstFuel: firstFuel,
+      secondFuel: secondFuel,
+      isp: isp,
+      thrust: thrust,
+    );
+  }
+
+  Thruster fromJson(Map<String, Object?> json) {
+    return Thruster.fromJson(json);
+  }
+}
+
+/// @nodoc
+const $Thruster = _$ThrusterTearOff();
 
 /// @nodoc
 mixin _$Thruster {
@@ -111,10 +141,9 @@ class _$ThrusterCopyWithImpl<$Res> implements $ThrusterCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$$_ThrusterCopyWith<$Res> implements $ThrusterCopyWith<$Res> {
-  factory _$$_ThrusterCopyWith(
-          _$_Thruster value, $Res Function(_$_Thruster) then) =
-      __$$_ThrusterCopyWithImpl<$Res>;
+abstract class _$ThrusterCopyWith<$Res> implements $ThrusterCopyWith<$Res> {
+  factory _$ThrusterCopyWith(_Thruster value, $Res Function(_Thruster) then) =
+      __$ThrusterCopyWithImpl<$Res>;
   @override
   $Res call(
       {String type,
@@ -130,14 +159,13 @@ abstract class _$$_ThrusterCopyWith<$Res> implements $ThrusterCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_ThrusterCopyWithImpl<$Res> extends _$ThrusterCopyWithImpl<$Res>
-    implements _$$_ThrusterCopyWith<$Res> {
-  __$$_ThrusterCopyWithImpl(
-      _$_Thruster _value, $Res Function(_$_Thruster) _then)
-      : super(_value, (v) => _then(v as _$_Thruster));
+class __$ThrusterCopyWithImpl<$Res> extends _$ThrusterCopyWithImpl<$Res>
+    implements _$ThrusterCopyWith<$Res> {
+  __$ThrusterCopyWithImpl(_Thruster _value, $Res Function(_Thruster) _then)
+      : super(_value, (v) => _then(v as _Thruster));
 
   @override
-  _$_Thruster get _value => super._value as _$_Thruster;
+  _Thruster get _value => super._value as _Thruster;
 
   @override
   $Res call({
@@ -149,7 +177,7 @@ class __$$_ThrusterCopyWithImpl<$Res> extends _$ThrusterCopyWithImpl<$Res>
     Object? isp = freezed,
     Object? thrust = freezed,
   }) {
-    return _then(_$_Thruster(
+    return _then(_Thruster(
       type: type == freezed
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
@@ -198,14 +226,14 @@ class _$_Thruster extends _Thruster {
   factory _$_Thruster.fromJson(Map<String, dynamic> json) =>
       _$$_ThrusterFromJson(json);
 
-  @override
   @JsonKey()
+  @override
   final String type;
-  @override
   @JsonKey()
+  @override
   final int amount;
-  @override
   @JsonKey()
+  @override
   final int pods;
   @override
   @JsonKey(name: 'fuel_1')
@@ -213,11 +241,11 @@ class _$_Thruster extends _Thruster {
   @override
   @JsonKey(name: 'fuel_2')
   final String secondFuel;
-  @override
   @JsonKey()
+  @override
   final int isp;
-  @override
   @JsonKey()
+  @override
   final Thrust thrust;
 
   @override
@@ -229,7 +257,7 @@ class _$_Thruster extends _Thruster {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_Thruster &&
+            other is _Thruster &&
             const DeepCollectionEquality().equals(other.type, type) &&
             const DeepCollectionEquality().equals(other.amount, amount) &&
             const DeepCollectionEquality().equals(other.pods, pods) &&
@@ -240,7 +268,6 @@ class _$_Thruster extends _Thruster {
             const DeepCollectionEquality().equals(other.thrust, thrust));
   }
 
-  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -254,8 +281,8 @@ class _$_Thruster extends _Thruster {
 
   @JsonKey(ignore: true)
   @override
-  _$$_ThrusterCopyWith<_$_Thruster> get copyWith =>
-      __$$_ThrusterCopyWithImpl<_$_Thruster>(this, _$identity);
+  _$ThrusterCopyWith<_Thruster> get copyWith =>
+      __$ThrusterCopyWithImpl<_Thruster>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -265,35 +292,35 @@ class _$_Thruster extends _Thruster {
 
 abstract class _Thruster extends Thruster {
   const factory _Thruster(
-      {final String type,
-      final int amount,
-      final int pods,
-      @JsonKey(name: 'fuel_1') final String firstFuel,
-      @JsonKey(name: 'fuel_2') final String secondFuel,
-      final int isp,
-      final Thrust thrust}) = _$_Thruster;
+      {String type,
+      int amount,
+      int pods,
+      @JsonKey(name: 'fuel_1') String firstFuel,
+      @JsonKey(name: 'fuel_2') String secondFuel,
+      int isp,
+      Thrust thrust}) = _$_Thruster;
   const _Thruster._() : super._();
 
   factory _Thruster.fromJson(Map<String, dynamic> json) = _$_Thruster.fromJson;
 
   @override
-  String get type => throw _privateConstructorUsedError;
+  String get type;
   @override
-  int get amount => throw _privateConstructorUsedError;
+  int get amount;
   @override
-  int get pods => throw _privateConstructorUsedError;
+  int get pods;
   @override
   @JsonKey(name: 'fuel_1')
-  String get firstFuel => throw _privateConstructorUsedError;
+  String get firstFuel;
   @override
   @JsonKey(name: 'fuel_2')
-  String get secondFuel => throw _privateConstructorUsedError;
+  String get secondFuel;
   @override
-  int get isp => throw _privateConstructorUsedError;
+  int get isp;
   @override
-  Thrust get thrust => throw _privateConstructorUsedError;
+  Thrust get thrust;
   @override
   @JsonKey(ignore: true)
-  _$$_ThrusterCopyWith<_$_Thruster> get copyWith =>
+  _$ThrusterCopyWith<_Thruster> get copyWith =>
       throw _privateConstructorUsedError;
 }

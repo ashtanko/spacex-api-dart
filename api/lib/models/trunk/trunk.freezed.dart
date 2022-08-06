@@ -1,6 +1,5 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'trunk.dart';
@@ -12,11 +11,32 @@ part of 'trunk.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 Trunk _$TrunkFromJson(Map<String, dynamic> json) {
   return _Trunk.fromJson(json);
 }
+
+/// @nodoc
+class _$TrunkTearOff {
+  const _$TrunkTearOff();
+
+  _Trunk call(
+      {@JsonKey(name: 'trunk_volume') TrunkVolume volume = const TrunkVolume(),
+      @JsonKey(name: 'cargo') Cargo cargo = const Cargo()}) {
+    return _Trunk(
+      volume: volume,
+      cargo: cargo,
+    );
+  }
+
+  Trunk fromJson(Map<String, Object?> json) {
+    return Trunk.fromJson(json);
+  }
+}
+
+/// @nodoc
+const $Trunk = _$TrunkTearOff();
 
 /// @nodoc
 mixin _$Trunk {
@@ -83,9 +103,9 @@ class _$TrunkCopyWithImpl<$Res> implements $TrunkCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$$_TrunkCopyWith<$Res> implements $TrunkCopyWith<$Res> {
-  factory _$$_TrunkCopyWith(_$_Trunk value, $Res Function(_$_Trunk) then) =
-      __$$_TrunkCopyWithImpl<$Res>;
+abstract class _$TrunkCopyWith<$Res> implements $TrunkCopyWith<$Res> {
+  factory _$TrunkCopyWith(_Trunk value, $Res Function(_Trunk) then) =
+      __$TrunkCopyWithImpl<$Res>;
   @override
   $Res call(
       {@JsonKey(name: 'trunk_volume') TrunkVolume volume,
@@ -98,20 +118,20 @@ abstract class _$$_TrunkCopyWith<$Res> implements $TrunkCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_TrunkCopyWithImpl<$Res> extends _$TrunkCopyWithImpl<$Res>
-    implements _$$_TrunkCopyWith<$Res> {
-  __$$_TrunkCopyWithImpl(_$_Trunk _value, $Res Function(_$_Trunk) _then)
-      : super(_value, (v) => _then(v as _$_Trunk));
+class __$TrunkCopyWithImpl<$Res> extends _$TrunkCopyWithImpl<$Res>
+    implements _$TrunkCopyWith<$Res> {
+  __$TrunkCopyWithImpl(_Trunk _value, $Res Function(_Trunk) _then)
+      : super(_value, (v) => _then(v as _Trunk));
 
   @override
-  _$_Trunk get _value => super._value as _$_Trunk;
+  _Trunk get _value => super._value as _Trunk;
 
   @override
   $Res call({
     Object? volume = freezed,
     Object? cargo = freezed,
   }) {
-    return _then(_$_Trunk(
+    return _then(_Trunk(
       volume: volume == freezed
           ? _value.volume
           : volume // ignore: cast_nullable_to_non_nullable
@@ -151,12 +171,11 @@ class _$_Trunk extends _Trunk {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_Trunk &&
+            other is _Trunk &&
             const DeepCollectionEquality().equals(other.volume, volume) &&
             const DeepCollectionEquality().equals(other.cargo, cargo));
   }
 
-  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -165,8 +184,8 @@ class _$_Trunk extends _Trunk {
 
   @JsonKey(ignore: true)
   @override
-  _$$_TrunkCopyWith<_$_Trunk> get copyWith =>
-      __$$_TrunkCopyWithImpl<_$_Trunk>(this, _$identity);
+  _$TrunkCopyWith<_Trunk> get copyWith =>
+      __$TrunkCopyWithImpl<_Trunk>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -176,27 +195,47 @@ class _$_Trunk extends _Trunk {
 
 abstract class _Trunk extends Trunk {
   const factory _Trunk(
-      {@JsonKey(name: 'trunk_volume') final TrunkVolume volume,
-      @JsonKey(name: 'cargo') final Cargo cargo}) = _$_Trunk;
+      {@JsonKey(name: 'trunk_volume') TrunkVolume volume,
+      @JsonKey(name: 'cargo') Cargo cargo}) = _$_Trunk;
   const _Trunk._() : super._();
 
   factory _Trunk.fromJson(Map<String, dynamic> json) = _$_Trunk.fromJson;
 
   @override
   @JsonKey(name: 'trunk_volume')
-  TrunkVolume get volume => throw _privateConstructorUsedError;
+  TrunkVolume get volume;
   @override
   @JsonKey(name: 'cargo')
-  Cargo get cargo => throw _privateConstructorUsedError;
+  Cargo get cargo;
   @override
   @JsonKey(ignore: true)
-  _$$_TrunkCopyWith<_$_Trunk> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$TrunkCopyWith<_Trunk> get copyWith => throw _privateConstructorUsedError;
 }
 
 TrunkVolume _$TrunkVolumeFromJson(Map<String, dynamic> json) {
   return _TrunkVolume.fromJson(json);
 }
+
+/// @nodoc
+class _$TrunkVolumeTearOff {
+  const _$TrunkVolumeTearOff();
+
+  _TrunkVolume call(
+      {@JsonKey(name: 'cubic_meters') num cubicMeters = 0,
+      @JsonKey(name: 'cubic_feet') num cubicFeet = 0}) {
+    return _TrunkVolume(
+      cubicMeters: cubicMeters,
+      cubicFeet: cubicFeet,
+    );
+  }
+
+  TrunkVolume fromJson(Map<String, Object?> json) {
+    return TrunkVolume.fromJson(json);
+  }
+}
+
+/// @nodoc
+const $TrunkVolume = _$TrunkVolumeTearOff();
 
 /// @nodoc
 mixin _$TrunkVolume {
@@ -248,11 +287,11 @@ class _$TrunkVolumeCopyWithImpl<$Res> implements $TrunkVolumeCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$$_TrunkVolumeCopyWith<$Res>
+abstract class _$TrunkVolumeCopyWith<$Res>
     implements $TrunkVolumeCopyWith<$Res> {
-  factory _$$_TrunkVolumeCopyWith(
-          _$_TrunkVolume value, $Res Function(_$_TrunkVolume) then) =
-      __$$_TrunkVolumeCopyWithImpl<$Res>;
+  factory _$TrunkVolumeCopyWith(
+          _TrunkVolume value, $Res Function(_TrunkVolume) then) =
+      __$TrunkVolumeCopyWithImpl<$Res>;
   @override
   $Res call(
       {@JsonKey(name: 'cubic_meters') num cubicMeters,
@@ -260,21 +299,21 @@ abstract class _$$_TrunkVolumeCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_TrunkVolumeCopyWithImpl<$Res> extends _$TrunkVolumeCopyWithImpl<$Res>
-    implements _$$_TrunkVolumeCopyWith<$Res> {
-  __$$_TrunkVolumeCopyWithImpl(
-      _$_TrunkVolume _value, $Res Function(_$_TrunkVolume) _then)
-      : super(_value, (v) => _then(v as _$_TrunkVolume));
+class __$TrunkVolumeCopyWithImpl<$Res> extends _$TrunkVolumeCopyWithImpl<$Res>
+    implements _$TrunkVolumeCopyWith<$Res> {
+  __$TrunkVolumeCopyWithImpl(
+      _TrunkVolume _value, $Res Function(_TrunkVolume) _then)
+      : super(_value, (v) => _then(v as _TrunkVolume));
 
   @override
-  _$_TrunkVolume get _value => super._value as _$_TrunkVolume;
+  _TrunkVolume get _value => super._value as _TrunkVolume;
 
   @override
   $Res call({
     Object? cubicMeters = freezed,
     Object? cubicFeet = freezed,
   }) {
-    return _then(_$_TrunkVolume(
+    return _then(_TrunkVolume(
       cubicMeters: cubicMeters == freezed
           ? _value.cubicMeters
           : cubicMeters // ignore: cast_nullable_to_non_nullable
@@ -314,13 +353,12 @@ class _$_TrunkVolume extends _TrunkVolume {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_TrunkVolume &&
+            other is _TrunkVolume &&
             const DeepCollectionEquality()
                 .equals(other.cubicMeters, cubicMeters) &&
             const DeepCollectionEquality().equals(other.cubicFeet, cubicFeet));
   }
 
-  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -329,8 +367,8 @@ class _$_TrunkVolume extends _TrunkVolume {
 
   @JsonKey(ignore: true)
   @override
-  _$$_TrunkVolumeCopyWith<_$_TrunkVolume> get copyWith =>
-      __$$_TrunkVolumeCopyWithImpl<_$_TrunkVolume>(this, _$identity);
+  _$TrunkVolumeCopyWith<_TrunkVolume> get copyWith =>
+      __$TrunkVolumeCopyWithImpl<_TrunkVolume>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -340,8 +378,8 @@ class _$_TrunkVolume extends _TrunkVolume {
 
 abstract class _TrunkVolume extends TrunkVolume {
   const factory _TrunkVolume(
-      {@JsonKey(name: 'cubic_meters') final num cubicMeters,
-      @JsonKey(name: 'cubic_feet') final num cubicFeet}) = _$_TrunkVolume;
+      {@JsonKey(name: 'cubic_meters') num cubicMeters,
+      @JsonKey(name: 'cubic_feet') num cubicFeet}) = _$_TrunkVolume;
   const _TrunkVolume._() : super._();
 
   factory _TrunkVolume.fromJson(Map<String, dynamic> json) =
@@ -349,19 +387,42 @@ abstract class _TrunkVolume extends TrunkVolume {
 
   @override
   @JsonKey(name: 'cubic_meters')
-  num get cubicMeters => throw _privateConstructorUsedError;
+  num get cubicMeters;
   @override
   @JsonKey(name: 'cubic_feet')
-  num get cubicFeet => throw _privateConstructorUsedError;
+  num get cubicFeet;
   @override
   @JsonKey(ignore: true)
-  _$$_TrunkVolumeCopyWith<_$_TrunkVolume> get copyWith =>
+  _$TrunkVolumeCopyWith<_TrunkVolume> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 Cargo _$CargoFromJson(Map<String, dynamic> json) {
   return _Cargo.fromJson(json);
 }
+
+/// @nodoc
+class _$CargoTearOff {
+  const _$CargoTearOff();
+
+  _Cargo call(
+      {@JsonKey(name: 'solar_array')
+          num solarArray = 0,
+      @JsonKey(name: 'unpressurized_cargo')
+          bool isUnpressurizedCargo = false}) {
+    return _Cargo(
+      solarArray: solarArray,
+      isUnpressurizedCargo: isUnpressurizedCargo,
+    );
+  }
+
+  Cargo fromJson(Map<String, Object?> json) {
+    return Cargo.fromJson(json);
+  }
+}
+
+/// @nodoc
+const $Cargo = _$CargoTearOff();
 
 /// @nodoc
 mixin _$Cargo {
@@ -411,9 +472,9 @@ class _$CargoCopyWithImpl<$Res> implements $CargoCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$$_CargoCopyWith<$Res> implements $CargoCopyWith<$Res> {
-  factory _$$_CargoCopyWith(_$_Cargo value, $Res Function(_$_Cargo) then) =
-      __$$_CargoCopyWithImpl<$Res>;
+abstract class _$CargoCopyWith<$Res> implements $CargoCopyWith<$Res> {
+  factory _$CargoCopyWith(_Cargo value, $Res Function(_Cargo) then) =
+      __$CargoCopyWithImpl<$Res>;
   @override
   $Res call(
       {@JsonKey(name: 'solar_array') num solarArray,
@@ -421,20 +482,20 @@ abstract class _$$_CargoCopyWith<$Res> implements $CargoCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_CargoCopyWithImpl<$Res> extends _$CargoCopyWithImpl<$Res>
-    implements _$$_CargoCopyWith<$Res> {
-  __$$_CargoCopyWithImpl(_$_Cargo _value, $Res Function(_$_Cargo) _then)
-      : super(_value, (v) => _then(v as _$_Cargo));
+class __$CargoCopyWithImpl<$Res> extends _$CargoCopyWithImpl<$Res>
+    implements _$CargoCopyWith<$Res> {
+  __$CargoCopyWithImpl(_Cargo _value, $Res Function(_Cargo) _then)
+      : super(_value, (v) => _then(v as _Cargo));
 
   @override
-  _$_Cargo get _value => super._value as _$_Cargo;
+  _Cargo get _value => super._value as _Cargo;
 
   @override
   $Res call({
     Object? solarArray = freezed,
     Object? isUnpressurizedCargo = freezed,
   }) {
-    return _then(_$_Cargo(
+    return _then(_Cargo(
       solarArray: solarArray == freezed
           ? _value.solarArray
           : solarArray // ignore: cast_nullable_to_non_nullable
@@ -474,14 +535,13 @@ class _$_Cargo extends _Cargo {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_Cargo &&
+            other is _Cargo &&
             const DeepCollectionEquality()
                 .equals(other.solarArray, solarArray) &&
             const DeepCollectionEquality()
                 .equals(other.isUnpressurizedCargo, isUnpressurizedCargo));
   }
 
-  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -490,8 +550,8 @@ class _$_Cargo extends _Cargo {
 
   @JsonKey(ignore: true)
   @override
-  _$$_CargoCopyWith<_$_Cargo> get copyWith =>
-      __$$_CargoCopyWithImpl<_$_Cargo>(this, _$identity);
+  _$CargoCopyWith<_Cargo> get copyWith =>
+      __$CargoCopyWithImpl<_Cargo>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -501,22 +561,20 @@ class _$_Cargo extends _Cargo {
 
 abstract class _Cargo extends Cargo {
   const factory _Cargo(
-      {@JsonKey(name: 'solar_array')
-          final num solarArray,
-      @JsonKey(name: 'unpressurized_cargo')
-          final bool isUnpressurizedCargo}) = _$_Cargo;
+          {@JsonKey(name: 'solar_array') num solarArray,
+          @JsonKey(name: 'unpressurized_cargo') bool isUnpressurizedCargo}) =
+      _$_Cargo;
   const _Cargo._() : super._();
 
   factory _Cargo.fromJson(Map<String, dynamic> json) = _$_Cargo.fromJson;
 
   @override
   @JsonKey(name: 'solar_array')
-  num get solarArray => throw _privateConstructorUsedError;
+  num get solarArray;
   @override
   @JsonKey(name: 'unpressurized_cargo')
-  bool get isUnpressurizedCargo => throw _privateConstructorUsedError;
+  bool get isUnpressurizedCargo;
   @override
   @JsonKey(ignore: true)
-  _$$_CargoCopyWith<_$_Cargo> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$CargoCopyWith<_Cargo> get copyWith => throw _privateConstructorUsedError;
 }

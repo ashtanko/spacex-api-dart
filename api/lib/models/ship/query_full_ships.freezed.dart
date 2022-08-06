@@ -1,6 +1,5 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'query_full_ships.dart';
@@ -12,11 +11,50 @@ part of 'query_full_ships.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 QueryFullShips _$QueryFullShipsFromJson(Map<String, dynamic> json) {
   return _QueryFullShips.fromJson(json);
 }
+
+/// @nodoc
+class _$QueryFullShipsTearOff {
+  const _$QueryFullShipsTearOff();
+
+  _QueryFullShips call(
+      {List<FullShip> docs = const [],
+      int totalDocs = 0,
+      int offset = 0,
+      int limit = 0,
+      int totalPages = 0,
+      int page = 0,
+      int pagingCounter = 0,
+      bool hasPrevPage = false,
+      bool hasNextPage = false,
+      int? prevPage,
+      int? nextPage}) {
+    return _QueryFullShips(
+      docs: docs,
+      totalDocs: totalDocs,
+      offset: offset,
+      limit: limit,
+      totalPages: totalPages,
+      page: page,
+      pagingCounter: pagingCounter,
+      hasPrevPage: hasPrevPage,
+      hasNextPage: hasNextPage,
+      prevPage: prevPage,
+      nextPage: nextPage,
+    );
+  }
+
+  QueryFullShips fromJson(Map<String, Object?> json) {
+    return QueryFullShips.fromJson(json);
+  }
+}
+
+/// @nodoc
+const $QueryFullShips = _$QueryFullShipsTearOff();
 
 /// @nodoc
 mixin _$QueryFullShips {
@@ -130,11 +168,11 @@ class _$QueryFullShipsCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$$_QueryFullShipsCopyWith<$Res>
+abstract class _$QueryFullShipsCopyWith<$Res>
     implements $QueryFullShipsCopyWith<$Res> {
-  factory _$$_QueryFullShipsCopyWith(
-          _$_QueryFullShips value, $Res Function(_$_QueryFullShips) then) =
-      __$$_QueryFullShipsCopyWithImpl<$Res>;
+  factory _$QueryFullShipsCopyWith(
+          _QueryFullShips value, $Res Function(_QueryFullShips) then) =
+      __$QueryFullShipsCopyWithImpl<$Res>;
   @override
   $Res call(
       {List<FullShip> docs,
@@ -151,15 +189,15 @@ abstract class _$$_QueryFullShipsCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_QueryFullShipsCopyWithImpl<$Res>
+class __$QueryFullShipsCopyWithImpl<$Res>
     extends _$QueryFullShipsCopyWithImpl<$Res>
-    implements _$$_QueryFullShipsCopyWith<$Res> {
-  __$$_QueryFullShipsCopyWithImpl(
-      _$_QueryFullShips _value, $Res Function(_$_QueryFullShips) _then)
-      : super(_value, (v) => _then(v as _$_QueryFullShips));
+    implements _$QueryFullShipsCopyWith<$Res> {
+  __$QueryFullShipsCopyWithImpl(
+      _QueryFullShips _value, $Res Function(_QueryFullShips) _then)
+      : super(_value, (v) => _then(v as _QueryFullShips));
 
   @override
-  _$_QueryFullShips get _value => super._value as _$_QueryFullShips;
+  _QueryFullShips get _value => super._value as _QueryFullShips;
 
   @override
   $Res call({
@@ -175,9 +213,9 @@ class __$$_QueryFullShipsCopyWithImpl<$Res>
     Object? prevPage = freezed,
     Object? nextPage = freezed,
   }) {
-    return _then(_$_QueryFullShips(
+    return _then(_QueryFullShips(
       docs: docs == freezed
-          ? _value._docs
+          ? _value.docs
           : docs // ignore: cast_nullable_to_non_nullable
               as List<FullShip>,
       totalDocs: totalDocs == freezed
@@ -228,7 +266,7 @@ class __$$_QueryFullShipsCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_QueryFullShips extends _QueryFullShips {
   const _$_QueryFullShips(
-      {final List<FullShip> docs = const [],
+      {this.docs = const [],
       this.totalDocs = 0,
       this.offset = 0,
       this.limit = 0,
@@ -239,43 +277,37 @@ class _$_QueryFullShips extends _QueryFullShips {
       this.hasNextPage = false,
       this.prevPage,
       this.nextPage})
-      : _docs = docs,
-        super._();
+      : super._();
 
   factory _$_QueryFullShips.fromJson(Map<String, dynamic> json) =>
       _$$_QueryFullShipsFromJson(json);
 
-  final List<FullShip> _docs;
-  @override
   @JsonKey()
-  List<FullShip> get docs {
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_docs);
-  }
-
   @override
+  final List<FullShip> docs;
   @JsonKey()
+  @override
   final int totalDocs;
-  @override
   @JsonKey()
+  @override
   final int offset;
-  @override
   @JsonKey()
+  @override
   final int limit;
-  @override
   @JsonKey()
+  @override
   final int totalPages;
-  @override
   @JsonKey()
+  @override
   final int page;
-  @override
   @JsonKey()
+  @override
   final int pagingCounter;
-  @override
   @JsonKey()
+  @override
   final bool hasPrevPage;
-  @override
   @JsonKey()
+  @override
   final bool hasNextPage;
   @override
   final int? prevPage;
@@ -291,8 +323,8 @@ class _$_QueryFullShips extends _QueryFullShips {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_QueryFullShips &&
-            const DeepCollectionEquality().equals(other._docs, _docs) &&
+            other is _QueryFullShips &&
+            const DeepCollectionEquality().equals(other.docs, docs) &&
             const DeepCollectionEquality().equals(other.totalDocs, totalDocs) &&
             const DeepCollectionEquality().equals(other.offset, offset) &&
             const DeepCollectionEquality().equals(other.limit, limit) &&
@@ -309,11 +341,10 @@ class _$_QueryFullShips extends _QueryFullShips {
             const DeepCollectionEquality().equals(other.nextPage, nextPage));
   }
 
-  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      const DeepCollectionEquality().hash(_docs),
+      const DeepCollectionEquality().hash(docs),
       const DeepCollectionEquality().hash(totalDocs),
       const DeepCollectionEquality().hash(offset),
       const DeepCollectionEquality().hash(limit),
@@ -327,8 +358,8 @@ class _$_QueryFullShips extends _QueryFullShips {
 
   @JsonKey(ignore: true)
   @override
-  _$$_QueryFullShipsCopyWith<_$_QueryFullShips> get copyWith =>
-      __$$_QueryFullShipsCopyWithImpl<_$_QueryFullShips>(this, _$identity);
+  _$QueryFullShipsCopyWith<_QueryFullShips> get copyWith =>
+      __$QueryFullShipsCopyWithImpl<_QueryFullShips>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -338,46 +369,46 @@ class _$_QueryFullShips extends _QueryFullShips {
 
 abstract class _QueryFullShips extends QueryFullShips {
   const factory _QueryFullShips(
-      {final List<FullShip> docs,
-      final int totalDocs,
-      final int offset,
-      final int limit,
-      final int totalPages,
-      final int page,
-      final int pagingCounter,
-      final bool hasPrevPage,
-      final bool hasNextPage,
-      final int? prevPage,
-      final int? nextPage}) = _$_QueryFullShips;
+      {List<FullShip> docs,
+      int totalDocs,
+      int offset,
+      int limit,
+      int totalPages,
+      int page,
+      int pagingCounter,
+      bool hasPrevPage,
+      bool hasNextPage,
+      int? prevPage,
+      int? nextPage}) = _$_QueryFullShips;
   const _QueryFullShips._() : super._();
 
   factory _QueryFullShips.fromJson(Map<String, dynamic> json) =
       _$_QueryFullShips.fromJson;
 
   @override
-  List<FullShip> get docs => throw _privateConstructorUsedError;
+  List<FullShip> get docs;
   @override
-  int get totalDocs => throw _privateConstructorUsedError;
+  int get totalDocs;
   @override
-  int get offset => throw _privateConstructorUsedError;
+  int get offset;
   @override
-  int get limit => throw _privateConstructorUsedError;
+  int get limit;
   @override
-  int get totalPages => throw _privateConstructorUsedError;
+  int get totalPages;
   @override
-  int get page => throw _privateConstructorUsedError;
+  int get page;
   @override
-  int get pagingCounter => throw _privateConstructorUsedError;
+  int get pagingCounter;
   @override
-  bool get hasPrevPage => throw _privateConstructorUsedError;
+  bool get hasPrevPage;
   @override
-  bool get hasNextPage => throw _privateConstructorUsedError;
+  bool get hasNextPage;
   @override
-  int? get prevPage => throw _privateConstructorUsedError;
+  int? get prevPage;
   @override
-  int? get nextPage => throw _privateConstructorUsedError;
+  int? get nextPage;
   @override
   @JsonKey(ignore: true)
-  _$$_QueryFullShipsCopyWith<_$_QueryFullShips> get copyWith =>
+  _$QueryFullShipsCopyWith<_QueryFullShips> get copyWith =>
       throw _privateConstructorUsedError;
 }
