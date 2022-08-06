@@ -1,4 +1,4 @@
-# flutter-bloc-app-template 🤖
+# spacex-api-dart 🤖
 The project of the empty template with Flutter has built the basic framework to realize the functions of internationalization, theme peeling etc.
 
 This template is focused on delivering a project with **static analysis** and **continuous integration** already in place.
