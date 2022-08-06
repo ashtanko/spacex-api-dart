@@ -6,13 +6,12 @@ version: 1.0.0+1
 
 environment:
   sdk: ">=2.16.2 <3.0.0"
-  flutter: ">=3.0.1"
 
 dependencies:
   bloc: ^8.0.3
   freezed_annotation: ^2.0.3
-  json_annotation: ^4.5.0
   http: ^0.13.4
+  json_annotation: ^4.5.0
 
 dev_dependencies:
   bloc_test: ^9.0.3
