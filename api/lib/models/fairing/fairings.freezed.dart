@@ -1,5 +1,6 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'fairings.dart';
@@ -11,36 +12,11 @@ part of 'fairings.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 Fairings _$FairingsFromJson(Map<String, dynamic> json) {
   return _Fairings.fromJson(json);
 }
-
-/// @nodoc
-class _$FairingsTearOff {
-  const _$FairingsTearOff();
-
-  _Fairings call(
-      {bool reused = false,
-      @JsonKey(name: 'recovery_attempt') bool recoveryAttempt = false,
-      @JsonKey(name: 'recovered') bool recovered = false,
-      @JsonKey(name: 'ships') List<String> ships = const []}) {
-    return _Fairings(
-      reused: reused,
-      recoveryAttempt: recoveryAttempt,
-      recovered: recovered,
-      ships: ships,
-    );
-  }
-
-  Fairings fromJson(Map<String, Object?> json) {
-    return Fairings.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $Fairings = _$FairingsTearOff();
 
 /// @nodoc
 mixin _$Fairings {
@@ -106,9 +82,10 @@ class _$FairingsCopyWithImpl<$Res> implements $FairingsCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$FairingsCopyWith<$Res> implements $FairingsCopyWith<$Res> {
-  factory _$FairingsCopyWith(_Fairings value, $Res Function(_Fairings) then) =
-      __$FairingsCopyWithImpl<$Res>;
+abstract class _$$_FairingsCopyWith<$Res> implements $FairingsCopyWith<$Res> {
+  factory _$$_FairingsCopyWith(
+          _$_Fairings value, $Res Function(_$_Fairings) then) =
+      __$$_FairingsCopyWithImpl<$Res>;
   @override
   $Res call(
       {bool reused,
@@ -118,13 +95,14 @@ abstract class _$FairingsCopyWith<$Res> implements $FairingsCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$FairingsCopyWithImpl<$Res> extends _$FairingsCopyWithImpl<$Res>
-    implements _$FairingsCopyWith<$Res> {
-  __$FairingsCopyWithImpl(_Fairings _value, $Res Function(_Fairings) _then)
-      : super(_value, (v) => _then(v as _Fairings));
+class __$$_FairingsCopyWithImpl<$Res> extends _$FairingsCopyWithImpl<$Res>
+    implements _$$_FairingsCopyWith<$Res> {
+  __$$_FairingsCopyWithImpl(
+      _$_Fairings _value, $Res Function(_$_Fairings) _then)
+      : super(_value, (v) => _then(v as _$_Fairings));
 
   @override
-  _Fairings get _value => super._value as _Fairings;
+  _$_Fairings get _value => super._value as _$_Fairings;
 
   @override
   $Res call({
@@ -133,7 +111,7 @@ class __$FairingsCopyWithImpl<$Res> extends _$FairingsCopyWithImpl<$Res>
     Object? recovered = freezed,
     Object? ships = freezed,
   }) {
-    return _then(_Fairings(
+    return _then(_$_Fairings(
       reused: reused == freezed
           ? _value.reused
           : reused // ignore: cast_nullable_to_non_nullable
@@ -147,7 +125,7 @@ class __$FairingsCopyWithImpl<$Res> extends _$FairingsCopyWithImpl<$Res>
           : recovered // ignore: cast_nullable_to_non_nullable
               as bool,
       ships: ships == freezed
-          ? _value.ships
+          ? _value._ships
           : ships // ignore: cast_nullable_to_non_nullable
               as List<String>,
     ));
@@ -161,14 +139,15 @@ class _$_Fairings extends _Fairings {
       {this.reused = false,
       @JsonKey(name: 'recovery_attempt') this.recoveryAttempt = false,
       @JsonKey(name: 'recovered') this.recovered = false,
-      @JsonKey(name: 'ships') this.ships = const []})
-      : super._();
+      @JsonKey(name: 'ships') final List<String> ships = const []})
+      : _ships = ships,
+        super._();
 
   factory _$_Fairings.fromJson(Map<String, dynamic> json) =>
       _$$_FairingsFromJson(json);
 
-  @JsonKey()
   @override
+  @JsonKey()
   final bool reused;
   @override
   @JsonKey(name: 'recovery_attempt')
@@ -176,9 +155,13 @@ class _$_Fairings extends _Fairings {
   @override
   @JsonKey(name: 'recovered')
   final bool recovered;
+  final List<String> _ships;
   @override
   @JsonKey(name: 'ships')
-  final List<String> ships;
+  List<String> get ships {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_ships);
+  }
 
   @override
   String toString() {
@@ -189,26 +172,27 @@ class _$_Fairings extends _Fairings {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _Fairings &&
+            other is _$_Fairings &&
             const DeepCollectionEquality().equals(other.reused, reused) &&
             const DeepCollectionEquality()
                 .equals(other.recoveryAttempt, recoveryAttempt) &&
             const DeepCollectionEquality().equals(other.recovered, recovered) &&
-            const DeepCollectionEquality().equals(other.ships, ships));
+            const DeepCollectionEquality().equals(other._ships, _ships));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(reused),
       const DeepCollectionEquality().hash(recoveryAttempt),
       const DeepCollectionEquality().hash(recovered),
-      const DeepCollectionEquality().hash(ships));
+      const DeepCollectionEquality().hash(_ships));
 
   @JsonKey(ignore: true)
   @override
-  _$FairingsCopyWith<_Fairings> get copyWith =>
-      __$FairingsCopyWithImpl<_Fairings>(this, _$identity);
+  _$$_FairingsCopyWith<_$_Fairings> get copyWith =>
+      __$$_FairingsCopyWithImpl<_$_Fairings>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -218,27 +202,27 @@ class _$_Fairings extends _Fairings {
 
 abstract class _Fairings extends Fairings {
   const factory _Fairings(
-      {bool reused,
-      @JsonKey(name: 'recovery_attempt') bool recoveryAttempt,
-      @JsonKey(name: 'recovered') bool recovered,
-      @JsonKey(name: 'ships') List<String> ships}) = _$_Fairings;
+      {final bool reused,
+      @JsonKey(name: 'recovery_attempt') final bool recoveryAttempt,
+      @JsonKey(name: 'recovered') final bool recovered,
+      @JsonKey(name: 'ships') final List<String> ships}) = _$_Fairings;
   const _Fairings._() : super._();
 
   factory _Fairings.fromJson(Map<String, dynamic> json) = _$_Fairings.fromJson;
 
   @override
-  bool get reused;
+  bool get reused => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'recovery_attempt')
-  bool get recoveryAttempt;
+  bool get recoveryAttempt => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'recovered')
-  bool get recovered;
+  bool get recovered => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'ships')
-  List<String> get ships;
+  List<String> get ships => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$FairingsCopyWith<_Fairings> get copyWith =>
+  _$$_FairingsCopyWith<_$_Fairings> get copyWith =>
       throw _privateConstructorUsedError;
 }

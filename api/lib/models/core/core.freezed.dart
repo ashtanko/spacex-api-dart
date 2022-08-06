@@ -1,5 +1,6 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'core.dart';
@@ -11,68 +12,11 @@ part of 'core.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 Core _$CoreFromJson(Map<String, dynamic> json) {
   return _Core.fromJson(json);
 }
-
-/// @nodoc
-class _$CoreTearOff {
-  const _$CoreTearOff();
-
-  _Core call(
-      {String? id,
-      int block = 0,
-      @JsonKey(name: 'reuse_count') int reuseCount = 0,
-      @JsonKey(name: 'rtls_attempts') int rtlsAttempts = 0,
-      @JsonKey(name: 'rtls_landings') int rtlsLandings = 0,
-      @JsonKey(name: 'asds_attempts') int asdsAttempts = 0,
-      @JsonKey(name: 'asds_landings') int asdsLandings = 0,
-      @JsonKey(name: 'last_update') String lastUpdate = '',
-      List<String> launches = const [],
-      String? serial,
-      String? status,
-      String? core,
-      int flight = 0,
-      @JsonKey(name: 'gridfins') bool hasGridfins = false,
-      @JsonKey(name: 'legs') bool hasLegs = false,
-      @JsonKey(name: 'reused') bool reused = false,
-      @JsonKey(name: 'landing_attempt') bool landingAttempt = false,
-      @JsonKey(name: 'landing_success') bool? landingSuccess = false,
-      @JsonKey(name: 'landing_type') String? landingType,
-      @JsonKey(name: 'landpad') String? landpad}) {
-    return _Core(
-      id: id,
-      block: block,
-      reuseCount: reuseCount,
-      rtlsAttempts: rtlsAttempts,
-      rtlsLandings: rtlsLandings,
-      asdsAttempts: asdsAttempts,
-      asdsLandings: asdsLandings,
-      lastUpdate: lastUpdate,
-      launches: launches,
-      serial: serial,
-      status: status,
-      core: core,
-      flight: flight,
-      hasGridfins: hasGridfins,
-      hasLegs: hasLegs,
-      reused: reused,
-      landingAttempt: landingAttempt,
-      landingSuccess: landingSuccess,
-      landingType: landingType,
-      landpad: landpad,
-    );
-  }
-
-  Core fromJson(Map<String, Object?> json) {
-    return Core.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $Core = _$CoreTearOff();
 
 /// @nodoc
 mixin _$Core {
@@ -259,9 +203,9 @@ class _$CoreCopyWithImpl<$Res> implements $CoreCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$CoreCopyWith<$Res> implements $CoreCopyWith<$Res> {
-  factory _$CoreCopyWith(_Core value, $Res Function(_Core) then) =
-      __$CoreCopyWithImpl<$Res>;
+abstract class _$$_CoreCopyWith<$Res> implements $CoreCopyWith<$Res> {
+  factory _$$_CoreCopyWith(_$_Core value, $Res Function(_$_Core) then) =
+      __$$_CoreCopyWithImpl<$Res>;
   @override
   $Res call(
       {String? id,
@@ -287,13 +231,13 @@ abstract class _$CoreCopyWith<$Res> implements $CoreCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$CoreCopyWithImpl<$Res> extends _$CoreCopyWithImpl<$Res>
-    implements _$CoreCopyWith<$Res> {
-  __$CoreCopyWithImpl(_Core _value, $Res Function(_Core) _then)
-      : super(_value, (v) => _then(v as _Core));
+class __$$_CoreCopyWithImpl<$Res> extends _$CoreCopyWithImpl<$Res>
+    implements _$$_CoreCopyWith<$Res> {
+  __$$_CoreCopyWithImpl(_$_Core _value, $Res Function(_$_Core) _then)
+      : super(_value, (v) => _then(v as _$_Core));
 
   @override
-  _Core get _value => super._value as _Core;
+  _$_Core get _value => super._value as _$_Core;
 
   @override
   $Res call({
@@ -318,7 +262,7 @@ class __$CoreCopyWithImpl<$Res> extends _$CoreCopyWithImpl<$Res>
     Object? landingType = freezed,
     Object? landpad = freezed,
   }) {
-    return _then(_Core(
+    return _then(_$_Core(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -352,7 +296,7 @@ class __$CoreCopyWithImpl<$Res> extends _$CoreCopyWithImpl<$Res>
           : lastUpdate // ignore: cast_nullable_to_non_nullable
               as String,
       launches: launches == freezed
-          ? _value.launches
+          ? _value._launches
           : launches // ignore: cast_nullable_to_non_nullable
               as List<String>,
       serial: serial == freezed
@@ -415,7 +359,7 @@ class _$_Core extends _Core {
       @JsonKey(name: 'asds_attempts') this.asdsAttempts = 0,
       @JsonKey(name: 'asds_landings') this.asdsLandings = 0,
       @JsonKey(name: 'last_update') this.lastUpdate = '',
-      this.launches = const [],
+      final List<String> launches = const [],
       this.serial,
       this.status,
       this.core,
@@ -427,14 +371,15 @@ class _$_Core extends _Core {
       @JsonKey(name: 'landing_success') this.landingSuccess = false,
       @JsonKey(name: 'landing_type') this.landingType,
       @JsonKey(name: 'landpad') this.landpad})
-      : super._();
+      : _launches = launches,
+        super._();
 
   factory _$_Core.fromJson(Map<String, dynamic> json) => _$$_CoreFromJson(json);
 
   @override
   final String? id;
-  @JsonKey()
   @override
+  @JsonKey()
   final int block;
   @override
   @JsonKey(name: 'reuse_count')
@@ -454,17 +399,22 @@ class _$_Core extends _Core {
   @override
   @JsonKey(name: 'last_update')
   final String lastUpdate;
-  @JsonKey()
+  final List<String> _launches;
   @override
-  final List<String> launches;
+  @JsonKey()
+  List<String> get launches {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_launches);
+  }
+
   @override
   final String? serial;
   @override
   final String? status;
   @override
   final String? core;
-  @JsonKey()
   @override
+  @JsonKey()
   final int flight;
   @override
   @JsonKey(name: 'gridfins')
@@ -497,7 +447,7 @@ class _$_Core extends _Core {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _Core &&
+            other is _$_Core &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality().equals(other.block, block) &&
             const DeepCollectionEquality()
@@ -512,7 +462,7 @@ class _$_Core extends _Core {
                 .equals(other.asdsLandings, asdsLandings) &&
             const DeepCollectionEquality()
                 .equals(other.lastUpdate, lastUpdate) &&
-            const DeepCollectionEquality().equals(other.launches, launches) &&
+            const DeepCollectionEquality().equals(other._launches, _launches) &&
             const DeepCollectionEquality().equals(other.serial, serial) &&
             const DeepCollectionEquality().equals(other.status, status) &&
             const DeepCollectionEquality().equals(other.core, core) &&
@@ -530,6 +480,7 @@ class _$_Core extends _Core {
             const DeepCollectionEquality().equals(other.landpad, landpad));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
@@ -541,7 +492,7 @@ class _$_Core extends _Core {
         const DeepCollectionEquality().hash(asdsAttempts),
         const DeepCollectionEquality().hash(asdsLandings),
         const DeepCollectionEquality().hash(lastUpdate),
-        const DeepCollectionEquality().hash(launches),
+        const DeepCollectionEquality().hash(_launches),
         const DeepCollectionEquality().hash(serial),
         const DeepCollectionEquality().hash(status),
         const DeepCollectionEquality().hash(core),
@@ -557,8 +508,8 @@ class _$_Core extends _Core {
 
   @JsonKey(ignore: true)
   @override
-  _$CoreCopyWith<_Core> get copyWith =>
-      __$CoreCopyWithImpl<_Core>(this, _$identity);
+  _$$_CoreCopyWith<_$_Core> get copyWith =>
+      __$$_CoreCopyWithImpl<_$_Core>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -568,84 +519,84 @@ class _$_Core extends _Core {
 
 abstract class _Core extends Core {
   const factory _Core(
-      {String? id,
-      int block,
-      @JsonKey(name: 'reuse_count') int reuseCount,
-      @JsonKey(name: 'rtls_attempts') int rtlsAttempts,
-      @JsonKey(name: 'rtls_landings') int rtlsLandings,
-      @JsonKey(name: 'asds_attempts') int asdsAttempts,
-      @JsonKey(name: 'asds_landings') int asdsLandings,
-      @JsonKey(name: 'last_update') String lastUpdate,
-      List<String> launches,
-      String? serial,
-      String? status,
-      String? core,
-      int flight,
-      @JsonKey(name: 'gridfins') bool hasGridfins,
-      @JsonKey(name: 'legs') bool hasLegs,
-      @JsonKey(name: 'reused') bool reused,
-      @JsonKey(name: 'landing_attempt') bool landingAttempt,
-      @JsonKey(name: 'landing_success') bool? landingSuccess,
-      @JsonKey(name: 'landing_type') String? landingType,
-      @JsonKey(name: 'landpad') String? landpad}) = _$_Core;
+      {final String? id,
+      final int block,
+      @JsonKey(name: 'reuse_count') final int reuseCount,
+      @JsonKey(name: 'rtls_attempts') final int rtlsAttempts,
+      @JsonKey(name: 'rtls_landings') final int rtlsLandings,
+      @JsonKey(name: 'asds_attempts') final int asdsAttempts,
+      @JsonKey(name: 'asds_landings') final int asdsLandings,
+      @JsonKey(name: 'last_update') final String lastUpdate,
+      final List<String> launches,
+      final String? serial,
+      final String? status,
+      final String? core,
+      final int flight,
+      @JsonKey(name: 'gridfins') final bool hasGridfins,
+      @JsonKey(name: 'legs') final bool hasLegs,
+      @JsonKey(name: 'reused') final bool reused,
+      @JsonKey(name: 'landing_attempt') final bool landingAttempt,
+      @JsonKey(name: 'landing_success') final bool? landingSuccess,
+      @JsonKey(name: 'landing_type') final String? landingType,
+      @JsonKey(name: 'landpad') final String? landpad}) = _$_Core;
   const _Core._() : super._();
 
   factory _Core.fromJson(Map<String, dynamic> json) = _$_Core.fromJson;
 
   @override
-  String? get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
-  int get block;
+  int get block => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'reuse_count')
-  int get reuseCount;
+  int get reuseCount => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'rtls_attempts')
-  int get rtlsAttempts;
+  int get rtlsAttempts => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'rtls_landings')
-  int get rtlsLandings;
+  int get rtlsLandings => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'asds_attempts')
-  int get asdsAttempts;
+  int get asdsAttempts => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'asds_landings')
-  int get asdsLandings;
+  int get asdsLandings => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'last_update')
-  String get lastUpdate;
+  String get lastUpdate => throw _privateConstructorUsedError;
   @override
-  List<String> get launches;
+  List<String> get launches => throw _privateConstructorUsedError;
   @override
-  String? get serial;
+  String? get serial => throw _privateConstructorUsedError;
   @override
-  String? get status;
+  String? get status => throw _privateConstructorUsedError;
   @override
-  String? get core;
+  String? get core => throw _privateConstructorUsedError;
   @override
-  int get flight;
+  int get flight => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'gridfins')
-  bool get hasGridfins;
+  bool get hasGridfins => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'legs')
-  bool get hasLegs;
+  bool get hasLegs => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'reused')
-  bool get reused;
+  bool get reused => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'landing_attempt')
-  bool get landingAttempt;
+  bool get landingAttempt => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'landing_success')
-  bool? get landingSuccess;
+  bool? get landingSuccess => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'landing_type')
-  String? get landingType;
+  String? get landingType => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'landpad')
-  String? get landpad;
+  String? get landpad => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$CoreCopyWith<_Core> get copyWith => throw _privateConstructorUsedError;
+  _$$_CoreCopyWith<_$_Core> get copyWith => throw _privateConstructorUsedError;
 }
