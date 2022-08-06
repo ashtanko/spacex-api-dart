@@ -10,7 +10,7 @@ on:
 
 jobs:
   test-app:
-    name: App
+    name: App module job
 
     runs-on: ubuntu-latest
 
@@ -72,7 +72,7 @@ jobs:
 #          exclude: '**/*.g.dart **/*.gen.dart **/lib/di/ lib/generated/ **/lib/generated/ lib/di/*.dart'
 
   test-api:
-    name: API logic
+    name: API logic module job
 
     runs-on: ubuntu-latest
 
@@ -135,7 +135,7 @@ jobs:
 #          exclude: '**/*.g.dart **/*.gen.dart **/lib/di/ lib/generated/ **/lib/generated/ lib/di/*.dart'
 
   test-core:
-    name: Core logic
+    name: Core logic module job
 
     runs-on: ubuntu-latest
 

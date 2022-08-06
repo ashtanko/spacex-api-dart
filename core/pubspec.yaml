@@ -33,6 +33,7 @@ dev_dependencies:
     sdk: flutter
   mockito: ^5.0.17
   test: ^1.19.5
+  dart_code_metrics: ^4.14.0
 
 flutter:
   # To add assets to your package, add an assets section, like this:
