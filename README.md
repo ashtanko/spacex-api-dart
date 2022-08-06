@@ -10,64 +10,6 @@ This template is focused on delivering a project with **static analysis** and **
 [![License][license-badge]][license-link]
 [![style: effective dart][style-badge]][style-link]
 
-## How to use 🐾
-Just click on [![Use this template](https://img.shields.io/badge/-Use%20this%20template-brightgreen)](https://github.com/ashtanko/flutter_bloc_app_template/generate) button to create a new repo starting from this template.
-
-## Features 🦄
-- Theme support
-- BLoC pattern [**bloc**](https://pub.dev/packages/bloc)
-- Service Locator using [**get_it**](https://pub.dev/packages/get_it)
-- Localization using [**intl**](https://pub.dev/packages/intl)
-- CI Setup with GitHub Actions
-- Codecov Setup with GitHub Actions
-- Unit test coverage
-
-## Static Analysis 🔍
-
-This template is using [**analyzer**](https://pub.dev/packages/analyzer)
-
-Supported Lint [**Rules**](https://dart-lang.github.io/linter/lints/)
-
-Supported Dart Code [**Metrics**](https://dartcodemetrics.dev/docs/getting-started/introduction)
-
-Dart [**Lint**](https://github.com/passsy/dart-lint)
-
-## CI ⚙️
-This template is using [**GitHub Actions**](https://github.com/ashtanko/flutter_app_skeleton/actions) as CI. You don't need to setup any external service and you should have a running CI once you start using this template.
-
-## How to build 🛠️
-
-The Project uses [**FlutterGen**](https://github.com/FlutterGen/flutter_gen) to generate localizations, dependencies and mocks
-
-Activate flutter_gen using dart pub global activate flutter_gen command if you haven't done that before.
-
-after add export PATH="$PATH":"$HOME/.pub-cache/bin" to bash_profile
-
-``` bash
-# clean project, install dependencies & generate sources
-make
-
-# generate localizations, dependencies, image assets, colors, fonts
-make gen
-
-# generate localizations
-make localize
-
-# analyze the project
-check
-```
-
-## Reminders 🧠
-Change name in pubspec.yaml file
-
-Remove anything you don't need
-
-Configure analysis_options.yaml for your needs
-
-## Contributing 🤝
-
-Feel free to open a issue or submit a pull request for any bugs/improvements.
-
 ## License 📄
 
 This template is licensed under the MIT License - see the [License](LICENSE) file for details.
