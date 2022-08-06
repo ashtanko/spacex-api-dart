@@ -13,6 +13,8 @@ dependencies:
     sdk: flutter
   api:
     path: api
+  core:
+    path: core
   flutter_bloc: ^8.0.1
   hydrated_bloc: ^8.1.0
   logger: ^1.1.0

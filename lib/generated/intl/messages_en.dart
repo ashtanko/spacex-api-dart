@@ -20,28 +20,6 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'en';
 
-  static String m0(id) => "Sample Item ${id}";
-
-  static String m1(founded, founder) => "Founded in ${founded} by ${founder}";
-
   final messages = _notInlinedMessages(_notInlinedMessages);
-  static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
-        "appTitle":
-            MessageLookupByLibrary.simpleMessage("flutter_bloc_app_template"),
-        "darkThemeTitle": MessageLookupByLibrary.simpleMessage("Dark Theme"),
-        "emptyList": MessageLookupByLibrary.simpleMessage("Empty list"),
-        "error": MessageLookupByLibrary.simpleMessage("Error"),
-        "itemDetailsTitle":
-            MessageLookupByLibrary.simpleMessage("Item Details"),
-        "itemTitle": m0,
-        "itemsTitle": MessageLookupByLibrary.simpleMessage("Sample Items"),
-        "lightThemeTitle": MessageLookupByLibrary.simpleMessage("Light Theme"),
-        "messagesTitle": MessageLookupByLibrary.simpleMessage("Messages"),
-        "settingsTitle": MessageLookupByLibrary.simpleMessage("Settings"),
-        "spacexCompanyFounded": m1,
-        "systemThemeTitle":
-            MessageLookupByLibrary.simpleMessage("System Theme"),
-        "themeTitle": MessageLookupByLibrary.simpleMessage("Theme"),
-        "yellowThemeTitle": MessageLookupByLibrary.simpleMessage("Yellow Theme")
-      };
+  static Map<String, Function> _notInlinedMessages(_) => <String, Function>{};
 }

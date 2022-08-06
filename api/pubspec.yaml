@@ -1,4 +1,6 @@
 name: api
+description: A new Flutter package project.
+homepage:
 
 publish_to: 'none'
 
