@@ -32,6 +32,7 @@ dependencies:
   gap: ^2.0.0
   sprintf: ^6.0.0
   freezed_annotation: 1.1.0
+  collection: ^1.15.0
 
   flutter_localizations:
     sdk: flutter
