@@ -21,7 +21,7 @@ jobs:
       - name: Setup Flutter
         uses: subosito/flutter-action@v2
         with:
-          flutter-version: '2.x'
+          flutter-version: '3.x'
           channel: stable
 
       - name: Flutter version
@@ -87,7 +87,7 @@ jobs:
       - name: Setup Flutter
         uses: subosito/flutter-action@v2
         with:
-          flutter-version: '2.x'
+          flutter-version: '3.x'
           channel: stable
 
       - name: Flutter version
@@ -150,7 +150,7 @@ jobs:
       - name: Setup Flutter
         uses: subosito/flutter-action@v2
         with:
-          flutter-version: '2.x'
+          flutter-version: '3.x'
           channel: stable
 
       - name: Flutter version
