@@ -16,7 +16,7 @@ class CapsuleModel with _$CapsuleModel {
     @Default('') String serial,
     @Default('') String status,
     @Default('') String type,
-    required String id,
+    @JsonKey(name: 'id') required String id,
   }) = _CapsuleModel;
 
   const CapsuleModel._();

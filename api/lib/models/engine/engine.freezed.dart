@@ -1,5 +1,6 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'engine.dart';
@@ -11,61 +12,11 @@ part of 'engine.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 Engine _$EngineFromJson(Map<String, dynamic> json) {
   return _Engine.fromJson(json);
 }
-
-/// @nodoc
-class _$EngineTearOff {
-  const _$EngineTearOff();
-
-  _Engine call(
-      {@JsonKey(name: 'isp')
-          Isp isp = const Isp(),
-      @JsonKey(name: 'thrust_sea_level')
-          KnotPound thrustSeaLevel = const KnotPound(),
-      @JsonKey(name: 'thrust_vacuum')
-          KnotPound thrustVacuum = const KnotPound(),
-      @JsonKey(name: 'number')
-          num number = 0,
-      @JsonKey(name: 'type')
-          String type = 'merlin',
-      @JsonKey(name: 'version')
-          String version = '',
-      @JsonKey(name: 'layout')
-          String layout = 'single',
-      @JsonKey(name: 'engine_loss_max')
-          num engineLossMax = 0,
-      @JsonKey(name: 'propellant_1')
-          String firstPropellant = 'liquid oxygen',
-      @JsonKey(name: 'propellant_2')
-          String secondPropellant = 'RP-1 kerosene',
-      @JsonKey(name: 'thrust_to_weight')
-          num thrustToWeight = 0}) {
-    return _Engine(
-      isp: isp,
-      thrustSeaLevel: thrustSeaLevel,
-      thrustVacuum: thrustVacuum,
-      number: number,
-      type: type,
-      version: version,
-      layout: layout,
-      engineLossMax: engineLossMax,
-      firstPropellant: firstPropellant,
-      secondPropellant: secondPropellant,
-      thrustToWeight: thrustToWeight,
-    );
-  }
-
-  Engine fromJson(Map<String, Object?> json) {
-    return Engine.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $Engine = _$EngineTearOff();
 
 /// @nodoc
 mixin _$Engine {
@@ -212,9 +163,9 @@ class _$EngineCopyWithImpl<$Res> implements $EngineCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$EngineCopyWith<$Res> implements $EngineCopyWith<$Res> {
-  factory _$EngineCopyWith(_Engine value, $Res Function(_Engine) then) =
-      __$EngineCopyWithImpl<$Res>;
+abstract class _$$_EngineCopyWith<$Res> implements $EngineCopyWith<$Res> {
+  factory _$$_EngineCopyWith(_$_Engine value, $Res Function(_$_Engine) then) =
+      __$$_EngineCopyWithImpl<$Res>;
   @override
   $Res call(
       {@JsonKey(name: 'isp') Isp isp,
@@ -238,13 +189,13 @@ abstract class _$EngineCopyWith<$Res> implements $EngineCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$EngineCopyWithImpl<$Res> extends _$EngineCopyWithImpl<$Res>
-    implements _$EngineCopyWith<$Res> {
-  __$EngineCopyWithImpl(_Engine _value, $Res Function(_Engine) _then)
-      : super(_value, (v) => _then(v as _Engine));
+class __$$_EngineCopyWithImpl<$Res> extends _$EngineCopyWithImpl<$Res>
+    implements _$$_EngineCopyWith<$Res> {
+  __$$_EngineCopyWithImpl(_$_Engine _value, $Res Function(_$_Engine) _then)
+      : super(_value, (v) => _then(v as _$_Engine));
 
   @override
-  _Engine get _value => super._value as _Engine;
+  _$_Engine get _value => super._value as _$_Engine;
 
   @override
   $Res call({
@@ -260,7 +211,7 @@ class __$EngineCopyWithImpl<$Res> extends _$EngineCopyWithImpl<$Res>
     Object? secondPropellant = freezed,
     Object? thrustToWeight = freezed,
   }) {
-    return _then(_Engine(
+    return _then(_$_Engine(
       isp: isp == freezed
           ? _value.isp
           : isp // ignore: cast_nullable_to_non_nullable
@@ -383,7 +334,7 @@ class _$_Engine extends _Engine {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _Engine &&
+            other is _$_Engine &&
             const DeepCollectionEquality().equals(other.isp, isp) &&
             const DeepCollectionEquality()
                 .equals(other.thrustSeaLevel, thrustSeaLevel) &&
@@ -403,6 +354,7 @@ class _$_Engine extends _Engine {
                 .equals(other.thrustToWeight, thrustToWeight));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -420,28 +372,30 @@ class _$_Engine extends _Engine {
 
   @JsonKey(ignore: true)
   @override
-  _$EngineCopyWith<_Engine> get copyWith =>
-      __$EngineCopyWithImpl<_Engine>(this, _$identity);
+  _$$_EngineCopyWith<_$_Engine> get copyWith =>
+      __$$_EngineCopyWithImpl<_$_Engine>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_EngineToJson(this);
+    return _$$_EngineToJson(
+      this,
+    );
   }
 }
 
 abstract class _Engine extends Engine {
   const factory _Engine(
-      {@JsonKey(name: 'isp') Isp isp,
-      @JsonKey(name: 'thrust_sea_level') KnotPound thrustSeaLevel,
-      @JsonKey(name: 'thrust_vacuum') KnotPound thrustVacuum,
-      @JsonKey(name: 'number') num number,
-      @JsonKey(name: 'type') String type,
-      @JsonKey(name: 'version') String version,
-      @JsonKey(name: 'layout') String layout,
-      @JsonKey(name: 'engine_loss_max') num engineLossMax,
-      @JsonKey(name: 'propellant_1') String firstPropellant,
-      @JsonKey(name: 'propellant_2') String secondPropellant,
-      @JsonKey(name: 'thrust_to_weight') num thrustToWeight}) = _$_Engine;
+      {@JsonKey(name: 'isp') final Isp isp,
+      @JsonKey(name: 'thrust_sea_level') final KnotPound thrustSeaLevel,
+      @JsonKey(name: 'thrust_vacuum') final KnotPound thrustVacuum,
+      @JsonKey(name: 'number') final num number,
+      @JsonKey(name: 'type') final String type,
+      @JsonKey(name: 'version') final String version,
+      @JsonKey(name: 'layout') final String layout,
+      @JsonKey(name: 'engine_loss_max') final num engineLossMax,
+      @JsonKey(name: 'propellant_1') final String firstPropellant,
+      @JsonKey(name: 'propellant_2') final String secondPropellant,
+      @JsonKey(name: 'thrust_to_weight') final num thrustToWeight}) = _$_Engine;
   const _Engine._() : super._();
 
   factory _Engine.fromJson(Map<String, dynamic> json) = _$_Engine.fromJson;
@@ -481,5 +435,6 @@ abstract class _Engine extends Engine {
   num get thrustToWeight;
   @override
   @JsonKey(ignore: true)
-  _$EngineCopyWith<_Engine> get copyWith => throw _privateConstructorUsedError;
+  _$$_EngineCopyWith<_$_Engine> get copyWith =>
+      throw _privateConstructorUsedError;
 }

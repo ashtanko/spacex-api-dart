@@ -1,5 +1,6 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'launchpad.dart';
@@ -11,52 +12,11 @@ part of 'launchpad.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 LaunchpadDetails _$LaunchpadDetailsFromJson(Map<String, dynamic> json) {
   return _LaunchpadDetails.fromJson(json);
 }
-
-/// @nodoc
-class _$LaunchpadDetailsTearOff {
-  const _$LaunchpadDetailsTearOff();
-
-  _LaunchpadDetails call(
-      {String? name,
-      String? fullName,
-      String? locality,
-      String? region,
-      double? latitude,
-      double? longitude,
-      int? launchAttempts,
-      int? launchSuccesses,
-      String? status,
-      String? details,
-      String? imageUrl,
-      String? id}) {
-    return _LaunchpadDetails(
-      name: name,
-      fullName: fullName,
-      locality: locality,
-      region: region,
-      latitude: latitude,
-      longitude: longitude,
-      launchAttempts: launchAttempts,
-      launchSuccesses: launchSuccesses,
-      status: status,
-      details: details,
-      imageUrl: imageUrl,
-      id: id,
-    );
-  }
-
-  LaunchpadDetails fromJson(Map<String, Object?> json) {
-    return LaunchpadDetails.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $LaunchpadDetails = _$LaunchpadDetailsTearOff();
 
 /// @nodoc
 mixin _$LaunchpadDetails {
@@ -177,11 +137,11 @@ class _$LaunchpadDetailsCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$LaunchpadDetailsCopyWith<$Res>
+abstract class _$$_LaunchpadDetailsCopyWith<$Res>
     implements $LaunchpadDetailsCopyWith<$Res> {
-  factory _$LaunchpadDetailsCopyWith(
-          _LaunchpadDetails value, $Res Function(_LaunchpadDetails) then) =
-      __$LaunchpadDetailsCopyWithImpl<$Res>;
+  factory _$$_LaunchpadDetailsCopyWith(
+          _$_LaunchpadDetails value, $Res Function(_$_LaunchpadDetails) then) =
+      __$$_LaunchpadDetailsCopyWithImpl<$Res>;
   @override
   $Res call(
       {String? name,
@@ -199,15 +159,15 @@ abstract class _$LaunchpadDetailsCopyWith<$Res>
 }
 
 /// @nodoc
-class __$LaunchpadDetailsCopyWithImpl<$Res>
+class __$$_LaunchpadDetailsCopyWithImpl<$Res>
     extends _$LaunchpadDetailsCopyWithImpl<$Res>
-    implements _$LaunchpadDetailsCopyWith<$Res> {
-  __$LaunchpadDetailsCopyWithImpl(
-      _LaunchpadDetails _value, $Res Function(_LaunchpadDetails) _then)
-      : super(_value, (v) => _then(v as _LaunchpadDetails));
+    implements _$$_LaunchpadDetailsCopyWith<$Res> {
+  __$$_LaunchpadDetailsCopyWithImpl(
+      _$_LaunchpadDetails _value, $Res Function(_$_LaunchpadDetails) _then)
+      : super(_value, (v) => _then(v as _$_LaunchpadDetails));
 
   @override
-  _LaunchpadDetails get _value => super._value as _LaunchpadDetails;
+  _$_LaunchpadDetails get _value => super._value as _$_LaunchpadDetails;
 
   @override
   $Res call({
@@ -224,7 +184,7 @@ class __$LaunchpadDetailsCopyWithImpl<$Res>
     Object? imageUrl = freezed,
     Object? id = freezed,
   }) {
-    return _then(_LaunchpadDetails(
+    return _then(_$_LaunchpadDetails(
       name: name == freezed
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -332,7 +292,7 @@ class _$_LaunchpadDetails extends _LaunchpadDetails {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _LaunchpadDetails &&
+            other is _$_LaunchpadDetails &&
             const DeepCollectionEquality().equals(other.name, name) &&
             const DeepCollectionEquality().equals(other.fullName, fullName) &&
             const DeepCollectionEquality().equals(other.locality, locality) &&
@@ -349,6 +309,7 @@ class _$_LaunchpadDetails extends _LaunchpadDetails {
             const DeepCollectionEquality().equals(other.id, id));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -367,29 +328,31 @@ class _$_LaunchpadDetails extends _LaunchpadDetails {
 
   @JsonKey(ignore: true)
   @override
-  _$LaunchpadDetailsCopyWith<_LaunchpadDetails> get copyWith =>
-      __$LaunchpadDetailsCopyWithImpl<_LaunchpadDetails>(this, _$identity);
+  _$$_LaunchpadDetailsCopyWith<_$_LaunchpadDetails> get copyWith =>
+      __$$_LaunchpadDetailsCopyWithImpl<_$_LaunchpadDetails>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_LaunchpadDetailsToJson(this);
+    return _$$_LaunchpadDetailsToJson(
+      this,
+    );
   }
 }
 
 abstract class _LaunchpadDetails extends LaunchpadDetails {
   const factory _LaunchpadDetails(
-      {String? name,
-      String? fullName,
-      String? locality,
-      String? region,
-      double? latitude,
-      double? longitude,
-      int? launchAttempts,
-      int? launchSuccesses,
-      String? status,
-      String? details,
-      String? imageUrl,
-      String? id}) = _$_LaunchpadDetails;
+      {final String? name,
+      final String? fullName,
+      final String? locality,
+      final String? region,
+      final double? latitude,
+      final double? longitude,
+      final int? launchAttempts,
+      final int? launchSuccesses,
+      final String? status,
+      final String? details,
+      final String? imageUrl,
+      final String? id}) = _$_LaunchpadDetails;
   const _LaunchpadDetails._() : super._();
 
   factory _LaunchpadDetails.fromJson(Map<String, dynamic> json) =
@@ -421,6 +384,6 @@ abstract class _LaunchpadDetails extends LaunchpadDetails {
   String? get id;
   @override
   @JsonKey(ignore: true)
-  _$LaunchpadDetailsCopyWith<_LaunchpadDetails> get copyWith =>
+  _$$_LaunchpadDetailsCopyWith<_$_LaunchpadDetails> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -21,3 +21,6 @@ localize:
 check:
 	dart analyze .
 	flutter pub run dart_code_metrics:metrics analyze lib
+
+lines:
+	find . -name '*.dart' | xargs wc -l

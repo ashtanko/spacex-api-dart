@@ -10,7 +10,7 @@ _$_Capsules _$$_CapsulesFromJson(Map<String, dynamic> json) => _$_Capsules(
       capsules: (json['capsules'] as List<dynamic>?)
               ?.map((e) => CapsuleModel.fromJson(e as Map<String, dynamic>))
               .toList() ??
-          const [],
+          const <CapsuleModel>[],
     );
 
 Map<String, dynamic> _$$_CapsulesToJson(_$_Capsules instance) =>

@@ -1,5 +1,6 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'starlink.dart';
@@ -11,44 +12,11 @@ part of 'starlink.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 Starlink _$StarlinkFromJson(Map<String, dynamic> json) {
   return _Starlink.fromJson(json);
 }
-
-/// @nodoc
-class _$StarlinkTearOff {
-  const _$StarlinkTearOff();
-
-  _Starlink call(
-      {@JsonKey(name: 'id') String id = '',
-      @JsonKey(name: 'launch') String launchID = '',
-      @JsonKey(name: 'version') String version = '',
-      @JsonKey(name: 'height_km') double heightKm = 0.0,
-      @JsonKey(name: 'latitude') double latitude = 0.0,
-      @JsonKey(name: 'longitude') double longitude = 0.0,
-      @JsonKey(name: 'velocity_kms') double velocityKms = 0.0,
-      @JsonKey(name: 'spaceTrack') SpaceTrack? spaceTrack}) {
-    return _Starlink(
-      id: id,
-      launchID: launchID,
-      version: version,
-      heightKm: heightKm,
-      latitude: latitude,
-      longitude: longitude,
-      velocityKms: velocityKms,
-      spaceTrack: spaceTrack,
-    );
-  }
-
-  Starlink fromJson(Map<String, Object?> json) {
-    return Starlink.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $Starlink = _$StarlinkTearOff();
 
 /// @nodoc
 mixin _$Starlink {
@@ -160,9 +128,10 @@ class _$StarlinkCopyWithImpl<$Res> implements $StarlinkCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$StarlinkCopyWith<$Res> implements $StarlinkCopyWith<$Res> {
-  factory _$StarlinkCopyWith(_Starlink value, $Res Function(_Starlink) then) =
-      __$StarlinkCopyWithImpl<$Res>;
+abstract class _$$_StarlinkCopyWith<$Res> implements $StarlinkCopyWith<$Res> {
+  factory _$$_StarlinkCopyWith(
+          _$_Starlink value, $Res Function(_$_Starlink) then) =
+      __$$_StarlinkCopyWithImpl<$Res>;
   @override
   $Res call(
       {@JsonKey(name: 'id') String id,
@@ -179,13 +148,14 @@ abstract class _$StarlinkCopyWith<$Res> implements $StarlinkCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$StarlinkCopyWithImpl<$Res> extends _$StarlinkCopyWithImpl<$Res>
-    implements _$StarlinkCopyWith<$Res> {
-  __$StarlinkCopyWithImpl(_Starlink _value, $Res Function(_Starlink) _then)
-      : super(_value, (v) => _then(v as _Starlink));
+class __$$_StarlinkCopyWithImpl<$Res> extends _$StarlinkCopyWithImpl<$Res>
+    implements _$$_StarlinkCopyWith<$Res> {
+  __$$_StarlinkCopyWithImpl(
+      _$_Starlink _value, $Res Function(_$_Starlink) _then)
+      : super(_value, (v) => _then(v as _$_Starlink));
 
   @override
-  _Starlink get _value => super._value as _Starlink;
+  _$_Starlink get _value => super._value as _$_Starlink;
 
   @override
   $Res call({
@@ -198,7 +168,7 @@ class __$StarlinkCopyWithImpl<$Res> extends _$StarlinkCopyWithImpl<$Res>
     Object? velocityKms = freezed,
     Object? spaceTrack = freezed,
   }) {
-    return _then(_Starlink(
+    return _then(_$_Starlink(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -286,7 +256,7 @@ class _$_Starlink extends _Starlink {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _Starlink &&
+            other is _$_Starlink &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality().equals(other.launchID, launchID) &&
             const DeepCollectionEquality().equals(other.version, version) &&
@@ -299,6 +269,7 @@ class _$_Starlink extends _Starlink {
                 .equals(other.spaceTrack, spaceTrack));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -313,25 +284,27 @@ class _$_Starlink extends _Starlink {
 
   @JsonKey(ignore: true)
   @override
-  _$StarlinkCopyWith<_Starlink> get copyWith =>
-      __$StarlinkCopyWithImpl<_Starlink>(this, _$identity);
+  _$$_StarlinkCopyWith<_$_Starlink> get copyWith =>
+      __$$_StarlinkCopyWithImpl<_$_Starlink>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_StarlinkToJson(this);
+    return _$$_StarlinkToJson(
+      this,
+    );
   }
 }
 
 abstract class _Starlink extends Starlink {
   const factory _Starlink(
-      {@JsonKey(name: 'id') String id,
-      @JsonKey(name: 'launch') String launchID,
-      @JsonKey(name: 'version') String version,
-      @JsonKey(name: 'height_km') double heightKm,
-      @JsonKey(name: 'latitude') double latitude,
-      @JsonKey(name: 'longitude') double longitude,
-      @JsonKey(name: 'velocity_kms') double velocityKms,
-      @JsonKey(name: 'spaceTrack') SpaceTrack? spaceTrack}) = _$_Starlink;
+      {@JsonKey(name: 'id') final String id,
+      @JsonKey(name: 'launch') final String launchID,
+      @JsonKey(name: 'version') final String version,
+      @JsonKey(name: 'height_km') final double heightKm,
+      @JsonKey(name: 'latitude') final double latitude,
+      @JsonKey(name: 'longitude') final double longitude,
+      @JsonKey(name: 'velocity_kms') final double velocityKms,
+      @JsonKey(name: 'spaceTrack') final SpaceTrack? spaceTrack}) = _$_Starlink;
   const _Starlink._() : super._();
 
   factory _Starlink.fromJson(Map<String, dynamic> json) = _$_Starlink.fromJson;
@@ -362,6 +335,6 @@ abstract class _Starlink extends Starlink {
   SpaceTrack? get spaceTrack;
   @override
   @JsonKey(ignore: true)
-  _$StarlinkCopyWith<_Starlink> get copyWith =>
+  _$$_StarlinkCopyWith<_$_Starlink> get copyWith =>
       throw _privateConstructorUsedError;
 }

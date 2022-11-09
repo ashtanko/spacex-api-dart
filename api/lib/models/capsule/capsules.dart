@@ -9,7 +9,7 @@ part 'capsules.g.dart';
 @freezed
 class Capsules with _$Capsules {
   const factory Capsules({
-    @Default([]) List<CapsuleModel> capsules,
+    @Default(<CapsuleModel>[]) List<CapsuleModel> capsules,
   }) = _Capsules;
 
   const Capsules._();

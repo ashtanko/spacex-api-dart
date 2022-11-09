@@ -1,5 +1,6 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'query_ships.dart';
@@ -11,50 +12,11 @@ part of 'query_ships.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 QueryShips _$QueryShipsFromJson(Map<String, dynamic> json) {
   return _QueryShips.fromJson(json);
 }
-
-/// @nodoc
-class _$QueryShipsTearOff {
-  const _$QueryShipsTearOff();
-
-  _QueryShips call(
-      {List<Ship> docs = const [],
-      int totalDocs = 0,
-      int offset = 0,
-      int limit = 0,
-      int totalPages = 0,
-      int page = 0,
-      int pagingCounter = 0,
-      bool hasPrevPage = false,
-      bool hasNextPage = false,
-      int? prevPage,
-      int? nextPage}) {
-    return _QueryShips(
-      docs: docs,
-      totalDocs: totalDocs,
-      offset: offset,
-      limit: limit,
-      totalPages: totalPages,
-      page: page,
-      pagingCounter: pagingCounter,
-      hasPrevPage: hasPrevPage,
-      hasNextPage: hasNextPage,
-      prevPage: prevPage,
-      nextPage: nextPage,
-    );
-  }
-
-  QueryShips fromJson(Map<String, Object?> json) {
-    return QueryShips.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $QueryShips = _$QueryShipsTearOff();
 
 /// @nodoc
 mixin _$QueryShips {
@@ -167,10 +129,11 @@ class _$QueryShipsCopyWithImpl<$Res> implements $QueryShipsCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$QueryShipsCopyWith<$Res> implements $QueryShipsCopyWith<$Res> {
-  factory _$QueryShipsCopyWith(
-          _QueryShips value, $Res Function(_QueryShips) then) =
-      __$QueryShipsCopyWithImpl<$Res>;
+abstract class _$$_QueryShipsCopyWith<$Res>
+    implements $QueryShipsCopyWith<$Res> {
+  factory _$$_QueryShipsCopyWith(
+          _$_QueryShips value, $Res Function(_$_QueryShips) then) =
+      __$$_QueryShipsCopyWithImpl<$Res>;
   @override
   $Res call(
       {List<Ship> docs,
@@ -187,14 +150,14 @@ abstract class _$QueryShipsCopyWith<$Res> implements $QueryShipsCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$QueryShipsCopyWithImpl<$Res> extends _$QueryShipsCopyWithImpl<$Res>
-    implements _$QueryShipsCopyWith<$Res> {
-  __$QueryShipsCopyWithImpl(
-      _QueryShips _value, $Res Function(_QueryShips) _then)
-      : super(_value, (v) => _then(v as _QueryShips));
+class __$$_QueryShipsCopyWithImpl<$Res> extends _$QueryShipsCopyWithImpl<$Res>
+    implements _$$_QueryShipsCopyWith<$Res> {
+  __$$_QueryShipsCopyWithImpl(
+      _$_QueryShips _value, $Res Function(_$_QueryShips) _then)
+      : super(_value, (v) => _then(v as _$_QueryShips));
 
   @override
-  _QueryShips get _value => super._value as _QueryShips;
+  _$_QueryShips get _value => super._value as _$_QueryShips;
 
   @override
   $Res call({
@@ -210,9 +173,9 @@ class __$QueryShipsCopyWithImpl<$Res> extends _$QueryShipsCopyWithImpl<$Res>
     Object? prevPage = freezed,
     Object? nextPage = freezed,
   }) {
-    return _then(_QueryShips(
+    return _then(_$_QueryShips(
       docs: docs == freezed
-          ? _value.docs
+          ? _value._docs
           : docs // ignore: cast_nullable_to_non_nullable
               as List<Ship>,
       totalDocs: totalDocs == freezed
@@ -263,7 +226,7 @@ class __$QueryShipsCopyWithImpl<$Res> extends _$QueryShipsCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_QueryShips extends _QueryShips {
   const _$_QueryShips(
-      {this.docs = const [],
+      {final List<Ship> docs = const [],
       this.totalDocs = 0,
       this.offset = 0,
       this.limit = 0,
@@ -274,37 +237,43 @@ class _$_QueryShips extends _QueryShips {
       this.hasNextPage = false,
       this.prevPage,
       this.nextPage})
-      : super._();
+      : _docs = docs,
+        super._();
 
   factory _$_QueryShips.fromJson(Map<String, dynamic> json) =>
       _$$_QueryShipsFromJson(json);
 
-  @JsonKey()
+  final List<Ship> _docs;
   @override
-  final List<Ship> docs;
   @JsonKey()
+  List<Ship> get docs {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_docs);
+  }
+
   @override
+  @JsonKey()
   final int totalDocs;
-  @JsonKey()
   @override
+  @JsonKey()
   final int offset;
-  @JsonKey()
   @override
+  @JsonKey()
   final int limit;
-  @JsonKey()
   @override
+  @JsonKey()
   final int totalPages;
-  @JsonKey()
   @override
+  @JsonKey()
   final int page;
-  @JsonKey()
   @override
+  @JsonKey()
   final int pagingCounter;
-  @JsonKey()
   @override
+  @JsonKey()
   final bool hasPrevPage;
-  @JsonKey()
   @override
+  @JsonKey()
   final bool hasNextPage;
   @override
   final int? prevPage;
@@ -320,8 +289,8 @@ class _$_QueryShips extends _QueryShips {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _QueryShips &&
-            const DeepCollectionEquality().equals(other.docs, docs) &&
+            other is _$_QueryShips &&
+            const DeepCollectionEquality().equals(other._docs, _docs) &&
             const DeepCollectionEquality().equals(other.totalDocs, totalDocs) &&
             const DeepCollectionEquality().equals(other.offset, offset) &&
             const DeepCollectionEquality().equals(other.limit, limit) &&
@@ -338,10 +307,11 @@ class _$_QueryShips extends _QueryShips {
             const DeepCollectionEquality().equals(other.nextPage, nextPage));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      const DeepCollectionEquality().hash(docs),
+      const DeepCollectionEquality().hash(_docs),
       const DeepCollectionEquality().hash(totalDocs),
       const DeepCollectionEquality().hash(offset),
       const DeepCollectionEquality().hash(limit),
@@ -355,28 +325,30 @@ class _$_QueryShips extends _QueryShips {
 
   @JsonKey(ignore: true)
   @override
-  _$QueryShipsCopyWith<_QueryShips> get copyWith =>
-      __$QueryShipsCopyWithImpl<_QueryShips>(this, _$identity);
+  _$$_QueryShipsCopyWith<_$_QueryShips> get copyWith =>
+      __$$_QueryShipsCopyWithImpl<_$_QueryShips>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_QueryShipsToJson(this);
+    return _$$_QueryShipsToJson(
+      this,
+    );
   }
 }
 
 abstract class _QueryShips extends QueryShips {
   const factory _QueryShips(
-      {List<Ship> docs,
-      int totalDocs,
-      int offset,
-      int limit,
-      int totalPages,
-      int page,
-      int pagingCounter,
-      bool hasPrevPage,
-      bool hasNextPage,
-      int? prevPage,
-      int? nextPage}) = _$_QueryShips;
+      {final List<Ship> docs,
+      final int totalDocs,
+      final int offset,
+      final int limit,
+      final int totalPages,
+      final int page,
+      final int pagingCounter,
+      final bool hasPrevPage,
+      final bool hasNextPage,
+      final int? prevPage,
+      final int? nextPage}) = _$_QueryShips;
   const _QueryShips._() : super._();
 
   factory _QueryShips.fromJson(Map<String, dynamic> json) =
@@ -406,6 +378,6 @@ abstract class _QueryShips extends QueryShips {
   int? get nextPage;
   @override
   @JsonKey(ignore: true)
-  _$QueryShipsCopyWith<_QueryShips> get copyWith =>
+  _$$_QueryShipsCopyWith<_$_QueryShips> get copyWith =>
       throw _privateConstructorUsedError;
 }
