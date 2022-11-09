@@ -1,4 +1,5 @@
 import 'package:api/example/capsules_api_example.dart';
+import 'package:api/example/info_api_example.dart';
 import 'package:api/models/query/query.dart';
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
@@ -32,6 +33,13 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
         );
         final capsules = paginatedCapsules.results;
         print(capsules);
+      } catch (e) {
+        print(e);
+      }
+
+      try {
+        final info = await getCompanyInfo();
+        print(info.ceo);
       } catch (e) {
         print(e);
       }
