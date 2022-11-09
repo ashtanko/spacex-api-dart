@@ -10,7 +10,6 @@ rebuild:
 # generate localizations, dependencies, image assets, colors, fonts
 gen:
 	flutter packages pub run build_runner build --delete-conflicting-outputs
-	fluttergen -c pubspec.yaml
 
 # generate localizations
 localize:
