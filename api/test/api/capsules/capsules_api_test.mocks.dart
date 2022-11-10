@@ -2,13 +2,12 @@
 // in api/test/api/capsules/capsules_api_test.dart.
 // Do not manually edit this file.
 
-import 'dart:async' as _i6;
+import 'dart:async' as _i5;
 
-import 'package:api/api/capsules/capsules_api.dart' as _i5;
-import 'package:api/models/capsule/capsule_model.dart' as _i3;
-import 'package:api/models/capsule/capsules.dart' as _i2;
-import 'package:api/models/query/query.dart' as _i7;
-import 'package:api/models/response/api_paginated_list.dart' as _i4;
+import 'package:api/api/capsules/capsules_api.dart' as _i4;
+import 'package:api/models/capsule/capsule_model.dart' as _i2;
+import 'package:api/models/query/query.dart' as _i6;
+import 'package:api/models/response/api_paginated_list.dart' as _i3;
 import 'package:mockito/mockito.dart' as _i1;
 
 // ignore_for_file: type=lint
@@ -21,36 +20,35 @@ import 'package:mockito/mockito.dart' as _i1;
 // ignore_for_file: unnecessary_parenthesis
 // ignore_for_file: camel_case_types
 
-class _FakeCapsules_0 extends _i1.Fake implements _i2.Capsules {}
+class _FakeCapsuleModel_0 extends _i1.Fake implements _i2.CapsuleModel {}
 
-class _FakeCapsuleModel_1 extends _i1.Fake implements _i3.CapsuleModel {}
-
-class _FakeApiPaginatedList_2<T> extends _i1.Fake
-    implements _i4.ApiPaginatedList<T> {}
+class _FakeApiPaginatedList_1<T> extends _i1.Fake
+    implements _i3.ApiPaginatedList<T> {}
 
 /// A class which mocks [CapsulesApi].
 ///
 /// See the documentation for Mockito's code generation for more information.
-class MockCapsulesApi extends _i1.Mock implements _i5.CapsulesApi {
+class MockCapsulesApi extends _i1.Mock implements _i4.CapsulesApi {
   MockCapsulesApi() {
     _i1.throwOnMissingStub(this);
   }
 
   @override
-  _i6.Future<_i2.Capsules> getAllCapsules() =>
+  _i5.Future<List<_i2.CapsuleModel>> getAllCapsules() =>
       (super.noSuchMethod(Invocation.method(#getAllCapsules, []),
-              returnValue: Future<_i2.Capsules>.value(_FakeCapsules_0()))
-          as _i6.Future<_i2.Capsules>);
+              returnValue:
+                  Future<List<_i2.CapsuleModel>>.value(<_i2.CapsuleModel>[]))
+          as _i5.Future<List<_i2.CapsuleModel>>);
   @override
-  _i6.Future<_i3.CapsuleModel> getCapsule(String? id) => (super.noSuchMethod(
+  _i5.Future<_i2.CapsuleModel> getCapsule(String? id) => (super.noSuchMethod(
           Invocation.method(#getCapsule, [id]),
-          returnValue: Future<_i3.CapsuleModel>.value(_FakeCapsuleModel_1()))
-      as _i6.Future<_i3.CapsuleModel>);
+          returnValue: Future<_i2.CapsuleModel>.value(_FakeCapsuleModel_0()))
+      as _i5.Future<_i2.CapsuleModel>);
   @override
-  _i6.Future<_i4.ApiPaginatedList<_i3.CapsuleModel>> queryCapsules(
-          _i7.Query? query) =>
+  _i5.Future<_i3.ApiPaginatedList<_i2.CapsuleModel>> queryCapsules(
+          _i6.Query? query) =>
       (super.noSuchMethod(Invocation.method(#queryCapsules, [query]),
-              returnValue: Future<_i4.ApiPaginatedList<_i3.CapsuleModel>>.value(
-                  _FakeApiPaginatedList_2<_i3.CapsuleModel>()))
-          as _i6.Future<_i4.ApiPaginatedList<_i3.CapsuleModel>>);
+              returnValue: Future<_i3.ApiPaginatedList<_i2.CapsuleModel>>.value(
+                  _FakeApiPaginatedList_1<_i2.CapsuleModel>()))
+          as _i5.Future<_i3.ApiPaginatedList<_i2.CapsuleModel>>);
 }

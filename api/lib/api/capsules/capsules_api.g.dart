@@ -18,18 +18,20 @@ class _CapsulesApi implements CapsulesApi {
   String? baseUrl;
 
   @override
-  Future<Capsules> getAllCapsules() async {
+  Future<List<CapsuleModel>> getAllCapsules() async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
-    final _result = await _dio.fetch<Map<String, dynamic>>(
-        _setStreamType<Capsules>(
+    final _result = await _dio.fetch<List<dynamic>>(
+        _setStreamType<List<CapsuleModel>>(
             Options(method: 'GET', headers: _headers, extra: _extra)
                 .compose(_dio.options, '/capsules',
                     queryParameters: queryParameters, data: _data)
                 .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
-    final value = Capsules.fromJson(_result.data!);
+    var value = _result.data!
+        .map((dynamic i) => CapsuleModel.fromJson(i as Map<String, dynamic>))
+        .toList();
     return value;
   }
 

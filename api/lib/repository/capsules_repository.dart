@@ -9,8 +9,7 @@ class CapsulesRepository {
   final CapsulesApi _api;
 
   Future<List<CapsuleModel>> getAllCapsules() async {
-    final capsules = await _api.getAllCapsules();
-    return capsules.capsules;
+    return _api.getAllCapsules();
   }
 
   Future<CapsuleModel> getCapsule(String id) async {

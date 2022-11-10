@@ -16,6 +16,17 @@ void main() {
     repository = CapsulesRepository(CapsulesApi(dio));
   });
 
+  test('getAllCapsules with empty query data, returns data from api', () async {
+    // arrange
+    dio.interceptors.add(LoggingInterceptor(createLogger(level: Logger.level)));
+
+    // act
+    final data = await repository.getAllCapsules();
+
+    // assert
+    expect(data.isNotEmpty, true);
+  });
+
   test('queryCapsules with empty query data, returns data from api', () async {
     // arrange
     dio.interceptors.add(LoggingInterceptor(createLogger(level: Logger.level)));
