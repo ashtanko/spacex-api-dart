@@ -38,4 +38,17 @@ class VehicleRepository {
   ) async {
     return _api.queryFullShips(query);
   }
+
+  // rockets
+  Future<List<RocketVehicle>> getAllRockets() async {
+    return _api.getAllRockets();
+  }
+
+  Future<RocketVehicle> getRocket(String id) async {
+    return _api.getRocket(id);
+  }
+
+  Future<ApiPaginatedList<RocketVehicle>> queryRockets(q.Query query) {
+    return _api.queryRockets(query);
+  }
 }

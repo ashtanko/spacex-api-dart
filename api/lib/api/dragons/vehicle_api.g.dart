@@ -145,6 +145,60 @@ class _VehicleApi implements VehicleApi {
     return value;
   }
 
+  @override
+  Future<List<RocketVehicle>> getAllRockets() async {
+    const _extra = <String, dynamic>{};
+    final queryParameters = <String, dynamic>{};
+    final _headers = <String, dynamic>{};
+    final _data = <String, dynamic>{};
+    final _result = await _dio.fetch<List<dynamic>>(
+        _setStreamType<List<RocketVehicle>>(
+            Options(method: 'GET', headers: _headers, extra: _extra)
+                .compose(_dio.options, '/rockets',
+                    queryParameters: queryParameters, data: _data)
+                .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
+    var value = _result.data!
+        .map((dynamic i) => RocketVehicle.fromJson(i as Map<String, dynamic>))
+        .toList();
+    return value;
+  }
+
+  @override
+  Future<RocketVehicle> getRocket(id) async {
+    const _extra = <String, dynamic>{};
+    final queryParameters = <String, dynamic>{};
+    final _headers = <String, dynamic>{};
+    final _data = <String, dynamic>{};
+    final _result = await _dio.fetch<Map<String, dynamic>>(
+        _setStreamType<RocketVehicle>(
+            Options(method: 'GET', headers: _headers, extra: _extra)
+                .compose(_dio.options, '/rockets/${id}',
+                    queryParameters: queryParameters, data: _data)
+                .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
+    final value = RocketVehicle.fromJson(_result.data!);
+    return value;
+  }
+
+  @override
+  Future<ApiPaginatedList<RocketVehicle>> queryRockets(query) async {
+    const _extra = <String, dynamic>{};
+    final queryParameters = <String, dynamic>{};
+    final _headers = <String, dynamic>{};
+    final _data = <String, dynamic>{};
+    _data.addAll(query.toJson());
+    final _result = await _dio.fetch<Map<String, dynamic>>(
+        _setStreamType<ApiPaginatedList<RocketVehicle>>(
+            Options(method: 'POST', headers: _headers, extra: _extra)
+                .compose(_dio.options, '/ships/query',
+                    queryParameters: queryParameters, data: _data)
+                .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
+    final value = ApiPaginatedList<RocketVehicle>.fromJson(
+      _result.data!,
+      (json) => RocketVehicle.fromJson(json as Map<String, dynamic>),
+    );
+    return value;
+  }
+
   RequestOptions _setStreamType<T>(RequestOptions requestOptions) {
     if (T != dynamic &&
         !(requestOptions.responseType == ResponseType.bytes ||

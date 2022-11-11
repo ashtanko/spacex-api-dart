@@ -34,5 +34,18 @@ abstract class VehicleApi {
   Future<ApiPaginatedList<ShipVehicle>> queryShips(@Body() q.Query query);
 
   @POST('/ships/query')
-  Future<ApiPaginatedList<ShipFullVehicle>> queryFullShips(@Body() q.Query query);
+  Future<ApiPaginatedList<ShipFullVehicle>> queryFullShips(
+    @Body() q.Query query,
+  );
+
+  @GET('/rockets')
+  Future<List<RocketVehicle>> getAllRockets();
+
+  @GET('/rockets/{id}')
+  Future<RocketVehicle> getRocket(
+    @Path() String id,
+  );
+
+  @POST('/ships/query')
+  Future<ApiPaginatedList<RocketVehicle>> queryRockets(@Body() q.Query query);
 }

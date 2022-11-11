@@ -106,4 +106,42 @@ void main() {
     expect(data.page, 1);
     expect(data.offset, 5);
   });
+
+  // rockets
+  test('get all rockets with no empty query data, returns data from api',
+      () async {
+    // arrange
+    dio.interceptors.add(LoggingInterceptor(createLogger(level: Logger.level)));
+
+    // act
+    final data = await repository.getAllRockets();
+
+    // assert
+    expect(data.isNotEmpty, true);
+  });
+
+  test('get one rocket, returns data from api', () async {
+    const id = '5e9d0d95eda69973a809d1ec';
+    // arrange
+    dio.interceptors.add(LoggingInterceptor(createLogger(level: Logger.level)));
+
+    // act
+    final data = await repository.getRocket(id);
+
+    // assert
+    expect(data.id, id);
+  });
+
+  test('query rockets with offset 5, returns data from api', () async {
+    // arrange
+    dio.interceptors.add(LoggingInterceptor(createLogger(level: Logger.level)));
+
+    // act
+    final data = await repository
+        .queryRockets(const q.Query(options: q.Options(offset: 5, page: 1)));
+
+    // assert
+    expect(data.page, 1);
+    expect(data.offset, 5);
+  });
 }
