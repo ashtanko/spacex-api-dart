@@ -20,19 +20,62 @@ Payload _$PayloadFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Payload {
-  CapsuleModel? get capsule => throw _privateConstructorUsedError;
+  @JsonKey(name: 'id')
+  String get id => throw _privateConstructorUsedError;
+  @JsonKey(name: 'dragon')
+  PayloadDragon? get dragon => throw _privateConstructorUsedError;
+  @JsonKey(name: 'name')
   String? get name => throw _privateConstructorUsedError;
+  @JsonKey(name: 'type')
+  String? get type => throw _privateConstructorUsedError;
+  @JsonKey(name: 'reused')
   bool get reused => throw _privateConstructorUsedError;
-  String? get customer => throw _privateConstructorUsedError;
-  String? get nationality => throw _privateConstructorUsedError;
-  String? get manufacturer => throw _privateConstructorUsedError;
-  num? get mass => throw _privateConstructorUsedError;
+  @JsonKey(name: 'launch')
+  String? get launch => throw _privateConstructorUsedError;
+  @JsonKey(name: 'customers')
+  List<String> get customers => throw _privateConstructorUsedError;
+  @JsonKey(name: 'norad_ids')
+  List<int> get noradIds => throw _privateConstructorUsedError;
+  @JsonKey(name: 'nationalities')
+  List<String> get nationalities => throw _privateConstructorUsedError;
+  @JsonKey(name: 'manufacturers')
+  List<String> get manufacturers => throw _privateConstructorUsedError;
+  @JsonKey(name: 'mass_kg')
+  double? get massKg => throw _privateConstructorUsedError;
+  @JsonKey(name: 'mass_lbs')
+  double? get massLbs => throw _privateConstructorUsedError;
+  @JsonKey(name: 'orbit')
   String? get orbit => throw _privateConstructorUsedError;
-  num? get periapsis => throw _privateConstructorUsedError;
-  num? get apoapsis => throw _privateConstructorUsedError;
-  num? get inclination => throw _privateConstructorUsedError;
-  num? get period => throw _privateConstructorUsedError;
-  String? get id => throw _privateConstructorUsedError;
+  @JsonKey(name: 'reference_system')
+  String? get referenceSystem => throw _privateConstructorUsedError;
+  @JsonKey(name: 'regime')
+  String? get regime => throw _privateConstructorUsedError;
+  @JsonKey(name: 'longitude')
+  double? get longitude => throw _privateConstructorUsedError;
+  @JsonKey(name: 'semi_major_axis_km')
+  double? get semiMajorAxisKm => throw _privateConstructorUsedError;
+  @JsonKey(name: 'eccentricity')
+  double? get eccentricity => throw _privateConstructorUsedError;
+  @JsonKey(name: 'periapsis_km')
+  double? get periapsisKm => throw _privateConstructorUsedError;
+  @JsonKey(name: 'apoapsis_km')
+  double? get apoapsisKm => throw _privateConstructorUsedError;
+  @JsonKey(name: 'inclination_deg')
+  double? get inclinationDeg => throw _privateConstructorUsedError;
+  @JsonKey(name: 'period_min')
+  double? get periodMin => throw _privateConstructorUsedError;
+  @JsonKey(name: 'lifespan_years')
+  double? get lifespanYears => throw _privateConstructorUsedError;
+  @JsonKey(name: 'epoch')
+  String? get epoch => throw _privateConstructorUsedError;
+  @JsonKey(name: 'mean_motion')
+  double? get meanMotion => throw _privateConstructorUsedError;
+  @JsonKey(name: 'raan')
+  double? get raan => throw _privateConstructorUsedError;
+  @JsonKey(name: 'arg_of_pericenter')
+  double? get argOfPericenter => throw _privateConstructorUsedError;
+  @JsonKey(name: 'mean_anomaly')
+  double? get meanAnomaly => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -44,21 +87,36 @@ abstract class $PayloadCopyWith<$Res> {
   factory $PayloadCopyWith(Payload value, $Res Function(Payload) then) =
       _$PayloadCopyWithImpl<$Res>;
   $Res call(
-      {CapsuleModel? capsule,
-      String? name,
-      bool reused,
-      String? customer,
-      String? nationality,
-      String? manufacturer,
-      num? mass,
-      String? orbit,
-      num? periapsis,
-      num? apoapsis,
-      num? inclination,
-      num? period,
-      String? id});
+      {@JsonKey(name: 'id') String id,
+      @JsonKey(name: 'dragon') PayloadDragon? dragon,
+      @JsonKey(name: 'name') String? name,
+      @JsonKey(name: 'type') String? type,
+      @JsonKey(name: 'reused') bool reused,
+      @JsonKey(name: 'launch') String? launch,
+      @JsonKey(name: 'customers') List<String> customers,
+      @JsonKey(name: 'norad_ids') List<int> noradIds,
+      @JsonKey(name: 'nationalities') List<String> nationalities,
+      @JsonKey(name: 'manufacturers') List<String> manufacturers,
+      @JsonKey(name: 'mass_kg') double? massKg,
+      @JsonKey(name: 'mass_lbs') double? massLbs,
+      @JsonKey(name: 'orbit') String? orbit,
+      @JsonKey(name: 'reference_system') String? referenceSystem,
+      @JsonKey(name: 'regime') String? regime,
+      @JsonKey(name: 'longitude') double? longitude,
+      @JsonKey(name: 'semi_major_axis_km') double? semiMajorAxisKm,
+      @JsonKey(name: 'eccentricity') double? eccentricity,
+      @JsonKey(name: 'periapsis_km') double? periapsisKm,
+      @JsonKey(name: 'apoapsis_km') double? apoapsisKm,
+      @JsonKey(name: 'inclination_deg') double? inclinationDeg,
+      @JsonKey(name: 'period_min') double? periodMin,
+      @JsonKey(name: 'lifespan_years') double? lifespanYears,
+      @JsonKey(name: 'epoch') String? epoch,
+      @JsonKey(name: 'mean_motion') double? meanMotion,
+      @JsonKey(name: 'raan') double? raan,
+      @JsonKey(name: 'arg_of_pericenter') double? argOfPericenter,
+      @JsonKey(name: 'mean_anomaly') double? meanAnomaly});
 
-  $CapsuleModelCopyWith<$Res>? get capsule;
+  $PayloadDragonCopyWith<$Res>? get dragon;
 }
 
 /// @nodoc
@@ -71,84 +129,159 @@ class _$PayloadCopyWithImpl<$Res> implements $PayloadCopyWith<$Res> {
 
   @override
   $Res call({
-    Object? capsule = freezed,
-    Object? name = freezed,
-    Object? reused = freezed,
-    Object? customer = freezed,
-    Object? nationality = freezed,
-    Object? manufacturer = freezed,
-    Object? mass = freezed,
-    Object? orbit = freezed,
-    Object? periapsis = freezed,
-    Object? apoapsis = freezed,
-    Object? inclination = freezed,
-    Object? period = freezed,
     Object? id = freezed,
+    Object? dragon = freezed,
+    Object? name = freezed,
+    Object? type = freezed,
+    Object? reused = freezed,
+    Object? launch = freezed,
+    Object? customers = freezed,
+    Object? noradIds = freezed,
+    Object? nationalities = freezed,
+    Object? manufacturers = freezed,
+    Object? massKg = freezed,
+    Object? massLbs = freezed,
+    Object? orbit = freezed,
+    Object? referenceSystem = freezed,
+    Object? regime = freezed,
+    Object? longitude = freezed,
+    Object? semiMajorAxisKm = freezed,
+    Object? eccentricity = freezed,
+    Object? periapsisKm = freezed,
+    Object? apoapsisKm = freezed,
+    Object? inclinationDeg = freezed,
+    Object? periodMin = freezed,
+    Object? lifespanYears = freezed,
+    Object? epoch = freezed,
+    Object? meanMotion = freezed,
+    Object? raan = freezed,
+    Object? argOfPericenter = freezed,
+    Object? meanAnomaly = freezed,
   }) {
     return _then(_value.copyWith(
-      capsule: capsule == freezed
-          ? _value.capsule
-          : capsule // ignore: cast_nullable_to_non_nullable
-              as CapsuleModel?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String,
+      dragon: dragon == freezed
+          ? _value.dragon
+          : dragon // ignore: cast_nullable_to_non_nullable
+              as PayloadDragon?,
       name: name == freezed
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
+              as String?,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
               as String?,
       reused: reused == freezed
           ? _value.reused
           : reused // ignore: cast_nullable_to_non_nullable
               as bool,
-      customer: customer == freezed
-          ? _value.customer
-          : customer // ignore: cast_nullable_to_non_nullable
+      launch: launch == freezed
+          ? _value.launch
+          : launch // ignore: cast_nullable_to_non_nullable
               as String?,
-      nationality: nationality == freezed
-          ? _value.nationality
-          : nationality // ignore: cast_nullable_to_non_nullable
-              as String?,
-      manufacturer: manufacturer == freezed
-          ? _value.manufacturer
-          : manufacturer // ignore: cast_nullable_to_non_nullable
-              as String?,
-      mass: mass == freezed
-          ? _value.mass
-          : mass // ignore: cast_nullable_to_non_nullable
-              as num?,
+      customers: customers == freezed
+          ? _value.customers
+          : customers // ignore: cast_nullable_to_non_nullable
+              as List<String>,
+      noradIds: noradIds == freezed
+          ? _value.noradIds
+          : noradIds // ignore: cast_nullable_to_non_nullable
+              as List<int>,
+      nationalities: nationalities == freezed
+          ? _value.nationalities
+          : nationalities // ignore: cast_nullable_to_non_nullable
+              as List<String>,
+      manufacturers: manufacturers == freezed
+          ? _value.manufacturers
+          : manufacturers // ignore: cast_nullable_to_non_nullable
+              as List<String>,
+      massKg: massKg == freezed
+          ? _value.massKg
+          : massKg // ignore: cast_nullable_to_non_nullable
+              as double?,
+      massLbs: massLbs == freezed
+          ? _value.massLbs
+          : massLbs // ignore: cast_nullable_to_non_nullable
+              as double?,
       orbit: orbit == freezed
           ? _value.orbit
           : orbit // ignore: cast_nullable_to_non_nullable
               as String?,
-      periapsis: periapsis == freezed
-          ? _value.periapsis
-          : periapsis // ignore: cast_nullable_to_non_nullable
-              as num?,
-      apoapsis: apoapsis == freezed
-          ? _value.apoapsis
-          : apoapsis // ignore: cast_nullable_to_non_nullable
-              as num?,
-      inclination: inclination == freezed
-          ? _value.inclination
-          : inclination // ignore: cast_nullable_to_non_nullable
-              as num?,
-      period: period == freezed
-          ? _value.period
-          : period // ignore: cast_nullable_to_non_nullable
-              as num?,
-      id: id == freezed
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
+      referenceSystem: referenceSystem == freezed
+          ? _value.referenceSystem
+          : referenceSystem // ignore: cast_nullable_to_non_nullable
               as String?,
+      regime: regime == freezed
+          ? _value.regime
+          : regime // ignore: cast_nullable_to_non_nullable
+              as String?,
+      longitude: longitude == freezed
+          ? _value.longitude
+          : longitude // ignore: cast_nullable_to_non_nullable
+              as double?,
+      semiMajorAxisKm: semiMajorAxisKm == freezed
+          ? _value.semiMajorAxisKm
+          : semiMajorAxisKm // ignore: cast_nullable_to_non_nullable
+              as double?,
+      eccentricity: eccentricity == freezed
+          ? _value.eccentricity
+          : eccentricity // ignore: cast_nullable_to_non_nullable
+              as double?,
+      periapsisKm: periapsisKm == freezed
+          ? _value.periapsisKm
+          : periapsisKm // ignore: cast_nullable_to_non_nullable
+              as double?,
+      apoapsisKm: apoapsisKm == freezed
+          ? _value.apoapsisKm
+          : apoapsisKm // ignore: cast_nullable_to_non_nullable
+              as double?,
+      inclinationDeg: inclinationDeg == freezed
+          ? _value.inclinationDeg
+          : inclinationDeg // ignore: cast_nullable_to_non_nullable
+              as double?,
+      periodMin: periodMin == freezed
+          ? _value.periodMin
+          : periodMin // ignore: cast_nullable_to_non_nullable
+              as double?,
+      lifespanYears: lifespanYears == freezed
+          ? _value.lifespanYears
+          : lifespanYears // ignore: cast_nullable_to_non_nullable
+              as double?,
+      epoch: epoch == freezed
+          ? _value.epoch
+          : epoch // ignore: cast_nullable_to_non_nullable
+              as String?,
+      meanMotion: meanMotion == freezed
+          ? _value.meanMotion
+          : meanMotion // ignore: cast_nullable_to_non_nullable
+              as double?,
+      raan: raan == freezed
+          ? _value.raan
+          : raan // ignore: cast_nullable_to_non_nullable
+              as double?,
+      argOfPericenter: argOfPericenter == freezed
+          ? _value.argOfPericenter
+          : argOfPericenter // ignore: cast_nullable_to_non_nullable
+              as double?,
+      meanAnomaly: meanAnomaly == freezed
+          ? _value.meanAnomaly
+          : meanAnomaly // ignore: cast_nullable_to_non_nullable
+              as double?,
     ));
   }
 
   @override
-  $CapsuleModelCopyWith<$Res>? get capsule {
-    if (_value.capsule == null) {
+  $PayloadDragonCopyWith<$Res>? get dragon {
+    if (_value.dragon == null) {
       return null;
     }
 
-    return $CapsuleModelCopyWith<$Res>(_value.capsule!, (value) {
-      return _then(_value.copyWith(capsule: value));
+    return $PayloadDragonCopyWith<$Res>(_value.dragon!, (value) {
+      return _then(_value.copyWith(dragon: value));
     });
   }
 }
@@ -160,22 +293,37 @@ abstract class _$$_PayloadCopyWith<$Res> implements $PayloadCopyWith<$Res> {
       __$$_PayloadCopyWithImpl<$Res>;
   @override
   $Res call(
-      {CapsuleModel? capsule,
-      String? name,
-      bool reused,
-      String? customer,
-      String? nationality,
-      String? manufacturer,
-      num? mass,
-      String? orbit,
-      num? periapsis,
-      num? apoapsis,
-      num? inclination,
-      num? period,
-      String? id});
+      {@JsonKey(name: 'id') String id,
+      @JsonKey(name: 'dragon') PayloadDragon? dragon,
+      @JsonKey(name: 'name') String? name,
+      @JsonKey(name: 'type') String? type,
+      @JsonKey(name: 'reused') bool reused,
+      @JsonKey(name: 'launch') String? launch,
+      @JsonKey(name: 'customers') List<String> customers,
+      @JsonKey(name: 'norad_ids') List<int> noradIds,
+      @JsonKey(name: 'nationalities') List<String> nationalities,
+      @JsonKey(name: 'manufacturers') List<String> manufacturers,
+      @JsonKey(name: 'mass_kg') double? massKg,
+      @JsonKey(name: 'mass_lbs') double? massLbs,
+      @JsonKey(name: 'orbit') String? orbit,
+      @JsonKey(name: 'reference_system') String? referenceSystem,
+      @JsonKey(name: 'regime') String? regime,
+      @JsonKey(name: 'longitude') double? longitude,
+      @JsonKey(name: 'semi_major_axis_km') double? semiMajorAxisKm,
+      @JsonKey(name: 'eccentricity') double? eccentricity,
+      @JsonKey(name: 'periapsis_km') double? periapsisKm,
+      @JsonKey(name: 'apoapsis_km') double? apoapsisKm,
+      @JsonKey(name: 'inclination_deg') double? inclinationDeg,
+      @JsonKey(name: 'period_min') double? periodMin,
+      @JsonKey(name: 'lifespan_years') double? lifespanYears,
+      @JsonKey(name: 'epoch') String? epoch,
+      @JsonKey(name: 'mean_motion') double? meanMotion,
+      @JsonKey(name: 'raan') double? raan,
+      @JsonKey(name: 'arg_of_pericenter') double? argOfPericenter,
+      @JsonKey(name: 'mean_anomaly') double? meanAnomaly});
 
   @override
-  $CapsuleModelCopyWith<$Res>? get capsule;
+  $PayloadDragonCopyWith<$Res>? get dragon;
 }
 
 /// @nodoc
@@ -189,73 +337,148 @@ class __$$_PayloadCopyWithImpl<$Res> extends _$PayloadCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? capsule = freezed,
-    Object? name = freezed,
-    Object? reused = freezed,
-    Object? customer = freezed,
-    Object? nationality = freezed,
-    Object? manufacturer = freezed,
-    Object? mass = freezed,
-    Object? orbit = freezed,
-    Object? periapsis = freezed,
-    Object? apoapsis = freezed,
-    Object? inclination = freezed,
-    Object? period = freezed,
     Object? id = freezed,
+    Object? dragon = freezed,
+    Object? name = freezed,
+    Object? type = freezed,
+    Object? reused = freezed,
+    Object? launch = freezed,
+    Object? customers = freezed,
+    Object? noradIds = freezed,
+    Object? nationalities = freezed,
+    Object? manufacturers = freezed,
+    Object? massKg = freezed,
+    Object? massLbs = freezed,
+    Object? orbit = freezed,
+    Object? referenceSystem = freezed,
+    Object? regime = freezed,
+    Object? longitude = freezed,
+    Object? semiMajorAxisKm = freezed,
+    Object? eccentricity = freezed,
+    Object? periapsisKm = freezed,
+    Object? apoapsisKm = freezed,
+    Object? inclinationDeg = freezed,
+    Object? periodMin = freezed,
+    Object? lifespanYears = freezed,
+    Object? epoch = freezed,
+    Object? meanMotion = freezed,
+    Object? raan = freezed,
+    Object? argOfPericenter = freezed,
+    Object? meanAnomaly = freezed,
   }) {
     return _then(_$_Payload(
-      capsule: capsule == freezed
-          ? _value.capsule
-          : capsule // ignore: cast_nullable_to_non_nullable
-              as CapsuleModel?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String,
+      dragon: dragon == freezed
+          ? _value.dragon
+          : dragon // ignore: cast_nullable_to_non_nullable
+              as PayloadDragon?,
       name: name == freezed
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
+              as String?,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
               as String?,
       reused: reused == freezed
           ? _value.reused
           : reused // ignore: cast_nullable_to_non_nullable
               as bool,
-      customer: customer == freezed
-          ? _value.customer
-          : customer // ignore: cast_nullable_to_non_nullable
+      launch: launch == freezed
+          ? _value.launch
+          : launch // ignore: cast_nullable_to_non_nullable
               as String?,
-      nationality: nationality == freezed
-          ? _value.nationality
-          : nationality // ignore: cast_nullable_to_non_nullable
-              as String?,
-      manufacturer: manufacturer == freezed
-          ? _value.manufacturer
-          : manufacturer // ignore: cast_nullable_to_non_nullable
-              as String?,
-      mass: mass == freezed
-          ? _value.mass
-          : mass // ignore: cast_nullable_to_non_nullable
-              as num?,
+      customers: customers == freezed
+          ? _value._customers
+          : customers // ignore: cast_nullable_to_non_nullable
+              as List<String>,
+      noradIds: noradIds == freezed
+          ? _value._noradIds
+          : noradIds // ignore: cast_nullable_to_non_nullable
+              as List<int>,
+      nationalities: nationalities == freezed
+          ? _value._nationalities
+          : nationalities // ignore: cast_nullable_to_non_nullable
+              as List<String>,
+      manufacturers: manufacturers == freezed
+          ? _value._manufacturers
+          : manufacturers // ignore: cast_nullable_to_non_nullable
+              as List<String>,
+      massKg: massKg == freezed
+          ? _value.massKg
+          : massKg // ignore: cast_nullable_to_non_nullable
+              as double?,
+      massLbs: massLbs == freezed
+          ? _value.massLbs
+          : massLbs // ignore: cast_nullable_to_non_nullable
+              as double?,
       orbit: orbit == freezed
           ? _value.orbit
           : orbit // ignore: cast_nullable_to_non_nullable
               as String?,
-      periapsis: periapsis == freezed
-          ? _value.periapsis
-          : periapsis // ignore: cast_nullable_to_non_nullable
-              as num?,
-      apoapsis: apoapsis == freezed
-          ? _value.apoapsis
-          : apoapsis // ignore: cast_nullable_to_non_nullable
-              as num?,
-      inclination: inclination == freezed
-          ? _value.inclination
-          : inclination // ignore: cast_nullable_to_non_nullable
-              as num?,
-      period: period == freezed
-          ? _value.period
-          : period // ignore: cast_nullable_to_non_nullable
-              as num?,
-      id: id == freezed
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
+      referenceSystem: referenceSystem == freezed
+          ? _value.referenceSystem
+          : referenceSystem // ignore: cast_nullable_to_non_nullable
               as String?,
+      regime: regime == freezed
+          ? _value.regime
+          : regime // ignore: cast_nullable_to_non_nullable
+              as String?,
+      longitude: longitude == freezed
+          ? _value.longitude
+          : longitude // ignore: cast_nullable_to_non_nullable
+              as double?,
+      semiMajorAxisKm: semiMajorAxisKm == freezed
+          ? _value.semiMajorAxisKm
+          : semiMajorAxisKm // ignore: cast_nullable_to_non_nullable
+              as double?,
+      eccentricity: eccentricity == freezed
+          ? _value.eccentricity
+          : eccentricity // ignore: cast_nullable_to_non_nullable
+              as double?,
+      periapsisKm: periapsisKm == freezed
+          ? _value.periapsisKm
+          : periapsisKm // ignore: cast_nullable_to_non_nullable
+              as double?,
+      apoapsisKm: apoapsisKm == freezed
+          ? _value.apoapsisKm
+          : apoapsisKm // ignore: cast_nullable_to_non_nullable
+              as double?,
+      inclinationDeg: inclinationDeg == freezed
+          ? _value.inclinationDeg
+          : inclinationDeg // ignore: cast_nullable_to_non_nullable
+              as double?,
+      periodMin: periodMin == freezed
+          ? _value.periodMin
+          : periodMin // ignore: cast_nullable_to_non_nullable
+              as double?,
+      lifespanYears: lifespanYears == freezed
+          ? _value.lifespanYears
+          : lifespanYears // ignore: cast_nullable_to_non_nullable
+              as double?,
+      epoch: epoch == freezed
+          ? _value.epoch
+          : epoch // ignore: cast_nullable_to_non_nullable
+              as String?,
+      meanMotion: meanMotion == freezed
+          ? _value.meanMotion
+          : meanMotion // ignore: cast_nullable_to_non_nullable
+              as double?,
+      raan: raan == freezed
+          ? _value.raan
+          : raan // ignore: cast_nullable_to_non_nullable
+              as double?,
+      argOfPericenter: argOfPericenter == freezed
+          ? _value.argOfPericenter
+          : argOfPericenter // ignore: cast_nullable_to_non_nullable
+              as double?,
+      meanAnomaly: meanAnomaly == freezed
+          ? _value.meanAnomaly
+          : meanAnomaly // ignore: cast_nullable_to_non_nullable
+              as double?,
     ));
   }
 }
@@ -264,55 +487,179 @@ class __$$_PayloadCopyWithImpl<$Res> extends _$PayloadCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_Payload extends _Payload {
   const _$_Payload(
-      {this.capsule,
-      this.name,
-      this.reused = false,
-      this.customer,
-      this.nationality,
-      this.manufacturer,
-      this.mass,
-      this.orbit,
-      this.periapsis,
-      this.apoapsis,
-      this.inclination,
-      this.period,
-      this.id})
-      : super._();
+      {@JsonKey(name: 'id')
+          required this.id,
+      @JsonKey(name: 'dragon')
+          this.dragon,
+      @JsonKey(name: 'name')
+          this.name,
+      @JsonKey(name: 'type')
+          this.type,
+      @JsonKey(name: 'reused')
+          this.reused = false,
+      @JsonKey(name: 'launch')
+          this.launch,
+      @JsonKey(name: 'customers')
+          final List<String> customers = const <String>[],
+      @JsonKey(name: 'norad_ids')
+          final List<int> noradIds = const <int>[],
+      @JsonKey(name: 'nationalities')
+          final List<String> nationalities = const <String>[],
+      @JsonKey(name: 'manufacturers')
+          final List<String> manufacturers = const <String>[],
+      @JsonKey(name: 'mass_kg')
+          this.massKg,
+      @JsonKey(name: 'mass_lbs')
+          this.massLbs,
+      @JsonKey(name: 'orbit')
+          this.orbit,
+      @JsonKey(name: 'reference_system')
+          this.referenceSystem,
+      @JsonKey(name: 'regime')
+          this.regime,
+      @JsonKey(name: 'longitude')
+          this.longitude,
+      @JsonKey(name: 'semi_major_axis_km')
+          this.semiMajorAxisKm,
+      @JsonKey(name: 'eccentricity')
+          this.eccentricity,
+      @JsonKey(name: 'periapsis_km')
+          this.periapsisKm,
+      @JsonKey(name: 'apoapsis_km')
+          this.apoapsisKm,
+      @JsonKey(name: 'inclination_deg')
+          this.inclinationDeg,
+      @JsonKey(name: 'period_min')
+          this.periodMin,
+      @JsonKey(name: 'lifespan_years')
+          this.lifespanYears,
+      @JsonKey(name: 'epoch')
+          this.epoch,
+      @JsonKey(name: 'mean_motion')
+          this.meanMotion,
+      @JsonKey(name: 'raan')
+          this.raan,
+      @JsonKey(name: 'arg_of_pericenter')
+          this.argOfPericenter,
+      @JsonKey(name: 'mean_anomaly')
+          this.meanAnomaly})
+      : _customers = customers,
+        _noradIds = noradIds,
+        _nationalities = nationalities,
+        _manufacturers = manufacturers,
+        super._();
 
   factory _$_Payload.fromJson(Map<String, dynamic> json) =>
       _$$_PayloadFromJson(json);
 
   @override
-  final CapsuleModel? capsule;
+  @JsonKey(name: 'id')
+  final String id;
   @override
+  @JsonKey(name: 'dragon')
+  final PayloadDragon? dragon;
+  @override
+  @JsonKey(name: 'name')
   final String? name;
   @override
-  @JsonKey()
+  @JsonKey(name: 'type')
+  final String? type;
+  @override
+  @JsonKey(name: 'reused')
   final bool reused;
   @override
-  final String? customer;
+  @JsonKey(name: 'launch')
+  final String? launch;
+  final List<String> _customers;
   @override
-  final String? nationality;
+  @JsonKey(name: 'customers')
+  List<String> get customers {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_customers);
+  }
+
+  final List<int> _noradIds;
   @override
-  final String? manufacturer;
+  @JsonKey(name: 'norad_ids')
+  List<int> get noradIds {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_noradIds);
+  }
+
+  final List<String> _nationalities;
   @override
-  final num? mass;
+  @JsonKey(name: 'nationalities')
+  List<String> get nationalities {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_nationalities);
+  }
+
+  final List<String> _manufacturers;
   @override
+  @JsonKey(name: 'manufacturers')
+  List<String> get manufacturers {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_manufacturers);
+  }
+
+  @override
+  @JsonKey(name: 'mass_kg')
+  final double? massKg;
+  @override
+  @JsonKey(name: 'mass_lbs')
+  final double? massLbs;
+  @override
+  @JsonKey(name: 'orbit')
   final String? orbit;
   @override
-  final num? periapsis;
+  @JsonKey(name: 'reference_system')
+  final String? referenceSystem;
   @override
-  final num? apoapsis;
+  @JsonKey(name: 'regime')
+  final String? regime;
   @override
-  final num? inclination;
+  @JsonKey(name: 'longitude')
+  final double? longitude;
   @override
-  final num? period;
+  @JsonKey(name: 'semi_major_axis_km')
+  final double? semiMajorAxisKm;
   @override
-  final String? id;
+  @JsonKey(name: 'eccentricity')
+  final double? eccentricity;
+  @override
+  @JsonKey(name: 'periapsis_km')
+  final double? periapsisKm;
+  @override
+  @JsonKey(name: 'apoapsis_km')
+  final double? apoapsisKm;
+  @override
+  @JsonKey(name: 'inclination_deg')
+  final double? inclinationDeg;
+  @override
+  @JsonKey(name: 'period_min')
+  final double? periodMin;
+  @override
+  @JsonKey(name: 'lifespan_years')
+  final double? lifespanYears;
+  @override
+  @JsonKey(name: 'epoch')
+  final String? epoch;
+  @override
+  @JsonKey(name: 'mean_motion')
+  final double? meanMotion;
+  @override
+  @JsonKey(name: 'raan')
+  final double? raan;
+  @override
+  @JsonKey(name: 'arg_of_pericenter')
+  final double? argOfPericenter;
+  @override
+  @JsonKey(name: 'mean_anomaly')
+  final double? meanAnomaly;
 
   @override
   String toString() {
-    return 'Payload(capsule: $capsule, name: $name, reused: $reused, customer: $customer, nationality: $nationality, manufacturer: $manufacturer, mass: $mass, orbit: $orbit, periapsis: $periapsis, apoapsis: $apoapsis, inclination: $inclination, period: $period, id: $id)';
+    return 'Payload(id: $id, dragon: $dragon, name: $name, type: $type, reused: $reused, launch: $launch, customers: $customers, noradIds: $noradIds, nationalities: $nationalities, manufacturers: $manufacturers, massKg: $massKg, massLbs: $massLbs, orbit: $orbit, referenceSystem: $referenceSystem, regime: $regime, longitude: $longitude, semiMajorAxisKm: $semiMajorAxisKm, eccentricity: $eccentricity, periapsisKm: $periapsisKm, apoapsisKm: $apoapsisKm, inclinationDeg: $inclinationDeg, periodMin: $periodMin, lifespanYears: $lifespanYears, epoch: $epoch, meanMotion: $meanMotion, raan: $raan, argOfPericenter: $argOfPericenter, meanAnomaly: $meanAnomaly)';
   }
 
   @override
@@ -320,41 +667,82 @@ class _$_Payload extends _Payload {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_Payload &&
-            const DeepCollectionEquality().equals(other.capsule, capsule) &&
+            const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality().equals(other.dragon, dragon) &&
             const DeepCollectionEquality().equals(other.name, name) &&
+            const DeepCollectionEquality().equals(other.type, type) &&
             const DeepCollectionEquality().equals(other.reused, reused) &&
-            const DeepCollectionEquality().equals(other.customer, customer) &&
+            const DeepCollectionEquality().equals(other.launch, launch) &&
             const DeepCollectionEquality()
-                .equals(other.nationality, nationality) &&
+                .equals(other._customers, _customers) &&
+            const DeepCollectionEquality().equals(other._noradIds, _noradIds) &&
             const DeepCollectionEquality()
-                .equals(other.manufacturer, manufacturer) &&
-            const DeepCollectionEquality().equals(other.mass, mass) &&
+                .equals(other._nationalities, _nationalities) &&
+            const DeepCollectionEquality()
+                .equals(other._manufacturers, _manufacturers) &&
+            const DeepCollectionEquality().equals(other.massKg, massKg) &&
+            const DeepCollectionEquality().equals(other.massLbs, massLbs) &&
             const DeepCollectionEquality().equals(other.orbit, orbit) &&
-            const DeepCollectionEquality().equals(other.periapsis, periapsis) &&
-            const DeepCollectionEquality().equals(other.apoapsis, apoapsis) &&
             const DeepCollectionEquality()
-                .equals(other.inclination, inclination) &&
-            const DeepCollectionEquality().equals(other.period, period) &&
-            const DeepCollectionEquality().equals(other.id, id));
+                .equals(other.referenceSystem, referenceSystem) &&
+            const DeepCollectionEquality().equals(other.regime, regime) &&
+            const DeepCollectionEquality().equals(other.longitude, longitude) &&
+            const DeepCollectionEquality()
+                .equals(other.semiMajorAxisKm, semiMajorAxisKm) &&
+            const DeepCollectionEquality()
+                .equals(other.eccentricity, eccentricity) &&
+            const DeepCollectionEquality()
+                .equals(other.periapsisKm, periapsisKm) &&
+            const DeepCollectionEquality()
+                .equals(other.apoapsisKm, apoapsisKm) &&
+            const DeepCollectionEquality()
+                .equals(other.inclinationDeg, inclinationDeg) &&
+            const DeepCollectionEquality().equals(other.periodMin, periodMin) &&
+            const DeepCollectionEquality()
+                .equals(other.lifespanYears, lifespanYears) &&
+            const DeepCollectionEquality().equals(other.epoch, epoch) &&
+            const DeepCollectionEquality()
+                .equals(other.meanMotion, meanMotion) &&
+            const DeepCollectionEquality().equals(other.raan, raan) &&
+            const DeepCollectionEquality()
+                .equals(other.argOfPericenter, argOfPericenter) &&
+            const DeepCollectionEquality()
+                .equals(other.meanAnomaly, meanAnomaly));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(capsule),
-      const DeepCollectionEquality().hash(name),
-      const DeepCollectionEquality().hash(reused),
-      const DeepCollectionEquality().hash(customer),
-      const DeepCollectionEquality().hash(nationality),
-      const DeepCollectionEquality().hash(manufacturer),
-      const DeepCollectionEquality().hash(mass),
-      const DeepCollectionEquality().hash(orbit),
-      const DeepCollectionEquality().hash(periapsis),
-      const DeepCollectionEquality().hash(apoapsis),
-      const DeepCollectionEquality().hash(inclination),
-      const DeepCollectionEquality().hash(period),
-      const DeepCollectionEquality().hash(id));
+  int get hashCode => Object.hashAll([
+        runtimeType,
+        const DeepCollectionEquality().hash(id),
+        const DeepCollectionEquality().hash(dragon),
+        const DeepCollectionEquality().hash(name),
+        const DeepCollectionEquality().hash(type),
+        const DeepCollectionEquality().hash(reused),
+        const DeepCollectionEquality().hash(launch),
+        const DeepCollectionEquality().hash(_customers),
+        const DeepCollectionEquality().hash(_noradIds),
+        const DeepCollectionEquality().hash(_nationalities),
+        const DeepCollectionEquality().hash(_manufacturers),
+        const DeepCollectionEquality().hash(massKg),
+        const DeepCollectionEquality().hash(massLbs),
+        const DeepCollectionEquality().hash(orbit),
+        const DeepCollectionEquality().hash(referenceSystem),
+        const DeepCollectionEquality().hash(regime),
+        const DeepCollectionEquality().hash(longitude),
+        const DeepCollectionEquality().hash(semiMajorAxisKm),
+        const DeepCollectionEquality().hash(eccentricity),
+        const DeepCollectionEquality().hash(periapsisKm),
+        const DeepCollectionEquality().hash(apoapsisKm),
+        const DeepCollectionEquality().hash(inclinationDeg),
+        const DeepCollectionEquality().hash(periodMin),
+        const DeepCollectionEquality().hash(lifespanYears),
+        const DeepCollectionEquality().hash(epoch),
+        const DeepCollectionEquality().hash(meanMotion),
+        const DeepCollectionEquality().hash(raan),
+        const DeepCollectionEquality().hash(argOfPericenter),
+        const DeepCollectionEquality().hash(meanAnomaly)
+      ]);
 
   @JsonKey(ignore: true)
   @override
@@ -371,51 +759,1305 @@ class _$_Payload extends _Payload {
 
 abstract class _Payload extends Payload {
   const factory _Payload(
-      {final CapsuleModel? capsule,
-      final String? name,
-      final bool reused,
-      final String? customer,
-      final String? nationality,
-      final String? manufacturer,
-      final num? mass,
-      final String? orbit,
-      final num? periapsis,
-      final num? apoapsis,
-      final num? inclination,
-      final num? period,
-      final String? id}) = _$_Payload;
+      {@JsonKey(name: 'id') required final String id,
+      @JsonKey(name: 'dragon') final PayloadDragon? dragon,
+      @JsonKey(name: 'name') final String? name,
+      @JsonKey(name: 'type') final String? type,
+      @JsonKey(name: 'reused') final bool reused,
+      @JsonKey(name: 'launch') final String? launch,
+      @JsonKey(name: 'customers') final List<String> customers,
+      @JsonKey(name: 'norad_ids') final List<int> noradIds,
+      @JsonKey(name: 'nationalities') final List<String> nationalities,
+      @JsonKey(name: 'manufacturers') final List<String> manufacturers,
+      @JsonKey(name: 'mass_kg') final double? massKg,
+      @JsonKey(name: 'mass_lbs') final double? massLbs,
+      @JsonKey(name: 'orbit') final String? orbit,
+      @JsonKey(name: 'reference_system') final String? referenceSystem,
+      @JsonKey(name: 'regime') final String? regime,
+      @JsonKey(name: 'longitude') final double? longitude,
+      @JsonKey(name: 'semi_major_axis_km') final double? semiMajorAxisKm,
+      @JsonKey(name: 'eccentricity') final double? eccentricity,
+      @JsonKey(name: 'periapsis_km') final double? periapsisKm,
+      @JsonKey(name: 'apoapsis_km') final double? apoapsisKm,
+      @JsonKey(name: 'inclination_deg') final double? inclinationDeg,
+      @JsonKey(name: 'period_min') final double? periodMin,
+      @JsonKey(name: 'lifespan_years') final double? lifespanYears,
+      @JsonKey(name: 'epoch') final String? epoch,
+      @JsonKey(name: 'mean_motion') final double? meanMotion,
+      @JsonKey(name: 'raan') final double? raan,
+      @JsonKey(name: 'arg_of_pericenter') final double? argOfPericenter,
+      @JsonKey(name: 'mean_anomaly') final double? meanAnomaly}) = _$_Payload;
   const _Payload._() : super._();
 
   factory _Payload.fromJson(Map<String, dynamic> json) = _$_Payload.fromJson;
 
   @override
-  CapsuleModel? get capsule;
+  @JsonKey(name: 'id')
+  String get id;
   @override
+  @JsonKey(name: 'dragon')
+  PayloadDragon? get dragon;
+  @override
+  @JsonKey(name: 'name')
   String? get name;
   @override
+  @JsonKey(name: 'type')
+  String? get type;
+  @override
+  @JsonKey(name: 'reused')
   bool get reused;
   @override
-  String? get customer;
+  @JsonKey(name: 'launch')
+  String? get launch;
   @override
-  String? get nationality;
+  @JsonKey(name: 'customers')
+  List<String> get customers;
   @override
-  String? get manufacturer;
+  @JsonKey(name: 'norad_ids')
+  List<int> get noradIds;
   @override
-  num? get mass;
+  @JsonKey(name: 'nationalities')
+  List<String> get nationalities;
   @override
+  @JsonKey(name: 'manufacturers')
+  List<String> get manufacturers;
+  @override
+  @JsonKey(name: 'mass_kg')
+  double? get massKg;
+  @override
+  @JsonKey(name: 'mass_lbs')
+  double? get massLbs;
+  @override
+  @JsonKey(name: 'orbit')
   String? get orbit;
   @override
-  num? get periapsis;
+  @JsonKey(name: 'reference_system')
+  String? get referenceSystem;
   @override
-  num? get apoapsis;
+  @JsonKey(name: 'regime')
+  String? get regime;
   @override
-  num? get inclination;
+  @JsonKey(name: 'longitude')
+  double? get longitude;
   @override
-  num? get period;
+  @JsonKey(name: 'semi_major_axis_km')
+  double? get semiMajorAxisKm;
   @override
-  String? get id;
+  @JsonKey(name: 'eccentricity')
+  double? get eccentricity;
+  @override
+  @JsonKey(name: 'periapsis_km')
+  double? get periapsisKm;
+  @override
+  @JsonKey(name: 'apoapsis_km')
+  double? get apoapsisKm;
+  @override
+  @JsonKey(name: 'inclination_deg')
+  double? get inclinationDeg;
+  @override
+  @JsonKey(name: 'period_min')
+  double? get periodMin;
+  @override
+  @JsonKey(name: 'lifespan_years')
+  double? get lifespanYears;
+  @override
+  @JsonKey(name: 'epoch')
+  String? get epoch;
+  @override
+  @JsonKey(name: 'mean_motion')
+  double? get meanMotion;
+  @override
+  @JsonKey(name: 'raan')
+  double? get raan;
+  @override
+  @JsonKey(name: 'arg_of_pericenter')
+  double? get argOfPericenter;
+  @override
+  @JsonKey(name: 'mean_anomaly')
+  double? get meanAnomaly;
   @override
   @JsonKey(ignore: true)
   _$$_PayloadCopyWith<_$_Payload> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+FullPayload _$FullPayloadFromJson(Map<String, dynamic> json) {
+  return _FullPayload.fromJson(json);
+}
+
+/// @nodoc
+mixin _$FullPayload {
+  @JsonKey(name: 'id')
+  String get id => throw _privateConstructorUsedError;
+  @JsonKey(name: 'dragon')
+  PayloadDragon? get dragon => throw _privateConstructorUsedError;
+  @JsonKey(name: 'name')
+  String? get name => throw _privateConstructorUsedError;
+  @JsonKey(name: 'type')
+  String? get type => throw _privateConstructorUsedError;
+  @JsonKey(name: 'reused')
+  bool get reused => throw _privateConstructorUsedError;
+  @JsonKey(name: 'launch')
+  Launch? get launch => throw _privateConstructorUsedError;
+  @JsonKey(name: 'customers')
+  List<String> get customers => throw _privateConstructorUsedError;
+  @JsonKey(name: 'norad_ids')
+  List<int> get noradIds => throw _privateConstructorUsedError;
+  @JsonKey(name: 'nationalities')
+  List<String> get nationalities => throw _privateConstructorUsedError;
+  @JsonKey(name: 'manufacturers')
+  List<String> get manufacturers => throw _privateConstructorUsedError;
+  @JsonKey(name: 'mass_kg')
+  double? get massKg => throw _privateConstructorUsedError;
+  @JsonKey(name: 'mass_lbs')
+  double? get massLbs => throw _privateConstructorUsedError;
+  @JsonKey(name: 'orbit')
+  String? get orbit => throw _privateConstructorUsedError;
+  @JsonKey(name: 'reference_system')
+  String? get referenceSystem => throw _privateConstructorUsedError;
+  @JsonKey(name: 'regime')
+  String? get regime => throw _privateConstructorUsedError;
+  @JsonKey(name: 'longitude')
+  double? get longitude => throw _privateConstructorUsedError;
+  @JsonKey(name: 'semi_major_axis_km')
+  double? get semiMajorAxisKm => throw _privateConstructorUsedError;
+  @JsonKey(name: 'eccentricity')
+  double? get eccentricity => throw _privateConstructorUsedError;
+  @JsonKey(name: 'periapsis_km')
+  double? get periapsisKm => throw _privateConstructorUsedError;
+  @JsonKey(name: 'apoapsis_km')
+  double? get apoapsisKm => throw _privateConstructorUsedError;
+  @JsonKey(name: 'inclination_deg')
+  double? get inclinationDeg => throw _privateConstructorUsedError;
+  @JsonKey(name: 'period_min')
+  double? get periodMin => throw _privateConstructorUsedError;
+  @JsonKey(name: 'lifespan_years')
+  double? get lifespanYears => throw _privateConstructorUsedError;
+  @JsonKey(name: 'epoch')
+  String? get epoch => throw _privateConstructorUsedError;
+  @JsonKey(name: 'mean_motion')
+  double? get meanMotion => throw _privateConstructorUsedError;
+  @JsonKey(name: 'raan')
+  double? get raan => throw _privateConstructorUsedError;
+  @JsonKey(name: 'arg_of_pericenter')
+  double? get argOfPericenter => throw _privateConstructorUsedError;
+  @JsonKey(name: 'mean_anomaly')
+  double? get meanAnomaly => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $FullPayloadCopyWith<FullPayload> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $FullPayloadCopyWith<$Res> {
+  factory $FullPayloadCopyWith(
+          FullPayload value, $Res Function(FullPayload) then) =
+      _$FullPayloadCopyWithImpl<$Res>;
+  $Res call(
+      {@JsonKey(name: 'id') String id,
+      @JsonKey(name: 'dragon') PayloadDragon? dragon,
+      @JsonKey(name: 'name') String? name,
+      @JsonKey(name: 'type') String? type,
+      @JsonKey(name: 'reused') bool reused,
+      @JsonKey(name: 'launch') Launch? launch,
+      @JsonKey(name: 'customers') List<String> customers,
+      @JsonKey(name: 'norad_ids') List<int> noradIds,
+      @JsonKey(name: 'nationalities') List<String> nationalities,
+      @JsonKey(name: 'manufacturers') List<String> manufacturers,
+      @JsonKey(name: 'mass_kg') double? massKg,
+      @JsonKey(name: 'mass_lbs') double? massLbs,
+      @JsonKey(name: 'orbit') String? orbit,
+      @JsonKey(name: 'reference_system') String? referenceSystem,
+      @JsonKey(name: 'regime') String? regime,
+      @JsonKey(name: 'longitude') double? longitude,
+      @JsonKey(name: 'semi_major_axis_km') double? semiMajorAxisKm,
+      @JsonKey(name: 'eccentricity') double? eccentricity,
+      @JsonKey(name: 'periapsis_km') double? periapsisKm,
+      @JsonKey(name: 'apoapsis_km') double? apoapsisKm,
+      @JsonKey(name: 'inclination_deg') double? inclinationDeg,
+      @JsonKey(name: 'period_min') double? periodMin,
+      @JsonKey(name: 'lifespan_years') double? lifespanYears,
+      @JsonKey(name: 'epoch') String? epoch,
+      @JsonKey(name: 'mean_motion') double? meanMotion,
+      @JsonKey(name: 'raan') double? raan,
+      @JsonKey(name: 'arg_of_pericenter') double? argOfPericenter,
+      @JsonKey(name: 'mean_anomaly') double? meanAnomaly});
+
+  $PayloadDragonCopyWith<$Res>? get dragon;
+  $LaunchCopyWith<$Res>? get launch;
+}
+
+/// @nodoc
+class _$FullPayloadCopyWithImpl<$Res> implements $FullPayloadCopyWith<$Res> {
+  _$FullPayloadCopyWithImpl(this._value, this._then);
+
+  final FullPayload _value;
+  // ignore: unused_field
+  final $Res Function(FullPayload) _then;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? dragon = freezed,
+    Object? name = freezed,
+    Object? type = freezed,
+    Object? reused = freezed,
+    Object? launch = freezed,
+    Object? customers = freezed,
+    Object? noradIds = freezed,
+    Object? nationalities = freezed,
+    Object? manufacturers = freezed,
+    Object? massKg = freezed,
+    Object? massLbs = freezed,
+    Object? orbit = freezed,
+    Object? referenceSystem = freezed,
+    Object? regime = freezed,
+    Object? longitude = freezed,
+    Object? semiMajorAxisKm = freezed,
+    Object? eccentricity = freezed,
+    Object? periapsisKm = freezed,
+    Object? apoapsisKm = freezed,
+    Object? inclinationDeg = freezed,
+    Object? periodMin = freezed,
+    Object? lifespanYears = freezed,
+    Object? epoch = freezed,
+    Object? meanMotion = freezed,
+    Object? raan = freezed,
+    Object? argOfPericenter = freezed,
+    Object? meanAnomaly = freezed,
+  }) {
+    return _then(_value.copyWith(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String,
+      dragon: dragon == freezed
+          ? _value.dragon
+          : dragon // ignore: cast_nullable_to_non_nullable
+              as PayloadDragon?,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String?,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as String?,
+      reused: reused == freezed
+          ? _value.reused
+          : reused // ignore: cast_nullable_to_non_nullable
+              as bool,
+      launch: launch == freezed
+          ? _value.launch
+          : launch // ignore: cast_nullable_to_non_nullable
+              as Launch?,
+      customers: customers == freezed
+          ? _value.customers
+          : customers // ignore: cast_nullable_to_non_nullable
+              as List<String>,
+      noradIds: noradIds == freezed
+          ? _value.noradIds
+          : noradIds // ignore: cast_nullable_to_non_nullable
+              as List<int>,
+      nationalities: nationalities == freezed
+          ? _value.nationalities
+          : nationalities // ignore: cast_nullable_to_non_nullable
+              as List<String>,
+      manufacturers: manufacturers == freezed
+          ? _value.manufacturers
+          : manufacturers // ignore: cast_nullable_to_non_nullable
+              as List<String>,
+      massKg: massKg == freezed
+          ? _value.massKg
+          : massKg // ignore: cast_nullable_to_non_nullable
+              as double?,
+      massLbs: massLbs == freezed
+          ? _value.massLbs
+          : massLbs // ignore: cast_nullable_to_non_nullable
+              as double?,
+      orbit: orbit == freezed
+          ? _value.orbit
+          : orbit // ignore: cast_nullable_to_non_nullable
+              as String?,
+      referenceSystem: referenceSystem == freezed
+          ? _value.referenceSystem
+          : referenceSystem // ignore: cast_nullable_to_non_nullable
+              as String?,
+      regime: regime == freezed
+          ? _value.regime
+          : regime // ignore: cast_nullable_to_non_nullable
+              as String?,
+      longitude: longitude == freezed
+          ? _value.longitude
+          : longitude // ignore: cast_nullable_to_non_nullable
+              as double?,
+      semiMajorAxisKm: semiMajorAxisKm == freezed
+          ? _value.semiMajorAxisKm
+          : semiMajorAxisKm // ignore: cast_nullable_to_non_nullable
+              as double?,
+      eccentricity: eccentricity == freezed
+          ? _value.eccentricity
+          : eccentricity // ignore: cast_nullable_to_non_nullable
+              as double?,
+      periapsisKm: periapsisKm == freezed
+          ? _value.periapsisKm
+          : periapsisKm // ignore: cast_nullable_to_non_nullable
+              as double?,
+      apoapsisKm: apoapsisKm == freezed
+          ? _value.apoapsisKm
+          : apoapsisKm // ignore: cast_nullable_to_non_nullable
+              as double?,
+      inclinationDeg: inclinationDeg == freezed
+          ? _value.inclinationDeg
+          : inclinationDeg // ignore: cast_nullable_to_non_nullable
+              as double?,
+      periodMin: periodMin == freezed
+          ? _value.periodMin
+          : periodMin // ignore: cast_nullable_to_non_nullable
+              as double?,
+      lifespanYears: lifespanYears == freezed
+          ? _value.lifespanYears
+          : lifespanYears // ignore: cast_nullable_to_non_nullable
+              as double?,
+      epoch: epoch == freezed
+          ? _value.epoch
+          : epoch // ignore: cast_nullable_to_non_nullable
+              as String?,
+      meanMotion: meanMotion == freezed
+          ? _value.meanMotion
+          : meanMotion // ignore: cast_nullable_to_non_nullable
+              as double?,
+      raan: raan == freezed
+          ? _value.raan
+          : raan // ignore: cast_nullable_to_non_nullable
+              as double?,
+      argOfPericenter: argOfPericenter == freezed
+          ? _value.argOfPericenter
+          : argOfPericenter // ignore: cast_nullable_to_non_nullable
+              as double?,
+      meanAnomaly: meanAnomaly == freezed
+          ? _value.meanAnomaly
+          : meanAnomaly // ignore: cast_nullable_to_non_nullable
+              as double?,
+    ));
+  }
+
+  @override
+  $PayloadDragonCopyWith<$Res>? get dragon {
+    if (_value.dragon == null) {
+      return null;
+    }
+
+    return $PayloadDragonCopyWith<$Res>(_value.dragon!, (value) {
+      return _then(_value.copyWith(dragon: value));
+    });
+  }
+
+  @override
+  $LaunchCopyWith<$Res>? get launch {
+    if (_value.launch == null) {
+      return null;
+    }
+
+    return $LaunchCopyWith<$Res>(_value.launch!, (value) {
+      return _then(_value.copyWith(launch: value));
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$$_FullPayloadCopyWith<$Res>
+    implements $FullPayloadCopyWith<$Res> {
+  factory _$$_FullPayloadCopyWith(
+          _$_FullPayload value, $Res Function(_$_FullPayload) then) =
+      __$$_FullPayloadCopyWithImpl<$Res>;
+  @override
+  $Res call(
+      {@JsonKey(name: 'id') String id,
+      @JsonKey(name: 'dragon') PayloadDragon? dragon,
+      @JsonKey(name: 'name') String? name,
+      @JsonKey(name: 'type') String? type,
+      @JsonKey(name: 'reused') bool reused,
+      @JsonKey(name: 'launch') Launch? launch,
+      @JsonKey(name: 'customers') List<String> customers,
+      @JsonKey(name: 'norad_ids') List<int> noradIds,
+      @JsonKey(name: 'nationalities') List<String> nationalities,
+      @JsonKey(name: 'manufacturers') List<String> manufacturers,
+      @JsonKey(name: 'mass_kg') double? massKg,
+      @JsonKey(name: 'mass_lbs') double? massLbs,
+      @JsonKey(name: 'orbit') String? orbit,
+      @JsonKey(name: 'reference_system') String? referenceSystem,
+      @JsonKey(name: 'regime') String? regime,
+      @JsonKey(name: 'longitude') double? longitude,
+      @JsonKey(name: 'semi_major_axis_km') double? semiMajorAxisKm,
+      @JsonKey(name: 'eccentricity') double? eccentricity,
+      @JsonKey(name: 'periapsis_km') double? periapsisKm,
+      @JsonKey(name: 'apoapsis_km') double? apoapsisKm,
+      @JsonKey(name: 'inclination_deg') double? inclinationDeg,
+      @JsonKey(name: 'period_min') double? periodMin,
+      @JsonKey(name: 'lifespan_years') double? lifespanYears,
+      @JsonKey(name: 'epoch') String? epoch,
+      @JsonKey(name: 'mean_motion') double? meanMotion,
+      @JsonKey(name: 'raan') double? raan,
+      @JsonKey(name: 'arg_of_pericenter') double? argOfPericenter,
+      @JsonKey(name: 'mean_anomaly') double? meanAnomaly});
+
+  @override
+  $PayloadDragonCopyWith<$Res>? get dragon;
+  @override
+  $LaunchCopyWith<$Res>? get launch;
+}
+
+/// @nodoc
+class __$$_FullPayloadCopyWithImpl<$Res> extends _$FullPayloadCopyWithImpl<$Res>
+    implements _$$_FullPayloadCopyWith<$Res> {
+  __$$_FullPayloadCopyWithImpl(
+      _$_FullPayload _value, $Res Function(_$_FullPayload) _then)
+      : super(_value, (v) => _then(v as _$_FullPayload));
+
+  @override
+  _$_FullPayload get _value => super._value as _$_FullPayload;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? dragon = freezed,
+    Object? name = freezed,
+    Object? type = freezed,
+    Object? reused = freezed,
+    Object? launch = freezed,
+    Object? customers = freezed,
+    Object? noradIds = freezed,
+    Object? nationalities = freezed,
+    Object? manufacturers = freezed,
+    Object? massKg = freezed,
+    Object? massLbs = freezed,
+    Object? orbit = freezed,
+    Object? referenceSystem = freezed,
+    Object? regime = freezed,
+    Object? longitude = freezed,
+    Object? semiMajorAxisKm = freezed,
+    Object? eccentricity = freezed,
+    Object? periapsisKm = freezed,
+    Object? apoapsisKm = freezed,
+    Object? inclinationDeg = freezed,
+    Object? periodMin = freezed,
+    Object? lifespanYears = freezed,
+    Object? epoch = freezed,
+    Object? meanMotion = freezed,
+    Object? raan = freezed,
+    Object? argOfPericenter = freezed,
+    Object? meanAnomaly = freezed,
+  }) {
+    return _then(_$_FullPayload(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String,
+      dragon: dragon == freezed
+          ? _value.dragon
+          : dragon // ignore: cast_nullable_to_non_nullable
+              as PayloadDragon?,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String?,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as String?,
+      reused: reused == freezed
+          ? _value.reused
+          : reused // ignore: cast_nullable_to_non_nullable
+              as bool,
+      launch: launch == freezed
+          ? _value.launch
+          : launch // ignore: cast_nullable_to_non_nullable
+              as Launch?,
+      customers: customers == freezed
+          ? _value._customers
+          : customers // ignore: cast_nullable_to_non_nullable
+              as List<String>,
+      noradIds: noradIds == freezed
+          ? _value._noradIds
+          : noradIds // ignore: cast_nullable_to_non_nullable
+              as List<int>,
+      nationalities: nationalities == freezed
+          ? _value._nationalities
+          : nationalities // ignore: cast_nullable_to_non_nullable
+              as List<String>,
+      manufacturers: manufacturers == freezed
+          ? _value._manufacturers
+          : manufacturers // ignore: cast_nullable_to_non_nullable
+              as List<String>,
+      massKg: massKg == freezed
+          ? _value.massKg
+          : massKg // ignore: cast_nullable_to_non_nullable
+              as double?,
+      massLbs: massLbs == freezed
+          ? _value.massLbs
+          : massLbs // ignore: cast_nullable_to_non_nullable
+              as double?,
+      orbit: orbit == freezed
+          ? _value.orbit
+          : orbit // ignore: cast_nullable_to_non_nullable
+              as String?,
+      referenceSystem: referenceSystem == freezed
+          ? _value.referenceSystem
+          : referenceSystem // ignore: cast_nullable_to_non_nullable
+              as String?,
+      regime: regime == freezed
+          ? _value.regime
+          : regime // ignore: cast_nullable_to_non_nullable
+              as String?,
+      longitude: longitude == freezed
+          ? _value.longitude
+          : longitude // ignore: cast_nullable_to_non_nullable
+              as double?,
+      semiMajorAxisKm: semiMajorAxisKm == freezed
+          ? _value.semiMajorAxisKm
+          : semiMajorAxisKm // ignore: cast_nullable_to_non_nullable
+              as double?,
+      eccentricity: eccentricity == freezed
+          ? _value.eccentricity
+          : eccentricity // ignore: cast_nullable_to_non_nullable
+              as double?,
+      periapsisKm: periapsisKm == freezed
+          ? _value.periapsisKm
+          : periapsisKm // ignore: cast_nullable_to_non_nullable
+              as double?,
+      apoapsisKm: apoapsisKm == freezed
+          ? _value.apoapsisKm
+          : apoapsisKm // ignore: cast_nullable_to_non_nullable
+              as double?,
+      inclinationDeg: inclinationDeg == freezed
+          ? _value.inclinationDeg
+          : inclinationDeg // ignore: cast_nullable_to_non_nullable
+              as double?,
+      periodMin: periodMin == freezed
+          ? _value.periodMin
+          : periodMin // ignore: cast_nullable_to_non_nullable
+              as double?,
+      lifespanYears: lifespanYears == freezed
+          ? _value.lifespanYears
+          : lifespanYears // ignore: cast_nullable_to_non_nullable
+              as double?,
+      epoch: epoch == freezed
+          ? _value.epoch
+          : epoch // ignore: cast_nullable_to_non_nullable
+              as String?,
+      meanMotion: meanMotion == freezed
+          ? _value.meanMotion
+          : meanMotion // ignore: cast_nullable_to_non_nullable
+              as double?,
+      raan: raan == freezed
+          ? _value.raan
+          : raan // ignore: cast_nullable_to_non_nullable
+              as double?,
+      argOfPericenter: argOfPericenter == freezed
+          ? _value.argOfPericenter
+          : argOfPericenter // ignore: cast_nullable_to_non_nullable
+              as double?,
+      meanAnomaly: meanAnomaly == freezed
+          ? _value.meanAnomaly
+          : meanAnomaly // ignore: cast_nullable_to_non_nullable
+              as double?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$_FullPayload extends _FullPayload {
+  const _$_FullPayload(
+      {@JsonKey(name: 'id')
+          required this.id,
+      @JsonKey(name: 'dragon')
+          this.dragon,
+      @JsonKey(name: 'name')
+          this.name,
+      @JsonKey(name: 'type')
+          this.type,
+      @JsonKey(name: 'reused')
+          this.reused = false,
+      @JsonKey(name: 'launch')
+          this.launch,
+      @JsonKey(name: 'customers')
+          final List<String> customers = const <String>[],
+      @JsonKey(name: 'norad_ids')
+          final List<int> noradIds = const <int>[],
+      @JsonKey(name: 'nationalities')
+          final List<String> nationalities = const <String>[],
+      @JsonKey(name: 'manufacturers')
+          final List<String> manufacturers = const <String>[],
+      @JsonKey(name: 'mass_kg')
+          this.massKg,
+      @JsonKey(name: 'mass_lbs')
+          this.massLbs,
+      @JsonKey(name: 'orbit')
+          this.orbit,
+      @JsonKey(name: 'reference_system')
+          this.referenceSystem,
+      @JsonKey(name: 'regime')
+          this.regime,
+      @JsonKey(name: 'longitude')
+          this.longitude,
+      @JsonKey(name: 'semi_major_axis_km')
+          this.semiMajorAxisKm,
+      @JsonKey(name: 'eccentricity')
+          this.eccentricity,
+      @JsonKey(name: 'periapsis_km')
+          this.periapsisKm,
+      @JsonKey(name: 'apoapsis_km')
+          this.apoapsisKm,
+      @JsonKey(name: 'inclination_deg')
+          this.inclinationDeg,
+      @JsonKey(name: 'period_min')
+          this.periodMin,
+      @JsonKey(name: 'lifespan_years')
+          this.lifespanYears,
+      @JsonKey(name: 'epoch')
+          this.epoch,
+      @JsonKey(name: 'mean_motion')
+          this.meanMotion,
+      @JsonKey(name: 'raan')
+          this.raan,
+      @JsonKey(name: 'arg_of_pericenter')
+          this.argOfPericenter,
+      @JsonKey(name: 'mean_anomaly')
+          this.meanAnomaly})
+      : _customers = customers,
+        _noradIds = noradIds,
+        _nationalities = nationalities,
+        _manufacturers = manufacturers,
+        super._();
+
+  factory _$_FullPayload.fromJson(Map<String, dynamic> json) =>
+      _$$_FullPayloadFromJson(json);
+
+  @override
+  @JsonKey(name: 'id')
+  final String id;
+  @override
+  @JsonKey(name: 'dragon')
+  final PayloadDragon? dragon;
+  @override
+  @JsonKey(name: 'name')
+  final String? name;
+  @override
+  @JsonKey(name: 'type')
+  final String? type;
+  @override
+  @JsonKey(name: 'reused')
+  final bool reused;
+  @override
+  @JsonKey(name: 'launch')
+  final Launch? launch;
+  final List<String> _customers;
+  @override
+  @JsonKey(name: 'customers')
+  List<String> get customers {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_customers);
+  }
+
+  final List<int> _noradIds;
+  @override
+  @JsonKey(name: 'norad_ids')
+  List<int> get noradIds {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_noradIds);
+  }
+
+  final List<String> _nationalities;
+  @override
+  @JsonKey(name: 'nationalities')
+  List<String> get nationalities {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_nationalities);
+  }
+
+  final List<String> _manufacturers;
+  @override
+  @JsonKey(name: 'manufacturers')
+  List<String> get manufacturers {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_manufacturers);
+  }
+
+  @override
+  @JsonKey(name: 'mass_kg')
+  final double? massKg;
+  @override
+  @JsonKey(name: 'mass_lbs')
+  final double? massLbs;
+  @override
+  @JsonKey(name: 'orbit')
+  final String? orbit;
+  @override
+  @JsonKey(name: 'reference_system')
+  final String? referenceSystem;
+  @override
+  @JsonKey(name: 'regime')
+  final String? regime;
+  @override
+  @JsonKey(name: 'longitude')
+  final double? longitude;
+  @override
+  @JsonKey(name: 'semi_major_axis_km')
+  final double? semiMajorAxisKm;
+  @override
+  @JsonKey(name: 'eccentricity')
+  final double? eccentricity;
+  @override
+  @JsonKey(name: 'periapsis_km')
+  final double? periapsisKm;
+  @override
+  @JsonKey(name: 'apoapsis_km')
+  final double? apoapsisKm;
+  @override
+  @JsonKey(name: 'inclination_deg')
+  final double? inclinationDeg;
+  @override
+  @JsonKey(name: 'period_min')
+  final double? periodMin;
+  @override
+  @JsonKey(name: 'lifespan_years')
+  final double? lifespanYears;
+  @override
+  @JsonKey(name: 'epoch')
+  final String? epoch;
+  @override
+  @JsonKey(name: 'mean_motion')
+  final double? meanMotion;
+  @override
+  @JsonKey(name: 'raan')
+  final double? raan;
+  @override
+  @JsonKey(name: 'arg_of_pericenter')
+  final double? argOfPericenter;
+  @override
+  @JsonKey(name: 'mean_anomaly')
+  final double? meanAnomaly;
+
+  @override
+  String toString() {
+    return 'FullPayload(id: $id, dragon: $dragon, name: $name, type: $type, reused: $reused, launch: $launch, customers: $customers, noradIds: $noradIds, nationalities: $nationalities, manufacturers: $manufacturers, massKg: $massKg, massLbs: $massLbs, orbit: $orbit, referenceSystem: $referenceSystem, regime: $regime, longitude: $longitude, semiMajorAxisKm: $semiMajorAxisKm, eccentricity: $eccentricity, periapsisKm: $periapsisKm, apoapsisKm: $apoapsisKm, inclinationDeg: $inclinationDeg, periodMin: $periodMin, lifespanYears: $lifespanYears, epoch: $epoch, meanMotion: $meanMotion, raan: $raan, argOfPericenter: $argOfPericenter, meanAnomaly: $meanAnomaly)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_FullPayload &&
+            const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality().equals(other.dragon, dragon) &&
+            const DeepCollectionEquality().equals(other.name, name) &&
+            const DeepCollectionEquality().equals(other.type, type) &&
+            const DeepCollectionEquality().equals(other.reused, reused) &&
+            const DeepCollectionEquality().equals(other.launch, launch) &&
+            const DeepCollectionEquality()
+                .equals(other._customers, _customers) &&
+            const DeepCollectionEquality().equals(other._noradIds, _noradIds) &&
+            const DeepCollectionEquality()
+                .equals(other._nationalities, _nationalities) &&
+            const DeepCollectionEquality()
+                .equals(other._manufacturers, _manufacturers) &&
+            const DeepCollectionEquality().equals(other.massKg, massKg) &&
+            const DeepCollectionEquality().equals(other.massLbs, massLbs) &&
+            const DeepCollectionEquality().equals(other.orbit, orbit) &&
+            const DeepCollectionEquality()
+                .equals(other.referenceSystem, referenceSystem) &&
+            const DeepCollectionEquality().equals(other.regime, regime) &&
+            const DeepCollectionEquality().equals(other.longitude, longitude) &&
+            const DeepCollectionEquality()
+                .equals(other.semiMajorAxisKm, semiMajorAxisKm) &&
+            const DeepCollectionEquality()
+                .equals(other.eccentricity, eccentricity) &&
+            const DeepCollectionEquality()
+                .equals(other.periapsisKm, periapsisKm) &&
+            const DeepCollectionEquality()
+                .equals(other.apoapsisKm, apoapsisKm) &&
+            const DeepCollectionEquality()
+                .equals(other.inclinationDeg, inclinationDeg) &&
+            const DeepCollectionEquality().equals(other.periodMin, periodMin) &&
+            const DeepCollectionEquality()
+                .equals(other.lifespanYears, lifespanYears) &&
+            const DeepCollectionEquality().equals(other.epoch, epoch) &&
+            const DeepCollectionEquality()
+                .equals(other.meanMotion, meanMotion) &&
+            const DeepCollectionEquality().equals(other.raan, raan) &&
+            const DeepCollectionEquality()
+                .equals(other.argOfPericenter, argOfPericenter) &&
+            const DeepCollectionEquality()
+                .equals(other.meanAnomaly, meanAnomaly));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hashAll([
+        runtimeType,
+        const DeepCollectionEquality().hash(id),
+        const DeepCollectionEquality().hash(dragon),
+        const DeepCollectionEquality().hash(name),
+        const DeepCollectionEquality().hash(type),
+        const DeepCollectionEquality().hash(reused),
+        const DeepCollectionEquality().hash(launch),
+        const DeepCollectionEquality().hash(_customers),
+        const DeepCollectionEquality().hash(_noradIds),
+        const DeepCollectionEquality().hash(_nationalities),
+        const DeepCollectionEquality().hash(_manufacturers),
+        const DeepCollectionEquality().hash(massKg),
+        const DeepCollectionEquality().hash(massLbs),
+        const DeepCollectionEquality().hash(orbit),
+        const DeepCollectionEquality().hash(referenceSystem),
+        const DeepCollectionEquality().hash(regime),
+        const DeepCollectionEquality().hash(longitude),
+        const DeepCollectionEquality().hash(semiMajorAxisKm),
+        const DeepCollectionEquality().hash(eccentricity),
+        const DeepCollectionEquality().hash(periapsisKm),
+        const DeepCollectionEquality().hash(apoapsisKm),
+        const DeepCollectionEquality().hash(inclinationDeg),
+        const DeepCollectionEquality().hash(periodMin),
+        const DeepCollectionEquality().hash(lifespanYears),
+        const DeepCollectionEquality().hash(epoch),
+        const DeepCollectionEquality().hash(meanMotion),
+        const DeepCollectionEquality().hash(raan),
+        const DeepCollectionEquality().hash(argOfPericenter),
+        const DeepCollectionEquality().hash(meanAnomaly)
+      ]);
+
+  @JsonKey(ignore: true)
+  @override
+  _$$_FullPayloadCopyWith<_$_FullPayload> get copyWith =>
+      __$$_FullPayloadCopyWithImpl<_$_FullPayload>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_FullPayloadToJson(
+      this,
+    );
+  }
+}
+
+abstract class _FullPayload extends FullPayload {
+  const factory _FullPayload(
+          {@JsonKey(name: 'id') required final String id,
+          @JsonKey(name: 'dragon') final PayloadDragon? dragon,
+          @JsonKey(name: 'name') final String? name,
+          @JsonKey(name: 'type') final String? type,
+          @JsonKey(name: 'reused') final bool reused,
+          @JsonKey(name: 'launch') final Launch? launch,
+          @JsonKey(name: 'customers') final List<String> customers,
+          @JsonKey(name: 'norad_ids') final List<int> noradIds,
+          @JsonKey(name: 'nationalities') final List<String> nationalities,
+          @JsonKey(name: 'manufacturers') final List<String> manufacturers,
+          @JsonKey(name: 'mass_kg') final double? massKg,
+          @JsonKey(name: 'mass_lbs') final double? massLbs,
+          @JsonKey(name: 'orbit') final String? orbit,
+          @JsonKey(name: 'reference_system') final String? referenceSystem,
+          @JsonKey(name: 'regime') final String? regime,
+          @JsonKey(name: 'longitude') final double? longitude,
+          @JsonKey(name: 'semi_major_axis_km') final double? semiMajorAxisKm,
+          @JsonKey(name: 'eccentricity') final double? eccentricity,
+          @JsonKey(name: 'periapsis_km') final double? periapsisKm,
+          @JsonKey(name: 'apoapsis_km') final double? apoapsisKm,
+          @JsonKey(name: 'inclination_deg') final double? inclinationDeg,
+          @JsonKey(name: 'period_min') final double? periodMin,
+          @JsonKey(name: 'lifespan_years') final double? lifespanYears,
+          @JsonKey(name: 'epoch') final String? epoch,
+          @JsonKey(name: 'mean_motion') final double? meanMotion,
+          @JsonKey(name: 'raan') final double? raan,
+          @JsonKey(name: 'arg_of_pericenter') final double? argOfPericenter,
+          @JsonKey(name: 'mean_anomaly') final double? meanAnomaly}) =
+      _$_FullPayload;
+  const _FullPayload._() : super._();
+
+  factory _FullPayload.fromJson(Map<String, dynamic> json) =
+      _$_FullPayload.fromJson;
+
+  @override
+  @JsonKey(name: 'id')
+  String get id;
+  @override
+  @JsonKey(name: 'dragon')
+  PayloadDragon? get dragon;
+  @override
+  @JsonKey(name: 'name')
+  String? get name;
+  @override
+  @JsonKey(name: 'type')
+  String? get type;
+  @override
+  @JsonKey(name: 'reused')
+  bool get reused;
+  @override
+  @JsonKey(name: 'launch')
+  Launch? get launch;
+  @override
+  @JsonKey(name: 'customers')
+  List<String> get customers;
+  @override
+  @JsonKey(name: 'norad_ids')
+  List<int> get noradIds;
+  @override
+  @JsonKey(name: 'nationalities')
+  List<String> get nationalities;
+  @override
+  @JsonKey(name: 'manufacturers')
+  List<String> get manufacturers;
+  @override
+  @JsonKey(name: 'mass_kg')
+  double? get massKg;
+  @override
+  @JsonKey(name: 'mass_lbs')
+  double? get massLbs;
+  @override
+  @JsonKey(name: 'orbit')
+  String? get orbit;
+  @override
+  @JsonKey(name: 'reference_system')
+  String? get referenceSystem;
+  @override
+  @JsonKey(name: 'regime')
+  String? get regime;
+  @override
+  @JsonKey(name: 'longitude')
+  double? get longitude;
+  @override
+  @JsonKey(name: 'semi_major_axis_km')
+  double? get semiMajorAxisKm;
+  @override
+  @JsonKey(name: 'eccentricity')
+  double? get eccentricity;
+  @override
+  @JsonKey(name: 'periapsis_km')
+  double? get periapsisKm;
+  @override
+  @JsonKey(name: 'apoapsis_km')
+  double? get apoapsisKm;
+  @override
+  @JsonKey(name: 'inclination_deg')
+  double? get inclinationDeg;
+  @override
+  @JsonKey(name: 'period_min')
+  double? get periodMin;
+  @override
+  @JsonKey(name: 'lifespan_years')
+  double? get lifespanYears;
+  @override
+  @JsonKey(name: 'epoch')
+  String? get epoch;
+  @override
+  @JsonKey(name: 'mean_motion')
+  double? get meanMotion;
+  @override
+  @JsonKey(name: 'raan')
+  double? get raan;
+  @override
+  @JsonKey(name: 'arg_of_pericenter')
+  double? get argOfPericenter;
+  @override
+  @JsonKey(name: 'mean_anomaly')
+  double? get meanAnomaly;
+  @override
+  @JsonKey(ignore: true)
+  _$$_FullPayloadCopyWith<_$_FullPayload> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+PayloadDragon _$PayloadDragonFromJson(Map<String, dynamic> json) {
+  return _PayloadDragon.fromJson(json);
+}
+
+/// @nodoc
+mixin _$PayloadDragon {
+  @JsonKey(name: 'capsule')
+  String? get capsule => throw _privateConstructorUsedError;
+  @JsonKey(name: 'mass_returned_kg')
+  double? get massReturnedKg => throw _privateConstructorUsedError;
+  @JsonKey(name: 'mass_returned_lbs')
+  double? get massReturnedLbs => throw _privateConstructorUsedError;
+  @JsonKey(name: 'flight_time_sec')
+  double? get flightTimeSec => throw _privateConstructorUsedError;
+  @JsonKey(name: 'manifest')
+  String? get manifest => throw _privateConstructorUsedError;
+  @JsonKey(name: 'water_landing')
+  bool get waterLanding => throw _privateConstructorUsedError;
+  @JsonKey(name: 'land_landing')
+  bool get landLanding => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $PayloadDragonCopyWith<PayloadDragon> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $PayloadDragonCopyWith<$Res> {
+  factory $PayloadDragonCopyWith(
+          PayloadDragon value, $Res Function(PayloadDragon) then) =
+      _$PayloadDragonCopyWithImpl<$Res>;
+  $Res call(
+      {@JsonKey(name: 'capsule') String? capsule,
+      @JsonKey(name: 'mass_returned_kg') double? massReturnedKg,
+      @JsonKey(name: 'mass_returned_lbs') double? massReturnedLbs,
+      @JsonKey(name: 'flight_time_sec') double? flightTimeSec,
+      @JsonKey(name: 'manifest') String? manifest,
+      @JsonKey(name: 'water_landing') bool waterLanding,
+      @JsonKey(name: 'land_landing') bool landLanding});
+}
+
+/// @nodoc
+class _$PayloadDragonCopyWithImpl<$Res>
+    implements $PayloadDragonCopyWith<$Res> {
+  _$PayloadDragonCopyWithImpl(this._value, this._then);
+
+  final PayloadDragon _value;
+  // ignore: unused_field
+  final $Res Function(PayloadDragon) _then;
+
+  @override
+  $Res call({
+    Object? capsule = freezed,
+    Object? massReturnedKg = freezed,
+    Object? massReturnedLbs = freezed,
+    Object? flightTimeSec = freezed,
+    Object? manifest = freezed,
+    Object? waterLanding = freezed,
+    Object? landLanding = freezed,
+  }) {
+    return _then(_value.copyWith(
+      capsule: capsule == freezed
+          ? _value.capsule
+          : capsule // ignore: cast_nullable_to_non_nullable
+              as String?,
+      massReturnedKg: massReturnedKg == freezed
+          ? _value.massReturnedKg
+          : massReturnedKg // ignore: cast_nullable_to_non_nullable
+              as double?,
+      massReturnedLbs: massReturnedLbs == freezed
+          ? _value.massReturnedLbs
+          : massReturnedLbs // ignore: cast_nullable_to_non_nullable
+              as double?,
+      flightTimeSec: flightTimeSec == freezed
+          ? _value.flightTimeSec
+          : flightTimeSec // ignore: cast_nullable_to_non_nullable
+              as double?,
+      manifest: manifest == freezed
+          ? _value.manifest
+          : manifest // ignore: cast_nullable_to_non_nullable
+              as String?,
+      waterLanding: waterLanding == freezed
+          ? _value.waterLanding
+          : waterLanding // ignore: cast_nullable_to_non_nullable
+              as bool,
+      landLanding: landLanding == freezed
+          ? _value.landLanding
+          : landLanding // ignore: cast_nullable_to_non_nullable
+              as bool,
+    ));
+  }
+}
+
+/// @nodoc
+abstract class _$$_PayloadDragonCopyWith<$Res>
+    implements $PayloadDragonCopyWith<$Res> {
+  factory _$$_PayloadDragonCopyWith(
+          _$_PayloadDragon value, $Res Function(_$_PayloadDragon) then) =
+      __$$_PayloadDragonCopyWithImpl<$Res>;
+  @override
+  $Res call(
+      {@JsonKey(name: 'capsule') String? capsule,
+      @JsonKey(name: 'mass_returned_kg') double? massReturnedKg,
+      @JsonKey(name: 'mass_returned_lbs') double? massReturnedLbs,
+      @JsonKey(name: 'flight_time_sec') double? flightTimeSec,
+      @JsonKey(name: 'manifest') String? manifest,
+      @JsonKey(name: 'water_landing') bool waterLanding,
+      @JsonKey(name: 'land_landing') bool landLanding});
+}
+
+/// @nodoc
+class __$$_PayloadDragonCopyWithImpl<$Res>
+    extends _$PayloadDragonCopyWithImpl<$Res>
+    implements _$$_PayloadDragonCopyWith<$Res> {
+  __$$_PayloadDragonCopyWithImpl(
+      _$_PayloadDragon _value, $Res Function(_$_PayloadDragon) _then)
+      : super(_value, (v) => _then(v as _$_PayloadDragon));
+
+  @override
+  _$_PayloadDragon get _value => super._value as _$_PayloadDragon;
+
+  @override
+  $Res call({
+    Object? capsule = freezed,
+    Object? massReturnedKg = freezed,
+    Object? massReturnedLbs = freezed,
+    Object? flightTimeSec = freezed,
+    Object? manifest = freezed,
+    Object? waterLanding = freezed,
+    Object? landLanding = freezed,
+  }) {
+    return _then(_$_PayloadDragon(
+      capsule: capsule == freezed
+          ? _value.capsule
+          : capsule // ignore: cast_nullable_to_non_nullable
+              as String?,
+      massReturnedKg: massReturnedKg == freezed
+          ? _value.massReturnedKg
+          : massReturnedKg // ignore: cast_nullable_to_non_nullable
+              as double?,
+      massReturnedLbs: massReturnedLbs == freezed
+          ? _value.massReturnedLbs
+          : massReturnedLbs // ignore: cast_nullable_to_non_nullable
+              as double?,
+      flightTimeSec: flightTimeSec == freezed
+          ? _value.flightTimeSec
+          : flightTimeSec // ignore: cast_nullable_to_non_nullable
+              as double?,
+      manifest: manifest == freezed
+          ? _value.manifest
+          : manifest // ignore: cast_nullable_to_non_nullable
+              as String?,
+      waterLanding: waterLanding == freezed
+          ? _value.waterLanding
+          : waterLanding // ignore: cast_nullable_to_non_nullable
+              as bool,
+      landLanding: landLanding == freezed
+          ? _value.landLanding
+          : landLanding // ignore: cast_nullable_to_non_nullable
+              as bool,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$_PayloadDragon extends _PayloadDragon {
+  const _$_PayloadDragon(
+      {@JsonKey(name: 'capsule') this.capsule,
+      @JsonKey(name: 'mass_returned_kg') this.massReturnedKg,
+      @JsonKey(name: 'mass_returned_lbs') this.massReturnedLbs,
+      @JsonKey(name: 'flight_time_sec') this.flightTimeSec,
+      @JsonKey(name: 'manifest') this.manifest,
+      @JsonKey(name: 'water_landing') this.waterLanding = false,
+      @JsonKey(name: 'land_landing') this.landLanding = false})
+      : super._();
+
+  factory _$_PayloadDragon.fromJson(Map<String, dynamic> json) =>
+      _$$_PayloadDragonFromJson(json);
+
+  @override
+  @JsonKey(name: 'capsule')
+  final String? capsule;
+  @override
+  @JsonKey(name: 'mass_returned_kg')
+  final double? massReturnedKg;
+  @override
+  @JsonKey(name: 'mass_returned_lbs')
+  final double? massReturnedLbs;
+  @override
+  @JsonKey(name: 'flight_time_sec')
+  final double? flightTimeSec;
+  @override
+  @JsonKey(name: 'manifest')
+  final String? manifest;
+  @override
+  @JsonKey(name: 'water_landing')
+  final bool waterLanding;
+  @override
+  @JsonKey(name: 'land_landing')
+  final bool landLanding;
+
+  @override
+  String toString() {
+    return 'PayloadDragon(capsule: $capsule, massReturnedKg: $massReturnedKg, massReturnedLbs: $massReturnedLbs, flightTimeSec: $flightTimeSec, manifest: $manifest, waterLanding: $waterLanding, landLanding: $landLanding)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_PayloadDragon &&
+            const DeepCollectionEquality().equals(other.capsule, capsule) &&
+            const DeepCollectionEquality()
+                .equals(other.massReturnedKg, massReturnedKg) &&
+            const DeepCollectionEquality()
+                .equals(other.massReturnedLbs, massReturnedLbs) &&
+            const DeepCollectionEquality()
+                .equals(other.flightTimeSec, flightTimeSec) &&
+            const DeepCollectionEquality().equals(other.manifest, manifest) &&
+            const DeepCollectionEquality()
+                .equals(other.waterLanding, waterLanding) &&
+            const DeepCollectionEquality()
+                .equals(other.landLanding, landLanding));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(capsule),
+      const DeepCollectionEquality().hash(massReturnedKg),
+      const DeepCollectionEquality().hash(massReturnedLbs),
+      const DeepCollectionEquality().hash(flightTimeSec),
+      const DeepCollectionEquality().hash(manifest),
+      const DeepCollectionEquality().hash(waterLanding),
+      const DeepCollectionEquality().hash(landLanding));
+
+  @JsonKey(ignore: true)
+  @override
+  _$$_PayloadDragonCopyWith<_$_PayloadDragon> get copyWith =>
+      __$$_PayloadDragonCopyWithImpl<_$_PayloadDragon>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_PayloadDragonToJson(
+      this,
+    );
+  }
+}
+
+abstract class _PayloadDragon extends PayloadDragon {
+  const factory _PayloadDragon(
+          {@JsonKey(name: 'capsule') final String? capsule,
+          @JsonKey(name: 'mass_returned_kg') final double? massReturnedKg,
+          @JsonKey(name: 'mass_returned_lbs') final double? massReturnedLbs,
+          @JsonKey(name: 'flight_time_sec') final double? flightTimeSec,
+          @JsonKey(name: 'manifest') final String? manifest,
+          @JsonKey(name: 'water_landing') final bool waterLanding,
+          @JsonKey(name: 'land_landing') final bool landLanding}) =
+      _$_PayloadDragon;
+  const _PayloadDragon._() : super._();
+
+  factory _PayloadDragon.fromJson(Map<String, dynamic> json) =
+      _$_PayloadDragon.fromJson;
+
+  @override
+  @JsonKey(name: 'capsule')
+  String? get capsule;
+  @override
+  @JsonKey(name: 'mass_returned_kg')
+  double? get massReturnedKg;
+  @override
+  @JsonKey(name: 'mass_returned_lbs')
+  double? get massReturnedLbs;
+  @override
+  @JsonKey(name: 'flight_time_sec')
+  double? get flightTimeSec;
+  @override
+  @JsonKey(name: 'manifest')
+  String? get manifest;
+  @override
+  @JsonKey(name: 'water_landing')
+  bool get waterLanding;
+  @override
+  @JsonKey(name: 'land_landing')
+  bool get landLanding;
+  @override
+  @JsonKey(ignore: true)
+  _$$_PayloadDragonCopyWith<_$_PayloadDragon> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -20,6 +20,7 @@ Launch _$LaunchFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Launch {
+  @JsonKey(name: 'id')
   String get id => throw _privateConstructorUsedError;
   bool get tbd => throw _privateConstructorUsedError;
   @JsonKey(name: 'auto_update')
@@ -79,7 +80,7 @@ abstract class $LaunchCopyWith<$Res> {
   factory $LaunchCopyWith(Launch value, $Res Function(Launch) then) =
       _$LaunchCopyWithImpl<$Res>;
   $Res call(
-      {String id,
+      {@JsonKey(name: 'id') String id,
       bool tbd,
       @JsonKey(name: 'auto_update') bool autoUpdate,
       @JsonKey(name: 'cores') List<Core> cores,
@@ -278,7 +279,7 @@ abstract class _$$_LaunchCopyWith<$Res> implements $LaunchCopyWith<$Res> {
       __$$_LaunchCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String id,
+      {@JsonKey(name: 'id') String id,
       bool tbd,
       @JsonKey(name: 'auto_update') bool autoUpdate,
       @JsonKey(name: 'cores') List<Core> cores,
@@ -456,7 +457,7 @@ class __$$_LaunchCopyWithImpl<$Res> extends _$LaunchCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_Launch extends _Launch {
   const _$_Launch(
-      {required this.id,
+      {@JsonKey(name: 'id') required this.id,
       this.tbd = false,
       @JsonKey(name: 'auto_update') this.autoUpdate = false,
       @JsonKey(name: 'cores') final List<Core> cores = const <Core>[],
@@ -492,6 +493,7 @@ class _$_Launch extends _Launch {
       _$$_LaunchFromJson(json);
 
   @override
+  @JsonKey(name: 'id')
   final String id;
   @override
   @JsonKey()
@@ -681,7 +683,7 @@ class _$_Launch extends _Launch {
 
 abstract class _Launch extends Launch {
   const factory _Launch(
-      {required final String id,
+      {@JsonKey(name: 'id') required final String id,
       final bool tbd,
       @JsonKey(name: 'auto_update') final bool autoUpdate,
       @JsonKey(name: 'cores') final List<Core> cores,
@@ -711,6 +713,7 @@ abstract class _Launch extends Launch {
   factory _Launch.fromJson(Map<String, dynamic> json) = _$_Launch.fromJson;
 
   @override
+  @JsonKey(name: 'id')
   String get id;
   @override
   bool get tbd;

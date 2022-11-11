@@ -2,6 +2,7 @@ import 'package:api/api.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'launch.freezed.dart';
+
 part 'launch.g.dart';
 
 enum LaunchStatus { retired, active, unknown }
@@ -9,7 +10,7 @@ enum LaunchStatus { retired, active, unknown }
 @freezed
 class Launch with _$Launch {
   const factory Launch({
-    required String id,
+    @JsonKey(name: 'id') required String id,
     @Default(false) bool tbd,
     @JsonKey(name: 'auto_update') @Default(false) bool autoUpdate,
     @JsonKey(name: 'cores') @Default(<Core>[]) List<Core> cores,

@@ -1,6 +1,7 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'core.freezed.dart';
+
 part 'core.g.dart';
 
 /// Auxiliary model to storage details about a core in a particular mission.
@@ -15,11 +16,11 @@ class Core with _$Core {
     @JsonKey(name: 'asds_attempts') @Default(0) int asdsAttempts,
     @JsonKey(name: 'asds_landings') @Default(0) int asdsLandings,
     @JsonKey(name: 'last_update') @Default('') String lastUpdate,
-    @Default([]) List<String> launches,
-    String? serial,
-    String? status,
-    String? core,
-    @Default(0) int flight,
+    @JsonKey(name: 'launches') @Default([]) List<String> launches,
+    @JsonKey(name: 'serial') String? serial,
+    @JsonKey(name: 'status') String? status,
+    @JsonKey(name: 'core') String? core,
+    @JsonKey(name: 'flight') @Default(0) int flight,
     @JsonKey(name: 'gridfins') @Default(false) bool hasGridfins,
     @JsonKey(name: 'legs') @Default(false) bool hasLegs,
     @JsonKey(name: 'reused') @Default(false) bool reused,

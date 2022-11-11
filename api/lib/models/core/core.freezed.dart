@@ -34,10 +34,15 @@ mixin _$Core {
   int get asdsLandings => throw _privateConstructorUsedError;
   @JsonKey(name: 'last_update')
   String get lastUpdate => throw _privateConstructorUsedError;
+  @JsonKey(name: 'launches')
   List<String> get launches => throw _privateConstructorUsedError;
+  @JsonKey(name: 'serial')
   String? get serial => throw _privateConstructorUsedError;
+  @JsonKey(name: 'status')
   String? get status => throw _privateConstructorUsedError;
+  @JsonKey(name: 'core')
   String? get core => throw _privateConstructorUsedError;
+  @JsonKey(name: 'flight')
   int get flight => throw _privateConstructorUsedError;
   @JsonKey(name: 'gridfins')
   bool get hasGridfins => throw _privateConstructorUsedError;
@@ -72,11 +77,11 @@ abstract class $CoreCopyWith<$Res> {
       @JsonKey(name: 'asds_attempts') int asdsAttempts,
       @JsonKey(name: 'asds_landings') int asdsLandings,
       @JsonKey(name: 'last_update') String lastUpdate,
-      List<String> launches,
-      String? serial,
-      String? status,
-      String? core,
-      int flight,
+      @JsonKey(name: 'launches') List<String> launches,
+      @JsonKey(name: 'serial') String? serial,
+      @JsonKey(name: 'status') String? status,
+      @JsonKey(name: 'core') String? core,
+      @JsonKey(name: 'flight') int flight,
       @JsonKey(name: 'gridfins') bool hasGridfins,
       @JsonKey(name: 'legs') bool hasLegs,
       @JsonKey(name: 'reused') bool reused,
@@ -216,11 +221,11 @@ abstract class _$$_CoreCopyWith<$Res> implements $CoreCopyWith<$Res> {
       @JsonKey(name: 'asds_attempts') int asdsAttempts,
       @JsonKey(name: 'asds_landings') int asdsLandings,
       @JsonKey(name: 'last_update') String lastUpdate,
-      List<String> launches,
-      String? serial,
-      String? status,
-      String? core,
-      int flight,
+      @JsonKey(name: 'launches') List<String> launches,
+      @JsonKey(name: 'serial') String? serial,
+      @JsonKey(name: 'status') String? status,
+      @JsonKey(name: 'core') String? core,
+      @JsonKey(name: 'flight') int flight,
       @JsonKey(name: 'gridfins') bool hasGridfins,
       @JsonKey(name: 'legs') bool hasLegs,
       @JsonKey(name: 'reused') bool reused,
@@ -359,11 +364,11 @@ class _$_Core extends _Core {
       @JsonKey(name: 'asds_attempts') this.asdsAttempts = 0,
       @JsonKey(name: 'asds_landings') this.asdsLandings = 0,
       @JsonKey(name: 'last_update') this.lastUpdate = '',
-      final List<String> launches = const [],
-      this.serial,
-      this.status,
-      this.core,
-      this.flight = 0,
+      @JsonKey(name: 'launches') final List<String> launches = const [],
+      @JsonKey(name: 'serial') this.serial,
+      @JsonKey(name: 'status') this.status,
+      @JsonKey(name: 'core') this.core,
+      @JsonKey(name: 'flight') this.flight = 0,
       @JsonKey(name: 'gridfins') this.hasGridfins = false,
       @JsonKey(name: 'legs') this.hasLegs = false,
       @JsonKey(name: 'reused') this.reused = false,
@@ -401,20 +406,23 @@ class _$_Core extends _Core {
   final String lastUpdate;
   final List<String> _launches;
   @override
-  @JsonKey()
+  @JsonKey(name: 'launches')
   List<String> get launches {
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_launches);
   }
 
   @override
+  @JsonKey(name: 'serial')
   final String? serial;
   @override
+  @JsonKey(name: 'status')
   final String? status;
   @override
+  @JsonKey(name: 'core')
   final String? core;
   @override
-  @JsonKey()
+  @JsonKey(name: 'flight')
   final int flight;
   @override
   @JsonKey(name: 'gridfins')
@@ -529,11 +537,11 @@ abstract class _Core extends Core {
       @JsonKey(name: 'asds_attempts') final int asdsAttempts,
       @JsonKey(name: 'asds_landings') final int asdsLandings,
       @JsonKey(name: 'last_update') final String lastUpdate,
-      final List<String> launches,
-      final String? serial,
-      final String? status,
-      final String? core,
-      final int flight,
+      @JsonKey(name: 'launches') final List<String> launches,
+      @JsonKey(name: 'serial') final String? serial,
+      @JsonKey(name: 'status') final String? status,
+      @JsonKey(name: 'core') final String? core,
+      @JsonKey(name: 'flight') final int flight,
       @JsonKey(name: 'gridfins') final bool hasGridfins,
       @JsonKey(name: 'legs') final bool hasLegs,
       @JsonKey(name: 'reused') final bool reused,
@@ -568,14 +576,19 @@ abstract class _Core extends Core {
   @JsonKey(name: 'last_update')
   String get lastUpdate;
   @override
+  @JsonKey(name: 'launches')
   List<String> get launches;
   @override
+  @JsonKey(name: 'serial')
   String? get serial;
   @override
+  @JsonKey(name: 'status')
   String? get status;
   @override
+  @JsonKey(name: 'core')
   String? get core;
   @override
+  @JsonKey(name: 'flight')
   int get flight;
   @override
   @JsonKey(name: 'gridfins')
