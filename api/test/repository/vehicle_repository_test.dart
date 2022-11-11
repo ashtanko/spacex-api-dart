@@ -144,4 +144,16 @@ void main() {
     expect(data.page, 1);
     expect(data.offset, 5);
   });
+
+  test('get roadster, returns data from api', () async {
+    const id = '5eb75f0842fea42237d7f3f4';
+    // arrange
+    dio.interceptors.add(LoggingInterceptor(createLogger(level: Logger.level)));
+
+    // act
+    final data = await repository.getRoadster();
+
+    // assert
+    expect(data.id, id);
+  });
 }

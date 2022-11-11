@@ -51,4 +51,8 @@ class VehicleRepository {
   Future<ApiPaginatedList<RocketVehicle>> queryRockets(q.Query query) {
     return _api.queryRockets(query);
   }
+
+  Future<RoadsterVehicle> getRoadster() {
+    return _api.getRoadster();
+  }
 }
