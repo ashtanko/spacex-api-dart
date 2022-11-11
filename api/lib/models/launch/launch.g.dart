@@ -13,7 +13,7 @@ _$_Launch _$$_LaunchFromJson(Map<String, dynamic> json) => _$_Launch(
       cores: (json['cores'] as List<dynamic>?)
               ?.map((e) => Core.fromJson(e as Map<String, dynamic>))
               .toList() ??
-          const [],
+          const <Core>[],
       upcoming: json['upcoming'] as bool? ?? false,
       datePrecision: json['date_precision'] as String? ?? '',
       dateLocal: json['date_local'] as String? ?? '',
@@ -27,12 +27,13 @@ _$_Launch _$$_LaunchFromJson(Map<String, dynamic> json) => _$_Launch(
               .toList() ??
           const [],
       capsules: (json['capsules'] as List<dynamic>?)
-              ?.map((e) => CapsuleModel.fromJson(e as Map<String, dynamic>))
+              ?.map((e) => e as String)
               .toList() ??
           const [],
-      crew:
-          (json['crew'] as List<dynamic>?)?.map((e) => e as String).toList() ??
-              const [],
+      crew: (json['crew'] as List<dynamic>?)
+              ?.map((e) => ShortCrew.fromJson(e as Map<String, dynamic>))
+              .toList() ??
+          const <ShortCrew>[],
       details: json['details'] as String? ?? '',
       failures: (json['failures'] as List<dynamic>?)
               ?.map((e) => LaunchFailure.fromJson(e as Map<String, dynamic>))
@@ -66,8 +67,8 @@ Map<String, dynamic> _$$_LaunchToJson(_$_Launch instance) => <String, dynamic>{
       'flight_number': instance.flightNumber,
       'launchpad': instance.launchpad,
       'payloads': instance.payloads,
-      'capsules': instance.capsules.map((e) => e.toJson()).toList(),
-      'crew': instance.crew,
+      'capsules': instance.capsules,
+      'crew': instance.crew.map((e) => e.toJson()).toList(),
       'details': instance.details,
       'failures': instance.failures.map((e) => e.toJson()).toList(),
       'success': instance.success,

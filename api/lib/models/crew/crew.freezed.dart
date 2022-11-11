@@ -32,8 +32,8 @@ mixin _$Crew {
   String get wikipedia => throw _privateConstructorUsedError;
   @JsonKey(name: 'launches')
   List<String> get launches => throw _privateConstructorUsedError;
-  @JsonKey(name: 'status')
-  String get status => throw _privateConstructorUsedError;
+  @JsonKey(name: 'status', unknownEnumValue: CrewStatus.unknown)
+  CrewStatus get status => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -45,13 +45,20 @@ abstract class $CrewCopyWith<$Res> {
   factory $CrewCopyWith(Crew value, $Res Function(Crew) then) =
       _$CrewCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(name: 'id') String id,
-      @JsonKey(name: 'name') String name,
-      @JsonKey(name: 'agency') String agency,
-      @JsonKey(name: 'image') String image,
-      @JsonKey(name: 'wikipedia') String wikipedia,
-      @JsonKey(name: 'launches') List<String> launches,
-      @JsonKey(name: 'status') String status});
+      {@JsonKey(name: 'id')
+          String id,
+      @JsonKey(name: 'name')
+          String name,
+      @JsonKey(name: 'agency')
+          String agency,
+      @JsonKey(name: 'image')
+          String image,
+      @JsonKey(name: 'wikipedia')
+          String wikipedia,
+      @JsonKey(name: 'launches')
+          List<String> launches,
+      @JsonKey(name: 'status', unknownEnumValue: CrewStatus.unknown)
+          CrewStatus status});
 }
 
 /// @nodoc
@@ -100,7 +107,7 @@ class _$CrewCopyWithImpl<$Res> implements $CrewCopyWith<$Res> {
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as String,
+              as CrewStatus,
     ));
   }
 }
@@ -111,13 +118,20 @@ abstract class _$$_CrewCopyWith<$Res> implements $CrewCopyWith<$Res> {
       __$$_CrewCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(name: 'id') String id,
-      @JsonKey(name: 'name') String name,
-      @JsonKey(name: 'agency') String agency,
-      @JsonKey(name: 'image') String image,
-      @JsonKey(name: 'wikipedia') String wikipedia,
-      @JsonKey(name: 'launches') List<String> launches,
-      @JsonKey(name: 'status') String status});
+      {@JsonKey(name: 'id')
+          String id,
+      @JsonKey(name: 'name')
+          String name,
+      @JsonKey(name: 'agency')
+          String agency,
+      @JsonKey(name: 'image')
+          String image,
+      @JsonKey(name: 'wikipedia')
+          String wikipedia,
+      @JsonKey(name: 'launches')
+          List<String> launches,
+      @JsonKey(name: 'status', unknownEnumValue: CrewStatus.unknown)
+          CrewStatus status});
 }
 
 /// @nodoc
@@ -167,7 +181,7 @@ class __$$_CrewCopyWithImpl<$Res> extends _$CrewCopyWithImpl<$Res>
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as String,
+              as CrewStatus,
     ));
   }
 }
@@ -176,13 +190,20 @@ class __$$_CrewCopyWithImpl<$Res> extends _$CrewCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_Crew extends _Crew {
   const _$_Crew(
-      {@JsonKey(name: 'id') this.id = '',
-      @JsonKey(name: 'name') this.name = '',
-      @JsonKey(name: 'agency') this.agency = '',
-      @JsonKey(name: 'image') this.image = '',
-      @JsonKey(name: 'wikipedia') this.wikipedia = '',
-      @JsonKey(name: 'launches') final List<String> launches = const [],
-      @JsonKey(name: 'status') this.status = ''})
+      {@JsonKey(name: 'id')
+          this.id = '',
+      @JsonKey(name: 'name')
+          this.name = '',
+      @JsonKey(name: 'agency')
+          this.agency = '',
+      @JsonKey(name: 'image')
+          this.image = '',
+      @JsonKey(name: 'wikipedia')
+          this.wikipedia = '',
+      @JsonKey(name: 'launches')
+          final List<String> launches = const [],
+      @JsonKey(name: 'status', unknownEnumValue: CrewStatus.unknown)
+          this.status = CrewStatus.unknown})
       : _launches = launches,
         super._();
 
@@ -212,8 +233,8 @@ class _$_Crew extends _Crew {
   }
 
   @override
-  @JsonKey(name: 'status')
-  final String status;
+  @JsonKey(name: 'status', unknownEnumValue: CrewStatus.unknown)
+  final CrewStatus status;
 
   @override
   String toString() {
@@ -261,13 +282,20 @@ class _$_Crew extends _Crew {
 
 abstract class _Crew extends Crew {
   const factory _Crew(
-      {@JsonKey(name: 'id') final String id,
-      @JsonKey(name: 'name') final String name,
-      @JsonKey(name: 'agency') final String agency,
-      @JsonKey(name: 'image') final String image,
-      @JsonKey(name: 'wikipedia') final String wikipedia,
-      @JsonKey(name: 'launches') final List<String> launches,
-      @JsonKey(name: 'status') final String status}) = _$_Crew;
+      {@JsonKey(name: 'id')
+          final String id,
+      @JsonKey(name: 'name')
+          final String name,
+      @JsonKey(name: 'agency')
+          final String agency,
+      @JsonKey(name: 'image')
+          final String image,
+      @JsonKey(name: 'wikipedia')
+          final String wikipedia,
+      @JsonKey(name: 'launches')
+          final List<String> launches,
+      @JsonKey(name: 'status', unknownEnumValue: CrewStatus.unknown)
+          final CrewStatus status}) = _$_Crew;
   const _Crew._() : super._();
 
   factory _Crew.fromJson(Map<String, dynamic> json) = _$_Crew.fromJson;
@@ -291,9 +319,171 @@ abstract class _Crew extends Crew {
   @JsonKey(name: 'launches')
   List<String> get launches;
   @override
-  @JsonKey(name: 'status')
-  String get status;
+  @JsonKey(name: 'status', unknownEnumValue: CrewStatus.unknown)
+  CrewStatus get status;
   @override
   @JsonKey(ignore: true)
   _$$_CrewCopyWith<_$_Crew> get copyWith => throw _privateConstructorUsedError;
+}
+
+ShortCrew _$ShortCrewFromJson(Map<String, dynamic> json) {
+  return _ShortCrew.fromJson(json);
+}
+
+/// @nodoc
+mixin _$ShortCrew {
+  @JsonKey(name: 'crew')
+  String get crew => throw _privateConstructorUsedError;
+  @JsonKey(name: 'role')
+  String get role => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $ShortCrewCopyWith<ShortCrew> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $ShortCrewCopyWith<$Res> {
+  factory $ShortCrewCopyWith(ShortCrew value, $Res Function(ShortCrew) then) =
+      _$ShortCrewCopyWithImpl<$Res>;
+  $Res call(
+      {@JsonKey(name: 'crew') String crew, @JsonKey(name: 'role') String role});
+}
+
+/// @nodoc
+class _$ShortCrewCopyWithImpl<$Res> implements $ShortCrewCopyWith<$Res> {
+  _$ShortCrewCopyWithImpl(this._value, this._then);
+
+  final ShortCrew _value;
+  // ignore: unused_field
+  final $Res Function(ShortCrew) _then;
+
+  @override
+  $Res call({
+    Object? crew = freezed,
+    Object? role = freezed,
+  }) {
+    return _then(_value.copyWith(
+      crew: crew == freezed
+          ? _value.crew
+          : crew // ignore: cast_nullable_to_non_nullable
+              as String,
+      role: role == freezed
+          ? _value.role
+          : role // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+abstract class _$$_ShortCrewCopyWith<$Res> implements $ShortCrewCopyWith<$Res> {
+  factory _$$_ShortCrewCopyWith(
+          _$_ShortCrew value, $Res Function(_$_ShortCrew) then) =
+      __$$_ShortCrewCopyWithImpl<$Res>;
+  @override
+  $Res call(
+      {@JsonKey(name: 'crew') String crew, @JsonKey(name: 'role') String role});
+}
+
+/// @nodoc
+class __$$_ShortCrewCopyWithImpl<$Res> extends _$ShortCrewCopyWithImpl<$Res>
+    implements _$$_ShortCrewCopyWith<$Res> {
+  __$$_ShortCrewCopyWithImpl(
+      _$_ShortCrew _value, $Res Function(_$_ShortCrew) _then)
+      : super(_value, (v) => _then(v as _$_ShortCrew));
+
+  @override
+  _$_ShortCrew get _value => super._value as _$_ShortCrew;
+
+  @override
+  $Res call({
+    Object? crew = freezed,
+    Object? role = freezed,
+  }) {
+    return _then(_$_ShortCrew(
+      crew: crew == freezed
+          ? _value.crew
+          : crew // ignore: cast_nullable_to_non_nullable
+              as String,
+      role: role == freezed
+          ? _value.role
+          : role // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$_ShortCrew extends _ShortCrew {
+  const _$_ShortCrew(
+      {@JsonKey(name: 'crew') this.crew = '',
+      @JsonKey(name: 'role') this.role = ''})
+      : super._();
+
+  factory _$_ShortCrew.fromJson(Map<String, dynamic> json) =>
+      _$$_ShortCrewFromJson(json);
+
+  @override
+  @JsonKey(name: 'crew')
+  final String crew;
+  @override
+  @JsonKey(name: 'role')
+  final String role;
+
+  @override
+  String toString() {
+    return 'ShortCrew(crew: $crew, role: $role)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_ShortCrew &&
+            const DeepCollectionEquality().equals(other.crew, crew) &&
+            const DeepCollectionEquality().equals(other.role, role));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(crew),
+      const DeepCollectionEquality().hash(role));
+
+  @JsonKey(ignore: true)
+  @override
+  _$$_ShortCrewCopyWith<_$_ShortCrew> get copyWith =>
+      __$$_ShortCrewCopyWithImpl<_$_ShortCrew>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_ShortCrewToJson(
+      this,
+    );
+  }
+}
+
+abstract class _ShortCrew extends ShortCrew {
+  const factory _ShortCrew(
+      {@JsonKey(name: 'crew') final String crew,
+      @JsonKey(name: 'role') final String role}) = _$_ShortCrew;
+  const _ShortCrew._() : super._();
+
+  factory _ShortCrew.fromJson(Map<String, dynamic> json) =
+      _$_ShortCrew.fromJson;
+
+  @override
+  @JsonKey(name: 'crew')
+  String get crew;
+  @override
+  @JsonKey(name: 'role')
+  String get role;
+  @override
+  @JsonKey(ignore: true)
+  _$$_ShortCrewCopyWith<_$_ShortCrew> get copyWith =>
+      throw _privateConstructorUsedError;
 }

@@ -1,4 +1,5 @@
 import 'package:api/api/capsules/capsules_api.dart';
+import 'package:api/models/capsule/capsule_full_model.dart';
 import 'package:api/models/capsule/capsule_model.dart';
 import 'package:api/models/query/query.dart';
 import 'package:api/models/response/api_paginated_list.dart';
@@ -19,6 +20,11 @@ class CapsulesRepository {
 
   Future<ApiPaginatedList<CapsuleModel>> queryCapsules(Query query) async {
     final capsules = await _api.queryCapsules(query);
+    return capsules;
+  }
+
+  Future<ApiPaginatedList<CapsuleFullModel>> queryFullCapsules(Query query) async {
+    final capsules = await _api.queryFullCapsules(query);
     return capsules;
   }
 }

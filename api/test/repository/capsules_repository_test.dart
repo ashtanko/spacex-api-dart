@@ -39,6 +39,21 @@ void main() {
     expect(data.offset, 0);
   });
 
+  test('queryFullCapsules with empty query data, returns data from api',
+      () async {
+    // arrange
+    dio.interceptors.add(LoggingInterceptor(createLogger(level: Logger.level)));
+
+    // act
+    final data = await repository.queryFullCapsules(
+      const q.Query(options: q.Options(populate: ['launches'])),
+    );
+
+    // assert
+    expect(data.page, 1);
+    expect(data.offset, 0);
+  });
+
   test('queryCapsules with offset 5, returns data from api', () async {
     // arrange
     dio.interceptors.add(LoggingInterceptor(createLogger(level: Logger.level)));

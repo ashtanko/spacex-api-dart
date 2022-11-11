@@ -24,6 +24,7 @@ mixin _$Launch {
   bool get tbd => throw _privateConstructorUsedError;
   @JsonKey(name: 'auto_update')
   bool get autoUpdate => throw _privateConstructorUsedError;
+  @JsonKey(name: 'cores')
   List<Core> get cores => throw _privateConstructorUsedError;
   bool get upcoming => throw _privateConstructorUsedError;
   @JsonKey(name: 'date_precision')
@@ -43,10 +44,10 @@ mixin _$Launch {
   @JsonKey(name: 'payloads')
   List<String> get payloads => throw _privateConstructorUsedError;
   @JsonKey(name: 'capsules')
-  List<CapsuleModel> get capsules =>
+  List<String> get capsules =>
       throw _privateConstructorUsedError; //@JsonKey(name: 'ships') @Default([]) List<Ship> ships,
   @JsonKey(name: 'crew')
-  List<String> get crew => throw _privateConstructorUsedError;
+  List<ShortCrew> get crew => throw _privateConstructorUsedError;
   @JsonKey(name: 'details')
   String get details => throw _privateConstructorUsedError;
   @JsonKey(name: 'failures')
@@ -81,7 +82,7 @@ abstract class $LaunchCopyWith<$Res> {
       {String id,
       bool tbd,
       @JsonKey(name: 'auto_update') bool autoUpdate,
-      List<Core> cores,
+      @JsonKey(name: 'cores') List<Core> cores,
       bool upcoming,
       @JsonKey(name: 'date_precision') String datePrecision,
       @JsonKey(name: 'date_local') String dateLocal,
@@ -91,8 +92,8 @@ abstract class $LaunchCopyWith<$Res> {
       @JsonKey(name: 'flight_number') int flightNumber,
       @JsonKey(name: 'launchpad') String launchpad,
       @JsonKey(name: 'payloads') List<String> payloads,
-      @JsonKey(name: 'capsules') List<CapsuleModel> capsules,
-      @JsonKey(name: 'crew') List<String> crew,
+      @JsonKey(name: 'capsules') List<String> capsules,
+      @JsonKey(name: 'crew') List<ShortCrew> crew,
       @JsonKey(name: 'details') String details,
       @JsonKey(name: 'failures') List<LaunchFailure> failures,
       @JsonKey(name: 'success') bool success,
@@ -200,11 +201,11 @@ class _$LaunchCopyWithImpl<$Res> implements $LaunchCopyWith<$Res> {
       capsules: capsules == freezed
           ? _value.capsules
           : capsules // ignore: cast_nullable_to_non_nullable
-              as List<CapsuleModel>,
+              as List<String>,
       crew: crew == freezed
           ? _value.crew
           : crew // ignore: cast_nullable_to_non_nullable
-              as List<String>,
+              as List<ShortCrew>,
       details: details == freezed
           ? _value.details
           : details // ignore: cast_nullable_to_non_nullable
@@ -280,7 +281,7 @@ abstract class _$$_LaunchCopyWith<$Res> implements $LaunchCopyWith<$Res> {
       {String id,
       bool tbd,
       @JsonKey(name: 'auto_update') bool autoUpdate,
-      List<Core> cores,
+      @JsonKey(name: 'cores') List<Core> cores,
       bool upcoming,
       @JsonKey(name: 'date_precision') String datePrecision,
       @JsonKey(name: 'date_local') String dateLocal,
@@ -290,8 +291,8 @@ abstract class _$$_LaunchCopyWith<$Res> implements $LaunchCopyWith<$Res> {
       @JsonKey(name: 'flight_number') int flightNumber,
       @JsonKey(name: 'launchpad') String launchpad,
       @JsonKey(name: 'payloads') List<String> payloads,
-      @JsonKey(name: 'capsules') List<CapsuleModel> capsules,
-      @JsonKey(name: 'crew') List<String> crew,
+      @JsonKey(name: 'capsules') List<String> capsules,
+      @JsonKey(name: 'crew') List<ShortCrew> crew,
       @JsonKey(name: 'details') String details,
       @JsonKey(name: 'failures') List<LaunchFailure> failures,
       @JsonKey(name: 'success') bool success,
@@ -402,11 +403,11 @@ class __$$_LaunchCopyWithImpl<$Res> extends _$LaunchCopyWithImpl<$Res>
       capsules: capsules == freezed
           ? _value._capsules
           : capsules // ignore: cast_nullable_to_non_nullable
-              as List<CapsuleModel>,
+              as List<String>,
       crew: crew == freezed
           ? _value._crew
           : crew // ignore: cast_nullable_to_non_nullable
-              as List<String>,
+              as List<ShortCrew>,
       details: details == freezed
           ? _value.details
           : details // ignore: cast_nullable_to_non_nullable
@@ -458,7 +459,7 @@ class _$_Launch extends _Launch {
       {required this.id,
       this.tbd = false,
       @JsonKey(name: 'auto_update') this.autoUpdate = false,
-      final List<Core> cores = const [],
+      @JsonKey(name: 'cores') final List<Core> cores = const <Core>[],
       this.upcoming = false,
       @JsonKey(name: 'date_precision') this.datePrecision = '',
       @JsonKey(name: 'date_local') this.dateLocal = '',
@@ -468,8 +469,8 @@ class _$_Launch extends _Launch {
       @JsonKey(name: 'flight_number') this.flightNumber = 0,
       @JsonKey(name: 'launchpad') this.launchpad = '',
       @JsonKey(name: 'payloads') final List<String> payloads = const [],
-      @JsonKey(name: 'capsules') final List<CapsuleModel> capsules = const [],
-      @JsonKey(name: 'crew') final List<String> crew = const [],
+      @JsonKey(name: 'capsules') final List<String> capsules = const [],
+      @JsonKey(name: 'crew') final List<ShortCrew> crew = const <ShortCrew>[],
       @JsonKey(name: 'details') this.details = '',
       @JsonKey(name: 'failures') final List<LaunchFailure> failures = const [],
       @JsonKey(name: 'success') this.success = false,
@@ -500,7 +501,7 @@ class _$_Launch extends _Launch {
   final bool autoUpdate;
   final List<Core> _cores;
   @override
-  @JsonKey()
+  @JsonKey(name: 'cores')
   List<Core> get cores {
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_cores);
@@ -538,20 +539,20 @@ class _$_Launch extends _Launch {
     return EqualUnmodifiableListView(_payloads);
   }
 
-  final List<CapsuleModel> _capsules;
+  final List<String> _capsules;
   @override
   @JsonKey(name: 'capsules')
-  List<CapsuleModel> get capsules {
+  List<String> get capsules {
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_capsules);
   }
 
 //@JsonKey(name: 'ships') @Default([]) List<Ship> ships,
-  final List<String> _crew;
+  final List<ShortCrew> _crew;
 //@JsonKey(name: 'ships') @Default([]) List<Ship> ships,
   @override
   @JsonKey(name: 'crew')
-  List<String> get crew {
+  List<ShortCrew> get crew {
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_crew);
   }
@@ -683,7 +684,7 @@ abstract class _Launch extends Launch {
       {required final String id,
       final bool tbd,
       @JsonKey(name: 'auto_update') final bool autoUpdate,
-      final List<Core> cores,
+      @JsonKey(name: 'cores') final List<Core> cores,
       final bool upcoming,
       @JsonKey(name: 'date_precision') final String datePrecision,
       @JsonKey(name: 'date_local') final String dateLocal,
@@ -693,8 +694,8 @@ abstract class _Launch extends Launch {
       @JsonKey(name: 'flight_number') final int flightNumber,
       @JsonKey(name: 'launchpad') final String launchpad,
       @JsonKey(name: 'payloads') final List<String> payloads,
-      @JsonKey(name: 'capsules') final List<CapsuleModel> capsules,
-      @JsonKey(name: 'crew') final List<String> crew,
+      @JsonKey(name: 'capsules') final List<String> capsules,
+      @JsonKey(name: 'crew') final List<ShortCrew> crew,
       @JsonKey(name: 'details') final String details,
       @JsonKey(name: 'failures') final List<LaunchFailure> failures,
       @JsonKey(name: 'success') final bool success,
@@ -717,6 +718,7 @@ abstract class _Launch extends Launch {
   @JsonKey(name: 'auto_update')
   bool get autoUpdate;
   @override
+  @JsonKey(name: 'cores')
   List<Core> get cores;
   @override
   bool get upcoming;
@@ -746,10 +748,10 @@ abstract class _Launch extends Launch {
   List<String> get payloads;
   @override
   @JsonKey(name: 'capsules')
-  List<CapsuleModel> get capsules;
+  List<String> get capsules;
   @override //@JsonKey(name: 'ships') @Default([]) List<Ship> ships,
   @JsonKey(name: 'crew')
-  List<String> get crew;
+  List<ShortCrew> get crew;
   @override
   @JsonKey(name: 'details')
   String get details;
