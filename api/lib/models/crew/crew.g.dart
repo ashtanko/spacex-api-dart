@@ -6,6 +6,37 @@ part of 'crew.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
+_$_FullCrew _$$_FullCrewFromJson(Map<String, dynamic> json) => _$_FullCrew(
+      id: json['id'] as String? ?? '',
+      name: json['name'] as String? ?? '',
+      agency: json['agency'] as String? ?? '',
+      image: json['image'] as String? ?? '',
+      wikipedia: json['wikipedia'] as String? ?? '',
+      launches: (json['launches'] as List<dynamic>?)
+              ?.map((e) => Launch.fromJson(e as Map<String, dynamic>))
+              .toList() ??
+          const [],
+      status: $enumDecodeNullable(_$CrewStatusEnumMap, json['status'],
+              unknownValue: CrewStatus.unknown) ??
+          CrewStatus.unknown,
+    );
+
+Map<String, dynamic> _$$_FullCrewToJson(_$_FullCrew instance) =>
+    <String, dynamic>{
+      'id': instance.id,
+      'name': instance.name,
+      'agency': instance.agency,
+      'image': instance.image,
+      'wikipedia': instance.wikipedia,
+      'launches': instance.launches.map((e) => e.toJson()).toList(),
+      'status': _$CrewStatusEnumMap[instance.status]!,
+    };
+
+const _$CrewStatusEnumMap = {
+  CrewStatus.unknown: 'unknown',
+  CrewStatus.active: 'active',
+};
+
 _$_Crew _$$_CrewFromJson(Map<String, dynamic> json) => _$_Crew(
       id: json['id'] as String? ?? '',
       name: json['name'] as String? ?? '',
@@ -30,11 +61,6 @@ Map<String, dynamic> _$$_CrewToJson(_$_Crew instance) => <String, dynamic>{
       'launches': instance.launches,
       'status': _$CrewStatusEnumMap[instance.status]!,
     };
-
-const _$CrewStatusEnumMap = {
-  CrewStatus.unknown: 'unknown',
-  CrewStatus.active: 'active',
-};
 
 _$_ShortCrew _$$_ShortCrewFromJson(Map<String, dynamic> json) => _$_ShortCrew(
       crew: json['crew'] as String? ?? '',

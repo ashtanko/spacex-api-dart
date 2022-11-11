@@ -52,7 +52,7 @@ void main() {
     expect(data.offset, 5);
   });
 
-  test('queryCor with offset 5, returns data from api', () async {
+  test('queryCore with offset 5, returns data from api', () async {
     const id = '5e9e289df35918033d3b2623';
     // arrange
     dio.interceptors.add(LoggingInterceptor(createLogger(level: Logger.level)));

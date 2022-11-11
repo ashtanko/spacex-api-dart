@@ -1,9 +1,29 @@
+import 'package:api/api.dart';
 import 'package:api/models/crew/crew_status.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'crew.freezed.dart';
 
 part 'crew.g.dart';
+
+@freezed
+class FullCrew with _$FullCrew {
+  const factory FullCrew({
+    @JsonKey(name: 'id') @Default('') String id,
+    @JsonKey(name: 'name') @Default('') String name,
+    @JsonKey(name: 'agency') @Default('') String agency,
+    @JsonKey(name: 'image') @Default('') String image,
+    @JsonKey(name: 'wikipedia') @Default('') String wikipedia,
+    @JsonKey(name: 'launches') @Default([]) List<Launch> launches,
+    @JsonKey(name: 'status', unknownEnumValue: CrewStatus.unknown)
+    @Default(CrewStatus.unknown)
+    CrewStatus status,
+  }) = _FullCrew;
+
+  const FullCrew._();
+
+  factory FullCrew.fromJson(Map<String, dynamic> json) => _$FullCrewFromJson(json);
+}
 
 @freezed
 class Crew with _$Crew {

@@ -14,6 +14,323 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
+FullCrew _$FullCrewFromJson(Map<String, dynamic> json) {
+  return _FullCrew.fromJson(json);
+}
+
+/// @nodoc
+mixin _$FullCrew {
+  @JsonKey(name: 'id')
+  String get id => throw _privateConstructorUsedError;
+  @JsonKey(name: 'name')
+  String get name => throw _privateConstructorUsedError;
+  @JsonKey(name: 'agency')
+  String get agency => throw _privateConstructorUsedError;
+  @JsonKey(name: 'image')
+  String get image => throw _privateConstructorUsedError;
+  @JsonKey(name: 'wikipedia')
+  String get wikipedia => throw _privateConstructorUsedError;
+  @JsonKey(name: 'launches')
+  List<Launch> get launches => throw _privateConstructorUsedError;
+  @JsonKey(name: 'status', unknownEnumValue: CrewStatus.unknown)
+  CrewStatus get status => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $FullCrewCopyWith<FullCrew> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $FullCrewCopyWith<$Res> {
+  factory $FullCrewCopyWith(FullCrew value, $Res Function(FullCrew) then) =
+      _$FullCrewCopyWithImpl<$Res>;
+  $Res call(
+      {@JsonKey(name: 'id')
+          String id,
+      @JsonKey(name: 'name')
+          String name,
+      @JsonKey(name: 'agency')
+          String agency,
+      @JsonKey(name: 'image')
+          String image,
+      @JsonKey(name: 'wikipedia')
+          String wikipedia,
+      @JsonKey(name: 'launches')
+          List<Launch> launches,
+      @JsonKey(name: 'status', unknownEnumValue: CrewStatus.unknown)
+          CrewStatus status});
+}
+
+/// @nodoc
+class _$FullCrewCopyWithImpl<$Res> implements $FullCrewCopyWith<$Res> {
+  _$FullCrewCopyWithImpl(this._value, this._then);
+
+  final FullCrew _value;
+  // ignore: unused_field
+  final $Res Function(FullCrew) _then;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? name = freezed,
+    Object? agency = freezed,
+    Object? image = freezed,
+    Object? wikipedia = freezed,
+    Object? launches = freezed,
+    Object? status = freezed,
+  }) {
+    return _then(_value.copyWith(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String,
+      agency: agency == freezed
+          ? _value.agency
+          : agency // ignore: cast_nullable_to_non_nullable
+              as String,
+      image: image == freezed
+          ? _value.image
+          : image // ignore: cast_nullable_to_non_nullable
+              as String,
+      wikipedia: wikipedia == freezed
+          ? _value.wikipedia
+          : wikipedia // ignore: cast_nullable_to_non_nullable
+              as String,
+      launches: launches == freezed
+          ? _value.launches
+          : launches // ignore: cast_nullable_to_non_nullable
+              as List<Launch>,
+      status: status == freezed
+          ? _value.status
+          : status // ignore: cast_nullable_to_non_nullable
+              as CrewStatus,
+    ));
+  }
+}
+
+/// @nodoc
+abstract class _$$_FullCrewCopyWith<$Res> implements $FullCrewCopyWith<$Res> {
+  factory _$$_FullCrewCopyWith(
+          _$_FullCrew value, $Res Function(_$_FullCrew) then) =
+      __$$_FullCrewCopyWithImpl<$Res>;
+  @override
+  $Res call(
+      {@JsonKey(name: 'id')
+          String id,
+      @JsonKey(name: 'name')
+          String name,
+      @JsonKey(name: 'agency')
+          String agency,
+      @JsonKey(name: 'image')
+          String image,
+      @JsonKey(name: 'wikipedia')
+          String wikipedia,
+      @JsonKey(name: 'launches')
+          List<Launch> launches,
+      @JsonKey(name: 'status', unknownEnumValue: CrewStatus.unknown)
+          CrewStatus status});
+}
+
+/// @nodoc
+class __$$_FullCrewCopyWithImpl<$Res> extends _$FullCrewCopyWithImpl<$Res>
+    implements _$$_FullCrewCopyWith<$Res> {
+  __$$_FullCrewCopyWithImpl(
+      _$_FullCrew _value, $Res Function(_$_FullCrew) _then)
+      : super(_value, (v) => _then(v as _$_FullCrew));
+
+  @override
+  _$_FullCrew get _value => super._value as _$_FullCrew;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? name = freezed,
+    Object? agency = freezed,
+    Object? image = freezed,
+    Object? wikipedia = freezed,
+    Object? launches = freezed,
+    Object? status = freezed,
+  }) {
+    return _then(_$_FullCrew(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String,
+      agency: agency == freezed
+          ? _value.agency
+          : agency // ignore: cast_nullable_to_non_nullable
+              as String,
+      image: image == freezed
+          ? _value.image
+          : image // ignore: cast_nullable_to_non_nullable
+              as String,
+      wikipedia: wikipedia == freezed
+          ? _value.wikipedia
+          : wikipedia // ignore: cast_nullable_to_non_nullable
+              as String,
+      launches: launches == freezed
+          ? _value._launches
+          : launches // ignore: cast_nullable_to_non_nullable
+              as List<Launch>,
+      status: status == freezed
+          ? _value.status
+          : status // ignore: cast_nullable_to_non_nullable
+              as CrewStatus,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$_FullCrew extends _FullCrew {
+  const _$_FullCrew(
+      {@JsonKey(name: 'id')
+          this.id = '',
+      @JsonKey(name: 'name')
+          this.name = '',
+      @JsonKey(name: 'agency')
+          this.agency = '',
+      @JsonKey(name: 'image')
+          this.image = '',
+      @JsonKey(name: 'wikipedia')
+          this.wikipedia = '',
+      @JsonKey(name: 'launches')
+          final List<Launch> launches = const [],
+      @JsonKey(name: 'status', unknownEnumValue: CrewStatus.unknown)
+          this.status = CrewStatus.unknown})
+      : _launches = launches,
+        super._();
+
+  factory _$_FullCrew.fromJson(Map<String, dynamic> json) =>
+      _$$_FullCrewFromJson(json);
+
+  @override
+  @JsonKey(name: 'id')
+  final String id;
+  @override
+  @JsonKey(name: 'name')
+  final String name;
+  @override
+  @JsonKey(name: 'agency')
+  final String agency;
+  @override
+  @JsonKey(name: 'image')
+  final String image;
+  @override
+  @JsonKey(name: 'wikipedia')
+  final String wikipedia;
+  final List<Launch> _launches;
+  @override
+  @JsonKey(name: 'launches')
+  List<Launch> get launches {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_launches);
+  }
+
+  @override
+  @JsonKey(name: 'status', unknownEnumValue: CrewStatus.unknown)
+  final CrewStatus status;
+
+  @override
+  String toString() {
+    return 'FullCrew(id: $id, name: $name, agency: $agency, image: $image, wikipedia: $wikipedia, launches: $launches, status: $status)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_FullCrew &&
+            const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality().equals(other.name, name) &&
+            const DeepCollectionEquality().equals(other.agency, agency) &&
+            const DeepCollectionEquality().equals(other.image, image) &&
+            const DeepCollectionEquality().equals(other.wikipedia, wikipedia) &&
+            const DeepCollectionEquality().equals(other._launches, _launches) &&
+            const DeepCollectionEquality().equals(other.status, status));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(id),
+      const DeepCollectionEquality().hash(name),
+      const DeepCollectionEquality().hash(agency),
+      const DeepCollectionEquality().hash(image),
+      const DeepCollectionEquality().hash(wikipedia),
+      const DeepCollectionEquality().hash(_launches),
+      const DeepCollectionEquality().hash(status));
+
+  @JsonKey(ignore: true)
+  @override
+  _$$_FullCrewCopyWith<_$_FullCrew> get copyWith =>
+      __$$_FullCrewCopyWithImpl<_$_FullCrew>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_FullCrewToJson(
+      this,
+    );
+  }
+}
+
+abstract class _FullCrew extends FullCrew {
+  const factory _FullCrew(
+      {@JsonKey(name: 'id')
+          final String id,
+      @JsonKey(name: 'name')
+          final String name,
+      @JsonKey(name: 'agency')
+          final String agency,
+      @JsonKey(name: 'image')
+          final String image,
+      @JsonKey(name: 'wikipedia')
+          final String wikipedia,
+      @JsonKey(name: 'launches')
+          final List<Launch> launches,
+      @JsonKey(name: 'status', unknownEnumValue: CrewStatus.unknown)
+          final CrewStatus status}) = _$_FullCrew;
+  const _FullCrew._() : super._();
+
+  factory _FullCrew.fromJson(Map<String, dynamic> json) = _$_FullCrew.fromJson;
+
+  @override
+  @JsonKey(name: 'id')
+  String get id;
+  @override
+  @JsonKey(name: 'name')
+  String get name;
+  @override
+  @JsonKey(name: 'agency')
+  String get agency;
+  @override
+  @JsonKey(name: 'image')
+  String get image;
+  @override
+  @JsonKey(name: 'wikipedia')
+  String get wikipedia;
+  @override
+  @JsonKey(name: 'launches')
+  List<Launch> get launches;
+  @override
+  @JsonKey(name: 'status', unknownEnumValue: CrewStatus.unknown)
+  CrewStatus get status;
+  @override
+  @JsonKey(ignore: true)
+  _$$_FullCrewCopyWith<_$_FullCrew> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
 Crew _$CrewFromJson(Map<String, dynamic> json) {
   return _Crew.fromJson(json);
 }
