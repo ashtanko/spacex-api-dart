@@ -52,4 +52,58 @@ void main() {
     expect(data.page, 1);
     expect(data.offset, 5);
   });
+
+  // ships
+  test('get all ships with no empty query data, returns data from api',
+      () async {
+    // arrange
+    dio.interceptors.add(LoggingInterceptor(createLogger(level: Logger.level)));
+
+    // act
+    final data = await repository.getAllShips();
+
+    // assert
+    expect(data.isNotEmpty, true);
+  });
+
+  test('get one ship, returns data from api', () async {
+    const id = '5ea6ed2d080df4000697c901';
+    // arrange
+    dio.interceptors.add(LoggingInterceptor(createLogger(level: Logger.level)));
+
+    // act
+    final data = await repository.getShip(id);
+
+    // assert
+    expect(data.id, id);
+  });
+
+  test('query ships with offset 5, returns data from api', () async {
+    // arrange
+    dio.interceptors.add(LoggingInterceptor(createLogger(level: Logger.level)));
+
+    // act
+    final data = await repository
+        .queryShips(const q.Query(options: q.Options(offset: 5, page: 1)));
+
+    // assert
+    expect(data.page, 1);
+    expect(data.offset, 5);
+  });
+
+  test('query full ships with offset 5, returns data from api', () async {
+    // arrange
+    dio.interceptors.add(LoggingInterceptor(createLogger(level: Logger.level)));
+
+    // act
+    final data = await repository.queryFullShips(
+      const q.Query(
+        options: q.Options(offset: 5, page: 1, populate: ['launches']),
+      ),
+    );
+
+    // assert
+    expect(data.page, 1);
+    expect(data.offset, 5);
+  });
 }

@@ -22,27 +22,20 @@ FullCrew _$FullCrewFromJson(Map<String, dynamic> json) {
 mixin _$FullCrew {
   @JsonKey(name: 'id')
   String get id => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'name')
   String get name => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'agency')
   String get agency => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'image')
   String get image => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'wikipedia')
   String get wikipedia => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'launches')
   List<Launch> get launches => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'status', unknownEnumValue: CrewStatus.unknown)
   CrewStatus get status => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
   @JsonKey(ignore: true)
   $FullCrewCopyWith<FullCrew> get copyWith =>
       throw _privateConstructorUsedError;
@@ -52,7 +45,6 @@ mixin _$FullCrew {
 abstract class $FullCrewCopyWith<$Res> {
   factory $FullCrewCopyWith(FullCrew value, $Res Function(FullCrew) then) =
       _$FullCrewCopyWithImpl<$Res>;
-
   $Res call(
       {@JsonKey(name: 'id')
           String id,
@@ -75,7 +67,6 @@ class _$FullCrewCopyWithImpl<$Res> implements $FullCrewCopyWith<$Res> {
   _$FullCrewCopyWithImpl(this._value, this._then);
 
   final FullCrew _value;
-
   // ignore: unused_field
   final $Res Function(FullCrew) _then;
 
@@ -127,7 +118,6 @@ abstract class _$$_FullCrewCopyWith<$Res> implements $FullCrewCopyWith<$Res> {
   factory _$$_FullCrewCopyWith(
           _$_FullCrew value, $Res Function(_$_FullCrew) then) =
       __$$_FullCrewCopyWithImpl<$Res>;
-
   @override
   $Res call(
       {@JsonKey(name: 'id')
@@ -239,7 +229,6 @@ class _$_FullCrew extends _FullCrew {
   @JsonKey(name: 'wikipedia')
   final String wikipedia;
   final List<Launch> _launches;
-
   @override
   @JsonKey(name: 'launches')
   List<Launch> get launches {
@@ -311,7 +300,6 @@ abstract class _FullCrew extends FullCrew {
           final List<Launch> launches,
       @JsonKey(name: 'status', unknownEnumValue: CrewStatus.unknown)
           final CrewStatus status}) = _$_FullCrew;
-
   const _FullCrew._() : super._();
 
   factory _FullCrew.fromJson(Map<String, dynamic> json) = _$_FullCrew.fromJson;
@@ -319,31 +307,24 @@ abstract class _FullCrew extends FullCrew {
   @override
   @JsonKey(name: 'id')
   String get id;
-
   @override
   @JsonKey(name: 'name')
   String get name;
-
   @override
   @JsonKey(name: 'agency')
   String get agency;
-
   @override
   @JsonKey(name: 'image')
   String get image;
-
   @override
   @JsonKey(name: 'wikipedia')
   String get wikipedia;
-
   @override
   @JsonKey(name: 'launches')
   List<Launch> get launches;
-
   @override
   @JsonKey(name: 'status', unknownEnumValue: CrewStatus.unknown)
   CrewStatus get status;
-
   @override
   @JsonKey(ignore: true)
   _$$_FullCrewCopyWith<_$_FullCrew> get copyWith =>
@@ -358,27 +339,20 @@ Crew _$CrewFromJson(Map<String, dynamic> json) {
 mixin _$Crew {
   @JsonKey(name: 'id')
   String get id => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'name')
   String get name => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'agency')
   String get agency => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'image')
   String get image => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'wikipedia')
   String get wikipedia => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'launches')
   List<String> get launches => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'status', unknownEnumValue: CrewStatus.unknown)
   CrewStatus get status => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
   @JsonKey(ignore: true)
   $CrewCopyWith<Crew> get copyWith => throw _privateConstructorUsedError;
 }
@@ -387,7 +361,6 @@ mixin _$Crew {
 abstract class $CrewCopyWith<$Res> {
   factory $CrewCopyWith(Crew value, $Res Function(Crew) then) =
       _$CrewCopyWithImpl<$Res>;
-
   $Res call(
       {@JsonKey(name: 'id')
           String id,
@@ -410,7 +383,6 @@ class _$CrewCopyWithImpl<$Res> implements $CrewCopyWith<$Res> {
   _$CrewCopyWithImpl(this._value, this._then);
 
   final Crew _value;
-
   // ignore: unused_field
   final $Res Function(Crew) _then;
 
@@ -461,7 +433,6 @@ class _$CrewCopyWithImpl<$Res> implements $CrewCopyWith<$Res> {
 abstract class _$$_CrewCopyWith<$Res> implements $CrewCopyWith<$Res> {
   factory _$$_CrewCopyWith(_$_Crew value, $Res Function(_$_Crew) then) =
       __$$_CrewCopyWithImpl<$Res>;
-
   @override
   $Res call(
       {@JsonKey(name: 'id')
@@ -571,7 +542,6 @@ class _$_Crew extends _Crew {
   @JsonKey(name: 'wikipedia')
   final String wikipedia;
   final List<String> _launches;
-
   @override
   @JsonKey(name: 'launches')
   List<String> get launches {
@@ -643,7 +613,6 @@ abstract class _Crew extends Crew {
           final List<String> launches,
       @JsonKey(name: 'status', unknownEnumValue: CrewStatus.unknown)
           final CrewStatus status}) = _$_Crew;
-
   const _Crew._() : super._();
 
   factory _Crew.fromJson(Map<String, dynamic> json) = _$_Crew.fromJson;
@@ -651,31 +620,24 @@ abstract class _Crew extends Crew {
   @override
   @JsonKey(name: 'id')
   String get id;
-
   @override
   @JsonKey(name: 'name')
   String get name;
-
   @override
   @JsonKey(name: 'agency')
   String get agency;
-
   @override
   @JsonKey(name: 'image')
   String get image;
-
   @override
   @JsonKey(name: 'wikipedia')
   String get wikipedia;
-
   @override
   @JsonKey(name: 'launches')
   List<String> get launches;
-
   @override
   @JsonKey(name: 'status', unknownEnumValue: CrewStatus.unknown)
   CrewStatus get status;
-
   @override
   @JsonKey(ignore: true)
   _$$_CrewCopyWith<_$_Crew> get copyWith => throw _privateConstructorUsedError;
@@ -689,12 +651,10 @@ ShortCrew _$ShortCrewFromJson(Map<String, dynamic> json) {
 mixin _$ShortCrew {
   @JsonKey(name: 'crew')
   String get crew => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'role')
   String get role => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
   @JsonKey(ignore: true)
   $ShortCrewCopyWith<ShortCrew> get copyWith =>
       throw _privateConstructorUsedError;
@@ -704,7 +664,6 @@ mixin _$ShortCrew {
 abstract class $ShortCrewCopyWith<$Res> {
   factory $ShortCrewCopyWith(ShortCrew value, $Res Function(ShortCrew) then) =
       _$ShortCrewCopyWithImpl<$Res>;
-
   $Res call(
       {@JsonKey(name: 'crew') String crew, @JsonKey(name: 'role') String role});
 }
@@ -714,7 +673,6 @@ class _$ShortCrewCopyWithImpl<$Res> implements $ShortCrewCopyWith<$Res> {
   _$ShortCrewCopyWithImpl(this._value, this._then);
 
   final ShortCrew _value;
-
   // ignore: unused_field
   final $Res Function(ShortCrew) _then;
 
@@ -741,7 +699,6 @@ abstract class _$$_ShortCrewCopyWith<$Res> implements $ShortCrewCopyWith<$Res> {
   factory _$$_ShortCrewCopyWith(
           _$_ShortCrew value, $Res Function(_$_ShortCrew) then) =
       __$$_ShortCrewCopyWithImpl<$Res>;
-
   @override
   $Res call(
       {@JsonKey(name: 'crew') String crew, @JsonKey(name: 'role') String role});
@@ -831,7 +788,6 @@ abstract class _ShortCrew extends ShortCrew {
   const factory _ShortCrew(
       {@JsonKey(name: 'crew') final String crew,
       @JsonKey(name: 'role') final String role}) = _$_ShortCrew;
-
   const _ShortCrew._() : super._();
 
   factory _ShortCrew.fromJson(Map<String, dynamic> json) =
@@ -840,11 +796,9 @@ abstract class _ShortCrew extends ShortCrew {
   @override
   @JsonKey(name: 'crew')
   String get crew;
-
   @override
   @JsonKey(name: 'role')
   String get role;
-
   @override
   @JsonKey(ignore: true)
   _$$_ShortCrewCopyWith<_$_ShortCrew> get copyWith =>

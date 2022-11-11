@@ -22,29 +22,20 @@ CapsuleModel _$CapsuleModelFromJson(Map<String, dynamic> json) {
 mixin _$CapsuleModel {
   @JsonKey(name: 'reuse_count')
   int get reuseCount => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'water_landings')
   int get waterLandings => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'land_landings')
   int get landLandings => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'last_update')
   String? get lastUpdate => throw _privateConstructorUsedError;
-
   List<String> get launches => throw _privateConstructorUsedError;
-
   String get serial => throw _privateConstructorUsedError;
-
   String get status => throw _privateConstructorUsedError;
-
   String get type => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'id')
   String get id => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
   @JsonKey(ignore: true)
   $CapsuleModelCopyWith<CapsuleModel> get copyWith =>
       throw _privateConstructorUsedError;
@@ -55,7 +46,6 @@ abstract class $CapsuleModelCopyWith<$Res> {
   factory $CapsuleModelCopyWith(
           CapsuleModel value, $Res Function(CapsuleModel) then) =
       _$CapsuleModelCopyWithImpl<$Res>;
-
   $Res call(
       {@JsonKey(name: 'reuse_count') int reuseCount,
       @JsonKey(name: 'water_landings') int waterLandings,
@@ -73,7 +63,6 @@ class _$CapsuleModelCopyWithImpl<$Res> implements $CapsuleModelCopyWith<$Res> {
   _$CapsuleModelCopyWithImpl(this._value, this._then);
 
   final CapsuleModel _value;
-
   // ignore: unused_field
   final $Res Function(CapsuleModel) _then;
 
@@ -136,7 +125,6 @@ abstract class _$$_CapsuleModelCopyWith<$Res>
   factory _$$_CapsuleModelCopyWith(
           _$_CapsuleModel value, $Res Function(_$_CapsuleModel) then) =
       __$$_CapsuleModelCopyWithImpl<$Res>;
-
   @override
   $Res call(
       {@JsonKey(name: 'reuse_count') int reuseCount,
@@ -246,7 +234,6 @@ class _$_CapsuleModel extends _CapsuleModel {
   @JsonKey(name: 'last_update')
   final String? lastUpdate;
   final List<String> _launches;
-
   @override
   @JsonKey()
   List<String> get launches {
@@ -330,7 +317,6 @@ abstract class _CapsuleModel extends CapsuleModel {
       final String status,
       final String type,
       @JsonKey(name: 'id') required final String id}) = _$_CapsuleModel;
-
   const _CapsuleModel._() : super._();
 
   factory _CapsuleModel.fromJson(Map<String, dynamic> json) =
@@ -339,35 +325,26 @@ abstract class _CapsuleModel extends CapsuleModel {
   @override
   @JsonKey(name: 'reuse_count')
   int get reuseCount;
-
   @override
   @JsonKey(name: 'water_landings')
   int get waterLandings;
-
   @override
   @JsonKey(name: 'land_landings')
   int get landLandings;
-
   @override
   @JsonKey(name: 'last_update')
   String? get lastUpdate;
-
   @override
   List<String> get launches;
-
   @override
   String get serial;
-
   @override
   String get status;
-
   @override
   String get type;
-
   @override
   @JsonKey(name: 'id')
   String get id;
-
   @override
   @JsonKey(ignore: true)
   _$$_CapsuleModelCopyWith<_$_CapsuleModel> get copyWith =>

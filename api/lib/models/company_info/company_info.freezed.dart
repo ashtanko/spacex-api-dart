@@ -21,34 +21,21 @@ CompanyInfo _$CompanyInfoFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$CompanyInfo {
   String get id => throw _privateConstructorUsedError;
-
   Headquarter? get headquarters => throw _privateConstructorUsedError;
-
   Links? get links => throw _privateConstructorUsedError;
-
   String get fullName => throw _privateConstructorUsedError;
-
   String get name => throw _privateConstructorUsedError;
-
   String get founder => throw _privateConstructorUsedError;
-
   int get founded => throw _privateConstructorUsedError;
-
   int get employees => throw _privateConstructorUsedError;
-
   String get ceo => throw _privateConstructorUsedError;
-
   String get cto => throw _privateConstructorUsedError;
-
   String get coo => throw _privateConstructorUsedError;
-
   num get valuation => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'summary')
   String? get details => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
   @JsonKey(ignore: true)
   $CompanyInfoCopyWith<CompanyInfo> get copyWith =>
       throw _privateConstructorUsedError;
@@ -59,7 +46,6 @@ abstract class $CompanyInfoCopyWith<$Res> {
   factory $CompanyInfoCopyWith(
           CompanyInfo value, $Res Function(CompanyInfo) then) =
       _$CompanyInfoCopyWithImpl<$Res>;
-
   $Res call(
       {String id,
       Headquarter? headquarters,
@@ -76,7 +62,6 @@ abstract class $CompanyInfoCopyWith<$Res> {
       @JsonKey(name: 'summary') String? details});
 
   $HeadquarterCopyWith<$Res>? get headquarters;
-
   $LinksCopyWith<$Res>? get links;
 }
 
@@ -85,7 +70,6 @@ class _$CompanyInfoCopyWithImpl<$Res> implements $CompanyInfoCopyWith<$Res> {
   _$CompanyInfoCopyWithImpl(this._value, this._then);
 
   final CompanyInfo _value;
-
   // ignore: unused_field
   final $Res Function(CompanyInfo) _then;
 
@@ -190,7 +174,6 @@ abstract class _$$_CompanyInfoCopyWith<$Res>
   factory _$$_CompanyInfoCopyWith(
           _$_CompanyInfo value, $Res Function(_$_CompanyInfo) then) =
       __$$_CompanyInfoCopyWithImpl<$Res>;
-
   @override
   $Res call(
       {String id,
@@ -209,7 +192,6 @@ abstract class _$$_CompanyInfoCopyWith<$Res>
 
   @override
   $HeadquarterCopyWith<$Res>? get headquarters;
-
   @override
   $LinksCopyWith<$Res>? get links;
 }
@@ -428,7 +410,6 @@ abstract class _CompanyInfo extends CompanyInfo {
       final String coo,
       final num valuation,
       @JsonKey(name: 'summary') final String? details}) = _$_CompanyInfo;
-
   const _CompanyInfo._() : super._();
 
   factory _CompanyInfo.fromJson(Map<String, dynamic> json) =
@@ -436,44 +417,31 @@ abstract class _CompanyInfo extends CompanyInfo {
 
   @override
   String get id;
-
   @override
   Headquarter? get headquarters;
-
   @override
   Links? get links;
-
   @override
   String get fullName;
-
   @override
   String get name;
-
   @override
   String get founder;
-
   @override
   int get founded;
-
   @override
   int get employees;
-
   @override
   String get ceo;
-
   @override
   String get cto;
-
   @override
   String get coo;
-
   @override
   num get valuation;
-
   @override
   @JsonKey(name: 'summary')
   String? get details;
-
   @override
   @JsonKey(ignore: true)
   _$$_CompanyInfoCopyWith<_$_CompanyInfo> get copyWith =>
@@ -487,13 +455,10 @@ Headquarter _$HeadquarterFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$Headquarter {
   String get address => throw _privateConstructorUsedError;
-
   String get city => throw _privateConstructorUsedError;
-
   String get state => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
   @JsonKey(ignore: true)
   $HeadquarterCopyWith<Headquarter> get copyWith =>
       throw _privateConstructorUsedError;
@@ -504,7 +469,6 @@ abstract class $HeadquarterCopyWith<$Res> {
   factory $HeadquarterCopyWith(
           Headquarter value, $Res Function(Headquarter) then) =
       _$HeadquarterCopyWithImpl<$Res>;
-
   $Res call({String address, String city, String state});
 }
 
@@ -513,7 +477,6 @@ class _$HeadquarterCopyWithImpl<$Res> implements $HeadquarterCopyWith<$Res> {
   _$HeadquarterCopyWithImpl(this._value, this._then);
 
   final Headquarter _value;
-
   // ignore: unused_field
   final $Res Function(Headquarter) _then;
 
@@ -546,7 +509,6 @@ abstract class _$$_HeadquarterCopyWith<$Res>
   factory _$$_HeadquarterCopyWith(
           _$_Headquarter value, $Res Function(_$_Headquarter) then) =
       __$$_HeadquarterCopyWithImpl<$Res>;
-
   @override
   $Res call({String address, String city, String state});
 }
@@ -647,7 +609,6 @@ abstract class _Headquarter extends Headquarter {
       {final String address,
       final String city,
       final String state}) = _$_Headquarter;
-
   const _Headquarter._() : super._();
 
   factory _Headquarter.fromJson(Map<String, dynamic> json) =
@@ -655,13 +616,10 @@ abstract class _Headquarter extends Headquarter {
 
   @override
   String get address;
-
   @override
   String get city;
-
   @override
   String get state;
-
   @override
   @JsonKey(ignore: true)
   _$$_HeadquarterCopyWith<_$_Headquarter> get copyWith =>
@@ -675,16 +633,12 @@ Links _$LinksFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$Links {
   String get website => throw _privateConstructorUsedError;
-
   String get flickr => throw _privateConstructorUsedError;
-
   String get twitter => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'elon_twitter')
   String get elonTwitter => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
   @JsonKey(ignore: true)
   $LinksCopyWith<Links> get copyWith => throw _privateConstructorUsedError;
 }
@@ -693,7 +647,6 @@ mixin _$Links {
 abstract class $LinksCopyWith<$Res> {
   factory $LinksCopyWith(Links value, $Res Function(Links) then) =
       _$LinksCopyWithImpl<$Res>;
-
   $Res call(
       {String website,
       String flickr,
@@ -706,7 +659,6 @@ class _$LinksCopyWithImpl<$Res> implements $LinksCopyWith<$Res> {
   _$LinksCopyWithImpl(this._value, this._then);
 
   final Links _value;
-
   // ignore: unused_field
   final $Res Function(Links) _then;
 
@@ -742,7 +694,6 @@ class _$LinksCopyWithImpl<$Res> implements $LinksCopyWith<$Res> {
 abstract class _$$_LinksCopyWith<$Res> implements $LinksCopyWith<$Res> {
   factory _$$_LinksCopyWith(_$_Links value, $Res Function(_$_Links) then) =
       __$$_LinksCopyWithImpl<$Res>;
-
   @override
   $Res call(
       {String website,
@@ -860,24 +811,19 @@ abstract class _Links extends Links {
       final String flickr,
       final String twitter,
       @JsonKey(name: 'elon_twitter') final String elonTwitter}) = _$_Links;
-
   const _Links._() : super._();
 
   factory _Links.fromJson(Map<String, dynamic> json) = _$_Links.fromJson;
 
   @override
   String get website;
-
   @override
   String get flickr;
-
   @override
   String get twitter;
-
   @override
   @JsonKey(name: 'elon_twitter')
   String get elonTwitter;
-
   @override
   @JsonKey(ignore: true)
   _$$_LinksCopyWith<_$_Links> get copyWith =>

@@ -22,30 +22,22 @@ Starlink _$StarlinkFromJson(Map<String, dynamic> json) {
 mixin _$Starlink {
   @JsonKey(name: 'id')
   String get id => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'launch')
   String get launchID => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'version')
   String get version => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'height_km')
   double get heightKm => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'latitude')
   double get latitude => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'longitude')
   double get longitude => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'velocity_kms')
   double get velocityKms => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'spaceTrack')
   SpaceTrack? get spaceTrack => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
   @JsonKey(ignore: true)
   $StarlinkCopyWith<Starlink> get copyWith =>
       throw _privateConstructorUsedError;
@@ -55,7 +47,6 @@ mixin _$Starlink {
 abstract class $StarlinkCopyWith<$Res> {
   factory $StarlinkCopyWith(Starlink value, $Res Function(Starlink) then) =
       _$StarlinkCopyWithImpl<$Res>;
-
   $Res call(
       {@JsonKey(name: 'id') String id,
       @JsonKey(name: 'launch') String launchID,
@@ -74,7 +65,6 @@ class _$StarlinkCopyWithImpl<$Res> implements $StarlinkCopyWith<$Res> {
   _$StarlinkCopyWithImpl(this._value, this._then);
 
   final Starlink _value;
-
   // ignore: unused_field
   final $Res Function(Starlink) _then;
 
@@ -142,7 +132,6 @@ abstract class _$$_StarlinkCopyWith<$Res> implements $StarlinkCopyWith<$Res> {
   factory _$$_StarlinkCopyWith(
           _$_Starlink value, $Res Function(_$_Starlink) then) =
       __$$_StarlinkCopyWithImpl<$Res>;
-
   @override
   $Res call(
       {@JsonKey(name: 'id') String id,
@@ -316,7 +305,6 @@ abstract class _Starlink extends Starlink {
       @JsonKey(name: 'longitude') final double longitude,
       @JsonKey(name: 'velocity_kms') final double velocityKms,
       @JsonKey(name: 'spaceTrack') final SpaceTrack? spaceTrack}) = _$_Starlink;
-
   const _Starlink._() : super._();
 
   factory _Starlink.fromJson(Map<String, dynamic> json) = _$_Starlink.fromJson;
@@ -324,35 +312,27 @@ abstract class _Starlink extends Starlink {
   @override
   @JsonKey(name: 'id')
   String get id;
-
   @override
   @JsonKey(name: 'launch')
   String get launchID;
-
   @override
   @JsonKey(name: 'version')
   String get version;
-
   @override
   @JsonKey(name: 'height_km')
   double get heightKm;
-
   @override
   @JsonKey(name: 'latitude')
   double get latitude;
-
   @override
   @JsonKey(name: 'longitude')
   double get longitude;
-
   @override
   @JsonKey(name: 'velocity_kms')
   double get velocityKms;
-
   @override
   @JsonKey(name: 'spaceTrack')
   SpaceTrack? get spaceTrack;
-
   @override
   @JsonKey(ignore: true)
   _$$_StarlinkCopyWith<_$_Starlink> get copyWith =>

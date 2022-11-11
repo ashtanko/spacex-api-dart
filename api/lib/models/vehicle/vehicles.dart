@@ -126,6 +126,43 @@ class ShipVehicle with _$ShipVehicle {
 }
 
 @freezed
+class ShipFullVehicle with _$ShipFullVehicle {
+  const factory ShipFullVehicle({
+    required String id,
+    @Default(<Launch>[]) List<Launch> launches,
+    @JsonKey(name: 'active') @Default(false) bool isActive,
+    @JsonKey(name: 'name') @Default('') String name,
+    @JsonKey(name: 'image')
+    @Default('https://i.imgur.com/woCxpkj.jpg')
+    String image,
+    @JsonKey(name: 'link')
+    @Default('https://www.marinetraffic.com/en/ais/details/ships/shipid:434663/mmsi:367020820/imo:7434016/vessel:AMERICAN_CHAMPION')
+    String link,
+    @JsonKey(name: 'longitude') dynamic longitude,
+    @JsonKey(name: 'latitude') dynamic latitude,
+    @JsonKey(name: 'course_deg') num? courseDeg,
+    @JsonKey(name: 'speed_kn') num? speedKn,
+    @JsonKey(name: 'status') @Default('') String status,
+    @JsonKey(name: 'home_port') @Default('') String homePort,
+    @JsonKey(name: 'year_built') @Default(0) int yearBuilt,
+    @JsonKey(name: 'mass_lbs') @Default(0) int massLbs,
+    @JsonKey(name: 'mass_kg') @Default(0) int massKg,
+    @JsonKey(name: 'class') @Default(0) int vehicleClass,
+    @JsonKey(name: 'abs') @Default(0) int abs,
+    @JsonKey(name: 'imo') @Default(0) int imo,
+    @Default([]) List<String> roles,
+    @JsonKey(name: 'type') @Default('Cargo') String type,
+    @JsonKey(name: 'model') String? model,
+    @JsonKey(name: 'legacy_id') @Default('AMERICANSPIRIT') String legacyId,
+  }) = _ShipFullVehicle;
+
+  const ShipFullVehicle._();
+
+  factory ShipFullVehicle.fromJson(Map<String, dynamic> json) =>
+      _$ShipFullVehicleFromJson(json);
+}
+
+@freezed
 class DragonVehicle with _$DragonVehicle {
   const factory DragonVehicle({
     required String id,

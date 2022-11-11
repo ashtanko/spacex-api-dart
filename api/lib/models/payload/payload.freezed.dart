@@ -21,33 +21,20 @@ Payload _$PayloadFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$Payload {
   CapsuleModel? get capsule => throw _privateConstructorUsedError;
-
   String? get name => throw _privateConstructorUsedError;
-
   bool get reused => throw _privateConstructorUsedError;
-
   String? get customer => throw _privateConstructorUsedError;
-
   String? get nationality => throw _privateConstructorUsedError;
-
   String? get manufacturer => throw _privateConstructorUsedError;
-
   num? get mass => throw _privateConstructorUsedError;
-
   String? get orbit => throw _privateConstructorUsedError;
-
   num? get periapsis => throw _privateConstructorUsedError;
-
   num? get apoapsis => throw _privateConstructorUsedError;
-
   num? get inclination => throw _privateConstructorUsedError;
-
   num? get period => throw _privateConstructorUsedError;
-
   String? get id => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
   @JsonKey(ignore: true)
   $PayloadCopyWith<Payload> get copyWith => throw _privateConstructorUsedError;
 }
@@ -56,7 +43,6 @@ mixin _$Payload {
 abstract class $PayloadCopyWith<$Res> {
   factory $PayloadCopyWith(Payload value, $Res Function(Payload) then) =
       _$PayloadCopyWithImpl<$Res>;
-
   $Res call(
       {CapsuleModel? capsule,
       String? name,
@@ -80,7 +66,6 @@ class _$PayloadCopyWithImpl<$Res> implements $PayloadCopyWith<$Res> {
   _$PayloadCopyWithImpl(this._value, this._then);
 
   final Payload _value;
-
   // ignore: unused_field
   final $Res Function(Payload) _then;
 
@@ -173,7 +158,6 @@ abstract class _$$_PayloadCopyWith<$Res> implements $PayloadCopyWith<$Res> {
   factory _$$_PayloadCopyWith(
           _$_Payload value, $Res Function(_$_Payload) then) =
       __$$_PayloadCopyWithImpl<$Res>;
-
   @override
   $Res call(
       {CapsuleModel? capsule,
@@ -400,50 +384,36 @@ abstract class _Payload extends Payload {
       final num? inclination,
       final num? period,
       final String? id}) = _$_Payload;
-
   const _Payload._() : super._();
 
   factory _Payload.fromJson(Map<String, dynamic> json) = _$_Payload.fromJson;
 
   @override
   CapsuleModel? get capsule;
-
   @override
   String? get name;
-
   @override
   bool get reused;
-
   @override
   String? get customer;
-
   @override
   String? get nationality;
-
   @override
   String? get manufacturer;
-
   @override
   num? get mass;
-
   @override
   String? get orbit;
-
   @override
   num? get periapsis;
-
   @override
   num? get apoapsis;
-
   @override
   num? get inclination;
-
   @override
   num? get period;
-
   @override
   String? get id;
-
   @override
   @JsonKey(ignore: true)
   _$$_PayloadCopyWith<_$_Payload> get copyWith =>

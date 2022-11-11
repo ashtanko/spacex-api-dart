@@ -23,7 +23,6 @@ mixin _$Capsules {
   List<CapsuleModel> get capsules => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
   @JsonKey(ignore: true)
   $CapsulesCopyWith<Capsules> get copyWith =>
       throw _privateConstructorUsedError;
@@ -33,7 +32,6 @@ mixin _$Capsules {
 abstract class $CapsulesCopyWith<$Res> {
   factory $CapsulesCopyWith(Capsules value, $Res Function(Capsules) then) =
       _$CapsulesCopyWithImpl<$Res>;
-
   $Res call({List<CapsuleModel> capsules});
 }
 
@@ -42,7 +40,6 @@ class _$CapsulesCopyWithImpl<$Res> implements $CapsulesCopyWith<$Res> {
   _$CapsulesCopyWithImpl(this._value, this._then);
 
   final Capsules _value;
-
   // ignore: unused_field
   final $Res Function(Capsules) _then;
 
@@ -64,7 +61,6 @@ abstract class _$$_CapsulesCopyWith<$Res> implements $CapsulesCopyWith<$Res> {
   factory _$$_CapsulesCopyWith(
           _$_Capsules value, $Res Function(_$_Capsules) then) =
       __$$_CapsulesCopyWithImpl<$Res>;
-
   @override
   $Res call({List<CapsuleModel> capsules});
 }
@@ -104,7 +100,6 @@ class _$_Capsules extends _Capsules {
       _$$_CapsulesFromJson(json);
 
   final List<CapsuleModel> _capsules;
-
   @override
   @JsonKey()
   List<CapsuleModel> get capsules {
@@ -145,14 +140,12 @@ class _$_Capsules extends _Capsules {
 
 abstract class _Capsules extends Capsules {
   const factory _Capsules({final List<CapsuleModel> capsules}) = _$_Capsules;
-
   const _Capsules._() : super._();
 
   factory _Capsules.fromJson(Map<String, dynamic> json) = _$_Capsules.fromJson;
 
   @override
   List<CapsuleModel> get capsules;
-
   @override
   @JsonKey(ignore: true)
   _$$_CapsulesCopyWith<_$_Capsules> get copyWith =>

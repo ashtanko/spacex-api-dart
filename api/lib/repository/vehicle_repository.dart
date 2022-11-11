@@ -19,4 +19,23 @@ class VehicleRepository {
   Future<ApiPaginatedList<DragonVehicle>> queryDragons(q.Query query) async {
     return _api.queryDragons(query);
   }
+
+  // ships
+  Future<List<ShipVehicle>> getAllShips() async {
+    return _api.getAllShips();
+  }
+
+  Future<ShipVehicle> getShip(String id) async {
+    return _api.getShip(id);
+  }
+
+  Future<ApiPaginatedList<ShipVehicle>> queryShips(q.Query query) async {
+    return _api.queryShips(query);
+  }
+
+  Future<ApiPaginatedList<ShipFullVehicle>> queryFullShips(
+    q.Query query,
+  ) async {
+    return _api.queryFullShips(query);
+  }
 }

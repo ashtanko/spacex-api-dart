@@ -21,79 +21,55 @@ Launch _$LaunchFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$Launch {
   String get id => throw _privateConstructorUsedError;
-
   bool get tbd => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'auto_update')
   bool get autoUpdate => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'cores')
   List<Core> get cores => throw _privateConstructorUsedError;
-
   bool get upcoming => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'date_precision')
   String get datePrecision => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'date_local')
   String get dateLocal => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'date_unix')
   int get dateUnix => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'date_utc')
   String get dateUtc => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'name')
   String get name => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'flight_number')
   int get flightNumber => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'launchpad')
   String get launchpad => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'payloads')
   List<String> get payloads => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'capsules')
   List<String> get capsules =>
       throw _privateConstructorUsedError; //@JsonKey(name: 'ships') @Default([]) List<Ship> ships,
   @JsonKey(name: 'crew')
   List<ShortCrew> get crew => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'details')
   String get details => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'failures')
   List<LaunchFailure> get failures => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'success')
   bool get success => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'rocket')
   String get rocket => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'window')
   int get window => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'net')
   bool get net => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'static_fire_date_unix')
   int get staticFireDateUnix => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'static_fire_date_utc')
   String get staticFireDateUtc => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'links')
   LaunchLinks? get links => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'fairings')
   Fairings? get fairings => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
   @JsonKey(ignore: true)
   $LaunchCopyWith<Launch> get copyWith => throw _privateConstructorUsedError;
 }
@@ -102,7 +78,6 @@ mixin _$Launch {
 abstract class $LaunchCopyWith<$Res> {
   factory $LaunchCopyWith(Launch value, $Res Function(Launch) then) =
       _$LaunchCopyWithImpl<$Res>;
-
   $Res call(
       {String id,
       bool tbd,
@@ -131,7 +106,6 @@ abstract class $LaunchCopyWith<$Res> {
       @JsonKey(name: 'fairings') Fairings? fairings});
 
   $LaunchLinksCopyWith<$Res>? get links;
-
   $FairingsCopyWith<$Res>? get fairings;
 }
 
@@ -140,7 +114,6 @@ class _$LaunchCopyWithImpl<$Res> implements $LaunchCopyWith<$Res> {
   _$LaunchCopyWithImpl(this._value, this._then);
 
   final Launch _value;
-
   // ignore: unused_field
   final $Res Function(Launch) _then;
 
@@ -303,7 +276,6 @@ class _$LaunchCopyWithImpl<$Res> implements $LaunchCopyWith<$Res> {
 abstract class _$$_LaunchCopyWith<$Res> implements $LaunchCopyWith<$Res> {
   factory _$$_LaunchCopyWith(_$_Launch value, $Res Function(_$_Launch) then) =
       __$$_LaunchCopyWithImpl<$Res>;
-
   @override
   $Res call(
       {String id,
@@ -334,7 +306,6 @@ abstract class _$$_LaunchCopyWith<$Res> implements $LaunchCopyWith<$Res> {
 
   @override
   $LaunchLinksCopyWith<$Res>? get links;
-
   @override
   $FairingsCopyWith<$Res>? get fairings;
 }
@@ -529,7 +500,6 @@ class _$_Launch extends _Launch {
   @JsonKey(name: 'auto_update')
   final bool autoUpdate;
   final List<Core> _cores;
-
   @override
   @JsonKey(name: 'cores')
   List<Core> get cores {
@@ -562,7 +532,6 @@ class _$_Launch extends _Launch {
   @JsonKey(name: 'launchpad')
   final String launchpad;
   final List<String> _payloads;
-
   @override
   @JsonKey(name: 'payloads')
   List<String> get payloads {
@@ -571,7 +540,6 @@ class _$_Launch extends _Launch {
   }
 
   final List<String> _capsules;
-
   @override
   @JsonKey(name: 'capsules')
   List<String> get capsules {
@@ -581,7 +549,6 @@ class _$_Launch extends _Launch {
 
 //@JsonKey(name: 'ships') @Default([]) List<Ship> ships,
   final List<ShortCrew> _crew;
-
 //@JsonKey(name: 'ships') @Default([]) List<Ship> ships,
   @override
   @JsonKey(name: 'crew')
@@ -594,7 +561,6 @@ class _$_Launch extends _Launch {
   @JsonKey(name: 'details')
   final String details;
   final List<LaunchFailure> _failures;
-
   @override
   @JsonKey(name: 'failures')
   List<LaunchFailure> get failures {
@@ -740,108 +706,82 @@ abstract class _Launch extends Launch {
       @JsonKey(name: 'static_fire_date_utc') final String staticFireDateUtc,
       @JsonKey(name: 'links') final LaunchLinks? links,
       @JsonKey(name: 'fairings') final Fairings? fairings}) = _$_Launch;
-
   const _Launch._() : super._();
 
   factory _Launch.fromJson(Map<String, dynamic> json) = _$_Launch.fromJson;
 
   @override
   String get id;
-
   @override
   bool get tbd;
-
   @override
   @JsonKey(name: 'auto_update')
   bool get autoUpdate;
-
   @override
   @JsonKey(name: 'cores')
   List<Core> get cores;
-
   @override
   bool get upcoming;
-
   @override
   @JsonKey(name: 'date_precision')
   String get datePrecision;
-
   @override
   @JsonKey(name: 'date_local')
   String get dateLocal;
-
   @override
   @JsonKey(name: 'date_unix')
   int get dateUnix;
-
   @override
   @JsonKey(name: 'date_utc')
   String get dateUtc;
-
   @override
   @JsonKey(name: 'name')
   String get name;
-
   @override
   @JsonKey(name: 'flight_number')
   int get flightNumber;
-
   @override
   @JsonKey(name: 'launchpad')
   String get launchpad;
-
   @override
   @JsonKey(name: 'payloads')
   List<String> get payloads;
-
   @override
   @JsonKey(name: 'capsules')
   List<String> get capsules;
-
   @override //@JsonKey(name: 'ships') @Default([]) List<Ship> ships,
   @JsonKey(name: 'crew')
   List<ShortCrew> get crew;
-
   @override
   @JsonKey(name: 'details')
   String get details;
-
   @override
   @JsonKey(name: 'failures')
   List<LaunchFailure> get failures;
-
   @override
   @JsonKey(name: 'success')
   bool get success;
-
   @override
   @JsonKey(name: 'rocket')
   String get rocket;
-
   @override
   @JsonKey(name: 'window')
   int get window;
-
   @override
   @JsonKey(name: 'net')
   bool get net;
-
   @override
   @JsonKey(name: 'static_fire_date_unix')
   int get staticFireDateUnix;
-
   @override
   @JsonKey(name: 'static_fire_date_utc')
   String get staticFireDateUtc;
-
   @override
   @JsonKey(name: 'links')
   LaunchLinks? get links;
-
   @override
   @JsonKey(name: 'fairings')
   Fairings? get fairings;
-
   @override
   @JsonKey(ignore: true)
   _$$_LaunchCopyWith<_$_Launch> get copyWith =>
@@ -855,26 +795,18 @@ LaunchLinks _$LaunchLinksFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$LaunchLinks {
   LaunchPatch? get patch => throw _privateConstructorUsedError;
-
   LaunchReddit? get reddit => throw _privateConstructorUsedError;
-
   LaunchFlickr? get flickr => throw _privateConstructorUsedError;
-
   String? get presskit => throw _privateConstructorUsedError;
-
   String? get webcast => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'youtube_id')
   String? get youtubeID => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'article')
   String? get article => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'wikipedia')
   String? get wikipedia => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
   @JsonKey(ignore: true)
   $LaunchLinksCopyWith<LaunchLinks> get copyWith =>
       throw _privateConstructorUsedError;
@@ -885,7 +817,6 @@ abstract class $LaunchLinksCopyWith<$Res> {
   factory $LaunchLinksCopyWith(
           LaunchLinks value, $Res Function(LaunchLinks) then) =
       _$LaunchLinksCopyWithImpl<$Res>;
-
   $Res call(
       {LaunchPatch? patch,
       LaunchReddit? reddit,
@@ -897,9 +828,7 @@ abstract class $LaunchLinksCopyWith<$Res> {
       @JsonKey(name: 'wikipedia') String? wikipedia});
 
   $LaunchPatchCopyWith<$Res>? get patch;
-
   $LaunchRedditCopyWith<$Res>? get reddit;
-
   $LaunchFlickrCopyWith<$Res>? get flickr;
 }
 
@@ -908,7 +837,6 @@ class _$LaunchLinksCopyWithImpl<$Res> implements $LaunchLinksCopyWith<$Res> {
   _$LaunchLinksCopyWithImpl(this._value, this._then);
 
   final LaunchLinks _value;
-
   // ignore: unused_field
   final $Res Function(LaunchLinks) _then;
 
@@ -999,7 +927,6 @@ abstract class _$$_LaunchLinksCopyWith<$Res>
   factory _$$_LaunchLinksCopyWith(
           _$_LaunchLinks value, $Res Function(_$_LaunchLinks) then) =
       __$$_LaunchLinksCopyWithImpl<$Res>;
-
   @override
   $Res call(
       {LaunchPatch? patch,
@@ -1013,10 +940,8 @@ abstract class _$$_LaunchLinksCopyWith<$Res>
 
   @override
   $LaunchPatchCopyWith<$Res>? get patch;
-
   @override
   $LaunchRedditCopyWith<$Res>? get reddit;
-
   @override
   $LaunchFlickrCopyWith<$Res>? get flickr;
 }
@@ -1172,7 +1097,6 @@ abstract class _LaunchLinks extends LaunchLinks {
       @JsonKey(name: 'youtube_id') final String? youtubeID,
       @JsonKey(name: 'article') final String? article,
       @JsonKey(name: 'wikipedia') final String? wikipedia}) = _$_LaunchLinks;
-
   const _LaunchLinks._() : super._();
 
   factory _LaunchLinks.fromJson(Map<String, dynamic> json) =
@@ -1180,31 +1104,23 @@ abstract class _LaunchLinks extends LaunchLinks {
 
   @override
   LaunchPatch? get patch;
-
   @override
   LaunchReddit? get reddit;
-
   @override
   LaunchFlickr? get flickr;
-
   @override
   String? get presskit;
-
   @override
   String? get webcast;
-
   @override
   @JsonKey(name: 'youtube_id')
   String? get youtubeID;
-
   @override
   @JsonKey(name: 'article')
   String? get article;
-
   @override
   @JsonKey(name: 'wikipedia')
   String? get wikipedia;
-
   @override
   @JsonKey(ignore: true)
   _$$_LaunchLinksCopyWith<_$_LaunchLinks> get copyWith =>
@@ -1218,13 +1134,10 @@ LaunchFailure _$LaunchFailureFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$LaunchFailure {
   int? get time => throw _privateConstructorUsedError;
-
   int? get altitude => throw _privateConstructorUsedError;
-
   String? get reason => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
   @JsonKey(ignore: true)
   $LaunchFailureCopyWith<LaunchFailure> get copyWith =>
       throw _privateConstructorUsedError;
@@ -1235,7 +1148,6 @@ abstract class $LaunchFailureCopyWith<$Res> {
   factory $LaunchFailureCopyWith(
           LaunchFailure value, $Res Function(LaunchFailure) then) =
       _$LaunchFailureCopyWithImpl<$Res>;
-
   $Res call({int? time, int? altitude, String? reason});
 }
 
@@ -1245,7 +1157,6 @@ class _$LaunchFailureCopyWithImpl<$Res>
   _$LaunchFailureCopyWithImpl(this._value, this._then);
 
   final LaunchFailure _value;
-
   // ignore: unused_field
   final $Res Function(LaunchFailure) _then;
 
@@ -1278,7 +1189,6 @@ abstract class _$$_LaunchFailureCopyWith<$Res>
   factory _$$_LaunchFailureCopyWith(
           _$_LaunchFailure value, $Res Function(_$_LaunchFailure) then) =
       __$$_LaunchFailureCopyWithImpl<$Res>;
-
   @override
   $Res call({int? time, int? altitude, String? reason});
 }
@@ -1373,7 +1283,6 @@ abstract class _LaunchFailure extends LaunchFailure {
       {final int? time,
       final int? altitude,
       final String? reason}) = _$_LaunchFailure;
-
   const _LaunchFailure._() : super._();
 
   factory _LaunchFailure.fromJson(Map<String, dynamic> json) =
@@ -1381,13 +1290,10 @@ abstract class _LaunchFailure extends LaunchFailure {
 
   @override
   int? get time;
-
   @override
   int? get altitude;
-
   @override
   String? get reason;
-
   @override
   @JsonKey(ignore: true)
   _$$_LaunchFailureCopyWith<_$_LaunchFailure> get copyWith =>
@@ -1401,15 +1307,11 @@ LaunchDetails _$LaunchDetailsFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$LaunchDetails {
   int get flightNumber => throw _privateConstructorUsedError;
-
   String get name => throw _privateConstructorUsedError;
-
   DateTime get date => throw _privateConstructorUsedError;
-
   String get id => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
   @JsonKey(ignore: true)
   $LaunchDetailsCopyWith<LaunchDetails> get copyWith =>
       throw _privateConstructorUsedError;
@@ -1420,7 +1322,6 @@ abstract class $LaunchDetailsCopyWith<$Res> {
   factory $LaunchDetailsCopyWith(
           LaunchDetails value, $Res Function(LaunchDetails) then) =
       _$LaunchDetailsCopyWithImpl<$Res>;
-
   $Res call({int flightNumber, String name, DateTime date, String id});
 }
 
@@ -1430,7 +1331,6 @@ class _$LaunchDetailsCopyWithImpl<$Res>
   _$LaunchDetailsCopyWithImpl(this._value, this._then);
 
   final LaunchDetails _value;
-
   // ignore: unused_field
   final $Res Function(LaunchDetails) _then;
 
@@ -1468,7 +1368,6 @@ abstract class _$$_LaunchDetailsCopyWith<$Res>
   factory _$$_LaunchDetailsCopyWith(
           _$_LaunchDetails value, $Res Function(_$_LaunchDetails) then) =
       __$$_LaunchDetailsCopyWithImpl<$Res>;
-
   @override
   $Res call({int flightNumber, String name, DateTime date, String id});
 }
@@ -1579,7 +1478,6 @@ abstract class _LaunchDetails extends LaunchDetails {
       required final String name,
       required final DateTime date,
       required final String id}) = _$_LaunchDetails;
-
   const _LaunchDetails._() : super._();
 
   factory _LaunchDetails.fromJson(Map<String, dynamic> json) =
@@ -1587,16 +1485,12 @@ abstract class _LaunchDetails extends LaunchDetails {
 
   @override
   int get flightNumber;
-
   @override
   String get name;
-
   @override
   DateTime get date;
-
   @override
   String get id;
-
   @override
   @JsonKey(ignore: true)
   _$$_LaunchDetailsCopyWith<_$_LaunchDetails> get copyWith =>
@@ -1610,11 +1504,9 @@ LaunchFlickr _$LaunchFlickrFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$LaunchFlickr {
   List<String> get original => throw _privateConstructorUsedError;
-
   List<String> get small => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
   @JsonKey(ignore: true)
   $LaunchFlickrCopyWith<LaunchFlickr> get copyWith =>
       throw _privateConstructorUsedError;
@@ -1625,7 +1517,6 @@ abstract class $LaunchFlickrCopyWith<$Res> {
   factory $LaunchFlickrCopyWith(
           LaunchFlickr value, $Res Function(LaunchFlickr) then) =
       _$LaunchFlickrCopyWithImpl<$Res>;
-
   $Res call({List<String> original, List<String> small});
 }
 
@@ -1634,7 +1525,6 @@ class _$LaunchFlickrCopyWithImpl<$Res> implements $LaunchFlickrCopyWith<$Res> {
   _$LaunchFlickrCopyWithImpl(this._value, this._then);
 
   final LaunchFlickr _value;
-
   // ignore: unused_field
   final $Res Function(LaunchFlickr) _then;
 
@@ -1662,7 +1552,6 @@ abstract class _$$_LaunchFlickrCopyWith<$Res>
   factory _$$_LaunchFlickrCopyWith(
           _$_LaunchFlickr value, $Res Function(_$_LaunchFlickr) then) =
       __$$_LaunchFlickrCopyWithImpl<$Res>;
-
   @override
   $Res call({List<String> original, List<String> small});
 }
@@ -1710,7 +1599,6 @@ class _$_LaunchFlickr extends _LaunchFlickr {
       _$$_LaunchFlickrFromJson(json);
 
   final List<String> _original;
-
   @override
   @JsonKey()
   List<String> get original {
@@ -1719,7 +1607,6 @@ class _$_LaunchFlickr extends _LaunchFlickr {
   }
 
   final List<String> _small;
-
   @override
   @JsonKey()
   List<String> get small {
@@ -1765,7 +1652,6 @@ abstract class _LaunchFlickr extends LaunchFlickr {
   const factory _LaunchFlickr(
       {final List<String> original,
       final List<String> small}) = _$_LaunchFlickr;
-
   const _LaunchFlickr._() : super._();
 
   factory _LaunchFlickr.fromJson(Map<String, dynamic> json) =
@@ -1773,10 +1659,8 @@ abstract class _LaunchFlickr extends LaunchFlickr {
 
   @override
   List<String> get original;
-
   @override
   List<String> get small;
-
   @override
   @JsonKey(ignore: true)
   _$$_LaunchFlickrCopyWith<_$_LaunchFlickr> get copyWith =>
@@ -1790,11 +1674,9 @@ LaunchPatch _$LaunchPatchFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$LaunchPatch {
   String? get small => throw _privateConstructorUsedError;
-
   String? get large => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
   @JsonKey(ignore: true)
   $LaunchPatchCopyWith<LaunchPatch> get copyWith =>
       throw _privateConstructorUsedError;
@@ -1805,7 +1687,6 @@ abstract class $LaunchPatchCopyWith<$Res> {
   factory $LaunchPatchCopyWith(
           LaunchPatch value, $Res Function(LaunchPatch) then) =
       _$LaunchPatchCopyWithImpl<$Res>;
-
   $Res call({String? small, String? large});
 }
 
@@ -1814,7 +1695,6 @@ class _$LaunchPatchCopyWithImpl<$Res> implements $LaunchPatchCopyWith<$Res> {
   _$LaunchPatchCopyWithImpl(this._value, this._then);
 
   final LaunchPatch _value;
-
   // ignore: unused_field
   final $Res Function(LaunchPatch) _then;
 
@@ -1842,7 +1722,6 @@ abstract class _$$_LaunchPatchCopyWith<$Res>
   factory _$$_LaunchPatchCopyWith(
           _$_LaunchPatch value, $Res Function(_$_LaunchPatch) then) =
       __$$_LaunchPatchCopyWithImpl<$Res>;
-
   @override
   $Res call({String? small, String? large});
 }
@@ -1925,7 +1804,6 @@ class _$_LaunchPatch extends _LaunchPatch {
 abstract class _LaunchPatch extends LaunchPatch {
   const factory _LaunchPatch({final String? small, final String? large}) =
       _$_LaunchPatch;
-
   const _LaunchPatch._() : super._();
 
   factory _LaunchPatch.fromJson(Map<String, dynamic> json) =
@@ -1933,10 +1811,8 @@ abstract class _LaunchPatch extends LaunchPatch {
 
   @override
   String? get small;
-
   @override
   String? get large;
-
   @override
   @JsonKey(ignore: true)
   _$$_LaunchPatchCopyWith<_$_LaunchPatch> get copyWith =>
@@ -1950,15 +1826,11 @@ LaunchReddit _$LaunchRedditFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$LaunchReddit {
   String? get campaign => throw _privateConstructorUsedError;
-
   String? get launch => throw _privateConstructorUsedError;
-
   String? get media => throw _privateConstructorUsedError;
-
   String? get recovery => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
   @JsonKey(ignore: true)
   $LaunchRedditCopyWith<LaunchReddit> get copyWith =>
       throw _privateConstructorUsedError;
@@ -1969,7 +1841,6 @@ abstract class $LaunchRedditCopyWith<$Res> {
   factory $LaunchRedditCopyWith(
           LaunchReddit value, $Res Function(LaunchReddit) then) =
       _$LaunchRedditCopyWithImpl<$Res>;
-
   $Res call(
       {String? campaign, String? launch, String? media, String? recovery});
 }
@@ -1979,7 +1850,6 @@ class _$LaunchRedditCopyWithImpl<$Res> implements $LaunchRedditCopyWith<$Res> {
   _$LaunchRedditCopyWithImpl(this._value, this._then);
 
   final LaunchReddit _value;
-
   // ignore: unused_field
   final $Res Function(LaunchReddit) _then;
 
@@ -2017,7 +1887,6 @@ abstract class _$$_LaunchRedditCopyWith<$Res>
   factory _$$_LaunchRedditCopyWith(
           _$_LaunchReddit value, $Res Function(_$_LaunchReddit) then) =
       __$$_LaunchRedditCopyWithImpl<$Res>;
-
   @override
   $Res call(
       {String? campaign, String? launch, String? media, String? recovery});
@@ -2124,7 +1993,6 @@ abstract class _LaunchReddit extends LaunchReddit {
       final String? launch,
       final String? media,
       final String? recovery}) = _$_LaunchReddit;
-
   const _LaunchReddit._() : super._();
 
   factory _LaunchReddit.fromJson(Map<String, dynamic> json) =
@@ -2132,16 +2000,12 @@ abstract class _LaunchReddit extends LaunchReddit {
 
   @override
   String? get campaign;
-
   @override
   String? get launch;
-
   @override
   String? get media;
-
   @override
   String? get recovery;
-
   @override
   @JsonKey(ignore: true)
   _$$_LaunchRedditCopyWith<_$_LaunchReddit> get copyWith =>

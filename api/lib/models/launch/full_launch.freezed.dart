@@ -21,79 +21,55 @@ FullLaunch _$FullLaunchFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$FullLaunch {
   String get id => throw _privateConstructorUsedError;
-
   bool get tbd => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'auto_update')
   bool get autoUpdate => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'cores')
   List<Core> get cores => throw _privateConstructorUsedError;
-
   bool get upcoming => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'date_precision')
   String get datePrecision => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'date_local')
   String get dateLocal => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'date_unix')
   int get dateUnix => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'date_utc')
   String get dateUtc => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'name')
   String get name => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'flight_number')
   int get flightNumber => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'launchpad')
   String get launchpad => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'payloads')
   List<String> get payloads => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'capsules')
   List<CapsuleModel> get capsules =>
       throw _privateConstructorUsedError; //@JsonKey(name: 'ships') @Default([]) List<Ship> ships,
   @JsonKey(name: 'crew')
   List<String> get crew => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'details')
   String get details => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'failures')
   List<LaunchFailure> get failures => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'success')
   bool get success => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'rocket')
   String get rocket => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'window')
   int get window => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'net')
   bool get net => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'static_fire_date_unix')
   int get staticFireDateUnix => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'static_fire_date_utc')
   String get staticFireDateUtc => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'links')
   LaunchLinks? get links => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'fairings')
   Fairings? get fairings => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
   @JsonKey(ignore: true)
   $FullLaunchCopyWith<FullLaunch> get copyWith =>
       throw _privateConstructorUsedError;
@@ -104,7 +80,6 @@ abstract class $FullLaunchCopyWith<$Res> {
   factory $FullLaunchCopyWith(
           FullLaunch value, $Res Function(FullLaunch) then) =
       _$FullLaunchCopyWithImpl<$Res>;
-
   $Res call(
       {String id,
       bool tbd,
@@ -133,7 +108,6 @@ abstract class $FullLaunchCopyWith<$Res> {
       @JsonKey(name: 'fairings') Fairings? fairings});
 
   $LaunchLinksCopyWith<$Res>? get links;
-
   $FairingsCopyWith<$Res>? get fairings;
 }
 
@@ -142,7 +116,6 @@ class _$FullLaunchCopyWithImpl<$Res> implements $FullLaunchCopyWith<$Res> {
   _$FullLaunchCopyWithImpl(this._value, this._then);
 
   final FullLaunch _value;
-
   // ignore: unused_field
   final $Res Function(FullLaunch) _then;
 
@@ -307,7 +280,6 @@ abstract class _$$_FullLaunchCopyWith<$Res>
   factory _$$_FullLaunchCopyWith(
           _$_FullLaunch value, $Res Function(_$_FullLaunch) then) =
       __$$_FullLaunchCopyWithImpl<$Res>;
-
   @override
   $Res call(
       {String id,
@@ -338,7 +310,6 @@ abstract class _$$_FullLaunchCopyWith<$Res>
 
   @override
   $LaunchLinksCopyWith<$Res>? get links;
-
   @override
   $FairingsCopyWith<$Res>? get fairings;
 }
@@ -534,7 +505,6 @@ class _$_FullLaunch extends _FullLaunch {
   @JsonKey(name: 'auto_update')
   final bool autoUpdate;
   final List<Core> _cores;
-
   @override
   @JsonKey(name: 'cores')
   List<Core> get cores {
@@ -567,7 +537,6 @@ class _$_FullLaunch extends _FullLaunch {
   @JsonKey(name: 'launchpad')
   final String launchpad;
   final List<String> _payloads;
-
   @override
   @JsonKey(name: 'payloads')
   List<String> get payloads {
@@ -576,7 +545,6 @@ class _$_FullLaunch extends _FullLaunch {
   }
 
   final List<CapsuleModel> _capsules;
-
   @override
   @JsonKey(name: 'capsules')
   List<CapsuleModel> get capsules {
@@ -586,7 +554,6 @@ class _$_FullLaunch extends _FullLaunch {
 
 //@JsonKey(name: 'ships') @Default([]) List<Ship> ships,
   final List<String> _crew;
-
 //@JsonKey(name: 'ships') @Default([]) List<Ship> ships,
   @override
   @JsonKey(name: 'crew')
@@ -599,7 +566,6 @@ class _$_FullLaunch extends _FullLaunch {
   @JsonKey(name: 'details')
   final String details;
   final List<LaunchFailure> _failures;
-
   @override
   @JsonKey(name: 'failures')
   List<LaunchFailure> get failures {
@@ -745,7 +711,6 @@ abstract class _FullLaunch extends FullLaunch {
       @JsonKey(name: 'static_fire_date_utc') final String staticFireDateUtc,
       @JsonKey(name: 'links') final LaunchLinks? links,
       @JsonKey(name: 'fairings') final Fairings? fairings}) = _$_FullLaunch;
-
   const _FullLaunch._() : super._();
 
   factory _FullLaunch.fromJson(Map<String, dynamic> json) =
@@ -753,101 +718,76 @@ abstract class _FullLaunch extends FullLaunch {
 
   @override
   String get id;
-
   @override
   bool get tbd;
-
   @override
   @JsonKey(name: 'auto_update')
   bool get autoUpdate;
-
   @override
   @JsonKey(name: 'cores')
   List<Core> get cores;
-
   @override
   bool get upcoming;
-
   @override
   @JsonKey(name: 'date_precision')
   String get datePrecision;
-
   @override
   @JsonKey(name: 'date_local')
   String get dateLocal;
-
   @override
   @JsonKey(name: 'date_unix')
   int get dateUnix;
-
   @override
   @JsonKey(name: 'date_utc')
   String get dateUtc;
-
   @override
   @JsonKey(name: 'name')
   String get name;
-
   @override
   @JsonKey(name: 'flight_number')
   int get flightNumber;
-
   @override
   @JsonKey(name: 'launchpad')
   String get launchpad;
-
   @override
   @JsonKey(name: 'payloads')
   List<String> get payloads;
-
   @override
   @JsonKey(name: 'capsules')
   List<CapsuleModel> get capsules;
-
   @override //@JsonKey(name: 'ships') @Default([]) List<Ship> ships,
   @JsonKey(name: 'crew')
   List<String> get crew;
-
   @override
   @JsonKey(name: 'details')
   String get details;
-
   @override
   @JsonKey(name: 'failures')
   List<LaunchFailure> get failures;
-
   @override
   @JsonKey(name: 'success')
   bool get success;
-
   @override
   @JsonKey(name: 'rocket')
   String get rocket;
-
   @override
   @JsonKey(name: 'window')
   int get window;
-
   @override
   @JsonKey(name: 'net')
   bool get net;
-
   @override
   @JsonKey(name: 'static_fire_date_unix')
   int get staticFireDateUnix;
-
   @override
   @JsonKey(name: 'static_fire_date_utc')
   String get staticFireDateUtc;
-
   @override
   @JsonKey(name: 'links')
   LaunchLinks? get links;
-
   @override
   @JsonKey(name: 'fairings')
   Fairings? get fairings;
-
   @override
   @JsonKey(ignore: true)
   _$$_FullLaunchCopyWith<_$_FullLaunch> get copyWith =>

@@ -24,7 +24,6 @@ mixin _$Images {
   List<String> get large => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
   @JsonKey(ignore: true)
   $ImagesCopyWith<Images> get copyWith => throw _privateConstructorUsedError;
 }
@@ -33,7 +32,6 @@ mixin _$Images {
 abstract class $ImagesCopyWith<$Res> {
   factory $ImagesCopyWith(Images value, $Res Function(Images) then) =
       _$ImagesCopyWithImpl<$Res>;
-
   $Res call({@JsonKey(name: 'large') List<String> large});
 }
 
@@ -42,7 +40,6 @@ class _$ImagesCopyWithImpl<$Res> implements $ImagesCopyWith<$Res> {
   _$ImagesCopyWithImpl(this._value, this._then);
 
   final Images _value;
-
   // ignore: unused_field
   final $Res Function(Images) _then;
 
@@ -63,7 +60,6 @@ class _$ImagesCopyWithImpl<$Res> implements $ImagesCopyWith<$Res> {
 abstract class _$$_ImagesCopyWith<$Res> implements $ImagesCopyWith<$Res> {
   factory _$$_ImagesCopyWith(_$_Images value, $Res Function(_$_Images) then) =
       __$$_ImagesCopyWithImpl<$Res>;
-
   @override
   $Res call({@JsonKey(name: 'large') List<String> large});
 }
@@ -101,7 +97,6 @@ class _$_Images extends _Images {
       _$$_ImagesFromJson(json);
 
   final List<String> _large;
-
   @override
   @JsonKey(name: 'large')
   List<String> get large {
@@ -143,7 +138,6 @@ class _$_Images extends _Images {
 abstract class _Images extends Images {
   const factory _Images({@JsonKey(name: 'large') final List<String> large}) =
       _$_Images;
-
   const _Images._() : super._();
 
   factory _Images.fromJson(Map<String, dynamic> json) = _$_Images.fromJson;
@@ -151,7 +145,6 @@ abstract class _Images extends Images {
   @override
   @JsonKey(name: 'large')
   List<String> get large;
-
   @override
   @JsonKey(ignore: true)
   _$$_ImagesCopyWith<_$_Images> get copyWith =>

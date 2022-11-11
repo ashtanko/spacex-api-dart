@@ -21,23 +21,16 @@ Thruster _$ThrusterFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$Thruster {
   String get type => throw _privateConstructorUsedError;
-
   int get amount => throw _privateConstructorUsedError;
-
   int get pods => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'fuel_1')
   String get firstFuel => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'fuel_2')
   String get secondFuel => throw _privateConstructorUsedError;
-
   int get isp => throw _privateConstructorUsedError;
-
   Thrust get thrust => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
   @JsonKey(ignore: true)
   $ThrusterCopyWith<Thruster> get copyWith =>
       throw _privateConstructorUsedError;
@@ -47,7 +40,6 @@ mixin _$Thruster {
 abstract class $ThrusterCopyWith<$Res> {
   factory $ThrusterCopyWith(Thruster value, $Res Function(Thruster) then) =
       _$ThrusterCopyWithImpl<$Res>;
-
   $Res call(
       {String type,
       int amount,
@@ -65,7 +57,6 @@ class _$ThrusterCopyWithImpl<$Res> implements $ThrusterCopyWith<$Res> {
   _$ThrusterCopyWithImpl(this._value, this._then);
 
   final Thruster _value;
-
   // ignore: unused_field
   final $Res Function(Thruster) _then;
 
@@ -124,7 +115,6 @@ abstract class _$$_ThrusterCopyWith<$Res> implements $ThrusterCopyWith<$Res> {
   factory _$$_ThrusterCopyWith(
           _$_Thruster value, $Res Function(_$_Thruster) then) =
       __$$_ThrusterCopyWithImpl<$Res>;
-
   @override
   $Res call(
       {String type,
@@ -284,34 +274,26 @@ abstract class _Thruster extends Thruster {
       @JsonKey(name: 'fuel_2') final String secondFuel,
       final int isp,
       final Thrust thrust}) = _$_Thruster;
-
   const _Thruster._() : super._();
 
   factory _Thruster.fromJson(Map<String, dynamic> json) = _$_Thruster.fromJson;
 
   @override
   String get type;
-
   @override
   int get amount;
-
   @override
   int get pods;
-
   @override
   @JsonKey(name: 'fuel_1')
   String get firstFuel;
-
   @override
   @JsonKey(name: 'fuel_2')
   String get secondFuel;
-
   @override
   int get isp;
-
   @override
   Thrust get thrust;
-
   @override
   @JsonKey(ignore: true)
   _$$_ThrusterCopyWith<_$_Thruster> get copyWith =>

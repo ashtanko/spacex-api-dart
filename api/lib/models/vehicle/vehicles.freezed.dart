@@ -21,84 +21,57 @@ RoadsterVehicle _$RoadsterVehicleFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$RoadsterVehicle {
   String get id => throw _privateConstructorUsedError;
-
   String? get details => throw _privateConstructorUsedError;
-
   String? get video => throw _privateConstructorUsedError;
-
   String? get wikipedia => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'flickr_images')
   List<String?> get images => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'mars_distance_mi')
   num get marsDistanceMi => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'mars_distance_km')
   num get marsDistanceKm => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'earth_distance_mi')
   num get earthDistanceMi => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'earth_distance_km')
   num get earthDistanceKm => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'speed_mph')
   num get speedMph => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'speed_kph')
   num get speedKph => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'period_days')
   num get periodDays => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'periapsis_arg')
   num get periapsisArg => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'longitude')
   num get longitude => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'inclination')
   num get inclination => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'eccentricity')
   num get eccentricity => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'semi_major_axis_au')
   num get semiMajorAxisAu => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'periapsis_au')
   num get periapsisAu => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'apoapsis_au')
   num get apoapsisAu => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'orbit_type')
   String get orbitYype => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'epoch_jd')
   num get epochJd => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'norad_id')
   num get noradId => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'launch_mass_lbs')
   num get launchMassLbs => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'launch_mass_kg')
   num get launchMassKg => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'launch_date_unix')
   num get launchDateUnix => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'launch_date_utc')
   String get launchDateUtc => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'name')
   String get name => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
   @JsonKey(ignore: true)
   $RoadsterVehicleCopyWith<RoadsterVehicle> get copyWith =>
       throw _privateConstructorUsedError;
@@ -109,7 +82,6 @@ abstract class $RoadsterVehicleCopyWith<$Res> {
   factory $RoadsterVehicleCopyWith(
           RoadsterVehicle value, $Res Function(RoadsterVehicle) then) =
       _$RoadsterVehicleCopyWithImpl<$Res>;
-
   $Res call(
       {String id,
       String? details,
@@ -146,7 +118,6 @@ class _$RoadsterVehicleCopyWithImpl<$Res>
   _$RoadsterVehicleCopyWithImpl(this._value, this._then);
 
   final RoadsterVehicle _value;
-
   // ignore: unused_field
   final $Res Function(RoadsterVehicle) _then;
 
@@ -299,7 +270,6 @@ abstract class _$$_RoadsterVehicleCopyWith<$Res>
   factory _$$_RoadsterVehicleCopyWith(
           _$_RoadsterVehicle value, $Res Function(_$_RoadsterVehicle) then) =
       __$$_RoadsterVehicleCopyWithImpl<$Res>;
-
   @override
   $Res call(
       {String id,
@@ -554,7 +524,6 @@ class _$_RoadsterVehicle extends _RoadsterVehicle {
   @override
   final String? wikipedia;
   final List<String?> _images;
-
   @override
   @JsonKey(name: 'flickr_images')
   List<String?> get images {
@@ -758,7 +727,6 @@ abstract class _RoadsterVehicle extends RoadsterVehicle {
       @JsonKey(name: 'launch_date_unix') final num launchDateUnix,
       @JsonKey(name: 'launch_date_utc') final String launchDateUtc,
       @JsonKey(name: 'name') final String name}) = _$_RoadsterVehicle;
-
   const _RoadsterVehicle._() : super._();
 
   factory _RoadsterVehicle.fromJson(Map<String, dynamic> json) =
@@ -766,108 +734,81 @@ abstract class _RoadsterVehicle extends RoadsterVehicle {
 
   @override
   String get id;
-
   @override
   String? get details;
-
   @override
   String? get video;
-
   @override
   String? get wikipedia;
-
   @override
   @JsonKey(name: 'flickr_images')
   List<String?> get images;
-
   @override
   @JsonKey(name: 'mars_distance_mi')
   num get marsDistanceMi;
-
   @override
   @JsonKey(name: 'mars_distance_km')
   num get marsDistanceKm;
-
   @override
   @JsonKey(name: 'earth_distance_mi')
   num get earthDistanceMi;
-
   @override
   @JsonKey(name: 'earth_distance_km')
   num get earthDistanceKm;
-
   @override
   @JsonKey(name: 'speed_mph')
   num get speedMph;
-
   @override
   @JsonKey(name: 'speed_kph')
   num get speedKph;
-
   @override
   @JsonKey(name: 'period_days')
   num get periodDays;
-
   @override
   @JsonKey(name: 'periapsis_arg')
   num get periapsisArg;
-
   @override
   @JsonKey(name: 'longitude')
   num get longitude;
-
   @override
   @JsonKey(name: 'inclination')
   num get inclination;
-
   @override
   @JsonKey(name: 'eccentricity')
   num get eccentricity;
-
   @override
   @JsonKey(name: 'semi_major_axis_au')
   num get semiMajorAxisAu;
-
   @override
   @JsonKey(name: 'periapsis_au')
   num get periapsisAu;
-
   @override
   @JsonKey(name: 'apoapsis_au')
   num get apoapsisAu;
-
   @override
   @JsonKey(name: 'orbit_type')
   String get orbitYype;
-
   @override
   @JsonKey(name: 'epoch_jd')
   num get epochJd;
-
   @override
   @JsonKey(name: 'norad_id')
   num get noradId;
-
   @override
   @JsonKey(name: 'launch_mass_lbs')
   num get launchMassLbs;
-
   @override
   @JsonKey(name: 'launch_mass_kg')
   num get launchMassKg;
-
   @override
   @JsonKey(name: 'launch_date_unix')
   num get launchDateUnix;
-
   @override
   @JsonKey(name: 'launch_date_utc')
   String get launchDateUtc;
-
   @override
   @JsonKey(name: 'name')
   String get name;
-
   @override
   @JsonKey(ignore: true)
   _$$_RoadsterVehicleCopyWith<_$_RoadsterVehicle> get copyWith =>
@@ -881,53 +822,36 @@ RocketVehicle _$RocketVehicleFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$RocketVehicle {
   String get id => throw _privateConstructorUsedError;
-
   String get description => throw _privateConstructorUsedError;
-
   String get wikipedia => throw _privateConstructorUsedError;
-
   String get company => throw _privateConstructorUsedError;
-
   String get country => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'first_flight')
   String get firstFlight => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'success_rate_pct')
   num get successRatePct => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'cost_per_launch')
   num get costPerLaunch => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'boosters')
   num get boosters => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'stages')
   num get stages => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'active')
   bool get isActive => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'type')
   String get type => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'name')
   String get name => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'flickr_images')
   List<String> get images => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'payload_weights')
   List<PayloadWeight> get payloadWeights => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'landing_legs')
   dynamic get landingLegs => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'engines')
   Engine get engines => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
   @JsonKey(ignore: true)
   $RocketVehicleCopyWith<RocketVehicle> get copyWith =>
       throw _privateConstructorUsedError;
@@ -938,7 +862,6 @@ abstract class $RocketVehicleCopyWith<$Res> {
   factory $RocketVehicleCopyWith(
           RocketVehicle value, $Res Function(RocketVehicle) then) =
       _$RocketVehicleCopyWithImpl<$Res>;
-
   $Res call(
       {String id,
       String description,
@@ -967,7 +890,6 @@ class _$RocketVehicleCopyWithImpl<$Res>
   _$RocketVehicleCopyWithImpl(this._value, this._then);
 
   final RocketVehicle _value;
-
   // ignore: unused_field
   final $Res Function(RocketVehicle) _then;
 
@@ -1077,7 +999,6 @@ abstract class _$$_RocketVehicleCopyWith<$Res>
   factory _$$_RocketVehicleCopyWith(
           _$_RocketVehicle value, $Res Function(_$_RocketVehicle) then) =
       __$$_RocketVehicleCopyWithImpl<$Res>;
-
   @override
   $Res call(
       {String id,
@@ -1285,7 +1206,6 @@ class _$_RocketVehicle extends _RocketVehicle {
   @JsonKey(name: 'name')
   final String name;
   final List<String> _images;
-
   @override
   @JsonKey(name: 'flickr_images')
   List<String> get images {
@@ -1294,7 +1214,6 @@ class _$_RocketVehicle extends _RocketVehicle {
   }
 
   final List<PayloadWeight> _payloadWeights;
-
   @override
   @JsonKey(name: 'payload_weights')
   List<PayloadWeight> get payloadWeights {
@@ -1410,7 +1329,6 @@ abstract class _RocketVehicle extends RocketVehicle {
           final dynamic landingLegs,
       @JsonKey(name: 'engines')
           final Engine engines}) = _$_RocketVehicle;
-
   const _RocketVehicle._() : super._();
 
   factory _RocketVehicle.fromJson(Map<String, dynamic> json) =
@@ -1418,67 +1336,50 @@ abstract class _RocketVehicle extends RocketVehicle {
 
   @override
   String get id;
-
   @override
   String get description;
-
   @override
   String get wikipedia;
-
   @override
   String get company;
-
   @override
   String get country;
-
   @override
   @JsonKey(name: 'first_flight')
   String get firstFlight;
-
   @override
   @JsonKey(name: 'success_rate_pct')
   num get successRatePct;
-
   @override
   @JsonKey(name: 'cost_per_launch')
   num get costPerLaunch;
-
   @override
   @JsonKey(name: 'boosters')
   num get boosters;
-
   @override
   @JsonKey(name: 'stages')
   num get stages;
-
   @override
   @JsonKey(name: 'active')
   bool get isActive;
-
   @override
   @JsonKey(name: 'type')
   String get type;
-
   @override
   @JsonKey(name: 'name')
   String get name;
-
   @override
   @JsonKey(name: 'flickr_images')
   List<String> get images;
-
   @override
   @JsonKey(name: 'payload_weights')
   List<PayloadWeight> get payloadWeights;
-
   @override
   @JsonKey(name: 'landing_legs')
   dynamic get landingLegs;
-
   @override
   @JsonKey(name: 'engines')
   Engine get engines;
-
   @override
   @JsonKey(ignore: true)
   _$$_RocketVehicleCopyWith<_$_RocketVehicle> get copyWith =>
@@ -1492,70 +1393,48 @@ ShipVehicle _$ShipVehicleFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$ShipVehicle {
   String get id => throw _privateConstructorUsedError;
-
   List<String> get launches => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'active')
   bool get isActive => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'name')
   String get name => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'image')
   String get image => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'link')
   String get link => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'longitude')
   dynamic get longitude => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'latitude')
   dynamic get latitude => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'course_deg')
   num? get courseDeg => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'speed_kn')
   num? get speedKn => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'status')
   String get status => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'home_port')
   String get homePort => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'year_built')
   int get yearBuilt => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'mass_lbs')
   int get massLbs => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'mass_kg')
   int get massKg => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'class')
   int get vehicleClass => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'abs')
   int get abs => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'imo')
   int get imo => throw _privateConstructorUsedError;
-
   List<String> get roles => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'type')
   String get type => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'model')
   String? get model => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'legacy_id')
   String get legacyId => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
   @JsonKey(ignore: true)
   $ShipVehicleCopyWith<ShipVehicle> get copyWith =>
       throw _privateConstructorUsedError;
@@ -1566,7 +1445,6 @@ abstract class $ShipVehicleCopyWith<$Res> {
   factory $ShipVehicleCopyWith(
           ShipVehicle value, $Res Function(ShipVehicle) then) =
       _$ShipVehicleCopyWithImpl<$Res>;
-
   $Res call(
       {String id,
       List<String> launches,
@@ -1597,7 +1475,6 @@ class _$ShipVehicleCopyWithImpl<$Res> implements $ShipVehicleCopyWith<$Res> {
   _$ShipVehicleCopyWithImpl(this._value, this._then);
 
   final ShipVehicle _value;
-
   // ignore: unused_field
   final $Res Function(ShipVehicle) _then;
 
@@ -1725,7 +1602,6 @@ abstract class _$$_ShipVehicleCopyWith<$Res>
   factory _$$_ShipVehicleCopyWith(
           _$_ShipVehicle value, $Res Function(_$_ShipVehicle) then) =
       __$$_ShipVehicleCopyWithImpl<$Res>;
-
   @override
   $Res call(
       {String id,
@@ -1917,7 +1793,6 @@ class _$_ShipVehicle extends _ShipVehicle {
   @override
   final String id;
   final List<String> _launches;
-
   @override
   @JsonKey()
   List<String> get launches {
@@ -1974,7 +1849,6 @@ class _$_ShipVehicle extends _ShipVehicle {
   @JsonKey(name: 'imo')
   final int imo;
   final List<String> _roles;
-
   @override
   @JsonKey()
   List<String> get roles {
@@ -2092,7 +1966,6 @@ abstract class _ShipVehicle extends ShipVehicle {
       @JsonKey(name: 'type') final String type,
       @JsonKey(name: 'model') final String? model,
       @JsonKey(name: 'legacy_id') final String legacyId}) = _$_ShipVehicle;
-
   const _ShipVehicle._() : super._();
 
   factory _ShipVehicle.fromJson(Map<String, dynamic> json) =
@@ -2100,92 +1973,726 @@ abstract class _ShipVehicle extends ShipVehicle {
 
   @override
   String get id;
-
   @override
   List<String> get launches;
-
   @override
   @JsonKey(name: 'active')
   bool get isActive;
-
   @override
   @JsonKey(name: 'name')
   String get name;
-
   @override
   @JsonKey(name: 'image')
   String get image;
-
   @override
   @JsonKey(name: 'link')
   String get link;
-
   @override
   @JsonKey(name: 'longitude')
   dynamic get longitude;
-
   @override
   @JsonKey(name: 'latitude')
   dynamic get latitude;
-
   @override
   @JsonKey(name: 'course_deg')
   num? get courseDeg;
-
   @override
   @JsonKey(name: 'speed_kn')
   num? get speedKn;
-
   @override
   @JsonKey(name: 'status')
   String get status;
-
   @override
   @JsonKey(name: 'home_port')
   String get homePort;
-
   @override
   @JsonKey(name: 'year_built')
   int get yearBuilt;
-
   @override
   @JsonKey(name: 'mass_lbs')
   int get massLbs;
-
   @override
   @JsonKey(name: 'mass_kg')
   int get massKg;
-
   @override
   @JsonKey(name: 'class')
   int get vehicleClass;
-
   @override
   @JsonKey(name: 'abs')
   int get abs;
-
   @override
   @JsonKey(name: 'imo')
   int get imo;
-
   @override
   List<String> get roles;
-
   @override
   @JsonKey(name: 'type')
   String get type;
-
   @override
   @JsonKey(name: 'model')
   String? get model;
-
   @override
   @JsonKey(name: 'legacy_id')
   String get legacyId;
-
   @override
   @JsonKey(ignore: true)
   _$$_ShipVehicleCopyWith<_$_ShipVehicle> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+ShipFullVehicle _$ShipFullVehicleFromJson(Map<String, dynamic> json) {
+  return _ShipFullVehicle.fromJson(json);
+}
+
+/// @nodoc
+mixin _$ShipFullVehicle {
+  String get id => throw _privateConstructorUsedError;
+  List<Launch> get launches => throw _privateConstructorUsedError;
+  @JsonKey(name: 'active')
+  bool get isActive => throw _privateConstructorUsedError;
+  @JsonKey(name: 'name')
+  String get name => throw _privateConstructorUsedError;
+  @JsonKey(name: 'image')
+  String get image => throw _privateConstructorUsedError;
+  @JsonKey(name: 'link')
+  String get link => throw _privateConstructorUsedError;
+  @JsonKey(name: 'longitude')
+  dynamic get longitude => throw _privateConstructorUsedError;
+  @JsonKey(name: 'latitude')
+  dynamic get latitude => throw _privateConstructorUsedError;
+  @JsonKey(name: 'course_deg')
+  num? get courseDeg => throw _privateConstructorUsedError;
+  @JsonKey(name: 'speed_kn')
+  num? get speedKn => throw _privateConstructorUsedError;
+  @JsonKey(name: 'status')
+  String get status => throw _privateConstructorUsedError;
+  @JsonKey(name: 'home_port')
+  String get homePort => throw _privateConstructorUsedError;
+  @JsonKey(name: 'year_built')
+  int get yearBuilt => throw _privateConstructorUsedError;
+  @JsonKey(name: 'mass_lbs')
+  int get massLbs => throw _privateConstructorUsedError;
+  @JsonKey(name: 'mass_kg')
+  int get massKg => throw _privateConstructorUsedError;
+  @JsonKey(name: 'class')
+  int get vehicleClass => throw _privateConstructorUsedError;
+  @JsonKey(name: 'abs')
+  int get abs => throw _privateConstructorUsedError;
+  @JsonKey(name: 'imo')
+  int get imo => throw _privateConstructorUsedError;
+  List<String> get roles => throw _privateConstructorUsedError;
+  @JsonKey(name: 'type')
+  String get type => throw _privateConstructorUsedError;
+  @JsonKey(name: 'model')
+  String? get model => throw _privateConstructorUsedError;
+  @JsonKey(name: 'legacy_id')
+  String get legacyId => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $ShipFullVehicleCopyWith<ShipFullVehicle> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $ShipFullVehicleCopyWith<$Res> {
+  factory $ShipFullVehicleCopyWith(
+          ShipFullVehicle value, $Res Function(ShipFullVehicle) then) =
+      _$ShipFullVehicleCopyWithImpl<$Res>;
+  $Res call(
+      {String id,
+      List<Launch> launches,
+      @JsonKey(name: 'active') bool isActive,
+      @JsonKey(name: 'name') String name,
+      @JsonKey(name: 'image') String image,
+      @JsonKey(name: 'link') String link,
+      @JsonKey(name: 'longitude') dynamic longitude,
+      @JsonKey(name: 'latitude') dynamic latitude,
+      @JsonKey(name: 'course_deg') num? courseDeg,
+      @JsonKey(name: 'speed_kn') num? speedKn,
+      @JsonKey(name: 'status') String status,
+      @JsonKey(name: 'home_port') String homePort,
+      @JsonKey(name: 'year_built') int yearBuilt,
+      @JsonKey(name: 'mass_lbs') int massLbs,
+      @JsonKey(name: 'mass_kg') int massKg,
+      @JsonKey(name: 'class') int vehicleClass,
+      @JsonKey(name: 'abs') int abs,
+      @JsonKey(name: 'imo') int imo,
+      List<String> roles,
+      @JsonKey(name: 'type') String type,
+      @JsonKey(name: 'model') String? model,
+      @JsonKey(name: 'legacy_id') String legacyId});
+}
+
+/// @nodoc
+class _$ShipFullVehicleCopyWithImpl<$Res>
+    implements $ShipFullVehicleCopyWith<$Res> {
+  _$ShipFullVehicleCopyWithImpl(this._value, this._then);
+
+  final ShipFullVehicle _value;
+  // ignore: unused_field
+  final $Res Function(ShipFullVehicle) _then;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? launches = freezed,
+    Object? isActive = freezed,
+    Object? name = freezed,
+    Object? image = freezed,
+    Object? link = freezed,
+    Object? longitude = freezed,
+    Object? latitude = freezed,
+    Object? courseDeg = freezed,
+    Object? speedKn = freezed,
+    Object? status = freezed,
+    Object? homePort = freezed,
+    Object? yearBuilt = freezed,
+    Object? massLbs = freezed,
+    Object? massKg = freezed,
+    Object? vehicleClass = freezed,
+    Object? abs = freezed,
+    Object? imo = freezed,
+    Object? roles = freezed,
+    Object? type = freezed,
+    Object? model = freezed,
+    Object? legacyId = freezed,
+  }) {
+    return _then(_value.copyWith(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String,
+      launches: launches == freezed
+          ? _value.launches
+          : launches // ignore: cast_nullable_to_non_nullable
+              as List<Launch>,
+      isActive: isActive == freezed
+          ? _value.isActive
+          : isActive // ignore: cast_nullable_to_non_nullable
+              as bool,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String,
+      image: image == freezed
+          ? _value.image
+          : image // ignore: cast_nullable_to_non_nullable
+              as String,
+      link: link == freezed
+          ? _value.link
+          : link // ignore: cast_nullable_to_non_nullable
+              as String,
+      longitude: longitude == freezed
+          ? _value.longitude
+          : longitude // ignore: cast_nullable_to_non_nullable
+              as dynamic,
+      latitude: latitude == freezed
+          ? _value.latitude
+          : latitude // ignore: cast_nullable_to_non_nullable
+              as dynamic,
+      courseDeg: courseDeg == freezed
+          ? _value.courseDeg
+          : courseDeg // ignore: cast_nullable_to_non_nullable
+              as num?,
+      speedKn: speedKn == freezed
+          ? _value.speedKn
+          : speedKn // ignore: cast_nullable_to_non_nullable
+              as num?,
+      status: status == freezed
+          ? _value.status
+          : status // ignore: cast_nullable_to_non_nullable
+              as String,
+      homePort: homePort == freezed
+          ? _value.homePort
+          : homePort // ignore: cast_nullable_to_non_nullable
+              as String,
+      yearBuilt: yearBuilt == freezed
+          ? _value.yearBuilt
+          : yearBuilt // ignore: cast_nullable_to_non_nullable
+              as int,
+      massLbs: massLbs == freezed
+          ? _value.massLbs
+          : massLbs // ignore: cast_nullable_to_non_nullable
+              as int,
+      massKg: massKg == freezed
+          ? _value.massKg
+          : massKg // ignore: cast_nullable_to_non_nullable
+              as int,
+      vehicleClass: vehicleClass == freezed
+          ? _value.vehicleClass
+          : vehicleClass // ignore: cast_nullable_to_non_nullable
+              as int,
+      abs: abs == freezed
+          ? _value.abs
+          : abs // ignore: cast_nullable_to_non_nullable
+              as int,
+      imo: imo == freezed
+          ? _value.imo
+          : imo // ignore: cast_nullable_to_non_nullable
+              as int,
+      roles: roles == freezed
+          ? _value.roles
+          : roles // ignore: cast_nullable_to_non_nullable
+              as List<String>,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as String,
+      model: model == freezed
+          ? _value.model
+          : model // ignore: cast_nullable_to_non_nullable
+              as String?,
+      legacyId: legacyId == freezed
+          ? _value.legacyId
+          : legacyId // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+abstract class _$$_ShipFullVehicleCopyWith<$Res>
+    implements $ShipFullVehicleCopyWith<$Res> {
+  factory _$$_ShipFullVehicleCopyWith(
+          _$_ShipFullVehicle value, $Res Function(_$_ShipFullVehicle) then) =
+      __$$_ShipFullVehicleCopyWithImpl<$Res>;
+  @override
+  $Res call(
+      {String id,
+      List<Launch> launches,
+      @JsonKey(name: 'active') bool isActive,
+      @JsonKey(name: 'name') String name,
+      @JsonKey(name: 'image') String image,
+      @JsonKey(name: 'link') String link,
+      @JsonKey(name: 'longitude') dynamic longitude,
+      @JsonKey(name: 'latitude') dynamic latitude,
+      @JsonKey(name: 'course_deg') num? courseDeg,
+      @JsonKey(name: 'speed_kn') num? speedKn,
+      @JsonKey(name: 'status') String status,
+      @JsonKey(name: 'home_port') String homePort,
+      @JsonKey(name: 'year_built') int yearBuilt,
+      @JsonKey(name: 'mass_lbs') int massLbs,
+      @JsonKey(name: 'mass_kg') int massKg,
+      @JsonKey(name: 'class') int vehicleClass,
+      @JsonKey(name: 'abs') int abs,
+      @JsonKey(name: 'imo') int imo,
+      List<String> roles,
+      @JsonKey(name: 'type') String type,
+      @JsonKey(name: 'model') String? model,
+      @JsonKey(name: 'legacy_id') String legacyId});
+}
+
+/// @nodoc
+class __$$_ShipFullVehicleCopyWithImpl<$Res>
+    extends _$ShipFullVehicleCopyWithImpl<$Res>
+    implements _$$_ShipFullVehicleCopyWith<$Res> {
+  __$$_ShipFullVehicleCopyWithImpl(
+      _$_ShipFullVehicle _value, $Res Function(_$_ShipFullVehicle) _then)
+      : super(_value, (v) => _then(v as _$_ShipFullVehicle));
+
+  @override
+  _$_ShipFullVehicle get _value => super._value as _$_ShipFullVehicle;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? launches = freezed,
+    Object? isActive = freezed,
+    Object? name = freezed,
+    Object? image = freezed,
+    Object? link = freezed,
+    Object? longitude = freezed,
+    Object? latitude = freezed,
+    Object? courseDeg = freezed,
+    Object? speedKn = freezed,
+    Object? status = freezed,
+    Object? homePort = freezed,
+    Object? yearBuilt = freezed,
+    Object? massLbs = freezed,
+    Object? massKg = freezed,
+    Object? vehicleClass = freezed,
+    Object? abs = freezed,
+    Object? imo = freezed,
+    Object? roles = freezed,
+    Object? type = freezed,
+    Object? model = freezed,
+    Object? legacyId = freezed,
+  }) {
+    return _then(_$_ShipFullVehicle(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String,
+      launches: launches == freezed
+          ? _value._launches
+          : launches // ignore: cast_nullable_to_non_nullable
+              as List<Launch>,
+      isActive: isActive == freezed
+          ? _value.isActive
+          : isActive // ignore: cast_nullable_to_non_nullable
+              as bool,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String,
+      image: image == freezed
+          ? _value.image
+          : image // ignore: cast_nullable_to_non_nullable
+              as String,
+      link: link == freezed
+          ? _value.link
+          : link // ignore: cast_nullable_to_non_nullable
+              as String,
+      longitude: longitude == freezed
+          ? _value.longitude
+          : longitude // ignore: cast_nullable_to_non_nullable
+              as dynamic,
+      latitude: latitude == freezed
+          ? _value.latitude
+          : latitude // ignore: cast_nullable_to_non_nullable
+              as dynamic,
+      courseDeg: courseDeg == freezed
+          ? _value.courseDeg
+          : courseDeg // ignore: cast_nullable_to_non_nullable
+              as num?,
+      speedKn: speedKn == freezed
+          ? _value.speedKn
+          : speedKn // ignore: cast_nullable_to_non_nullable
+              as num?,
+      status: status == freezed
+          ? _value.status
+          : status // ignore: cast_nullable_to_non_nullable
+              as String,
+      homePort: homePort == freezed
+          ? _value.homePort
+          : homePort // ignore: cast_nullable_to_non_nullable
+              as String,
+      yearBuilt: yearBuilt == freezed
+          ? _value.yearBuilt
+          : yearBuilt // ignore: cast_nullable_to_non_nullable
+              as int,
+      massLbs: massLbs == freezed
+          ? _value.massLbs
+          : massLbs // ignore: cast_nullable_to_non_nullable
+              as int,
+      massKg: massKg == freezed
+          ? _value.massKg
+          : massKg // ignore: cast_nullable_to_non_nullable
+              as int,
+      vehicleClass: vehicleClass == freezed
+          ? _value.vehicleClass
+          : vehicleClass // ignore: cast_nullable_to_non_nullable
+              as int,
+      abs: abs == freezed
+          ? _value.abs
+          : abs // ignore: cast_nullable_to_non_nullable
+              as int,
+      imo: imo == freezed
+          ? _value.imo
+          : imo // ignore: cast_nullable_to_non_nullable
+              as int,
+      roles: roles == freezed
+          ? _value._roles
+          : roles // ignore: cast_nullable_to_non_nullable
+              as List<String>,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as String,
+      model: model == freezed
+          ? _value.model
+          : model // ignore: cast_nullable_to_non_nullable
+              as String?,
+      legacyId: legacyId == freezed
+          ? _value.legacyId
+          : legacyId // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$_ShipFullVehicle extends _ShipFullVehicle {
+  const _$_ShipFullVehicle(
+      {required this.id,
+      final List<Launch> launches = const <Launch>[],
+      @JsonKey(name: 'active') this.isActive = false,
+      @JsonKey(name: 'name') this.name = '',
+      @JsonKey(name: 'image') this.image = 'https://i.imgur.com/woCxpkj.jpg',
+      @JsonKey(name: 'link') this.link =
+          'https://www.marinetraffic.com/en/ais/details/ships/shipid:434663/mmsi:367020820/imo:7434016/vessel:AMERICAN_CHAMPION',
+      @JsonKey(name: 'longitude') this.longitude,
+      @JsonKey(name: 'latitude') this.latitude,
+      @JsonKey(name: 'course_deg') this.courseDeg,
+      @JsonKey(name: 'speed_kn') this.speedKn,
+      @JsonKey(name: 'status') this.status = '',
+      @JsonKey(name: 'home_port') this.homePort = '',
+      @JsonKey(name: 'year_built') this.yearBuilt = 0,
+      @JsonKey(name: 'mass_lbs') this.massLbs = 0,
+      @JsonKey(name: 'mass_kg') this.massKg = 0,
+      @JsonKey(name: 'class') this.vehicleClass = 0,
+      @JsonKey(name: 'abs') this.abs = 0,
+      @JsonKey(name: 'imo') this.imo = 0,
+      final List<String> roles = const [],
+      @JsonKey(name: 'type') this.type = 'Cargo',
+      @JsonKey(name: 'model') this.model,
+      @JsonKey(name: 'legacy_id') this.legacyId = 'AMERICANSPIRIT'})
+      : _launches = launches,
+        _roles = roles,
+        super._();
+
+  factory _$_ShipFullVehicle.fromJson(Map<String, dynamic> json) =>
+      _$$_ShipFullVehicleFromJson(json);
+
+  @override
+  final String id;
+  final List<Launch> _launches;
+  @override
+  @JsonKey()
+  List<Launch> get launches {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_launches);
+  }
+
+  @override
+  @JsonKey(name: 'active')
+  final bool isActive;
+  @override
+  @JsonKey(name: 'name')
+  final String name;
+  @override
+  @JsonKey(name: 'image')
+  final String image;
+  @override
+  @JsonKey(name: 'link')
+  final String link;
+  @override
+  @JsonKey(name: 'longitude')
+  final dynamic longitude;
+  @override
+  @JsonKey(name: 'latitude')
+  final dynamic latitude;
+  @override
+  @JsonKey(name: 'course_deg')
+  final num? courseDeg;
+  @override
+  @JsonKey(name: 'speed_kn')
+  final num? speedKn;
+  @override
+  @JsonKey(name: 'status')
+  final String status;
+  @override
+  @JsonKey(name: 'home_port')
+  final String homePort;
+  @override
+  @JsonKey(name: 'year_built')
+  final int yearBuilt;
+  @override
+  @JsonKey(name: 'mass_lbs')
+  final int massLbs;
+  @override
+  @JsonKey(name: 'mass_kg')
+  final int massKg;
+  @override
+  @JsonKey(name: 'class')
+  final int vehicleClass;
+  @override
+  @JsonKey(name: 'abs')
+  final int abs;
+  @override
+  @JsonKey(name: 'imo')
+  final int imo;
+  final List<String> _roles;
+  @override
+  @JsonKey()
+  List<String> get roles {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_roles);
+  }
+
+  @override
+  @JsonKey(name: 'type')
+  final String type;
+  @override
+  @JsonKey(name: 'model')
+  final String? model;
+  @override
+  @JsonKey(name: 'legacy_id')
+  final String legacyId;
+
+  @override
+  String toString() {
+    return 'ShipFullVehicle(id: $id, launches: $launches, isActive: $isActive, name: $name, image: $image, link: $link, longitude: $longitude, latitude: $latitude, courseDeg: $courseDeg, speedKn: $speedKn, status: $status, homePort: $homePort, yearBuilt: $yearBuilt, massLbs: $massLbs, massKg: $massKg, vehicleClass: $vehicleClass, abs: $abs, imo: $imo, roles: $roles, type: $type, model: $model, legacyId: $legacyId)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_ShipFullVehicle &&
+            const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality().equals(other._launches, _launches) &&
+            const DeepCollectionEquality().equals(other.isActive, isActive) &&
+            const DeepCollectionEquality().equals(other.name, name) &&
+            const DeepCollectionEquality().equals(other.image, image) &&
+            const DeepCollectionEquality().equals(other.link, link) &&
+            const DeepCollectionEquality().equals(other.longitude, longitude) &&
+            const DeepCollectionEquality().equals(other.latitude, latitude) &&
+            const DeepCollectionEquality().equals(other.courseDeg, courseDeg) &&
+            const DeepCollectionEquality().equals(other.speedKn, speedKn) &&
+            const DeepCollectionEquality().equals(other.status, status) &&
+            const DeepCollectionEquality().equals(other.homePort, homePort) &&
+            const DeepCollectionEquality().equals(other.yearBuilt, yearBuilt) &&
+            const DeepCollectionEquality().equals(other.massLbs, massLbs) &&
+            const DeepCollectionEquality().equals(other.massKg, massKg) &&
+            const DeepCollectionEquality()
+                .equals(other.vehicleClass, vehicleClass) &&
+            const DeepCollectionEquality().equals(other.abs, abs) &&
+            const DeepCollectionEquality().equals(other.imo, imo) &&
+            const DeepCollectionEquality().equals(other._roles, _roles) &&
+            const DeepCollectionEquality().equals(other.type, type) &&
+            const DeepCollectionEquality().equals(other.model, model) &&
+            const DeepCollectionEquality().equals(other.legacyId, legacyId));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hashAll([
+        runtimeType,
+        const DeepCollectionEquality().hash(id),
+        const DeepCollectionEquality().hash(_launches),
+        const DeepCollectionEquality().hash(isActive),
+        const DeepCollectionEquality().hash(name),
+        const DeepCollectionEquality().hash(image),
+        const DeepCollectionEquality().hash(link),
+        const DeepCollectionEquality().hash(longitude),
+        const DeepCollectionEquality().hash(latitude),
+        const DeepCollectionEquality().hash(courseDeg),
+        const DeepCollectionEquality().hash(speedKn),
+        const DeepCollectionEquality().hash(status),
+        const DeepCollectionEquality().hash(homePort),
+        const DeepCollectionEquality().hash(yearBuilt),
+        const DeepCollectionEquality().hash(massLbs),
+        const DeepCollectionEquality().hash(massKg),
+        const DeepCollectionEquality().hash(vehicleClass),
+        const DeepCollectionEquality().hash(abs),
+        const DeepCollectionEquality().hash(imo),
+        const DeepCollectionEquality().hash(_roles),
+        const DeepCollectionEquality().hash(type),
+        const DeepCollectionEquality().hash(model),
+        const DeepCollectionEquality().hash(legacyId)
+      ]);
+
+  @JsonKey(ignore: true)
+  @override
+  _$$_ShipFullVehicleCopyWith<_$_ShipFullVehicle> get copyWith =>
+      __$$_ShipFullVehicleCopyWithImpl<_$_ShipFullVehicle>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_ShipFullVehicleToJson(
+      this,
+    );
+  }
+}
+
+abstract class _ShipFullVehicle extends ShipFullVehicle {
+  const factory _ShipFullVehicle(
+      {required final String id,
+      final List<Launch> launches,
+      @JsonKey(name: 'active') final bool isActive,
+      @JsonKey(name: 'name') final String name,
+      @JsonKey(name: 'image') final String image,
+      @JsonKey(name: 'link') final String link,
+      @JsonKey(name: 'longitude') final dynamic longitude,
+      @JsonKey(name: 'latitude') final dynamic latitude,
+      @JsonKey(name: 'course_deg') final num? courseDeg,
+      @JsonKey(name: 'speed_kn') final num? speedKn,
+      @JsonKey(name: 'status') final String status,
+      @JsonKey(name: 'home_port') final String homePort,
+      @JsonKey(name: 'year_built') final int yearBuilt,
+      @JsonKey(name: 'mass_lbs') final int massLbs,
+      @JsonKey(name: 'mass_kg') final int massKg,
+      @JsonKey(name: 'class') final int vehicleClass,
+      @JsonKey(name: 'abs') final int abs,
+      @JsonKey(name: 'imo') final int imo,
+      final List<String> roles,
+      @JsonKey(name: 'type') final String type,
+      @JsonKey(name: 'model') final String? model,
+      @JsonKey(name: 'legacy_id') final String legacyId}) = _$_ShipFullVehicle;
+  const _ShipFullVehicle._() : super._();
+
+  factory _ShipFullVehicle.fromJson(Map<String, dynamic> json) =
+      _$_ShipFullVehicle.fromJson;
+
+  @override
+  String get id;
+  @override
+  List<Launch> get launches;
+  @override
+  @JsonKey(name: 'active')
+  bool get isActive;
+  @override
+  @JsonKey(name: 'name')
+  String get name;
+  @override
+  @JsonKey(name: 'image')
+  String get image;
+  @override
+  @JsonKey(name: 'link')
+  String get link;
+  @override
+  @JsonKey(name: 'longitude')
+  dynamic get longitude;
+  @override
+  @JsonKey(name: 'latitude')
+  dynamic get latitude;
+  @override
+  @JsonKey(name: 'course_deg')
+  num? get courseDeg;
+  @override
+  @JsonKey(name: 'speed_kn')
+  num? get speedKn;
+  @override
+  @JsonKey(name: 'status')
+  String get status;
+  @override
+  @JsonKey(name: 'home_port')
+  String get homePort;
+  @override
+  @JsonKey(name: 'year_built')
+  int get yearBuilt;
+  @override
+  @JsonKey(name: 'mass_lbs')
+  int get massLbs;
+  @override
+  @JsonKey(name: 'mass_kg')
+  int get massKg;
+  @override
+  @JsonKey(name: 'class')
+  int get vehicleClass;
+  @override
+  @JsonKey(name: 'abs')
+  int get abs;
+  @override
+  @JsonKey(name: 'imo')
+  int get imo;
+  @override
+  List<String> get roles;
+  @override
+  @JsonKey(name: 'type')
+  String get type;
+  @override
+  @JsonKey(name: 'model')
+  String? get model;
+  @override
+  @JsonKey(name: 'legacy_id')
+  String get legacyId;
+  @override
+  @JsonKey(ignore: true)
+  _$$_ShipFullVehicleCopyWith<_$_ShipFullVehicle> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -2196,54 +2703,37 @@ DragonVehicle _$DragonVehicleFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$DragonVehicle {
   String get id => throw _privateConstructorUsedError;
-
   String get description => throw _privateConstructorUsedError;
-
   String get wikipedia => throw _privateConstructorUsedError;
-
   List<Thruster> get thrusters => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'dry_mass_lb')
   int get dryMassLb => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'dry_mass_kg')
   int get dryMassKg => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'orbit_duration_yr')
   int get orbitDurationYr => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'sidewall_angle_deg')
   int get sidewallAngleDeg => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'crew_capacity')
   int get crewCapacity => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'active')
   bool get isActive => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'type')
   String get type => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'name')
   String get name => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'flickr_images')
   List<String> get images => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'first_flight')
   String get firstFlight => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'diameter')
   Diameter get diameter => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'height_w_trunk')
   Diameter get heightWTrunk => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'trunk')
   Trunk get trunk => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
   @JsonKey(ignore: true)
   $DragonVehicleCopyWith<DragonVehicle> get copyWith =>
       throw _privateConstructorUsedError;
@@ -2254,7 +2744,6 @@ abstract class $DragonVehicleCopyWith<$Res> {
   factory $DragonVehicleCopyWith(
           DragonVehicle value, $Res Function(DragonVehicle) then) =
       _$DragonVehicleCopyWithImpl<$Res>;
-
   $Res call(
       {String id,
       String description,
@@ -2275,9 +2764,7 @@ abstract class $DragonVehicleCopyWith<$Res> {
       @JsonKey(name: 'trunk') Trunk trunk});
 
   $DiameterCopyWith<$Res> get diameter;
-
   $DiameterCopyWith<$Res> get heightWTrunk;
-
   $TrunkCopyWith<$Res> get trunk;
 }
 
@@ -2287,7 +2774,6 @@ class _$DragonVehicleCopyWithImpl<$Res>
   _$DragonVehicleCopyWithImpl(this._value, this._then);
 
   final DragonVehicle _value;
-
   // ignore: unused_field
   final $Res Function(DragonVehicle) _then;
 
@@ -2411,7 +2897,6 @@ abstract class _$$_DragonVehicleCopyWith<$Res>
   factory _$$_DragonVehicleCopyWith(
           _$_DragonVehicle value, $Res Function(_$_DragonVehicle) then) =
       __$$_DragonVehicleCopyWithImpl<$Res>;
-
   @override
   $Res call(
       {String id,
@@ -2434,10 +2919,8 @@ abstract class _$$_DragonVehicleCopyWith<$Res>
 
   @override
   $DiameterCopyWith<$Res> get diameter;
-
   @override
   $DiameterCopyWith<$Res> get heightWTrunk;
-
   @override
   $TrunkCopyWith<$Res> get trunk;
 }
@@ -2583,7 +3066,6 @@ class _$_DragonVehicle extends _DragonVehicle {
   @JsonKey()
   final String wikipedia;
   final List<Thruster> _thrusters;
-
   @override
   @JsonKey()
   List<Thruster> get thrusters {
@@ -2616,7 +3098,6 @@ class _$_DragonVehicle extends _DragonVehicle {
   @JsonKey(name: 'name')
   final String name;
   final List<String> _images;
-
   @override
   @JsonKey(name: 'flickr_images')
   List<String> get images {
@@ -2727,7 +3208,6 @@ abstract class _DragonVehicle extends DragonVehicle {
       @JsonKey(name: 'diameter') final Diameter diameter,
       @JsonKey(name: 'height_w_trunk') final Diameter heightWTrunk,
       @JsonKey(name: 'trunk') final Trunk trunk}) = _$_DragonVehicle;
-
   const _DragonVehicle._() : super._();
 
   factory _DragonVehicle.fromJson(Map<String, dynamic> json) =
@@ -2735,68 +3215,51 @@ abstract class _DragonVehicle extends DragonVehicle {
 
   @override
   String get id;
-
   @override
   String get description;
-
   @override
   String get wikipedia;
-
   @override
   List<Thruster> get thrusters;
-
   @override
   @JsonKey(name: 'dry_mass_lb')
   int get dryMassLb;
-
   @override
   @JsonKey(name: 'dry_mass_kg')
   int get dryMassKg;
-
   @override
   @JsonKey(name: 'orbit_duration_yr')
   int get orbitDurationYr;
-
   @override
   @JsonKey(name: 'sidewall_angle_deg')
   int get sidewallAngleDeg;
-
   @override
   @JsonKey(name: 'crew_capacity')
   int get crewCapacity;
-
   @override
   @JsonKey(name: 'active')
   bool get isActive;
-
   @override
   @JsonKey(name: 'type')
   String get type;
-
   @override
   @JsonKey(name: 'name')
   String get name;
-
   @override
   @JsonKey(name: 'flickr_images')
   List<String> get images;
-
   @override
   @JsonKey(name: 'first_flight')
   String get firstFlight;
-
   @override
   @JsonKey(name: 'diameter')
   Diameter get diameter;
-
   @override
   @JsonKey(name: 'height_w_trunk')
   Diameter get heightWTrunk;
-
   @override
   @JsonKey(name: 'trunk')
   Trunk get trunk;
-
   @override
   @JsonKey(ignore: true)
   _$$_DragonVehicleCopyWith<_$_DragonVehicle> get copyWith =>

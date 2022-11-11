@@ -182,6 +182,64 @@ Map<String, dynamic> _$$_ShipVehicleToJson(_$_ShipVehicle instance) =>
       'legacy_id': instance.legacyId,
     };
 
+_$_ShipFullVehicle _$$_ShipFullVehicleFromJson(Map<String, dynamic> json) =>
+    _$_ShipFullVehicle(
+      id: json['id'] as String,
+      launches: (json['launches'] as List<dynamic>?)
+              ?.map((e) => Launch.fromJson(e as Map<String, dynamic>))
+              .toList() ??
+          const <Launch>[],
+      isActive: json['active'] as bool? ?? false,
+      name: json['name'] as String? ?? '',
+      image: json['image'] as String? ?? 'https://i.imgur.com/woCxpkj.jpg',
+      link: json['link'] as String? ??
+          'https://www.marinetraffic.com/en/ais/details/ships/shipid:434663/mmsi:367020820/imo:7434016/vessel:AMERICAN_CHAMPION',
+      longitude: json['longitude'],
+      latitude: json['latitude'],
+      courseDeg: json['course_deg'] as num?,
+      speedKn: json['speed_kn'] as num?,
+      status: json['status'] as String? ?? '',
+      homePort: json['home_port'] as String? ?? '',
+      yearBuilt: json['year_built'] as int? ?? 0,
+      massLbs: json['mass_lbs'] as int? ?? 0,
+      massKg: json['mass_kg'] as int? ?? 0,
+      vehicleClass: json['class'] as int? ?? 0,
+      abs: json['abs'] as int? ?? 0,
+      imo: json['imo'] as int? ?? 0,
+      roles:
+          (json['roles'] as List<dynamic>?)?.map((e) => e as String).toList() ??
+              const [],
+      type: json['type'] as String? ?? 'Cargo',
+      model: json['model'] as String?,
+      legacyId: json['legacy_id'] as String? ?? 'AMERICANSPIRIT',
+    );
+
+Map<String, dynamic> _$$_ShipFullVehicleToJson(_$_ShipFullVehicle instance) =>
+    <String, dynamic>{
+      'id': instance.id,
+      'launches': instance.launches.map((e) => e.toJson()).toList(),
+      'active': instance.isActive,
+      'name': instance.name,
+      'image': instance.image,
+      'link': instance.link,
+      'longitude': instance.longitude,
+      'latitude': instance.latitude,
+      'course_deg': instance.courseDeg,
+      'speed_kn': instance.speedKn,
+      'status': instance.status,
+      'home_port': instance.homePort,
+      'year_built': instance.yearBuilt,
+      'mass_lbs': instance.massLbs,
+      'mass_kg': instance.massKg,
+      'class': instance.vehicleClass,
+      'abs': instance.abs,
+      'imo': instance.imo,
+      'roles': instance.roles,
+      'type': instance.type,
+      'model': instance.model,
+      'legacy_id': instance.legacyId,
+    };
+
 _$_DragonVehicle _$$_DragonVehicleFromJson(Map<String, dynamic> json) =>
     _$_DragonVehicle(
       id: json['id'] as String,

@@ -22,30 +22,21 @@ CapsuleFullModel _$CapsuleFullModelFromJson(Map<String, dynamic> json) {
 mixin _$CapsuleFullModel {
   @JsonKey(name: 'reuse_count')
   int get reuseCount => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'water_landings')
   int get waterLandings => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'land_landings')
   int get landLandings => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'last_update')
   String? get lastUpdate => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'launches')
   List<Launch> get launches => throw _privateConstructorUsedError;
-
   String get serial => throw _privateConstructorUsedError;
-
   String get status => throw _privateConstructorUsedError;
-
   String get type => throw _privateConstructorUsedError;
-
   @JsonKey(name: 'id')
   String get id => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
   @JsonKey(ignore: true)
   $CapsuleFullModelCopyWith<CapsuleFullModel> get copyWith =>
       throw _privateConstructorUsedError;
@@ -56,7 +47,6 @@ abstract class $CapsuleFullModelCopyWith<$Res> {
   factory $CapsuleFullModelCopyWith(
           CapsuleFullModel value, $Res Function(CapsuleFullModel) then) =
       _$CapsuleFullModelCopyWithImpl<$Res>;
-
   $Res call(
       {@JsonKey(name: 'reuse_count') int reuseCount,
       @JsonKey(name: 'water_landings') int waterLandings,
@@ -75,7 +65,6 @@ class _$CapsuleFullModelCopyWithImpl<$Res>
   _$CapsuleFullModelCopyWithImpl(this._value, this._then);
 
   final CapsuleFullModel _value;
-
   // ignore: unused_field
   final $Res Function(CapsuleFullModel) _then;
 
@@ -138,7 +127,6 @@ abstract class _$$_CapsuleFullModelCopyWith<$Res>
   factory _$$_CapsuleFullModelCopyWith(
           _$_CapsuleFullModel value, $Res Function(_$_CapsuleFullModel) then) =
       __$$_CapsuleFullModelCopyWithImpl<$Res>;
-
   @override
   $Res call(
       {@JsonKey(name: 'reuse_count') int reuseCount,
@@ -248,7 +236,6 @@ class _$_CapsuleFullModel extends _CapsuleFullModel {
   @JsonKey(name: 'last_update')
   final String? lastUpdate;
   final List<Launch> _launches;
-
   @override
   @JsonKey(name: 'launches')
   List<Launch> get launches {
@@ -332,7 +319,6 @@ abstract class _CapsuleFullModel extends CapsuleFullModel {
       final String status,
       final String type,
       @JsonKey(name: 'id') required final String id}) = _$_CapsuleFullModel;
-
   const _CapsuleFullModel._() : super._();
 
   factory _CapsuleFullModel.fromJson(Map<String, dynamic> json) =
@@ -341,36 +327,27 @@ abstract class _CapsuleFullModel extends CapsuleFullModel {
   @override
   @JsonKey(name: 'reuse_count')
   int get reuseCount;
-
   @override
   @JsonKey(name: 'water_landings')
   int get waterLandings;
-
   @override
   @JsonKey(name: 'land_landings')
   int get landLandings;
-
   @override
   @JsonKey(name: 'last_update')
   String? get lastUpdate;
-
   @override
   @JsonKey(name: 'launches')
   List<Launch> get launches;
-
   @override
   String get serial;
-
   @override
   String get status;
-
   @override
   String get type;
-
   @override
   @JsonKey(name: 'id')
   String get id;
-
   @override
   @JsonKey(ignore: true)
   _$$_CapsuleFullModelCopyWith<_$_CapsuleFullModel> get copyWith =>

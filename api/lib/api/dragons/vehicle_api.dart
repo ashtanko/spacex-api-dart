@@ -21,4 +21,18 @@ abstract class VehicleApi {
 
   @POST('/dragons/query')
   Future<ApiPaginatedList<DragonVehicle>> queryDragons(@Body() q.Query query);
+
+  @GET('/ships')
+  Future<List<ShipVehicle>> getAllShips();
+
+  @GET('/ships/{id}')
+  Future<ShipVehicle> getShip(
+    @Path() String id,
+  );
+
+  @POST('/ships/query')
+  Future<ApiPaginatedList<ShipVehicle>> queryShips(@Body() q.Query query);
+
+  @POST('/ships/query')
+  Future<ApiPaginatedList<ShipFullVehicle>> queryFullShips(@Body() q.Query query);
 }
