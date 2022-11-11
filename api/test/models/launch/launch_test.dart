@@ -172,7 +172,6 @@ void main() {
           'static_fire_date_unix': 1142553600,
           'net': false,
           'window': 0,
-          'rocket': '5e9d0d95eda69955f709d1eb',
           'success': false,
           'failures': [
             {'time': 33, 'altitude': null, 'reason': 'merlin engine failure'}
@@ -181,8 +180,6 @@ void main() {
           'crew': [],
           'ships': [],
           'capsules': [],
-          'payloads': ['5eb0e4b5b6c3bb0006eeb1e1'],
-          'launchpad': '5e9e4502f5090995de566f86',
           'flight_number': 1,
           'name': 'FalconSat',
           'date_utc': '2006-03-24T22:30:00.000Z',
@@ -233,14 +230,11 @@ void main() {
           staticFireDateUnix: 1142553600,
           net: false,
           window: 0,
-          rocket: '5e9d0d95eda69955f709d1eb',
           success: false,
           failures: [
             LaunchFailure(time: 33, reason: 'merlin engine failure'),
           ],
           details: 'Engine failure at 33 seconds and loss of vehicle',
-          payloads: ['5eb0e4b5b6c3bb0006eeb1e1'],
-          launchpad: '5e9e4502f5090995de566f86',
           flightNumber: 1,
           name: 'FalconSat',
           dateUtc: '2006-03-24T22:30:00.000Z',

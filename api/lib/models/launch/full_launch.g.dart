@@ -22,9 +22,11 @@ _$_FullLaunch _$$_FullLaunchFromJson(Map<String, dynamic> json) =>
       dateUtc: json['date_utc'] as String? ?? '',
       name: json['name'] as String? ?? '',
       flightNumber: json['flight_number'] as int? ?? 0,
-      launchpad: json['launchpad'] as String? ?? '',
+      launchpad: json['launchpad'] == null
+          ? null
+          : Landpad.fromJson(json['launchpad'] as Map<String, dynamic>),
       payloads: (json['payloads'] as List<dynamic>?)
-              ?.map((e) => e as String)
+              ?.map((e) => Payload.fromJson(e as Map<String, dynamic>))
               .toList() ??
           const [],
       capsules: (json['capsules'] as List<dynamic>?)
@@ -40,7 +42,9 @@ _$_FullLaunch _$$_FullLaunchFromJson(Map<String, dynamic> json) =>
               .toList() ??
           const [],
       success: json['success'] as bool? ?? false,
-      rocket: json['rocket'] as String? ?? '',
+      rocket: json['rocket'] == null
+          ? null
+          : RocketVehicle.fromJson(json['rocket'] as Map<String, dynamic>),
       window: json['window'] as int? ?? 0,
       net: json['net'] as bool? ?? false,
       staticFireDateUnix: json['static_fire_date_unix'] as int? ?? 0,
@@ -66,14 +70,14 @@ Map<String, dynamic> _$$_FullLaunchToJson(_$_FullLaunch instance) =>
       'date_utc': instance.dateUtc,
       'name': instance.name,
       'flight_number': instance.flightNumber,
-      'launchpad': instance.launchpad,
-      'payloads': instance.payloads,
+      'launchpad': instance.launchpad?.toJson(),
+      'payloads': instance.payloads.map((e) => e.toJson()).toList(),
       'capsules': instance.capsules.map((e) => e.toJson()).toList(),
       'crew': instance.crew,
       'details': instance.details,
       'failures': instance.failures.map((e) => e.toJson()).toList(),
       'success': instance.success,
-      'rocket': instance.rocket,
+      'rocket': instance.rocket?.toJson(),
       'window': instance.window,
       'net': instance.net,
       'static_fire_date_unix': instance.staticFireDateUnix,

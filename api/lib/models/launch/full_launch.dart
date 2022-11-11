@@ -1,7 +1,9 @@
 import 'package:api/api.dart';
+import 'package:api/models/payload/payload.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'full_launch.freezed.dart';
+
 part 'full_launch.g.dart';
 
 enum LaunchStatus { retired, active, unknown }
@@ -20,15 +22,15 @@ class FullLaunch with _$FullLaunch {
     @JsonKey(name: 'date_utc') @Default('') String dateUtc,
     @JsonKey(name: 'name') @Default('') String name,
     @JsonKey(name: 'flight_number') @Default(0) int flightNumber,
-    @JsonKey(name: 'launchpad') @Default('') String launchpad,
-    @JsonKey(name: 'payloads') @Default([]) List<String> payloads,
+    @JsonKey(name: 'launchpad') Landpad? launchpad,
+    @JsonKey(name: 'payloads') @Default([]) List<Payload> payloads,
     @JsonKey(name: 'capsules') @Default([]) List<CapsuleModel> capsules,
     //@JsonKey(name: 'ships') @Default([]) List<Ship> ships,
     @JsonKey(name: 'crew') @Default([]) List<String> crew,
     @JsonKey(name: 'details') @Default('') String details,
     @JsonKey(name: 'failures') @Default([]) List<LaunchFailure> failures,
     @JsonKey(name: 'success') @Default(false) bool success,
-    @JsonKey(name: 'rocket') @Default('') String rocket,
+    @JsonKey(name: 'rocket') RocketVehicle? rocket,
     @JsonKey(name: 'window') @Default(0) int window,
     @JsonKey(name: 'net') @Default(false) bool net,
     @JsonKey(name: 'static_fire_date_unix') @Default(0) int staticFireDateUnix,
