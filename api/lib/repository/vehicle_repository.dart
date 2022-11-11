@@ -1,5 +1,5 @@
 import 'package:api/api.dart';
-import 'package:api/api/dragons/vehicle_api.dart';
+import 'package:api/api/vehicle/vehicle_api.dart';
 import 'package:api/models/query/query.dart' as q;
 import 'package:api/models/response/api_paginated_list.dart';
 

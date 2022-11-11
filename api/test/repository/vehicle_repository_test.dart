@@ -1,5 +1,5 @@
 import 'package:api/api/dio/interceptors/logging_interceptor.dart';
-import 'package:api/api/dragons/vehicle_api.dart';
+import 'package:api/api/vehicle/vehicle_api.dart';
 import 'package:api/models/query/query.dart' as q;
 import 'package:api/repository/vehicle_repository.dart';
 import 'package:api/utils/logger.dart';
