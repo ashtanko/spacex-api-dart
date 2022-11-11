@@ -1,7 +1,6 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'capsule_model.freezed.dart';
-
 part 'capsule_model.g.dart';
 
 /// Details about a specific capsule used in a CRS mission

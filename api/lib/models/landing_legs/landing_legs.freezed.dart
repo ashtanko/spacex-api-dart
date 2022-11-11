@@ -22,10 +22,12 @@ LandingLegs _$LandingLegsFromJson(Map<String, dynamic> json) {
 mixin _$LandingLegs {
   @JsonKey(name: 'number')
   num get number => throw _privateConstructorUsedError;
+
   @JsonKey(name: 'material')
   String? get material => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+
   @JsonKey(ignore: true)
   $LandingLegsCopyWith<LandingLegs> get copyWith =>
       throw _privateConstructorUsedError;
@@ -36,6 +38,7 @@ abstract class $LandingLegsCopyWith<$Res> {
   factory $LandingLegsCopyWith(
           LandingLegs value, $Res Function(LandingLegs) then) =
       _$LandingLegsCopyWithImpl<$Res>;
+
   $Res call(
       {@JsonKey(name: 'number') num number,
       @JsonKey(name: 'material') String? material});
@@ -46,6 +49,7 @@ class _$LandingLegsCopyWithImpl<$Res> implements $LandingLegsCopyWith<$Res> {
   _$LandingLegsCopyWithImpl(this._value, this._then);
 
   final LandingLegs _value;
+
   // ignore: unused_field
   final $Res Function(LandingLegs) _then;
 
@@ -73,6 +77,7 @@ abstract class _$$_LandingLegsCopyWith<$Res>
   factory _$$_LandingLegsCopyWith(
           _$_LandingLegs value, $Res Function(_$_LandingLegs) then) =
       __$$_LandingLegsCopyWithImpl<$Res>;
+
   @override
   $Res call(
       {@JsonKey(name: 'number') num number,
@@ -163,6 +168,7 @@ abstract class _LandingLegs extends LandingLegs {
   const factory _LandingLegs(
       {@JsonKey(name: 'number') final num number,
       @JsonKey(name: 'material') final String? material}) = _$_LandingLegs;
+
   const _LandingLegs._() : super._();
 
   factory _LandingLegs.fromJson(Map<String, dynamic> json) =
@@ -171,9 +177,11 @@ abstract class _LandingLegs extends LandingLegs {
   @override
   @JsonKey(name: 'number')
   num get number;
+
   @override
   @JsonKey(name: 'material')
   String? get material;
+
   @override
   @JsonKey(ignore: true)
   _$$_LandingLegsCopyWith<_$_LandingLegs> get copyWith =>

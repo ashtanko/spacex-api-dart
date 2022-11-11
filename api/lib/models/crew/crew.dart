@@ -3,7 +3,6 @@ import 'package:api/models/crew/crew_status.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'crew.freezed.dart';
-
 part 'crew.g.dart';
 
 @freezed
@@ -17,12 +16,13 @@ class FullCrew with _$FullCrew {
     @JsonKey(name: 'launches') @Default([]) List<Launch> launches,
     @JsonKey(name: 'status', unknownEnumValue: CrewStatus.unknown)
     @Default(CrewStatus.unknown)
-    CrewStatus status,
+        CrewStatus status,
   }) = _FullCrew;
 
   const FullCrew._();
 
-  factory FullCrew.fromJson(Map<String, dynamic> json) => _$FullCrewFromJson(json);
+  factory FullCrew.fromJson(Map<String, dynamic> json) =>
+      _$FullCrewFromJson(json);
 }
 
 @freezed

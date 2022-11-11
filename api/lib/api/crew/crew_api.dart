@@ -1,5 +1,4 @@
 import 'package:api/api/constants.dart';
-import 'package:api/models/core/core.dart';
 import 'package:api/models/crew/crew.dart';
 import 'package:api/models/query/query.dart' as q;
 import 'package:api/models/response/api_paginated_list.dart';

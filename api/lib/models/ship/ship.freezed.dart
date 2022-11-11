@@ -22,54 +22,78 @@ Ship _$ShipFromJson(Map<String, dynamic> json) {
 mixin _$Ship {
   @JsonKey(name: 'id')
   String get id => throw _privateConstructorUsedError;
+
   @JsonKey(name: 'legacy_id')
   String get legacyID => throw _privateConstructorUsedError;
+
   @JsonKey(name: 'model')
   String get model => throw _privateConstructorUsedError;
+
   @JsonKey(name: 'type')
   String get type => throw _privateConstructorUsedError;
+
   @JsonKey(name: 'roles')
   List<String> get roles => throw _privateConstructorUsedError;
+
   @JsonKey(name: 'imo')
   int get imo => throw _privateConstructorUsedError;
+
   @JsonKey(name: 'mmsi')
   int get mmsi => throw _privateConstructorUsedError;
+
   @JsonKey(name: 'abs')
   int get abs => throw _privateConstructorUsedError;
+
   @JsonKey(name: 'class')
   int get clazz => throw _privateConstructorUsedError;
+
   @JsonKey(name: 'mass_kg')
   int get massKg => throw _privateConstructorUsedError;
+
   @JsonKey(name: 'mass_lbs')
   int get massLbs => throw _privateConstructorUsedError;
+
   @JsonKey(name: 'year_built')
   int get yearBuilt => throw _privateConstructorUsedError;
+
   @JsonKey(name: 'home_port')
   String get homePort => throw _privateConstructorUsedError;
+
   @JsonKey(name: 'status')
   String get status => throw _privateConstructorUsedError;
+
   @JsonKey(name: 'latitude')
   double? get latitude => throw _privateConstructorUsedError;
+
   @JsonKey(name: 'longitude')
   double? get longitude => throw _privateConstructorUsedError;
+
   @JsonKey(name: 'link')
   String get link => throw _privateConstructorUsedError;
+
   @JsonKey(name: 'image')
   String get image => throw _privateConstructorUsedError;
+
   @JsonKey(name: 'name')
   String get name => throw _privateConstructorUsedError;
+
   @JsonKey(name: 'active')
   bool get isActive => throw _privateConstructorUsedError;
+
   @JsonKey(name: 'launches')
   List<String> get launches => throw _privateConstructorUsedError;
+
   @JsonKey(name: 'last_ais_update')
   dynamic get lastAisUpdate => throw _privateConstructorUsedError;
+
   @JsonKey(name: 'speed_kn')
   dynamic get speedKn => throw _privateConstructorUsedError;
+
   @JsonKey(name: 'course_deg')
   dynamic get courseDeg => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+
   @JsonKey(ignore: true)
   $ShipCopyWith<Ship> get copyWith => throw _privateConstructorUsedError;
 }
@@ -78,6 +102,7 @@ mixin _$Ship {
 abstract class $ShipCopyWith<$Res> {
   factory $ShipCopyWith(Ship value, $Res Function(Ship) then) =
       _$ShipCopyWithImpl<$Res>;
+
   $Res call(
       {@JsonKey(name: 'id') String id,
       @JsonKey(name: 'legacy_id') String legacyID,
@@ -110,6 +135,7 @@ class _$ShipCopyWithImpl<$Res> implements $ShipCopyWith<$Res> {
   _$ShipCopyWithImpl(this._value, this._then);
 
   final Ship _value;
+
   // ignore: unused_field
   final $Res Function(Ship) _then;
 
@@ -245,6 +271,7 @@ class _$ShipCopyWithImpl<$Res> implements $ShipCopyWith<$Res> {
 abstract class _$$_ShipCopyWith<$Res> implements $ShipCopyWith<$Res> {
   factory _$$_ShipCopyWith(_$_Ship value, $Res Function(_$_Ship) then) =
       __$$_ShipCopyWithImpl<$Res>;
+
   @override
   $Res call(
       {@JsonKey(name: 'id') String id,
@@ -457,6 +484,7 @@ class _$_Ship extends _Ship {
   @JsonKey(name: 'type')
   final String type;
   final List<String> _roles;
+
   @override
   @JsonKey(name: 'roles')
   List<String> get roles {
@@ -510,6 +538,7 @@ class _$_Ship extends _Ship {
   @JsonKey(name: 'active')
   final bool isActive;
   final List<String> _launches;
+
   @override
   @JsonKey(name: 'launches')
   List<String> get launches {
@@ -633,6 +662,7 @@ abstract class _Ship extends Ship {
       @JsonKey(name: 'last_ais_update') final dynamic lastAisUpdate,
       @JsonKey(name: 'speed_kn') final dynamic speedKn,
       @JsonKey(name: 'course_deg') final dynamic courseDeg}) = _$_Ship;
+
   const _Ship._() : super._();
 
   factory _Ship.fromJson(Map<String, dynamic> json) = _$_Ship.fromJson;
@@ -640,75 +670,99 @@ abstract class _Ship extends Ship {
   @override
   @JsonKey(name: 'id')
   String get id;
+
   @override
   @JsonKey(name: 'legacy_id')
   String get legacyID;
+
   @override
   @JsonKey(name: 'model')
   String get model;
+
   @override
   @JsonKey(name: 'type')
   String get type;
+
   @override
   @JsonKey(name: 'roles')
   List<String> get roles;
+
   @override
   @JsonKey(name: 'imo')
   int get imo;
+
   @override
   @JsonKey(name: 'mmsi')
   int get mmsi;
+
   @override
   @JsonKey(name: 'abs')
   int get abs;
+
   @override
   @JsonKey(name: 'class')
   int get clazz;
+
   @override
   @JsonKey(name: 'mass_kg')
   int get massKg;
+
   @override
   @JsonKey(name: 'mass_lbs')
   int get massLbs;
+
   @override
   @JsonKey(name: 'year_built')
   int get yearBuilt;
+
   @override
   @JsonKey(name: 'home_port')
   String get homePort;
+
   @override
   @JsonKey(name: 'status')
   String get status;
+
   @override
   @JsonKey(name: 'latitude')
   double? get latitude;
+
   @override
   @JsonKey(name: 'longitude')
   double? get longitude;
+
   @override
   @JsonKey(name: 'link')
   String get link;
+
   @override
   @JsonKey(name: 'image')
   String get image;
+
   @override
   @JsonKey(name: 'name')
   String get name;
+
   @override
   @JsonKey(name: 'active')
   bool get isActive;
+
   @override
   @JsonKey(name: 'launches')
   List<String> get launches;
+
   @override
   @JsonKey(name: 'last_ais_update')
   dynamic get lastAisUpdate;
+
   @override
   @JsonKey(name: 'speed_kn')
   dynamic get speedKn;
+
   @override
   @JsonKey(name: 'course_deg')
   dynamic get courseDeg;
+
   @override
   @JsonKey(ignore: true)
   _$$_ShipCopyWith<_$_Ship> get copyWith => throw _privateConstructorUsedError;
@@ -722,48 +776,69 @@ FullShip _$FullShipFromJson(Map<String, dynamic> json) {
 mixin _$FullShip {
   @JsonKey(name: 'id')
   String get id => throw _privateConstructorUsedError;
+
   @JsonKey(name: 'legacy_id')
   String get legacyID => throw _privateConstructorUsedError;
+
   @JsonKey(name: 'model')
   String get model => throw _privateConstructorUsedError;
+
   @JsonKey(name: 'type')
   String get type => throw _privateConstructorUsedError;
+
   @JsonKey(name: 'roles')
   List<String> get roles => throw _privateConstructorUsedError;
+
   @JsonKey(name: 'imo')
   int get imo => throw _privateConstructorUsedError;
+
   @JsonKey(name: 'mmsi')
   int get mmsi => throw _privateConstructorUsedError;
+
   @JsonKey(name: 'abs')
   int get abs => throw _privateConstructorUsedError;
+
   @JsonKey(name: 'class')
   int get clazz => throw _privateConstructorUsedError;
+
   @JsonKey(name: 'mass_kg')
   int get massKg => throw _privateConstructorUsedError;
+
   @JsonKey(name: 'mass_lbs')
   int get massLbs => throw _privateConstructorUsedError;
+
   @JsonKey(name: 'year_built')
   int get yearBuilt => throw _privateConstructorUsedError;
+
   @JsonKey(name: 'home_port')
   String get homePort => throw _privateConstructorUsedError;
+
   @JsonKey(name: 'status')
   String get status => throw _privateConstructorUsedError;
+
   @JsonKey(name: 'latitude')
   double? get latitude => throw _privateConstructorUsedError;
+
   @JsonKey(name: 'longitude')
   double? get longitude => throw _privateConstructorUsedError;
+
   @JsonKey(name: 'link')
   String get link => throw _privateConstructorUsedError;
+
   @JsonKey(name: 'image')
   String get image => throw _privateConstructorUsedError;
+
   @JsonKey(name: 'name')
   String get name => throw _privateConstructorUsedError;
+
   @JsonKey(name: 'active')
   bool get isActive => throw _privateConstructorUsedError;
+
   @JsonKey(name: 'launches')
   List<Launch> get launches => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+
   @JsonKey(ignore: true)
   $FullShipCopyWith<FullShip> get copyWith =>
       throw _privateConstructorUsedError;
@@ -773,6 +848,7 @@ mixin _$FullShip {
 abstract class $FullShipCopyWith<$Res> {
   factory $FullShipCopyWith(FullShip value, $Res Function(FullShip) then) =
       _$FullShipCopyWithImpl<$Res>;
+
   $Res call(
       {@JsonKey(name: 'id') String id,
       @JsonKey(name: 'legacy_id') String legacyID,
@@ -802,6 +878,7 @@ class _$FullShipCopyWithImpl<$Res> implements $FullShipCopyWith<$Res> {
   _$FullShipCopyWithImpl(this._value, this._then);
 
   final FullShip _value;
+
   // ignore: unused_field
   final $Res Function(FullShip) _then;
 
@@ -923,6 +1000,7 @@ abstract class _$$_FullShipCopyWith<$Res> implements $FullShipCopyWith<$Res> {
   factory _$$_FullShipCopyWith(
           _$_FullShip value, $Res Function(_$_FullShip) then) =
       __$$_FullShipCopyWithImpl<$Res>;
+
   @override
   $Res call(
       {@JsonKey(name: 'id') String id,
@@ -1116,6 +1194,7 @@ class _$_FullShip extends _FullShip {
   @JsonKey(name: 'type')
   final String type;
   final List<String> _roles;
+
   @override
   @JsonKey(name: 'roles')
   List<String> get roles {
@@ -1169,6 +1248,7 @@ class _$_FullShip extends _FullShip {
   @JsonKey(name: 'active')
   final bool isActive;
   final List<Launch> _launches;
+
   @override
   @JsonKey(name: 'launches')
   List<Launch> get launches {
@@ -1272,6 +1352,7 @@ abstract class _FullShip extends FullShip {
       @JsonKey(name: 'name') final String name,
       @JsonKey(name: 'active') final bool isActive,
       @JsonKey(name: 'launches') final List<Launch> launches}) = _$_FullShip;
+
   const _FullShip._() : super._();
 
   factory _FullShip.fromJson(Map<String, dynamic> json) = _$_FullShip.fromJson;
@@ -1279,66 +1360,87 @@ abstract class _FullShip extends FullShip {
   @override
   @JsonKey(name: 'id')
   String get id;
+
   @override
   @JsonKey(name: 'legacy_id')
   String get legacyID;
+
   @override
   @JsonKey(name: 'model')
   String get model;
+
   @override
   @JsonKey(name: 'type')
   String get type;
+
   @override
   @JsonKey(name: 'roles')
   List<String> get roles;
+
   @override
   @JsonKey(name: 'imo')
   int get imo;
+
   @override
   @JsonKey(name: 'mmsi')
   int get mmsi;
+
   @override
   @JsonKey(name: 'abs')
   int get abs;
+
   @override
   @JsonKey(name: 'class')
   int get clazz;
+
   @override
   @JsonKey(name: 'mass_kg')
   int get massKg;
+
   @override
   @JsonKey(name: 'mass_lbs')
   int get massLbs;
+
   @override
   @JsonKey(name: 'year_built')
   int get yearBuilt;
+
   @override
   @JsonKey(name: 'home_port')
   String get homePort;
+
   @override
   @JsonKey(name: 'status')
   String get status;
+
   @override
   @JsonKey(name: 'latitude')
   double? get latitude;
+
   @override
   @JsonKey(name: 'longitude')
   double? get longitude;
+
   @override
   @JsonKey(name: 'link')
   String get link;
+
   @override
   @JsonKey(name: 'image')
   String get image;
+
   @override
   @JsonKey(name: 'name')
   String get name;
+
   @override
   @JsonKey(name: 'active')
   bool get isActive;
+
   @override
   @JsonKey(name: 'launches')
   List<Launch> get launches;
+
   @override
   @JsonKey(ignore: true)
   _$$_FullShipCopyWith<_$_FullShip> get copyWith =>

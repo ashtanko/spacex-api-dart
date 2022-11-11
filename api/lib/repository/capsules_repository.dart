@@ -23,7 +23,8 @@ class CapsulesRepository {
     return capsules;
   }
 
-  Future<ApiPaginatedList<CapsuleFullModel>> queryFullCapsules(Query query) async {
+  Future<ApiPaginatedList<CapsuleFullModel>> queryFullCapsules(
+      Query query) async {
     final capsules = await _api.queryFullCapsules(query);
     return capsules;
   }

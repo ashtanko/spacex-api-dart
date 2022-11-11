@@ -5,7 +5,6 @@ part 'api_paginated_list.g.dart';
 
 @JsonSerializable(genericArgumentFactories: true)
 class ApiPaginatedList<T> {
-
   ApiPaginatedList({
     required this.results,
     required this.totalDocs,

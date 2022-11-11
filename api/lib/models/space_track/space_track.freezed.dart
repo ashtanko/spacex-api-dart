@@ -22,88 +22,129 @@ SpaceTrack _$SpaceTrackFromJson(Map<String, dynamic> json) {
 mixin _$SpaceTrack {
   @JsonKey(name: 'CCSDS_OMM_VERS')
   String? get ccsdsOmmVers => throw _privateConstructorUsedError;
+
   @JsonKey(name: 'COMMENT')
   String? get comment => throw _privateConstructorUsedError;
+
   @JsonKey(name: 'CREATION_DATE')
   String? get creationDate => throw _privateConstructorUsedError;
+
   @JsonKey(name: 'ORIGINATOR')
   String? get originator => throw _privateConstructorUsedError;
+
   @JsonKey(name: 'OBJECT_NAME')
   String? get objName => throw _privateConstructorUsedError;
+
   @JsonKey(name: 'OBJECT_ID')
   String? get objId => throw _privateConstructorUsedError;
+
   @JsonKey(name: 'CENTER_NAME')
   String? get centerName => throw _privateConstructorUsedError;
+
   @JsonKey(name: 'REF_FRAME')
   String? get refFrame => throw _privateConstructorUsedError;
+
   @JsonKey(name: 'TIME_SYSTEM')
   String? get timeSystem => throw _privateConstructorUsedError;
+
   @JsonKey(name: 'MEAN_ELEMENT_THEORY')
   String? get meanElementTheory => throw _privateConstructorUsedError;
+
   @JsonKey(name: 'EPOCH')
   String? get epoch => throw _privateConstructorUsedError;
+
   @JsonKey(name: 'MEAN_MOTION')
   double? get meanMotion => throw _privateConstructorUsedError;
+
   @JsonKey(name: 'ECCENTRICITY')
   double? get eccentricity => throw _privateConstructorUsedError;
+
   @JsonKey(name: 'INCLINATION')
   double? get inclination => throw _privateConstructorUsedError;
+
   @JsonKey(name: 'RA_OF_ASC_NODE')
   double? get raOfAscNode => throw _privateConstructorUsedError;
+
   @JsonKey(name: 'ARG_OF_PERICENTER')
   double? get argOfPericenter => throw _privateConstructorUsedError;
+
   @JsonKey(name: 'MEAN_ANOMALY')
   double? get meanAnomaly => throw _privateConstructorUsedError;
+
   @JsonKey(name: 'EPHEMERIS_TYPE')
   double? get ephemerisType => throw _privateConstructorUsedError;
+
   @JsonKey(name: 'CLASSIFICATION_TYPE')
   String? get classificationType => throw _privateConstructorUsedError;
+
   @JsonKey(name: 'NORAD_CAT_ID')
   int? get noradCatId => throw _privateConstructorUsedError;
+
   @JsonKey(name: 'ELEMENT_SET_NO')
   int? get elementSetNo => throw _privateConstructorUsedError;
+
   @JsonKey(name: 'REV_AT_EPOCH')
   int? get revAtEpoch => throw _privateConstructorUsedError;
+
   @JsonKey(name: 'BSTAR')
   double? get bstar => throw _privateConstructorUsedError;
+
   @JsonKey(name: 'MEAN_MOTION_DOT')
   double? get meanMotionDot => throw _privateConstructorUsedError;
+
   @JsonKey(name: 'MEAN_MOTION_DDOT')
   double? get meanMotionDdot => throw _privateConstructorUsedError;
+
   @JsonKey(name: 'SEMIMAJOR_AXIS')
   double? get semimajorAxis => throw _privateConstructorUsedError;
+
   @JsonKey(name: 'PERIOD')
   double? get period => throw _privateConstructorUsedError;
+
   @JsonKey(name: 'APOAPSIS')
   double? get apoapsis => throw _privateConstructorUsedError;
+
   @JsonKey(name: 'PERIAPSIS')
   double? get periapsis => throw _privateConstructorUsedError;
+
   @JsonKey(name: 'OBJECT_TYPE')
   String? get objectType => throw _privateConstructorUsedError;
+
   @JsonKey(name: 'RCS_SIZE')
   String? get rcsSize => throw _privateConstructorUsedError;
+
   @JsonKey(name: 'COUNTRY_CODE')
   String? get countryCode => throw _privateConstructorUsedError;
+
   @JsonKey(name: 'LAUNCH_DATE')
   String? get launchDate => throw _privateConstructorUsedError;
+
   @JsonKey(name: 'SITE')
   String? get site => throw _privateConstructorUsedError;
+
   @JsonKey(name: 'DECAY_DATE')
   String? get decayDate => throw _privateConstructorUsedError;
+
   @JsonKey(name: 'DECAYED')
   int? get decayed => throw _privateConstructorUsedError;
+
   @JsonKey(name: 'FILE')
   int? get file => throw _privateConstructorUsedError;
+
   @JsonKey(name: 'GP_ID')
   int? get gpId => throw _privateConstructorUsedError;
+
   @JsonKey(name: 'TLE_LINE0')
   String? get tleLine0 => throw _privateConstructorUsedError;
+
   @JsonKey(name: 'TLE_LINE1')
   String? get tleLine1 => throw _privateConstructorUsedError;
+
   @JsonKey(name: 'TLE_LINE2')
   String? get tleLine2 => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+
   @JsonKey(ignore: true)
   $SpaceTrackCopyWith<SpaceTrack> get copyWith =>
       throw _privateConstructorUsedError;
@@ -114,6 +155,7 @@ abstract class $SpaceTrackCopyWith<$Res> {
   factory $SpaceTrackCopyWith(
           SpaceTrack value, $Res Function(SpaceTrack) then) =
       _$SpaceTrackCopyWithImpl<$Res>;
+
   $Res call(
       {@JsonKey(name: 'CCSDS_OMM_VERS') String? ccsdsOmmVers,
       @JsonKey(name: 'COMMENT') String? comment,
@@ -163,6 +205,7 @@ class _$SpaceTrackCopyWithImpl<$Res> implements $SpaceTrackCopyWith<$Res> {
   _$SpaceTrackCopyWithImpl(this._value, this._then);
 
   final SpaceTrack _value;
+
   // ignore: unused_field
   final $Res Function(SpaceTrack) _then;
 
@@ -385,6 +428,7 @@ abstract class _$$_SpaceTrackCopyWith<$Res>
   factory _$$_SpaceTrackCopyWith(
           _$_SpaceTrack value, $Res Function(_$_SpaceTrack) then) =
       __$$_SpaceTrackCopyWithImpl<$Res>;
+
   @override
   $Res call(
       {@JsonKey(name: 'CCSDS_OMM_VERS') String? ccsdsOmmVers,
@@ -1006,6 +1050,7 @@ abstract class _SpaceTrack extends SpaceTrack {
       @JsonKey(name: 'TLE_LINE0') final String? tleLine0,
       @JsonKey(name: 'TLE_LINE1') final String? tleLine1,
       @JsonKey(name: 'TLE_LINE2') final String? tleLine2}) = _$_SpaceTrack;
+
   const _SpaceTrack._() : super._();
 
   factory _SpaceTrack.fromJson(Map<String, dynamic> json) =
@@ -1014,126 +1059,167 @@ abstract class _SpaceTrack extends SpaceTrack {
   @override
   @JsonKey(name: 'CCSDS_OMM_VERS')
   String? get ccsdsOmmVers;
+
   @override
   @JsonKey(name: 'COMMENT')
   String? get comment;
+
   @override
   @JsonKey(name: 'CREATION_DATE')
   String? get creationDate;
+
   @override
   @JsonKey(name: 'ORIGINATOR')
   String? get originator;
+
   @override
   @JsonKey(name: 'OBJECT_NAME')
   String? get objName;
+
   @override
   @JsonKey(name: 'OBJECT_ID')
   String? get objId;
+
   @override
   @JsonKey(name: 'CENTER_NAME')
   String? get centerName;
+
   @override
   @JsonKey(name: 'REF_FRAME')
   String? get refFrame;
+
   @override
   @JsonKey(name: 'TIME_SYSTEM')
   String? get timeSystem;
+
   @override
   @JsonKey(name: 'MEAN_ELEMENT_THEORY')
   String? get meanElementTheory;
+
   @override
   @JsonKey(name: 'EPOCH')
   String? get epoch;
+
   @override
   @JsonKey(name: 'MEAN_MOTION')
   double? get meanMotion;
+
   @override
   @JsonKey(name: 'ECCENTRICITY')
   double? get eccentricity;
+
   @override
   @JsonKey(name: 'INCLINATION')
   double? get inclination;
+
   @override
   @JsonKey(name: 'RA_OF_ASC_NODE')
   double? get raOfAscNode;
+
   @override
   @JsonKey(name: 'ARG_OF_PERICENTER')
   double? get argOfPericenter;
+
   @override
   @JsonKey(name: 'MEAN_ANOMALY')
   double? get meanAnomaly;
+
   @override
   @JsonKey(name: 'EPHEMERIS_TYPE')
   double? get ephemerisType;
+
   @override
   @JsonKey(name: 'CLASSIFICATION_TYPE')
   String? get classificationType;
+
   @override
   @JsonKey(name: 'NORAD_CAT_ID')
   int? get noradCatId;
+
   @override
   @JsonKey(name: 'ELEMENT_SET_NO')
   int? get elementSetNo;
+
   @override
   @JsonKey(name: 'REV_AT_EPOCH')
   int? get revAtEpoch;
+
   @override
   @JsonKey(name: 'BSTAR')
   double? get bstar;
+
   @override
   @JsonKey(name: 'MEAN_MOTION_DOT')
   double? get meanMotionDot;
+
   @override
   @JsonKey(name: 'MEAN_MOTION_DDOT')
   double? get meanMotionDdot;
+
   @override
   @JsonKey(name: 'SEMIMAJOR_AXIS')
   double? get semimajorAxis;
+
   @override
   @JsonKey(name: 'PERIOD')
   double? get period;
+
   @override
   @JsonKey(name: 'APOAPSIS')
   double? get apoapsis;
+
   @override
   @JsonKey(name: 'PERIAPSIS')
   double? get periapsis;
+
   @override
   @JsonKey(name: 'OBJECT_TYPE')
   String? get objectType;
+
   @override
   @JsonKey(name: 'RCS_SIZE')
   String? get rcsSize;
+
   @override
   @JsonKey(name: 'COUNTRY_CODE')
   String? get countryCode;
+
   @override
   @JsonKey(name: 'LAUNCH_DATE')
   String? get launchDate;
+
   @override
   @JsonKey(name: 'SITE')
   String? get site;
+
   @override
   @JsonKey(name: 'DECAY_DATE')
   String? get decayDate;
+
   @override
   @JsonKey(name: 'DECAYED')
   int? get decayed;
+
   @override
   @JsonKey(name: 'FILE')
   int? get file;
+
   @override
   @JsonKey(name: 'GP_ID')
   int? get gpId;
+
   @override
   @JsonKey(name: 'TLE_LINE0')
   String? get tleLine0;
+
   @override
   @JsonKey(name: 'TLE_LINE1')
   String? get tleLine1;
+
   @override
   @JsonKey(name: 'TLE_LINE2')
   String? get tleLine2;
+
   @override
   @JsonKey(ignore: true)
   _$$_SpaceTrackCopyWith<_$_SpaceTrack> get copyWith =>

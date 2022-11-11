@@ -2,7 +2,6 @@ import 'package:api/models/space_track/space_track.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'starlink.freezed.dart';
-
 part 'starlink.g.dart';
 
 @freezed

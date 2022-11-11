@@ -38,6 +38,18 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
       }
 
       try {
+        final paginatedFullCapsules = await queryFullCapsules(
+          const Query(
+            options: Options(populate: ['launches']),
+          ),
+        );
+        final capsules = paginatedFullCapsules.results;
+        print(capsules);
+      } catch (e) {
+        print(e);
+      }
+
+      try {
         final info = await getCompanyInfo();
         print(info.ceo);
       } catch (e) {

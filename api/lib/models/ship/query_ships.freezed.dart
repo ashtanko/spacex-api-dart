@@ -21,18 +21,29 @@ QueryShips _$QueryShipsFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$QueryShips {
   List<Ship> get docs => throw _privateConstructorUsedError;
+
   int get totalDocs => throw _privateConstructorUsedError;
+
   int get offset => throw _privateConstructorUsedError;
+
   int get limit => throw _privateConstructorUsedError;
+
   int get totalPages => throw _privateConstructorUsedError;
+
   int get page => throw _privateConstructorUsedError;
+
   int get pagingCounter => throw _privateConstructorUsedError;
+
   bool get hasPrevPage => throw _privateConstructorUsedError;
+
   bool get hasNextPage => throw _privateConstructorUsedError;
+
   int? get prevPage => throw _privateConstructorUsedError;
+
   int? get nextPage => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+
   @JsonKey(ignore: true)
   $QueryShipsCopyWith<QueryShips> get copyWith =>
       throw _privateConstructorUsedError;
@@ -43,6 +54,7 @@ abstract class $QueryShipsCopyWith<$Res> {
   factory $QueryShipsCopyWith(
           QueryShips value, $Res Function(QueryShips) then) =
       _$QueryShipsCopyWithImpl<$Res>;
+
   $Res call(
       {List<Ship> docs,
       int totalDocs,
@@ -62,6 +74,7 @@ class _$QueryShipsCopyWithImpl<$Res> implements $QueryShipsCopyWith<$Res> {
   _$QueryShipsCopyWithImpl(this._value, this._then);
 
   final QueryShips _value;
+
   // ignore: unused_field
   final $Res Function(QueryShips) _then;
 
@@ -134,6 +147,7 @@ abstract class _$$_QueryShipsCopyWith<$Res>
   factory _$$_QueryShipsCopyWith(
           _$_QueryShips value, $Res Function(_$_QueryShips) then) =
       __$$_QueryShipsCopyWithImpl<$Res>;
+
   @override
   $Res call(
       {List<Ship> docs,
@@ -244,6 +258,7 @@ class _$_QueryShips extends _QueryShips {
       _$$_QueryShipsFromJson(json);
 
   final List<Ship> _docs;
+
   @override
   @JsonKey()
   List<Ship> get docs {
@@ -349,6 +364,7 @@ abstract class _QueryShips extends QueryShips {
       final bool hasNextPage,
       final int? prevPage,
       final int? nextPage}) = _$_QueryShips;
+
   const _QueryShips._() : super._();
 
   factory _QueryShips.fromJson(Map<String, dynamic> json) =
@@ -356,26 +372,37 @@ abstract class _QueryShips extends QueryShips {
 
   @override
   List<Ship> get docs;
+
   @override
   int get totalDocs;
+
   @override
   int get offset;
+
   @override
   int get limit;
+
   @override
   int get totalPages;
+
   @override
   int get page;
+
   @override
   int get pagingCounter;
+
   @override
   bool get hasPrevPage;
+
   @override
   bool get hasNextPage;
+
   @override
   int? get prevPage;
+
   @override
   int? get nextPage;
+
   @override
   @JsonKey(ignore: true)
   _$$_QueryShipsCopyWith<_$_QueryShips> get copyWith =>

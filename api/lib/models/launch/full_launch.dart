@@ -2,7 +2,6 @@ import 'package:api/api.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'full_launch.freezed.dart';
-
 part 'full_launch.g.dart';
 
 enum LaunchStatus { retired, active, unknown }

@@ -24,6 +24,7 @@ mixin _$Query {
   Options? get options => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+
   @JsonKey(ignore: true)
   $QueryCopyWith<Query> get copyWith => throw _privateConstructorUsedError;
 }
@@ -32,6 +33,7 @@ mixin _$Query {
 abstract class $QueryCopyWith<$Res> {
   factory $QueryCopyWith(Query value, $Res Function(Query) then) =
       _$QueryCopyWithImpl<$Res>;
+
   $Res call({@JsonKey(name: 'options') Options? options});
 
   $OptionsCopyWith<$Res>? get options;
@@ -42,6 +44,7 @@ class _$QueryCopyWithImpl<$Res> implements $QueryCopyWith<$Res> {
   _$QueryCopyWithImpl(this._value, this._then);
 
   final Query _value;
+
   // ignore: unused_field
   final $Res Function(Query) _then;
 
@@ -73,6 +76,7 @@ class _$QueryCopyWithImpl<$Res> implements $QueryCopyWith<$Res> {
 abstract class _$$_QueryCopyWith<$Res> implements $QueryCopyWith<$Res> {
   factory _$$_QueryCopyWith(_$_Query value, $Res Function(_$_Query) then) =
       __$$_QueryCopyWithImpl<$Res>;
+
   @override
   $Res call({@JsonKey(name: 'options') Options? options});
 
@@ -148,6 +152,7 @@ class _$_Query extends _Query {
 abstract class _Query extends Query {
   const factory _Query({@JsonKey(name: 'options') final Options? options}) =
       _$_Query;
+
   const _Query._() : super._();
 
   factory _Query.fromJson(Map<String, dynamic> json) = _$_Query.fromJson;
@@ -155,6 +160,7 @@ abstract class _Query extends Query {
   @override
   @JsonKey(name: 'options')
   Options? get options;
+
   @override
   @JsonKey(ignore: true)
   _$$_QueryCopyWith<_$_Query> get copyWith =>
@@ -169,16 +175,21 @@ Options _$OptionsFromJson(Map<String, dynamic> json) {
 mixin _$Options {
   @JsonKey(name: 'pagination')
   bool get pagination => throw _privateConstructorUsedError;
+
   @JsonKey(name: 'page')
   int get page => throw _privateConstructorUsedError;
+
   @JsonKey(name: 'limit')
   int get limit => throw _privateConstructorUsedError;
+
   @JsonKey(name: 'offset')
   int get offset => throw _privateConstructorUsedError;
+
   @JsonKey(name: 'populate')
   List<String> get populate => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+
   @JsonKey(ignore: true)
   $OptionsCopyWith<Options> get copyWith => throw _privateConstructorUsedError;
 }
@@ -187,6 +198,7 @@ mixin _$Options {
 abstract class $OptionsCopyWith<$Res> {
   factory $OptionsCopyWith(Options value, $Res Function(Options) then) =
       _$OptionsCopyWithImpl<$Res>;
+
   $Res call(
       {@JsonKey(name: 'pagination') bool pagination,
       @JsonKey(name: 'page') int page,
@@ -200,6 +212,7 @@ class _$OptionsCopyWithImpl<$Res> implements $OptionsCopyWith<$Res> {
   _$OptionsCopyWithImpl(this._value, this._then);
 
   final Options _value;
+
   // ignore: unused_field
   final $Res Function(Options) _then;
 
@@ -241,6 +254,7 @@ abstract class _$$_OptionsCopyWith<$Res> implements $OptionsCopyWith<$Res> {
   factory _$$_OptionsCopyWith(
           _$_Options value, $Res Function(_$_Options) then) =
       __$$_OptionsCopyWithImpl<$Res>;
+
   @override
   $Res call(
       {@JsonKey(name: 'pagination') bool pagination,
@@ -320,6 +334,7 @@ class _$_Options extends _Options {
   @JsonKey(name: 'offset')
   final int offset;
   final List<String> _populate;
+
   @override
   @JsonKey(name: 'populate')
   List<String> get populate {
@@ -375,6 +390,7 @@ abstract class _Options extends Options {
       @JsonKey(name: 'limit') final int limit,
       @JsonKey(name: 'offset') final int offset,
       @JsonKey(name: 'populate') final List<String> populate}) = _$_Options;
+
   const _Options._() : super._();
 
   factory _Options.fromJson(Map<String, dynamic> json) = _$_Options.fromJson;
@@ -382,18 +398,23 @@ abstract class _Options extends Options {
   @override
   @JsonKey(name: 'pagination')
   bool get pagination;
+
   @override
   @JsonKey(name: 'page')
   int get page;
+
   @override
   @JsonKey(name: 'limit')
   int get limit;
+
   @override
   @JsonKey(name: 'offset')
   int get offset;
+
   @override
   @JsonKey(name: 'populate')
   List<String> get populate;
+
   @override
   @JsonKey(ignore: true)
   _$$_OptionsCopyWith<_$_Options> get copyWith =>

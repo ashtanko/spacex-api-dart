@@ -2,7 +2,6 @@ import 'package:api/models/index.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'query_ships.freezed.dart';
-
 part 'query_ships.g.dart';
 
 @freezed
