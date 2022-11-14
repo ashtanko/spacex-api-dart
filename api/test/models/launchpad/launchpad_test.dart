@@ -277,7 +277,11 @@ void main() {
               landingLegs: LandingLegs(number: 0),
               payloadWeights: [
                 PayloadWeight(
-                    id: 'leo', name: 'Low Earth Orbit', kg: 450, lb: 992)
+                  id: 'leo',
+                  name: 'Low Earth Orbit',
+                  kg: 450,
+                  lb: 992,
+                )
               ],
               flickrImages: [
                 'https://imgur.com/DaCfMsj.jpg',
