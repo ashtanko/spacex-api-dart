@@ -23,5 +23,7 @@ abstract class LandpadApi {
   Future<ApiPaginatedList<Landpad>> queryLandpads(@Body() q.Query query);
 
   @POST('/landpads/query')
-  Future<ApiPaginatedList<LandpadFull>> queryFullLandpads(@Body() q.Query query);
+  Future<ApiPaginatedList<LandpadFull>> queryFullLandpads(
+    @Body() q.Query query,
+  );
 }

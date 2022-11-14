@@ -6,8 +6,6 @@ part 'launch.freezed.dart';
 
 part 'launch.g.dart';
 
-enum LaunchStatus { retired, active, unknown }
-
 @freezed
 class FullLaunch with _$FullLaunch {
   const factory FullLaunch({

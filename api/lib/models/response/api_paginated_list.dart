@@ -1,11 +1,12 @@
+import 'package:equatable/equatable.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 part 'api_paginated_list.g.dart';
 
 @JsonSerializable(genericArgumentFactories: true)
-class ApiPaginatedList<T> {
-  ApiPaginatedList({
+class ApiPaginatedList<T> extends Equatable {
+  const ApiPaginatedList({
     required this.results,
     required this.totalDocs,
     required this.offset,
@@ -57,4 +58,18 @@ class ApiPaginatedList<T> {
 
   @JsonKey(name: 'nextPage')
   final int? nextPage;
+
+  @override
+  List<Object?> get props => [
+        results,
+        totalDocs,
+        offset,
+        limit,
+        totalPages,
+        page,
+        pagingCounter,
+        hasNextPage,
+        prevPage,
+        nextPage,
+      ];
 }
