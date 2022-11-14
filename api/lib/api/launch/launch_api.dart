@@ -1,6 +1,5 @@
 import 'package:api/api.dart';
 import 'package:api/api/constants.dart';
-import 'package:api/models/launch/full_launch.dart';
 import 'package:api/models/query/query.dart' as q;
 import 'package:api/models/response/api_paginated_list.dart';
 import 'package:dio/dio.dart';
@@ -13,7 +12,7 @@ abstract class LaunchApi {
   factory LaunchApi(Dio dio) = _LaunchApi;
 
   @GET('/launches')
-  Future<List<Launch>> getAllLaunches();
+  Future<List<LaunchSimple>> getAllLaunches();
 
   @GET('/launches/{id}')
   Future<Launch> getLaunch(
@@ -21,7 +20,7 @@ abstract class LaunchApi {
   );
 
   @POST('/launches/query')
-  Future<ApiPaginatedList<Launch>> queryLaunches(@Body() q.Query query);
+  Future<ApiPaginatedList<LaunchSimple>> queryLaunches(@Body() q.Query query);
 
   @POST('/launches/query')
   Future<ApiPaginatedList<FullLaunch>> queryFullLaunches(@Body() q.Query query);

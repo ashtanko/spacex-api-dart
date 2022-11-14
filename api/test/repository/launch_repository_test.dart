@@ -16,16 +16,16 @@ void main() {
     repository = LaunchRepository(LaunchApi(dio));
   });
 
-  // test('getAllLaunches with empty query data, returns data from api', () async {
-  //   // arrange
-  //   dio.interceptors.add(LoggingInterceptor(createLogger(level: Logger.level)));
-  //
-  //   // act
-  //   final data = await repository.getAllLaunches();
-  //
-  //   // assert
-  //   expect(data.isNotEmpty, true);
-  // });
+  test('getAllLaunches with empty query data, returns data from api', () async {
+    // arrange
+    dio.interceptors.add(LoggingInterceptor(createLogger(level: Logger.level)));
+
+    // act
+    final data = await repository.getAllLaunches();
+
+    // assert
+    expect(data.isNotEmpty, true);
+  });
 
   test('queryLaunches with empty query data, returns data from api', () async {
     // arrange
@@ -39,18 +39,18 @@ void main() {
     expect(data.offset, 0);
   });
 
-  // test('queryLaunches with offset 5, returns data from api', () async {
-  //   // arrange
-  //   dio.interceptors.add(LoggingInterceptor(createLogger(level: Logger.level)));
-  //
-  //   // act
-  //   final data = await repository
-  //       .queryLaunches(const q.Query(options: q.Options(offset: 5, page: 1)));
-  //
-  //   // assert
-  //   expect(data.page, 1);
-  //   expect(data.offset, 5);
-  // });
+  test('queryLaunches with offset 5, returns data from api', () async {
+    // arrange
+    dio.interceptors.add(LoggingInterceptor(createLogger(level: Logger.level)));
+
+    // act
+    final data = await repository
+        .queryLaunches(const q.Query(options: q.Options(offset: 5, page: 1)));
+
+    // assert
+    expect(data.page, 1);
+    expect(data.offset, 5);
+  });
 
   test('queryFullLaunches with offset 5, returns data from api', () async {
     // arrange

@@ -18,19 +18,19 @@ class _LaunchApi implements LaunchApi {
   String? baseUrl;
 
   @override
-  Future<List<Launch>> getAllLaunches() async {
+  Future<List<LaunchSimple>> getAllLaunches() async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     final _result = await _dio.fetch<List<dynamic>>(
-        _setStreamType<List<Launch>>(
+        _setStreamType<List<LaunchSimple>>(
             Options(method: 'GET', headers: _headers, extra: _extra)
                 .compose(_dio.options, '/launches',
                     queryParameters: queryParameters, data: _data)
                 .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
     var value = _result.data!
-        .map((dynamic i) => Launch.fromJson(i as Map<String, dynamic>))
+        .map((dynamic i) => LaunchSimple.fromJson(i as Map<String, dynamic>))
         .toList();
     return value;
   }
@@ -52,21 +52,21 @@ class _LaunchApi implements LaunchApi {
   }
 
   @override
-  Future<ApiPaginatedList<Launch>> queryLaunches(query) async {
+  Future<ApiPaginatedList<LaunchSimple>> queryLaunches(query) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     _data.addAll(query.toJson());
     final _result = await _dio.fetch<Map<String, dynamic>>(
-        _setStreamType<ApiPaginatedList<Launch>>(
+        _setStreamType<ApiPaginatedList<LaunchSimple>>(
             Options(method: 'POST', headers: _headers, extra: _extra)
                 .compose(_dio.options, '/launches/query',
                     queryParameters: queryParameters, data: _data)
                 .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
-    final value = ApiPaginatedList<Launch>.fromJson(
+    final value = ApiPaginatedList<LaunchSimple>.fromJson(
       _result.data!,
-      (json) => Launch.fromJson(json as Map<String, dynamic>),
+      (json) => LaunchSimple.fromJson(json as Map<String, dynamic>),
     );
     return value;
   }
