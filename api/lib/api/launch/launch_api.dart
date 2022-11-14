@@ -23,6 +23,9 @@ abstract class LaunchApi {
   @GET('/launches/latest')
   Future<LaunchSimple> getLatestLaunch();
 
+  @GET('/launches/next')
+  Future<LaunchSimple> getNextLaunch();
+
   @GET('/launches/{id}')
   Future<Launch> getLaunch(
     @Path() String id,

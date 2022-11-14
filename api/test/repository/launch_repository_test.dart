@@ -63,6 +63,18 @@ void main() {
     expect(data.id.isNotEmpty, true);
   });
 
+  test('getNextLaunch with empty query data, returns data from api',
+      () async {
+    // arrange
+    dio.interceptors.add(LoggingInterceptor(createLogger(level: Logger.level)));
+
+    // act
+    final data = await repository.getNextLaunch();
+
+    // assert
+    expect(data.id.isNotEmpty, true);
+  });
+
   test('queryLaunches with empty query data, returns data from api', () async {
     // arrange
     dio.interceptors.add(LoggingInterceptor(createLogger(level: Logger.level)));
