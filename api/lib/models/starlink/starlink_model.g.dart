@@ -32,3 +32,33 @@ Map<String, dynamic> _$$_StarlinkModelToJson(_$_StarlinkModel instance) =>
       'velocity_kms': instance.velocityKms,
       'spaceTrack': instance.spaceTrack?.toJson(),
     };
+
+_$_StarlinkFullModel _$$_StarlinkFullModelFromJson(Map<String, dynamic> json) =>
+    _$_StarlinkFullModel(
+      id: json['id'] as String? ?? '',
+      launch: json['launch'] == null
+          ? null
+          : LaunchModel.fromJson(json['launch'] as Map<String, dynamic>),
+      version: json['version'] as String? ?? '',
+      heightKm: (json['height_km'] as num?)?.toDouble() ?? 0.0,
+      latitude: (json['latitude'] as num?)?.toDouble() ?? 0.0,
+      longitude: (json['longitude'] as num?)?.toDouble() ?? 0.0,
+      velocityKms: (json['velocity_kms'] as num?)?.toDouble() ?? 0.0,
+      spaceTrack: json['spaceTrack'] == null
+          ? null
+          : SpaceTrackModel.fromJson(
+              json['spaceTrack'] as Map<String, dynamic>),
+    );
+
+Map<String, dynamic> _$$_StarlinkFullModelToJson(
+        _$_StarlinkFullModel instance) =>
+    <String, dynamic>{
+      'id': instance.id,
+      'launch': instance.launch?.toJson(),
+      'version': instance.version,
+      'height_km': instance.heightKm,
+      'latitude': instance.latitude,
+      'longitude': instance.longitude,
+      'velocity_kms': instance.velocityKms,
+      'spaceTrack': instance.spaceTrack?.toJson(),
+    };
