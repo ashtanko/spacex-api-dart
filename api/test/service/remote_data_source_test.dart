@@ -71,7 +71,8 @@ void main() {
     final capsuleJsonString = readJson('helpers/dummy_responses/capsule.json');
 
     final capsule = CapsuleModel.fromJson(
-        jsonDecode(capsuleJsonString) as Map<String, dynamic>);
+      jsonDecode(capsuleJsonString) as Map<String, dynamic>,
+    );
 
     const capsuleId = '5e9e2c5bf35918ed873b2664';
 

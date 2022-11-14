@@ -18,7 +18,6 @@ class RemoteDataSourceImpl extends RemoteDataSource {
 
   @override
   Future<List<CapsuleModel>> getAllCapsules() async {
-    final response = await client.get(Uri.parse(capsulesUrl));
     return [];
   }
 
