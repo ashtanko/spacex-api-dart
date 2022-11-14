@@ -4,12 +4,12 @@ import 'package:test/test.dart';
 void main() {
   group('Core', () {
     test('supports value comparison', () {
-      expect(const Core(id: '0'), const Core(id: '0'));
+      expect(const CoreModel(id: '0'), const CoreModel(id: '0'));
     });
 
     test('is correctly generated from a JSON', () {
       expect(
-        Core.fromJson(const {
+        CoreModel.fromJson(const {
           'block': 5,
           'reuse_count': 0,
           'rtls_attempts': 0,
@@ -22,7 +22,7 @@ void main() {
           'status': 'lost',
           'id': '5fe3b8fbb3467846b3242182'
         }),
-        const Core(
+        const CoreModel(
           block: 5,
           reuseCount: 0,
           rtlsAttempts: 0,
@@ -44,7 +44,7 @@ void main() {
   group('Launch core', () {
     test('is correctly generated from a JSON', () {
       expect(
-        Core.fromJson(
+        CoreModel.fromJson(
           const {
             'core': '5e9e28a5f3591833b13b2659',
             'flight': 4,
@@ -57,7 +57,7 @@ void main() {
             'landpad': '5e9e3032383ecb6bb234e7ca'
           },
         ),
-        const Core(
+        const CoreModel(
           core: '5e9e28a5f3591833b13b2659',
           flight: 4,
           hasGridfins: true,

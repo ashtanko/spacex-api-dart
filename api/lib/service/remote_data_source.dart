@@ -1,6 +1,5 @@
 import 'dart:convert';
 
-import 'package:api/models/capsule/capsules.dart';
 import 'package:api/models/index.dart';
 import 'package:api/utils/exception.dart';
 import 'package:api/utils/urls.dart';
@@ -20,14 +19,7 @@ class RemoteDataSourceImpl extends RemoteDataSource {
   @override
   Future<List<CapsuleModel>> getAllCapsules() async {
     final response = await client.get(Uri.parse(capsulesUrl));
-
-    if (response.statusCode == 200) {
-      return Capsules.fromJson(
-        {'capsules': jsonDecode(response.body)},
-      ).capsules;
-    } else {
-      throw ServerException();
-    }
+    return [];
   }
 
   @override

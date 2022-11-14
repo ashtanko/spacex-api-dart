@@ -1,5 +1,5 @@
 import 'package:api/api/constants.dart';
-import 'package:api/models/core/core.dart';
+import 'package:api/models/core/core_model.dart';
 import 'package:api/models/query/query.dart' as q;
 import 'package:api/models/response/api_paginated_list.dart';
 import 'package:dio/dio.dart';
@@ -12,13 +12,13 @@ abstract class CoresApi {
   factory CoresApi(Dio dio) = _CoresApi;
 
   @GET('/cores')
-  Future<List<Core>> getAllCores();
+  Future<List<CoreModel>> getAllCores();
 
   @GET('/cores/{id}')
-  Future<Core> getCore(
+  Future<CoreModel> getCore(
     @Path() String id,
   );
 
   @POST('/cores/query')
-  Future<ApiPaginatedList<Core>> queryCores(@Body() q.Query query);
+  Future<ApiPaginatedList<CoreModel>> queryCores(@Body() q.Query query);
 }

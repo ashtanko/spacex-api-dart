@@ -1,16 +1,16 @@
 import 'package:api/api.dart';
-import 'package:api/models/payload/payload.dart';
+import 'package:api/models/payload/payload_model.dart';
 import 'package:test/test.dart';
 
 void main() {
   group('Payload', () {
     test('supports value comparison', () {
-      expect(const Payload(id: '0'), const Payload(id: '0'));
+      expect(const PayloadModel(id: '0'), const PayloadModel(id: '0'));
     });
 
     test('is correctly generated from a JSON', () {
       expect(
-        Payload.fromJson(const {
+        PayloadModel.fromJson(const {
           'dragon': {
             'capsule': '5f6f99fddcfdf403df379709',
             'mass_returned_kg': 9616,
@@ -48,9 +48,9 @@ void main() {
           'mean_anomaly': null,
           'id': '5eb0e4b5b6c3bb0006eeb1e1'
         }),
-        const Payload(
+        const PayloadModel(
           id: '5eb0e4b5b6c3bb0006eeb1e1',
-          dragon: PayloadDragon(
+          dragon: PayloadDragonModel(
             capsule: '5f6f99fddcfdf403df379709',
             massReturnedKg: 9616,
             massReturnedLbs: 21200,
@@ -79,7 +79,7 @@ void main() {
 
     test('full payload is correctly generated from a JSON', () {
       expect(
-        FullPayload.fromJson(const {
+        FullPayloadModel.fromJson(const {
           'dragon': {
             'capsule': '5f6f99fddcfdf403df379709',
             'mass_returned_kg': 9616,
@@ -188,9 +188,9 @@ void main() {
           'mean_anomaly': null,
           'id': '5eb0e4b5b6c3bb0006eeb1e1'
         }),
-        const FullPayload(
+        const FullPayloadModel(
           id: '5eb0e4b5b6c3bb0006eeb1e1',
-          dragon: PayloadDragon(
+          dragon: PayloadDragonModel(
             capsule: '5f6f99fddcfdf403df379709',
             massReturnedKg: 9616,
             massReturnedLbs: 21200,
@@ -200,20 +200,20 @@ void main() {
           name: 'FalconSAT-2',
           type: 'Satellite',
           reused: false,
-          launch: Launch(
-            fairings: Fairings(
+          launch: LaunchModel(
+            fairings: FairingsModel(
               reused: false,
               recoveryAttempt: false,
               recovered: false,
               ships: [],
             ),
-            links: LaunchLinks(
-              patch: LaunchPatch(
+            links: LaunchLinksModel(
+              patch: LaunchPatchModel(
                 small: 'https://images2.imgbox.com/4f/e3/I0lkuJ2e_o.png',
                 large: 'https://images2.imgbox.com/be/e7/iNqsqVYM_o.png',
               ),
-              reddit: LaunchReddit(),
-              flickr: LaunchFlickr(small: [], original: []),
+              reddit: LaunchRedditModel(),
+              flickr: LaunchFlickrModel(small: [], original: []),
               webcast: 'https://www.youtube.com/watch?v=Lk4zQ2wP-Nc',
               youtubeID: 'Lk4zQ2wP-Nc',
               article:
@@ -225,7 +225,7 @@ void main() {
             rocket: '5e9d0d95eda69955f709d1eb',
             success: false,
             failures: [
-              LaunchFailure(
+              LaunchFailureModel(
                 time: 301,
                 altitude: 289,
                 reason:
@@ -246,7 +246,7 @@ void main() {
             datePrecision: 'hour',
             upcoming: false,
             cores: [
-              Core(
+              CoreModel(
                 core: '5e9e289ef35918416a3b2624',
                 flight: 1,
                 hasGridfins: false,

@@ -22,7 +22,7 @@ void main() {
           'id': '5f6fb2cfdcfdf403df37971e'
         }),
         AchievementModel(
-          links: const AchievementLinks(
+          links: const AchievementLinksModel(
             article:
                 'http://www.spacex.com/news/2013/02/11/flight-4-launch-update-0',
           ),

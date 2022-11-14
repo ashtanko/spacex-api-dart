@@ -12,28 +12,28 @@ abstract class LaunchApi {
   factory LaunchApi(Dio dio) = _LaunchApi;
 
   @GET('/launches')
-  Future<List<LaunchSimple>> getAllLaunches();
+  Future<List<LaunchSimpleModel>> getAllLaunches();
 
   @GET('/launches/upcoming')
-  Future<List<LaunchSimple>> getUpcomingLaunches();
+  Future<List<LaunchSimpleModel>> getUpcomingLaunches();
 
   @GET('/launches/past')
-  Future<List<LaunchSimple>> getPastLaunches();
+  Future<List<LaunchSimpleModel>> getPastLaunches();
 
   @GET('/launches/latest')
-  Future<LaunchSimple> getLatestLaunch();
+  Future<LaunchSimpleModel> getLatestLaunch();
 
   @GET('/launches/next')
-  Future<LaunchSimple> getNextLaunch();
+  Future<LaunchSimpleModel> getNextLaunch();
 
   @GET('/launches/{id}')
-  Future<Launch> getLaunch(
+  Future<LaunchModel> getLaunch(
     @Path() String id,
   );
 
   @POST('/launches/query')
-  Future<ApiPaginatedList<LaunchSimple>> queryLaunches(@Body() q.Query query);
+  Future<ApiPaginatedList<LaunchSimpleModel>> queryLaunches(@Body() q.Query query);
 
   @POST('/launches/query')
-  Future<ApiPaginatedList<FullLaunch>> queryFullLaunches(@Body() q.Query query);
+  Future<ApiPaginatedList<FullLaunchModel>> queryFullLaunches(@Body() q.Query query);
 }

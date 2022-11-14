@@ -9,7 +9,7 @@ part of 'query_full_ships.dart';
 _$_QueryFullShips _$$_QueryFullShipsFromJson(Map<String, dynamic> json) =>
     _$_QueryFullShips(
       docs: (json['docs'] as List<dynamic>?)
-              ?.map((e) => FullShip.fromJson(e as Map<String, dynamic>))
+              ?.map((e) => FullShipModel.fromJson(e as Map<String, dynamic>))
               .toList() ??
           const [],
       totalDocs: json['totalDocs'] as int? ?? 0,

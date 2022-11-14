@@ -3,11 +3,11 @@ import 'package:api/api/dio/dio_factory.dart';
 import 'package:api/api/vehicle/vehicle_api.dart';
 import 'package:api/repository/vehicle_repository.dart';
 
-Future<List<DragonVehicle>> getAllDragons() async {
+Future<List<DragonVehicleModel>> getAllDragons() async {
   return getVehicleRepository().getAllDragons();
 }
 
-Future<DragonVehicle> getDragon(String id) async {
+Future<DragonVehicleModel> getDragon(String id) async {
   return getVehicleRepository().getDragon(id);
 }
 

@@ -1,9 +1,9 @@
 import 'package:api/api/dio/dio_factory.dart';
 import 'package:api/api/info/info_api.dart';
-import 'package:api/models/company_info/company_info.dart';
+import 'package:api/models/company_info/company_info_model.dart';
 import 'package:api/repository/info_repository.dart';
 
-Future<CompanyInfo> getCompanyInfo() async {
+Future<CompanyInfoModel> getCompanyInfo() async {
   return getInfoRepository().getCompanyInfo();
 }
 

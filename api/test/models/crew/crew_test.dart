@@ -1,16 +1,17 @@
 import 'package:api/api.dart';
-import 'package:api/models/crew/crew_status.dart';
+import 'package:api/models/crew_model/crew_model.dart';
+import 'package:api/models/crew_model/crew_status.dart';
 import 'package:test/test.dart';
 
 void main() {
   group('Full Crew', () {
     test('supports value comparison', () {
-      expect(const FullCrew(id: '0'), const FullCrew(id: '0'));
+      expect(const FullCrewModel(id: '0'), const FullCrewModel(id: '0'));
     });
 
     test('is correctly generated from a JSON', () {
       expect(
-        FullCrew.fromJson(const {
+        FullCrewModel.fromJson(const {
           'name': 'Robert Behnken',
           'agency': 'NASA',
           'image': 'https://imgur.com/0smMgMH.png',
@@ -21,13 +22,13 @@ void main() {
           'status': 'active',
           'id': '5ebf1a6e23a9a60006e03a7a'
         }),
-        const FullCrew(
+        const FullCrewModel(
           id: '5ebf1a6e23a9a60006e03a7a',
           name: 'Robert Behnken',
           agency: 'NASA',
           image: 'https://imgur.com/0smMgMH.png',
           wikipedia: 'https://en.wikipedia.org/wiki/Robert_L._Behnken',
-          launches: [Launch(id: '5eb87d46ffd86e000604b388')],
+          launches: [LaunchModel(id: '5eb87d46ffd86e000604b388')],
           status: CrewStatus.active,
         ),
       );
@@ -36,12 +37,12 @@ void main() {
 
   group('Crew', () {
     test('supports value comparison', () {
-      expect(const Crew(id: '0'), const Crew(id: '0'));
+      expect(const CrewModel(id: '0'), const CrewModel(id: '0'));
     });
 
     test('is correctly generated from a JSON', () {
       expect(
-        Crew.fromJson(const {
+        CrewModel.fromJson(const {
           'name': 'Robert Behnken',
           'agency': 'NASA',
           'image': 'https://imgur.com/0smMgMH.png',
@@ -50,7 +51,7 @@ void main() {
           'status': 'active',
           'id': '5ebf1a6e23a9a60006e03a7a'
         }),
-        const Crew(
+        const CrewModel(
           id: '5ebf1a6e23a9a60006e03a7a',
           name: 'Robert Behnken',
           agency: 'NASA',
@@ -65,15 +66,15 @@ void main() {
 
   group('Short Crew', () {
     test('supports value comparison', () {
-      expect(const ShortCrew(crew: '0'), const ShortCrew(crew: '0'));
+      expect(const ShortCrewModel(crew: '0'), const ShortCrewModel(crew: '0'));
     });
 
     test('is correctly generated from a JSON', () {
       expect(
-        ShortCrew.fromJson(
+        ShortCrewModel.fromJson(
           const {'crew': '5ebf1a6e23a9a60006e03a7a', 'role': 'Commander'},
         ),
-        const ShortCrew(
+        const ShortCrewModel(
           crew: '5ebf1a6e23a9a60006e03a7a',
           role: 'Commander',
         ),

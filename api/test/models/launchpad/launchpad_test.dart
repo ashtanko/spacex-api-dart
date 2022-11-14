@@ -1,17 +1,17 @@
 import 'package:api/api.dart';
-import 'package:api/models/landing_legs/landing_legs.dart';
-import 'package:api/models/launchpad/launchpad.dart';
+import 'package:api/models/landing_legs/landing_legs_model.dart';
+import 'package:api/models/launchpad/launchpad_model.dart';
 import 'package:test/test.dart';
 
 void main() {
   group('Launchpad', () {
     test('supports value comparison', () {
-      expect(const Launchpad(id: '0'), const Launchpad(id: '0'));
+      expect(const LaunchpadModel(id: '0'), const LaunchpadModel(id: '0'));
     });
 
     test('is correctly generated from a JSON', () {
       expect(
-        Launchpad.fromJson(const {
+        LaunchpadModel.fromJson(const {
           'images': {
             'large': ['https://i.imgur.com/7uXe1Kv.png']
           },
@@ -31,9 +31,9 @@ void main() {
               "SpaceX's original west coast launch pad for Falcon 1. It was used in a static fire test but was never employed for a launch, and was abandoned due to range scheduling conflicts arising from overflying other active pads.",
           'id': '5e9e4501f5090910d4566f83'
         }),
-        const Launchpad(
+        const LaunchpadModel(
           id: '5e9e4501f5090910d4566f83',
-          images: Images(large: ['https://i.imgur.com/7uXe1Kv.png']),
+          images: ImagesModel(large: ['https://i.imgur.com/7uXe1Kv.png']),
           name: 'VAFB SLC 3W',
           fullName: 'Vandenberg Space Force Base Space Launch Complex 3W',
           locality: 'Vandenberg Space Force Base',
@@ -55,12 +55,12 @@ void main() {
 
   group('Launchpad Full', () {
     test('supports value comparison', () {
-      expect(const Launchpad(id: '0'), const Launchpad(id: '0'));
+      expect(const LaunchpadModel(id: '0'), const LaunchpadModel(id: '0'));
     });
 
     test('is correctly generated from a JSON', () {
       expect(
-        LaunchpadFull.fromJson(const {
+        LaunchpadFullModel.fromJson(const {
           'images': {
             'large': ['https://i.imgur.com/7uXe1Kv.png']
           },
@@ -214,9 +214,9 @@ void main() {
               "SpaceX's original west coast launch pad for Falcon 1. It was used in a static fire test but was never employed for a launch, and was abandoned due to range scheduling conflicts arising from overflying other active pads.",
           'id': '5e9e4501f5090910d4566f83'
         }),
-        const LaunchpadFull(
+        const LaunchpadFullModel(
           id: '5e9e4501f5090910d4566f83',
-          images: Images(large: ['https://i.imgur.com/7uXe1Kv.png']),
+          images: ImagesModel(large: ['https://i.imgur.com/7uXe1Kv.png']),
           name: 'VAFB SLC 3W',
           fullName: 'Vandenberg Space Force Base Space Launch Complex 3W',
           locality: 'Vandenberg Space Force Base',
@@ -226,7 +226,7 @@ void main() {
           launchAttempts: 0,
           launchSuccesses: 0,
           rockets: [
-            Rocket(
+            RocketModel(
               id: '5e9d0d95eda69955f709d1eb',
               description:
                   'The Falcon 1 was an expendable launch system privately developed and manufactured by SpaceX during 2006-2009. On 28 September 2008, Falcon 1 became the first privately-developed liquid-fuel launch vehicle to go into orbit around the Earth.',
@@ -236,23 +236,23 @@ void main() {
               firstFlight: '2006-03-24',
               successRatePct: 40,
               costPerLaunch: 6700000,
-              height: Height(meters: 22.25, feet: 73),
-              diameter: Diameter(meters: 1.68, feet: 5.5),
-              mass: Mass(kg: 30146, lb: 66460),
-              firstStage: FirstStage(
-                thrustSeaLevel: KnotPound(kN: 420, lbf: 94000),
-                thrustVacuum: KnotPound(kN: 480, lbf: 110000),
+              height: HeightModel(meters: 22.25, feet: 73),
+              diameter: DiameterModel(meters: 1.68, feet: 5.5),
+              mass: MassModel(kg: 30146, lb: 66460),
+              firstStage: FirstStageModel(
+                thrustSeaLevel: KnotPoundModel(kN: 420, lbf: 94000),
+                thrustVacuum: KnotPoundModel(kN: 480, lbf: 110000),
                 reusable: false,
                 engines: 1,
                 fuelAmountTons: 44.3,
                 burnTimeSec: 169,
               ),
-              secondStage: SecondStage(
-                thrust: Thrust(kN: 31, lbf: 7000),
-                payloads: RocketPayload(
-                  compositeFairing: CompositeFairing(
-                    height: Height(meters: 3.5, feet: 11.5),
-                    diameter: Diameter(meters: 1.5, feet: 4.9),
+              secondStage: SecondStageModel(
+                thrust: ThrustModel(kN: 31, lbf: 7000),
+                payloads: RocketPayloadModel(
+                  compositeFairing: CompositeFairingModel(
+                    height: HeightModel(meters: 3.5, feet: 11.5),
+                    diameter: DiameterModel(meters: 1.5, feet: 4.9),
                   ),
                   option1: 'composite fairing',
                 ),
@@ -261,10 +261,10 @@ void main() {
                 fuelAmountTons: 3.38,
                 burnTimeSec: 378,
               ),
-              engines: Engine(
-                isp: Isp(seaLevel: 267, vacuum: 304),
-                thrustSeaLevel: KnotPound(kN: 420, lbf: 94000),
-                thrustVacuum: KnotPound(kN: 480, lbf: 110000),
+              engines: EngineModel(
+                isp: IspModel(seaLevel: 267, vacuum: 304),
+                thrustSeaLevel: KnotPoundModel(kN: 420, lbf: 94000),
+                thrustVacuum: KnotPoundModel(kN: 480, lbf: 110000),
                 number: 1,
                 type: 'merlin',
                 version: '1C',
@@ -274,9 +274,9 @@ void main() {
                 secondPropellant: 'RP-1 kerosene',
                 thrustToWeight: 96,
               ),
-              landingLegs: LandingLegs(number: 0),
+              landingLegs: LandingLegsModel(number: 0),
               payloadWeights: [
-                PayloadWeight(
+                PayloadWeightModel(
                   id: 'leo',
                   name: 'Low Earth Orbit',
                   kg: 450,
@@ -296,22 +296,22 @@ void main() {
           ],
           timezone: 'America/Los_Angeles',
           launches: [
-            Launch(
+            LaunchModel(
               id: '5eb87cd9ffd86e000604b32a',
-              fairings: Fairings(
+              fairings: FairingsModel(
                 reused: false,
                 recoveryAttempt: false,
                 recovered: false,
                 ships: [],
               ),
               capsules: ['0'],
-              links: LaunchLinks(
-                patch: LaunchPatch(
+              links: LaunchLinksModel(
+                patch: LaunchPatchModel(
                   small: 'https://images2.imgbox.com/3c/0e/T8iJcSN3_o.png',
                   large: 'https://images2.imgbox.com/40/e3/GypSkayF_o.png',
                 ),
-                reddit: LaunchReddit(),
-                flickr: LaunchFlickr(),
+                reddit: LaunchRedditModel(),
+                flickr: LaunchFlickrModel(),
                 webcast: 'https://www.youtube.com/watch?v=0a_00nJ_Y88',
                 youtubeID: '0a_00nJ_Y88',
                 article:
@@ -325,7 +325,7 @@ void main() {
               rocket: '5e9d0d95eda69955f709d1eb',
               success: false,
               failures: [
-                LaunchFailure(time: 33, reason: 'merlin engine failure'),
+                LaunchFailureModel(time: 33, reason: 'merlin engine failure'),
               ],
               details: 'Engine failure at 33 seconds and loss of vehicle',
               payloads: ['5eb0e4b5b6c3bb0006eeb1e1'],
@@ -338,7 +338,7 @@ void main() {
               datePrecision: 'hour',
               upcoming: false,
               cores: [
-                Core(
+                CoreModel(
                   core: '5e9e289df35918033d3b2623',
                   flight: 1,
                   hasGridfins: false,

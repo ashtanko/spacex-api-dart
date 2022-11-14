@@ -4,12 +4,12 @@ import 'package:test/test.dart';
 void main() {
   group('Launch', () {
     test('supports value comparison', () {
-      expect(const Launch(id: '0'), const Launch(id: '0'));
+      expect(const LaunchModel(id: '0'), const LaunchModel(id: '0'));
     });
 
     test('is correctly generated from a JSON', () {
       expect(
-        Launch.fromJson(const {
+        LaunchModel.fromJson(const {
           'fairings': {
             'reused': false,
             'recovery_attempt': false,
@@ -75,22 +75,22 @@ void main() {
           'launch_library_id': null,
           'id': '5eb87cd9ffd86e000604b32a'
         }),
-        const Launch(
+        const LaunchModel(
           id: '5eb87cd9ffd86e000604b32a',
-          fairings: Fairings(
+          fairings: FairingsModel(
             reused: false,
             recoveryAttempt: false,
             recovered: false,
             ships: [],
           ),
           capsules: ['0'],
-          links: LaunchLinks(
-            patch: LaunchPatch(
+          links: LaunchLinksModel(
+            patch: LaunchPatchModel(
               small: 'https://images2.imgbox.com/3c/0e/T8iJcSN3_o.png',
               large: 'https://images2.imgbox.com/40/e3/GypSkayF_o.png',
             ),
-            reddit: LaunchReddit(),
-            flickr: LaunchFlickr(),
+            reddit: LaunchRedditModel(),
+            flickr: LaunchFlickrModel(),
             webcast: 'https://www.youtube.com/watch?v=0a_00nJ_Y88',
             youtubeID: '0a_00nJ_Y88',
             article:
@@ -104,7 +104,7 @@ void main() {
           rocket: '5e9d0d95eda69955f709d1eb',
           success: false,
           failures: [
-            LaunchFailure(time: 33, reason: 'merlin engine failure'),
+            LaunchFailureModel(time: 33, reason: 'merlin engine failure'),
           ],
           details: 'Engine failure at 33 seconds and loss of vehicle',
           payloads: ['5eb0e4b5b6c3bb0006eeb1e1'],
@@ -117,7 +117,7 @@ void main() {
           datePrecision: 'hour',
           upcoming: false,
           cores: [
-            Core(
+            CoreModel(
               core: '5e9e289df35918033d3b2623',
               flight: 1,
               hasGridfins: false,
@@ -136,12 +136,12 @@ void main() {
 
   group('Full Launch', () {
     test('supports value comparison', () {
-      expect(const FullLaunch(id: '0'), const FullLaunch(id: '0'));
+      expect(const FullLaunchModel(id: '0'), const FullLaunchModel(id: '0'));
     });
 
     test('is correctly generated from a JSON', () {
       expect(
-        FullLaunch.fromJson(const {
+        FullLaunchModel.fromJson(const {
           'fairings': {
             'reused': false,
             'recovery_attempt': false,
@@ -204,21 +204,21 @@ void main() {
           'launch_library_id': null,
           'id': '5eb87cd9ffd86e000604b32a'
         }),
-        const FullLaunch(
+        const FullLaunchModel(
           id: '5eb87cd9ffd86e000604b32a',
-          fairings: Fairings(
+          fairings: FairingsModel(
             reused: false,
             recoveryAttempt: false,
             recovered: false,
             ships: [],
           ),
-          links: LaunchLinks(
-            patch: LaunchPatch(
+          links: LaunchLinksModel(
+            patch: LaunchPatchModel(
               small: 'https://images2.imgbox.com/3c/0e/T8iJcSN3_o.png',
               large: 'https://images2.imgbox.com/40/e3/GypSkayF_o.png',
             ),
-            reddit: LaunchReddit(),
-            flickr: LaunchFlickr(),
+            reddit: LaunchRedditModel(),
+            flickr: LaunchFlickrModel(),
             webcast: 'https://www.youtube.com/watch?v=0a_00nJ_Y88',
             youtubeID: '0a_00nJ_Y88',
             article:
@@ -231,7 +231,7 @@ void main() {
           window: 0,
           success: false,
           failures: [
-            LaunchFailure(time: 33, reason: 'merlin engine failure'),
+            LaunchFailureModel(time: 33, reason: 'merlin engine failure'),
           ],
           details: 'Engine failure at 33 seconds and loss of vehicle',
           flightNumber: 1,
@@ -242,7 +242,7 @@ void main() {
           datePrecision: 'hour',
           upcoming: false,
           cores: [
-            Core(
+            CoreModel(
               core: '5e9e289df35918033d3b2623',
               flight: 1,
               hasGridfins: false,

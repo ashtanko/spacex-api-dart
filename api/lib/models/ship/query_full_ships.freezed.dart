@@ -20,7 +20,7 @@ QueryFullShips _$QueryFullShipsFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$QueryFullShips {
-  List<FullShip> get docs => throw _privateConstructorUsedError;
+  List<FullShipModel> get docs => throw _privateConstructorUsedError;
   int get totalDocs => throw _privateConstructorUsedError;
   int get offset => throw _privateConstructorUsedError;
   int get limit => throw _privateConstructorUsedError;
@@ -44,7 +44,7 @@ abstract class $QueryFullShipsCopyWith<$Res> {
           QueryFullShips value, $Res Function(QueryFullShips) then) =
       _$QueryFullShipsCopyWithImpl<$Res>;
   $Res call(
-      {List<FullShip> docs,
+      {List<FullShipModel> docs,
       int totalDocs,
       int offset,
       int limit,
@@ -84,7 +84,7 @@ class _$QueryFullShipsCopyWithImpl<$Res>
       docs: docs == freezed
           ? _value.docs
           : docs // ignore: cast_nullable_to_non_nullable
-              as List<FullShip>,
+              as List<FullShipModel>,
       totalDocs: totalDocs == freezed
           ? _value.totalDocs
           : totalDocs // ignore: cast_nullable_to_non_nullable
@@ -137,7 +137,7 @@ abstract class _$$_QueryFullShipsCopyWith<$Res>
       __$$_QueryFullShipsCopyWithImpl<$Res>;
   @override
   $Res call(
-      {List<FullShip> docs,
+      {List<FullShipModel> docs,
       int totalDocs,
       int offset,
       int limit,
@@ -179,7 +179,7 @@ class __$$_QueryFullShipsCopyWithImpl<$Res>
       docs: docs == freezed
           ? _value._docs
           : docs // ignore: cast_nullable_to_non_nullable
-              as List<FullShip>,
+              as List<FullShipModel>,
       totalDocs: totalDocs == freezed
           ? _value.totalDocs
           : totalDocs // ignore: cast_nullable_to_non_nullable
@@ -228,7 +228,7 @@ class __$$_QueryFullShipsCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_QueryFullShips extends _QueryFullShips {
   const _$_QueryFullShips(
-      {final List<FullShip> docs = const [],
+      {final List<FullShipModel> docs = const [],
       this.totalDocs = 0,
       this.offset = 0,
       this.limit = 0,
@@ -245,10 +245,10 @@ class _$_QueryFullShips extends _QueryFullShips {
   factory _$_QueryFullShips.fromJson(Map<String, dynamic> json) =>
       _$$_QueryFullShipsFromJson(json);
 
-  final List<FullShip> _docs;
+  final List<FullShipModel> _docs;
   @override
   @JsonKey()
-  List<FullShip> get docs {
+  List<FullShipModel> get docs {
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_docs);
   }
@@ -340,7 +340,7 @@ class _$_QueryFullShips extends _QueryFullShips {
 
 abstract class _QueryFullShips extends QueryFullShips {
   const factory _QueryFullShips(
-      {final List<FullShip> docs,
+      {final List<FullShipModel> docs,
       final int totalDocs,
       final int offset,
       final int limit,
@@ -357,7 +357,7 @@ abstract class _QueryFullShips extends QueryFullShips {
       _$_QueryFullShips.fromJson;
 
   @override
-  List<FullShip> get docs;
+  List<FullShipModel> get docs;
   @override
   int get totalDocs;
   @override

@@ -20,7 +20,7 @@ QueryShips _$QueryShipsFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$QueryShips {
-  List<Ship> get docs => throw _privateConstructorUsedError;
+  List<ShipModel> get docs => throw _privateConstructorUsedError;
   int get totalDocs => throw _privateConstructorUsedError;
   int get offset => throw _privateConstructorUsedError;
   int get limit => throw _privateConstructorUsedError;
@@ -44,7 +44,7 @@ abstract class $QueryShipsCopyWith<$Res> {
           QueryShips value, $Res Function(QueryShips) then) =
       _$QueryShipsCopyWithImpl<$Res>;
   $Res call(
-      {List<Ship> docs,
+      {List<ShipModel> docs,
       int totalDocs,
       int offset,
       int limit,
@@ -83,7 +83,7 @@ class _$QueryShipsCopyWithImpl<$Res> implements $QueryShipsCopyWith<$Res> {
       docs: docs == freezed
           ? _value.docs
           : docs // ignore: cast_nullable_to_non_nullable
-              as List<Ship>,
+              as List<ShipModel>,
       totalDocs: totalDocs == freezed
           ? _value.totalDocs
           : totalDocs // ignore: cast_nullable_to_non_nullable
@@ -136,7 +136,7 @@ abstract class _$$_QueryShipsCopyWith<$Res>
       __$$_QueryShipsCopyWithImpl<$Res>;
   @override
   $Res call(
-      {List<Ship> docs,
+      {List<ShipModel> docs,
       int totalDocs,
       int offset,
       int limit,
@@ -177,7 +177,7 @@ class __$$_QueryShipsCopyWithImpl<$Res> extends _$QueryShipsCopyWithImpl<$Res>
       docs: docs == freezed
           ? _value._docs
           : docs // ignore: cast_nullable_to_non_nullable
-              as List<Ship>,
+              as List<ShipModel>,
       totalDocs: totalDocs == freezed
           ? _value.totalDocs
           : totalDocs // ignore: cast_nullable_to_non_nullable
@@ -226,7 +226,7 @@ class __$$_QueryShipsCopyWithImpl<$Res> extends _$QueryShipsCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_QueryShips extends _QueryShips {
   const _$_QueryShips(
-      {final List<Ship> docs = const [],
+      {final List<ShipModel> docs = const [],
       this.totalDocs = 0,
       this.offset = 0,
       this.limit = 0,
@@ -243,10 +243,10 @@ class _$_QueryShips extends _QueryShips {
   factory _$_QueryShips.fromJson(Map<String, dynamic> json) =>
       _$$_QueryShipsFromJson(json);
 
-  final List<Ship> _docs;
+  final List<ShipModel> _docs;
   @override
   @JsonKey()
-  List<Ship> get docs {
+  List<ShipModel> get docs {
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_docs);
   }
@@ -338,7 +338,7 @@ class _$_QueryShips extends _QueryShips {
 
 abstract class _QueryShips extends QueryShips {
   const factory _QueryShips(
-      {final List<Ship> docs,
+      {final List<ShipModel> docs,
       final int totalDocs,
       final int offset,
       final int limit,
@@ -355,7 +355,7 @@ abstract class _QueryShips extends QueryShips {
       _$_QueryShips.fromJson;
 
   @override
-  List<Ship> get docs;
+  List<ShipModel> get docs;
   @override
   int get totalDocs;
   @override

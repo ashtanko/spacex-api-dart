@@ -1,6 +1,5 @@
 import 'package:api/api/capsules/capsules_api.dart';
 import 'package:api/api/dio/dio_factory.dart';
-import 'package:api/models/capsule/capsule_full_model.dart';
 import 'package:api/models/capsule/capsule_model.dart';
 import 'package:api/models/query/query.dart';
 import 'package:api/models/response/api_paginated_list.dart';

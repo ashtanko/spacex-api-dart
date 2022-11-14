@@ -1,15 +1,15 @@
-import 'package:api/models/space_track/space_track.dart';
+import 'package:api/models/space_track/space_track_model.dart';
 import 'package:test/test.dart';
 
 void main() {
   group('SpaceTrack', () {
     test('supports value comparison', () {
-      expect(const SpaceTrack(), const SpaceTrack());
+      expect(const SpaceTrackModel(), const SpaceTrackModel());
     });
 
     test('is correctly generated from a JSON', () {
       expect(
-        SpaceTrack.fromJson(const {
+        SpaceTrackModel.fromJson(const {
           'CCSDS_OMM_VERS': '2.0',
           'COMMENT': 'GENERATED VIA SPACE-TRACK.ORG API',
           'CREATION_DATE': '2020-10-13T04:16:08',
@@ -54,7 +54,7 @@ void main() {
           'TLE_LINE2':
               '2 44244  52.9708 332.0356 0003711 120.7278 242.0157 16.43170483 77756'
         }),
-        const SpaceTrack(
+        const SpaceTrackModel(
           ccsdsOmmVers: '2.0',
           comment: 'GENERATED VIA SPACE-TRACK.ORG API',
           creationDate: '2020-10-13T04:16:08',

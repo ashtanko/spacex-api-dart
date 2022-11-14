@@ -18,75 +18,76 @@ class _LaunchpadsApi implements LaunchpadsApi {
   String? baseUrl;
 
   @override
-  Future<List<Launchpad>> getAllLaunchpads() async {
+  Future<List<LaunchpadModel>> getAllLaunchpads() async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     final _result = await _dio.fetch<List<dynamic>>(
-        _setStreamType<List<Launchpad>>(
+        _setStreamType<List<LaunchpadModel>>(
             Options(method: 'GET', headers: _headers, extra: _extra)
                 .compose(_dio.options, '/launchpads',
                     queryParameters: queryParameters, data: _data)
                 .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
     var value = _result.data!
-        .map((dynamic i) => Launchpad.fromJson(i as Map<String, dynamic>))
+        .map((dynamic i) => LaunchpadModel.fromJson(i as Map<String, dynamic>))
         .toList();
     return value;
   }
 
   @override
-  Future<Launchpad> getLaunchpad(id) async {
+  Future<LaunchpadModel> getLaunchpad(id) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     final _result = await _dio.fetch<Map<String, dynamic>>(
-        _setStreamType<Launchpad>(
+        _setStreamType<LaunchpadModel>(
             Options(method: 'GET', headers: _headers, extra: _extra)
                 .compose(_dio.options, '/launchpads/${id}',
                     queryParameters: queryParameters, data: _data)
                 .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
-    final value = Launchpad.fromJson(_result.data!);
+    final value = LaunchpadModel.fromJson(_result.data!);
     return value;
   }
 
   @override
-  Future<ApiPaginatedList<Launchpad>> queryLaunchpads(query) async {
+  Future<ApiPaginatedList<LaunchpadModel>> queryLaunchpads(query) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     _data.addAll(query.toJson());
     final _result = await _dio.fetch<Map<String, dynamic>>(
-        _setStreamType<ApiPaginatedList<Launchpad>>(
+        _setStreamType<ApiPaginatedList<LaunchpadModel>>(
             Options(method: 'POST', headers: _headers, extra: _extra)
                 .compose(_dio.options, '/launchpads/query',
                     queryParameters: queryParameters, data: _data)
                 .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
-    final value = ApiPaginatedList<Launchpad>.fromJson(
+    final value = ApiPaginatedList<LaunchpadModel>.fromJson(
       _result.data!,
-      (json) => Launchpad.fromJson(json as Map<String, dynamic>),
+      (json) => LaunchpadModel.fromJson(json as Map<String, dynamic>),
     );
     return value;
   }
 
   @override
-  Future<ApiPaginatedList<LaunchpadFull>> queryFullLaunchpads(query) async {
+  Future<ApiPaginatedList<LaunchpadFullModel>> queryFullLaunchpads(
+      query) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     _data.addAll(query.toJson());
     final _result = await _dio.fetch<Map<String, dynamic>>(
-        _setStreamType<ApiPaginatedList<LaunchpadFull>>(
+        _setStreamType<ApiPaginatedList<LaunchpadFullModel>>(
             Options(method: 'POST', headers: _headers, extra: _extra)
                 .compose(_dio.options, '/launchpads/query',
                     queryParameters: queryParameters, data: _data)
                 .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
-    final value = ApiPaginatedList<LaunchpadFull>.fromJson(
+    final value = ApiPaginatedList<LaunchpadFullModel>.fromJson(
       _result.data!,
-      (json) => LaunchpadFull.fromJson(json as Map<String, dynamic>),
+      (json) => LaunchpadFullModel.fromJson(json as Map<String, dynamic>),
     );
     return value;
   }

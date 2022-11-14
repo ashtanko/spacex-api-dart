@@ -1,16 +1,16 @@
 import 'package:api/api.dart';
-import 'package:api/models/landing_legs/landing_legs.dart';
+import 'package:api/models/landing_legs/landing_legs_model.dart';
 import 'package:test/test.dart';
 
 void main() {
   group('Rocket', () {
     test('supports value comparison', () {
-      expect(const Rocket(id: '0'), const Rocket(id: '0'));
+      expect(const RocketModel(id: '0'), const RocketModel(id: '0'));
     });
 
     test('is correctly generated from a JSON', () {
       expect(
-        Rocket.fromJson(const {
+        RocketModel.fromJson(const {
           'height': {'meters': 22.25, 'feet': 73},
           'diameter': {'meters': 1.68, 'feet': 5.5},
           'mass': {'kg': 30146, 'lb': 66460},
@@ -72,7 +72,7 @@ void main() {
               'The Falcon 1 was an expendable launch system privately developed and manufactured by SpaceX during 2006-2009. On 28 September 2008, Falcon 1 became the first privately-developed liquid-fuel launch vehicle to go into orbit around the Earth.',
           'id': '5e9d0d95eda69955f709d1eb'
         }),
-        const Rocket(
+        const RocketModel(
           id: '5e9d0d95eda69955f709d1eb',
           description:
               'The Falcon 1 was an expendable launch system privately developed and manufactured by SpaceX during 2006-2009. On 28 September 2008, Falcon 1 became the first privately-developed liquid-fuel launch vehicle to go into orbit around the Earth.',
@@ -82,23 +82,23 @@ void main() {
           firstFlight: '2006-03-24',
           successRatePct: 40,
           costPerLaunch: 6700000,
-          height: Height(meters: 22.25, feet: 73),
-          diameter: Diameter(meters: 1.68, feet: 5.5),
-          mass: Mass(kg: 30146, lb: 66460),
-          firstStage: FirstStage(
-            thrustSeaLevel: KnotPound(kN: 420, lbf: 94000),
-            thrustVacuum: KnotPound(kN: 480, lbf: 110000),
+          height: HeightModel(meters: 22.25, feet: 73),
+          diameter: DiameterModel(meters: 1.68, feet: 5.5),
+          mass: MassModel(kg: 30146, lb: 66460),
+          firstStage: FirstStageModel(
+            thrustSeaLevel: KnotPoundModel(kN: 420, lbf: 94000),
+            thrustVacuum: KnotPoundModel(kN: 480, lbf: 110000),
             reusable: false,
             engines: 1,
             fuelAmountTons: 44.3,
             burnTimeSec: 169,
           ),
-          secondStage: SecondStage(
-            thrust: Thrust(kN: 31, lbf: 7000),
-            payloads: RocketPayload(
-              compositeFairing: CompositeFairing(
-                height: Height(meters: 3.5, feet: 11.5),
-                diameter: Diameter(meters: 1.5, feet: 4.9),
+          secondStage: SecondStageModel(
+            thrust: ThrustModel(kN: 31, lbf: 7000),
+            payloads: RocketPayloadModel(
+              compositeFairing: CompositeFairingModel(
+                height: HeightModel(meters: 3.5, feet: 11.5),
+                diameter: DiameterModel(meters: 1.5, feet: 4.9),
               ),
               option1: 'composite fairing',
             ),
@@ -107,10 +107,10 @@ void main() {
             fuelAmountTons: 3.38,
             burnTimeSec: 378,
           ),
-          engines: Engine(
-            isp: Isp(seaLevel: 267, vacuum: 304),
-            thrustSeaLevel: KnotPound(kN: 420, lbf: 94000),
-            thrustVacuum: KnotPound(kN: 480, lbf: 110000),
+          engines: EngineModel(
+            isp: IspModel(seaLevel: 267, vacuum: 304),
+            thrustSeaLevel: KnotPoundModel(kN: 420, lbf: 94000),
+            thrustVacuum: KnotPoundModel(kN: 480, lbf: 110000),
             number: 1,
             type: 'merlin',
             version: '1C',
@@ -120,9 +120,9 @@ void main() {
             secondPropellant: 'RP-1 kerosene',
             thrustToWeight: 96,
           ),
-          landingLegs: LandingLegs(number: 0),
+          landingLegs: LandingLegsModel(number: 0),
           payloadWeights: [
-            PayloadWeight(id: 'leo', name: 'Low Earth Orbit', kg: 450, lb: 992)
+            PayloadWeightModel(id: 'leo', name: 'Low Earth Orbit', kg: 450, lb: 992)
           ],
           flickrImages: [
             'https://imgur.com/DaCfMsj.jpg',

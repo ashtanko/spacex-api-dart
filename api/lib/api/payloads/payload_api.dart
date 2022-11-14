@@ -1,5 +1,5 @@
 import 'package:api/api/constants.dart';
-import 'package:api/models/payload/payload.dart';
+import 'package:api/models/payload/payload_model.dart';
 import 'package:api/models/query/query.dart' as q;
 import 'package:api/models/response/api_paginated_list.dart';
 import 'package:dio/dio.dart';
@@ -12,16 +12,16 @@ abstract class PayloadApi {
   factory PayloadApi(Dio dio) = _PayloadApi;
 
   @GET('/payloads')
-  Future<List<Payload>> getAllPayloads();
+  Future<List<PayloadModel>> getAllPayloads();
 
   @GET('/payloads/{id}')
-  Future<Payload> getOnePayload(
+  Future<PayloadModel> getOnePayload(
     @Path() String id,
   );
 
   @POST('/payloads/query')
-  Future<ApiPaginatedList<Payload>> queryPayloads(@Body() q.Query query);
+  Future<ApiPaginatedList<PayloadModel>> queryPayloads(@Body() q.Query query);
 
   @POST('/payloads/query')
-  Future<ApiPaginatedList<FullPayload>> queryFullPayloads(@Body() q.Query query);
+  Future<ApiPaginatedList<FullPayloadModel>> queryFullPayloads(@Body() q.Query query);
 }

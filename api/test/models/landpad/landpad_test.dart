@@ -4,12 +4,12 @@ import 'package:test/test.dart';
 void main() {
   group('LaunchpadDetails', () {
     test('supports value comparison', () {
-      expect(const Landpad(id: '0'), const Landpad(id: '0'));
+      expect(const LandpadModel(id: '0'), const LandpadModel(id: '0'));
     });
 
     test('is correctly generated from a JSON', () {
       expect(
-        Landpad.fromJson(
+        LandpadModel.fromJson(
           const {
             'images': {
               'large': ['https://i.imgur.com/KHBk6jO.png']
@@ -52,8 +52,8 @@ void main() {
             'id': '5e9e3032383ecb267a34e7c7'
           },
         ),
-        const Landpad(
-          images: Images(
+        const LandpadModel(
+          images: ImagesModel(
             large: ['https://i.imgur.com/KHBk6jO.png'],
           ),
           name: 'LZ-1',
@@ -99,12 +99,12 @@ void main() {
 
   group('Full LaunchpadDetails', () {
     test('supports value comparison', () {
-      expect(const LandpadFull(id: '0'), const LandpadFull(id: '0'));
+      expect(const LandpadFullModel(id: '0'), const LandpadFullModel(id: '0'));
     });
 
     test('is correctly generated from a JSON', () {
       expect(
-        LandpadFull.fromJson(
+        LandpadFullModel.fromJson(
           const {
             'images': {
               'large': ['https://i.imgur.com/KHBk6jO.png']
@@ -128,8 +128,8 @@ void main() {
             'id': '5e9e3032383ecb267a34e7c7'
           },
         ),
-        const LandpadFull(
-          images: Images(
+        const LandpadFullModel(
+          images: ImagesModel(
             large: ['https://i.imgur.com/KHBk6jO.png'],
           ),
           name: 'LZ-1',
@@ -145,7 +145,7 @@ void main() {
           wikipedia: 'https://en.wikipedia.org/wiki/Landing_Zones_1_and_2',
           details:
               "SpaceX's first east coast landing pad is Landing Zone 1, where the historic first Falcon 9 landing occurred in December 2015. LC-13 was originally used as a launch pad for early Atlas missiles and rockets from Lockheed Martin. LC-1 was later expanded to include Landing Zone 2 for side booster RTLS Falcon Heavy missions, and it was first used in February 2018 for that purpose.",
-          launches: [Launch(id: '5eb87cefffd86e000604b342')],
+          launches: [LaunchModel(id: '5eb87cefffd86e000604b342')],
           id: '5e9e3032383ecb267a34e7c7',
         ),
       );

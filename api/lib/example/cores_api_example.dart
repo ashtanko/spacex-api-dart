@@ -1,19 +1,19 @@
 import 'package:api/api/cores/cores_api.dart';
 import 'package:api/api/dio/dio_factory.dart';
-import 'package:api/models/core/core.dart';
+import 'package:api/models/core/core_model.dart';
 import 'package:api/models/query/query.dart';
 import 'package:api/models/response/api_paginated_list.dart';
 import 'package:api/repository/cores_repository.dart';
 
-Future<List<Core>> getAllCores() async {
+Future<List<CoreModel>> getAllCores() async {
   return getCoresRepository().getAllCores();
 }
 
-Future<Core> getCore(String id) async {
+Future<CoreModel> getCore(String id) async {
   return getCoresRepository().getCore(id);
 }
 
-Future<ApiPaginatedList<Core>> queryCores(Query query) async {
+Future<ApiPaginatedList<CoreModel>> queryCores(Query query) async {
   return getCoresRepository().queryCores(query);
 }
 

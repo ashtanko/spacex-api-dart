@@ -1,7 +1,7 @@
 import 'package:api/api/constants.dart';
 import 'package:api/models/query/query.dart' as q;
 import 'package:api/models/response/api_paginated_list.dart';
-import 'package:api/models/vehicle/vehicles.dart';
+import 'package:api/models/vehicle/vehicle_model.dart';
 import 'package:dio/dio.dart';
 import 'package:retrofit/retrofit.dart';
 
@@ -12,44 +12,44 @@ abstract class VehicleApi {
   factory VehicleApi(Dio dio) = _VehicleApi;
 
   @GET('/dragons')
-  Future<List<DragonVehicle>> getAllDragons();
+  Future<List<DragonVehicleModel>> getAllDragons();
 
   @GET('/dragons/{id}')
-  Future<DragonVehicle> getDragon(
+  Future<DragonVehicleModel> getDragon(
     @Path() String id,
   );
 
   @POST('/dragons/query')
-  Future<ApiPaginatedList<DragonVehicle>> queryDragons(@Body() q.Query query);
+  Future<ApiPaginatedList<DragonVehicleModel>> queryDragons(@Body() q.Query query);
 
   @GET('/ships')
-  Future<List<ShipVehicle>> getAllShips();
+  Future<List<ShipVehicleModel>> getAllShips();
 
   @GET('/ships/{id}')
-  Future<ShipVehicle> getShip(
+  Future<ShipVehicleModel> getShip(
     @Path() String id,
   );
 
   @POST('/ships/query')
-  Future<ApiPaginatedList<ShipVehicle>> queryShips(@Body() q.Query query);
+  Future<ApiPaginatedList<ShipVehicleModel>> queryShips(@Body() q.Query query);
 
   @POST('/ships/query')
-  Future<ApiPaginatedList<ShipFullVehicle>> queryFullShips(
+  Future<ApiPaginatedList<ShipFullVehicleModel>> queryFullShips(
     @Body() q.Query query,
   );
 
   @GET('/rockets')
-  Future<List<RocketVehicle>> getAllRockets();
+  Future<List<RocketVehicleModel>> getAllRockets();
 
   @GET('/rockets/{id}')
-  Future<RocketVehicle> getRocket(
+  Future<RocketVehicleModel> getRocket(
     @Path() String id,
   );
 
   @POST('/ships/query')
-  Future<ApiPaginatedList<RocketVehicle>> queryRockets(@Body() q.Query query);
+  Future<ApiPaginatedList<RocketVehicleModel>> queryRockets(@Body() q.Query query);
 
   // roadster
   @GET('/roadster')
-  Future<RoadsterVehicle> getRoadster();
+  Future<RoadsterVehicleModel> getRoadster();
 }

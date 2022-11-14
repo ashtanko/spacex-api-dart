@@ -18,75 +18,75 @@ class _PayloadApi implements PayloadApi {
   String? baseUrl;
 
   @override
-  Future<List<Payload>> getAllPayloads() async {
+  Future<List<PayloadModel>> getAllPayloads() async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     final _result = await _dio.fetch<List<dynamic>>(
-        _setStreamType<List<Payload>>(
+        _setStreamType<List<PayloadModel>>(
             Options(method: 'GET', headers: _headers, extra: _extra)
                 .compose(_dio.options, '/payloads',
                     queryParameters: queryParameters, data: _data)
                 .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
     var value = _result.data!
-        .map((dynamic i) => Payload.fromJson(i as Map<String, dynamic>))
+        .map((dynamic i) => PayloadModel.fromJson(i as Map<String, dynamic>))
         .toList();
     return value;
   }
 
   @override
-  Future<Payload> getOnePayload(id) async {
+  Future<PayloadModel> getOnePayload(id) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     final _result = await _dio.fetch<Map<String, dynamic>>(
-        _setStreamType<Payload>(
+        _setStreamType<PayloadModel>(
             Options(method: 'GET', headers: _headers, extra: _extra)
                 .compose(_dio.options, '/payloads/${id}',
                     queryParameters: queryParameters, data: _data)
                 .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
-    final value = Payload.fromJson(_result.data!);
+    final value = PayloadModel.fromJson(_result.data!);
     return value;
   }
 
   @override
-  Future<ApiPaginatedList<Payload>> queryPayloads(query) async {
+  Future<ApiPaginatedList<PayloadModel>> queryPayloads(query) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     _data.addAll(query.toJson());
     final _result = await _dio.fetch<Map<String, dynamic>>(
-        _setStreamType<ApiPaginatedList<Payload>>(
+        _setStreamType<ApiPaginatedList<PayloadModel>>(
             Options(method: 'POST', headers: _headers, extra: _extra)
                 .compose(_dio.options, '/payloads/query',
                     queryParameters: queryParameters, data: _data)
                 .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
-    final value = ApiPaginatedList<Payload>.fromJson(
+    final value = ApiPaginatedList<PayloadModel>.fromJson(
       _result.data!,
-      (json) => Payload.fromJson(json as Map<String, dynamic>),
+      (json) => PayloadModel.fromJson(json as Map<String, dynamic>),
     );
     return value;
   }
 
   @override
-  Future<ApiPaginatedList<FullPayload>> queryFullPayloads(query) async {
+  Future<ApiPaginatedList<FullPayloadModel>> queryFullPayloads(query) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     _data.addAll(query.toJson());
     final _result = await _dio.fetch<Map<String, dynamic>>(
-        _setStreamType<ApiPaginatedList<FullPayload>>(
+        _setStreamType<ApiPaginatedList<FullPayloadModel>>(
             Options(method: 'POST', headers: _headers, extra: _extra)
                 .compose(_dio.options, '/payloads/query',
                     queryParameters: queryParameters, data: _data)
                 .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
-    final value = ApiPaginatedList<FullPayload>.fromJson(
+    final value = ApiPaginatedList<FullPayloadModel>.fromJson(
       _result.data!,
-      (json) => FullPayload.fromJson(json as Map<String, dynamic>),
+      (json) => FullPayloadModel.fromJson(json as Map<String, dynamic>),
     );
     return value;
   }

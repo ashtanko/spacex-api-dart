@@ -5,7 +5,6 @@
 import 'dart:async' as _i5;
 
 import 'package:api/api/capsules/capsules_api.dart' as _i4;
-import 'package:api/models/capsule/capsule_full_model.dart' as _i7;
 import 'package:api/models/capsule/capsule_model.dart' as _i2;
 import 'package:api/models/query/query.dart' as _i6;
 import 'package:api/models/response/api_paginated_list.dart' as _i3;
@@ -53,10 +52,10 @@ class MockCapsulesApi extends _i1.Mock implements _i4.CapsulesApi {
                   _FakeApiPaginatedList_1<_i2.CapsuleModel>()))
           as _i5.Future<_i3.ApiPaginatedList<_i2.CapsuleModel>>);
   @override
-  _i5.Future<_i3.ApiPaginatedList<_i7.CapsuleFullModel>> queryFullCapsules(
+  _i5.Future<_i3.ApiPaginatedList<_i2.CapsuleFullModel>> queryFullCapsules(
           _i6.Query? query) =>
       (super.noSuchMethod(Invocation.method(#queryFullCapsules, [query]),
-          returnValue: Future<_i3.ApiPaginatedList<_i7.CapsuleFullModel>>.value(
-              _FakeApiPaginatedList_1<_i7.CapsuleFullModel>())) as _i5
-          .Future<_i3.ApiPaginatedList<_i7.CapsuleFullModel>>);
+          returnValue: Future<_i3.ApiPaginatedList<_i2.CapsuleFullModel>>.value(
+              _FakeApiPaginatedList_1<_i2.CapsuleFullModel>())) as _i5
+          .Future<_i3.ApiPaginatedList<_i2.CapsuleFullModel>>);
 }

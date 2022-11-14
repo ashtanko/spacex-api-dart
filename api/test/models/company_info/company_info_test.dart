@@ -2,14 +2,14 @@ import 'package:api/models/index.dart';
 import 'package:test/test.dart';
 
 void main() {
-  group('CompanyInfo', () {
+  group('CompanyInfo Model Tests', () {
     test('supports value comparison', () {
-      expect(const CompanyInfo(id: '0'), const CompanyInfo(id: '0'));
+      expect(const CompanyInfoModel(id: '0'), const CompanyInfoModel(id: '0'));
     });
 
     test('is correctly generated from a JSON', () {
       expect(
-        CompanyInfo.fromJson(const {
+        CompanyInfoModel.fromJson(const {
           'headquarters': {
             'address': 'Rocket Road',
             'city': 'Hawthorne',
@@ -37,13 +37,13 @@ void main() {
               'SpaceX designs, manufactures and launches advanced rockets and spacecraft. The company was founded in 2002 to revolutionize space technology, with the ultimate goal of enabling people to live on other planets.',
           'id': '5eb75edc42fea42237d7f3ed'
         }),
-        const CompanyInfo(
-          headquarters: Headquarter(
+        const CompanyInfoModel(
+          headquarters: HeadquarterModel(
             address: 'Rocket Road',
             city: 'Hawthorne',
             state: 'California',
           ),
-          links: Links(
+          links: LinksModel(
             website: 'https://www.spacex.com/',
             flickr: 'https://www.flickr.com/photos/spacex/',
             twitter: 'https://twitter.com/SpaceX',

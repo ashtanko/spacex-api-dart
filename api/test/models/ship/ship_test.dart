@@ -4,12 +4,12 @@ import 'package:test/test.dart';
 void main() {
   group('Ship', () {
     test('supports value comparison', () {
-      expect(const Ship(id: '0'), const Ship(id: '0'));
+      expect(const ShipModel(id: '0'), const ShipModel(id: '0'));
     });
 
     test('is correctly generated from a JSON', () {
       expect(
-        Ship.fromJson(const {
+        ShipModel.fromJson(const {
           'last_ais_update': null,
           'legacy_id': 'AMERICANCHAMPION',
           'model': null,
@@ -36,7 +36,7 @@ void main() {
           'launches': ['5eb87cdeffd86e000604b330', '5eb87cdfffd86e000604b331'],
           'id': '5ea6ed2d080df4000697c901'
         }),
-        const Ship(
+        const ShipModel(
           id: '5ea6ed2d080df4000697c901',
           legacyID: 'AMERICANCHAMPION',
           type: 'Tug',

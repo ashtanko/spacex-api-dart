@@ -18,73 +18,75 @@ class _CrewApi implements CrewApi {
   String? baseUrl;
 
   @override
-  Future<List<Crew>> getAllCrew() async {
+  Future<List<CrewModel>> getAllCrew() async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
-    final _result = await _dio.fetch<List<dynamic>>(_setStreamType<List<Crew>>(
-        Options(method: 'GET', headers: _headers, extra: _extra)
-            .compose(_dio.options, '/crew',
-                queryParameters: queryParameters, data: _data)
-            .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
+    final _result = await _dio.fetch<List<dynamic>>(
+        _setStreamType<List<CrewModel>>(
+            Options(method: 'GET', headers: _headers, extra: _extra)
+                .compose(_dio.options, '/crew',
+                    queryParameters: queryParameters, data: _data)
+                .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
     var value = _result.data!
-        .map((dynamic i) => Crew.fromJson(i as Map<String, dynamic>))
+        .map((dynamic i) => CrewModel.fromJson(i as Map<String, dynamic>))
         .toList();
     return value;
   }
 
   @override
-  Future<Crew> getOneMember(id) async {
+  Future<CrewModel> getOneMember(id) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
-    final _result = await _dio.fetch<Map<String, dynamic>>(_setStreamType<Crew>(
-        Options(method: 'GET', headers: _headers, extra: _extra)
-            .compose(_dio.options, '/crew/${id}',
-                queryParameters: queryParameters, data: _data)
-            .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
-    final value = Crew.fromJson(_result.data!);
+    final _result = await _dio.fetch<Map<String, dynamic>>(
+        _setStreamType<CrewModel>(
+            Options(method: 'GET', headers: _headers, extra: _extra)
+                .compose(_dio.options, '/crew/${id}',
+                    queryParameters: queryParameters, data: _data)
+                .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
+    final value = CrewModel.fromJson(_result.data!);
     return value;
   }
 
   @override
-  Future<ApiPaginatedList<Crew>> queryCrew(query) async {
+  Future<ApiPaginatedList<CrewModel>> queryCrew(query) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     _data.addAll(query.toJson());
     final _result = await _dio.fetch<Map<String, dynamic>>(
-        _setStreamType<ApiPaginatedList<Crew>>(
+        _setStreamType<ApiPaginatedList<CrewModel>>(
             Options(method: 'POST', headers: _headers, extra: _extra)
                 .compose(_dio.options, '/crew/query',
                     queryParameters: queryParameters, data: _data)
                 .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
-    final value = ApiPaginatedList<Crew>.fromJson(
+    final value = ApiPaginatedList<CrewModel>.fromJson(
       _result.data!,
-      (json) => Crew.fromJson(json as Map<String, dynamic>),
+      (json) => CrewModel.fromJson(json as Map<String, dynamic>),
     );
     return value;
   }
 
   @override
-  Future<ApiPaginatedList<FullCrew>> queryFullCrew(query) async {
+  Future<ApiPaginatedList<FullCrewModel>> queryFullCrew(query) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     _data.addAll(query.toJson());
     final _result = await _dio.fetch<Map<String, dynamic>>(
-        _setStreamType<ApiPaginatedList<FullCrew>>(
+        _setStreamType<ApiPaginatedList<FullCrewModel>>(
             Options(method: 'POST', headers: _headers, extra: _extra)
                 .compose(_dio.options, '/crew/query',
                     queryParameters: queryParameters, data: _data)
                 .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
-    final value = ApiPaginatedList<FullCrew>.fromJson(
+    final value = ApiPaginatedList<FullCrewModel>.fromJson(
       _result.data!,
-      (json) => FullCrew.fromJson(json as Map<String, dynamic>),
+      (json) => FullCrewModel.fromJson(json as Map<String, dynamic>),
     );
     return value;
   }

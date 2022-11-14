@@ -18,75 +18,75 @@ class _LandpadApi implements LandpadApi {
   String? baseUrl;
 
   @override
-  Future<List<Landpad>> getAllLandpads() async {
+  Future<List<LandpadModel>> getAllLandpads() async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     final _result = await _dio.fetch<List<dynamic>>(
-        _setStreamType<List<Landpad>>(
+        _setStreamType<List<LandpadModel>>(
             Options(method: 'GET', headers: _headers, extra: _extra)
                 .compose(_dio.options, '/landpads',
                     queryParameters: queryParameters, data: _data)
                 .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
     var value = _result.data!
-        .map((dynamic i) => Landpad.fromJson(i as Map<String, dynamic>))
+        .map((dynamic i) => LandpadModel.fromJson(i as Map<String, dynamic>))
         .toList();
     return value;
   }
 
   @override
-  Future<Landpad> getLandpad(id) async {
+  Future<LandpadModel> getLandpad(id) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     final _result = await _dio.fetch<Map<String, dynamic>>(
-        _setStreamType<Landpad>(
+        _setStreamType<LandpadModel>(
             Options(method: 'GET', headers: _headers, extra: _extra)
                 .compose(_dio.options, '/landpads/${id}',
                     queryParameters: queryParameters, data: _data)
                 .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
-    final value = Landpad.fromJson(_result.data!);
+    final value = LandpadModel.fromJson(_result.data!);
     return value;
   }
 
   @override
-  Future<ApiPaginatedList<Landpad>> queryLandpads(query) async {
+  Future<ApiPaginatedList<LandpadModel>> queryLandpads(query) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     _data.addAll(query.toJson());
     final _result = await _dio.fetch<Map<String, dynamic>>(
-        _setStreamType<ApiPaginatedList<Landpad>>(
+        _setStreamType<ApiPaginatedList<LandpadModel>>(
             Options(method: 'POST', headers: _headers, extra: _extra)
                 .compose(_dio.options, '/landpads/query',
                     queryParameters: queryParameters, data: _data)
                 .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
-    final value = ApiPaginatedList<Landpad>.fromJson(
+    final value = ApiPaginatedList<LandpadModel>.fromJson(
       _result.data!,
-      (json) => Landpad.fromJson(json as Map<String, dynamic>),
+      (json) => LandpadModel.fromJson(json as Map<String, dynamic>),
     );
     return value;
   }
 
   @override
-  Future<ApiPaginatedList<LandpadFull>> queryFullLandpads(query) async {
+  Future<ApiPaginatedList<LandpadFullModel>> queryFullLandpads(query) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     _data.addAll(query.toJson());
     final _result = await _dio.fetch<Map<String, dynamic>>(
-        _setStreamType<ApiPaginatedList<LandpadFull>>(
+        _setStreamType<ApiPaginatedList<LandpadFullModel>>(
             Options(method: 'POST', headers: _headers, extra: _extra)
                 .compose(_dio.options, '/landpads/query',
                     queryParameters: queryParameters, data: _data)
                 .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
-    final value = ApiPaginatedList<LandpadFull>.fromJson(
+    final value = ApiPaginatedList<LandpadFullModel>.fromJson(
       _result.data!,
-      (json) => LandpadFull.fromJson(json as Map<String, dynamic>),
+      (json) => LandpadFullModel.fromJson(json as Map<String, dynamic>),
     );
     return value;
   }

@@ -20,11 +20,14 @@ AchievementModel _$AchievementModelFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$AchievementModel {
+  @JsonKey(name: 'id')
   String get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'title')
   String? get name => throw _privateConstructorUsedError;
+  @JsonKey(name: 'details')
   String? get details => throw _privateConstructorUsedError;
-  AchievementLinks? get links => throw _privateConstructorUsedError;
+  @JsonKey(name: 'links')
+  AchievementLinksModel? get links => throw _privateConstructorUsedError;
   @JsonKey(name: 'event_date_utc')
   DateTime? get date => throw _privateConstructorUsedError;
 
@@ -40,13 +43,13 @@ abstract class $AchievementModelCopyWith<$Res> {
           AchievementModel value, $Res Function(AchievementModel) then) =
       _$AchievementModelCopyWithImpl<$Res>;
   $Res call(
-      {String id,
+      {@JsonKey(name: 'id') String id,
       @JsonKey(name: 'title') String? name,
-      String? details,
-      AchievementLinks? links,
+      @JsonKey(name: 'details') String? details,
+      @JsonKey(name: 'links') AchievementLinksModel? links,
       @JsonKey(name: 'event_date_utc') DateTime? date});
 
-  $AchievementLinksCopyWith<$Res>? get links;
+  $AchievementLinksModelCopyWith<$Res>? get links;
 }
 
 /// @nodoc
@@ -82,7 +85,7 @@ class _$AchievementModelCopyWithImpl<$Res>
       links: links == freezed
           ? _value.links
           : links // ignore: cast_nullable_to_non_nullable
-              as AchievementLinks?,
+              as AchievementLinksModel?,
       date: date == freezed
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
@@ -91,12 +94,12 @@ class _$AchievementModelCopyWithImpl<$Res>
   }
 
   @override
-  $AchievementLinksCopyWith<$Res>? get links {
+  $AchievementLinksModelCopyWith<$Res>? get links {
     if (_value.links == null) {
       return null;
     }
 
-    return $AchievementLinksCopyWith<$Res>(_value.links!, (value) {
+    return $AchievementLinksModelCopyWith<$Res>(_value.links!, (value) {
       return _then(_value.copyWith(links: value));
     });
   }
@@ -110,14 +113,14 @@ abstract class _$$_AchievementModelCopyWith<$Res>
       __$$_AchievementModelCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String id,
+      {@JsonKey(name: 'id') String id,
       @JsonKey(name: 'title') String? name,
-      String? details,
-      AchievementLinks? links,
+      @JsonKey(name: 'details') String? details,
+      @JsonKey(name: 'links') AchievementLinksModel? links,
       @JsonKey(name: 'event_date_utc') DateTime? date});
 
   @override
-  $AchievementLinksCopyWith<$Res>? get links;
+  $AchievementLinksModelCopyWith<$Res>? get links;
 }
 
 /// @nodoc
@@ -155,7 +158,7 @@ class __$$_AchievementModelCopyWithImpl<$Res>
       links: links == freezed
           ? _value.links
           : links // ignore: cast_nullable_to_non_nullable
-              as AchievementLinks?,
+              as AchievementLinksModel?,
       date: date == freezed
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
@@ -168,10 +171,10 @@ class __$$_AchievementModelCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_AchievementModel extends _AchievementModel {
   const _$_AchievementModel(
-      {required this.id,
+      {@JsonKey(name: 'id') required this.id,
       @JsonKey(name: 'title') this.name,
-      this.details,
-      this.links,
+      @JsonKey(name: 'details') this.details,
+      @JsonKey(name: 'links') this.links,
       @JsonKey(name: 'event_date_utc') this.date})
       : super._();
 
@@ -179,14 +182,17 @@ class _$_AchievementModel extends _AchievementModel {
       _$$_AchievementModelFromJson(json);
 
   @override
+  @JsonKey(name: 'id')
   final String id;
   @override
   @JsonKey(name: 'title')
   final String? name;
   @override
+  @JsonKey(name: 'details')
   final String? details;
   @override
-  final AchievementLinks? links;
+  @JsonKey(name: 'links')
+  final AchievementLinksModel? links;
   @override
   @JsonKey(name: 'event_date_utc')
   final DateTime? date;
@@ -233,10 +239,10 @@ class _$_AchievementModel extends _AchievementModel {
 
 abstract class _AchievementModel extends AchievementModel {
   const factory _AchievementModel(
-          {required final String id,
+          {@JsonKey(name: 'id') required final String id,
           @JsonKey(name: 'title') final String? name,
-          final String? details,
-          final AchievementLinks? links,
+          @JsonKey(name: 'details') final String? details,
+          @JsonKey(name: 'links') final AchievementLinksModel? links,
           @JsonKey(name: 'event_date_utc') final DateTime? date}) =
       _$_AchievementModel;
   const _AchievementModel._() : super._();
@@ -245,14 +251,17 @@ abstract class _AchievementModel extends AchievementModel {
       _$_AchievementModel.fromJson;
 
   @override
+  @JsonKey(name: 'id')
   String get id;
   @override
   @JsonKey(name: 'title')
   String? get name;
   @override
+  @JsonKey(name: 'details')
   String? get details;
   @override
-  AchievementLinks? get links;
+  @JsonKey(name: 'links')
+  AchievementLinksModel? get links;
   @override
   @JsonKey(name: 'event_date_utc')
   DateTime? get date;
@@ -262,36 +271,38 @@ abstract class _AchievementModel extends AchievementModel {
       throw _privateConstructorUsedError;
 }
 
-AchievementLinks _$AchievementLinksFromJson(Map<String, dynamic> json) {
-  return _AchievementLinks.fromJson(json);
+AchievementLinksModel _$AchievementLinksModelFromJson(
+    Map<String, dynamic> json) {
+  return _AchievementLinksModel.fromJson(json);
 }
 
 /// @nodoc
-mixin _$AchievementLinks {
+mixin _$AchievementLinksModel {
+  @JsonKey(name: 'article')
   String? get article => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $AchievementLinksCopyWith<AchievementLinks> get copyWith =>
+  $AchievementLinksModelCopyWith<AchievementLinksModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $AchievementLinksCopyWith<$Res> {
-  factory $AchievementLinksCopyWith(
-          AchievementLinks value, $Res Function(AchievementLinks) then) =
-      _$AchievementLinksCopyWithImpl<$Res>;
-  $Res call({String? article});
+abstract class $AchievementLinksModelCopyWith<$Res> {
+  factory $AchievementLinksModelCopyWith(AchievementLinksModel value,
+          $Res Function(AchievementLinksModel) then) =
+      _$AchievementLinksModelCopyWithImpl<$Res>;
+  $Res call({@JsonKey(name: 'article') String? article});
 }
 
 /// @nodoc
-class _$AchievementLinksCopyWithImpl<$Res>
-    implements $AchievementLinksCopyWith<$Res> {
-  _$AchievementLinksCopyWithImpl(this._value, this._then);
+class _$AchievementLinksModelCopyWithImpl<$Res>
+    implements $AchievementLinksModelCopyWith<$Res> {
+  _$AchievementLinksModelCopyWithImpl(this._value, this._then);
 
-  final AchievementLinks _value;
+  final AchievementLinksModel _value;
   // ignore: unused_field
-  final $Res Function(AchievementLinks) _then;
+  final $Res Function(AchievementLinksModel) _then;
 
   @override
   $Res call({
@@ -307,31 +318,32 @@ class _$AchievementLinksCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$$_AchievementLinksCopyWith<$Res>
-    implements $AchievementLinksCopyWith<$Res> {
-  factory _$$_AchievementLinksCopyWith(
-          _$_AchievementLinks value, $Res Function(_$_AchievementLinks) then) =
-      __$$_AchievementLinksCopyWithImpl<$Res>;
+abstract class _$$_AchievementLinksModelCopyWith<$Res>
+    implements $AchievementLinksModelCopyWith<$Res> {
+  factory _$$_AchievementLinksModelCopyWith(_$_AchievementLinksModel value,
+          $Res Function(_$_AchievementLinksModel) then) =
+      __$$_AchievementLinksModelCopyWithImpl<$Res>;
   @override
-  $Res call({String? article});
+  $Res call({@JsonKey(name: 'article') String? article});
 }
 
 /// @nodoc
-class __$$_AchievementLinksCopyWithImpl<$Res>
-    extends _$AchievementLinksCopyWithImpl<$Res>
-    implements _$$_AchievementLinksCopyWith<$Res> {
-  __$$_AchievementLinksCopyWithImpl(
-      _$_AchievementLinks _value, $Res Function(_$_AchievementLinks) _then)
-      : super(_value, (v) => _then(v as _$_AchievementLinks));
+class __$$_AchievementLinksModelCopyWithImpl<$Res>
+    extends _$AchievementLinksModelCopyWithImpl<$Res>
+    implements _$$_AchievementLinksModelCopyWith<$Res> {
+  __$$_AchievementLinksModelCopyWithImpl(_$_AchievementLinksModel _value,
+      $Res Function(_$_AchievementLinksModel) _then)
+      : super(_value, (v) => _then(v as _$_AchievementLinksModel));
 
   @override
-  _$_AchievementLinks get _value => super._value as _$_AchievementLinks;
+  _$_AchievementLinksModel get _value =>
+      super._value as _$_AchievementLinksModel;
 
   @override
   $Res call({
     Object? article = freezed,
   }) {
-    return _then(_$_AchievementLinks(
+    return _then(_$_AchievementLinksModel(
       article: article == freezed
           ? _value.article
           : article // ignore: cast_nullable_to_non_nullable
@@ -342,25 +354,27 @@ class __$$_AchievementLinksCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_AchievementLinks extends _AchievementLinks {
-  const _$_AchievementLinks({this.article}) : super._();
+class _$_AchievementLinksModel extends _AchievementLinksModel {
+  const _$_AchievementLinksModel({@JsonKey(name: 'article') this.article})
+      : super._();
 
-  factory _$_AchievementLinks.fromJson(Map<String, dynamic> json) =>
-      _$$_AchievementLinksFromJson(json);
+  factory _$_AchievementLinksModel.fromJson(Map<String, dynamic> json) =>
+      _$$_AchievementLinksModelFromJson(json);
 
   @override
+  @JsonKey(name: 'article')
   final String? article;
 
   @override
   String toString() {
-    return 'AchievementLinks(article: $article)';
+    return 'AchievementLinksModel(article: $article)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_AchievementLinks &&
+            other is _$_AchievementLinksModel &&
             const DeepCollectionEquality().equals(other.article, article));
   }
 
@@ -371,29 +385,32 @@ class _$_AchievementLinks extends _AchievementLinks {
 
   @JsonKey(ignore: true)
   @override
-  _$$_AchievementLinksCopyWith<_$_AchievementLinks> get copyWith =>
-      __$$_AchievementLinksCopyWithImpl<_$_AchievementLinks>(this, _$identity);
+  _$$_AchievementLinksModelCopyWith<_$_AchievementLinksModel> get copyWith =>
+      __$$_AchievementLinksModelCopyWithImpl<_$_AchievementLinksModel>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_AchievementLinksToJson(
+    return _$$_AchievementLinksModelToJson(
       this,
     );
   }
 }
 
-abstract class _AchievementLinks extends AchievementLinks {
-  const factory _AchievementLinks({final String? article}) =
-      _$_AchievementLinks;
-  const _AchievementLinks._() : super._();
+abstract class _AchievementLinksModel extends AchievementLinksModel {
+  const factory _AchievementLinksModel(
+          {@JsonKey(name: 'article') final String? article}) =
+      _$_AchievementLinksModel;
+  const _AchievementLinksModel._() : super._();
 
-  factory _AchievementLinks.fromJson(Map<String, dynamic> json) =
-      _$_AchievementLinks.fromJson;
+  factory _AchievementLinksModel.fromJson(Map<String, dynamic> json) =
+      _$_AchievementLinksModel.fromJson;
 
   @override
+  @JsonKey(name: 'article')
   String? get article;
   @override
   @JsonKey(ignore: true)
-  _$$_AchievementLinksCopyWith<_$_AchievementLinks> get copyWith =>
+  _$$_AchievementLinksModelCopyWith<_$_AchievementLinksModel> get copyWith =>
       throw _privateConstructorUsedError;
 }

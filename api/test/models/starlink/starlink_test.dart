@@ -1,17 +1,17 @@
-import 'package:api/models/space_track/space_track.dart';
-import 'package:api/models/starlink/starlink.dart';
+import 'package:api/models/space_track/space_track_model.dart';
+import 'package:api/models/starlink/starlink_model.dart';
 import 'package:test/test.dart';
 
 void main() {
   group('Starlink', () {
     test('supports value comparison', () {
-      expect(const Starlink(), const Starlink());
+      expect(const StarlinkModel(), const StarlinkModel());
     });
 
     test('is correctly generated from a JSON', () {
       expect(
         _getMockStarlink(),
-        Starlink(
+        StarlinkModel(
           spaceTrack: _getMockSpaceTrack(),
           launchID: '5eb87d30ffd86e000604b378',
           version: 'v0.9',
@@ -127,10 +127,10 @@ const Map<String, dynamic> _spaceTrackJson = {
       '2 44249  52.9730 340.4459 0006050 257.2120 102.8206 15.39425265161650'
 };
 
-SpaceTrack _getMockSpaceTrack() {
-  return SpaceTrack.fromJson(_spaceTrackJson);
+SpaceTrackModel _getMockSpaceTrack() {
+  return SpaceTrackModel.fromJson(_spaceTrackJson);
 }
 
-Starlink _getMockStarlink() {
-  return Starlink.fromJson(_starlinkJson);
+StarlinkModel _getMockStarlink() {
+  return StarlinkModel.fromJson(_starlinkJson);
 }

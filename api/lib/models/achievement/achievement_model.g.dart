@@ -13,7 +13,8 @@ _$_AchievementModel _$$_AchievementModelFromJson(Map<String, dynamic> json) =>
       details: json['details'] as String?,
       links: json['links'] == null
           ? null
-          : AchievementLinks.fromJson(json['links'] as Map<String, dynamic>),
+          : AchievementLinksModel.fromJson(
+              json['links'] as Map<String, dynamic>),
       date: json['event_date_utc'] == null
           ? null
           : DateTime.parse(json['event_date_utc'] as String),
@@ -28,12 +29,14 @@ Map<String, dynamic> _$$_AchievementModelToJson(_$_AchievementModel instance) =>
       'event_date_utc': instance.date?.toIso8601String(),
     };
 
-_$_AchievementLinks _$$_AchievementLinksFromJson(Map<String, dynamic> json) =>
-    _$_AchievementLinks(
+_$_AchievementLinksModel _$$_AchievementLinksModelFromJson(
+        Map<String, dynamic> json) =>
+    _$_AchievementLinksModel(
       article: json['article'] as String?,
     );
 
-Map<String, dynamic> _$$_AchievementLinksToJson(_$_AchievementLinks instance) =>
+Map<String, dynamic> _$$_AchievementLinksModelToJson(
+        _$_AchievementLinksModel instance) =>
     <String, dynamic>{
       'article': instance.article,
     };

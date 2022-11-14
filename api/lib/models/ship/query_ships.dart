@@ -7,7 +7,7 @@ part 'query_ships.g.dart';
 @freezed
 class QueryShips with _$QueryShips {
   const factory QueryShips({
-    @Default([]) List<Ship> docs,
+    @Default([]) List<ShipModel> docs,
     @Default(0) int totalDocs,
     @Default(0) int offset,
     @Default(0) int limit,

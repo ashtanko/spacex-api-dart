@@ -1,16 +1,17 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'achievement_model.freezed.dart';
+
 part 'achievement_model.g.dart';
 
 /// Auxiliary model to storage specific SpaceX's achievements.
 @freezed
 class AchievementModel with _$AchievementModel {
   const factory AchievementModel({
-    required String id,
+    @JsonKey(name: 'id') required String id,
     @JsonKey(name: 'title') String? name,
-    String? details,
-    AchievementLinks? links,
+    @JsonKey(name: 'details') String? details,
+    @JsonKey(name: 'links') AchievementLinksModel? links,
     @JsonKey(name: 'event_date_utc') DateTime? date,
   }) = _AchievementModel;
 
@@ -21,13 +22,13 @@ class AchievementModel with _$AchievementModel {
 }
 
 @freezed
-class AchievementLinks with _$AchievementLinks {
-  const factory AchievementLinks({
-    String? article,
-  }) = _AchievementLinks;
+class AchievementLinksModel with _$AchievementLinksModel {
+  const factory AchievementLinksModel({
+    @JsonKey(name: 'article') String? article,
+  }) = _AchievementLinksModel;
 
-  const AchievementLinks._();
+  const AchievementLinksModel._();
 
-  factory AchievementLinks.fromJson(Map<String, dynamic> json) =>
-      _$AchievementLinksFromJson(json);
+  factory AchievementLinksModel.fromJson(Map<String, dynamic> json) =>
+      _$AchievementLinksModelFromJson(json);
 }

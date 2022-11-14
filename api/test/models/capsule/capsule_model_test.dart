@@ -1,4 +1,3 @@
-import 'package:api/models/capsule/capsule_full_model.dart';
 import 'package:api/models/index.dart';
 import 'package:test/test.dart';
 
@@ -74,7 +73,7 @@ void main() {
         landLandings: 0,
         lastUpdate: 'Hanging in atrium at SpaceX HQ in Hawthorne',
         launches: [
-          Launch(id: '0'),
+          LaunchModel(id: '0'),
         ],
         serial: 'C101',
         status: 'retired',
@@ -88,7 +87,7 @@ void main() {
         landLandings: 0,
         lastUpdate: 'Hanging in atrium at SpaceX HQ in Hawthorne',
         launches: [
-          Launch(id: '0'),
+          LaunchModel(id: '0'),
         ],
         serial: 'C101',
         status: 'retired',
@@ -120,7 +119,7 @@ void main() {
           landLandings: 0,
           lastUpdate: 'Hanging in atrium at SpaceX HQ in Hawthorne ',
           launches: [
-            Launch(id: '5eb87cdeffd86e000604b330'),
+            LaunchModel(id: '5eb87cdeffd86e000604b330'),
           ],
           serial: 'C101',
           status: 'retired',

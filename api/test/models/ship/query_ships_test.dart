@@ -8,7 +8,7 @@ void main() {
     'Ship',
     () {
       test('supports value comparison', () {
-        expect(const Ship(id: '0'), const Ship(id: '0'));
+        expect(const ShipModel(id: '0'), const ShipModel(id: '0'));
       });
 
       test('supports QueryShips value comparison', () {
@@ -191,7 +191,7 @@ void main() {
             ),
             const QueryShips(
               docs: [
-                Ship(
+                ShipModel(
                   legacyID: 'AMERICANCHAMPION',
                   model: '',
                   type: 'Tug',
@@ -216,7 +216,7 @@ void main() {
                   ],
                   id: '5ea6ed2d080df4000697c901',
                 ),
-                Ship(
+                ShipModel(
                   legacyID: 'AMERICANISLANDER',
                   model: '',
                   type: 'Cargo',
@@ -243,7 +243,7 @@ void main() {
                   ],
                   id: '5ea6ed2d080df4000697c902',
                 ),
-                Ship(
+                ShipModel(
                   legacyID: 'AMERICANSPIRIT',
                   model: '',
                   type: 'Cargo',
@@ -264,7 +264,7 @@ void main() {
                   launches: ['5eb87ce1ffd86e000604b334'],
                   id: '5ea6ed2d080df4000697c903',
                 ),
-                Ship(
+                ShipModel(
                   legacyID: 'ASOG',
                   model: '',
                   type: 'Barge',
@@ -291,7 +291,7 @@ void main() {
                   ],
                   id: '5ea6ed2d080df4000697c904',
                 ),
-                Ship(
+                ShipModel(
                   legacyID: 'BETTYRGAMBARELLA',
                   model: '',
                   type: 'Tug',

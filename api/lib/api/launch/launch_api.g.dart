@@ -18,143 +18,146 @@ class _LaunchApi implements LaunchApi {
   String? baseUrl;
 
   @override
-  Future<List<LaunchSimple>> getAllLaunches() async {
+  Future<List<LaunchSimpleModel>> getAllLaunches() async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     final _result = await _dio.fetch<List<dynamic>>(
-        _setStreamType<List<LaunchSimple>>(
+        _setStreamType<List<LaunchSimpleModel>>(
             Options(method: 'GET', headers: _headers, extra: _extra)
                 .compose(_dio.options, '/launches',
                     queryParameters: queryParameters, data: _data)
                 .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
     var value = _result.data!
-        .map((dynamic i) => LaunchSimple.fromJson(i as Map<String, dynamic>))
+        .map((dynamic i) =>
+            LaunchSimpleModel.fromJson(i as Map<String, dynamic>))
         .toList();
     return value;
   }
 
   @override
-  Future<List<LaunchSimple>> getUpcomingLaunches() async {
+  Future<List<LaunchSimpleModel>> getUpcomingLaunches() async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     final _result = await _dio.fetch<List<dynamic>>(
-        _setStreamType<List<LaunchSimple>>(
+        _setStreamType<List<LaunchSimpleModel>>(
             Options(method: 'GET', headers: _headers, extra: _extra)
                 .compose(_dio.options, '/launches/upcoming',
                     queryParameters: queryParameters, data: _data)
                 .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
     var value = _result.data!
-        .map((dynamic i) => LaunchSimple.fromJson(i as Map<String, dynamic>))
+        .map((dynamic i) =>
+            LaunchSimpleModel.fromJson(i as Map<String, dynamic>))
         .toList();
     return value;
   }
 
   @override
-  Future<List<LaunchSimple>> getPastLaunches() async {
+  Future<List<LaunchSimpleModel>> getPastLaunches() async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     final _result = await _dio.fetch<List<dynamic>>(
-        _setStreamType<List<LaunchSimple>>(
+        _setStreamType<List<LaunchSimpleModel>>(
             Options(method: 'GET', headers: _headers, extra: _extra)
                 .compose(_dio.options, '/launches/past',
                     queryParameters: queryParameters, data: _data)
                 .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
     var value = _result.data!
-        .map((dynamic i) => LaunchSimple.fromJson(i as Map<String, dynamic>))
+        .map((dynamic i) =>
+            LaunchSimpleModel.fromJson(i as Map<String, dynamic>))
         .toList();
     return value;
   }
 
   @override
-  Future<LaunchSimple> getLatestLaunch() async {
+  Future<LaunchSimpleModel> getLatestLaunch() async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     final _result = await _dio.fetch<Map<String, dynamic>>(
-        _setStreamType<LaunchSimple>(
+        _setStreamType<LaunchSimpleModel>(
             Options(method: 'GET', headers: _headers, extra: _extra)
                 .compose(_dio.options, '/launches/latest',
                     queryParameters: queryParameters, data: _data)
                 .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
-    final value = LaunchSimple.fromJson(_result.data!);
+    final value = LaunchSimpleModel.fromJson(_result.data!);
     return value;
   }
 
   @override
-  Future<LaunchSimple> getNextLaunch() async {
+  Future<LaunchSimpleModel> getNextLaunch() async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     final _result = await _dio.fetch<Map<String, dynamic>>(
-        _setStreamType<LaunchSimple>(
+        _setStreamType<LaunchSimpleModel>(
             Options(method: 'GET', headers: _headers, extra: _extra)
                 .compose(_dio.options, '/launches/next',
                     queryParameters: queryParameters, data: _data)
                 .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
-    final value = LaunchSimple.fromJson(_result.data!);
+    final value = LaunchSimpleModel.fromJson(_result.data!);
     return value;
   }
 
   @override
-  Future<Launch> getLaunch(id) async {
+  Future<LaunchModel> getLaunch(id) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     final _result = await _dio.fetch<Map<String, dynamic>>(
-        _setStreamType<Launch>(
+        _setStreamType<LaunchModel>(
             Options(method: 'GET', headers: _headers, extra: _extra)
                 .compose(_dio.options, '/launches/${id}',
                     queryParameters: queryParameters, data: _data)
                 .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
-    final value = Launch.fromJson(_result.data!);
+    final value = LaunchModel.fromJson(_result.data!);
     return value;
   }
 
   @override
-  Future<ApiPaginatedList<LaunchSimple>> queryLaunches(query) async {
+  Future<ApiPaginatedList<LaunchSimpleModel>> queryLaunches(query) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     _data.addAll(query.toJson());
     final _result = await _dio.fetch<Map<String, dynamic>>(
-        _setStreamType<ApiPaginatedList<LaunchSimple>>(
+        _setStreamType<ApiPaginatedList<LaunchSimpleModel>>(
             Options(method: 'POST', headers: _headers, extra: _extra)
                 .compose(_dio.options, '/launches/query',
                     queryParameters: queryParameters, data: _data)
                 .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
-    final value = ApiPaginatedList<LaunchSimple>.fromJson(
+    final value = ApiPaginatedList<LaunchSimpleModel>.fromJson(
       _result.data!,
-      (json) => LaunchSimple.fromJson(json as Map<String, dynamic>),
+      (json) => LaunchSimpleModel.fromJson(json as Map<String, dynamic>),
     );
     return value;
   }
 
   @override
-  Future<ApiPaginatedList<FullLaunch>> queryFullLaunches(query) async {
+  Future<ApiPaginatedList<FullLaunchModel>> queryFullLaunches(query) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     _data.addAll(query.toJson());
     final _result = await _dio.fetch<Map<String, dynamic>>(
-        _setStreamType<ApiPaginatedList<FullLaunch>>(
+        _setStreamType<ApiPaginatedList<FullLaunchModel>>(
             Options(method: 'POST', headers: _headers, extra: _extra)
                 .compose(_dio.options, '/launches/query',
                     queryParameters: queryParameters, data: _data)
                 .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
-    final value = ApiPaginatedList<FullLaunch>.fromJson(
+    final value = ApiPaginatedList<FullLaunchModel>.fromJson(
       _result.data!,
-      (json) => FullLaunch.fromJson(json as Map<String, dynamic>),
+      (json) => FullLaunchModel.fromJson(json as Map<String, dynamic>),
     );
     return value;
   }

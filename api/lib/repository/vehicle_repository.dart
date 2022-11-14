@@ -8,51 +8,51 @@ class VehicleRepository {
 
   final VehicleApi _api;
 
-  Future<List<DragonVehicle>> getAllDragons() async {
+  Future<List<DragonVehicleModel>> getAllDragons() async {
     return _api.getAllDragons();
   }
 
-  Future<DragonVehicle> getDragon(String id) async {
+  Future<DragonVehicleModel> getDragon(String id) async {
     return _api.getDragon(id);
   }
 
-  Future<ApiPaginatedList<DragonVehicle>> queryDragons(q.Query query) async {
+  Future<ApiPaginatedList<DragonVehicleModel>> queryDragons(q.Query query) async {
     return _api.queryDragons(query);
   }
 
   // ships
-  Future<List<ShipVehicle>> getAllShips() async {
+  Future<List<ShipVehicleModel>> getAllShips() async {
     return _api.getAllShips();
   }
 
-  Future<ShipVehicle> getShip(String id) async {
+  Future<ShipVehicleModel> getShip(String id) async {
     return _api.getShip(id);
   }
 
-  Future<ApiPaginatedList<ShipVehicle>> queryShips(q.Query query) async {
+  Future<ApiPaginatedList<ShipVehicleModel>> queryShips(q.Query query) async {
     return _api.queryShips(query);
   }
 
-  Future<ApiPaginatedList<ShipFullVehicle>> queryFullShips(
+  Future<ApiPaginatedList<ShipFullVehicleModel>> queryFullShips(
     q.Query query,
   ) async {
     return _api.queryFullShips(query);
   }
 
   // rockets
-  Future<List<RocketVehicle>> getAllRockets() async {
+  Future<List<RocketVehicleModel>> getAllRockets() async {
     return _api.getAllRockets();
   }
 
-  Future<RocketVehicle> getRocket(String id) async {
+  Future<RocketVehicleModel> getRocket(String id) async {
     return _api.getRocket(id);
   }
 
-  Future<ApiPaginatedList<RocketVehicle>> queryRockets(q.Query query) {
+  Future<ApiPaginatedList<RocketVehicleModel>> queryRockets(q.Query query) {
     return _api.queryRockets(query);
   }
 
-  Future<RoadsterVehicle> getRoadster() {
+  Future<RoadsterVehicleModel> getRoadster() {
     return _api.getRoadster();
   }
 }
