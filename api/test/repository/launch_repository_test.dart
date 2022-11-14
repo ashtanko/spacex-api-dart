@@ -27,6 +27,42 @@ void main() {
     expect(data.isNotEmpty, true);
   });
 
+  test('getUpcomingLaunches with empty query data, returns data from api',
+      () async {
+    // arrange
+    dio.interceptors.add(LoggingInterceptor(createLogger(level: Logger.level)));
+
+    // act
+    final data = await repository.getUpcomingLaunches();
+
+    // assert
+    expect(data.isNotEmpty, true);
+  });
+
+  test('getPastLaunches with empty query data, returns data from api',
+      () async {
+    // arrange
+    dio.interceptors.add(LoggingInterceptor(createLogger(level: Logger.level)));
+
+    // act
+    final data = await repository.getPastLaunches();
+
+    // assert
+    expect(data.isNotEmpty, true);
+  });
+
+  test('getLatestLaunch with empty query data, returns data from api',
+      () async {
+    // arrange
+    dio.interceptors.add(LoggingInterceptor(createLogger(level: Logger.level)));
+
+    // act
+    final data = await repository.getLatestLaunch();
+
+    // assert
+    expect(data.id.isNotEmpty, true);
+  });
+
   test('queryLaunches with empty query data, returns data from api', () async {
     // arrange
     dio.interceptors.add(LoggingInterceptor(createLogger(level: Logger.level)));

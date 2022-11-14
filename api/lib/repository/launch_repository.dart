@@ -12,6 +12,18 @@ class LaunchRepository {
     return _api.getAllLaunches();
   }
 
+  Future<List<LaunchSimple>> getUpcomingLaunches() {
+    return _api.getUpcomingLaunches();
+  }
+
+  Future<List<LaunchSimple>> getPastLaunches() async {
+    return _api.getPastLaunches();
+  }
+
+  Future<LaunchSimple> getLatestLaunch() async {
+    return _api.getLatestLaunch();
+  }
+
   Future<Launch> getLaunch(String id) async {
     return _api.getLaunch(id);
   }
