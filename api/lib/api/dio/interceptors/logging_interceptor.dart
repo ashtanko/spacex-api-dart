@@ -255,10 +255,10 @@ class LoggingInterceptor extends Interceptor {
     bool isListItem = false,
     bool isLast = false,
   }) {
-    var _tabs = tabs;
-    final isRoot = _tabs == initialTab;
-    final initialIndent = _indent(_tabs);
-    _tabs++;
+    var currentTabs = tabs;
+    final isRoot = currentTabs == initialTab;
+    final initialIndent = _indent(currentTabs);
+    currentTabs++;
 
     if (isRoot || isListItem) logPrint('║$initialIndent{');
 
@@ -270,33 +270,33 @@ class LoggingInterceptor extends Interceptor {
       }
       if (value is Map) {
         if (compact) {
-          logPrint('║${_indent(_tabs)} $key: $value${!isLast ? ',' : ''}');
+          logPrint('║${_indent(currentTabs)} $key: $value${!isLast ? ',' : ''}');
         } else {
-          logPrint('║${_indent(_tabs)} $key: {');
-          _printPrettyMap(logPrint, value, tabs: _tabs);
+          logPrint('║${_indent(currentTabs)} $key: {');
+          _printPrettyMap(logPrint, value, tabs: currentTabs);
         }
       } else if (value is List) {
         if (compact) {
-          logPrint('║${_indent(_tabs)} $key: ${value.toString()}');
+          logPrint('║${_indent(currentTabs)} $key: ${value.toString()}');
         } else {
-          logPrint('║${_indent(_tabs)} $key: [');
-          _printList(logPrint, value, tabs: _tabs);
-          logPrint('║${_indent(_tabs)} ]${isLast ? '' : ','}');
+          logPrint('║${_indent(currentTabs)} $key: [');
+          _printList(logPrint, value, tabs: currentTabs);
+          logPrint('║${_indent(currentTabs)} ]${isLast ? '' : ','}');
         }
       } else {
         final msg = value.toString().replaceAll('\n', '');
-        final indent = _indent(_tabs);
+        final indent = _indent(currentTabs);
         final linWidth = maxWidth - indent.length;
         if (msg.length + indent.length > linWidth) {
           final lines = (msg.length / linWidth).ceil();
           for (var i = 0; i < lines; ++i) {
-            logPrint('║${_indent(_tabs)} ${msg.substring(
+            logPrint('║${_indent(currentTabs)} ${msg.substring(
               i * linWidth,
               math.min<int>(i * linWidth + linWidth, msg.length),
             )}');
           }
         } else {
-          logPrint('║${_indent(_tabs)} $key: $msg${!isLast ? ',' : ''}');
+          logPrint('║${_indent(currentTabs)} $key: $msg${!isLast ? ',' : ''}');
         }
       }
     });
