@@ -2,9 +2,7 @@ import 'package:api/api/crew/crew_api.dart';
 import 'package:api/api/dio/interceptors/logging_interceptor.dart';
 import 'package:api/models/query/query.dart' as q;
 import 'package:api/repository/crew_repository.dart';
-import 'package:api/utils/logger.dart';
 import 'package:dio/dio.dart';
-import 'package:logger/logger.dart';
 import 'package:test/test.dart';
 
 void main() {
@@ -18,7 +16,7 @@ void main() {
 
   test('getAllCrew with empty query data, returns data from api', () async {
     // arrange
-    dio.interceptors.add(LoggingInterceptor(createLogger(level: Logger.level)));
+    dio.interceptors.add(LoggingInterceptor());
 
     // act
     final data = await repository.getAllCrew();
@@ -29,7 +27,7 @@ void main() {
 
   test('queryCrew with empty query data, returns data from api', () async {
     // arrange
-    dio.interceptors.add(LoggingInterceptor(createLogger(level: Logger.level)));
+    dio.interceptors.add(LoggingInterceptor());
 
     // act
     final data = await repository.queryCrew(const q.Query());
@@ -41,7 +39,7 @@ void main() {
 
   test('queryCrew with offset 5, returns data from api', () async {
     // arrange
-    dio.interceptors.add(LoggingInterceptor(createLogger(level: Logger.level)));
+    dio.interceptors.add(LoggingInterceptor());
 
     // act
     final data = await repository
@@ -54,7 +52,7 @@ void main() {
 
   test('queryFullCrew with offset 5, returns data from api', () async {
     // arrange
-    dio.interceptors.add(LoggingInterceptor(createLogger(level: Logger.level)));
+    dio.interceptors.add(LoggingInterceptor());
 
     // act
     final data = await repository.queryFullCrew(
@@ -69,7 +67,7 @@ void main() {
   test('queryCrewMember with offset 5, returns data from api', () async {
     const id = '5ebf1a6e23a9a60006e03a7a';
     // arrange
-    dio.interceptors.add(LoggingInterceptor(createLogger(level: Logger.level)));
+    dio.interceptors.add(LoggingInterceptor());
 
     // act
     final data = await repository.getCrewMember(id);

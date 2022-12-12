@@ -2,9 +2,7 @@ import 'package:api/api/dio/interceptors/logging_interceptor.dart';
 import 'package:api/api/starlink/starlink_api.dart';
 import 'package:api/models/query/query.dart' as q;
 import 'package:api/repository/starlink_repository.dart';
-import 'package:api/utils/logger.dart';
 import 'package:dio/dio.dart';
-import 'package:logger/logger.dart';
 import 'package:test/test.dart';
 
 void main() {
@@ -19,7 +17,7 @@ void main() {
   test('getStarlinkList with empty query data, returns data from api',
       () async {
     // arrange
-    dio.interceptors.add(LoggingInterceptor(createLogger(level: Logger.level)));
+    dio.interceptors.add(LoggingInterceptor());
 
     // act
     final data = await repository.getStarlinkList();
@@ -31,7 +29,7 @@ void main() {
   test('queryStarlinkList with empty query data, returns data from api',
       () async {
     // arrange
-    dio.interceptors.add(LoggingInterceptor(createLogger(level: Logger.level)));
+    dio.interceptors.add(LoggingInterceptor());
 
     // act
     final data = await repository.queryStarlinkList(const q.Query());
@@ -43,7 +41,7 @@ void main() {
 
   test('queryStarlinkList with offset 5, returns data from api', () async {
     // arrange
-    dio.interceptors.add(LoggingInterceptor(createLogger(level: Logger.level)));
+    dio.interceptors.add(LoggingInterceptor());
 
     // act
     final data = await repository.queryStarlinkList(
@@ -57,7 +55,7 @@ void main() {
 
   test('queryFullStarlinkList with offset 5, returns data from api', () async {
     // arrange
-    dio.interceptors.add(LoggingInterceptor(createLogger(level: Logger.level)));
+    dio.interceptors.add(LoggingInterceptor());
 
     // act
     final data = await repository.queryFullStarlinkList(
@@ -72,7 +70,7 @@ void main() {
   test('getStarlink with offset 5, returns data from api', () async {
     const id = '5eed770f096e59000698560d';
     // arrange
-    dio.interceptors.add(LoggingInterceptor(createLogger(level: Logger.level)));
+    dio.interceptors.add(LoggingInterceptor());
 
     // act
     final data = await repository.getStarlink(id);

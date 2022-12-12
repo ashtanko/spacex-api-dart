@@ -2,9 +2,7 @@ import 'package:api/api/dio/interceptors/logging_interceptor.dart';
 import 'package:api/api/vehicle/vehicle_api.dart';
 import 'package:api/models/query/query.dart' as q;
 import 'package:api/repository/vehicle_repository.dart';
-import 'package:api/utils/logger.dart';
 import 'package:dio/dio.dart';
-import 'package:logger/logger.dart';
 import 'package:test/test.dart';
 
 void main() {
@@ -19,7 +17,7 @@ void main() {
   test('getAllDragons with no empty query data, returns data from api',
       () async {
     // arrange
-    dio.interceptors.add(LoggingInterceptor(createLogger(level: Logger.level)));
+    dio.interceptors.add(LoggingInterceptor());
 
     // act
     final data = await repository.getAllDragons();
@@ -31,7 +29,7 @@ void main() {
   test('get one dragon, returns data from api', () async {
     const id = '5e9d058759b1ff74a7ad5f8f';
     // arrange
-    dio.interceptors.add(LoggingInterceptor(createLogger(level: Logger.level)));
+    dio.interceptors.add(LoggingInterceptor());
 
     // act
     final data = await repository.getDragon(id);
@@ -42,7 +40,7 @@ void main() {
 
   test('query dragons with offset 5, returns data from api', () async {
     // arrange
-    dio.interceptors.add(LoggingInterceptor(createLogger(level: Logger.level)));
+    dio.interceptors.add(LoggingInterceptor());
 
     // act
     final data = await repository
@@ -57,7 +55,7 @@ void main() {
   test('get all ships with no empty query data, returns data from api',
       () async {
     // arrange
-    dio.interceptors.add(LoggingInterceptor(createLogger(level: Logger.level)));
+    dio.interceptors.add(LoggingInterceptor());
 
     // act
     final data = await repository.getAllShips();
@@ -69,7 +67,7 @@ void main() {
   test('get one ship, returns data from api', () async {
     const id = '5ea6ed2d080df4000697c901';
     // arrange
-    dio.interceptors.add(LoggingInterceptor(createLogger(level: Logger.level)));
+    dio.interceptors.add(LoggingInterceptor());
 
     // act
     final data = await repository.getShip(id);
@@ -80,7 +78,7 @@ void main() {
 
   test('query ships with offset 5, returns data from api', () async {
     // arrange
-    dio.interceptors.add(LoggingInterceptor(createLogger(level: Logger.level)));
+    dio.interceptors.add(LoggingInterceptor());
 
     // act
     final data = await repository
@@ -93,7 +91,7 @@ void main() {
 
   test('query full ships with offset 5, returns data from api', () async {
     // arrange
-    dio.interceptors.add(LoggingInterceptor(createLogger(level: Logger.level)));
+    dio.interceptors.add(LoggingInterceptor());
 
     // act
     final data = await repository.queryFullShips(
@@ -111,7 +109,7 @@ void main() {
   test('get all rockets with no empty query data, returns data from api',
       () async {
     // arrange
-    dio.interceptors.add(LoggingInterceptor(createLogger(level: Logger.level)));
+    dio.interceptors.add(LoggingInterceptor());
 
     // act
     final data = await repository.getAllRockets();
@@ -123,7 +121,7 @@ void main() {
   test('get one rocket, returns data from api', () async {
     const id = '5e9d0d95eda69973a809d1ec';
     // arrange
-    dio.interceptors.add(LoggingInterceptor(createLogger(level: Logger.level)));
+    dio.interceptors.add(LoggingInterceptor());
 
     // act
     final data = await repository.getRocket(id);
@@ -134,7 +132,7 @@ void main() {
 
   test('query rockets with offset 5, returns data from api', () async {
     // arrange
-    dio.interceptors.add(LoggingInterceptor(createLogger(level: Logger.level)));
+    dio.interceptors.add(LoggingInterceptor());
 
     // act
     final data = await repository
@@ -148,7 +146,7 @@ void main() {
   test('get roadster, returns data from api', () async {
     const id = '5eb75f0842fea42237d7f3f4';
     // arrange
-    dio.interceptors.add(LoggingInterceptor(createLogger(level: Logger.level)));
+    dio.interceptors.add(LoggingInterceptor());
 
     // act
     final data = await repository.getRoadster();

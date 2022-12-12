@@ -2,9 +2,7 @@ import 'package:api/api/dio/interceptors/logging_interceptor.dart';
 import 'package:api/api/launchpads/launchpads_api.dart';
 import 'package:api/models/query/query.dart' as q;
 import 'package:api/repository/launchpads_repository.dart';
-import 'package:api/utils/logger.dart';
 import 'package:dio/dio.dart';
-import 'package:logger/logger.dart';
 import 'package:test/test.dart';
 
 void main() {
@@ -19,7 +17,7 @@ void main() {
   test('getAllLaunchpads with empty query data, returns data from api',
       () async {
     // arrange
-    dio.interceptors.add(LoggingInterceptor(createLogger(level: Logger.level)));
+    dio.interceptors.add(LoggingInterceptor());
 
     // act
     final data = await repository.getAllLaunchpads();
@@ -31,7 +29,7 @@ void main() {
   test('getOneLaunchpad with offset 5, returns data from api', () async {
     const id = '5e9e4501f509094ba4566f84';
     // arrange
-    dio.interceptors.add(LoggingInterceptor(createLogger(level: Logger.level)));
+    dio.interceptors.add(LoggingInterceptor());
 
     // act
     final data = await repository.getLaunchpad(id);
@@ -43,7 +41,7 @@ void main() {
   test('queryLaunchpads with empty query data, returns data from api',
       () async {
     // arrange
-    dio.interceptors.add(LoggingInterceptor(createLogger(level: Logger.level)));
+    dio.interceptors.add(LoggingInterceptor());
 
     // act
     final data = await repository.queryLaunchpads(const q.Query());
@@ -55,7 +53,7 @@ void main() {
 
   test('queryLaunchpads with offset 5, returns data from api', () async {
     // arrange
-    dio.interceptors.add(LoggingInterceptor(createLogger(level: Logger.level)));
+    dio.interceptors.add(LoggingInterceptor());
 
     // act
     final data = await repository
@@ -68,7 +66,7 @@ void main() {
 
   test('queryFullLaunchpads with offset 5, returns data from api', () async {
     // arrange
-    dio.interceptors.add(LoggingInterceptor(createLogger(level: Logger.level)));
+    dio.interceptors.add(LoggingInterceptor());
 
     // act
     final data = await repository.queryFullLaunchpads(

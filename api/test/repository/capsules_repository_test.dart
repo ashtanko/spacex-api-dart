@@ -2,9 +2,7 @@ import 'package:api/api/capsules/capsules_api.dart';
 import 'package:api/api/dio/interceptors/logging_interceptor.dart';
 import 'package:api/models/query/query.dart' as q;
 import 'package:api/repository/capsules_repository.dart';
-import 'package:api/utils/logger.dart';
 import 'package:dio/dio.dart';
-import 'package:logger/logger.dart';
 import 'package:test/test.dart';
 
 void main() {
@@ -18,7 +16,7 @@ void main() {
 
   test('getAllCapsules with empty query data, returns data from api', () async {
     // arrange
-    dio.interceptors.add(LoggingInterceptor(createLogger(level: Logger.level)));
+    dio.interceptors.add(LoggingInterceptor());
 
     // act
     final data = await repository.getAllCapsules();
@@ -29,7 +27,7 @@ void main() {
 
   test('queryCapsules with empty query data, returns data from api', () async {
     // arrange
-    dio.interceptors.add(LoggingInterceptor(createLogger(level: Logger.level)));
+    dio.interceptors.add(LoggingInterceptor());
 
     // act
     final data = await repository.queryCapsules(const q.Query());
@@ -42,7 +40,7 @@ void main() {
   test('queryFullCapsules with empty query data, returns data from api',
       () async {
     // arrange
-    dio.interceptors.add(LoggingInterceptor(createLogger(level: Logger.level)));
+    dio.interceptors.add(LoggingInterceptor());
 
     // act
     final data = await repository.queryFullCapsules(
@@ -56,7 +54,7 @@ void main() {
 
   test('queryCapsules with offset 5, returns data from api', () async {
     // arrange
-    dio.interceptors.add(LoggingInterceptor(createLogger(level: Logger.level)));
+    dio.interceptors.add(LoggingInterceptor());
 
     // act
     final data = await repository

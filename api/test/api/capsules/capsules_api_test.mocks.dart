@@ -39,11 +39,13 @@ class MockCapsulesApi extends _i1.Mock implements _i4.CapsulesApi {
               returnValue:
                   Future<List<_i2.CapsuleModel>>.value(<_i2.CapsuleModel>[]))
           as _i5.Future<List<_i2.CapsuleModel>>);
+
   @override
   _i5.Future<_i2.CapsuleModel> getCapsule(String? id) => (super.noSuchMethod(
           Invocation.method(#getCapsule, [id]),
           returnValue: Future<_i2.CapsuleModel>.value(_FakeCapsuleModel_0()))
       as _i5.Future<_i2.CapsuleModel>);
+
   @override
   _i5.Future<_i3.ApiPaginatedList<_i2.CapsuleModel>> queryCapsules(
           _i6.Query? query) =>
@@ -51,6 +53,7 @@ class MockCapsulesApi extends _i1.Mock implements _i4.CapsulesApi {
               returnValue: Future<_i3.ApiPaginatedList<_i2.CapsuleModel>>.value(
                   _FakeApiPaginatedList_1<_i2.CapsuleModel>()))
           as _i5.Future<_i3.ApiPaginatedList<_i2.CapsuleModel>>);
+
   @override
   _i5.Future<_i3.ApiPaginatedList<_i2.CapsuleFullModel>> queryFullCapsules(
           _i6.Query? query) =>

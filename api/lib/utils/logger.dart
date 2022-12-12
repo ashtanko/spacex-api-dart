@@ -4,7 +4,7 @@ import 'package:stack_trace/stack_trace.dart';
 class _StackTracePrettyPrinter extends LogPrinter {
   _StackTracePrettyPrinter(this._prettyPrinter);
 
-  final PrettyPrinter _prettyPrinter;
+  final LogPrinter _prettyPrinter;
 
   @override
   List<String> log(LogEvent event) => _prettyPrinter.log(
@@ -27,7 +27,7 @@ Logger createLogger({
     Logger(
       filter: ProductionFilter(),
       printer: _StackTracePrettyPrinter(
-        PrettyPrinter(colors: colors, methodCount: 999, errorMethodCount: 999),
+        SimplePrinter(colors: false),
       ),
       output: output,
       level: level,

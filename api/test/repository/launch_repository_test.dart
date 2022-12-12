@@ -2,9 +2,7 @@ import 'package:api/api/dio/interceptors/logging_interceptor.dart';
 import 'package:api/api/launch/launch_api.dart';
 import 'package:api/models/query/query.dart' as q;
 import 'package:api/repository/launch_repository.dart';
-import 'package:api/utils/logger.dart';
 import 'package:dio/dio.dart';
-import 'package:logger/logger.dart';
 import 'package:test/test.dart';
 
 void main() {
@@ -18,7 +16,7 @@ void main() {
 
   test('getAllLaunches with empty query data, returns data from api', () async {
     // arrange
-    dio.interceptors.add(LoggingInterceptor(createLogger(level: Logger.level)));
+    dio.interceptors.add(LoggingInterceptor());
 
     // act
     final data = await repository.getAllLaunches();
@@ -30,7 +28,7 @@ void main() {
   test('getUpcomingLaunches with empty query data, returns data from api',
       () async {
     // arrange
-    dio.interceptors.add(LoggingInterceptor(createLogger(level: Logger.level)));
+    dio.interceptors.add(LoggingInterceptor());
 
     // act
     final data = await repository.getUpcomingLaunches();
@@ -42,7 +40,7 @@ void main() {
   test('getPastLaunches with empty query data, returns data from api',
       () async {
     // arrange
-    dio.interceptors.add(LoggingInterceptor(createLogger(level: Logger.level)));
+    dio.interceptors.add(LoggingInterceptor());
 
     // act
     final data = await repository.getPastLaunches();
@@ -54,7 +52,7 @@ void main() {
   test('getLatestLaunch with empty query data, returns data from api',
       () async {
     // arrange
-    dio.interceptors.add(LoggingInterceptor(createLogger(level: Logger.level)));
+    dio.interceptors.add(LoggingInterceptor());
 
     // act
     final data = await repository.getLatestLaunch();
@@ -63,10 +61,9 @@ void main() {
     expect(data.id.isNotEmpty, true);
   });
 
-  test('getNextLaunch with empty query data, returns data from api',
-      () async {
+  test('getNextLaunch with empty query data, returns data from api', () async {
     // arrange
-    dio.interceptors.add(LoggingInterceptor(createLogger(level: Logger.level)));
+    dio.interceptors.add(LoggingInterceptor());
 
     // act
     final data = await repository.getNextLaunch();
@@ -77,7 +74,7 @@ void main() {
 
   test('queryLaunches with empty query data, returns data from api', () async {
     // arrange
-    dio.interceptors.add(LoggingInterceptor(createLogger(level: Logger.level)));
+    dio.interceptors.add(LoggingInterceptor());
 
     // act
     final data = await repository.queryLaunches(const q.Query());
@@ -89,7 +86,7 @@ void main() {
 
   test('queryLaunches with offset 5, returns data from api', () async {
     // arrange
-    dio.interceptors.add(LoggingInterceptor(createLogger(level: Logger.level)));
+    dio.interceptors.add(LoggingInterceptor());
 
     // act
     final data = await repository
@@ -102,7 +99,7 @@ void main() {
 
   test('queryFullLaunches with offset 5, returns data from api', () async {
     // arrange
-    dio.interceptors.add(LoggingInterceptor(createLogger(level: Logger.level)));
+    dio.interceptors.add(LoggingInterceptor());
 
     // act
     final data = await repository.queryFullLaunches(
@@ -121,7 +118,7 @@ void main() {
   test('getLaunch, returns data from api', () async {
     const id = '5eb87cd9ffd86e000604b32a';
     // arrange
-    dio.interceptors.add(LoggingInterceptor(createLogger(level: Logger.level)));
+    dio.interceptors.add(LoggingInterceptor());
 
     // act
     final data = await repository.getLaunch(id);

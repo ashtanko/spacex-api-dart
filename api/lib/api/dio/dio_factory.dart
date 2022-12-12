@@ -1,9 +1,7 @@
 import 'package:api/api/constants.dart';
 import 'package:api/api/dio/interceptors/logging_interceptor.dart';
-import 'package:api/utils/logger.dart';
 import 'package:dio/adapter.dart';
 import 'package:dio/dio.dart';
-import 'package:logger/logger.dart';
 
 class DioFactory {
   const DioFactory(
@@ -33,9 +31,7 @@ class DioFactory {
 Dio createDio() {
   final dioFactory = DioFactory(
     baseUrl,
-    LoggingInterceptor(
-      createLogger(level: Level.debug),
-    ),
+    LoggingInterceptor(),
   );
   return dioFactory.create();
 }
