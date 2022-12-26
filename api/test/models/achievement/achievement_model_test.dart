@@ -17,9 +17,18 @@ void main() {
     id: '5f6fb2cfdcfdf403df37971e',
   );
 
+  const a1 = AchievementModel(id: '0');
+  const a2 = AchievementModel(id: '0');
+  const a3 = AchievementModel(id: '1');
+
   group('value comparison', () {
     test('should be equal', () {
-      expect(const AchievementModel(id: '0'), const AchievementModel(id: '0'));
+      expect(a1, a2);
+      assert(a1 == a2);
+    });
+
+    test('should not be equal', () {
+      assert(a1 != a3);
     });
   });
 
@@ -39,24 +48,6 @@ void main() {
         expect(result, equals(achievementModel));
       },
     );
-
-    test('is correctly generated from a JSON', () {
-      expect(
-        AchievementModel.fromJson(const {
-          'links': {
-            'article':
-                'http://www.spacex.com/news/2013/02/11/flight-4-launch-update-0'
-          },
-          'title': 'Falcon reaches Earth orbit',
-          'event_date_utc': '2008-09-28T23:15:00Z',
-          'event_date_unix': 1222643700,
-          'details':
-              'Falcon 1 becomes the first privately developed liquid-fuel rocket to reach Earth orbit.',
-          'id': '5f6fb2cfdcfdf403df37971e'
-        }),
-        achievementModel,
-      );
-    });
   });
 
   group('to json', () {
