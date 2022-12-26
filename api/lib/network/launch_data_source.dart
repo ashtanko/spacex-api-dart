@@ -2,6 +2,8 @@ import 'package:api/api/launch/launch_api.dart';
 import 'package:api/models/launch/launch_model.dart';
 import 'package:api/models/query/query.dart' as q;
 import 'package:api/models/response/api_paginated_list.dart';
+import 'package:api/utils/exception.dart';
+import 'package:dio/dio.dart';
 
 class LaunchDataSource {
   LaunchDataSource(this._api);
@@ -9,38 +11,70 @@ class LaunchDataSource {
   final LaunchApi _api;
 
   Future<List<LaunchSimpleModel>> getAllLaunches() async {
-    return _api.getAllLaunches();
+    try {
+      return _api.getAllLaunches();
+    } on DioError catch (_) {
+      throw ServerException();
+    }
   }
 
   Future<List<LaunchSimpleModel>> getUpcomingLaunches() {
-    return _api.getUpcomingLaunches();
+    try {
+      return _api.getUpcomingLaunches();
+    } on DioError catch (_) {
+      throw ServerException();
+    }
   }
 
   Future<List<LaunchSimpleModel>> getPastLaunches() async {
-    return _api.getPastLaunches();
+    try {
+      return _api.getPastLaunches();
+    } on DioError catch (_) {
+      throw ServerException();
+    }
   }
 
   Future<LaunchSimpleModel> getLatestLaunch() async {
-    return _api.getLatestLaunch();
+    try {
+      return _api.getLatestLaunch();
+    } on DioError catch (_) {
+      throw ServerException();
+    }
   }
 
   Future<LaunchSimpleModel> getNextLaunch() async {
-    return _api.getNextLaunch();
+    try {
+      return _api.getNextLaunch();
+    } on DioError catch (_) {
+      throw ServerException();
+    }
   }
 
   Future<LaunchModel> getLaunch(String id) async {
-    return _api.getLaunch(id);
+    try {
+      return _api.getLaunch(id);
+    } on DioError catch (_) {
+      throw ServerException();
+    }
   }
 
   Future<ApiPaginatedList<LaunchSimpleModel>> queryLaunches(
     q.Query query,
   ) async {
-    return _api.queryLaunches(query);
+    try {
+      return _api.queryLaunches(query);
+    } on DioError catch (_) {
+      throw ServerException();
+    }
   }
 
   Future<ApiPaginatedList<FullLaunchModel>> queryFullLaunches(
     q.Query query,
   ) async {
-    return _api.queryFullLaunches(query);
+    try {
+      return _api.queryFullLaunches(query);
+    } on DioError catch (_) {
+      throw ServerException();
+    }
   }
 }

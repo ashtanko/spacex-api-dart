@@ -3,10 +3,12 @@ import 'package:api/models/capsule/capsule_model.dart';
 import 'package:api/models/query/query.dart';
 import 'package:api/models/response/api_paginated_list.dart';
 import 'package:api/network/capsules_data_source.dart';
+import 'package:api/utils/exception.dart';
 import 'package:mocktail/mocktail.dart';
 import 'package:test/test.dart';
 
 import '../../fixtures_reader.dart';
+import '../../helpers/mock_dio_exception.dart';
 
 class MockCapsulesApi extends Mock implements CapsulesApi {}
 
@@ -117,6 +119,78 @@ void main() {
         // assert
         verify(() => capsulesApi.queryFullCapsules(query));
         verifyNoMoreInteractions(capsulesApi);
+      },
+    );
+  });
+
+  group('exceptions', () {
+    test(
+      'getAllCapsules, should throw a ServerException when the response code is 404 or other (unsuccessful)',
+      () async {
+        // arrange
+        when(() => capsulesApi.getAllCapsules()).thenThrow(
+          dioException,
+        );
+        // act
+        final call = dataSource.getAllCapsules();
+        // assert
+        expect(
+          () => call,
+          throwsA(const TypeMatcher<ServerException>()),
+        );
+      },
+    );
+
+    test(
+      'getCapsule should throw a ServerException when the response code is 404 or other (unsuccessful)',
+      () async {
+        // arrange
+        when(() => capsulesApi.getCapsule('id')).thenThrow(
+          dioException,
+        );
+        // act
+        final call = dataSource.getCapsule('id');
+        // assert
+        expect(
+          () => call,
+          throwsA(const TypeMatcher<ServerException>()),
+        );
+      },
+    );
+
+    test(
+      'queryCapsules, should throw a ServerException when the response code is 404 or other (unsuccessful)',
+      () async {
+        const q = Query();
+        // arrange
+        when(() => capsulesApi.queryCapsules(q)).thenThrow(
+          dioException,
+        );
+        // act
+        final call = dataSource.queryCapsules(q);
+        // assert
+        expect(
+          () => call,
+          throwsA(const TypeMatcher<ServerException>()),
+        );
+      },
+    );
+
+    test(
+      'queryFullCapsules, should throw a ServerException when the response code is 404 or other (unsuccessful)',
+      () async {
+        const q = Query();
+        // arrange
+        when(() => capsulesApi.queryFullCapsules(q)).thenThrow(
+          dioException,
+        );
+        // act
+        final call = dataSource.queryFullCapsules(q);
+        // assert
+        expect(
+          () => call,
+          throwsA(const TypeMatcher<ServerException>()),
+        );
       },
     );
   });

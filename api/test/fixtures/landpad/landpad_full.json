@@ -1,0 +1,1758 @@
+{
+  "images": {
+    "large": [
+      "https://i.imgur.com/KHBk6jO.png"
+    ]
+  },
+  "name": "LZ-1",
+  "full_name": "Landing Zone 1",
+  "status": "active",
+  "type": "RTLS",
+  "locality": "Cape Canaveral",
+  "region": "Florida",
+  "latitude": 28.485833,
+  "longitude": -80.544444,
+  "landing_attempts": 21,
+  "landing_successes": 20,
+  "wikipedia": "https://en.wikipedia.org/wiki/Landing_Zones_1_and_2",
+  "details": "SpaceX's first east coast landing pad is Landing Zone 1, where the historic first Falcon 9 landing occurred in December 2015. LC-13 was originally used as a launch pad for early Atlas missiles and rockets from Lockheed Martin. LC-1 was later expanded to include Landing Zone 2 for side booster RTLS Falcon Heavy missions, and it was first used in February 2018 for that purpose.",
+  "launches": [
+    {
+      "fairings": {
+        "reused": false,
+        "recovery_attempt": false,
+        "recovered": false,
+        "ships": []
+      },
+      "links": {
+        "patch": {
+          "small": "https://images2.imgbox.com/6a/7e/J7IQfBqg_o.png",
+          "large": "https://images2.imgbox.com/99/d4/0aIlpFpw_o.png"
+        },
+        "reddit": {
+          "campaign": null,
+          "launch": "https://www.reddit.com/r/spacex/comments/3xgxh5",
+          "media": "https://www.reddit.com/r/spacex/comments/3xm83h/",
+          "recovery": null
+        },
+        "flickr": {
+          "small": [],
+          "original": [
+            "https://farm2.staticflickr.com/1648/23827554109_837b21739e_o.jpg",
+            "https://farm1.staticflickr.com/597/23802553412_d41e4dcc64_o.jpg",
+            "https://farm6.staticflickr.com/5806/23802550622_9ff8c90098_o.jpg",
+            "https://farm1.staticflickr.com/571/23604164970_2a1a2366e4_o.jpg",
+            "https://farm6.staticflickr.com/5773/23271687254_5e64d726ba_o.jpg",
+            "https://farm6.staticflickr.com/5766/23526044959_5bfe74bc88_o.jpg",
+            "https://farm6.staticflickr.com/5723/23785609832_83038751d1_o.jpg",
+            "https://farm1.staticflickr.com/715/23833499336_d3fde6a25a_o.jpg"
+          ]
+        },
+        "presskit": "http://www.spacex.com/sites/spacex/files/spacex_orbcomm_press_kit_final2.pdf",
+        "webcast": "https://www.youtube.com/watch?v=O5bTbVbe4e4",
+        "youtube_id": "O5bTbVbe4e4",
+        "article": "https://spaceflightnow.com/2015/12/22/round-trip-rocket-flight-gives-spacex-a-trifecta-of-successes/",
+        "wikipedia": "https://en.wikipedia.org/wiki/Falcon_9_flight_20"
+      },
+      "static_fire_date_utc": "2015-12-19T00:09:00.000Z",
+      "static_fire_date_unix": 1450483740,
+      "net": false,
+      "window": 0,
+      "rocket": "5e9d0d95eda69973a809d1ec",
+      "success": true,
+      "failures": [],
+      "details": "Total payload mass was 2,034 kg (4,484 lb) : 11 satellites weighing 172 kg each, plus a 142-kg mass simulator. This was the first launch of the upgraded v1.1 variant (later called Falcon 9 Full Thrust), with a 30 percent power increase. Orbcomm had originally agreed to be the third flight of the enhanced-thrust rocket, but the change to the maiden flight position was announced in October 2015. SpaceX received a permit from the FAA to land the booster on solid ground at Cape Canaveral, and succeeded.",
+      "crew": [],
+      "ships": [],
+      "capsules": [],
+      "payloads": [
+        "5eb0e4beb6c3bb0006eeb1fd"
+      ],
+      "launchpad": "5e9e4501f509094ba4566f84",
+      "flight_number": 25,
+      "name": "OG-2 Mission 2",
+      "date_utc": "2015-12-22T01:29:00.000Z",
+      "date_unix": 1450747740,
+      "date_local": "2015-12-22T21:29:00-04:00",
+      "date_precision": "hour",
+      "upcoming": false,
+      "cores": [
+        {
+          "core": "5e9e28a1f3591867753b263b",
+          "flight": 1,
+          "gridfins": true,
+          "legs": true,
+          "reused": false,
+          "landing_attempt": true,
+          "landing_success": true,
+          "landing_type": "RTLS",
+          "landpad": "5e9e3032383ecb267a34e7c7"
+        }
+      ],
+      "auto_update": true,
+      "tbd": false,
+      "launch_library_id": null,
+      "id": "5eb87cefffd86e000604b342"
+    },
+    {
+      "fairings": null,
+      "links": {
+        "patch": {
+          "small": "https://images2.imgbox.com/bb/0d/aLsm9QDC_o.png",
+          "large": "https://images2.imgbox.com/56/af/b7fNzZGo_o.png"
+        },
+        "reddit": {
+          "campaign": "https://www.reddit.com/r/spacex/comments/4ksedl",
+          "launch": "https://www.reddit.com/r/spacex/comments/4t2umd/",
+          "media": "https://www.reddit.com/r/spacex/comments/4tayth",
+          "recovery": "https://www.reddit.com/r/spacex/comments/4znsvo"
+        },
+        "flickr": {
+          "small": [],
+          "original": [
+            "https://farm9.staticflickr.com/8819/27776240293_fcbf8c4a0a_o.jpg",
+            "https://farm8.staticflickr.com/7720/27776237513_038971797c_o.jpg",
+            "https://farm8.staticflickr.com/7594/27776235133_d794ce01f4_o.jpg",
+            "https://farm8.staticflickr.com/7759/27776229243_a0674e590f_o.jpg",
+            "https://farm8.staticflickr.com/7512/27776228443_6652c6baea_o.jpg",
+            "https://farm9.staticflickr.com/8038/27776218453_34112abbc1_o.jpg",
+            "https://farm8.staticflickr.com/7636/27776215913_3f9f1b05df_o.jpg",
+            "https://farm8.staticflickr.com/7740/28358960896_9785456101_o.jpg",
+            "https://farm8.staticflickr.com/7488/27776206663_262526ba5f_o.jpg",
+            "https://farm8.staticflickr.com/7656/28358955546_ce55d65e16_o.jpg",
+            "https://farm8.staticflickr.com/7467/27776204693_68b4ed82c9_o.jpg",
+            "https://farm8.staticflickr.com/7693/28348649546_0a54b1aa44_o.jpg",
+            "https://farm8.staticflickr.com/7540/28291786662_5e2e874576_o.jpg"
+          ]
+        },
+        "presskit": "https://drive.google.com/open?id=0BwA3a65ef1OvM0JpSXdDUUJMRVk",
+        "webcast": "https://www.youtube.com/watch?v=ThIdCuSsJh8",
+        "youtube_id": "ThIdCuSsJh8",
+        "article": "https://spaceflightnow.com/2016/07/18/spacex-sends-supplies-to-space-station-lands-another-falcon-rocket/",
+        "wikipedia": "https://en.wikipedia.org/wiki/SpaceX_CRS-9"
+      },
+      "static_fire_date_utc": "2016-07-16T02:31:47.000Z",
+      "static_fire_date_unix": 1468636307,
+      "net": false,
+      "window": 0,
+      "rocket": "5e9d0d95eda69973a809d1ec",
+      "success": true,
+      "failures": [],
+      "details": "Among other cargo, an International Docking Adapter (IDA-2) was carried to the ISS. This mission had a successful first-stage landing at Cape Canaveral.*Including the reusable Dragon Capsule, total payload to orbit was 6457 kg.",
+      "crew": [],
+      "ships": [
+        "5ea6ed2e080df4000697c906",
+        "5ea6ed2f080df4000697c90b",
+        "5ea6ed2f080df4000697c90c",
+        "5ea6ed30080df4000697c912"
+      ],
+      "capsules": [
+        "5e9e2c5cf359183bb73b266e"
+      ],
+      "payloads": [
+        "5eb0e4c0b6c3bb0006eeb205"
+      ],
+      "launchpad": "5e9e4501f509094ba4566f84",
+      "flight_number": 32,
+      "name": "CRS-9",
+      "date_utc": "2016-07-18T04:45:00.000Z",
+      "date_unix": 1468817100,
+      "date_local": "2016-07-18T00:45:00-04:00",
+      "date_precision": "hour",
+      "upcoming": false,
+      "cores": [
+        {
+          "core": "5e9e28a2f359187f273b2642",
+          "flight": 1,
+          "gridfins": true,
+          "legs": true,
+          "reused": false,
+          "landing_attempt": true,
+          "landing_success": true,
+          "landing_type": "RTLS",
+          "landpad": "5e9e3032383ecb267a34e7c7"
+        }
+      ],
+      "auto_update": true,
+      "tbd": false,
+      "launch_library_id": null,
+      "id": "5eb87cf9ffd86e000604b349"
+    },
+    {
+      "fairings": null,
+      "links": {
+        "patch": {
+          "small": "https://images2.imgbox.com/11/eb/qqrhHFhv_o.png",
+          "large": "https://images2.imgbox.com/ea/43/D4tA0WaM_o.png"
+        },
+        "reddit": {
+          "campaign": "https://www.reddit.com/r/spacex/comments/5n2eqx",
+          "launch": "https://www.reddit.com/r/spacex/comments/5uw4bh",
+          "media": "https://www.reddit.com/r/spacex/comments/5uoy8o",
+          "recovery": "https://www.reddit.com/r/spacex/comments/609aq4"
+        },
+        "flickr": {
+          "small": [],
+          "original": [
+            "https://farm3.staticflickr.com/2815/32761844973_d2e8d76e9c_o.jpg",
+            "https://farm4.staticflickr.com/3878/32761843663_8e366494f4_o.jpg",
+            "https://farm3.staticflickr.com/2790/32852846842_6f1f7b26b9_o.jpg",
+            "https://farm3.staticflickr.com/2295/32852845662_e7ae0daf4a_o.jpg",
+            "https://farm4.staticflickr.com/3888/33000639155_2a6e2bb23d_o.jpg",
+            "https://farm1.staticflickr.com/405/33000638185_b4ec7c7b93_o.jpg",
+            "https://farm1.staticflickr.com/574/32874779241_9f463de901_o.jpg",
+            "https://farm4.staticflickr.com/3710/32153433074_96337a54db_o.jpg",
+            "https://farm1.staticflickr.com/327/32153432924_09dd1482d8_o.jpg",
+            "https://farm3.staticflickr.com/2881/32183025803_36bf976b9e_o.jpg",
+            "https://farm3.staticflickr.com/2362/32183025493_2a37b4e22c_o.jpg",
+            "https://farm1.staticflickr.com/504/32178458813_ff47f61bb9_o.jpg",
+            "https://farm1.staticflickr.com/265/32176806823_879ccc5da0_o.jpg",
+            "https://farm1.staticflickr.com/401/32866357531_69c6d289ed_o.jpg",
+            "https://farm3.staticflickr.com/2105/32945170805_553d45ca56_o.jpg",
+            "https://farm4.staticflickr.com/3865/32945170225_58129f00dc_o.jpg"
+          ]
+        },
+        "presskit": "http://www.spacex.com/sites/spacex/files/crs10presskitfinal.pdf",
+        "webcast": "https://www.youtube.com/watch?v=giNhaEzv_PI",
+        "youtube_id": "giNhaEzv_PI",
+        "article": "https://spaceflightnow.com/2017/02/19/historic-launch-pad-back-in-service-with-thundering-blastoff-by-spacex/",
+        "wikipedia": "https://en.wikipedia.org/wiki/SpaceX_CRS-10"
+      },
+      "static_fire_date_utc": "2017-02-12T21:30:00.000Z",
+      "static_fire_date_unix": 1486935000,
+      "net": false,
+      "window": 0,
+      "rocket": "5e9d0d95eda69973a809d1ec",
+      "success": true,
+      "failures": [],
+      "details": "First Falcon 9 flight from the historic LC-39A launchpad at Kennedy Space Center, carrying supplies and materials to support dozens of science and research investigations scheduled during ISS Expeditions 50 and 51. The first stage returned to launch site and landed at LZ-1.",
+      "crew": [],
+      "ships": [
+        "5ea6ed30080df4000697c912"
+      ],
+      "capsules": [
+        "5e9e2c5cf359185d753b266f"
+      ],
+      "payloads": [
+        "5eb0e4c3b6c3bb0006eeb209"
+      ],
+      "launchpad": "5e9e4502f509094188566f88",
+      "flight_number": 36,
+      "name": "CRS-10",
+      "date_utc": "2017-02-19T14:39:00.000Z",
+      "date_unix": 1487515140,
+      "date_local": "2017-02-19T10:39:00-04:00",
+      "date_precision": "hour",
+      "upcoming": false,
+      "cores": [
+        {
+          "core": "5e9e28a3f3591829dc3b2646",
+          "flight": 1,
+          "gridfins": true,
+          "legs": true,
+          "reused": false,
+          "landing_attempt": true,
+          "landing_success": true,
+          "landing_type": "RTLS",
+          "landpad": "5e9e3032383ecb267a34e7c7"
+        }
+      ],
+      "auto_update": true,
+      "tbd": false,
+      "launch_library_id": null,
+      "id": "5eb87cfeffd86e000604b34d"
+    },
+    {
+      "fairings": {
+        "reused": false,
+        "recovery_attempt": false,
+        "recovered": false,
+        "ships": []
+      },
+      "links": {
+        "patch": {
+          "small": "https://images2.imgbox.com/e5/2d/IZB4g6Ra_o.png",
+          "large": "https://images2.imgbox.com/9d/76/kMetaHqz_o.png"
+        },
+        "reddit": {
+          "campaign": "https://www.reddit.com/r/spacex/comments/601ykx",
+          "launch": "https://www.reddit.com/r/spacex/comments/68bn8y/",
+          "media": "https://www.reddit.com/r/spacex/comments/68bpii",
+          "recovery": null
+        },
+        "flickr": {
+          "small": [],
+          "original": [
+            "https://farm3.staticflickr.com/2922/33578359423_4169ac8f98_o.jpg",
+            "https://farm3.staticflickr.com/2900/33578357343_85c247ebce_o.jpg",
+            "https://farm5.staticflickr.com/4166/34006001860_8c45f28e69_o.jpg",
+            "https://farm5.staticflickr.com/4166/34005999880_77684dba4b_o.jpg",
+            "https://farm3.staticflickr.com/2934/34005998140_c77076b6fb_o.jpg",
+            "https://farm5.staticflickr.com/4191/34005996220_fe9e4342d3_o.jpg",
+            "https://farm3.staticflickr.com/2883/33575654563_699c544776_o.jpg",
+            "https://farm3.staticflickr.com/2902/33575652913_0dece34db4_o.jpg",
+            "https://farm5.staticflickr.com/4163/33575651063_24e05826c5_o.jpg",
+            "https://farm3.staticflickr.com/2876/33994851620_fabd14770f_o.jpg",
+            "https://farm3.staticflickr.com/2832/33973172140_b370b79c51_o.jpg",
+            "https://farm3.staticflickr.com/2874/34357262105_11b417bea2_o.jpg",
+            "https://farm5.staticflickr.com/4158/34357260545_16870a94ba_o.jpg"
+          ]
+        },
+        "presskit": "http://www.spacex.com/sites/spacex/files/nrol76presskit.pdf",
+        "webcast": "https://www.youtube.com/watch?v=EzQpkQ1etdA",
+        "youtube_id": "EzQpkQ1etdA",
+        "article": "https://techcrunch.com/2017/05/01/spacex-successfully-launches-nrol-76-u-s-military-satellite/",
+        "wikipedia": "https://en.wikipedia.org/wiki/List_of_NRO_launches"
+      },
+      "static_fire_date_utc": "2017-04-25T19:02:00.000Z",
+      "static_fire_date_unix": 1493146920,
+      "net": false,
+      "window": 7200,
+      "rocket": "5e9d0d95eda69973a809d1ec",
+      "success": true,
+      "failures": [],
+      "details": "First launch under SpaceX's certification for national security space missions, which allows SpaceX to contract launch services for classified payloads. Second-stage speed and altitude telemetry were omitted from the launch webcast, which displayed first-stage telemetry instead, with continuous tracking of the booster from liftoff to landing for the first time.",
+      "crew": [],
+      "ships": [
+        "5ea6ed2f080df4000697c90c"
+      ],
+      "capsules": [],
+      "payloads": [
+        "5eb0e4c3b6c3bb0006eeb20c"
+      ],
+      "launchpad": "5e9e4502f509094188566f88",
+      "flight_number": 39,
+      "name": "NROL-76",
+      "date_utc": "2017-05-01T11:15:00.000Z",
+      "date_unix": 1493637300,
+      "date_local": "2017-05-01T07:15:00-04:00",
+      "date_precision": "hour",
+      "upcoming": false,
+      "cores": [
+        {
+          "core": "5e9e28a3f3591811f83b2648",
+          "flight": 1,
+          "gridfins": true,
+          "legs": true,
+          "reused": false,
+          "landing_attempt": true,
+          "landing_success": true,
+          "landing_type": "RTLS",
+          "landpad": "5e9e3032383ecb267a34e7c7"
+        }
+      ],
+      "auto_update": true,
+      "tbd": false,
+      "launch_library_id": null,
+      "id": "5eb87d01ffd86e000604b350"
+    },
+    {
+      "fairings": null,
+      "links": {
+        "patch": {
+          "small": "https://images2.imgbox.com/54/45/VoihQAY3_o.png",
+          "large": "https://images2.imgbox.com/2d/39/EAkUxxPk_o.png"
+        },
+        "reddit": {
+          "campaign": "https://www.reddit.com/r/spacex/comments/68ul58/",
+          "launch": "https://www.reddit.com/r/spacex/comments/6ektkt/",
+          "media": "https://www.reddit.com/r/spacex/comments/6emlzr/",
+          "recovery": null
+        },
+        "flickr": {
+          "small": [],
+          "original": [
+            "https://farm5.staticflickr.com/4210/34696326760_cee662ef1f_o.jpg",
+            "https://farm5.staticflickr.com/4279/34239858024_64795724c9_o.jpg",
+            "https://farm5.staticflickr.com/4250/35043398436_3ceaa0098a_o.jpg",
+            "https://farm5.staticflickr.com/4223/34272083563_f52e5bfffe_o.jpg",
+            "https://farm5.staticflickr.com/4219/34918571502_7cf66854f7_o.jpg",
+            "https://farm5.staticflickr.com/4252/34918568732_4efe0885de_o.jpg",
+            "https://farm5.staticflickr.com/4264/34272065153_cfd8899f3e_o.jpg",
+            "https://farm5.staticflickr.com/4284/34948230531_e76b7560c9_o.jpg",
+            "https://farm5.staticflickr.com/4280/35078830875_afbd41c675_o.jpg",
+            "https://farm5.staticflickr.com/4280/34268361083_71fc70ff1a_o.jpg",
+            "https://farm5.staticflickr.com/4199/35038651646_93d0339269_o.jpg",
+            "https://farm5.staticflickr.com/4227/34223076793_4abe7e74d6_o.jpg"
+          ]
+        },
+        "presskit": "http://www.spacex.com/sites/spacex/files/crs11presskit.pdf",
+        "webcast": "https://www.youtube.com/watch?v=JuZBOUMsYws",
+        "youtube_id": "JuZBOUMsYws",
+        "article": "https://spaceflightnow.com/2017/06/03/reused-dragon-cargo-capsule-launched-on-journey-to-space-station/",
+        "wikipedia": "https://en.wikipedia.org/wiki/SpaceX_CRS-11"
+      },
+      "static_fire_date_utc": "2017-05-28T16:00:00.000Z",
+      "static_fire_date_unix": 1495987200,
+      "net": false,
+      "window": 0,
+      "rocket": "5e9d0d95eda69973a809d1ec",
+      "success": true,
+      "failures": [],
+      "details": "This mission delivered the Neutron Star Interior Composition Explorer (NICER) to the ISS, along with the MUSES Earth imaging platform and ROSA solar array. For the first time, this mission launched a refurbished Dragon capsule, serial number C106 which first flew in September 2014 on the CRS-4 mission. Originally scheduled to launch on June 1, but was scrubbed due to inclement weather.",
+      "crew": [],
+      "ships": [
+        "5ea6ed30080df4000697c912"
+      ],
+      "capsules": [
+        "5e9e2c5bf3591880643b2669"
+      ],
+      "payloads": [
+        "5eb0e4c4b6c3bb0006eeb20e"
+      ],
+      "launchpad": "5e9e4502f509094188566f88",
+      "flight_number": 41,
+      "name": "CRS-11",
+      "date_utc": "2017-06-03T21:07:00.000Z",
+      "date_unix": 1496524020,
+      "date_local": "2017-06-03T17:07:00-04:00",
+      "date_precision": "hour",
+      "upcoming": false,
+      "cores": [
+        {
+          "core": "5e9e28a3f3591856803b264a",
+          "flight": 1,
+          "gridfins": true,
+          "legs": true,
+          "reused": false,
+          "landing_attempt": true,
+          "landing_success": true,
+          "landing_type": "RTLS",
+          "landpad": "5e9e3032383ecb267a34e7c7"
+        }
+      ],
+      "auto_update": true,
+      "tbd": false,
+      "launch_library_id": null,
+      "id": "5eb87d03ffd86e000604b352"
+    },
+    {
+      "fairings": null,
+      "links": {
+        "patch": {
+          "small": "https://images2.imgbox.com/ee/85/dtsbOs0E_o.png",
+          "large": "https://images2.imgbox.com/9c/f7/BNIV5kBE_o.png"
+        },
+        "reddit": {
+          "campaign": "https://www.reddit.com/r/spacex/comments/6mrga2/crs12_launch_campaign_thread/",
+          "launch": "https://www.reddit.com/r/spacex/comments/6tfcio/welcome_to_the_rspacex_crs12_official_launch/",
+          "media": "https://www.reddit.com/r/spacex/comments/6th2nf/rspacex_crs12_media_thread_videos_images_gifs/",
+          "recovery": null
+        },
+        "flickr": {
+          "small": [],
+          "original": [
+            "https://farm5.staticflickr.com/4352/36438808381_733603843d_o.jpg",
+            "https://farm5.staticflickr.com/4434/35760634184_f75457493b_o.jpg",
+            "https://farm5.staticflickr.com/4418/35741466074_327e9d0a80_o.jpg",
+            "https://farm5.staticflickr.com/4414/35741465934_db82541cf3_o.jpg",
+            "https://farm5.staticflickr.com/4384/35741465854_e264864537_o.jpg",
+            "https://farm5.staticflickr.com/4333/35741465714_d0a8800533_o.jpg",
+            "https://farm5.staticflickr.com/4397/35741465464_1d49cc1cae_o.jpg",
+            "https://farm5.staticflickr.com/4354/35762350653_d94b2b5b07_o.jpg",
+            "https://farm5.staticflickr.com/4353/36571921725_2a0be4ec58_o.jpg"
+          ]
+        },
+        "presskit": "http://www.spacex.com/sites/spacex/files/crs12presskit.pdf",
+        "webcast": "https://www.youtube.com/watch?v=vLxWsYx8dbo",
+        "youtube_id": "vLxWsYx8dbo",
+        "article": "https://spaceflightnow.com/2017/08/17/photos-falcon-9-rocket-soars-into-space-lands-back-at-cape-canaveral/",
+        "wikipedia": "https://en.wikipedia.org/wiki/SpaceX_CRS-12"
+      },
+      "static_fire_date_utc": "2017-08-10T13:10:00.000Z",
+      "static_fire_date_unix": 1502370600,
+      "net": false,
+      "window": 0,
+      "rocket": "5e9d0d95eda69973a809d1ec",
+      "success": true,
+      "failures": [],
+      "details": "Dragon is expected to carry 2,349 kg (5,179 lb) of pressurized mass and 961 kg (2,119 lb) unpressurized. The external payload manifested for this flight is the CREAM cosmic-ray detector. First flight of the Falcon 9 Block 4 upgrade. Last flight of a newly-built Dragon capsule; further missions will use refurbished spacecraft.",
+      "crew": [],
+      "ships": [
+        "5ea6ed30080df4000697c912"
+      ],
+      "capsules": [
+        "5e9e2c5cf3591869b63b2670"
+      ],
+      "payloads": [
+        "5eb0e4c4b6c3bb0006eeb212"
+      ],
+      "launchpad": "5e9e4502f509094188566f88",
+      "flight_number": 45,
+      "name": "CRS-12",
+      "date_utc": "2017-08-14T16:31:00.000Z",
+      "date_unix": 1502728260,
+      "date_local": "2017-08-14T12:31:00-04:00",
+      "date_precision": "hour",
+      "upcoming": false,
+      "cores": [
+        {
+          "core": "5e9e28a4f3591884ee3b264d",
+          "flight": 1,
+          "gridfins": true,
+          "legs": true,
+          "reused": false,
+          "landing_attempt": true,
+          "landing_success": true,
+          "landing_type": "RTLS",
+          "landpad": "5e9e3032383ecb267a34e7c7"
+        }
+      ],
+      "auto_update": true,
+      "tbd": false,
+      "launch_library_id": null,
+      "id": "5eb87d07ffd86e000604b356"
+    },
+    {
+      "fairings": {
+        "reused": false,
+        "recovery_attempt": false,
+        "recovered": false,
+        "ships": []
+      },
+      "links": {
+        "patch": {
+          "small": "https://images2.imgbox.com/12/7c/p8btH0CD_o.png",
+          "large": "https://images2.imgbox.com/32/61/cX8ZlEJQ_o.png"
+        },
+        "reddit": {
+          "campaign": "https://www.reddit.com/r/spacex/comments/6u6q1t/x37b_otv5_launch_campaign_thread/",
+          "launch": "https://www.reddit.com/r/spacex/comments/6ygmf1/rspacex_x37b_otv5_official_launch_discussion/",
+          "media": "https://www.reddit.com/r/spacex/comments/6yih4g/rspacex_x37b_otv5_media_thread_videos_images_gifs/",
+          "recovery": null
+        },
+        "flickr": {
+          "small": [],
+          "original": [
+            "https://farm5.staticflickr.com/4411/37087809715_08a6d9904d_o.jpg",
+            "https://farm5.staticflickr.com/4384/37087808315_4dc9575d1b_o.jpg",
+            "https://farm5.staticflickr.com/4363/36251815974_8b996dbbfb_o.jpg",
+            "https://farm5.staticflickr.com/4374/36251814644_1a469f63ee_o.jpg",
+            "https://farm5.staticflickr.com/4388/36251812554_006501315f_o.jpg",
+            "https://farm5.staticflickr.com/4355/36250895284_8c24cb4232_o.jpg",
+            "https://farm5.staticflickr.com/4342/36689886890_99709e6934_o.jpg",
+            "https://farm5.staticflickr.com/4364/36689885100_c3c427c6bf_o.jpg"
+          ]
+        },
+        "presskit": "https://www.spacex.com/sites/spacex/files/otv5_presskit.pdf",
+        "webcast": "https://www.youtube.com/watch?v=9M6Zvi-fFv4",
+        "youtube_id": "9M6Zvi-fFv4",
+        "article": "https://spaceflightnow.com/2017/09/07/spacex-beats-hurricane-with-smooth-launch-of-militarys-x-37b-spaceplane/",
+        "wikipedia": "https://en.wikipedia.org/wiki/Boeing_X-37"
+      },
+      "static_fire_date_utc": "2017-08-31T20:30:00.000Z",
+      "static_fire_date_unix": 1504211400,
+      "net": false,
+      "window": 18300,
+      "rocket": "5e9d0d95eda69973a809d1ec",
+      "success": true,
+      "failures": [],
+      "details": "Notable because Boeing is the primary contractor of the X-37B, which has until now been launched by ULA, a SpaceX competitor and Boeing partnership. Second flight of the Falcon 9 Block 4 upgrade.",
+      "crew": [],
+      "ships": [
+        "5ea6ed2e080df4000697c906",
+        "5ea6ed2f080df4000697c90b"
+      ],
+      "capsules": [],
+      "payloads": [
+        "5eb0e4c5b6c3bb0006eeb214"
+      ],
+      "launchpad": "5e9e4502f509094188566f88",
+      "flight_number": 47,
+      "name": "Boeing X-37B OTV-5",
+      "date_utc": "2017-09-07T13:50:00.000Z",
+      "date_unix": 1504792200,
+      "date_local": "2017-09-07T09:50:00-04:00",
+      "date_precision": "hour",
+      "upcoming": false,
+      "cores": [
+        {
+          "core": "5e9e28a4f3591845123b264f",
+          "flight": 1,
+          "gridfins": true,
+          "legs": true,
+          "reused": false,
+          "landing_attempt": true,
+          "landing_success": true,
+          "landing_type": "RTLS",
+          "landpad": "5e9e3032383ecb267a34e7c7"
+        }
+      ],
+      "auto_update": true,
+      "tbd": false,
+      "launch_library_id": null,
+      "id": "5eb87d09ffd86e000604b358"
+    },
+    {
+      "fairings": null,
+      "links": {
+        "patch": {
+          "small": "https://images2.imgbox.com/84/42/Ejb9KhGR_o.png",
+          "large": "https://images2.imgbox.com/54/4f/CeMcU6RG_o.png"
+        },
+        "reddit": {
+          "campaign": "https://www.reddit.com/r/spacex/comments/7bxg5a/crs13_launch_campaign_thread/",
+          "launch": "https://www.reddit.com/r/spacex/comments/7j725w/rspacex_crs13_official_launch_discussion_updates/",
+          "media": "https://www.reddit.com/r/spacex/comments/7j6oxz/rspacex_crs13_media_thread_videos_images_gifs/",
+          "recovery": null
+        },
+        "flickr": {
+          "small": [],
+          "original": [
+            "https://farm5.staticflickr.com/4591/38372264594_8140bd943d_o.png",
+            "https://farm5.staticflickr.com/4546/39051469552_13703e6b2e_o.jpg",
+            "https://farm5.staticflickr.com/4682/39051469662_55c55150c0_o.jpg",
+            "https://farm5.staticflickr.com/4565/25215551218_2597838c1a_o.jpg",
+            "https://farm5.staticflickr.com/4680/39051469812_b6f802fc9d_o.jpg",
+            "https://farm5.staticflickr.com/4517/27304331429_59b9d6c1d4_o.jpg"
+          ]
+        },
+        "presskit": "http://www.spacex.com/sites/spacex/files/crs13presskit12_11.pdf",
+        "webcast": "https://www.youtube.com/watch?v=OPHbqY9LHCs",
+        "youtube_id": "OPHbqY9LHCs",
+        "article": "https://spaceflightnow.com/2017/12/15/spacexs-50th-falcon-rocket-launch-kicks-off-station-resupply-mission/",
+        "wikipedia": "https://en.wikipedia.org/wiki/SpaceX_CRS-13"
+      },
+      "static_fire_date_utc": "2017-12-06T20:00:00.000Z",
+      "static_fire_date_unix": 1512590400,
+      "net": false,
+      "window": 0,
+      "rocket": "5e9d0d95eda69973a809d1ec",
+      "success": true,
+      "failures": [],
+      "details": "Will reuse the Dragon capsule previously flown on CRS-6 and will reuse the booster from CRS-11.",
+      "crew": [],
+      "ships": [
+        "5ea6ed30080df4000697c912"
+      ],
+      "capsules": [
+        "5e9e2c5cf359188bfb3b266b"
+      ],
+      "payloads": [
+        "5eb0e4c5b6c3bb0006eeb218"
+      ],
+      "launchpad": "5e9e4501f509094ba4566f84",
+      "flight_number": 51,
+      "name": "CRS-13",
+      "date_utc": "2017-12-15T15:36:00.000Z",
+      "date_unix": 1513352160,
+      "date_local": "2017-12-15T10:36:00-05:00",
+      "date_precision": "hour",
+      "upcoming": false,
+      "cores": [
+        {
+          "core": "5e9e28a3f3591856803b264a",
+          "flight": 2,
+          "gridfins": true,
+          "legs": true,
+          "reused": true,
+          "landing_attempt": true,
+          "landing_success": true,
+          "landing_type": "RTLS",
+          "landpad": "5e9e3032383ecb267a34e7c7"
+        }
+      ],
+      "auto_update": true,
+      "tbd": false,
+      "launch_library_id": null,
+      "id": "5eb87d0effd86e000604b35c"
+    },
+    {
+      "fairings": {
+        "reused": false,
+        "recovery_attempt": false,
+        "recovered": false,
+        "ships": []
+      },
+      "links": {
+        "patch": {
+          "small": "https://images2.imgbox.com/dc/7b/8HuZoJQU_o.png",
+          "large": "https://images2.imgbox.com/4f/0d/UudW8zZK_o.png"
+        },
+        "reddit": {
+          "campaign": "https://www.reddit.com/r/spacex/comments/7895bo/zuma_launch_campaign_thread/",
+          "launch": "https://www.reddit.com/r/spacex/comments/7oqjf0/rspacex_zuma_official_launch_discussion_updates/",
+          "media": "https://www.reddit.com/r/spacex/comments/7orksl/rspacex_zuma_media_thread_videos_images_gifs/",
+          "recovery": null
+        },
+        "flickr": {
+          "small": [],
+          "original": [
+            "https://farm5.staticflickr.com/4751/39557026242_384d287045_o.jpg",
+            "https://farm5.staticflickr.com/4674/39556549372_810396618d_o.jpg",
+            "https://farm5.staticflickr.com/4661/39556548902_f66c7be90d_o.jpg",
+            "https://farm5.staticflickr.com/4607/39585580001_8b21846eab_o.jpg",
+            "https://farm5.staticflickr.com/4754/39585578201_a67ab9b9a8_o.jpg",
+            "https://farm5.staticflickr.com/4603/39585575631_216cc035f4_o.jpg"
+          ]
+        },
+        "presskit": "http://www.spacex.com/sites/spacex/files/zumapresskit.pdf",
+        "webcast": "https://www.youtube.com/watch?v=0PWu3BRxn60",
+        "youtube_id": "0PWu3BRxn60",
+        "article": "https://spaceflightnow.com/2018/01/08/spacex-kicks-off-ambitious-2018-schedule-with-launch-for-u-s-government/",
+        "wikipedia": "https://en.wikipedia.org/wiki/Zuma_(satellite)"
+      },
+      "static_fire_date_utc": "2017-11-11T23:00:00.000Z",
+      "static_fire_date_unix": 1510441200,
+      "net": false,
+      "window": 7200,
+      "rocket": "5e9d0d95eda69973a809d1ec",
+      "success": true,
+      "failures": [],
+      "details": "Originally planned for mid-November 2017, the mission was delayed due to test results from the fairing of another customer. First-stage booster will attempt landing at LZ-1",
+      "crew": [],
+      "ships": [],
+      "capsules": [],
+      "payloads": [
+        "5eb0e4c6b6c3bb0006eeb21a"
+      ],
+      "launchpad": "5e9e4501f509094ba4566f84",
+      "flight_number": 53,
+      "name": "ZUMA",
+      "date_utc": "2018-01-08T01:00:00.000Z",
+      "date_unix": 1515373200,
+      "date_local": "2018-01-07T20:00:00-05:00",
+      "date_precision": "hour",
+      "upcoming": false,
+      "cores": [
+        {
+          "core": "5e9e28a4f35918345e3b2652",
+          "flight": 1,
+          "gridfins": true,
+          "legs": true,
+          "reused": false,
+          "landing_attempt": true,
+          "landing_success": true,
+          "landing_type": "RTLS",
+          "landpad": "5e9e3032383ecb267a34e7c7"
+        }
+      ],
+      "auto_update": true,
+      "tbd": false,
+      "launch_library_id": null,
+      "id": "5eb87d10ffd86e000604b35e"
+    },
+    {
+      "fairings": {
+        "reused": false,
+        "recovery_attempt": false,
+        "recovered": false,
+        "ships": []
+      },
+      "links": {
+        "patch": {
+          "small": "https://images2.imgbox.com/cd/48/NVrODg2G_o.png",
+          "large": "https://images2.imgbox.com/97/11/mjn87zBs_o.png"
+        },
+        "reddit": {
+          "campaign": "https://www.reddit.com/r/spacex/comments/7hjp03/falcon_heavy_demo_launch_campaign_thread/",
+          "launch": "https://www.reddit.com/r/spacex/comments/7vg63x/rspacex_falcon_heavy_test_flight_official_launch/",
+          "media": "https://www.reddit.com/r/spacex/comments/7vimtm/rspacex_falcon_heavy_test_flight_media_thread/",
+          "recovery": null
+        },
+        "flickr": {
+          "small": [],
+          "original": [
+            "https://farm5.staticflickr.com/4745/40110304192_b0165b7785_o.jpg",
+            "https://farm5.staticflickr.com/4676/40110297852_6173e5cae6_o.jpg",
+            "https://farm5.staticflickr.com/4615/40143096241_0324643b5e_o.jpg",
+            "https://farm5.staticflickr.com/4702/40110298232_4e9c412936_o.jpg",
+            "https://farm5.staticflickr.com/4610/39337245575_41d760caef_o.jpg",
+            "https://farm5.staticflickr.com/4654/25254688767_59603ff06c_o.jpg",
+            "https://farm5.staticflickr.com/4627/40126462801_d54b4f00be_o.jpg",
+            "https://farm5.staticflickr.com/4760/40126462231_cdf00ef431_o.jpg",
+            "https://farm5.staticflickr.com/4655/40202121122_5d29cfe2ac_o.jpg",
+            "https://farm5.staticflickr.com/4631/39337245145_5f5630a66a_o.jpg",
+            "https://farm5.staticflickr.com/4650/40126461851_14b93ec9d7_o.jpg",
+            "https://farm5.staticflickr.com/4711/40126461411_b1ed283d45_o.jpg",
+            "https://farm5.staticflickr.com/4696/40126460511_7b5cc64871_o.jpg",
+            "https://farm5.staticflickr.com/4589/38583831555_9ae89f5c10_o.jpg",
+            "https://farm5.staticflickr.com/4682/38583829815_e01509d1a7_o.jpg",
+            "https://farm5.staticflickr.com/4731/39225582801_80594d5d91_o.jpg",
+            "https://farm5.staticflickr.com/4641/39225582421_7aa0c65851_o.jpg",
+            "https://farm5.staticflickr.com/4643/27449864329_d2424bc280_o.jpg",
+            "https://farm5.staticflickr.com/4681/39225582171_137a4c75e7_o.jpg",
+            "https://farm5.staticflickr.com/4644/39225582351_ac6aba2533_o.jpg",
+            "https://farm5.staticflickr.com/4587/27449863849_709e135a98_o.jpg"
+          ]
+        },
+        "presskit": "http://www.spacex.com/sites/spacex/files/falconheavypresskit_v1.pdf",
+        "webcast": "https://www.youtube.com/watch?v=wbSwFU6tY1c",
+        "youtube_id": "wbSwFU6tY1c",
+        "article": "https://spaceflightnow.com/2018/02/07/spacex-debuts-worlds-most-powerful-rocket-sends-tesla-toward-the-asteroid-belt/",
+        "wikipedia": "https://en.wikipedia.org/wiki/Elon_Musk%27s_Tesla_Roadster"
+      },
+      "static_fire_date_utc": "2018-01-24T17:30:00.000Z",
+      "static_fire_date_unix": 1516815000,
+      "net": false,
+      "window": 9000,
+      "rocket": "5e9d0d95eda69974db09d1ed",
+      "success": true,
+      "failures": [],
+      "details": "The launch was a success, and the side boosters landed simultaneously at adjacent ground pads. Drone ship landing of the central core failed. Final burn to heliocentric mars-earth orbit was successful after the second stage and payload passed through the Van Allen belts.",
+      "crew": [],
+      "ships": [
+        "5ea6ed2f080df4000697c90c",
+        "5ea6ed2f080df4000697c90d",
+        "5ea6ed30080df4000697c913"
+      ],
+      "capsules": [],
+      "payloads": [
+        "5eb0e4c6b6c3bb0006eeb21c"
+      ],
+      "launchpad": "5e9e4502f509094188566f88",
+      "flight_number": 55,
+      "name": "Falcon Heavy Test Flight",
+      "date_utc": "2018-02-06T20:45:00.000Z",
+      "date_unix": 1517949900,
+      "date_local": "2018-02-06T15:45:00-05:00",
+      "date_precision": "hour",
+      "upcoming": false,
+      "cores": [
+        {
+          "core": "5e9e28a5f359187f703b2653",
+          "flight": 1,
+          "gridfins": true,
+          "legs": true,
+          "reused": false,
+          "landing_attempt": true,
+          "landing_success": false,
+          "landing_type": "ASDS",
+          "landpad": "5e9e3032383ecb6bb234e7ca"
+        },
+        {
+          "core": "5e9e28a2f359187f273b2642",
+          "flight": 2,
+          "gridfins": true,
+          "legs": true,
+          "reused": true,
+          "landing_attempt": true,
+          "landing_success": true,
+          "landing_type": "RTLS",
+          "landpad": "5e9e3032383ecb90a834e7c8"
+        },
+        {
+          "core": "5e9e28a2f3591845c73b2640",
+          "flight": 2,
+          "gridfins": true,
+          "legs": true,
+          "reused": true,
+          "landing_attempt": true,
+          "landing_success": true,
+          "landing_type": "RTLS",
+          "landpad": "5e9e3032383ecb267a34e7c7"
+        }
+      ],
+      "auto_update": true,
+      "tbd": false,
+      "launch_library_id": null,
+      "id": "5eb87d13ffd86e000604b360"
+    },
+    {
+      "fairings": null,
+      "links": {
+        "patch": {
+          "small": "https://images2.imgbox.com/f0/a6/oNKZP5Hu_o.png",
+          "large": "https://images2.imgbox.com/ee/c6/MkvXHhu1_o.png"
+        },
+        "reddit": {
+          "campaign": "https://www.reddit.com/r/spacex/comments/9z7i4j/crs16_launch_campaign_thread/",
+          "launch": "https://www.reddit.com/r/spacex/comments/a2oubw/rspacex_crs16_official_launch_discussion_updates/",
+          "media": "https://www.reddit.com/r/spacex/comments/a2uojp/rspacex_crs16_media_thread_videos_images_gifs/",
+          "recovery": "https://www.reddit.com/r/spacex/comments/a3n3vm/crs16_emergency_recovery_thread/"
+        },
+        "flickr": {
+          "small": [],
+          "original": [
+            "https://farm5.staticflickr.com/4835/45473442624_69ee8bee45_o.jpg",
+            "https://farm5.staticflickr.com/4903/45473443604_0d668c31da_o.jpg",
+            "https://farm5.staticflickr.com/4858/45473444314_413a344dcb_o.jpg",
+            "https://farm5.staticflickr.com/4856/45473445134_d9384878f8_o.jpg",
+            "https://farm5.staticflickr.com/4840/45473446114_7d5e5d6fe2_o.jpg"
+          ]
+        },
+        "presskit": "https://www.spacex.com/sites/spacex/files/crs16_press_kit_12_4.pdf",
+        "webcast": "https://www.youtube.com/watch?v=Esh1jHT9oTA",
+        "youtube_id": "Esh1jHT9oTA",
+        "article": "https://spaceflightnow.com/2018/12/05/spacex-falcon-9-boosts-dragon-cargo-ship-to-orbit-first-stage-misses-landing-target/",
+        "wikipedia": "https://en.wikipedia.org/wiki/SpaceX_CRS-16"
+      },
+      "static_fire_date_utc": "2018-11-30T19:57:00.000Z",
+      "static_fire_date_unix": 1543607820,
+      "net": false,
+      "window": 0,
+      "rocket": "5e9d0d95eda69973a809d1ec",
+      "success": true,
+      "failures": [],
+      "details": "SpaceX's 16th Crew Resupply Mission on behalf of NASA, with a total of 20 contracted flights. This will bring essential supplies to the International Space Station using SpaceX's reusable Dragon spacecraft. The Falcon 9 will launch from SLC-40 at Cape Canaveral Air Force Station. During the landing of the first stage, a grid fin hydraulic pump stalled, causing the core to enter an uncontrolled roll, and resulting in a (succesful) water landing.",
+      "crew": [],
+      "ships": [
+        "5ea6ed2f080df4000697c90b"
+      ],
+      "capsules": [
+        "5e9e2c5cf359185d753b266f"
+      ],
+      "payloads": [
+        "5eb0e4cab6c3bb0006eeb22f"
+      ],
+      "launchpad": "5e9e4501f509094ba4566f84",
+      "flight_number": 72,
+      "name": "CRS-16",
+      "date_utc": "2018-12-05T18:16:00.000Z",
+      "date_unix": 1544033760,
+      "date_local": "2018-12-05T13:16:00-05:00",
+      "date_precision": "hour",
+      "upcoming": false,
+      "cores": [
+        {
+          "core": "5e9e28a6f359185c603b265a",
+          "flight": 1,
+          "gridfins": true,
+          "legs": true,
+          "reused": false,
+          "landing_attempt": true,
+          "landing_success": false,
+          "landing_type": "RTLS",
+          "landpad": "5e9e3032383ecb267a34e7c7"
+        }
+      ],
+      "auto_update": true,
+      "tbd": false,
+      "launch_library_id": null,
+      "id": "5eb87d26ffd86e000604b371"
+    },
+    {
+      "fairings": {
+        "reused": false,
+        "recovery_attempt": true,
+        "recovered": true,
+        "ships": [
+          "5ea6ed2f080df4000697c90c"
+        ]
+      },
+      "links": {
+        "patch": {
+          "small": "https://images2.imgbox.com/14/18/JxCyAHXk_o.png",
+          "large": "https://images2.imgbox.com/9f/c3/GvLfwIfg_o.png"
+        },
+        "reddit": {
+          "campaign": "https://www.reddit.com/r/spacex/comments/b0kscl/arabsat6a_launch_campaign_thread/",
+          "launch": "https://www.reddit.com/r/spacex/comments/basm9y/rspacex_arabsat6a_official_launch_discussion/",
+          "media": "https://www.reddit.com/r/spacex/comments/bbhz9a/rspacex_arabsat6a_media_thread_videos_images_gifs/",
+          "recovery": "https://www.reddit.com/r/spacex/comments/bcecao/fh_arabsat_6a_center_core_recovery_thread/"
+        },
+        "flickr": {
+          "small": [],
+          "original": [
+            "https://live.staticflickr.com/7911/32652060737_4be1171d4a_o.jpg",
+            "https://live.staticflickr.com/7807/40628442293_9643eaf670_o.jpg",
+            "https://live.staticflickr.com/7804/40628440983_4da5d76cc7_o.jpg",
+            "https://live.staticflickr.com/7856/40628439793_27927d11de_o.jpg",
+            "https://live.staticflickr.com/7919/40628438523_c597eabff1_o.jpg",
+            "https://live.staticflickr.com/7834/40628437283_84088aca75_o.jpg",
+            "https://live.staticflickr.com/7856/40628435833_a1bcde59db_o.jpg",
+            "https://live.staticflickr.com/7809/40628435153_17c05d3b5e_o.jpg",
+            "https://live.staticflickr.com/7885/40628434483_3545598b82_o.jpg"
+          ]
+        },
+        "presskit": "https://www.spacex.com/sites/spacex/files/arabsat-6a_press_kit.pdf",
+        "webcast": "https://youtu.be/TXMGu2d8c8g",
+        "youtube_id": "TXMGu2d8c8g",
+        "article": "https://spaceflightnow.com/2019/04/11/spacexs-falcon-heavy-successful-in-commercial-debut/",
+        "wikipedia": "https://en.wikipedia.org/wiki/Arabsat-6A"
+      },
+      "static_fire_date_utc": "2019-04-05T09:57:00.000Z",
+      "static_fire_date_unix": 1554458220,
+      "net": false,
+      "window": 7020,
+      "rocket": "5e9d0d95eda69974db09d1ed",
+      "success": true,
+      "failures": [],
+      "details": "SpaceX will launch Arabsat 6A to a geostationary transfer orbit from SLC-39A, KSC. The satellite is a geostationary telecommunications satellite built by Lockheed Martin for the Saudi Arabian company Arabsat. This will be the first operational flight of Falcon Heavy, and also the first Block 5 Falcon Heavy. All three cores will be new Block 5 cores. The side cores are expected to land at LZ-1 and LZ-2, and the center core is expected to land on OCISLY.",
+      "crew": [],
+      "ships": [
+        "5ea6ed2f080df4000697c90e",
+        "5ea6ed30080df4000697c913",
+        "5ea6ed2f080df4000697c90b",
+        "5ea6ed2e080df4000697c909",
+        "5ea6ed2f080df4000697c90c"
+      ],
+      "capsules": [],
+      "payloads": [
+        "5eb0e4cbb6c3bb0006eeb236"
+      ],
+      "launchpad": "5e9e4502f509094188566f88",
+      "flight_number": 77,
+      "name": "ArabSat 6A",
+      "date_utc": "2019-04-11T22:35:00.000Z",
+      "date_unix": 1555022100,
+      "date_local": "2019-04-11T18:35:00-04:00",
+      "date_precision": "hour",
+      "upcoming": false,
+      "cores": [
+        {
+          "core": "5e9e28a6f3591897453b265f",
+          "flight": 1,
+          "gridfins": true,
+          "legs": true,
+          "reused": false,
+          "landing_attempt": true,
+          "landing_success": true,
+          "landing_type": "ASDS",
+          "landpad": "5e9e3032383ecb6bb234e7ca"
+        },
+        {
+          "core": "5e9e28a6f359183c413b265d",
+          "flight": 1,
+          "gridfins": true,
+          "legs": true,
+          "reused": false,
+          "landing_attempt": true,
+          "landing_success": true,
+          "landing_type": "RTLS",
+          "landpad": "5e9e3032383ecb267a34e7c7"
+        },
+        {
+          "core": "5e9e28a6f359188fd53b265e",
+          "flight": 1,
+          "gridfins": true,
+          "legs": true,
+          "reused": false,
+          "landing_attempt": true,
+          "landing_success": true,
+          "landing_type": "RTLS",
+          "landpad": "5e9e3032383ecb90a834e7c8"
+        }
+      ],
+      "auto_update": true,
+      "tbd": false,
+      "launch_library_id": null,
+      "id": "5eb87d2dffd86e000604b376"
+    },
+    {
+      "fairings": {
+        "reused": false,
+        "recovery_attempt": true,
+        "recovered": true,
+        "ships": [
+          "5ea6ed2e080df4000697c908"
+        ]
+      },
+      "links": {
+        "patch": {
+          "small": "https://images2.imgbox.com/b0/90/fA4QaCAi_o.png",
+          "large": "https://images2.imgbox.com/81/9e/p6AaiJwj_o.png"
+        },
+        "reddit": {
+          "campaign": "https://www.reddit.com/r/spacex/comments/bw6aa8/stp2_launch_campaign_thread/",
+          "launch": "https://www.reddit.com/r/spacex/comments/c40a29/rspacex_stp2_official_launch_discussion_updates",
+          "media": "https://www.reddit.com/r/spacex/comments/c4ng3a/rspacex_stp2_media_thread_videos_images_gifs",
+          "recovery": null
+        },
+        "flickr": {
+          "small": [],
+          "original": [
+            "https://live.staticflickr.com/65535/48129211778_83c1769305_o.jpg",
+            "https://live.staticflickr.com/65535/48129211908_8390c775b0_o.jpg",
+            "https://live.staticflickr.com/65535/48129182836_fd53e5646b_o.jpg",
+            "https://live.staticflickr.com/65535/48129269897_22d854be5c_o.jpg",
+            "https://live.staticflickr.com/65535/48129182631_572051790c_o.jpg",
+            "https://live.staticflickr.com/65535/48129211693_d23b0287f1_o.jpg",
+            "https://live.staticflickr.com/65535/48129269942_eb9b5c25bc_o.jpg"
+          ]
+        },
+        "presskit": "https://www.spacex.com/sites/spacex/files/stp-2_press_kit.pdf",
+        "webcast": "https://youtu.be/WxH4CAlhtiQ",
+        "youtube_id": "WxH4CAlhtiQ",
+        "article": "https://spaceflightnow.com/2019/06/25/falcon-heavy-launches-on-military-led-rideshare-mission-boat-catches-fairing",
+        "wikipedia": "https://en.wikipedia.org/wiki/Space_Test_Program"
+      },
+      "static_fire_date_utc": "2019-06-19T21:52:00.000Z",
+      "static_fire_date_unix": 1560981120,
+      "net": false,
+      "window": 14400,
+      "rocket": "5e9d0d95eda69974db09d1ed",
+      "success": true,
+      "failures": [],
+      "details": "Space Test Program 2 is a rideshare managed by the U.S. Air Force Space and Missile Systems Center (SMC), launching from LC-39A, KSC. Most of the spacecraft will be delivered into low Earth orbit (LEO) in two deployment sequences separated by a second stage burn. These LEO payloads include the six Taiwan and United States owned COSMIC-2 microsatellites, the Planetary Society's LightSail-B demonstrator cubesat, and others. The third and final deployment will be the Air Force Research Lab's DSX spacecraft, which will be delivered to a medium Earth orbit (MEO). This mission will reuse the side cores from Arabsat 6A, which will return to LZ-1, and LZ-2. The new center core will boost back to land on OCISLY less than 40 km from the launch site.",
+      "crew": [],
+      "ships": [
+        "5ea6ed30080df4000697c913",
+        "5ea6ed2f080df4000697c90b",
+        "5ea6ed2e080df4000697c909",
+        "5ea6ed2e080df4000697c908",
+        "5ea6ed2f080df4000697c90e"
+      ],
+      "capsules": [],
+      "payloads": [
+        "5eb0e4ccb6c3bb0006eeb23a",
+        "5eb0e4ccb6c3bb0006eeb23b",
+        "5eb0e4ccb6c3bb0006eeb23c",
+        "5eb0e4ccb6c3bb0006eeb23d",
+        "5eb0e4ccb6c3bb0006eeb23e",
+        "5eb0e4cdb6c3bb0006eeb23f",
+        "5eb0e4cdb6c3bb0006eeb240",
+        "5eb0e4cdb6c3bb0006eeb241",
+        "5eb0e4cdb6c3bb0006eeb242",
+        "5eb0e4cdb6c3bb0006eeb243",
+        "5eb0e4cdb6c3bb0006eeb244",
+        "5eb0e4cdb6c3bb0006eeb245",
+        "5eb0e4ceb6c3bb0006eeb246",
+        "5eb0e4ceb6c3bb0006eeb247",
+        "5eb0e4ceb6c3bb0006eeb248",
+        "5eb0e4ceb6c3bb0006eeb249"
+      ],
+      "launchpad": "5e9e4502f509094188566f88",
+      "flight_number": 81,
+      "name": "STP-2",
+      "date_utc": "2019-06-25T03:30:00.000Z",
+      "date_unix": 1561433400,
+      "date_local": "2019-06-24T23:30:00-04:00",
+      "date_precision": "hour",
+      "upcoming": false,
+      "cores": [
+        {
+          "core": "5e9e28a7f3591878063b2661",
+          "flight": 1,
+          "gridfins": true,
+          "legs": true,
+          "reused": false,
+          "landing_attempt": true,
+          "landing_success": false,
+          "landing_type": "ASDS",
+          "landpad": "5e9e3032383ecb6bb234e7ca"
+        },
+        {
+          "core": "5e9e28a6f359183c413b265d",
+          "flight": 2,
+          "gridfins": true,
+          "legs": true,
+          "reused": true,
+          "landing_attempt": true,
+          "landing_success": true,
+          "landing_type": "RTLS",
+          "landpad": "5e9e3032383ecb267a34e7c7"
+        },
+        {
+          "core": "5e9e28a6f359188fd53b265e",
+          "flight": 2,
+          "gridfins": true,
+          "legs": true,
+          "reused": true,
+          "landing_attempt": true,
+          "landing_success": true,
+          "landing_type": "RTLS",
+          "landpad": "5e9e3032383ecb90a834e7c8"
+        }
+      ],
+      "auto_update": true,
+      "tbd": false,
+      "launch_library_id": null,
+      "id": "5eb87d35ffd86e000604b37a"
+    },
+    {
+      "fairings": null,
+      "links": {
+        "patch": {
+          "small": "https://images2.imgbox.com/f1/70/USGBp3Dy_o.png",
+          "large": "https://images2.imgbox.com/79/a5/ZdV48VwO_o.png"
+        },
+        "reddit": {
+          "campaign": "https://www.reddit.com/r/spacex/comments/c8k6g5/crs18_launch_campaign_thread",
+          "launch": "https://www.reddit.com/r/spacex/comments/ch2ml7/rspacex_crs18_official_launch_discussion_updates/",
+          "media": "https://www.reddit.com/r/spacex/comments/chbr8i/rspacex_crs18_media_thread_videos_images_gifs/",
+          "recovery": null
+        },
+        "flickr": {
+          "small": [],
+          "original": [
+            "https://live.staticflickr.com/65535/48380511527_190682b573_o.jpg",
+            "https://live.staticflickr.com/65535/48380370691_7b0757a4d3_o.jpg",
+            "https://live.staticflickr.com/65535/48380511492_51db1bf984_o.jpg",
+            "https://live.staticflickr.com/65535/48380370626_a5d264c637_o.jpg",
+            "https://live.staticflickr.com/65535/48380511427_97db52a9e3_o.jpg"
+          ]
+        },
+        "presskit": "https://www.spacex.com/sites/spacex/files/crs-18_press_kit.pdf",
+        "webcast": "https://youtu.be/SlgrxVuP5jk",
+        "youtube_id": "SlgrxVuP5jk",
+        "article": "https://spaceflightnow.com/2019/07/25/new-docking-port-spacesuit-and-supplies-en-route-to-space-station/",
+        "wikipedia": "https://en.wikipedia.org/wiki/SpaceX_CRS-18"
+      },
+      "static_fire_date_utc": "2019-07-19T15:31:00.000Z",
+      "static_fire_date_unix": 1563550260,
+      "net": false,
+      "window": 0,
+      "rocket": "5e9d0d95eda69973a809d1ec",
+      "success": true,
+      "failures": [],
+      "details": "SpaceX's 18th Commercial Resupply Services mission out of a total of 20 such contracted flights for NASA, this launch will deliver essential supplies to the International Space Station using the reusable Dragon 1 cargo spacecraft. The external payload for this mission is International Docking Adapter 3, replacing IDA-1 lost in SpaceX's CRS-7 launch failure. This mission will launch from SLC-40 at Cape Canaveral AFS on a Falcon 9, and the first-stage booster is expected to land back at CCAFS LZ-1.",
+      "crew": [],
+      "ships": [],
+      "capsules": [
+        "5e9e2c5cf359188bfb3b266b"
+      ],
+      "payloads": [
+        "5eb0e4ceb6c3bb0006eeb24a"
+      ],
+      "launchpad": "5e9e4501f509094ba4566f84",
+      "flight_number": 82,
+      "name": "CRS-18",
+      "date_utc": "2019-07-25T22:01:00.000Z",
+      "date_unix": 1564092060,
+      "date_local": "2019-07-25T18:01:00-04:00",
+      "date_precision": "hour",
+      "upcoming": false,
+      "cores": [
+        {
+          "core": "5e9e28a7f3591809313b2660",
+          "flight": 2,
+          "gridfins": true,
+          "legs": true,
+          "reused": true,
+          "landing_attempt": true,
+          "landing_success": true,
+          "landing_type": "RTLS",
+          "landpad": "5e9e3032383ecb267a34e7c7"
+        }
+      ],
+      "auto_update": true,
+      "tbd": false,
+      "launch_library_id": null,
+      "id": "5eb87d36ffd86e000604b37b"
+    },
+    {
+      "fairings": null,
+      "links": {
+        "patch": {
+          "small": "https://images2.imgbox.com/9b/93/k1hCBIG8_o.png",
+          "large": "https://images2.imgbox.com/dd/50/KsiuGQL4_o.png"
+        },
+        "reddit": {
+          "campaign": "https://www.reddit.com/r/spacex/comments/ezn6n0/crs20_launch_campaign_thread",
+          "launch": "https://www.reddit.com/r/spacex/comments/fe8pcj/rspacex_crs20_official_launch_discussion_updates/",
+          "media": "https://www.reddit.com/r/spacex/comments/fes64p/rspacex_crs20_media_thread_videos_images_gifs/",
+          "recovery": null
+        },
+        "flickr": {
+          "small": [],
+          "original": [
+            "https://live.staticflickr.com/65535/49635401403_96f9c322dc_o.jpg",
+            "https://live.staticflickr.com/65535/49636202657_e81210a3ca_o.jpg",
+            "https://live.staticflickr.com/65535/49636202572_8831c5a917_o.jpg",
+            "https://live.staticflickr.com/65535/49635401423_e0bef3e82f_o.jpg",
+            "https://live.staticflickr.com/65535/49635985086_660be7062f_o.jpg"
+          ]
+        },
+        "presskit": "https://www.spacex.com/sites/spacex/files/crs-20_mission_press_kit.pdf",
+        "webcast": "https://youtu.be/1MkcWK2PnsU",
+        "youtube_id": "1MkcWK2PnsU",
+        "article": "https://spaceflightnow.com/2020/03/07/late-night-launch-of-spacex-cargo-ship-marks-end-of-an-era/",
+        "wikipedia": "https://en.wikipedia.org/wiki/SpaceX_CRS-20"
+      },
+      "static_fire_date_utc": "2020-03-01T10:20:00.000Z",
+      "static_fire_date_unix": 1583058000,
+      "net": false,
+      "window": 0,
+      "rocket": "5e9d0d95eda69973a809d1ec",
+      "success": true,
+      "failures": [],
+      "details": "SpaceX's 20th and final Crew Resupply Mission under the original NASA CRS contract, this mission brings essential supplies to the International Space Station using SpaceX's reusable Dragon spacecraft. It is the last scheduled flight of a Dragon 1 capsule. (CRS-21 and up under the new Commercial Resupply Services 2 contract will use Dragon 2.) The external payload for this mission is the Bartolomeo ISS external payload hosting platform. Falcon 9 and Dragon will launch from SLC-40, Cape Canaveral Air Force Station and the booster will land at LZ-1. The mission will be complete with return and recovery of the Dragon capsule and down cargo.",
+      "crew": [],
+      "ships": [],
+      "capsules": [
+        "5e9e2c5cf359185d753b266f"
+      ],
+      "payloads": [
+        "5eb0e4d0b6c3bb0006eeb253"
+      ],
+      "launchpad": "5e9e4501f509094ba4566f84",
+      "flight_number": 91,
+      "name": "CRS-20",
+      "date_utc": "2020-03-07T04:50:31.000Z",
+      "date_unix": 1583556631,
+      "date_local": "2020-03-06T23:50:31-05:00",
+      "date_precision": "hour",
+      "upcoming": false,
+      "cores": [
+        {
+          "core": "5e9e28a7f359187afd3b2662",
+          "flight": 2,
+          "gridfins": true,
+          "legs": true,
+          "reused": true,
+          "landing_attempt": true,
+          "landing_success": true,
+          "landing_type": "RTLS",
+          "landpad": "5e9e3032383ecb267a34e7c7"
+        }
+      ],
+      "auto_update": true,
+      "tbd": false,
+      "launch_library_id": null,
+      "id": "5eb87d42ffd86e000604b384"
+    },
+    {
+      "fairings": {
+        "reused": null,
+        "recovery_attempt": true,
+        "recovered": true,
+        "ships": [
+          "5ea6ed2e080df4000697c907"
+        ]
+      },
+      "links": {
+        "patch": {
+          "small": "https://images2.imgbox.com/ff/20/EcENG8MX_o.png",
+          "large": "https://images2.imgbox.com/97/0a/h6UEgv3Y_o.png"
+        },
+        "reddit": {
+          "campaign": "https://www.reddit.com/r/spacex/comments/ffoz5r/saocom_1b_launch_campaign_thread/",
+          "launch": "https://www.reddit.com/r/spacex/comments/iiwlch/rspacex_saocom_1b_launch_discussion_updates_thread/",
+          "media": "https://www.reddit.com/r/spacex/comments/ij8mxf/rspacex_starlink11_saocom_1b_media_thread/",
+          "recovery": null
+        },
+        "flickr": {
+          "small": [],
+          "original": [
+            "https://live.staticflickr.com/65535/50291453997_aa715950e7_o.jpg",
+            "https://live.staticflickr.com/65535/50291306296_85b6ff12a2_o.jpg",
+            "https://live.staticflickr.com/65535/50291306061_2f9e350a85_o.jpg",
+            "https://live.staticflickr.com/65535/50291306216_4fd44c261e_o.jpg",
+            "https://live.staticflickr.com/65535/50291306346_136d3dce7b_o.jpg"
+          ]
+        },
+        "presskit": null,
+        "webcast": "https://youtu.be/P-gLOsDjE3E",
+        "youtube_id": "P-gLOsDjE3E",
+        "article": "https://spaceflightnow.com/2020/08/31/spacex-launches-first-polar-orbit-mission-from-florida-in-decades/",
+        "wikipedia": "https://en.wikipedia.org/wiki/SAOCOM"
+      },
+      "static_fire_date_utc": null,
+      "static_fire_date_unix": null,
+      "net": false,
+      "window": null,
+      "rocket": "5e9d0d95eda69973a809d1ec",
+      "success": true,
+      "failures": [],
+      "details": "SpaceX's Falcon 9 will launch the second of the two satellite SAOCOM 1 satellites into a sun-synchronous polar orbit from SLC-40, Cape Canaveral AFS. SAOCOM 1B is a synthetic aperture radar Earth observation satellite to support disaster management. The SAOCOM spacecraft are operated by CONAE, the Argentinian National Space Activities Commission, and are built by INVAP. This mission is also expected to include rideshare payloads Sequoia, and GNOMES-1. This will be the first polar launch from the Space Coast in 60 years. The launch azimuth will be southward and the booster will land at LZ-1.",
+      "crew": [],
+      "ships": [
+        "5ea6ed2e080df4000697c907"
+      ],
+      "capsules": [],
+      "payloads": [
+        "5eb0e4d1b6c3bb0006eeb259"
+      ],
+      "launchpad": "5e9e4501f509094ba4566f84",
+      "flight_number": 101,
+      "name": "SAOCOM 1B, GNOMES-1, Tyvak-0172",
+      "date_utc": "2020-08-30T23:18:00.000Z",
+      "date_unix": 1598829480,
+      "date_local": "2020-08-30T19:18:00-04:00",
+      "date_precision": "hour",
+      "upcoming": false,
+      "cores": [
+        {
+          "core": "5e9e28a7f359187afd3b2662",
+          "flight": 4,
+          "gridfins": true,
+          "legs": true,
+          "reused": true,
+          "landing_attempt": true,
+          "landing_success": true,
+          "landing_type": "RTLS",
+          "landpad": "5e9e3032383ecb267a34e7c7"
+        }
+      ],
+      "auto_update": true,
+      "tbd": false,
+      "launch_library_id": null,
+      "id": "5eb87d47ffd86e000604b38a"
+    },
+    {
+      "fairings": {
+        "reused": false,
+        "recovery_attempt": true,
+        "recovered": true,
+        "ships": [
+          "5ea6ed2e080df4000697c908",
+          "5ea6ed2f080df4000697c90c"
+        ]
+      },
+      "links": {
+        "patch": {
+          "small": "https://images2.imgbox.com/25/01/sBErNO7T_o.jpg",
+          "large": "https://images2.imgbox.com/be/b5/tGnEI6rY_o.jpg"
+        },
+        "reddit": {
+          "campaign": "https://www.reddit.com/r/spacex/comments/j7qqbg/nrol108_launch_campaign_thread/",
+          "launch": "https://www.reddit.com/r/spacex/comments/ke9pmg/rspacex_nrol108_official_launch_discussion/",
+          "media": null,
+          "recovery": "https://www.reddit.com/r/spacex/comments/k2ts1q/rspacex_fleet_updates_discussion_thread/"
+        },
+        "flickr": {
+          "small": [],
+          "original": [
+            "https://live.staticflickr.com/65535/50740257483_0f550f6a25_o.jpg",
+            "https://live.staticflickr.com/65535/50740993291_57ef3f881b_o.jpg",
+            "https://live.staticflickr.com/65535/50740257263_b41b843e85_o.jpg",
+            "https://live.staticflickr.com/65535/50740993211_dc00af6dbb_o.jpg",
+            "https://live.staticflickr.com/65535/50740257078_e46a6462df_o.jpg",
+            "https://live.staticflickr.com/65535/50741096702_2a152bdf13_o.jpg",
+            "https://live.staticflickr.com/65535/50740257323_e3e49fa2c6_o.jpg"
+          ]
+        },
+        "presskit": null,
+        "webcast": "https://youtu.be/9OeVwaFBkfE",
+        "youtube_id": "9OeVwaFBkfE",
+        "article": "https://spaceflightnow.com/2020/12/19/spacex-closes-out-record-year-of-launches-from-floridas-space-coast/",
+        "wikipedia": "https://en.wikipedia.org/wiki/National_Reconnaissance_Office"
+      },
+      "static_fire_date_utc": null,
+      "static_fire_date_unix": null,
+      "net": false,
+      "window": null,
+      "rocket": "5e9d0d95eda69973a809d1ec",
+      "success": true,
+      "failures": [],
+      "details": "SpaceX will launch NROL-108 for the National Reconnaissance Office aboard a Falcon 9 from SLC-40, Cape Canaveral Air Force Station. The booster for this mission is expected to land at LZ-1.",
+      "crew": [],
+      "ships": [
+        "5ea6ed2f080df4000697c90c",
+        "5ea6ed2e080df4000697c908"
+      ],
+      "capsules": [],
+      "payloads": [
+        "5f839ac7818d8b59f5740d48"
+      ],
+      "launchpad": "5e9e4502f509094188566f88",
+      "flight_number": 112,
+      "name": "NROL-108",
+      "date_utc": "2020-12-19T14:00:00.000Z",
+      "date_unix": 1608386400,
+      "date_local": "2020-12-19T09:00:00-05:00",
+      "date_precision": "hour",
+      "upcoming": false,
+      "cores": [
+        {
+          "core": "5e9e28a7f359187afd3b2662",
+          "flight": 5,
+          "gridfins": true,
+          "legs": true,
+          "reused": true,
+          "landing_attempt": true,
+          "landing_success": true,
+          "landing_type": "RTLS",
+          "landpad": "5e9e3032383ecb267a34e7c7"
+        }
+      ],
+      "auto_update": true,
+      "tbd": false,
+      "launch_library_id": null,
+      "id": "5f8399fb818d8b59f5740d43"
+    },
+    {
+      "fairings": {
+        "reused": true,
+        "recovery_attempt": true,
+        "recovered": true,
+        "ships": [
+          "60c8c7a45d4819007ea69871"
+        ]
+      },
+      "links": {
+        "patch": {
+          "small": "https://images2.imgbox.com/a9/3e/L2EqHznO_o.png",
+          "large": "https://images2.imgbox.com/96/8c/4HOqLFoZ_o.png"
+        },
+        "reddit": {
+          "campaign": "https://www.reddit.com/r/spacex/comments/nz7rai/transporter2_launch_campaign_thread/",
+          "launch": "https://www.reddit.com/r/spacex/comments/o9ki7u/rspacex_transporter2_launch_discussion_and/",
+          "media": null,
+          "recovery": "https://www.reddit.com/r/spacex/comments/k2ts1q/rspacex_fleet_updates_discussion_thread/"
+        },
+        "flickr": {
+          "small": [],
+          "original": [
+            "https://live.staticflickr.com/65535/51283430951_a9e5a41141_o.jpg",
+            "https://live.staticflickr.com/65535/51283430936_3852120bbe_o.jpg",
+            "https://live.staticflickr.com/65535/51283604493_d1a088b7c9_o.jpg",
+            "https://live.staticflickr.com/65535/51284454795_591717faee_o.jpg",
+            "https://live.staticflickr.com/65535/51284454810_9fdd0e8db4_o.jpg",
+            "https://live.staticflickr.com/65535/51283604443_6d92fe1231_o.jpg",
+            "https://live.staticflickr.com/65535/51283604428_b24ebf1b5f_o.jpg",
+            "https://live.staticflickr.com/65535/51283604438_7202e2a388_o.jpg"
+          ]
+        },
+        "presskit": null,
+        "webcast": "https://youtu.be/sSiuW1HcGjA",
+        "youtube_id": "sSiuW1HcGjA",
+        "article": null,
+        "wikipedia": null
+      },
+      "static_fire_date_utc": "2021-06-22T15:24:00.000Z",
+      "static_fire_date_unix": 1624375440,
+      "net": false,
+      "window": 0,
+      "rocket": "5e9d0d95eda69973a809d1ec",
+      "success": true,
+      "failures": [],
+      "details": "Falcon 9 launches to sun-synchronous polar orbit from Florida as part of SpaceX's Rideshare program dedicated to smallsat customers. The mission lifts off from SLC-40, Cape Canaveral on a southward azimuth and performs a dogleg maneuver. The booster for this mission is expected to return to LZ-1 based on FCC communications filings. This rideshare takes approximately 90 satellites and hosted payloads into orbit on a variety of deployers including three free-flying spacecraft which dispense their customers' satellites after separation from the SpaceX stack.",
+      "crew": [],
+      "ships": [
+        "60c8c7a45d4819007ea69871"
+      ],
+      "capsules": [],
+      "payloads": [
+        "608ac397eb3e50044e3630e7"
+      ],
+      "launchpad": "5e9e4501f509094ba4566f84",
+      "flight_number": 132,
+      "name": "Transporter-2",
+      "date_utc": "2021-06-30T19:31:00.000Z",
+      "date_unix": 1625081460,
+      "date_local": "2021-06-30T15:31:00-04:00",
+      "date_precision": "hour",
+      "upcoming": false,
+      "cores": [
+        {
+          "core": "5ef670f10059c33cee4a826c",
+          "flight": 8,
+          "gridfins": true,
+          "legs": true,
+          "reused": true,
+          "landing_attempt": true,
+          "landing_success": true,
+          "landing_type": "RTLS",
+          "landpad": "5e9e3032383ecb267a34e7c7"
+        }
+      ],
+      "auto_update": true,
+      "tbd": false,
+      "launch_library_id": "5d248abe-17ef-43ce-9c04-aef33af40520",
+      "id": "600f9b6d8f798e2a4d5f979f"
+    },
+    {
+      "fairings": {
+        "reused": null,
+        "recovery_attempt": null,
+        "recovered": null,
+        "ships": []
+      },
+      "links": {
+        "patch": {
+          "small": "https://images2.imgbox.com/d4/7b/iDjUz9US_o.png",
+          "large": "https://images2.imgbox.com/94/be/MVwoNNDy_o.png"
+        },
+        "reddit": {
+          "campaign": "https://www.reddit.com/r/spacex/comments/s04tw9/transporter3_launch_campaign_thread/",
+          "launch": "https://www.reddit.com/r/spacex/comments/s23yav/rspacex_transporter3_launch_discussion_and/",
+          "media": null,
+          "recovery": null
+        },
+        "flickr": {
+          "small": [],
+          "original": [
+            "https://live.staticflickr.com/65535/51818737408_435196f856_o.jpg",
+            "https://live.staticflickr.com/65535/51819334315_a542f60ca7_o.jpg",
+            "https://live.staticflickr.com/65535/51818737428_c969752259_o.jpg",
+            "https://live.staticflickr.com/65535/51818622981_a51f8e400e_o.jpg",
+            "https://live.staticflickr.com/65535/51818962544_6dc5873faf_o.jpg",
+            "https://live.staticflickr.com/65535/51818737463_ab81867074_o.jpg"
+          ]
+        },
+        "presskit": null,
+        "webcast": "https://youtu.be/mFBeuSAvhUQ",
+        "youtube_id": "mFBeuSAvhUQ",
+        "article": "https://spaceflightnow.com/2022/01/13/spacex-launches-105-customer-satellites-on-third-transporter-rideshare-mission/",
+        "wikipedia": null
+      },
+      "static_fire_date_utc": null,
+      "static_fire_date_unix": null,
+      "net": false,
+      "window": null,
+      "rocket": "5e9d0d95eda69973a809d1ec",
+      "success": true,
+      "failures": [],
+      "details": null,
+      "crew": [],
+      "ships": [],
+      "capsules": [],
+      "payloads": [
+        "6175aaacefa4314085aa9c56"
+      ],
+      "launchpad": "5e9e4501f509094ba4566f84",
+      "flight_number": 145,
+      "name": "Transporter-3",
+      "date_utc": "2022-01-13T15:25:00.000Z",
+      "date_unix": 1642087500,
+      "date_local": "2022-01-13T10:25:00-05:00",
+      "date_precision": "hour",
+      "upcoming": false,
+      "cores": [
+        {
+          "core": "5e9e28a7f3591817f23b2663",
+          "flight": 10,
+          "gridfins": true,
+          "legs": true,
+          "reused": true,
+          "landing_attempt": true,
+          "landing_success": true,
+          "landing_type": "RTLS",
+          "landpad": "5e9e3032383ecb267a34e7c7"
+        }
+      ],
+      "auto_update": true,
+      "tbd": false,
+      "launch_library_id": "c660df6f-7e33-4c90-a0f5-b27c8cb4c974",
+      "id": "61bf3e31cd5ab50b0d936345"
+    },
+    {
+      "fairings": {
+        "reused": null,
+        "recovery_attempt": null,
+        "recovered": null,
+        "ships": []
+      },
+      "links": {
+        "patch": {
+          "small": "https://images2.imgbox.com/69/be/Y0sIjJ6f_o.png",
+          "large": "https://images2.imgbox.com/ea/26/DjPDzbZl_o.png"
+        },
+        "reddit": {
+          "campaign": "https://www.reddit.com/r/spacex/comments/sarr7x/rspacex_csg2_campaign_thread/",
+          "launch": "https://www.reddit.com/r/spacex/comments/sdtz77/rspacex_csg2_launch_discussion_and_updates_thread/",
+          "media": null,
+          "recovery": null
+        },
+        "flickr": {
+          "small": [],
+          "original": [
+            "https://live.staticflickr.com/65535/51856205295_4ec1c21ce3_o.jpg",
+            "https://live.staticflickr.com/65535/51854587612_b30f28ede1_o.jpg",
+            "https://live.staticflickr.com/65535/51855875789_b27465e1f2_o.jpg",
+            "https://live.staticflickr.com/65535/51855546836_710848417a_o.jpg",
+            "https://live.staticflickr.com/65535/51855627363_c927574ce4_o.jpg",
+            "https://live.staticflickr.com/65535/51854587577_cfe014f0e9_o.jpg",
+            "https://live.staticflickr.com/65535/51855875759_a4cdc29fbf_o.jpg",
+            "https://live.staticflickr.com/65535/51855546821_7900aed52d_o.jpg"
+          ]
+        },
+        "presskit": null,
+        "webcast": "https://youtu.be/AbFoi68L-GQ",
+        "youtube_id": "AbFoi68L-GQ",
+        "article": "https://spaceflightnow.com/2022/02/01/italian-radar-satellite-rides-spacex-rocket-into-polar-orbit/",
+        "wikipedia": null
+      },
+      "static_fire_date_utc": "2022-01-23T21:22:00.000Z",
+      "static_fire_date_unix": 1642972920,
+      "net": false,
+      "window": null,
+      "rocket": "5e9d0d95eda69973a809d1ec",
+      "success": true,
+      "failures": [],
+      "details": "Falcon 9 launches to sun-synchronous polar orbit from Florida as part of CSG-2 Mission. The mission lifts off from SLC-40, Cape Canaveral on a southward azimuth and performs a dogleg maneuver. The booster for this mission is expected to return to LZ-1 based on FCC communications filings",
+      "crew": [],
+      "ships": [],
+      "capsules": [],
+      "payloads": [
+        "6161d3a06db1a92bfba8535a"
+      ],
+      "launchpad": "5e9e4501f509094ba4566f84",
+      "flight_number": 147,
+      "name": "CSG-2",
+      "date_utc": "2022-01-31T23:11:12.000Z",
+      "date_unix": 1643670672,
+      "date_local": "2022-01-31T18:11:12-05:00",
+      "date_precision": "hour",
+      "upcoming": false,
+      "cores": [
+        {
+          "core": "5e9e28a6f359183c413b265d",
+          "flight": 3,
+          "gridfins": true,
+          "legs": true,
+          "reused": true,
+          "landing_attempt": true,
+          "landing_success": true,
+          "landing_type": "RTLS",
+          "landpad": "5e9e3032383ecb267a34e7c7"
+        }
+      ],
+      "auto_update": false,
+      "tbd": false,
+      "launch_library_id": "23229c2b-abb7-4b94-b624-981a9adc88d2",
+      "id": "6161d32d6db1a92bfba85359"
+    },
+    {
+      "fairings": {
+        "reused": null,
+        "recovery_attempt": null,
+        "recovered": null,
+        "ships": []
+      },
+      "links": {
+        "patch": {
+          "small": "https://images2.imgbox.com/fc/73/QpGKqpvV_o.png",
+          "large": "https://images2.imgbox.com/a1/0b/Hj2nGHdQ_o.png"
+        },
+        "reddit": {
+          "campaign": null,
+          "launch": "https://www.reddit.com/r/spacex/comments/uxafkb/rspacex_transporter5_launch_discussion_and/",
+          "media": null,
+          "recovery": null
+        },
+        "flickr": {
+          "small": [],
+          "original": []
+        },
+        "presskit": null,
+        "webcast": "https://youtu.be/KHt3MyimuqU",
+        "youtube_id": "KHt3MyimuqU",
+        "article": null,
+        "wikipedia": null
+      },
+      "static_fire_date_utc": null,
+      "static_fire_date_unix": null,
+      "net": false,
+      "window": null,
+      "rocket": "5e9d0d95eda69973a809d1ec",
+      "success": true,
+      "failures": [],
+      "details": null,
+      "crew": [],
+      "ships": [],
+      "capsules": [],
+      "payloads": [
+        "6243b39daf52800c6e919267"
+      ],
+      "launchpad": "5e9e4501f509094ba4566f84",
+      "flight_number": 165,
+      "name": "Transporter-5",
+      "date_utc": "2022-05-25T18:27:00.000Z",
+      "date_unix": 1653503220,
+      "date_local": "2022-05-25T14:27:00-04:00",
+      "date_precision": "hour",
+      "upcoming": false,
+      "cores": [
+        {
+          "core": "5f57c53d0622a6330279009f",
+          "flight": 8,
+          "gridfins": true,
+          "legs": true,
+          "reused": true,
+          "landing_attempt": true,
+          "landing_success": true,
+          "landing_type": "RTLS",
+          "landpad": "5e9e3032383ecb267a34e7c7"
+        }
+      ],
+      "auto_update": true,
+      "tbd": false,
+      "launch_library_id": "949421ac-3802-499b-b383-d8274de7e147",
+      "id": "6243ae24af52800c6e919258"
+    }
+  ],
+  "id": "5e9e3032383ecb267a34e7c7"
+}

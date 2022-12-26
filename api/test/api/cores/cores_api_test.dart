@@ -3,10 +3,12 @@ import 'package:api/models/core/core_model.dart';
 import 'package:api/models/query/query.dart';
 import 'package:api/models/response/api_paginated_list.dart';
 import 'package:api/network/cores_data_source.dart';
+import 'package:api/utils/exception.dart';
 import 'package:mocktail/mocktail.dart';
 import 'package:test/test.dart';
 
 import '../../fixtures_reader.dart';
+import '../../helpers/mock_dio_exception.dart';
 
 class MockCoresApi extends Mock implements CoresApi {}
 
@@ -118,6 +120,78 @@ void main() {
         // assert
         verify(() => coresApi.queryFullCores(query));
         verifyNoMoreInteractions(coresApi);
+      },
+    );
+  });
+
+  group('exceptions', () {
+    test(
+      'getAllCores, should throw a ServerException when the response code is 404 or other (unsuccessful)',
+      () async {
+        // arrange
+        when(() => coresApi.getAllCores()).thenThrow(
+          dioException,
+        );
+        // act
+        final call = dataSource.getAllCores();
+        // assert
+        expect(
+          () => call,
+          throwsA(const TypeMatcher<ServerException>()),
+        );
+      },
+    );
+
+    test(
+      'getCore, should throw a ServerException when the response code is 404 or other (unsuccessful)',
+      () async {
+        // arrange
+        when(() => coresApi.getCore('id')).thenThrow(
+          dioException,
+        );
+        // act
+        final call = dataSource.getCore('id');
+        // assert
+        expect(
+          () => call,
+          throwsA(const TypeMatcher<ServerException>()),
+        );
+      },
+    );
+
+    test(
+      'queryCores, should throw a ServerException when the response code is 404 or other (unsuccessful)',
+      () async {
+        const q = Query();
+        // arrange
+        when(() => coresApi.queryCores(q)).thenThrow(
+          dioException,
+        );
+        // act
+        final call = dataSource.queryCores(q);
+        // assert
+        expect(
+          () => call,
+          throwsA(const TypeMatcher<ServerException>()),
+        );
+      },
+    );
+
+    test(
+      'queryFullCores, should throw a ServerException when the response code is 404 or other (unsuccessful)',
+      () async {
+        const q = Query();
+        // arrange
+        when(() => coresApi.queryFullCores(q)).thenThrow(
+          dioException,
+        );
+        // act
+        final call = dataSource.queryFullCores(q);
+        // assert
+        expect(
+          () => call,
+          throwsA(const TypeMatcher<ServerException>()),
+        );
       },
     );
   });

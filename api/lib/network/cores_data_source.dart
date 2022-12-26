@@ -2,6 +2,8 @@ import 'package:api/api/cores/cores_api.dart';
 import 'package:api/models/core/core_model.dart';
 import 'package:api/models/query/query.dart' as q;
 import 'package:api/models/response/api_paginated_list.dart';
+import 'package:api/utils/exception.dart';
+import 'package:dio/dio.dart';
 
 class CoresDataSource {
   CoresDataSource(this._api);
@@ -9,18 +11,34 @@ class CoresDataSource {
   final CoresApi _api;
 
   Future<List<CoreModel>> getAllCores() async {
-    return _api.getAllCores();
+    try {
+      return _api.getAllCores();
+    } on DioError catch (_) {
+      throw ServerException();
+    }
   }
 
   Future<CoreModel> getCore(String id) async {
-    return _api.getCore(id);
+    try {
+      return _api.getCore(id);
+    } on DioError catch (_) {
+      throw ServerException();
+    }
   }
 
   Future<ApiPaginatedList<CoreModel>> queryCores(q.Query query) async {
-    return _api.queryCores(query);
+    try {
+      return _api.queryCores(query);
+    } on DioError catch (_) {
+      throw ServerException();
+    }
   }
 
   Future<ApiPaginatedList<CoreFullModel>> queryFullCores(q.Query query) async {
-    return _api.queryFullCores(query);
+    try {
+      return _api.queryFullCores(query);
+    } on DioError catch (_) {
+      throw ServerException();
+    }
   }
 }

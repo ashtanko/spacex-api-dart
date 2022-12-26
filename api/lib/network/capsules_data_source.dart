@@ -2,6 +2,8 @@ import 'package:api/api/capsules/capsules_api.dart';
 import 'package:api/models/capsule/capsule_model.dart';
 import 'package:api/models/query/query.dart';
 import 'package:api/models/response/api_paginated_list.dart';
+import 'package:api/utils/exception.dart';
+import 'package:dio/dio.dart';
 
 class CapsulesDataSource {
   const CapsulesDataSource(this._api);
@@ -9,23 +11,39 @@ class CapsulesDataSource {
   final CapsulesApi _api;
 
   Future<List<CapsuleModel>> getAllCapsules() async {
-    return _api.getAllCapsules();
+    try {
+      return await _api.getAllCapsules();
+    } on DioError catch (_) {
+      throw ServerException();
+    }
   }
 
   Future<CapsuleModel> getCapsule(String id) async {
-    final capsule = await _api.getCapsule(id);
-    return capsule;
+    try {
+      final capsule = await _api.getCapsule(id);
+      return capsule;
+    } on DioError catch (_) {
+      throw ServerException();
+    }
   }
 
   Future<ApiPaginatedList<CapsuleModel>> queryCapsules(Query query) async {
-    final capsules = await _api.queryCapsules(query);
-    return capsules;
+    try {
+      final capsules = await _api.queryCapsules(query);
+      return capsules;
+    } on DioError catch (_) {
+      throw ServerException();
+    }
   }
 
   Future<ApiPaginatedList<CapsuleFullModel>> queryFullCapsules(
     Query query,
   ) async {
-    final capsules = await _api.queryFullCapsules(query);
-    return capsules;
+    try {
+      final capsules = await _api.queryFullCapsules(query);
+      return capsules;
+    } on DioError catch (_) {
+      throw ServerException();
+    }
   }
 }
