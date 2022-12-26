@@ -1,17 +1,17 @@
 import 'package:api/api/dio/interceptors/logging_interceptor.dart';
 import 'package:api/api/launch/launch_api.dart';
 import 'package:api/models/query/query.dart' as q;
-import 'package:api/repository/launch_repository.dart';
+import 'package:api/network/launch_data_source.dart';
 import 'package:dio/dio.dart';
 import 'package:test/test.dart';
 
 void main() {
   late Dio dio;
-  late LaunchRepository repository;
+  late LaunchDataSource dataSource;
 
   setUp(() {
     dio = Dio();
-    repository = LaunchRepository(LaunchApi(dio));
+    dataSource = LaunchDataSource(LaunchApi(dio));
   });
 
   test('getAllLaunches with empty query data, returns data from api', () async {
@@ -19,7 +19,7 @@ void main() {
     dio.interceptors.add(LoggingInterceptor());
 
     // act
-    final data = await repository.getAllLaunches();
+    final data = await dataSource.getAllLaunches();
 
     // assert
     expect(data.isNotEmpty, true);
@@ -31,7 +31,7 @@ void main() {
     dio.interceptors.add(LoggingInterceptor());
 
     // act
-    final data = await repository.getUpcomingLaunches();
+    final data = await dataSource.getUpcomingLaunches();
 
     // assert
     expect(data.isNotEmpty, true);
@@ -43,7 +43,7 @@ void main() {
     dio.interceptors.add(LoggingInterceptor());
 
     // act
-    final data = await repository.getPastLaunches();
+    final data = await dataSource.getPastLaunches();
 
     // assert
     expect(data.isNotEmpty, true);
@@ -55,7 +55,7 @@ void main() {
     dio.interceptors.add(LoggingInterceptor());
 
     // act
-    final data = await repository.getLatestLaunch();
+    final data = await dataSource.getLatestLaunch();
 
     // assert
     expect(data.id.isNotEmpty, true);
@@ -66,7 +66,7 @@ void main() {
     dio.interceptors.add(LoggingInterceptor());
 
     // act
-    final data = await repository.getNextLaunch();
+    final data = await dataSource.getNextLaunch();
 
     // assert
     expect(data.id.isNotEmpty, true);
@@ -77,7 +77,7 @@ void main() {
     dio.interceptors.add(LoggingInterceptor());
 
     // act
-    final data = await repository.queryLaunches(const q.Query());
+    final data = await dataSource.queryLaunches(const q.Query());
 
     // assert
     expect(data.page, 1);
@@ -89,7 +89,7 @@ void main() {
     dio.interceptors.add(LoggingInterceptor());
 
     // act
-    final data = await repository
+    final data = await dataSource
         .queryLaunches(const q.Query(options: q.Options(offset: 5, page: 1)));
 
     // assert
@@ -102,7 +102,7 @@ void main() {
     dio.interceptors.add(LoggingInterceptor());
 
     // act
-    final data = await repository.queryFullLaunches(
+    final data = await dataSource.queryFullLaunches(
       const q.Query(
         options: q.Options(
           populate: ['payloads', 'launchpad', 'rocket', 'capsules', 'crew'],
@@ -121,7 +121,7 @@ void main() {
     dio.interceptors.add(LoggingInterceptor());
 
     // act
-    final data = await repository.getLaunch(id);
+    final data = await dataSource.getLaunch(id);
 
     // assert
     expect(data.id, id);

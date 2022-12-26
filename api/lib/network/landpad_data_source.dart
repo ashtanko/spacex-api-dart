@@ -3,8 +3,8 @@ import 'package:api/models/landpad/landpad_model.dart';
 import 'package:api/models/query/query.dart' as q;
 import 'package:api/models/response/api_paginated_list.dart';
 
-class LandpadRepository {
-  LandpadRepository(this._api);
+class LandPadDataSource {
+  LandPadDataSource(this._api);
 
   final LandpadApi _api;
 
@@ -20,7 +20,9 @@ class LandpadRepository {
     return _api.queryLandpads(query);
   }
 
-  Future<ApiPaginatedList<LandpadFullModel>> queryFullLandpads(q.Query query) async {
+  Future<ApiPaginatedList<LandpadFullModel>> queryFullLandpads(
+    q.Query query,
+  ) async {
     return _api.queryFullLandpads(query);
   }
 }

@@ -3,8 +3,8 @@ import 'package:api/models/core/core_model.dart';
 import 'package:api/models/query/query.dart' as q;
 import 'package:api/models/response/api_paginated_list.dart';
 
-class CoresRepository {
-  CoresRepository(this._api);
+class CoresDataSource {
+  CoresDataSource(this._api);
 
   final CoresApi _api;
 

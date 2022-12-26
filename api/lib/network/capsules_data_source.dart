@@ -3,8 +3,8 @@ import 'package:api/models/capsule/capsule_model.dart';
 import 'package:api/models/query/query.dart';
 import 'package:api/models/response/api_paginated_list.dart';
 
-class CapsulesRepository {
-  const CapsulesRepository(this._api);
+class CapsulesDataSource {
+  const CapsulesDataSource(this._api);
 
   final CapsulesApi _api;
 

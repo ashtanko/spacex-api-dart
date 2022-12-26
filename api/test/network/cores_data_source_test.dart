@@ -1,17 +1,17 @@
 import 'package:api/api/cores/cores_api.dart';
 import 'package:api/api/dio/interceptors/logging_interceptor.dart';
 import 'package:api/models/query/query.dart' as q;
-import 'package:api/repository/cores_repository.dart';
+import 'package:api/network/cores_data_source.dart';
 import 'package:dio/dio.dart';
 import 'package:test/test.dart';
 
 void main() {
   late Dio dio;
-  late CoresRepository repository;
+  late CoresDataSource dataSource;
 
   setUp(() {
     dio = Dio();
-    repository = CoresRepository(CoresApi(dio));
+    dataSource = CoresDataSource(CoresApi(dio));
   });
 
   test('getAllCores with empty query data, returns data from api', () async {
@@ -19,7 +19,7 @@ void main() {
     dio.interceptors.add(LoggingInterceptor());
 
     // act
-    final data = await repository.getAllCores();
+    final data = await dataSource.getAllCores();
 
     // assert
     expect(data.isNotEmpty, true);
@@ -30,7 +30,7 @@ void main() {
     dio.interceptors.add(LoggingInterceptor());
 
     // act
-    final data = await repository.queryCores(const q.Query());
+    final data = await dataSource.queryCores(const q.Query());
 
     // assert
     expect(data.page, 1);
@@ -42,7 +42,7 @@ void main() {
     dio.interceptors.add(LoggingInterceptor());
 
     // act
-    final data = await repository
+    final data = await dataSource
         .queryCores(const q.Query(options: q.Options(offset: 5, page: 1)));
 
     // assert
@@ -56,7 +56,7 @@ void main() {
     dio.interceptors.add(LoggingInterceptor());
 
     // act
-    final data = await repository.getCore(id);
+    final data = await dataSource.getCore(id);
 
     // assert
     expect(data.id, id);

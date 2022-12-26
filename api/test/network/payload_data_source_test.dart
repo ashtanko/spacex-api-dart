@@ -1,17 +1,17 @@
 import 'package:api/api/dio/interceptors/logging_interceptor.dart';
 import 'package:api/api/payloads/payload_api.dart';
 import 'package:api/models/query/query.dart' as q;
-import 'package:api/repository/payload_repository.dart';
+import 'package:api/network/payload_data_source.dart';
 import 'package:dio/dio.dart';
 import 'package:test/test.dart';
 
 void main() {
   late Dio dio;
-  late PayloadRepository repository;
+  late PayloadDataSource dataSource;
 
   setUp(() {
     dio = Dio();
-    repository = PayloadRepository(PayloadApi(dio));
+    dataSource = PayloadDataSource(PayloadApi(dio));
   });
 
   test('getAllPayloads with no empty query data, returns data from api',
@@ -20,7 +20,7 @@ void main() {
     dio.interceptors.add(LoggingInterceptor());
 
     // act
-    final data = await repository.getAllPayloads();
+    final data = await dataSource.getAllPayloads();
 
     // assert
     expect(data.isNotEmpty, true);
@@ -32,7 +32,7 @@ void main() {
     dio.interceptors.add(LoggingInterceptor());
 
     // act
-    final data = await repository.getOnePayload(id);
+    final data = await dataSource.getOnePayload(id);
 
     // assert
     expect(data.id, id);
@@ -44,7 +44,7 @@ void main() {
     dio.interceptors.add(LoggingInterceptor());
 
     // act
-    final data = await repository.queryFullPayloads(
+    final data = await dataSource.queryFullPayloads(
       const q.Query(options: q.Options(populate: ['launch'])),
     );
 
@@ -60,7 +60,7 @@ void main() {
     );
 
     // act
-    final data = await repository
+    final data = await dataSource
         .queryPayloads(const q.Query(options: q.Options(offset: 5, page: 1)));
 
     // assert

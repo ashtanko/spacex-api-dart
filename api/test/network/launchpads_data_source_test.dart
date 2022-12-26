@@ -1,17 +1,17 @@
 import 'package:api/api/dio/interceptors/logging_interceptor.dart';
 import 'package:api/api/launchpads/launchpads_api.dart';
 import 'package:api/models/query/query.dart' as q;
-import 'package:api/repository/launchpads_repository.dart';
+import 'package:api/network/launchpads_data_source.dart';
 import 'package:dio/dio.dart';
 import 'package:test/test.dart';
 
 void main() {
   late Dio dio;
-  late LaunchpadsRepository repository;
+  late LaunchpadsDataSource dataSource;
 
   setUp(() {
     dio = Dio();
-    repository = LaunchpadsRepository(LaunchpadsApi(dio));
+    dataSource = LaunchpadsDataSource(LaunchpadsApi(dio));
   });
 
   test('getAllLaunchpads with empty query data, returns data from api',
@@ -20,7 +20,7 @@ void main() {
     dio.interceptors.add(LoggingInterceptor());
 
     // act
-    final data = await repository.getAllLaunchpads();
+    final data = await dataSource.getAllLaunchpads();
 
     // assert
     expect(data.isNotEmpty, true);
@@ -32,7 +32,7 @@ void main() {
     dio.interceptors.add(LoggingInterceptor());
 
     // act
-    final data = await repository.getLaunchpad(id);
+    final data = await dataSource.getLaunchpad(id);
 
     // assert
     expect(data.id, id);
@@ -44,7 +44,7 @@ void main() {
     dio.interceptors.add(LoggingInterceptor());
 
     // act
-    final data = await repository.queryLaunchpads(const q.Query());
+    final data = await dataSource.queryLaunchpads(const q.Query());
 
     // assert
     expect(data.page, 1);
@@ -56,7 +56,7 @@ void main() {
     dio.interceptors.add(LoggingInterceptor());
 
     // act
-    final data = await repository
+    final data = await dataSource
         .queryLaunchpads(const q.Query(options: q.Options(offset: 5, page: 1)));
 
     // assert
@@ -69,7 +69,7 @@ void main() {
     dio.interceptors.add(LoggingInterceptor());
 
     // act
-    final data = await repository.queryFullLaunchpads(
+    final data = await dataSource.queryFullLaunchpads(
       const q.Query(options: q.Options(populate: ['launches', 'rockets'])),
     );
 

@@ -3,7 +3,7 @@ import 'package:api/api/dio/dio_factory.dart';
 import 'package:api/models/core/core_model.dart';
 import 'package:api/models/query/query.dart';
 import 'package:api/models/response/api_paginated_list.dart';
-import 'package:api/repository/cores_repository.dart';
+import 'package:api/network/cores_data_source.dart';
 
 Future<List<CoreModel>> getAllCores() async {
   return getCoresRepository().getAllCores();
@@ -18,9 +18,9 @@ Future<ApiPaginatedList<CoreModel>> queryCores(Query query) async {
 }
 
 // injection
-CoresRepository getCoresRepository() {
+CoresDataSource getCoresRepository() {
   final api = getApi();
-  return CoresRepository(api);
+  return CoresDataSource(api);
 }
 
 CoresApi getApi() {

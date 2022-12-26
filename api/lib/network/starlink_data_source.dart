@@ -3,8 +3,8 @@ import 'package:api/models/query/query.dart' as q;
 import 'package:api/models/response/api_paginated_list.dart';
 import 'package:api/models/starlink/starlink_model.dart';
 
-class StarlinkRepository {
-  StarlinkRepository(this._api);
+class StarlinkDataSource {
+  StarlinkDataSource(this._api);
 
   final StarlinkApi _api;
 

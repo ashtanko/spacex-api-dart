@@ -3,8 +3,8 @@ import 'package:api/models/crew_model/crew_model.dart';
 import 'package:api/models/query/query.dart' as q;
 import 'package:api/models/response/api_paginated_list.dart';
 
-class CrewRepository {
-  CrewRepository(this._api);
+class CrewDataSource {
+  CrewDataSource(this._api);
 
   final CrewApi _api;
 

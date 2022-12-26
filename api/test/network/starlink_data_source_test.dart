@@ -1,17 +1,17 @@
 import 'package:api/api/dio/interceptors/logging_interceptor.dart';
 import 'package:api/api/starlink/starlink_api.dart';
 import 'package:api/models/query/query.dart' as q;
-import 'package:api/repository/starlink_repository.dart';
+import 'package:api/network/starlink_data_source.dart';
 import 'package:dio/dio.dart';
 import 'package:test/test.dart';
 
 void main() {
   late Dio dio;
-  late StarlinkRepository repository;
+  late StarlinkDataSource dataSource;
 
   setUp(() {
     dio = Dio();
-    repository = StarlinkRepository(StarlinkApi(dio));
+    dataSource = StarlinkDataSource(StarlinkApi(dio));
   });
 
   test('getStarlinkList with empty query data, returns data from api',
@@ -20,7 +20,7 @@ void main() {
     dio.interceptors.add(LoggingInterceptor());
 
     // act
-    final data = await repository.getStarlinkList();
+    final data = await dataSource.getStarlinkList();
 
     // assert
     expect(data.isNotEmpty, true);
@@ -32,7 +32,7 @@ void main() {
     dio.interceptors.add(LoggingInterceptor());
 
     // act
-    final data = await repository.queryStarlinkList(const q.Query());
+    final data = await dataSource.queryStarlinkList(const q.Query());
 
     // assert
     expect(data.page, 1);
@@ -44,7 +44,7 @@ void main() {
     dio.interceptors.add(LoggingInterceptor());
 
     // act
-    final data = await repository.queryStarlinkList(
+    final data = await dataSource.queryStarlinkList(
       const q.Query(options: q.Options(offset: 5, page: 1)),
     );
 
@@ -58,7 +58,7 @@ void main() {
     dio.interceptors.add(LoggingInterceptor());
 
     // act
-    final data = await repository.queryFullStarlinkList(
+    final data = await dataSource.queryFullStarlinkList(
       const q.Query(options: q.Options(populate: ['launch'])),
     );
 
@@ -73,7 +73,7 @@ void main() {
     dio.interceptors.add(LoggingInterceptor());
 
     // act
-    final data = await repository.getStarlink(id);
+    final data = await dataSource.getStarlink(id);
 
     // assert
     expect(data.id, id);

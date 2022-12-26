@@ -3,8 +3,8 @@ import 'package:api/api/vehicle/vehicle_api.dart';
 import 'package:api/models/query/query.dart' as q;
 import 'package:api/models/response/api_paginated_list.dart';
 
-class VehicleRepository {
-  VehicleRepository(this._api);
+class VehicleDataSource {
+  VehicleDataSource(this._api);
 
   final VehicleApi _api;
 
@@ -16,7 +16,9 @@ class VehicleRepository {
     return _api.getDragon(id);
   }
 
-  Future<ApiPaginatedList<DragonVehicleModel>> queryDragons(q.Query query) async {
+  Future<ApiPaginatedList<DragonVehicleModel>> queryDragons(
+    q.Query query,
+  ) async {
     return _api.queryDragons(query);
   }
 

@@ -3,8 +3,8 @@ import 'package:api/models/payload/payload_model.dart';
 import 'package:api/models/query/query.dart' as q;
 import 'package:api/models/response/api_paginated_list.dart';
 
-class PayloadRepository {
-  PayloadRepository(this._api);
+class PayloadDataSource {
+  PayloadDataSource(this._api);
 
   final PayloadApi _api;
 
@@ -20,7 +20,9 @@ class PayloadRepository {
     return _api.queryPayloads(query);
   }
 
-  Future<ApiPaginatedList<FullPayloadModel>> queryFullPayloads(q.Query query) async {
+  Future<ApiPaginatedList<FullPayloadModel>> queryFullPayloads(
+    q.Query query,
+  ) async {
     return _api.queryFullPayloads(query);
   }
 }

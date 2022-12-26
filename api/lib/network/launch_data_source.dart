@@ -3,8 +3,8 @@ import 'package:api/models/launch/launch_model.dart';
 import 'package:api/models/query/query.dart' as q;
 import 'package:api/models/response/api_paginated_list.dart';
 
-class LaunchRepository {
-  LaunchRepository(this._api);
+class LaunchDataSource {
+  LaunchDataSource(this._api);
 
   final LaunchApi _api;
 
@@ -32,11 +32,15 @@ class LaunchRepository {
     return _api.getLaunch(id);
   }
 
-  Future<ApiPaginatedList<LaunchSimpleModel>> queryLaunches(q.Query query) async {
+  Future<ApiPaginatedList<LaunchSimpleModel>> queryLaunches(
+    q.Query query,
+  ) async {
     return _api.queryLaunches(query);
   }
 
-  Future<ApiPaginatedList<FullLaunchModel>> queryFullLaunches(q.Query query) async {
+  Future<ApiPaginatedList<FullLaunchModel>> queryFullLaunches(
+    q.Query query,
+  ) async {
     return _api.queryFullLaunches(query);
   }
 }

@@ -3,7 +3,7 @@ import 'package:api/api/dio/dio_factory.dart';
 import 'package:api/models/capsule/capsule_model.dart';
 import 'package:api/models/query/query.dart';
 import 'package:api/models/response/api_paginated_list.dart';
-import 'package:api/repository/capsules_repository.dart';
+import 'package:api/network/capsules_data_source.dart';
 
 Future<List<CapsuleModel>> getAllCapsules() async {
   return getCapsulesRepository().getAllCapsules();
@@ -24,9 +24,9 @@ Future<ApiPaginatedList<CapsuleFullModel>> queryFullCapsules(
 }
 
 // injection
-CapsulesRepository getCapsulesRepository() {
+CapsulesDataSource getCapsulesRepository() {
   final api = getApi();
-  return CapsulesRepository(api);
+  return CapsulesDataSource(api);
 }
 
 CapsulesApi getApi() {
