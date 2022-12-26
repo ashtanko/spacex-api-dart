@@ -116,7 +116,7 @@ void main() {
       () async {
         // arrange
         final Map<String, dynamic> jsonMap = json.decode(
-          readJson('fixtures/capsule.json'),
+          readJson('fixtures/capsules/capsule.json'),
         ) as Map<String, dynamic>;
 
         // act
