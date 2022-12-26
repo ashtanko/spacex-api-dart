@@ -1,5 +1,7 @@
 import 'package:api/api/capsules/capsules_api.dart';
 import 'package:api/models/capsule/capsule_model.dart';
+import 'package:api/models/query/query.dart';
+import 'package:api/models/response/api_paginated_list.dart';
 import 'package:api/network/capsules_data_source.dart';
 import 'package:mocktail/mocktail.dart';
 import 'package:test/test.dart';
@@ -19,8 +21,8 @@ void main() {
   });
 
   group('get all capsules', () {
-    final rawJson = 'capsule.json'.toFixture();
-    final capsules = [CapsuleModel.fromJson(rawJson)];
+    final rawJson = 'capsules/capsule.json'.toFixture();
+    final allCapsulesMockResponse = [CapsuleModel.fromJson(rawJson)];
     test(
       'should perform a GET request on /capsules',
       () async {
@@ -28,7 +30,7 @@ void main() {
         when(
           () => capsulesApi.getAllCapsules(),
         ).thenAnswer(
-          (_) async => capsules,
+          (_) async => allCapsulesMockResponse,
         );
 
         // act
@@ -42,8 +44,8 @@ void main() {
 
   group('get one capsule', () {
     const capsuleId = '5e9e2c5bf35918ed873b2664';
-    final capsuleRawJson = 'one_capsule.json'.toFixture();
-    final capsule = CapsuleModel.fromJson(capsuleRawJson);
+    final capsuleRawJson = 'capsules/one_capsule.json'.toFixture();
+    final oneCapsuleMockResponse = CapsuleModel.fromJson(capsuleRawJson);
     test(
       'should perform a GET request on /capsules/{$capsuleId}',
       () async {
@@ -51,13 +53,41 @@ void main() {
         when(
           () => capsulesApi.getCapsule(capsuleId),
         ).thenAnswer(
-          (_) async => capsule,
+          (_) async => oneCapsuleMockResponse,
         );
 
         // act
         dataSource.getCapsule(capsuleId);
         // assert
         verify(() => capsulesApi.getCapsule(capsuleId));
+        verifyNoMoreInteractions(capsulesApi);
+      },
+    );
+  });
+
+  group('query capsules', () {
+    final rawJson = 'capsules/capsule.json'.toFixture();
+    final queryCapsulesMockResponse = ApiPaginatedList(
+      results: [
+        CapsuleModel.fromJson(rawJson),
+      ],
+    );
+    final queryRawJson = 'capsules/capsules_query.json'.toFixture();
+    final query = Query.fromJson(queryRawJson);
+    test(
+      'should perform a POST request on /capsules/query',
+      () async {
+        // arrange
+        when(
+          () => capsulesApi.queryCapsules(query),
+        ).thenAnswer(
+          (_) async => queryCapsulesMockResponse,
+        );
+
+        // act
+        dataSource.queryCapsules(query);
+        // assert
+        verify(() => capsulesApi.queryCapsules(query));
         verifyNoMoreInteractions(capsulesApi);
       },
     );

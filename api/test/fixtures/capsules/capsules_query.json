@@ -1,0 +1,12 @@
+{
+  "query": {},
+  "options": {
+    "pagination": true,
+    "page": 2,
+    "limit": 5,
+    "offset": 5,
+    "populate": [
+      "launches"
+    ]
+  }
+}

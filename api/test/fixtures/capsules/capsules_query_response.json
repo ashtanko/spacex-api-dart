@@ -1,0 +1,418 @@
+{
+  "docs": [
+    {
+      "reuse_count": 0,
+      "water_landings": 1,
+      "land_landings": 0,
+      "last_update": "Hanging in atrium at SpaceX HQ in Hawthorne ",
+      "launches": [
+        {
+          "fairings": null,
+          "links": {
+            "patch": {
+              "small": "https://images2.imgbox.com/d9/3e/FfrN88ry_o.png",
+              "large": "https://images2.imgbox.com/00/2f/FhtEd0nB_o.png"
+            },
+            "reddit": {
+              "campaign": null,
+              "launch": null,
+              "media": null,
+              "recovery": null
+            },
+            "flickr": {
+              "small": [],
+              "original": []
+            },
+            "presskit": "http://www.spacex.com/files/downloads/cots1-20101206.pdf",
+            "webcast": "https://www.youtube.com/watch?v=cdLITgWKe_0",
+            "youtube_id": "cdLITgWKe_0",
+            "article": "https://en.wikipedia.org/wiki/SpaceX_COTS_Demo_Flight_1",
+            "wikipedia": "https://en.wikipedia.org/wiki/SpaceX_COTS_Demo_Flight_1"
+          },
+          "static_fire_date_utc": "2010-12-04T00:00:00.000Z",
+          "static_fire_date_unix": 1291420800,
+          "net": false,
+          "window": 0,
+          "rocket": "5e9d0d95eda69973a809d1ec",
+          "success": true,
+          "failures": [],
+          "details": null,
+          "crew": [],
+          "ships": [
+            "5ea6ed2d080df4000697c901"
+          ],
+          "capsules": [
+            "5e9e2c5bf35918ed873b2664"
+          ],
+          "payloads": [
+            "5eb0e4b9b6c3bb0006eeb1e8",
+            "5eb0e4b9b6c3bb0006eeb1e9"
+          ],
+          "launchpad": "5e9e4501f509094ba4566f84",
+          "flight_number": 7,
+          "name": "COTS 1",
+          "date_utc": "2010-12-08T15:43:00.000Z",
+          "date_unix": 1291822980,
+          "date_local": "2010-12-08T11:43:00-04:00",
+          "date_precision": "hour",
+          "upcoming": false,
+          "cores": [
+            {
+              "core": "5e9e289ef35918187c3b2629",
+              "flight": 1,
+              "gridfins": false,
+              "legs": false,
+              "reused": false,
+              "landing_attempt": false,
+              "landing_success": null,
+              "landing_type": null,
+              "landpad": null
+            }
+          ],
+          "auto_update": true,
+          "tbd": false,
+          "launch_library_id": null,
+          "id": "5eb87cdeffd86e000604b330"
+        }
+      ],
+      "serial": "C101",
+      "status": "retired",
+      "type": "Dragon 1.0",
+      "id": "5e9e2c5bf35918ed873b2664"
+    },
+    {
+      "reuse_count": 0,
+      "water_landings": 1,
+      "land_landings": 0,
+      "last_update": "On display at KSC Visitor's Center ",
+      "launches": [
+        {
+          "fairings": null,
+          "links": {
+            "patch": {
+              "small": "https://images2.imgbox.com/fc/7a/r9ITwL12_o.png",
+              "large": "https://images2.imgbox.com/2b/8e/MYyHbnd2_o.png"
+            },
+            "reddit": {
+              "campaign": null,
+              "launch": null,
+              "media": null,
+              "recovery": null
+            },
+            "flickr": {
+              "small": [],
+              "original": []
+            },
+            "presskit": "https://www.nasa.gov/pdf/649910main_cots2_presskit_051412.pdf",
+            "webcast": "https://www.youtube.com/watch?v=tpQzDbAY7yI",
+            "youtube_id": "tpQzDbAY7yI",
+            "article": "https://en.wikipedia.org/wiki/Dragon_C2%2B",
+            "wikipedia": "https://en.wikipedia.org/wiki/Dragon_C2%2B"
+          },
+          "static_fire_date_utc": "2012-04-30T00:00:00.000Z",
+          "static_fire_date_unix": 1335744000,
+          "net": false,
+          "window": 0,
+          "rocket": "5e9d0d95eda69973a809d1ec",
+          "success": true,
+          "failures": [],
+          "details": "Launch was scrubbed on first attempt, second launch attempt was successful",
+          "crew": [],
+          "ships": [
+            "5ea6ed2d080df4000697c901"
+          ],
+          "capsules": [
+            "5e9e2c5bf3591882af3b2665"
+          ],
+          "payloads": [
+            "5eb0e4bab6c3bb0006eeb1ea"
+          ],
+          "launchpad": "5e9e4501f509094ba4566f84",
+          "flight_number": 8,
+          "name": "COTS 2",
+          "date_utc": "2012-05-22T07:44:00.000Z",
+          "date_unix": 1335944640,
+          "date_local": "2012-05-22T03:44:00-04:00",
+          "date_precision": "hour",
+          "upcoming": false,
+          "cores": [
+            {
+              "core": "5e9e289ef35918f39c3b262a",
+              "flight": 1,
+              "gridfins": false,
+              "legs": false,
+              "reused": false,
+              "landing_attempt": false,
+              "landing_success": null,
+              "landing_type": null,
+              "landpad": null
+            }
+          ],
+          "auto_update": true,
+          "tbd": false,
+          "launch_library_id": null,
+          "id": "5eb87cdfffd86e000604b331"
+        }
+      ],
+      "serial": "C102",
+      "status": "retired",
+      "type": "Dragon 1.0",
+      "id": "5e9e2c5bf3591882af3b2665"
+    },
+    {
+      "reuse_count": 0,
+      "water_landings": 1,
+      "land_landings": 0,
+      "last_update": "Location and status unknown",
+      "launches": [
+        {
+          "fairings": null,
+          "links": {
+            "patch": {
+              "small": "https://images2.imgbox.com/0b/33/2eLGEejP_o.png",
+              "large": "https://images2.imgbox.com/52/09/eNvilptL_o.png"
+            },
+            "reddit": {
+              "campaign": null,
+              "launch": null,
+              "media": null,
+              "recovery": null
+            },
+            "flickr": {
+              "small": [],
+              "original": []
+            },
+            "presskit": "https://www.nasa.gov/pdf/694166main_SpaceXCRS-1PressKit.pdf",
+            "webcast": "https://www.youtube.com/watch?v=-Vk3hiV_zXU",
+            "youtube_id": "-Vk3hiV_zXU",
+            "article": "https://www.nasa.gov/mission_pages/station/main/spacex-crs1-target.html",
+            "wikipedia": "https://en.wikipedia.org/wiki/SpaceX_CRS-1"
+          },
+          "static_fire_date_utc": "2012-09-29T00:00:00.000Z",
+          "static_fire_date_unix": 1348876800,
+          "net": false,
+          "window": 0,
+          "rocket": "5e9d0d95eda69973a809d1ec",
+          "success": true,
+          "failures": [],
+          "details": "CRS-1 successful, but the secondary payload was inserted into abnormally low orbit and lost due to Falcon 9 boost stage engine failure, ISS visiting vehicle safety rules, and the primary payload owner's contractual right to decline a second ignition of the second stage under some conditions.",
+          "crew": [],
+          "ships": [
+            "5ea6ed2d080df4000697c902"
+          ],
+          "capsules": [
+            "5e9e2c5bf3591835983b2666"
+          ],
+          "payloads": [
+            "5eb0e4bab6c3bb0006eeb1eb",
+            "5eb0e4bab6c3bb0006eeb1ec"
+          ],
+          "launchpad": "5e9e4501f509094ba4566f84",
+          "flight_number": 9,
+          "name": "CRS-1",
+          "date_utc": "2012-10-08T00:35:00.000Z",
+          "date_unix": 1349656500,
+          "date_local": "2012-10-08T20:35:00-04:00",
+          "date_precision": "hour",
+          "upcoming": false,
+          "cores": [
+            {
+              "core": "5e9e289ff3591821a73b262b",
+              "flight": 1,
+              "gridfins": false,
+              "legs": false,
+              "reused": false,
+              "landing_attempt": false,
+              "landing_success": null,
+              "landing_type": null,
+              "landpad": null
+            }
+          ],
+          "auto_update": true,
+          "tbd": false,
+          "launch_library_id": null,
+          "id": "5eb87ce0ffd86e000604b332"
+        }
+      ],
+      "serial": "C103",
+      "status": "unknown",
+      "type": "Dragon 1.0",
+      "id": "5e9e2c5bf3591835983b2666"
+    },
+    {
+      "reuse_count": 0,
+      "water_landings": 1,
+      "land_landings": 0,
+      "last_update": "Location and status unknown",
+      "launches": [
+        {
+          "fairings": null,
+          "links": {
+            "patch": {
+              "small": "https://images2.imgbox.com/1b/b6/Z4oktZeR_o.png",
+              "large": "https://images2.imgbox.com/ef/39/FyZRYeOh_o.png"
+            },
+            "reddit": {
+              "campaign": null,
+              "launch": "https://www.reddit.com/r/space/comments/19gm5f/live_coverage_spacex_crs2_launch_to_the_iss/c8nvah4",
+              "media": null,
+              "recovery": null
+            },
+            "flickr": {
+              "small": [],
+              "original": []
+            },
+            "presskit": "https://www.nasa.gov/sites/default/files/files/Orb2_PRESS_KIT.pdf",
+            "webcast": "https://www.youtube.com/watch?v=ik0ElKl5kW4",
+            "youtube_id": "ik0ElKl5kW4",
+            "article": "https://en.wikipedia.org/wiki/SpaceX_CRS-2",
+            "wikipedia": "https://en.wikipedia.org/wiki/SpaceX_CRS-2"
+          },
+          "static_fire_date_utc": "2013-02-25T18:30:00.000Z",
+          "static_fire_date_unix": 1361817000,
+          "net": false,
+          "window": 0,
+          "rocket": "5e9d0d95eda69973a809d1ec",
+          "success": true,
+          "failures": [],
+          "details": "Last launch of the original Falcon 9 v1.0 launch vehicle",
+          "crew": [],
+          "ships": [
+            "5ea6ed2d080df4000697c902"
+          ],
+          "capsules": [
+            "5e9e2c5bf359189ef23b2667"
+          ],
+          "payloads": [
+            "5eb0e4bbb6c3bb0006eeb1ed"
+          ],
+          "launchpad": "5e9e4501f509094ba4566f84",
+          "flight_number": 10,
+          "name": "CRS-2",
+          "date_utc": "2013-03-01T19:10:00.000Z",
+          "date_unix": 1362165000,
+          "date_local": "2013-03-01T15:10:00-04:00",
+          "date_precision": "hour",
+          "upcoming": false,
+          "cores": [
+            {
+              "core": "5e9e289ff3591884e03b262c",
+              "flight": 1,
+              "gridfins": false,
+              "legs": false,
+              "reused": false,
+              "landing_attempt": false,
+              "landing_success": null,
+              "landing_type": null,
+              "landpad": null
+            }
+          ],
+          "auto_update": true,
+          "tbd": false,
+          "launch_library_id": null,
+          "id": "5eb87ce1ffd86e000604b333"
+        }
+      ],
+      "serial": "C104",
+      "status": "unknown",
+      "type": "Dragon 1.0",
+      "id": "5e9e2c5bf359189ef23b2667"
+    },
+    {
+      "reuse_count": 0,
+      "water_landings": 1,
+      "land_landings": 0,
+      "last_update": "Location and status unknown",
+      "launches": [
+        {
+          "fairings": null,
+          "links": {
+            "patch": {
+              "small": "https://images2.imgbox.com/a0/cb/s1h2RuR0_o.png",
+              "large": "https://images2.imgbox.com/ff/81/EOWojaSj_o.png"
+            },
+            "reddit": {
+              "campaign": null,
+              "launch": "http://www.reddit.com/r/spacex/comments/22zo8c",
+              "media": null,
+              "recovery": null
+            },
+            "flickr": {
+              "small": [],
+              "original": [
+                "https://farm8.staticflickr.com/7615/16670240949_8d43db0e36_o.jpg",
+                "https://farm9.staticflickr.com/8597/16856369125_e97cd30ef7_o.jpg",
+                "https://farm8.staticflickr.com/7586/16166732954_9338dc859c_o.jpg",
+                "https://farm8.staticflickr.com/7603/16855223522_462da54e84_o.jpg",
+                "https://farm8.staticflickr.com/7618/16234010894_e1210ec300_o.jpg",
+                "https://farm8.staticflickr.com/7617/16855338881_69542a2fa9_o.jpg"
+              ]
+            },
+            "presskit": "http://www.spacex.com/sites/spacex/files/spacexcrs-3_presskit_042014.pdf",
+            "webcast": "https://www.youtube.com/watch?v=Od-lON4bTyQ",
+            "youtube_id": "Od-lON4bTyQ",
+            "article": "https://newatlas.com/crs-3-launch-spacex/31671/",
+            "wikipedia": "https://en.wikipedia.org/wiki/SpaceX_CRS-3"
+          },
+          "static_fire_date_utc": "2014-03-08T00:00:00.000Z",
+          "static_fire_date_unix": 1394236800,
+          "net": false,
+          "window": 0,
+          "rocket": "5e9d0d95eda69973a809d1ec",
+          "success": true,
+          "failures": [],
+          "details": "Following second-stage separation, SpaceX conducted a second controlled-descent test of the discarded booster vehicle and achieved the first successful controlled ocean touchdown of a liquid-rocket-engine orbital booster. Following touchdown the first stage tipped over as expected and was destroyed. This was the first Falcon 9 booster to fly with extensible landing legs and the first Dragon mission with the Falcon 9 v1.1 launch vehicle.",
+          "crew": [],
+          "ships": [
+            "5ea6ed2d080df4000697c902"
+          ],
+          "capsules": [
+            "5e9e2c5bf3591859a63b2668"
+          ],
+          "payloads": [
+            "5eb0e4bbb6c3bb0006eeb1f1"
+          ],
+          "launchpad": "5e9e4501f509094ba4566f84",
+          "flight_number": 14,
+          "name": "CRS-3",
+          "date_utc": "2014-04-18T19:25:00.000Z",
+          "date_unix": 1397849100,
+          "date_local": "2014-04-18T15:25:00-04:00",
+          "date_precision": "hour",
+          "upcoming": false,
+          "cores": [
+            {
+              "core": "5e9e289ff3591829343b2630",
+              "flight": 1,
+              "gridfins": false,
+              "legs": true,
+              "reused": false,
+              "landing_attempt": true,
+              "landing_success": true,
+              "landing_type": "Ocean",
+              "landpad": null
+            }
+          ],
+          "auto_update": true,
+          "tbd": false,
+          "launch_library_id": null,
+          "id": "5eb87ce4ffd86e000604b337"
+        }
+      ],
+      "serial": "C105",
+      "status": "unknown",
+      "type": "Dragon 1.1",
+      "id": "5e9e2c5bf3591859a63b2668"
+    }
+  ],
+  "totalDocs": 25,
+  "offset": 0,
+  "limit": 5,
+  "totalPages": 5,
+  "page": 1,
+  "pagingCounter": 1,
+  "hasPrevPage": false,
+  "hasNextPage": true,
+  "prevPage": null,
+  "nextPage": 2
+}

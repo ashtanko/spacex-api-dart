@@ -1,0 +1,13 @@
+{
+  "query": {},
+  "options": {
+    "pagination": true,
+    "page": 1,
+    "limit": 5,
+    "populate": [
+      "payloads",
+      "launchpad",
+      "rocket"
+    ]
+  }
+}

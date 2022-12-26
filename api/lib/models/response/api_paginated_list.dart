@@ -8,14 +8,14 @@ part 'api_paginated_list.g.dart';
 class ApiPaginatedList<T> extends Equatable {
   const ApiPaginatedList({
     required this.results,
-    required this.totalDocs,
-    required this.offset,
-    required this.limit,
-    required this.totalPages,
-    required this.page,
-    required this.pagingCounter,
-    required this.hasPrevPage,
-    required this.hasNextPage,
+    this.totalDocs = 0,
+    this.offset = 0,
+    this.limit = 0,
+    this.totalPages = 0,
+    this.page = 0,
+    this.pagingCounter = 0,
+    this.hasPrevPage = false,
+    this.hasNextPage = false,
     this.prevPage,
     this.nextPage,
   });
