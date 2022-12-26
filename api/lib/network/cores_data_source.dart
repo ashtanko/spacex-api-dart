@@ -19,4 +19,8 @@ class CoresDataSource {
   Future<ApiPaginatedList<CoreModel>> queryCores(q.Query query) async {
     return _api.queryCores(query);
   }
+
+  Future<ApiPaginatedList<CoreFullModel>> queryFullCores(q.Query query) async {
+    return _api.queryFullCores(query);
+  }
 }

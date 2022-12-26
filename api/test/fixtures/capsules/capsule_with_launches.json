@@ -1,0 +1,80 @@
+{
+  "reuse_count": 0,
+  "water_landings": 1,
+  "land_landings": 0,
+  "last_update": "Hanging in atrium at SpaceX HQ in Hawthorne ",
+  "launches": [
+    {
+      "fairings": null,
+      "links": {
+        "patch": {
+          "small": "https://images2.imgbox.com/d9/3e/FfrN88ry_o.png",
+          "large": "https://images2.imgbox.com/00/2f/FhtEd0nB_o.png"
+        },
+        "reddit": {
+          "campaign": null,
+          "launch": null,
+          "media": null,
+          "recovery": null
+        },
+        "flickr": {
+          "small": [],
+          "original": []
+        },
+        "presskit": "http://www.spacex.com/files/downloads/cots1-20101206.pdf",
+        "webcast": "https://www.youtube.com/watch?v=cdLITgWKe_0",
+        "youtube_id": "cdLITgWKe_0",
+        "article": "https://en.wikipedia.org/wiki/SpaceX_COTS_Demo_Flight_1",
+        "wikipedia": "https://en.wikipedia.org/wiki/SpaceX_COTS_Demo_Flight_1"
+      },
+      "static_fire_date_utc": "2010-12-04T00:00:00.000Z",
+      "static_fire_date_unix": 1291420800,
+      "net": false,
+      "window": 0,
+      "rocket": "5e9d0d95eda69973a809d1ec",
+      "success": true,
+      "failures": [],
+      "details": null,
+      "crew": [],
+      "ships": [
+        "5ea6ed2d080df4000697c901"
+      ],
+      "capsules": [
+        "5e9e2c5bf35918ed873b2664"
+      ],
+      "payloads": [
+        "5eb0e4b9b6c3bb0006eeb1e8",
+        "5eb0e4b9b6c3bb0006eeb1e9"
+      ],
+      "launchpad": "5e9e4501f509094ba4566f84",
+      "flight_number": 7,
+      "name": "COTS 1",
+      "date_utc": "2010-12-08T15:43:00.000Z",
+      "date_unix": 1291822980,
+      "date_local": "2010-12-08T11:43:00-04:00",
+      "date_precision": "hour",
+      "upcoming": false,
+      "cores": [
+        {
+          "core": "5e9e289ef35918187c3b2629",
+          "flight": 1,
+          "gridfins": false,
+          "legs": false,
+          "reused": false,
+          "landing_attempt": false,
+          "landing_success": null,
+          "landing_type": null,
+          "landpad": null
+        }
+      ],
+      "auto_update": true,
+      "tbd": false,
+      "launch_library_id": null,
+      "id": "5eb87cdeffd86e000604b330"
+    }
+  ],
+  "serial": "C101",
+  "status": "retired",
+  "type": "Dragon 1.0",
+  "id": "5e9e2c5bf35918ed873b2664"
+}

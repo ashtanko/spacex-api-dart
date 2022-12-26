@@ -12,14 +12,14 @@ ApiPaginatedList<T> _$ApiPaginatedListFromJson<T>(
 ) =>
     ApiPaginatedList<T>(
       results: (json['docs'] as List<dynamic>).map(fromJsonT).toList(),
-      totalDocs: json['totalDocs'] as int,
-      offset: json['offset'] as int,
-      limit: json['limit'] as int,
-      totalPages: json['totalPages'] as int,
-      page: json['page'] as int,
-      pagingCounter: json['pagingCounter'] as int,
-      hasPrevPage: json['hasPrevPage'] as bool,
-      hasNextPage: json['hasNextPage'] as bool,
+      totalDocs: json['totalDocs'] as int? ?? 0,
+      offset: json['offset'] as int? ?? 0,
+      limit: json['limit'] as int? ?? 0,
+      totalPages: json['totalPages'] as int? ?? 0,
+      page: json['page'] as int? ?? 0,
+      pagingCounter: json['pagingCounter'] as int? ?? 0,
+      hasPrevPage: json['hasPrevPage'] as bool? ?? false,
+      hasNextPage: json['hasNextPage'] as bool? ?? false,
       prevPage: json['prevPage'] as int?,
       nextPage: json['nextPage'] as int?,
     );

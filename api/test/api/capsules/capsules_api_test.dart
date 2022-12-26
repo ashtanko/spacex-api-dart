@@ -21,7 +21,7 @@ void main() {
   });
 
   group('get all capsules', () {
-    final rawJson = 'capsules/capsule.json'.toFixture();
+    final rawJson = 'capsules/one_capsule.json'.toFixture();
     final allCapsulesMockResponse = [CapsuleModel.fromJson(rawJson)];
     test(
       'should perform a GET request on /capsules',
@@ -88,6 +88,34 @@ void main() {
         dataSource.queryCapsules(query);
         // assert
         verify(() => capsulesApi.queryCapsules(query));
+        verifyNoMoreInteractions(capsulesApi);
+      },
+    );
+  });
+
+  group('query full capsules', () {
+    final rawJson = 'capsules/capsule_with_launches.json'.toFixture();
+    final queryCapsulesMockResponse = ApiPaginatedList(
+      results: [
+        CapsuleFullModel.fromJson(rawJson),
+      ],
+    );
+    final queryRawJson = 'capsules/capsules_query.json'.toFixture();
+    final query = Query.fromJson(queryRawJson);
+    test(
+      'should perform a POST request on /capsules/query',
+      () async {
+        // arrange
+        when(
+          () => capsulesApi.queryFullCapsules(query),
+        ).thenAnswer(
+          (_) async => queryCapsulesMockResponse,
+        );
+
+        // act
+        dataSource.queryFullCapsules(query);
+        // assert
+        verify(() => capsulesApi.queryFullCapsules(query));
         verifyNoMoreInteractions(capsulesApi);
       },
     );

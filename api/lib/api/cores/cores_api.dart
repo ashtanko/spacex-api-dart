@@ -21,4 +21,9 @@ abstract class CoresApi {
 
   @POST('/cores/query')
   Future<ApiPaginatedList<CoreModel>> queryCores(@Body() q.Query query);
+
+  @POST('/capsules/query')
+  Future<ApiPaginatedList<CoreFullModel>> queryFullCores(
+    @Body() q.Query query,
+  );
 }
