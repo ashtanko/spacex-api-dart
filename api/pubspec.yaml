@@ -11,8 +11,6 @@ environment:
   flutter: '>=3.3.0'
 
 dependencies:
-  bloc: ^8.0.3
-  collection: ^1.15.0
   dio: 4.0.6
   equatable: ^2.0.3
   freezed_annotation: 2.1.0
@@ -23,7 +21,6 @@ dependencies:
   stack_trace: 1.10.0
 
 dev_dependencies:
-  bloc_test: ^9.0.3
   build_runner: 2.2.0
   coverage: ^1.2.0
   dart_code_metrics: ^4.14.0
