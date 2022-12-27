@@ -1,9 +1,7 @@
-import 'dart:convert';
-
 import 'package:api/models/index.dart';
 import 'package:test/test.dart';
 
-import '../../json_reader.dart';
+import '../../fixtures_reader.dart';
 
 void main() {
   final achievementModel = AchievementModel(
@@ -37,9 +35,8 @@ void main() {
       'should return a valid model from json',
       () async {
         // arrange
-        final Map<String, dynamic> jsonMap = json.decode(
-          readJson('fixtures/achievement.json'),
-        ) as Map<String, dynamic>;
+        final Map<String, dynamic> jsonMap =
+            'fixtures/achievement.json'.toFixture();
 
         // act
         final result = AchievementModel.fromJson(jsonMap);
