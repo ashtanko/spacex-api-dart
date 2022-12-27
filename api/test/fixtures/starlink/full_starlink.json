@@ -1,0 +1,133 @@
+{
+  "spaceTrack": {
+    "CCSDS_OMM_VERS": "2.0",
+    "COMMENT": "GENERATED VIA SPACE-TRACK.ORG API",
+    "CREATION_DATE": "2020-10-13T04:16:08",
+    "ORIGINATOR": "18 SPCS",
+    "OBJECT_NAME": "STARLINK-30",
+    "OBJECT_ID": "2019-029K",
+    "CENTER_NAME": "EARTH",
+    "REF_FRAME": "TEME",
+    "TIME_SYSTEM": "UTC",
+    "MEAN_ELEMENT_THEORY": "SGP4",
+    "EPOCH": "2020-10-13T02:56:59.566560",
+    "MEAN_MOTION": 16.43170483,
+    "ECCENTRICITY": 0.0003711,
+    "INCLINATION": 52.9708,
+    "RA_OF_ASC_NODE": 332.0356,
+    "ARG_OF_PERICENTER": 120.7278,
+    "MEAN_ANOMALY": 242.0157,
+    "EPHEMERIS_TYPE": 0,
+    "CLASSIFICATION_TYPE": "U",
+    "NORAD_CAT_ID": 44244,
+    "ELEMENT_SET_NO": 999,
+    "REV_AT_EPOCH": 7775,
+    "BSTAR": 0.0022139,
+    "MEAN_MOTION_DOT": 0.47180237,
+    "MEAN_MOTION_DDOT": 0.000012426,
+    "SEMIMAJOR_AXIS": 6535.519,
+    "PERIOD": 87.635,
+    "APOAPSIS": 159.809,
+    "PERIAPSIS": 154.958,
+    "OBJECT_TYPE": "PAYLOAD",
+    "RCS_SIZE": "LARGE",
+    "COUNTRY_CODE": "US",
+    "LAUNCH_DATE": "2019-05-24",
+    "SITE": "AFETR",
+    "DECAY_DATE": "2020-10-13",
+    "DECAYED": 1,
+    "FILE": 2850561,
+    "GP_ID": 163365918,
+    "TLE_LINE0": "0 STARLINK-30",
+    "TLE_LINE1": "1 44244U 19029K   20287.12291165  .47180237  12426-4  22139-2 0  9995",
+    "TLE_LINE2": "2 44244  52.9708 332.0356 0003711 120.7278 242.0157 16.43170483 77756"
+  },
+  "launch": {
+    "fairings": {
+      "reused": false,
+      "recovery_attempt": true,
+      "recovered": true,
+      "ships": [
+        "5ea6ed2f080df4000697c90c"
+      ]
+    },
+    "links": {
+      "patch": {
+        "small": "https://images2.imgbox.com/79/ec/TOE2PBJq_o.png",
+        "large": "https://images2.imgbox.com/39/aa/5of7buxK_o.png"
+      },
+      "reddit": {
+        "campaign": "https://www.reddit.com/comments/bjybrl",
+        "launch": "https://www.reddit.com/r/spacex/comments/brfbic/rspacex_starlink_official_launch_discussion",
+        "media": "https://www.reddit.com/r/spacex/comments/bp0479/rspacex_starlink_media_thread_videos_images_gifs",
+        "recovery": "https://www.reddit.com/r/spacex/comments/bsaljm/rspacex_starlink_b10493_recovery_discussion_and"
+      },
+      "flickr": {
+        "small": [],
+        "original": [
+          "https://live.staticflickr.com/65535/47926143711_4a0b2680bf_o.jpg",
+          "https://live.staticflickr.com/65535/47926136902_d8ce35223d_o.jpg",
+          "https://live.staticflickr.com/65535/47926144123_2a828b66d5_o.jpg",
+          "https://live.staticflickr.com/65535/47926137127_ef58152b6b_o.jpg",
+          "https://live.staticflickr.com/65535/47926137017_e6d86fa820_o.jpg"
+        ]
+      },
+      "presskit": "https://www.spacex.com/sites/spacex/files/starlink_press_kit.pdf",
+      "webcast": "https://www.youtube.com/watch?v=riBaVeDTEWI",
+      "youtube_id": "riBaVeDTEWI",
+      "article": "https://spaceflightnow.com/2019/05/24/spacexs-first-60-starlink-broadband-satellites-deployed-in-orbit",
+      "wikipedia": "https://en.wikipedia.org/wiki/Starlink_(satellite_constellation)"
+    },
+    "static_fire_date_utc": "2019-05-13T20:06:00.000Z",
+    "static_fire_date_unix": 1557777960,
+    "net": false,
+    "window": 9000,
+    "rocket": "5e9d0d95eda69973a809d1ec",
+    "success": true,
+    "failures": [],
+    "details": "SpaceX will launch dozens of Starlink demonstration satellites from SLC-40, Cape Canaveral AFS. Starlink is a low Earth orbit broadband internet constellation developed and owned by SpaceX which will eventually consist of nearly 12 000 satellites and will provide low latency internet service to ground terminals around the world. Two prototype satellites, Microsats 2a and 2b, were launched from Vandenberg AFB in February 2018. The booster for this mission will land on OCISLY.",
+    "crew": [],
+    "ships": [
+      "5ea6ed30080df4000697c913",
+      "5ea6ed2f080df4000697c90c",
+      "5ea6ed2f080df4000697c90e",
+      "5ea6ed2f080df4000697c90b",
+      "5ea6ed2e080df4000697c909"
+    ],
+    "capsules": [],
+    "payloads": [
+      "5eb0e4cbb6c3bb0006eeb238"
+    ],
+    "launchpad": "5e9e4501f509094ba4566f84",
+    "flight_number": 79,
+    "name": "Starlink v0.9",
+    "date_utc": "2019-05-24T02:30:00.000Z",
+    "date_unix": 1558665000,
+    "date_local": "2019-05-23T22:30:00-04:00",
+    "date_precision": "hour",
+    "upcoming": false,
+    "cores": [
+      {
+        "core": "5e9e28a5f3591833b13b2659",
+        "flight": 3,
+        "gridfins": true,
+        "legs": true,
+        "reused": true,
+        "landing_attempt": true,
+        "landing_success": true,
+        "landing_type": "ASDS",
+        "landpad": "5e9e3032383ecb6bb234e7ca"
+      }
+    ],
+    "auto_update": true,
+    "tbd": false,
+    "launch_library_id": null,
+    "id": "5eb87d30ffd86e000604b378"
+  },
+  "version": "v0.9",
+  "height_km": null,
+  "latitude": null,
+  "longitude": null,
+  "velocity_kms": null,
+  "id": "5eed770f096e59000698560d"
+}

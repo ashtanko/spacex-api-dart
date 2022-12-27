@@ -2,6 +2,8 @@ import 'package:api/api/starlink/starlink_api.dart';
 import 'package:api/models/query/query.dart' as q;
 import 'package:api/models/response/api_paginated_list.dart';
 import 'package:api/models/starlink/starlink_model.dart';
+import 'package:api/utils/exception.dart';
+import 'package:dio/dio.dart';
 
 class StarlinkDataSource {
   StarlinkDataSource(this._api);
@@ -9,22 +11,38 @@ class StarlinkDataSource {
   final StarlinkApi _api;
 
   Future<List<StarlinkModel>> getStarlinkList() async {
-    return _api.getStarlinkList();
+    try {
+      return _api.getStarlinkList();
+    } on DioError catch (_) {
+      throw ServerException();
+    }
   }
 
   Future<StarlinkModel> getStarlink(String id) async {
-    return _api.getStarlink(id);
+    try {
+      return _api.getStarlink(id);
+    } on DioError catch (_) {
+      throw ServerException();
+    }
   }
 
   Future<ApiPaginatedList<StarlinkModel>> queryStarlinkList(
     q.Query query,
   ) async {
-    return _api.queryStarlinkList(query);
+    try {
+      return _api.queryStarlinkList(query);
+    } on DioError catch (_) {
+      throw ServerException();
+    }
   }
 
   Future<ApiPaginatedList<StarlinkFullModel>> queryFullStarlinkList(
     q.Query query,
-  ) {
-    return _api.queryFullStarlinkList(query);
+  ) async {
+    try {
+      return _api.queryFullStarlinkList(query);
+    } on DioError catch (_) {
+      throw ServerException();
+    }
   }
 }
