@@ -18,11 +18,19 @@ _$_CompositeFairingModel _$$_CompositeFairingModelFromJson(
     );
 
 Map<String, dynamic> _$$_CompositeFairingModelToJson(
-        _$_CompositeFairingModel instance) =>
-    <String, dynamic>{
-      'height': instance.height?.toJson(),
-      'diameter': instance.diameter?.toJson(),
-    };
+    _$_CompositeFairingModel instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('height', instance.height?.toJson());
+  writeNotNull('diameter', instance.diameter?.toJson());
+  return val;
+}
 
 _$_ThrustModel _$$_ThrustModelFromJson(Map<String, dynamic> json) =>
     _$_ThrustModel(
@@ -93,13 +101,21 @@ _$_PayloadWeightModel _$$_PayloadWeightModelFromJson(
     );
 
 Map<String, dynamic> _$$_PayloadWeightModelToJson(
-        _$_PayloadWeightModel instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'name': instance.name,
-      'kg': instance.kg,
-      'lb': instance.lb,
-    };
+    _$_PayloadWeightModel instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull('name', instance.name);
+  val['kg'] = instance.kg;
+  val['lb'] = instance.lb;
+  return val;
+}
 
 _$_IspModel _$$_IspModelFromJson(Map<String, dynamic> json) => _$_IspModel(
       seaLevel: json['sea_level'] as num? ?? 0,

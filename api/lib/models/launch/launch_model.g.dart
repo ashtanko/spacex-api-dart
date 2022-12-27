@@ -58,34 +58,43 @@ _$_FullLaunchModel _$$_FullLaunchModelFromJson(Map<String, dynamic> json) =>
           : FairingsModel.fromJson(json['fairings'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_FullLaunchModelToJson(_$_FullLaunchModel instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'tbd': instance.tbd,
-      'auto_update': instance.autoUpdate,
-      'cores': instance.cores.map((e) => e.toJson()).toList(),
-      'upcoming': instance.upcoming,
-      'date_precision': instance.datePrecision,
-      'date_local': instance.dateLocal,
-      'date_unix': instance.dateUnix,
-      'date_utc': instance.dateUtc,
-      'name': instance.name,
-      'flight_number': instance.flightNumber,
-      'launchpad': instance.launchpad?.toJson(),
-      'payloads': instance.payloads.map((e) => e.toJson()).toList(),
-      'capsules': instance.capsules.map((e) => e.toJson()).toList(),
-      'crew': instance.crew,
-      'details': instance.details,
-      'failures': instance.failures.map((e) => e.toJson()).toList(),
-      'success': instance.success,
-      'rocket': instance.rocket?.toJson(),
-      'window': instance.window,
-      'net': instance.net,
-      'static_fire_date_unix': instance.staticFireDateUnix,
-      'static_fire_date_utc': instance.staticFireDateUtc,
-      'links': instance.links?.toJson(),
-      'fairings': instance.fairings?.toJson(),
-    };
+Map<String, dynamic> _$$_FullLaunchModelToJson(_$_FullLaunchModel instance) {
+  final val = <String, dynamic>{
+    'id': instance.id,
+    'tbd': instance.tbd,
+    'auto_update': instance.autoUpdate,
+    'cores': instance.cores.map((e) => e.toJson()).toList(),
+    'upcoming': instance.upcoming,
+    'date_precision': instance.datePrecision,
+    'date_local': instance.dateLocal,
+    'date_unix': instance.dateUnix,
+    'date_utc': instance.dateUtc,
+    'name': instance.name,
+    'flight_number': instance.flightNumber,
+  };
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('launchpad', instance.launchpad?.toJson());
+  val['payloads'] = instance.payloads.map((e) => e.toJson()).toList();
+  val['capsules'] = instance.capsules.map((e) => e.toJson()).toList();
+  val['crew'] = instance.crew;
+  val['details'] = instance.details;
+  val['failures'] = instance.failures.map((e) => e.toJson()).toList();
+  val['success'] = instance.success;
+  writeNotNull('rocket', instance.rocket?.toJson());
+  val['window'] = instance.window;
+  val['net'] = instance.net;
+  val['static_fire_date_unix'] = instance.staticFireDateUnix;
+  val['static_fire_date_utc'] = instance.staticFireDateUtc;
+  writeNotNull('links', instance.links?.toJson());
+  writeNotNull('fairings', instance.fairings?.toJson());
+  return val;
+}
 
 _$_LaunchSimpleModel _$$_LaunchSimpleModelFromJson(Map<String, dynamic> json) =>
     _$_LaunchSimpleModel(
@@ -136,34 +145,43 @@ _$_LaunchSimpleModel _$$_LaunchSimpleModelFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$$_LaunchSimpleModelToJson(
-        _$_LaunchSimpleModel instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'tbd': instance.tbd,
-      'auto_update': instance.autoUpdate,
-      'cores': instance.cores.map((e) => e.toJson()).toList(),
-      'upcoming': instance.upcoming,
-      'date_precision': instance.datePrecision,
-      'date_local': instance.dateLocal,
-      'date_unix': instance.dateUnix,
-      'date_utc': instance.dateUtc,
-      'name': instance.name,
-      'flight_number': instance.flightNumber,
-      'launchpad': instance.launchpad,
-      'payloads': instance.payloads,
-      'capsules': instance.capsules,
-      'crew': instance.crew,
-      'details': instance.details,
-      'failures': instance.failures.map((e) => e.toJson()).toList(),
-      'success': instance.success,
-      'rocket': instance.rocket,
-      'window': instance.window,
-      'net': instance.net,
-      'static_fire_date_unix': instance.staticFireDateUnix,
-      'static_fire_date_utc': instance.staticFireDateUtc,
-      'links': instance.links?.toJson(),
-      'fairings': instance.fairings?.toJson(),
-    };
+    _$_LaunchSimpleModel instance) {
+  final val = <String, dynamic>{
+    'id': instance.id,
+    'tbd': instance.tbd,
+    'auto_update': instance.autoUpdate,
+    'cores': instance.cores.map((e) => e.toJson()).toList(),
+    'upcoming': instance.upcoming,
+    'date_precision': instance.datePrecision,
+    'date_local': instance.dateLocal,
+    'date_unix': instance.dateUnix,
+    'date_utc': instance.dateUtc,
+    'name': instance.name,
+    'flight_number': instance.flightNumber,
+    'launchpad': instance.launchpad,
+    'payloads': instance.payloads,
+    'capsules': instance.capsules,
+    'crew': instance.crew,
+    'details': instance.details,
+    'failures': instance.failures.map((e) => e.toJson()).toList(),
+    'success': instance.success,
+    'rocket': instance.rocket,
+    'window': instance.window,
+    'net': instance.net,
+    'static_fire_date_unix': instance.staticFireDateUnix,
+    'static_fire_date_utc': instance.staticFireDateUtc,
+  };
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('links', instance.links?.toJson());
+  writeNotNull('fairings', instance.fairings?.toJson());
+  return val;
+}
 
 _$_LaunchModel _$$_LaunchModelFromJson(Map<String, dynamic> json) =>
     _$_LaunchModel(
@@ -214,34 +232,43 @@ _$_LaunchModel _$$_LaunchModelFromJson(Map<String, dynamic> json) =>
           : FairingsModel.fromJson(json['fairings'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_LaunchModelToJson(_$_LaunchModel instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'tbd': instance.tbd,
-      'auto_update': instance.autoUpdate,
-      'cores': instance.cores.map((e) => e.toJson()).toList(),
-      'upcoming': instance.upcoming,
-      'date_precision': instance.datePrecision,
-      'date_local': instance.dateLocal,
-      'date_unix': instance.dateUnix,
-      'date_utc': instance.dateUtc,
-      'name': instance.name,
-      'flight_number': instance.flightNumber,
-      'launchpad': instance.launchpad,
-      'payloads': instance.payloads,
-      'capsules': instance.capsules,
-      'crew': instance.crew.map((e) => e.toJson()).toList(),
-      'details': instance.details,
-      'failures': instance.failures.map((e) => e.toJson()).toList(),
-      'success': instance.success,
-      'rocket': instance.rocket,
-      'window': instance.window,
-      'net': instance.net,
-      'static_fire_date_unix': instance.staticFireDateUnix,
-      'static_fire_date_utc': instance.staticFireDateUtc,
-      'links': instance.links?.toJson(),
-      'fairings': instance.fairings?.toJson(),
-    };
+Map<String, dynamic> _$$_LaunchModelToJson(_$_LaunchModel instance) {
+  final val = <String, dynamic>{
+    'id': instance.id,
+    'tbd': instance.tbd,
+    'auto_update': instance.autoUpdate,
+    'cores': instance.cores.map((e) => e.toJson()).toList(),
+    'upcoming': instance.upcoming,
+    'date_precision': instance.datePrecision,
+    'date_local': instance.dateLocal,
+    'date_unix': instance.dateUnix,
+    'date_utc': instance.dateUtc,
+    'name': instance.name,
+    'flight_number': instance.flightNumber,
+    'launchpad': instance.launchpad,
+    'payloads': instance.payloads,
+    'capsules': instance.capsules,
+    'crew': instance.crew.map((e) => e.toJson()).toList(),
+    'details': instance.details,
+    'failures': instance.failures.map((e) => e.toJson()).toList(),
+    'success': instance.success,
+    'rocket': instance.rocket,
+    'window': instance.window,
+    'net': instance.net,
+    'static_fire_date_unix': instance.staticFireDateUnix,
+    'static_fire_date_utc': instance.staticFireDateUtc,
+  };
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('links', instance.links?.toJson());
+  writeNotNull('fairings', instance.fairings?.toJson());
+  return val;
+}
 
 _$_LaunchLinksModel _$$_LaunchLinksModelFromJson(Map<String, dynamic> json) =>
     _$_LaunchLinksModel(
@@ -261,17 +288,25 @@ _$_LaunchLinksModel _$$_LaunchLinksModelFromJson(Map<String, dynamic> json) =>
       wikipedia: json['wikipedia'] as String?,
     );
 
-Map<String, dynamic> _$$_LaunchLinksModelToJson(_$_LaunchLinksModel instance) =>
-    <String, dynamic>{
-      'patch': instance.patch?.toJson(),
-      'reddit': instance.reddit?.toJson(),
-      'flickr': instance.flickr?.toJson(),
-      'presskit': instance.presskit,
-      'webcast': instance.webcast,
-      'youtube_id': instance.youtubeID,
-      'article': instance.article,
-      'wikipedia': instance.wikipedia,
-    };
+Map<String, dynamic> _$$_LaunchLinksModelToJson(_$_LaunchLinksModel instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('patch', instance.patch?.toJson());
+  writeNotNull('reddit', instance.reddit?.toJson());
+  writeNotNull('flickr', instance.flickr?.toJson());
+  writeNotNull('presskit', instance.presskit);
+  writeNotNull('webcast', instance.webcast);
+  writeNotNull('youtube_id', instance.youtubeID);
+  writeNotNull('article', instance.article);
+  writeNotNull('wikipedia', instance.wikipedia);
+  return val;
+}
 
 _$_LaunchFailureModel _$$_LaunchFailureModelFromJson(
         Map<String, dynamic> json) =>
@@ -282,12 +317,20 @@ _$_LaunchFailureModel _$$_LaunchFailureModelFromJson(
     );
 
 Map<String, dynamic> _$$_LaunchFailureModelToJson(
-        _$_LaunchFailureModel instance) =>
-    <String, dynamic>{
-      'time': instance.time,
-      'altitude': instance.altitude,
-      'reason': instance.reason,
-    };
+    _$_LaunchFailureModel instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('time', instance.time);
+  writeNotNull('altitude', instance.altitude);
+  writeNotNull('reason', instance.reason);
+  return val;
+}
 
 _$_LaunchDetailsModel _$$_LaunchDetailsModelFromJson(
         Map<String, dynamic> json) =>
@@ -331,11 +374,19 @@ _$_LaunchPatchModel _$$_LaunchPatchModelFromJson(Map<String, dynamic> json) =>
       large: json['large'] as String?,
     );
 
-Map<String, dynamic> _$$_LaunchPatchModelToJson(_$_LaunchPatchModel instance) =>
-    <String, dynamic>{
-      'small': instance.small,
-      'large': instance.large,
-    };
+Map<String, dynamic> _$$_LaunchPatchModelToJson(_$_LaunchPatchModel instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('small', instance.small);
+  writeNotNull('large', instance.large);
+  return val;
+}
 
 _$_LaunchRedditModel _$$_LaunchRedditModelFromJson(Map<String, dynamic> json) =>
     _$_LaunchRedditModel(
@@ -346,10 +397,18 @@ _$_LaunchRedditModel _$$_LaunchRedditModelFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$$_LaunchRedditModelToJson(
-        _$_LaunchRedditModel instance) =>
-    <String, dynamic>{
-      'campaign': instance.campaign,
-      'launch': instance.launch,
-      'media': instance.media,
-      'recovery': instance.recovery,
-    };
+    _$_LaunchRedditModel instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('campaign', instance.campaign);
+  writeNotNull('launch', instance.launch);
+  writeNotNull('media', instance.media);
+  writeNotNull('recovery', instance.recovery);
+  return val;
+}

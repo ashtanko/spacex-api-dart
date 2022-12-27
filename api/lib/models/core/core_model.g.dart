@@ -22,39 +22,47 @@ _$_CoreModel _$$_CoreModelFromJson(Map<String, dynamic> json) => _$_CoreModel(
       serial: json['serial'] as String?,
       status: json['status'] as String?,
       core: json['core'] as String?,
-      flight: json['flight'] as int? ?? 0,
-      hasGridfins: json['gridfins'] as bool? ?? false,
-      hasLegs: json['legs'] as bool? ?? false,
-      reused: json['reused'] as bool? ?? false,
-      landingAttempt: json['landing_attempt'] as bool? ?? false,
-      landingSuccess: json['landing_success'] as bool? ?? false,
+      flight: json['flight'] as int?,
+      hasGridfins: json['gridfins'] as bool?,
+      hasLegs: json['legs'] as bool?,
+      reused: json['reused'] as bool?,
+      landingAttempt: json['landing_attempt'] as bool?,
+      landingSuccess: json['landing_success'] as bool?,
       landingType: json['landing_type'] as String?,
       landpad: json['landpad'] as String?,
     );
 
-Map<String, dynamic> _$$_CoreModelToJson(_$_CoreModel instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'block': instance.block,
-      'reuse_count': instance.reuseCount,
-      'rtls_attempts': instance.rtlsAttempts,
-      'rtls_landings': instance.rtlsLandings,
-      'asds_attempts': instance.asdsAttempts,
-      'asds_landings': instance.asdsLandings,
-      'last_update': instance.lastUpdate,
-      'launches': instance.launches,
-      'serial': instance.serial,
-      'status': instance.status,
-      'core': instance.core,
-      'flight': instance.flight,
-      'gridfins': instance.hasGridfins,
-      'legs': instance.hasLegs,
-      'reused': instance.reused,
-      'landing_attempt': instance.landingAttempt,
-      'landing_success': instance.landingSuccess,
-      'landing_type': instance.landingType,
-      'landpad': instance.landpad,
-    };
+Map<String, dynamic> _$$_CoreModelToJson(_$_CoreModel instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  val['block'] = instance.block;
+  val['reuse_count'] = instance.reuseCount;
+  val['rtls_attempts'] = instance.rtlsAttempts;
+  val['rtls_landings'] = instance.rtlsLandings;
+  val['asds_attempts'] = instance.asdsAttempts;
+  val['asds_landings'] = instance.asdsLandings;
+  val['last_update'] = instance.lastUpdate;
+  val['launches'] = instance.launches;
+  writeNotNull('serial', instance.serial);
+  writeNotNull('status', instance.status);
+  writeNotNull('core', instance.core);
+  writeNotNull('flight', instance.flight);
+  writeNotNull('gridfins', instance.hasGridfins);
+  writeNotNull('legs', instance.hasLegs);
+  writeNotNull('reused', instance.reused);
+  writeNotNull('landing_attempt', instance.landingAttempt);
+  writeNotNull('landing_success', instance.landingSuccess);
+  writeNotNull('landing_type', instance.landingType);
+  writeNotNull('landpad', instance.landpad);
+  return val;
+}
 
 _$_CoreFullModel _$$_CoreFullModelFromJson(Map<String, dynamic> json) =>
     _$_CoreFullModel(
@@ -83,26 +91,34 @@ _$_CoreFullModel _$$_CoreFullModelFromJson(Map<String, dynamic> json) =>
       landpad: json['landpad'] as String?,
     );
 
-Map<String, dynamic> _$$_CoreFullModelToJson(_$_CoreFullModel instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'block': instance.block,
-      'reuse_count': instance.reuseCount,
-      'rtls_attempts': instance.rtlsAttempts,
-      'rtls_landings': instance.rtlsLandings,
-      'asds_attempts': instance.asdsAttempts,
-      'asds_landings': instance.asdsLandings,
-      'last_update': instance.lastUpdate,
-      'launches': instance.launches.map((e) => e.toJson()).toList(),
-      'serial': instance.serial,
-      'status': instance.status,
-      'core': instance.core,
-      'flight': instance.flight,
-      'gridfins': instance.hasGridfins,
-      'legs': instance.hasLegs,
-      'reused': instance.reused,
-      'landing_attempt': instance.landingAttempt,
-      'landing_success': instance.landingSuccess,
-      'landing_type': instance.landingType,
-      'landpad': instance.landpad,
-    };
+Map<String, dynamic> _$$_CoreFullModelToJson(_$_CoreFullModel instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  val['block'] = instance.block;
+  val['reuse_count'] = instance.reuseCount;
+  val['rtls_attempts'] = instance.rtlsAttempts;
+  val['rtls_landings'] = instance.rtlsLandings;
+  val['asds_attempts'] = instance.asdsAttempts;
+  val['asds_landings'] = instance.asdsLandings;
+  val['last_update'] = instance.lastUpdate;
+  val['launches'] = instance.launches.map((e) => e.toJson()).toList();
+  writeNotNull('serial', instance.serial);
+  writeNotNull('status', instance.status);
+  writeNotNull('core', instance.core);
+  val['flight'] = instance.flight;
+  val['gridfins'] = instance.hasGridfins;
+  val['legs'] = instance.hasLegs;
+  val['reused'] = instance.reused;
+  val['landing_attempt'] = instance.landingAttempt;
+  writeNotNull('landing_success', instance.landingSuccess);
+  writeNotNull('landing_type', instance.landingType);
+  writeNotNull('landpad', instance.landpad);
+  return val;
+}

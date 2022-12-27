@@ -17,11 +17,19 @@ _$_RocketPayloadModel _$$_RocketPayloadModelFromJson(
     );
 
 Map<String, dynamic> _$$_RocketPayloadModelToJson(
-        _$_RocketPayloadModel instance) =>
-    <String, dynamic>{
-      'composite_fairing': instance.compositeFairing?.toJson(),
-      'option_1': instance.option1,
-    };
+    _$_RocketPayloadModel instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('composite_fairing', instance.compositeFairing?.toJson());
+  writeNotNull('option_1', instance.option1);
+  return val;
+}
 
 _$_FirstStageModel _$$_FirstStageModelFromJson(Map<String, dynamic> json) =>
     _$_FirstStageModel(
@@ -64,15 +72,23 @@ _$_SecondStageModel _$$_SecondStageModelFromJson(Map<String, dynamic> json) =>
       burnTimeSec: json['burn_time_sec'] as int? ?? 0,
     );
 
-Map<String, dynamic> _$$_SecondStageModelToJson(_$_SecondStageModel instance) =>
-    <String, dynamic>{
-      'thrust': instance.thrust?.toJson(),
-      'payloads': instance.payloads?.toJson(),
-      'reusable': instance.reusable,
-      'engines': instance.engines,
-      'fuel_amount_tons': instance.fuelAmountTons,
-      'burn_time_sec': instance.burnTimeSec,
-    };
+Map<String, dynamic> _$$_SecondStageModelToJson(_$_SecondStageModel instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('thrust', instance.thrust?.toJson());
+  writeNotNull('payloads', instance.payloads?.toJson());
+  val['reusable'] = instance.reusable;
+  val['engines'] = instance.engines;
+  val['fuel_amount_tons'] = instance.fuelAmountTons;
+  val['burn_time_sec'] = instance.burnTimeSec;
+  return val;
+}
 
 _$_RocketModel _$$_RocketModelFromJson(Map<String, dynamic> json) =>
     _$_RocketModel(
@@ -124,29 +140,37 @@ _$_RocketModel _$$_RocketModelFromJson(Map<String, dynamic> json) =>
       id: json['id'] as String,
     );
 
-Map<String, dynamic> _$$_RocketModelToJson(_$_RocketModel instance) =>
-    <String, dynamic>{
-      'height': instance.height?.toJson(),
-      'diameter': instance.diameter?.toJson(),
-      'mass': instance.mass?.toJson(),
-      'first_stage': instance.firstStage?.toJson(),
-      'second_stage': instance.secondStage?.toJson(),
-      'engines': instance.engines?.toJson(),
-      'landing_legs': instance.landingLegs?.toJson(),
-      'payload_weights':
-          instance.payloadWeights.map((e) => e.toJson()).toList(),
-      'flickr_images': instance.flickrImages,
-      'name': instance.name,
-      'type': instance.type,
-      'active': instance.active,
-      'stages': instance.stages,
-      'boosters': instance.boosters,
-      'cost_per_launch': instance.costPerLaunch,
-      'success_rate_pct': instance.successRatePct,
-      'first_flight': instance.firstFlight,
-      'country': instance.country,
-      'company': instance.company,
-      'wikipedia': instance.wikipedia,
-      'description': instance.description,
-      'id': instance.id,
-    };
+Map<String, dynamic> _$$_RocketModelToJson(_$_RocketModel instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('height', instance.height?.toJson());
+  writeNotNull('diameter', instance.diameter?.toJson());
+  writeNotNull('mass', instance.mass?.toJson());
+  writeNotNull('first_stage', instance.firstStage?.toJson());
+  writeNotNull('second_stage', instance.secondStage?.toJson());
+  writeNotNull('engines', instance.engines?.toJson());
+  writeNotNull('landing_legs', instance.landingLegs?.toJson());
+  val['payload_weights'] =
+      instance.payloadWeights.map((e) => e.toJson()).toList();
+  val['flickr_images'] = instance.flickrImages;
+  writeNotNull('name', instance.name);
+  writeNotNull('type', instance.type);
+  val['active'] = instance.active;
+  writeNotNull('stages', instance.stages);
+  writeNotNull('boosters', instance.boosters);
+  writeNotNull('cost_per_launch', instance.costPerLaunch);
+  writeNotNull('success_rate_pct', instance.successRatePct);
+  writeNotNull('first_flight', instance.firstFlight);
+  writeNotNull('country', instance.country);
+  writeNotNull('company', instance.company);
+  writeNotNull('wikipedia', instance.wikipedia);
+  writeNotNull('description', instance.description);
+  val['id'] = instance.id;
+  return val;
+}

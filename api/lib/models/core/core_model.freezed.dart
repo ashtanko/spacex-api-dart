@@ -43,15 +43,15 @@ mixin _$CoreModel {
   @JsonKey(name: 'core')
   String? get core => throw _privateConstructorUsedError;
   @JsonKey(name: 'flight')
-  int get flight => throw _privateConstructorUsedError;
+  int? get flight => throw _privateConstructorUsedError;
   @JsonKey(name: 'gridfins')
-  bool get hasGridfins => throw _privateConstructorUsedError;
+  bool? get hasGridfins => throw _privateConstructorUsedError;
   @JsonKey(name: 'legs')
-  bool get hasLegs => throw _privateConstructorUsedError;
+  bool? get hasLegs => throw _privateConstructorUsedError;
   @JsonKey(name: 'reused')
-  bool get reused => throw _privateConstructorUsedError;
+  bool? get reused => throw _privateConstructorUsedError;
   @JsonKey(name: 'landing_attempt')
-  bool get landingAttempt => throw _privateConstructorUsedError;
+  bool? get landingAttempt => throw _privateConstructorUsedError;
   @JsonKey(name: 'landing_success')
   bool? get landingSuccess => throw _privateConstructorUsedError;
   @JsonKey(name: 'landing_type')
@@ -82,11 +82,11 @@ abstract class $CoreModelCopyWith<$Res> {
       @JsonKey(name: 'serial') String? serial,
       @JsonKey(name: 'status') String? status,
       @JsonKey(name: 'core') String? core,
-      @JsonKey(name: 'flight') int flight,
-      @JsonKey(name: 'gridfins') bool hasGridfins,
-      @JsonKey(name: 'legs') bool hasLegs,
-      @JsonKey(name: 'reused') bool reused,
-      @JsonKey(name: 'landing_attempt') bool landingAttempt,
+      @JsonKey(name: 'flight') int? flight,
+      @JsonKey(name: 'gridfins') bool? hasGridfins,
+      @JsonKey(name: 'legs') bool? hasLegs,
+      @JsonKey(name: 'reused') bool? reused,
+      @JsonKey(name: 'landing_attempt') bool? landingAttempt,
       @JsonKey(name: 'landing_success') bool? landingSuccess,
       @JsonKey(name: 'landing_type') String? landingType,
       @JsonKey(name: 'landpad') String? landpad});
@@ -175,23 +175,23 @@ class _$CoreModelCopyWithImpl<$Res> implements $CoreModelCopyWith<$Res> {
       flight: flight == freezed
           ? _value.flight
           : flight // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       hasGridfins: hasGridfins == freezed
           ? _value.hasGridfins
           : hasGridfins // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
       hasLegs: hasLegs == freezed
           ? _value.hasLegs
           : hasLegs // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
       reused: reused == freezed
           ? _value.reused
           : reused // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
       landingAttempt: landingAttempt == freezed
           ? _value.landingAttempt
           : landingAttempt // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
       landingSuccess: landingSuccess == freezed
           ? _value.landingSuccess
           : landingSuccess // ignore: cast_nullable_to_non_nullable
@@ -227,11 +227,11 @@ abstract class _$$_CoreModelCopyWith<$Res> implements $CoreModelCopyWith<$Res> {
       @JsonKey(name: 'serial') String? serial,
       @JsonKey(name: 'status') String? status,
       @JsonKey(name: 'core') String? core,
-      @JsonKey(name: 'flight') int flight,
-      @JsonKey(name: 'gridfins') bool hasGridfins,
-      @JsonKey(name: 'legs') bool hasLegs,
-      @JsonKey(name: 'reused') bool reused,
-      @JsonKey(name: 'landing_attempt') bool landingAttempt,
+      @JsonKey(name: 'flight') int? flight,
+      @JsonKey(name: 'gridfins') bool? hasGridfins,
+      @JsonKey(name: 'legs') bool? hasLegs,
+      @JsonKey(name: 'reused') bool? reused,
+      @JsonKey(name: 'landing_attempt') bool? landingAttempt,
       @JsonKey(name: 'landing_success') bool? landingSuccess,
       @JsonKey(name: 'landing_type') String? landingType,
       @JsonKey(name: 'landpad') String? landpad});
@@ -322,23 +322,23 @@ class __$$_CoreModelCopyWithImpl<$Res> extends _$CoreModelCopyWithImpl<$Res>
       flight: flight == freezed
           ? _value.flight
           : flight // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       hasGridfins: hasGridfins == freezed
           ? _value.hasGridfins
           : hasGridfins // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
       hasLegs: hasLegs == freezed
           ? _value.hasLegs
           : hasLegs // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
       reused: reused == freezed
           ? _value.reused
           : reused // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
       landingAttempt: landingAttempt == freezed
           ? _value.landingAttempt
           : landingAttempt // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
       landingSuccess: landingSuccess == freezed
           ? _value.landingSuccess
           : landingSuccess // ignore: cast_nullable_to_non_nullable
@@ -371,12 +371,12 @@ class _$_CoreModel extends _CoreModel {
       @JsonKey(name: 'serial') this.serial,
       @JsonKey(name: 'status') this.status,
       @JsonKey(name: 'core') this.core,
-      @JsonKey(name: 'flight') this.flight = 0,
-      @JsonKey(name: 'gridfins') this.hasGridfins = false,
-      @JsonKey(name: 'legs') this.hasLegs = false,
-      @JsonKey(name: 'reused') this.reused = false,
-      @JsonKey(name: 'landing_attempt') this.landingAttempt = false,
-      @JsonKey(name: 'landing_success') this.landingSuccess = false,
+      @JsonKey(name: 'flight') this.flight,
+      @JsonKey(name: 'gridfins') this.hasGridfins,
+      @JsonKey(name: 'legs') this.hasLegs,
+      @JsonKey(name: 'reused') this.reused,
+      @JsonKey(name: 'landing_attempt') this.landingAttempt,
+      @JsonKey(name: 'landing_success') this.landingSuccess,
       @JsonKey(name: 'landing_type') this.landingType,
       @JsonKey(name: 'landpad') this.landpad})
       : _launches = launches,
@@ -427,19 +427,19 @@ class _$_CoreModel extends _CoreModel {
   final String? core;
   @override
   @JsonKey(name: 'flight')
-  final int flight;
+  final int? flight;
   @override
   @JsonKey(name: 'gridfins')
-  final bool hasGridfins;
+  final bool? hasGridfins;
   @override
   @JsonKey(name: 'legs')
-  final bool hasLegs;
+  final bool? hasLegs;
   @override
   @JsonKey(name: 'reused')
-  final bool reused;
+  final bool? reused;
   @override
   @JsonKey(name: 'landing_attempt')
-  final bool landingAttempt;
+  final bool? landingAttempt;
   @override
   @JsonKey(name: 'landing_success')
   final bool? landingSuccess;
@@ -545,11 +545,11 @@ abstract class _CoreModel extends CoreModel {
       @JsonKey(name: 'serial') final String? serial,
       @JsonKey(name: 'status') final String? status,
       @JsonKey(name: 'core') final String? core,
-      @JsonKey(name: 'flight') final int flight,
-      @JsonKey(name: 'gridfins') final bool hasGridfins,
-      @JsonKey(name: 'legs') final bool hasLegs,
-      @JsonKey(name: 'reused') final bool reused,
-      @JsonKey(name: 'landing_attempt') final bool landingAttempt,
+      @JsonKey(name: 'flight') final int? flight,
+      @JsonKey(name: 'gridfins') final bool? hasGridfins,
+      @JsonKey(name: 'legs') final bool? hasLegs,
+      @JsonKey(name: 'reused') final bool? reused,
+      @JsonKey(name: 'landing_attempt') final bool? landingAttempt,
       @JsonKey(name: 'landing_success') final bool? landingSuccess,
       @JsonKey(name: 'landing_type') final String? landingType,
       @JsonKey(name: 'landpad') final String? landpad}) = _$_CoreModel;
@@ -594,19 +594,19 @@ abstract class _CoreModel extends CoreModel {
   String? get core;
   @override
   @JsonKey(name: 'flight')
-  int get flight;
+  int? get flight;
   @override
   @JsonKey(name: 'gridfins')
-  bool get hasGridfins;
+  bool? get hasGridfins;
   @override
   @JsonKey(name: 'legs')
-  bool get hasLegs;
+  bool? get hasLegs;
   @override
   @JsonKey(name: 'reused')
-  bool get reused;
+  bool? get reused;
   @override
   @JsonKey(name: 'landing_attempt')
-  bool get landingAttempt;
+  bool? get landingAttempt;
   @override
   @JsonKey(name: 'landing_success')
   bool? get landingSuccess;

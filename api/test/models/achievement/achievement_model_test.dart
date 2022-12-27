@@ -36,7 +36,7 @@ void main() {
       () async {
         // arrange
         final Map<String, dynamic> jsonMap =
-            'fixtures/achievement.json'.toFixture();
+            'history/achievement.json'.toFixture();
 
         // act
         final result = AchievementModel.fromJson(jsonMap);

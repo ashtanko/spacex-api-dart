@@ -23,7 +23,7 @@ void main() {
   });
 
   group('get all cores', () {
-    final rawJson = 'cores/one_core.json'.toFixture();
+    final rawJson = 'cores/core.json'.toFixture();
     final core = CoreModel.fromJson(rawJson);
     final allCoresMockResponse = [core];
     test(
@@ -47,7 +47,7 @@ void main() {
 
   group('get one core', () {
     const coreId = '5e9e28a1f3591842fa3b263c';
-    final coreRawJson = 'cores/one_core.json'.toFixture();
+    final coreRawJson = 'cores/core.json'.toFixture();
     final oneCoreMockResponse = CoreModel.fromJson(coreRawJson);
     test(
       'should perform a GET request on /cores/{$coreId}',
@@ -69,7 +69,7 @@ void main() {
   });
 
   group('query cores', () {
-    final coreRawJson = 'cores/one_core.json'.toFixture();
+    final coreRawJson = 'cores/core.json'.toFixture();
     final queryCoresMockResponse = ApiPaginatedList(
       results: [
         CoreModel.fromJson(coreRawJson),
@@ -97,7 +97,7 @@ void main() {
   });
 
   group('query full cores', () {
-    final rawJson = 'cores/core_with_launches.json'.toFixture();
+    final rawJson = 'cores/full_core.json'.toFixture();
     final queryCoresMockResponse = ApiPaginatedList(
       results: [
         CoreFullModel.fromJson(rawJson),

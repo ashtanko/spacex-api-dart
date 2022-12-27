@@ -38,33 +38,42 @@ _$_ShipModel _$$_ShipModelFromJson(Map<String, dynamic> json) => _$_ShipModel(
       courseDeg: json['course_deg'],
     );
 
-Map<String, dynamic> _$$_ShipModelToJson(_$_ShipModel instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'legacy_id': instance.legacyID,
-      'model': instance.model,
-      'type': instance.type,
-      'roles': instance.roles,
-      'imo': instance.imo,
-      'mmsi': instance.mmsi,
-      'abs': instance.abs,
-      'class': instance.clazz,
-      'mass_kg': instance.massKg,
-      'mass_lbs': instance.massLbs,
-      'year_built': instance.yearBuilt,
-      'home_port': instance.homePort,
-      'status': instance.status,
-      'latitude': instance.latitude,
-      'longitude': instance.longitude,
-      'link': instance.link,
-      'image': instance.image,
-      'name': instance.name,
-      'active': instance.isActive,
-      'launches': instance.launches,
-      'last_ais_update': instance.lastAisUpdate,
-      'speed_kn': instance.speedKn,
-      'course_deg': instance.courseDeg,
-    };
+Map<String, dynamic> _$$_ShipModelToJson(_$_ShipModel instance) {
+  final val = <String, dynamic>{
+    'id': instance.id,
+    'legacy_id': instance.legacyID,
+    'model': instance.model,
+    'type': instance.type,
+    'roles': instance.roles,
+    'imo': instance.imo,
+    'mmsi': instance.mmsi,
+    'abs': instance.abs,
+    'class': instance.clazz,
+    'mass_kg': instance.massKg,
+    'mass_lbs': instance.massLbs,
+    'year_built': instance.yearBuilt,
+    'home_port': instance.homePort,
+    'status': instance.status,
+  };
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('latitude', instance.latitude);
+  writeNotNull('longitude', instance.longitude);
+  val['link'] = instance.link;
+  val['image'] = instance.image;
+  val['name'] = instance.name;
+  val['active'] = instance.isActive;
+  val['launches'] = instance.launches;
+  writeNotNull('last_ais_update', instance.lastAisUpdate);
+  writeNotNull('speed_kn', instance.speedKn);
+  writeNotNull('course_deg', instance.courseDeg);
+  return val;
+}
 
 _$_FullShipModel _$$_FullShipModelFromJson(Map<String, dynamic> json) =>
     _$_FullShipModel(
@@ -96,27 +105,36 @@ _$_FullShipModel _$$_FullShipModelFromJson(Map<String, dynamic> json) =>
           const [],
     );
 
-Map<String, dynamic> _$$_FullShipModelToJson(_$_FullShipModel instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'legacy_id': instance.legacyID,
-      'model': instance.model,
-      'type': instance.type,
-      'roles': instance.roles,
-      'imo': instance.imo,
-      'mmsi': instance.mmsi,
-      'abs': instance.abs,
-      'class': instance.clazz,
-      'mass_kg': instance.massKg,
-      'mass_lbs': instance.massLbs,
-      'year_built': instance.yearBuilt,
-      'home_port': instance.homePort,
-      'status': instance.status,
-      'latitude': instance.latitude,
-      'longitude': instance.longitude,
-      'link': instance.link,
-      'image': instance.image,
-      'name': instance.name,
-      'active': instance.isActive,
-      'launches': instance.launches.map((e) => e.toJson()).toList(),
-    };
+Map<String, dynamic> _$$_FullShipModelToJson(_$_FullShipModel instance) {
+  final val = <String, dynamic>{
+    'id': instance.id,
+    'legacy_id': instance.legacyID,
+    'model': instance.model,
+    'type': instance.type,
+    'roles': instance.roles,
+    'imo': instance.imo,
+    'mmsi': instance.mmsi,
+    'abs': instance.abs,
+    'class': instance.clazz,
+    'mass_kg': instance.massKg,
+    'mass_lbs': instance.massLbs,
+    'year_built': instance.yearBuilt,
+    'home_port': instance.homePort,
+    'status': instance.status,
+  };
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('latitude', instance.latitude);
+  writeNotNull('longitude', instance.longitude);
+  val['link'] = instance.link;
+  val['image'] = instance.image;
+  val['name'] = instance.name;
+  val['active'] = instance.isActive;
+  val['launches'] = instance.launches.map((e) => e.toJson()).toList();
+  return val;
+}

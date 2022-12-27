@@ -17,9 +17,13 @@ class CompanyInfoModel with _$CompanyInfoModel {
     @Default('Elon Musk') String founder,
     @Default(2002) int founded,
     @Default(9500) int employees,
+    @Default(0) int vehicles,
+    @Default(0) @JsonKey(name: 'launch_sites') int launchSites,
+    @Default(0) @JsonKey(name: 'test_sites') int testSites,
     @Default('Elon Musk') String ceo,
     @Default('Elon Musk') String cto,
     @Default('Gwynne Shotwell') String coo,
+    @Default('') @JsonKey(name: 'cto_propulsion') String ctoPropulsion,
     @Default(74000000000) num valuation,
     @JsonKey(name: 'summary') String? details,
   }) = _CompanyInfoModel;

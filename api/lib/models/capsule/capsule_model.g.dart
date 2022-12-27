@@ -22,18 +22,27 @@ _$_CapsuleModel _$$_CapsuleModelFromJson(Map<String, dynamic> json) =>
       id: json['id'] as String,
     );
 
-Map<String, dynamic> _$$_CapsuleModelToJson(_$_CapsuleModel instance) =>
-    <String, dynamic>{
-      'reuse_count': instance.reuseCount,
-      'water_landings': instance.waterLandings,
-      'land_landings': instance.landLandings,
-      'last_update': instance.lastUpdate,
-      'launches': instance.launches,
-      'serial': instance.serial,
-      'status': instance.status,
-      'type': instance.type,
-      'id': instance.id,
-    };
+Map<String, dynamic> _$$_CapsuleModelToJson(_$_CapsuleModel instance) {
+  final val = <String, dynamic>{
+    'reuse_count': instance.reuseCount,
+    'water_landings': instance.waterLandings,
+    'land_landings': instance.landLandings,
+  };
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('last_update', instance.lastUpdate);
+  val['launches'] = instance.launches;
+  val['serial'] = instance.serial;
+  val['status'] = instance.status;
+  val['type'] = instance.type;
+  val['id'] = instance.id;
+  return val;
+}
 
 _$_CapsuleFullModel _$$_CapsuleFullModelFromJson(Map<String, dynamic> json) =>
     _$_CapsuleFullModel(
@@ -51,15 +60,24 @@ _$_CapsuleFullModel _$$_CapsuleFullModelFromJson(Map<String, dynamic> json) =>
       id: json['id'] as String,
     );
 
-Map<String, dynamic> _$$_CapsuleFullModelToJson(_$_CapsuleFullModel instance) =>
-    <String, dynamic>{
-      'reuse_count': instance.reuseCount,
-      'water_landings': instance.waterLandings,
-      'land_landings': instance.landLandings,
-      'last_update': instance.lastUpdate,
-      'launches': instance.launches.map((e) => e.toJson()).toList(),
-      'serial': instance.serial,
-      'status': instance.status,
-      'type': instance.type,
-      'id': instance.id,
-    };
+Map<String, dynamic> _$$_CapsuleFullModelToJson(_$_CapsuleFullModel instance) {
+  final val = <String, dynamic>{
+    'reuse_count': instance.reuseCount,
+    'water_landings': instance.waterLandings,
+    'land_landings': instance.landLandings,
+  };
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('last_update', instance.lastUpdate);
+  val['launches'] = instance.launches.map((e) => e.toJson()).toList();
+  val['serial'] = instance.serial;
+  val['status'] = instance.status;
+  val['type'] = instance.type;
+  val['id'] = instance.id;
+  return val;
+}

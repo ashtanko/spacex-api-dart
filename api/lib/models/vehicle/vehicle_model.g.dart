@@ -43,36 +43,45 @@ _$_RoadsterVehicleModel _$$_RoadsterVehicleModelFromJson(
     );
 
 Map<String, dynamic> _$$_RoadsterVehicleModelToJson(
-        _$_RoadsterVehicleModel instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'details': instance.details,
-      'video': instance.video,
-      'wikipedia': instance.wikipedia,
-      'flickr_images': instance.images,
-      'mars_distance_mi': instance.marsDistanceMi,
-      'mars_distance_km': instance.marsDistanceKm,
-      'earth_distance_mi': instance.earthDistanceMi,
-      'earth_distance_km': instance.earthDistanceKm,
-      'speed_mph': instance.speedMph,
-      'speed_kph': instance.speedKph,
-      'period_days': instance.periodDays,
-      'periapsis_arg': instance.periapsisArg,
-      'longitude': instance.longitude,
-      'inclination': instance.inclination,
-      'eccentricity': instance.eccentricity,
-      'semi_major_axis_au': instance.semiMajorAxisAu,
-      'periapsis_au': instance.periapsisAu,
-      'apoapsis_au': instance.apoapsisAu,
-      'orbit_type': instance.orbitYype,
-      'epoch_jd': instance.epochJd,
-      'norad_id': instance.noradId,
-      'launch_mass_lbs': instance.launchMassLbs,
-      'launch_mass_kg': instance.launchMassKg,
-      'launch_date_unix': instance.launchDateUnix,
-      'launch_date_utc': instance.launchDateUtc,
-      'name': instance.name,
-    };
+    _$_RoadsterVehicleModel instance) {
+  final val = <String, dynamic>{
+    'id': instance.id,
+  };
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('details', instance.details);
+  writeNotNull('video', instance.video);
+  writeNotNull('wikipedia', instance.wikipedia);
+  val['flickr_images'] = instance.images;
+  val['mars_distance_mi'] = instance.marsDistanceMi;
+  val['mars_distance_km'] = instance.marsDistanceKm;
+  val['earth_distance_mi'] = instance.earthDistanceMi;
+  val['earth_distance_km'] = instance.earthDistanceKm;
+  val['speed_mph'] = instance.speedMph;
+  val['speed_kph'] = instance.speedKph;
+  val['period_days'] = instance.periodDays;
+  val['periapsis_arg'] = instance.periapsisArg;
+  val['longitude'] = instance.longitude;
+  val['inclination'] = instance.inclination;
+  val['eccentricity'] = instance.eccentricity;
+  val['semi_major_axis_au'] = instance.semiMajorAxisAu;
+  val['periapsis_au'] = instance.periapsisAu;
+  val['apoapsis_au'] = instance.apoapsisAu;
+  val['orbit_type'] = instance.orbitYype;
+  val['epoch_jd'] = instance.epochJd;
+  val['norad_id'] = instance.noradId;
+  val['launch_mass_lbs'] = instance.launchMassLbs;
+  val['launch_mass_kg'] = instance.launchMassKg;
+  val['launch_date_unix'] = instance.launchDateUnix;
+  val['launch_date_utc'] = instance.launchDateUtc;
+  val['name'] = instance.name;
+  return val;
+}
 
 _$_RocketVehicleModel _$$_RocketVehicleModelFromJson(
         Map<String, dynamic> json) =>
@@ -107,27 +116,35 @@ _$_RocketVehicleModel _$$_RocketVehicleModelFromJson(
     );
 
 Map<String, dynamic> _$$_RocketVehicleModelToJson(
-        _$_RocketVehicleModel instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'description': instance.description,
-      'wikipedia': instance.wikipedia,
-      'company': instance.company,
-      'country': instance.country,
-      'first_flight': instance.firstFlight,
-      'success_rate_pct': instance.successRatePct,
-      'cost_per_launch': instance.costPerLaunch,
-      'boosters': instance.boosters,
-      'stages': instance.stages,
-      'active': instance.isActive,
-      'type': instance.type,
-      'name': instance.name,
-      'flickr_images': instance.images,
-      'payload_weights':
-          instance.payloadWeights.map((e) => e.toJson()).toList(),
-      'landing_legs': instance.landingLegs,
-      'engines': instance.engines.toJson(),
-    };
+    _$_RocketVehicleModel instance) {
+  final val = <String, dynamic>{
+    'id': instance.id,
+    'description': instance.description,
+    'wikipedia': instance.wikipedia,
+    'company': instance.company,
+    'country': instance.country,
+    'first_flight': instance.firstFlight,
+    'success_rate_pct': instance.successRatePct,
+    'cost_per_launch': instance.costPerLaunch,
+    'boosters': instance.boosters,
+    'stages': instance.stages,
+    'active': instance.isActive,
+    'type': instance.type,
+    'name': instance.name,
+    'flickr_images': instance.images,
+    'payload_weights': instance.payloadWeights.map((e) => e.toJson()).toList(),
+  };
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('landing_legs', instance.landingLegs);
+  val['engines'] = instance.engines.toJson();
+  return val;
+}
 
 _$_ShipVehicleModel _$$_ShipVehicleModelFromJson(Map<String, dynamic> json) =>
     _$_ShipVehicleModel(
@@ -161,31 +178,40 @@ _$_ShipVehicleModel _$$_ShipVehicleModelFromJson(Map<String, dynamic> json) =>
       legacyId: json['legacy_id'] as String? ?? 'AMERICANSPIRIT',
     );
 
-Map<String, dynamic> _$$_ShipVehicleModelToJson(_$_ShipVehicleModel instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'launches': instance.launches,
-      'active': instance.isActive,
-      'name': instance.name,
-      'image': instance.image,
-      'link': instance.link,
-      'longitude': instance.longitude,
-      'latitude': instance.latitude,
-      'course_deg': instance.courseDeg,
-      'speed_kn': instance.speedKn,
-      'status': instance.status,
-      'home_port': instance.homePort,
-      'year_built': instance.yearBuilt,
-      'mass_lbs': instance.massLbs,
-      'mass_kg': instance.massKg,
-      'class': instance.vehicleClass,
-      'abs': instance.abs,
-      'imo': instance.imo,
-      'roles': instance.roles,
-      'type': instance.type,
-      'model': instance.model,
-      'legacy_id': instance.legacyId,
-    };
+Map<String, dynamic> _$$_ShipVehicleModelToJson(_$_ShipVehicleModel instance) {
+  final val = <String, dynamic>{
+    'id': instance.id,
+    'launches': instance.launches,
+    'active': instance.isActive,
+    'name': instance.name,
+    'image': instance.image,
+    'link': instance.link,
+  };
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('longitude', instance.longitude);
+  writeNotNull('latitude', instance.latitude);
+  writeNotNull('course_deg', instance.courseDeg);
+  writeNotNull('speed_kn', instance.speedKn);
+  val['status'] = instance.status;
+  val['home_port'] = instance.homePort;
+  val['year_built'] = instance.yearBuilt;
+  val['mass_lbs'] = instance.massLbs;
+  val['mass_kg'] = instance.massKg;
+  val['class'] = instance.vehicleClass;
+  val['abs'] = instance.abs;
+  val['imo'] = instance.imo;
+  val['roles'] = instance.roles;
+  val['type'] = instance.type;
+  writeNotNull('model', instance.model);
+  val['legacy_id'] = instance.legacyId;
+  return val;
+}
 
 _$_ShipFullVehicleModel _$$_ShipFullVehicleModelFromJson(
         Map<String, dynamic> json) =>
@@ -221,31 +247,40 @@ _$_ShipFullVehicleModel _$$_ShipFullVehicleModelFromJson(
     );
 
 Map<String, dynamic> _$$_ShipFullVehicleModelToJson(
-        _$_ShipFullVehicleModel instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'launches': instance.launches.map((e) => e.toJson()).toList(),
-      'active': instance.isActive,
-      'name': instance.name,
-      'image': instance.image,
-      'link': instance.link,
-      'longitude': instance.longitude,
-      'latitude': instance.latitude,
-      'course_deg': instance.courseDeg,
-      'speed_kn': instance.speedKn,
-      'status': instance.status,
-      'home_port': instance.homePort,
-      'year_built': instance.yearBuilt,
-      'mass_lbs': instance.massLbs,
-      'mass_kg': instance.massKg,
-      'class': instance.vehicleClass,
-      'abs': instance.abs,
-      'imo': instance.imo,
-      'roles': instance.roles,
-      'type': instance.type,
-      'model': instance.model,
-      'legacy_id': instance.legacyId,
-    };
+    _$_ShipFullVehicleModel instance) {
+  final val = <String, dynamic>{
+    'id': instance.id,
+    'launches': instance.launches.map((e) => e.toJson()).toList(),
+    'active': instance.isActive,
+    'name': instance.name,
+    'image': instance.image,
+    'link': instance.link,
+  };
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('longitude', instance.longitude);
+  writeNotNull('latitude', instance.latitude);
+  writeNotNull('course_deg', instance.courseDeg);
+  writeNotNull('speed_kn', instance.speedKn);
+  val['status'] = instance.status;
+  val['home_port'] = instance.homePort;
+  val['year_built'] = instance.yearBuilt;
+  val['mass_lbs'] = instance.massLbs;
+  val['mass_kg'] = instance.massKg;
+  val['class'] = instance.vehicleClass;
+  val['abs'] = instance.abs;
+  val['imo'] = instance.imo;
+  val['roles'] = instance.roles;
+  val['type'] = instance.type;
+  writeNotNull('model', instance.model);
+  val['legacy_id'] = instance.legacyId;
+  return val;
+}
 
 _$_DragonVehicleModel _$$_DragonVehicleModelFromJson(
         Map<String, dynamic> json) =>

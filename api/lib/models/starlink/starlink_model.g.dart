@@ -21,17 +21,26 @@ _$_StarlinkModel _$$_StarlinkModelFromJson(Map<String, dynamic> json) =>
               json['spaceTrack'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_StarlinkModelToJson(_$_StarlinkModel instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'launch': instance.launchID,
-      'version': instance.version,
-      'height_km': instance.heightKm,
-      'latitude': instance.latitude,
-      'longitude': instance.longitude,
-      'velocity_kms': instance.velocityKms,
-      'spaceTrack': instance.spaceTrack?.toJson(),
-    };
+Map<String, dynamic> _$$_StarlinkModelToJson(_$_StarlinkModel instance) {
+  final val = <String, dynamic>{
+    'id': instance.id,
+    'launch': instance.launchID,
+    'version': instance.version,
+    'height_km': instance.heightKm,
+    'latitude': instance.latitude,
+    'longitude': instance.longitude,
+    'velocity_kms': instance.velocityKms,
+  };
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('spaceTrack', instance.spaceTrack?.toJson());
+  return val;
+}
 
 _$_StarlinkFullModel _$$_StarlinkFullModelFromJson(Map<String, dynamic> json) =>
     _$_StarlinkFullModel(
@@ -51,14 +60,23 @@ _$_StarlinkFullModel _$$_StarlinkFullModelFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$$_StarlinkFullModelToJson(
-        _$_StarlinkFullModel instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'launch': instance.launch?.toJson(),
-      'version': instance.version,
-      'height_km': instance.heightKm,
-      'latitude': instance.latitude,
-      'longitude': instance.longitude,
-      'velocity_kms': instance.velocityKms,
-      'spaceTrack': instance.spaceTrack?.toJson(),
-    };
+    _$_StarlinkFullModel instance) {
+  final val = <String, dynamic>{
+    'id': instance.id,
+  };
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('launch', instance.launch?.toJson());
+  val['version'] = instance.version;
+  val['height_km'] = instance.heightKm;
+  val['latitude'] = instance.latitude;
+  val['longitude'] = instance.longitude;
+  val['velocity_kms'] = instance.velocityKms;
+  writeNotNull('spaceTrack', instance.spaceTrack?.toJson());
+  return val;
+}

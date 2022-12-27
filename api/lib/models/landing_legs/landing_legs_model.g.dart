@@ -12,8 +12,17 @@ _$_LandingLegsModel _$$_LandingLegsModelFromJson(Map<String, dynamic> json) =>
       material: json['material'] as String?,
     );
 
-Map<String, dynamic> _$$_LandingLegsModelToJson(_$_LandingLegsModel instance) =>
-    <String, dynamic>{
-      'number': instance.number,
-      'material': instance.material,
-    };
+Map<String, dynamic> _$$_LandingLegsModelToJson(_$_LandingLegsModel instance) {
+  final val = <String, dynamic>{
+    'number': instance.number,
+  };
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('material', instance.material);
+  return val;
+}

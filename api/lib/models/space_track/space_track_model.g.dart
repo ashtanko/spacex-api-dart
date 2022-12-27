@@ -51,47 +51,55 @@ _$_SpaceTrackModel _$$_SpaceTrackModelFromJson(Map<String, dynamic> json) =>
       tleLine2: json['TLE_LINE2'] as String?,
     );
 
-Map<String, dynamic> _$$_SpaceTrackModelToJson(_$_SpaceTrackModel instance) =>
-    <String, dynamic>{
-      'CCSDS_OMM_VERS': instance.ccsdsOmmVers,
-      'COMMENT': instance.comment,
-      'CREATION_DATE': instance.creationDate,
-      'ORIGINATOR': instance.originator,
-      'OBJECT_NAME': instance.objName,
-      'OBJECT_ID': instance.objId,
-      'CENTER_NAME': instance.centerName,
-      'REF_FRAME': instance.refFrame,
-      'TIME_SYSTEM': instance.timeSystem,
-      'MEAN_ELEMENT_THEORY': instance.meanElementTheory,
-      'EPOCH': instance.epoch,
-      'MEAN_MOTION': instance.meanMotion,
-      'ECCENTRICITY': instance.eccentricity,
-      'INCLINATION': instance.inclination,
-      'RA_OF_ASC_NODE': instance.raOfAscNode,
-      'ARG_OF_PERICENTER': instance.argOfPericenter,
-      'MEAN_ANOMALY': instance.meanAnomaly,
-      'EPHEMERIS_TYPE': instance.ephemerisType,
-      'CLASSIFICATION_TYPE': instance.classificationType,
-      'NORAD_CAT_ID': instance.noradCatId,
-      'ELEMENT_SET_NO': instance.elementSetNo,
-      'REV_AT_EPOCH': instance.revAtEpoch,
-      'BSTAR': instance.bstar,
-      'MEAN_MOTION_DOT': instance.meanMotionDot,
-      'MEAN_MOTION_DDOT': instance.meanMotionDdot,
-      'SEMIMAJOR_AXIS': instance.semimajorAxis,
-      'PERIOD': instance.period,
-      'APOAPSIS': instance.apoapsis,
-      'PERIAPSIS': instance.periapsis,
-      'OBJECT_TYPE': instance.objectType,
-      'RCS_SIZE': instance.rcsSize,
-      'COUNTRY_CODE': instance.countryCode,
-      'LAUNCH_DATE': instance.launchDate,
-      'SITE': instance.site,
-      'DECAY_DATE': instance.decayDate,
-      'DECAYED': instance.decayed,
-      'FILE': instance.file,
-      'GP_ID': instance.gpId,
-      'TLE_LINE0': instance.tleLine0,
-      'TLE_LINE1': instance.tleLine1,
-      'TLE_LINE2': instance.tleLine2,
-    };
+Map<String, dynamic> _$$_SpaceTrackModelToJson(_$_SpaceTrackModel instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('CCSDS_OMM_VERS', instance.ccsdsOmmVers);
+  writeNotNull('COMMENT', instance.comment);
+  writeNotNull('CREATION_DATE', instance.creationDate);
+  writeNotNull('ORIGINATOR', instance.originator);
+  writeNotNull('OBJECT_NAME', instance.objName);
+  writeNotNull('OBJECT_ID', instance.objId);
+  writeNotNull('CENTER_NAME', instance.centerName);
+  writeNotNull('REF_FRAME', instance.refFrame);
+  writeNotNull('TIME_SYSTEM', instance.timeSystem);
+  writeNotNull('MEAN_ELEMENT_THEORY', instance.meanElementTheory);
+  writeNotNull('EPOCH', instance.epoch);
+  writeNotNull('MEAN_MOTION', instance.meanMotion);
+  writeNotNull('ECCENTRICITY', instance.eccentricity);
+  writeNotNull('INCLINATION', instance.inclination);
+  writeNotNull('RA_OF_ASC_NODE', instance.raOfAscNode);
+  writeNotNull('ARG_OF_PERICENTER', instance.argOfPericenter);
+  writeNotNull('MEAN_ANOMALY', instance.meanAnomaly);
+  writeNotNull('EPHEMERIS_TYPE', instance.ephemerisType);
+  writeNotNull('CLASSIFICATION_TYPE', instance.classificationType);
+  writeNotNull('NORAD_CAT_ID', instance.noradCatId);
+  writeNotNull('ELEMENT_SET_NO', instance.elementSetNo);
+  writeNotNull('REV_AT_EPOCH', instance.revAtEpoch);
+  writeNotNull('BSTAR', instance.bstar);
+  writeNotNull('MEAN_MOTION_DOT', instance.meanMotionDot);
+  writeNotNull('MEAN_MOTION_DDOT', instance.meanMotionDdot);
+  writeNotNull('SEMIMAJOR_AXIS', instance.semimajorAxis);
+  writeNotNull('PERIOD', instance.period);
+  writeNotNull('APOAPSIS', instance.apoapsis);
+  writeNotNull('PERIAPSIS', instance.periapsis);
+  writeNotNull('OBJECT_TYPE', instance.objectType);
+  writeNotNull('RCS_SIZE', instance.rcsSize);
+  writeNotNull('COUNTRY_CODE', instance.countryCode);
+  writeNotNull('LAUNCH_DATE', instance.launchDate);
+  writeNotNull('SITE', instance.site);
+  writeNotNull('DECAY_DATE', instance.decayDate);
+  writeNotNull('DECAYED', instance.decayed);
+  writeNotNull('FILE', instance.file);
+  writeNotNull('GP_ID', instance.gpId);
+  writeNotNull('TLE_LINE0', instance.tleLine0);
+  writeNotNull('TLE_LINE1', instance.tleLine1);
+  writeNotNull('TLE_LINE2', instance.tleLine2);
+  return val;
+}

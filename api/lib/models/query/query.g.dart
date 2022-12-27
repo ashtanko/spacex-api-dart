@@ -12,9 +12,18 @@ _$_Query _$$_QueryFromJson(Map<String, dynamic> json) => _$_Query(
           : Options.fromJson(json['options'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_QueryToJson(_$_Query instance) => <String, dynamic>{
-      'options': instance.options?.toJson(),
-    };
+Map<String, dynamic> _$$_QueryToJson(_$_Query instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('options', instance.options?.toJson());
+  return val;
+}
 
 _$_Options _$$_OptionsFromJson(Map<String, dynamic> json) => _$_Options(
       pagination: json['pagination'] as bool? ?? false,

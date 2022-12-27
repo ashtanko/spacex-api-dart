@@ -24,17 +24,26 @@ _$_QueryShips _$$_QueryShipsFromJson(Map<String, dynamic> json) =>
       nextPage: json['nextPage'] as int?,
     );
 
-Map<String, dynamic> _$$_QueryShipsToJson(_$_QueryShips instance) =>
-    <String, dynamic>{
-      'docs': instance.docs.map((e) => e.toJson()).toList(),
-      'totalDocs': instance.totalDocs,
-      'offset': instance.offset,
-      'limit': instance.limit,
-      'totalPages': instance.totalPages,
-      'page': instance.page,
-      'pagingCounter': instance.pagingCounter,
-      'hasPrevPage': instance.hasPrevPage,
-      'hasNextPage': instance.hasNextPage,
-      'prevPage': instance.prevPage,
-      'nextPage': instance.nextPage,
-    };
+Map<String, dynamic> _$$_QueryShipsToJson(_$_QueryShips instance) {
+  final val = <String, dynamic>{
+    'docs': instance.docs.map((e) => e.toJson()).toList(),
+    'totalDocs': instance.totalDocs,
+    'offset': instance.offset,
+    'limit': instance.limit,
+    'totalPages': instance.totalPages,
+    'page': instance.page,
+    'pagingCounter': instance.pagingCounter,
+    'hasPrevPage': instance.hasPrevPage,
+    'hasNextPage': instance.hasNextPage,
+  };
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('prevPage', instance.prevPage);
+  writeNotNull('nextPage', instance.nextPage);
+  return val;
+}

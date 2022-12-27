@@ -30,24 +30,32 @@ _$_LandpadModel _$$_LandpadModelFromJson(Map<String, dynamic> json) =>
           const <String>[],
     );
 
-Map<String, dynamic> _$$_LandpadModelToJson(_$_LandpadModel instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'images': instance.images?.toJson(),
-      'name': instance.name,
-      'full_name': instance.fullName,
-      'status': instance.status,
-      'type': instance.type,
-      'locality': instance.locality,
-      'region': instance.region,
-      'latitude': instance.latitude,
-      'longitude': instance.longitude,
-      'landing_attempts': instance.landingAttempts,
-      'landing_successes': instance.landingSuccesses,
-      'wikipedia': instance.wikipedia,
-      'details': instance.details,
-      'launches': instance.launches,
-    };
+Map<String, dynamic> _$$_LandpadModelToJson(_$_LandpadModel instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull('images', instance.images?.toJson());
+  writeNotNull('name', instance.name);
+  writeNotNull('full_name', instance.fullName);
+  writeNotNull('status', instance.status);
+  writeNotNull('type', instance.type);
+  writeNotNull('locality', instance.locality);
+  writeNotNull('region', instance.region);
+  writeNotNull('latitude', instance.latitude);
+  writeNotNull('longitude', instance.longitude);
+  writeNotNull('landing_attempts', instance.landingAttempts);
+  writeNotNull('landing_successes', instance.landingSuccesses);
+  writeNotNull('wikipedia', instance.wikipedia);
+  writeNotNull('details', instance.details);
+  val['launches'] = instance.launches;
+  return val;
+}
 
 _$_LandpadFullModel _$$_LandpadFullModelFromJson(Map<String, dynamic> json) =>
     _$_LandpadFullModel(
@@ -73,21 +81,29 @@ _$_LandpadFullModel _$$_LandpadFullModelFromJson(Map<String, dynamic> json) =>
           const <LaunchModel>[],
     );
 
-Map<String, dynamic> _$$_LandpadFullModelToJson(_$_LandpadFullModel instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'images': instance.images?.toJson(),
-      'name': instance.name,
-      'full_name': instance.fullName,
-      'status': instance.status,
-      'type': instance.type,
-      'locality': instance.locality,
-      'region': instance.region,
-      'latitude': instance.latitude,
-      'longitude': instance.longitude,
-      'landing_attempts': instance.landingAttempts,
-      'landing_successes': instance.landingSuccesses,
-      'wikipedia': instance.wikipedia,
-      'details': instance.details,
-      'launches': instance.launches.map((e) => e.toJson()).toList(),
-    };
+Map<String, dynamic> _$$_LandpadFullModelToJson(_$_LandpadFullModel instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull('images', instance.images?.toJson());
+  writeNotNull('name', instance.name);
+  writeNotNull('full_name', instance.fullName);
+  writeNotNull('status', instance.status);
+  writeNotNull('type', instance.type);
+  writeNotNull('locality', instance.locality);
+  writeNotNull('region', instance.region);
+  writeNotNull('latitude', instance.latitude);
+  writeNotNull('longitude', instance.longitude);
+  writeNotNull('landing_attempts', instance.landingAttempts);
+  writeNotNull('landing_successes', instance.landingSuccesses);
+  writeNotNull('wikipedia', instance.wikipedia);
+  writeNotNull('details', instance.details);
+  val['launches'] = instance.launches.map((e) => e.toJson()).toList();
+  return val;
+}

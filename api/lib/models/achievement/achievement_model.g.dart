@@ -20,14 +20,23 @@ _$_AchievementModel _$$_AchievementModelFromJson(Map<String, dynamic> json) =>
           : DateTime.parse(json['event_date_utc'] as String),
     );
 
-Map<String, dynamic> _$$_AchievementModelToJson(_$_AchievementModel instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'title': instance.name,
-      'details': instance.details,
-      'links': instance.links?.toJson(),
-      'event_date_utc': instance.date?.toIso8601String(),
-    };
+Map<String, dynamic> _$$_AchievementModelToJson(_$_AchievementModel instance) {
+  final val = <String, dynamic>{
+    'id': instance.id,
+  };
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('title', instance.name);
+  writeNotNull('details', instance.details);
+  writeNotNull('links', instance.links?.toJson());
+  writeNotNull('event_date_utc', instance.date?.toIso8601String());
+  return val;
+}
 
 _$_AchievementLinksModel _$$_AchievementLinksModelFromJson(
         Map<String, dynamic> json) =>
@@ -36,7 +45,15 @@ _$_AchievementLinksModel _$$_AchievementLinksModelFromJson(
     );
 
 Map<String, dynamic> _$$_AchievementLinksModelToJson(
-        _$_AchievementLinksModel instance) =>
-    <String, dynamic>{
-      'article': instance.article,
-    };
+    _$_AchievementLinksModel instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('article', instance.article);
+  return val;
+}

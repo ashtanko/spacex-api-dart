@@ -35,24 +35,33 @@ _$_LaunchpadModel _$$_LaunchpadModelFromJson(Map<String, dynamic> json) =>
       name: json['name'] as String?,
     );
 
-Map<String, dynamic> _$$_LaunchpadModelToJson(_$_LaunchpadModel instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'details': instance.details,
-      'images': instance.images?.toJson(),
-      'status': _$LaunchStatusEnumMap[instance.status]!,
-      'launches': instance.launches,
-      'timezone': instance.timezone,
-      'rockets': instance.rockets,
-      'launch_successes': instance.launchSuccesses,
-      'launch_attempts': instance.launchAttempts,
-      'longitude': instance.longitude,
-      'latitude': instance.latitude,
-      'region': instance.region,
-      'locality': instance.locality,
-      'full_name': instance.fullName,
-      'name': instance.name,
-    };
+Map<String, dynamic> _$$_LaunchpadModelToJson(_$_LaunchpadModel instance) {
+  final val = <String, dynamic>{
+    'id': instance.id,
+  };
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('details', instance.details);
+  writeNotNull('images', instance.images?.toJson());
+  val['status'] = _$LaunchStatusEnumMap[instance.status]!;
+  val['launches'] = instance.launches;
+  writeNotNull('timezone', instance.timezone);
+  val['rockets'] = instance.rockets;
+  writeNotNull('launch_successes', instance.launchSuccesses);
+  writeNotNull('launch_attempts', instance.launchAttempts);
+  writeNotNull('longitude', instance.longitude);
+  writeNotNull('latitude', instance.latitude);
+  writeNotNull('region', instance.region);
+  writeNotNull('locality', instance.locality);
+  writeNotNull('full_name', instance.fullName);
+  writeNotNull('name', instance.name);
+  return val;
+}
 
 const _$LaunchStatusEnumMap = {
   LaunchStatus.retired: 'retired',
@@ -91,21 +100,30 @@ _$_LaunchpadFullModel _$$_LaunchpadFullModelFromJson(
     );
 
 Map<String, dynamic> _$$_LaunchpadFullModelToJson(
-        _$_LaunchpadFullModel instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'details': instance.details,
-      'images': instance.images?.toJson(),
-      'status': _$LaunchStatusEnumMap[instance.status]!,
-      'launches': instance.launches.map((e) => e.toJson()).toList(),
-      'timezone': instance.timezone,
-      'rockets': instance.rockets.map((e) => e.toJson()).toList(),
-      'launch_successes': instance.launchSuccesses,
-      'launch_attempts': instance.launchAttempts,
-      'longitude': instance.longitude,
-      'latitude': instance.latitude,
-      'region': instance.region,
-      'locality': instance.locality,
-      'full_name': instance.fullName,
-      'name': instance.name,
-    };
+    _$_LaunchpadFullModel instance) {
+  final val = <String, dynamic>{
+    'id': instance.id,
+  };
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('details', instance.details);
+  writeNotNull('images', instance.images?.toJson());
+  val['status'] = _$LaunchStatusEnumMap[instance.status]!;
+  val['launches'] = instance.launches.map((e) => e.toJson()).toList();
+  writeNotNull('timezone', instance.timezone);
+  val['rockets'] = instance.rockets.map((e) => e.toJson()).toList();
+  writeNotNull('launch_successes', instance.launchSuccesses);
+  writeNotNull('launch_attempts', instance.launchAttempts);
+  writeNotNull('longitude', instance.longitude);
+  writeNotNull('latitude', instance.latitude);
+  writeNotNull('region', instance.region);
+  writeNotNull('locality', instance.locality);
+  writeNotNull('full_name', instance.fullName);
+  writeNotNull('name', instance.name);
+  return val;
+}

@@ -27,17 +27,26 @@ ApiPaginatedList<T> _$ApiPaginatedListFromJson<T>(
 Map<String, dynamic> _$ApiPaginatedListToJson<T>(
   ApiPaginatedList<T> instance,
   Object? Function(T value) toJsonT,
-) =>
-    <String, dynamic>{
-      'docs': instance.results.map(toJsonT).toList(),
-      'totalDocs': instance.totalDocs,
-      'offset': instance.offset,
-      'limit': instance.limit,
-      'totalPages': instance.totalPages,
-      'page': instance.page,
-      'pagingCounter': instance.pagingCounter,
-      'hasPrevPage': instance.hasPrevPage,
-      'hasNextPage': instance.hasNextPage,
-      'prevPage': instance.prevPage,
-      'nextPage': instance.nextPage,
-    };
+) {
+  final val = <String, dynamic>{
+    'docs': instance.results.map(toJsonT).toList(),
+    'totalDocs': instance.totalDocs,
+    'offset': instance.offset,
+    'limit': instance.limit,
+    'totalPages': instance.totalPages,
+    'page': instance.page,
+    'pagingCounter': instance.pagingCounter,
+    'hasPrevPage': instance.hasPrevPage,
+    'hasNextPage': instance.hasNextPage,
+  };
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('prevPage', instance.prevPage);
+  writeNotNull('nextPage', instance.nextPage);
+  return val;
+}

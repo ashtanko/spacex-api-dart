@@ -1,9 +1,7 @@
-import 'dart:convert';
-
 import 'package:api/models/index.dart';
 import 'package:test/test.dart';
 
-import '../../helpers/json_reader.dart';
+import '../../fixtures_reader.dart';
 
 void main() {
   const c1 = CapsuleModel(
@@ -115,10 +113,8 @@ void main() {
       'should return a valid model from json',
       () async {
         // arrange
-        final Map<String, dynamic> jsonMap = json.decode(
-          readJson('fixtures/capsules/capsule.json'),
-        ) as Map<String, dynamic>;
-
+        final Map<String, dynamic> jsonMap =
+            'capsules/capsule.json'.toFixture();
         // act
         final result = CapsuleModel.fromJson(jsonMap);
 

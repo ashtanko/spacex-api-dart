@@ -20,12 +20,12 @@ class CoreModel with _$CoreModel {
     @JsonKey(name: 'serial') String? serial,
     @JsonKey(name: 'status') String? status,
     @JsonKey(name: 'core') String? core,
-    @JsonKey(name: 'flight') @Default(0) int flight,
-    @JsonKey(name: 'gridfins') @Default(false) bool hasGridfins,
-    @JsonKey(name: 'legs') @Default(false) bool hasLegs,
-    @JsonKey(name: 'reused') @Default(false) bool reused,
-    @JsonKey(name: 'landing_attempt') @Default(false) bool landingAttempt,
-    @JsonKey(name: 'landing_success') @Default(false) bool? landingSuccess,
+    @JsonKey(name: 'flight') int? flight,
+    @JsonKey(name: 'gridfins') bool? hasGridfins,
+    @JsonKey(name: 'legs') bool? hasLegs,
+    @JsonKey(name: 'reused') bool? reused,
+    @JsonKey(name: 'landing_attempt') bool? landingAttempt,
+    @JsonKey(name: 'landing_success') bool? landingSuccess,
     @JsonKey(name: 'landing_type') String? landingType,
     @JsonKey(name: 'landpad') String? landpad,
   }) = _CoreModel;
@@ -47,8 +47,9 @@ class CoreFullModel with _$CoreFullModel {
     @JsonKey(name: 'asds_attempts') @Default(0) int asdsAttempts,
     @JsonKey(name: 'asds_landings') @Default(0) int asdsLandings,
     @JsonKey(name: 'last_update') @Default('') String lastUpdate,
-    @JsonKey(name: 'launches') @Default(<LaunchModel>[]) List<
-        LaunchModel> launches,
+    @JsonKey(name: 'launches')
+    @Default(<LaunchModel>[])
+        List<LaunchModel> launches,
     @JsonKey(name: 'serial') String? serial,
     @JsonKey(name: 'status') String? status,
     @JsonKey(name: 'core') String? core,

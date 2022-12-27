@@ -52,37 +52,46 @@ _$_PayloadModel _$$_PayloadModelFromJson(Map<String, dynamic> json) =>
       meanAnomaly: (json['mean_anomaly'] as num?)?.toDouble(),
     );
 
-Map<String, dynamic> _$$_PayloadModelToJson(_$_PayloadModel instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'dragon': instance.dragon?.toJson(),
-      'name': instance.name,
-      'type': instance.type,
-      'reused': instance.reused,
-      'launch': instance.launch,
-      'customers': instance.customers,
-      'norad_ids': instance.noradIds,
-      'nationalities': instance.nationalities,
-      'manufacturers': instance.manufacturers,
-      'mass_kg': instance.massKg,
-      'mass_lbs': instance.massLbs,
-      'orbit': instance.orbit,
-      'reference_system': instance.referenceSystem,
-      'regime': instance.regime,
-      'longitude': instance.longitude,
-      'semi_major_axis_km': instance.semiMajorAxisKm,
-      'eccentricity': instance.eccentricity,
-      'periapsis_km': instance.periapsisKm,
-      'apoapsis_km': instance.apoapsisKm,
-      'inclination_deg': instance.inclinationDeg,
-      'period_min': instance.periodMin,
-      'lifespan_years': instance.lifespanYears,
-      'epoch': instance.epoch,
-      'mean_motion': instance.meanMotion,
-      'raan': instance.raan,
-      'arg_of_pericenter': instance.argOfPericenter,
-      'mean_anomaly': instance.meanAnomaly,
-    };
+Map<String, dynamic> _$$_PayloadModelToJson(_$_PayloadModel instance) {
+  final val = <String, dynamic>{
+    'id': instance.id,
+  };
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('dragon', instance.dragon?.toJson());
+  writeNotNull('name', instance.name);
+  writeNotNull('type', instance.type);
+  val['reused'] = instance.reused;
+  writeNotNull('launch', instance.launch);
+  val['customers'] = instance.customers;
+  val['norad_ids'] = instance.noradIds;
+  val['nationalities'] = instance.nationalities;
+  val['manufacturers'] = instance.manufacturers;
+  writeNotNull('mass_kg', instance.massKg);
+  writeNotNull('mass_lbs', instance.massLbs);
+  writeNotNull('orbit', instance.orbit);
+  writeNotNull('reference_system', instance.referenceSystem);
+  writeNotNull('regime', instance.regime);
+  writeNotNull('longitude', instance.longitude);
+  writeNotNull('semi_major_axis_km', instance.semiMajorAxisKm);
+  writeNotNull('eccentricity', instance.eccentricity);
+  writeNotNull('periapsis_km', instance.periapsisKm);
+  writeNotNull('apoapsis_km', instance.apoapsisKm);
+  writeNotNull('inclination_deg', instance.inclinationDeg);
+  writeNotNull('period_min', instance.periodMin);
+  writeNotNull('lifespan_years', instance.lifespanYears);
+  writeNotNull('epoch', instance.epoch);
+  writeNotNull('mean_motion', instance.meanMotion);
+  writeNotNull('raan', instance.raan);
+  writeNotNull('arg_of_pericenter', instance.argOfPericenter);
+  writeNotNull('mean_anomaly', instance.meanAnomaly);
+  return val;
+}
 
 _$_FullPayloadModel _$$_FullPayloadModelFromJson(Map<String, dynamic> json) =>
     _$_FullPayloadModel(
@@ -132,37 +141,46 @@ _$_FullPayloadModel _$$_FullPayloadModelFromJson(Map<String, dynamic> json) =>
       meanAnomaly: (json['mean_anomaly'] as num?)?.toDouble(),
     );
 
-Map<String, dynamic> _$$_FullPayloadModelToJson(_$_FullPayloadModel instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'dragon': instance.dragon?.toJson(),
-      'name': instance.name,
-      'type': instance.type,
-      'reused': instance.reused,
-      'launch': instance.launch?.toJson(),
-      'customers': instance.customers,
-      'norad_ids': instance.noradIds,
-      'nationalities': instance.nationalities,
-      'manufacturers': instance.manufacturers,
-      'mass_kg': instance.massKg,
-      'mass_lbs': instance.massLbs,
-      'orbit': instance.orbit,
-      'reference_system': instance.referenceSystem,
-      'regime': instance.regime,
-      'longitude': instance.longitude,
-      'semi_major_axis_km': instance.semiMajorAxisKm,
-      'eccentricity': instance.eccentricity,
-      'periapsis_km': instance.periapsisKm,
-      'apoapsis_km': instance.apoapsisKm,
-      'inclination_deg': instance.inclinationDeg,
-      'period_min': instance.periodMin,
-      'lifespan_years': instance.lifespanYears,
-      'epoch': instance.epoch,
-      'mean_motion': instance.meanMotion,
-      'raan': instance.raan,
-      'arg_of_pericenter': instance.argOfPericenter,
-      'mean_anomaly': instance.meanAnomaly,
-    };
+Map<String, dynamic> _$$_FullPayloadModelToJson(_$_FullPayloadModel instance) {
+  final val = <String, dynamic>{
+    'id': instance.id,
+  };
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('dragon', instance.dragon?.toJson());
+  writeNotNull('name', instance.name);
+  writeNotNull('type', instance.type);
+  val['reused'] = instance.reused;
+  writeNotNull('launch', instance.launch?.toJson());
+  val['customers'] = instance.customers;
+  val['norad_ids'] = instance.noradIds;
+  val['nationalities'] = instance.nationalities;
+  val['manufacturers'] = instance.manufacturers;
+  writeNotNull('mass_kg', instance.massKg);
+  writeNotNull('mass_lbs', instance.massLbs);
+  writeNotNull('orbit', instance.orbit);
+  writeNotNull('reference_system', instance.referenceSystem);
+  writeNotNull('regime', instance.regime);
+  writeNotNull('longitude', instance.longitude);
+  writeNotNull('semi_major_axis_km', instance.semiMajorAxisKm);
+  writeNotNull('eccentricity', instance.eccentricity);
+  writeNotNull('periapsis_km', instance.periapsisKm);
+  writeNotNull('apoapsis_km', instance.apoapsisKm);
+  writeNotNull('inclination_deg', instance.inclinationDeg);
+  writeNotNull('period_min', instance.periodMin);
+  writeNotNull('lifespan_years', instance.lifespanYears);
+  writeNotNull('epoch', instance.epoch);
+  writeNotNull('mean_motion', instance.meanMotion);
+  writeNotNull('raan', instance.raan);
+  writeNotNull('arg_of_pericenter', instance.argOfPericenter);
+  writeNotNull('mean_anomaly', instance.meanAnomaly);
+  return val;
+}
 
 _$_PayloadDragonModel _$$_PayloadDragonModelFromJson(
         Map<String, dynamic> json) =>
@@ -177,13 +195,21 @@ _$_PayloadDragonModel _$$_PayloadDragonModelFromJson(
     );
 
 Map<String, dynamic> _$$_PayloadDragonModelToJson(
-        _$_PayloadDragonModel instance) =>
-    <String, dynamic>{
-      'capsule': instance.capsule,
-      'mass_returned_kg': instance.massReturnedKg,
-      'mass_returned_lbs': instance.massReturnedLbs,
-      'flight_time_sec': instance.flightTimeSec,
-      'manifest': instance.manifest,
-      'water_landing': instance.waterLanding,
-      'land_landing': instance.landLanding,
-    };
+    _$_PayloadDragonModel instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('capsule', instance.capsule);
+  writeNotNull('mass_returned_kg', instance.massReturnedKg);
+  writeNotNull('mass_returned_lbs', instance.massReturnedLbs);
+  writeNotNull('flight_time_sec', instance.flightTimeSec);
+  writeNotNull('manifest', instance.manifest);
+  val['water_landing'] = instance.waterLanding;
+  val['land_landing'] = instance.landLanding;
+  return val;
+}

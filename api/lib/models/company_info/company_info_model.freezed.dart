@@ -28,9 +28,16 @@ mixin _$CompanyInfoModel {
   String get founder => throw _privateConstructorUsedError;
   int get founded => throw _privateConstructorUsedError;
   int get employees => throw _privateConstructorUsedError;
+  int get vehicles => throw _privateConstructorUsedError;
+  @JsonKey(name: 'launch_sites')
+  int get launchSites => throw _privateConstructorUsedError;
+  @JsonKey(name: 'test_sites')
+  int get testSites => throw _privateConstructorUsedError;
   String get ceo => throw _privateConstructorUsedError;
   String get cto => throw _privateConstructorUsedError;
   String get coo => throw _privateConstructorUsedError;
+  @JsonKey(name: 'cto_propulsion')
+  String get ctoPropulsion => throw _privateConstructorUsedError;
   num get valuation => throw _privateConstructorUsedError;
   @JsonKey(name: 'summary')
   String? get details => throw _privateConstructorUsedError;
@@ -55,9 +62,13 @@ abstract class $CompanyInfoModelCopyWith<$Res> {
       String founder,
       int founded,
       int employees,
+      int vehicles,
+      @JsonKey(name: 'launch_sites') int launchSites,
+      @JsonKey(name: 'test_sites') int testSites,
       String ceo,
       String cto,
       String coo,
+      @JsonKey(name: 'cto_propulsion') String ctoPropulsion,
       num valuation,
       @JsonKey(name: 'summary') String? details});
 
@@ -84,9 +95,13 @@ class _$CompanyInfoModelCopyWithImpl<$Res>
     Object? founder = freezed,
     Object? founded = freezed,
     Object? employees = freezed,
+    Object? vehicles = freezed,
+    Object? launchSites = freezed,
+    Object? testSites = freezed,
     Object? ceo = freezed,
     Object? cto = freezed,
     Object? coo = freezed,
+    Object? ctoPropulsion = freezed,
     Object? valuation = freezed,
     Object? details = freezed,
   }) {
@@ -123,6 +138,18 @@ class _$CompanyInfoModelCopyWithImpl<$Res>
           ? _value.employees
           : employees // ignore: cast_nullable_to_non_nullable
               as int,
+      vehicles: vehicles == freezed
+          ? _value.vehicles
+          : vehicles // ignore: cast_nullable_to_non_nullable
+              as int,
+      launchSites: launchSites == freezed
+          ? _value.launchSites
+          : launchSites // ignore: cast_nullable_to_non_nullable
+              as int,
+      testSites: testSites == freezed
+          ? _value.testSites
+          : testSites // ignore: cast_nullable_to_non_nullable
+              as int,
       ceo: ceo == freezed
           ? _value.ceo
           : ceo // ignore: cast_nullable_to_non_nullable
@@ -134,6 +161,10 @@ class _$CompanyInfoModelCopyWithImpl<$Res>
       coo: coo == freezed
           ? _value.coo
           : coo // ignore: cast_nullable_to_non_nullable
+              as String,
+      ctoPropulsion: ctoPropulsion == freezed
+          ? _value.ctoPropulsion
+          : ctoPropulsion // ignore: cast_nullable_to_non_nullable
               as String,
       valuation: valuation == freezed
           ? _value.valuation
@@ -185,9 +216,13 @@ abstract class _$$_CompanyInfoModelCopyWith<$Res>
       String founder,
       int founded,
       int employees,
+      int vehicles,
+      @JsonKey(name: 'launch_sites') int launchSites,
+      @JsonKey(name: 'test_sites') int testSites,
       String ceo,
       String cto,
       String coo,
+      @JsonKey(name: 'cto_propulsion') String ctoPropulsion,
       num valuation,
       @JsonKey(name: 'summary') String? details});
 
@@ -218,9 +253,13 @@ class __$$_CompanyInfoModelCopyWithImpl<$Res>
     Object? founder = freezed,
     Object? founded = freezed,
     Object? employees = freezed,
+    Object? vehicles = freezed,
+    Object? launchSites = freezed,
+    Object? testSites = freezed,
     Object? ceo = freezed,
     Object? cto = freezed,
     Object? coo = freezed,
+    Object? ctoPropulsion = freezed,
     Object? valuation = freezed,
     Object? details = freezed,
   }) {
@@ -257,6 +296,18 @@ class __$$_CompanyInfoModelCopyWithImpl<$Res>
           ? _value.employees
           : employees // ignore: cast_nullable_to_non_nullable
               as int,
+      vehicles: vehicles == freezed
+          ? _value.vehicles
+          : vehicles // ignore: cast_nullable_to_non_nullable
+              as int,
+      launchSites: launchSites == freezed
+          ? _value.launchSites
+          : launchSites // ignore: cast_nullable_to_non_nullable
+              as int,
+      testSites: testSites == freezed
+          ? _value.testSites
+          : testSites // ignore: cast_nullable_to_non_nullable
+              as int,
       ceo: ceo == freezed
           ? _value.ceo
           : ceo // ignore: cast_nullable_to_non_nullable
@@ -268,6 +319,10 @@ class __$$_CompanyInfoModelCopyWithImpl<$Res>
       coo: coo == freezed
           ? _value.coo
           : coo // ignore: cast_nullable_to_non_nullable
+              as String,
+      ctoPropulsion: ctoPropulsion == freezed
+          ? _value.ctoPropulsion
+          : ctoPropulsion // ignore: cast_nullable_to_non_nullable
               as String,
       valuation: valuation == freezed
           ? _value.valuation
@@ -293,9 +348,13 @@ class _$_CompanyInfoModel extends _CompanyInfoModel {
       this.founder = 'Elon Musk',
       this.founded = 2002,
       this.employees = 9500,
+      this.vehicles = 0,
+      @JsonKey(name: 'launch_sites') this.launchSites = 0,
+      @JsonKey(name: 'test_sites') this.testSites = 0,
       this.ceo = 'Elon Musk',
       this.cto = 'Elon Musk',
       this.coo = 'Gwynne Shotwell',
+      @JsonKey(name: 'cto_propulsion') this.ctoPropulsion = '',
       this.valuation = 74000000000,
       @JsonKey(name: 'summary') this.details})
       : super._();
@@ -326,6 +385,15 @@ class _$_CompanyInfoModel extends _CompanyInfoModel {
   final int employees;
   @override
   @JsonKey()
+  final int vehicles;
+  @override
+  @JsonKey(name: 'launch_sites')
+  final int launchSites;
+  @override
+  @JsonKey(name: 'test_sites')
+  final int testSites;
+  @override
+  @JsonKey()
   final String ceo;
   @override
   @JsonKey()
@@ -333,6 +401,9 @@ class _$_CompanyInfoModel extends _CompanyInfoModel {
   @override
   @JsonKey()
   final String coo;
+  @override
+  @JsonKey(name: 'cto_propulsion')
+  final String ctoPropulsion;
   @override
   @JsonKey()
   final num valuation;
@@ -342,7 +413,7 @@ class _$_CompanyInfoModel extends _CompanyInfoModel {
 
   @override
   String toString() {
-    return 'CompanyInfoModel(id: $id, headquarters: $headquarters, links: $links, fullName: $fullName, name: $name, founder: $founder, founded: $founded, employees: $employees, ceo: $ceo, cto: $cto, coo: $coo, valuation: $valuation, details: $details)';
+    return 'CompanyInfoModel(id: $id, headquarters: $headquarters, links: $links, fullName: $fullName, name: $name, founder: $founder, founded: $founded, employees: $employees, vehicles: $vehicles, launchSites: $launchSites, testSites: $testSites, ceo: $ceo, cto: $cto, coo: $coo, ctoPropulsion: $ctoPropulsion, valuation: $valuation, details: $details)';
   }
 
   @override
@@ -359,9 +430,15 @@ class _$_CompanyInfoModel extends _CompanyInfoModel {
             const DeepCollectionEquality().equals(other.founder, founder) &&
             const DeepCollectionEquality().equals(other.founded, founded) &&
             const DeepCollectionEquality().equals(other.employees, employees) &&
+            const DeepCollectionEquality().equals(other.vehicles, vehicles) &&
+            const DeepCollectionEquality()
+                .equals(other.launchSites, launchSites) &&
+            const DeepCollectionEquality().equals(other.testSites, testSites) &&
             const DeepCollectionEquality().equals(other.ceo, ceo) &&
             const DeepCollectionEquality().equals(other.cto, cto) &&
             const DeepCollectionEquality().equals(other.coo, coo) &&
+            const DeepCollectionEquality()
+                .equals(other.ctoPropulsion, ctoPropulsion) &&
             const DeepCollectionEquality().equals(other.valuation, valuation) &&
             const DeepCollectionEquality().equals(other.details, details));
   }
@@ -378,9 +455,13 @@ class _$_CompanyInfoModel extends _CompanyInfoModel {
       const DeepCollectionEquality().hash(founder),
       const DeepCollectionEquality().hash(founded),
       const DeepCollectionEquality().hash(employees),
+      const DeepCollectionEquality().hash(vehicles),
+      const DeepCollectionEquality().hash(launchSites),
+      const DeepCollectionEquality().hash(testSites),
       const DeepCollectionEquality().hash(ceo),
       const DeepCollectionEquality().hash(cto),
       const DeepCollectionEquality().hash(coo),
+      const DeepCollectionEquality().hash(ctoPropulsion),
       const DeepCollectionEquality().hash(valuation),
       const DeepCollectionEquality().hash(details));
 
@@ -407,9 +488,13 @@ abstract class _CompanyInfoModel extends CompanyInfoModel {
       final String founder,
       final int founded,
       final int employees,
+      final int vehicles,
+      @JsonKey(name: 'launch_sites') final int launchSites,
+      @JsonKey(name: 'test_sites') final int testSites,
       final String ceo,
       final String cto,
       final String coo,
+      @JsonKey(name: 'cto_propulsion') final String ctoPropulsion,
       final num valuation,
       @JsonKey(name: 'summary') final String? details}) = _$_CompanyInfoModel;
   const _CompanyInfoModel._() : super._();
@@ -434,11 +519,22 @@ abstract class _CompanyInfoModel extends CompanyInfoModel {
   @override
   int get employees;
   @override
+  int get vehicles;
+  @override
+  @JsonKey(name: 'launch_sites')
+  int get launchSites;
+  @override
+  @JsonKey(name: 'test_sites')
+  int get testSites;
+  @override
   String get ceo;
   @override
   String get cto;
   @override
   String get coo;
+  @override
+  @JsonKey(name: 'cto_propulsion')
+  String get ctoPropulsion;
   @override
   num get valuation;
   @override

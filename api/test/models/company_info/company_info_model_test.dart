@@ -1,15 +1,143 @@
 import 'package:api/models/index.dart';
 import 'package:test/test.dart';
 
+import '../../fixtures_reader.dart';
+
 void main() {
-  group('CompanyInfo Model Tests', () {
-    test('supports value comparison', () {
-      expect(const CompanyInfoModel(id: '0'), const CompanyInfoModel(id: '0'));
+  const m1 = CompanyInfoModel(id: '0');
+  const m2 = CompanyInfoModel(id: '0');
+  const m3 = CompanyInfoModel(id: '1');
+  const mf = CompanyInfoModel(
+    headquarters: HeadquarterModel(
+      address: 'Rocket Road',
+      city: 'Hawthorne',
+      state: 'California',
+    ),
+    links: LinksModel(
+      website: 'https://www.spacex.com/',
+      flickr: 'https://www.flickr.com/photos/spacex/',
+      twitter: 'https://twitter.com/SpaceX',
+      elonTwitter: 'https://twitter.com/elonmusk',
+    ),
+    name: 'SpaceX',
+    founder: 'Elon Musk',
+    founded: 2002,
+    employees: 9500,
+    vehicles: 4,
+    launchSites: 3,
+    testSites: 3,
+    ceo: 'Elon Musk',
+    cto: 'Elon Musk',
+    coo: 'Gwynne Shotwell',
+    ctoPropulsion: 'Tom Mueller',
+    valuation: 74000000000,
+    details:
+        'SpaceX designs, manufactures and launches advanced rockets and spacecraft. The company was founded in 2002 to revolutionize space technology, with the ultimate goal of enabling people to live on other planets.',
+    id: '5eb75edc42fea42237d7f3ed',
+  );
+
+  group('value comparison', () {
+    test('should be equal', () {
+      expect(m1, m2);
+      assert(m1 == m2);
     });
 
-    test('is correctly generated from a JSON', () {
-      expect(
-        CompanyInfoModel.fromJson(const {
+    test('should not be equal', () {
+      assert(m1 != m3);
+    });
+  });
+
+  group('from json', () {
+    test(
+      'should return a valid model from json fixture',
+      () async {
+        // arrange
+        final Map<String, dynamic> jsonMap =
+            'info/company_info.json'.toFixture();
+
+        // act
+        final result = CompanyInfoModel.fromJson(jsonMap);
+
+        // assert
+        expect(result, equals(mf));
+      },
+    );
+
+    test('should return a valid model from json string', () {
+      // arrange
+      const json = {
+        'id': '5eb75edc42fea42237d7f3ed',
+        'headquarters': {
+          'address': 'Rocket Road',
+          'city': 'Hawthorne',
+          'state': 'California'
+        },
+        'links': {
+          'website': 'https://www.spacex.com/',
+          'flickr': 'https://www.flickr.com/photos/spacex/',
+          'twitter': 'https://twitter.com/SpaceX',
+          'elon_twitter': 'https://twitter.com/elonmusk'
+        },
+        'name': 'SpaceX',
+        'founder': 'Elon Musk',
+        'founded': 2002,
+        'employees': 8000,
+        'vehicles': 3,
+        'launch_sites': 3,
+        'test_sites': 1,
+        'ceo': 'Elon Musk',
+        'cto': 'Elon Musk',
+        'coo': 'Gwynne Shotwell',
+        'cto_propulsion': 'Tom Mueller',
+        'valuation': 52000000000,
+        'summary':
+            'SpaceX designs, manufactures and launches advanced rockets and spacecraft. The company was founded in 2002 to revolutionize space technology, with the ultimate goal of enabling people to live on other planets.'
+      };
+
+      final model = CompanyInfoModel.fromJson(json);
+      const expected = CompanyInfoModel(
+        headquarters: HeadquarterModel(
+          address: 'Rocket Road',
+          city: 'Hawthorne',
+          state: 'California',
+        ),
+        links: LinksModel(
+          website: 'https://www.spacex.com/',
+          flickr: 'https://www.flickr.com/photos/spacex/',
+          twitter: 'https://twitter.com/SpaceX',
+          elonTwitter: 'https://twitter.com/elonmusk',
+        ),
+        name: 'SpaceX',
+        founder: 'Elon Musk',
+        founded: 2002,
+        vehicles: 3,
+        launchSites: 3,
+        testSites: 1,
+        ctoPropulsion: 'Tom Mueller',
+        employees: 8000,
+        ceo: 'Elon Musk',
+        cto: 'Elon Musk',
+        coo: 'Gwynne Shotwell',
+        valuation: 52000000000,
+        details:
+            'SpaceX designs, manufactures and launches advanced rockets and spacecraft. The company was founded in 2002 to revolutionize space technology, with the ultimate goal of enabling people to live on other planets.',
+        id: '5eb75edc42fea42237d7f3ed',
+      );
+
+      // assert
+      expect(model, equals(expected));
+    });
+  });
+
+  group('to json', () {
+    test(
+      'should return a json map containing proper data',
+      () async {
+        // act
+        final result = mf.toJson();
+
+        // assert
+        const expectedJsonMap = {
           'headquarters': {
             'address': 'Rocket Road',
             'city': 'Hawthorne',
@@ -21,47 +149,25 @@ void main() {
             'twitter': 'https://twitter.com/SpaceX',
             'elon_twitter': 'https://twitter.com/elonmusk'
           },
+          'fullName': 'Space Exploration Technologies Corporation',
           'name': 'SpaceX',
           'founder': 'Elon Musk',
           'founded': 2002,
-          'employees': 8000,
-          'vehicles': 3,
+          'employees': 9500,
+          'vehicles': 4,
           'launch_sites': 3,
-          'test_sites': 1,
+          'test_sites': 3,
           'ceo': 'Elon Musk',
           'cto': 'Elon Musk',
           'coo': 'Gwynne Shotwell',
           'cto_propulsion': 'Tom Mueller',
-          'valuation': 52000000000,
+          'valuation': 74000000000,
           'summary':
               'SpaceX designs, manufactures and launches advanced rockets and spacecraft. The company was founded in 2002 to revolutionize space technology, with the ultimate goal of enabling people to live on other planets.',
           'id': '5eb75edc42fea42237d7f3ed'
-        }),
-        const CompanyInfoModel(
-          headquarters: HeadquarterModel(
-            address: 'Rocket Road',
-            city: 'Hawthorne',
-            state: 'California',
-          ),
-          links: LinksModel(
-            website: 'https://www.spacex.com/',
-            flickr: 'https://www.flickr.com/photos/spacex/',
-            twitter: 'https://twitter.com/SpaceX',
-            elonTwitter: 'https://twitter.com/elonmusk',
-          ),
-          name: 'SpaceX',
-          founder: 'Elon Musk',
-          founded: 2002,
-          employees: 8000,
-          ceo: 'Elon Musk',
-          cto: 'Elon Musk',
-          coo: 'Gwynne Shotwell',
-          valuation: 52000000000,
-          details:
-              'SpaceX designs, manufactures and launches advanced rockets and spacecraft. The company was founded in 2002 to revolutionize space technology, with the ultimate goal of enabling people to live on other planets.',
-          id: '5eb75edc42fea42237d7f3ed',
-        ),
-      );
-    });
+        };
+        expect(result, equals(expectedJsonMap));
+      },
+    );
   });
 }
