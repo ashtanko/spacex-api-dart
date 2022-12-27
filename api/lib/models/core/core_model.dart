@@ -2,7 +2,6 @@ import 'package:api/models/launch/launch_model.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'core_model.freezed.dart';
-
 part 'core_model.g.dart';
 
 @freezed

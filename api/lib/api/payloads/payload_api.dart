@@ -1,6 +1,6 @@
 import 'package:api/api/constants.dart';
 import 'package:api/models/payload/payload_model.dart';
-import 'package:api/models/query/query.dart' as q;
+import 'package:api/models/query/query_model.dart' as q;
 import 'package:api/models/response/api_paginated_list.dart';
 import 'package:dio/dio.dart';
 import 'package:retrofit/retrofit.dart';
@@ -20,8 +20,12 @@ abstract class PayloadApi {
   );
 
   @POST('/payloads/query')
-  Future<ApiPaginatedList<PayloadModel>> queryPayloads(@Body() q.Query query);
+  Future<ApiPaginatedList<PayloadModel>> queryPayloads(
+    @Body() q.QueryModel query,
+  );
 
   @POST('/payloads/query')
-  Future<ApiPaginatedList<FullPayloadModel>> queryFullPayloads(@Body() q.Query query);
+  Future<ApiPaginatedList<FullPayloadModel>> queryFullPayloads(
+    @Body() q.QueryModel query,
+  );
 }

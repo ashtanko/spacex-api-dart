@@ -1,7 +1,5 @@
 import 'package:api/api.dart';
-import 'package:api/api/constants.dart';
-import 'package:api/models/query/query.dart' as q;
-import 'package:api/models/response/api_paginated_list.dart';
+import 'package:api/models/query/query_model.dart' as q;
 import 'package:dio/dio.dart';
 import 'package:retrofit/retrofit.dart';
 
@@ -32,8 +30,12 @@ abstract class LaunchApi {
   );
 
   @POST('/launches/query')
-  Future<ApiPaginatedList<LaunchSimpleModel>> queryLaunches(@Body() q.Query query);
+  Future<ApiPaginatedList<LaunchSimpleModel>> queryLaunches(
+    @Body() q.QueryModel query,
+  );
 
   @POST('/launches/query')
-  Future<ApiPaginatedList<FullLaunchModel>> queryFullLaunches(@Body() q.Query query);
+  Future<ApiPaginatedList<FullLaunchModel>> queryFullLaunches(
+    @Body() q.QueryModel query,
+  );
 }

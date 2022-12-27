@@ -1,6 +1,6 @@
 import 'package:api/api/launch/launch_api.dart';
 import 'package:api/models/launch/launch_model.dart';
-import 'package:api/models/query/query.dart' as q;
+import 'package:api/models/query/query_model.dart' as q;
 import 'package:api/models/response/api_paginated_list.dart';
 import 'package:api/utils/exception.dart';
 import 'package:dio/dio.dart';
@@ -59,7 +59,7 @@ class LaunchDataSource {
   }
 
   Future<ApiPaginatedList<LaunchSimpleModel>> queryLaunches(
-    q.Query query,
+    q.QueryModel query,
   ) async {
     try {
       return _api.queryLaunches(query);
@@ -69,7 +69,7 @@ class LaunchDataSource {
   }
 
   Future<ApiPaginatedList<FullLaunchModel>> queryFullLaunches(
-    q.Query query,
+    q.QueryModel query,
   ) async {
     try {
       return _api.queryFullLaunches(query);

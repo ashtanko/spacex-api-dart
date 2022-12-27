@@ -1,6 +1,6 @@
 import 'package:api/api/dio/interceptors/logging_interceptor.dart';
 import 'package:api/api/vehicle/vehicle_api.dart';
-import 'package:api/models/query/query.dart' as q;
+import 'package:api/models/query/query_model.dart' as q;
 import 'package:api/network/vehicle_data_source.dart';
 import 'package:dio/dio.dart';
 import 'package:test/test.dart';
@@ -44,7 +44,7 @@ void main() {
 
     // act
     final data = await dataSource
-        .queryDragons(const q.Query(options: q.Options(offset: 5, page: 1)));
+        .queryDragons(const q.QueryModel(options: q.OptionsModel(offset: 5, page: 1)));
 
     // assert
     expect(data.page, 1);
@@ -82,7 +82,7 @@ void main() {
 
     // act
     final data = await dataSource
-        .queryShips(const q.Query(options: q.Options(offset: 5, page: 1)));
+        .queryShips(const q.QueryModel(options: q.OptionsModel(offset: 5, page: 1)));
 
     // assert
     expect(data.page, 1);
@@ -95,8 +95,8 @@ void main() {
 
     // act
     final data = await dataSource.queryFullShips(
-      const q.Query(
-        options: q.Options(offset: 5, page: 1, populate: ['launches']),
+      const q.QueryModel(
+        options: q.OptionsModel(offset: 5, page: 1, populate: ['launches']),
       ),
     );
 
@@ -136,7 +136,7 @@ void main() {
 
     // act
     final data = await dataSource
-        .queryRockets(const q.Query(options: q.Options(offset: 5, page: 1)));
+        .queryRockets(const q.QueryModel(options: q.OptionsModel(offset: 5, page: 1)));
 
     // assert
     expect(data.page, 1);

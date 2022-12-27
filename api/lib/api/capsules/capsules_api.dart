@@ -1,6 +1,6 @@
 import 'package:api/api/constants.dart';
 import 'package:api/models/capsule/capsule_model.dart';
-import 'package:api/models/query/query.dart' as q;
+import 'package:api/models/query/query_model.dart' as q;
 import 'package:api/models/response/api_paginated_list.dart';
 import 'package:dio/dio.dart';
 import 'package:retrofit/http.dart';
@@ -20,10 +20,12 @@ abstract class CapsulesApi {
   );
 
   @POST('/capsules/query')
-  Future<ApiPaginatedList<CapsuleModel>> queryCapsules(@Body() q.Query query);
+  Future<ApiPaginatedList<CapsuleModel>> queryCapsules(
+    @Body() q.QueryModel query,
+  );
 
   @POST('/capsules/query')
   Future<ApiPaginatedList<CapsuleFullModel>> queryFullCapsules(
-    @Body() q.Query query,
+    @Body() q.QueryModel query,
   );
 }

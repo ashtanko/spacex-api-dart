@@ -1,5 +1,4 @@
 import 'package:api/api.dart';
-import 'package:api/models/space_track/space_track_model.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'starlink_model.freezed.dart';

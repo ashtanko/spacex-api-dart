@@ -1,7 +1,6 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'landing_legs_model.freezed.dart';
-
 part 'landing_legs_model.g.dart';
 
 @freezed

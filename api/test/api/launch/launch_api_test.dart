@@ -1,6 +1,6 @@
 import 'package:api/api/launch/launch_api.dart';
 import 'package:api/models/launch/launch_model.dart';
-import 'package:api/models/query/query.dart';
+import 'package:api/models/query/query_model.dart';
 import 'package:api/models/response/api_paginated_list.dart';
 import 'package:api/network/launch_data_source.dart';
 import 'package:api/utils/exception.dart';
@@ -166,7 +166,7 @@ void main() {
       ],
     );
     final queryRawJson = 'query/query.json'.toFixture();
-    final query = Query.fromJson(queryRawJson);
+    final query = QueryModel.fromJson(queryRawJson);
     test(
       'should perform a POST request on /launches/query',
       () async {
@@ -194,7 +194,7 @@ void main() {
       ],
     );
     final queryRawJson = 'query/query.json'.toFixture();
-    final query = Query.fromJson(queryRawJson);
+    final query = QueryModel.fromJson(queryRawJson);
     test(
       'should perform a POST request on /landpads/query',
       () async {
@@ -320,7 +320,7 @@ void main() {
     test(
       'queryLaunches, should throw a ServerException when the response code is 404 or other (unsuccessful)',
       () async {
-        const q = Query();
+        const q = QueryModel();
         // arrange
         when(() => api.queryLaunches(q)).thenThrow(
           dioException,
@@ -338,7 +338,7 @@ void main() {
     test(
       'queryFullLaunches, should throw a ServerException when the response code is 404 or other (unsuccessful)',
       () async {
-        const q = Query();
+        const q = QueryModel();
         // arrange
         when(() => api.queryFullLaunches(q)).thenThrow(
           dioException,

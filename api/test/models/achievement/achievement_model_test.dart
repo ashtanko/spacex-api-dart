@@ -1,4 +1,4 @@
-import 'package:api/models/index.dart';
+import 'package:api/models/models.dart';
 import 'package:test/test.dart';
 
 import '../../fixtures_reader.dart';

@@ -270,7 +270,9 @@ class LoggingInterceptor extends Interceptor {
       }
       if (value is Map) {
         if (compact) {
-          logPrint('║${_indent(currentTabs)} $key: $value${!isLast ? ',' : ''}');
+          logPrint(
+            '║${_indent(currentTabs)} $key: $value${!isLast ? ',' : ''}',
+          );
         } else {
           logPrint('║${_indent(currentTabs)} $key: {');
           _printPrettyMap(logPrint, value, tabs: currentTabs);

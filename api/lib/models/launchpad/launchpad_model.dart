@@ -2,7 +2,6 @@ import 'package:api/api.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'launchpad_model.freezed.dart';
-
 part 'launchpad_model.g.dart';
 
 @JsonEnum()

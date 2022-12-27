@@ -1,18 +1,19 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'query.dart';
+part of 'query_model.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_Query _$$_QueryFromJson(Map<String, dynamic> json) => _$_Query(
+_$_QueryModel _$$_QueryModelFromJson(Map<String, dynamic> json) =>
+    _$_QueryModel(
       options: json['options'] == null
           ? null
-          : Options.fromJson(json['options'] as Map<String, dynamic>),
+          : OptionsModel.fromJson(json['options'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_QueryToJson(_$_Query instance) {
+Map<String, dynamic> _$$_QueryModelToJson(_$_QueryModel instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -25,7 +26,8 @@ Map<String, dynamic> _$$_QueryToJson(_$_Query instance) {
   return val;
 }
 
-_$_Options _$$_OptionsFromJson(Map<String, dynamic> json) => _$_Options(
+_$_OptionsModel _$$_OptionsModelFromJson(Map<String, dynamic> json) =>
+    _$_OptionsModel(
       pagination: json['pagination'] as bool? ?? false,
       page: json['page'] as int? ?? 0,
       limit: json['limit'] as int? ?? 5,
@@ -36,7 +38,7 @@ _$_Options _$$_OptionsFromJson(Map<String, dynamic> json) => _$_Options(
           const [],
     );
 
-Map<String, dynamic> _$$_OptionsToJson(_$_Options instance) =>
+Map<String, dynamic> _$$_OptionsModelToJson(_$_OptionsModel instance) =>
     <String, dynamic>{
       'pagination': instance.pagination,
       'page': instance.page,

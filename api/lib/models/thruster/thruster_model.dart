@@ -2,7 +2,6 @@ import 'package:api/models/unit/unit_model.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'thruster_model.freezed.dart';
-
 part 'thruster_model.g.dart';
 
 @freezed

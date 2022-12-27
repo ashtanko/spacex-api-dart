@@ -1,6 +1,6 @@
 import 'package:api/api/dio/interceptors/logging_interceptor.dart';
 import 'package:api/api/launch/launch_api.dart';
-import 'package:api/models/query/query.dart' as q;
+import 'package:api/models/query/query_model.dart' as q;
 import 'package:api/network/launch_data_source.dart';
 import 'package:dio/dio.dart';
 import 'package:test/test.dart';
@@ -77,7 +77,7 @@ void main() {
     dio.interceptors.add(LoggingInterceptor());
 
     // act
-    final data = await dataSource.queryLaunches(const q.Query());
+    final data = await dataSource.queryLaunches(const q.QueryModel());
 
     // assert
     expect(data.page, 1);
@@ -90,7 +90,7 @@ void main() {
 
     // act
     final data = await dataSource
-        .queryLaunches(const q.Query(options: q.Options(offset: 5, page: 1)));
+        .queryLaunches(const q.QueryModel(options: q.OptionsModel(offset: 5, page: 1)));
 
     // assert
     expect(data.page, 1);
@@ -103,8 +103,8 @@ void main() {
 
     // act
     final data = await dataSource.queryFullLaunches(
-      const q.Query(
-        options: q.Options(
+      const q.QueryModel(
+        options: q.OptionsModel(
           populate: ['payloads', 'launchpad', 'rocket', 'capsules', 'crew'],
         ),
       ),

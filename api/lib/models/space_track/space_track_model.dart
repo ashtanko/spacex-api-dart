@@ -1,7 +1,6 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'space_track_model.freezed.dart';
-
 part 'space_track_model.g.dart';
 
 @freezed

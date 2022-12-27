@@ -1,8 +1,5 @@
 import 'package:api/api.dart';
-import 'package:api/api/vehicle/vehicle_api.dart';
-import 'package:api/models/query/query.dart' as q;
-import 'package:api/models/response/api_paginated_list.dart';
-import 'package:api/utils/exception.dart';
+import 'package:api/models/query/query_model.dart' as q;
 import 'package:dio/dio.dart';
 
 class VehicleDataSource {
@@ -27,7 +24,7 @@ class VehicleDataSource {
   }
 
   Future<ApiPaginatedList<DragonVehicleModel>> queryDragons(
-    q.Query query,
+    q.QueryModel query,
   ) async {
     try {
       return _api.queryDragons(query);
@@ -53,7 +50,9 @@ class VehicleDataSource {
     }
   }
 
-  Future<ApiPaginatedList<ShipVehicleModel>> queryShips(q.Query query) async {
+  Future<ApiPaginatedList<ShipVehicleModel>> queryShips(
+    q.QueryModel query,
+  ) async {
     try {
       return _api.queryShips(query);
     } on DioError catch (_) {
@@ -62,7 +61,7 @@ class VehicleDataSource {
   }
 
   Future<ApiPaginatedList<ShipFullVehicleModel>> queryFullShips(
-    q.Query query,
+    q.QueryModel query,
   ) async {
     try {
       return _api.queryFullShips(query);
@@ -89,7 +88,7 @@ class VehicleDataSource {
   }
 
   Future<ApiPaginatedList<RocketVehicleModel>> queryRockets(
-    q.Query query,
+    q.QueryModel query,
   ) async {
     try {
       return _api.queryRockets(query);

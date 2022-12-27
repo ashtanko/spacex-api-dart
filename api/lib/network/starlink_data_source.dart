@@ -1,5 +1,5 @@
 import 'package:api/api/starlink/starlink_api.dart';
-import 'package:api/models/query/query.dart' as q;
+import 'package:api/models/query/query_model.dart' as q;
 import 'package:api/models/response/api_paginated_list.dart';
 import 'package:api/models/starlink/starlink_model.dart';
 import 'package:api/utils/exception.dart';
@@ -27,7 +27,7 @@ class StarlinkDataSource {
   }
 
   Future<ApiPaginatedList<StarlinkModel>> queryStarlinkList(
-    q.Query query,
+    q.QueryModel query,
   ) async {
     try {
       return _api.queryStarlinkList(query);
@@ -37,7 +37,7 @@ class StarlinkDataSource {
   }
 
   Future<ApiPaginatedList<StarlinkFullModel>> queryFullStarlinkList(
-    q.Query query,
+    q.QueryModel query,
   ) async {
     try {
       return _api.queryFullStarlinkList(query);

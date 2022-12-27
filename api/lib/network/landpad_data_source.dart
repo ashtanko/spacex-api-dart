@@ -1,6 +1,6 @@
 import 'package:api/api/landpad/landpad_api.dart';
 import 'package:api/models/landpad/landpad_model.dart';
-import 'package:api/models/query/query.dart' as q;
+import 'package:api/models/query/query_model.dart' as q;
 import 'package:api/models/response/api_paginated_list.dart';
 import 'package:api/utils/exception.dart';
 import 'package:dio/dio.dart';
@@ -26,7 +26,7 @@ class LandPadDataSource {
     }
   }
 
-  Future<ApiPaginatedList<LandpadModel>> queryLandpads(q.Query query) async {
+  Future<ApiPaginatedList<LandpadModel>> queryLandpads(q.QueryModel query) async {
     try {
       return _api.queryLandpads(query);
     } on DioError catch (_) {
@@ -35,7 +35,7 @@ class LandPadDataSource {
   }
 
   Future<ApiPaginatedList<LandpadFullModel>> queryFullLandpads(
-    q.Query query,
+    q.QueryModel query,
   ) async {
     try {
       return _api.queryFullLandpads(query);

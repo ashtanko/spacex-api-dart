@@ -1,6 +1,6 @@
 import 'package:api/api/capsules/capsules_api.dart';
 import 'package:api/models/capsule/capsule_model.dart';
-import 'package:api/models/query/query.dart';
+import 'package:api/models/query/query_model.dart';
 import 'package:api/models/response/api_paginated_list.dart';
 import 'package:api/network/capsules_data_source.dart';
 import 'package:api/utils/exception.dart';
@@ -75,7 +75,7 @@ void main() {
       ],
     );
     final queryRawJson = 'capsules/capsules_query.json'.toFixture();
-    final query = Query.fromJson(queryRawJson);
+    final query = QueryModel.fromJson(queryRawJson);
     test(
       'should perform a POST request on /capsules/query',
       () async {
@@ -103,7 +103,7 @@ void main() {
       ],
     );
     final queryRawJson = 'capsules/capsules_query.json'.toFixture();
-    final query = Query.fromJson(queryRawJson);
+    final query = QueryModel.fromJson(queryRawJson);
     test(
       'should perform a POST request on /capsules/query',
       () async {
@@ -161,7 +161,7 @@ void main() {
     test(
       'queryCapsules, should throw a ServerException when the response code is 404 or other (unsuccessful)',
       () async {
-        const q = Query();
+        const q = QueryModel();
         // arrange
         when(() => capsulesApi.queryCapsules(q)).thenThrow(
           dioException,
@@ -179,7 +179,7 @@ void main() {
     test(
       'queryFullCapsules, should throw a ServerException when the response code is 404 or other (unsuccessful)',
       () async {
-        const q = Query();
+        const q = QueryModel();
         // arrange
         when(() => capsulesApi.queryFullCapsules(q)).thenThrow(
           dioException,

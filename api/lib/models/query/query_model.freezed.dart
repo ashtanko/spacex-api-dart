@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
-part of 'query.dart';
+part of 'query_model.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -14,36 +14,38 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
-Query _$QueryFromJson(Map<String, dynamic> json) {
-  return _Query.fromJson(json);
+QueryModel _$QueryModelFromJson(Map<String, dynamic> json) {
+  return _QueryModel.fromJson(json);
 }
 
 /// @nodoc
-mixin _$Query {
+mixin _$QueryModel {
   @JsonKey(name: 'options')
-  Options? get options => throw _privateConstructorUsedError;
+  OptionsModel? get options => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $QueryCopyWith<Query> get copyWith => throw _privateConstructorUsedError;
+  $QueryModelCopyWith<QueryModel> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $QueryCopyWith<$Res> {
-  factory $QueryCopyWith(Query value, $Res Function(Query) then) =
-      _$QueryCopyWithImpl<$Res>;
-  $Res call({@JsonKey(name: 'options') Options? options});
+abstract class $QueryModelCopyWith<$Res> {
+  factory $QueryModelCopyWith(
+          QueryModel value, $Res Function(QueryModel) then) =
+      _$QueryModelCopyWithImpl<$Res>;
+  $Res call({@JsonKey(name: 'options') OptionsModel? options});
 
-  $OptionsCopyWith<$Res>? get options;
+  $OptionsModelCopyWith<$Res>? get options;
 }
 
 /// @nodoc
-class _$QueryCopyWithImpl<$Res> implements $QueryCopyWith<$Res> {
-  _$QueryCopyWithImpl(this._value, this._then);
+class _$QueryModelCopyWithImpl<$Res> implements $QueryModelCopyWith<$Res> {
+  _$QueryModelCopyWithImpl(this._value, this._then);
 
-  final Query _value;
+  final QueryModel _value;
   // ignore: unused_field
-  final $Res Function(Query) _then;
+  final $Res Function(QueryModel) _then;
 
   @override
   $Res call({
@@ -53,77 +55,80 @@ class _$QueryCopyWithImpl<$Res> implements $QueryCopyWith<$Res> {
       options: options == freezed
           ? _value.options
           : options // ignore: cast_nullable_to_non_nullable
-              as Options?,
+              as OptionsModel?,
     ));
   }
 
   @override
-  $OptionsCopyWith<$Res>? get options {
+  $OptionsModelCopyWith<$Res>? get options {
     if (_value.options == null) {
       return null;
     }
 
-    return $OptionsCopyWith<$Res>(_value.options!, (value) {
+    return $OptionsModelCopyWith<$Res>(_value.options!, (value) {
       return _then(_value.copyWith(options: value));
     });
   }
 }
 
 /// @nodoc
-abstract class _$$_QueryCopyWith<$Res> implements $QueryCopyWith<$Res> {
-  factory _$$_QueryCopyWith(_$_Query value, $Res Function(_$_Query) then) =
-      __$$_QueryCopyWithImpl<$Res>;
+abstract class _$$_QueryModelCopyWith<$Res>
+    implements $QueryModelCopyWith<$Res> {
+  factory _$$_QueryModelCopyWith(
+          _$_QueryModel value, $Res Function(_$_QueryModel) then) =
+      __$$_QueryModelCopyWithImpl<$Res>;
   @override
-  $Res call({@JsonKey(name: 'options') Options? options});
+  $Res call({@JsonKey(name: 'options') OptionsModel? options});
 
   @override
-  $OptionsCopyWith<$Res>? get options;
+  $OptionsModelCopyWith<$Res>? get options;
 }
 
 /// @nodoc
-class __$$_QueryCopyWithImpl<$Res> extends _$QueryCopyWithImpl<$Res>
-    implements _$$_QueryCopyWith<$Res> {
-  __$$_QueryCopyWithImpl(_$_Query _value, $Res Function(_$_Query) _then)
-      : super(_value, (v) => _then(v as _$_Query));
+class __$$_QueryModelCopyWithImpl<$Res> extends _$QueryModelCopyWithImpl<$Res>
+    implements _$$_QueryModelCopyWith<$Res> {
+  __$$_QueryModelCopyWithImpl(
+      _$_QueryModel _value, $Res Function(_$_QueryModel) _then)
+      : super(_value, (v) => _then(v as _$_QueryModel));
 
   @override
-  _$_Query get _value => super._value as _$_Query;
+  _$_QueryModel get _value => super._value as _$_QueryModel;
 
   @override
   $Res call({
     Object? options = freezed,
   }) {
-    return _then(_$_Query(
+    return _then(_$_QueryModel(
       options: options == freezed
           ? _value.options
           : options // ignore: cast_nullable_to_non_nullable
-              as Options?,
+              as OptionsModel?,
     ));
   }
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$_Query extends _Query {
-  const _$_Query({@JsonKey(name: 'options') this.options}) : super._();
+class _$_QueryModel extends _QueryModel {
+  const _$_QueryModel({@JsonKey(name: 'options') this.options}) : super._();
 
-  factory _$_Query.fromJson(Map<String, dynamic> json) =>
-      _$$_QueryFromJson(json);
+  factory _$_QueryModel.fromJson(Map<String, dynamic> json) =>
+      _$$_QueryModelFromJson(json);
 
   @override
   @JsonKey(name: 'options')
-  final Options? options;
+  final OptionsModel? options;
 
   @override
   String toString() {
-    return 'Query(options: $options)';
+    return 'QueryModel(options: $options)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_Query &&
+            other is _$_QueryModel &&
             const DeepCollectionEquality().equals(other.options, options));
   }
 
@@ -134,39 +139,40 @@ class _$_Query extends _Query {
 
   @JsonKey(ignore: true)
   @override
-  _$$_QueryCopyWith<_$_Query> get copyWith =>
-      __$$_QueryCopyWithImpl<_$_Query>(this, _$identity);
+  _$$_QueryModelCopyWith<_$_QueryModel> get copyWith =>
+      __$$_QueryModelCopyWithImpl<_$_QueryModel>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_QueryToJson(
+    return _$$_QueryModelToJson(
       this,
     );
   }
 }
 
-abstract class _Query extends Query {
-  const factory _Query({@JsonKey(name: 'options') final Options? options}) =
-      _$_Query;
-  const _Query._() : super._();
+abstract class _QueryModel extends QueryModel {
+  const factory _QueryModel(
+      {@JsonKey(name: 'options') final OptionsModel? options}) = _$_QueryModel;
+  const _QueryModel._() : super._();
 
-  factory _Query.fromJson(Map<String, dynamic> json) = _$_Query.fromJson;
+  factory _QueryModel.fromJson(Map<String, dynamic> json) =
+      _$_QueryModel.fromJson;
 
   @override
   @JsonKey(name: 'options')
-  Options? get options;
+  OptionsModel? get options;
   @override
   @JsonKey(ignore: true)
-  _$$_QueryCopyWith<_$_Query> get copyWith =>
+  _$$_QueryModelCopyWith<_$_QueryModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
-Options _$OptionsFromJson(Map<String, dynamic> json) {
-  return _Options.fromJson(json);
+OptionsModel _$OptionsModelFromJson(Map<String, dynamic> json) {
+  return _OptionsModel.fromJson(json);
 }
 
 /// @nodoc
-mixin _$Options {
+mixin _$OptionsModel {
   @JsonKey(name: 'pagination')
   bool get pagination => throw _privateConstructorUsedError;
   @JsonKey(name: 'page')
@@ -180,13 +186,15 @@ mixin _$Options {
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $OptionsCopyWith<Options> get copyWith => throw _privateConstructorUsedError;
+  $OptionsModelCopyWith<OptionsModel> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $OptionsCopyWith<$Res> {
-  factory $OptionsCopyWith(Options value, $Res Function(Options) then) =
-      _$OptionsCopyWithImpl<$Res>;
+abstract class $OptionsModelCopyWith<$Res> {
+  factory $OptionsModelCopyWith(
+          OptionsModel value, $Res Function(OptionsModel) then) =
+      _$OptionsModelCopyWithImpl<$Res>;
   $Res call(
       {@JsonKey(name: 'pagination') bool pagination,
       @JsonKey(name: 'page') int page,
@@ -196,12 +204,12 @@ abstract class $OptionsCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$OptionsCopyWithImpl<$Res> implements $OptionsCopyWith<$Res> {
-  _$OptionsCopyWithImpl(this._value, this._then);
+class _$OptionsModelCopyWithImpl<$Res> implements $OptionsModelCopyWith<$Res> {
+  _$OptionsModelCopyWithImpl(this._value, this._then);
 
-  final Options _value;
+  final OptionsModel _value;
   // ignore: unused_field
-  final $Res Function(Options) _then;
+  final $Res Function(OptionsModel) _then;
 
   @override
   $Res call({
@@ -237,10 +245,11 @@ class _$OptionsCopyWithImpl<$Res> implements $OptionsCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$$_OptionsCopyWith<$Res> implements $OptionsCopyWith<$Res> {
-  factory _$$_OptionsCopyWith(
-          _$_Options value, $Res Function(_$_Options) then) =
-      __$$_OptionsCopyWithImpl<$Res>;
+abstract class _$$_OptionsModelCopyWith<$Res>
+    implements $OptionsModelCopyWith<$Res> {
+  factory _$$_OptionsModelCopyWith(
+          _$_OptionsModel value, $Res Function(_$_OptionsModel) then) =
+      __$$_OptionsModelCopyWithImpl<$Res>;
   @override
   $Res call(
       {@JsonKey(name: 'pagination') bool pagination,
@@ -251,13 +260,15 @@ abstract class _$$_OptionsCopyWith<$Res> implements $OptionsCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_OptionsCopyWithImpl<$Res> extends _$OptionsCopyWithImpl<$Res>
-    implements _$$_OptionsCopyWith<$Res> {
-  __$$_OptionsCopyWithImpl(_$_Options _value, $Res Function(_$_Options) _then)
-      : super(_value, (v) => _then(v as _$_Options));
+class __$$_OptionsModelCopyWithImpl<$Res>
+    extends _$OptionsModelCopyWithImpl<$Res>
+    implements _$$_OptionsModelCopyWith<$Res> {
+  __$$_OptionsModelCopyWithImpl(
+      _$_OptionsModel _value, $Res Function(_$_OptionsModel) _then)
+      : super(_value, (v) => _then(v as _$_OptionsModel));
 
   @override
-  _$_Options get _value => super._value as _$_Options;
+  _$_OptionsModel get _value => super._value as _$_OptionsModel;
 
   @override
   $Res call({
@@ -267,7 +278,7 @@ class __$$_OptionsCopyWithImpl<$Res> extends _$OptionsCopyWithImpl<$Res>
     Object? offset = freezed,
     Object? populate = freezed,
   }) {
-    return _then(_$_Options(
+    return _then(_$_OptionsModel(
       pagination: pagination == freezed
           ? _value.pagination
           : pagination // ignore: cast_nullable_to_non_nullable
@@ -294,8 +305,8 @@ class __$$_OptionsCopyWithImpl<$Res> extends _$OptionsCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_Options extends _Options {
-  const _$_Options(
+class _$_OptionsModel extends _OptionsModel {
+  const _$_OptionsModel(
       {@JsonKey(name: 'pagination') this.pagination = false,
       @JsonKey(name: 'page') this.page = 0,
       @JsonKey(name: 'limit') this.limit = 5,
@@ -304,8 +315,8 @@ class _$_Options extends _Options {
       : _populate = populate,
         super._();
 
-  factory _$_Options.fromJson(Map<String, dynamic> json) =>
-      _$$_OptionsFromJson(json);
+  factory _$_OptionsModel.fromJson(Map<String, dynamic> json) =>
+      _$$_OptionsModelFromJson(json);
 
   @override
   @JsonKey(name: 'pagination')
@@ -329,14 +340,14 @@ class _$_Options extends _Options {
 
   @override
   String toString() {
-    return 'Options(pagination: $pagination, page: $page, limit: $limit, offset: $offset, populate: $populate)';
+    return 'OptionsModel(pagination: $pagination, page: $page, limit: $limit, offset: $offset, populate: $populate)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_Options &&
+            other is _$_OptionsModel &&
             const DeepCollectionEquality()
                 .equals(other.pagination, pagination) &&
             const DeepCollectionEquality().equals(other.page, page) &&
@@ -357,27 +368,29 @@ class _$_Options extends _Options {
 
   @JsonKey(ignore: true)
   @override
-  _$$_OptionsCopyWith<_$_Options> get copyWith =>
-      __$$_OptionsCopyWithImpl<_$_Options>(this, _$identity);
+  _$$_OptionsModelCopyWith<_$_OptionsModel> get copyWith =>
+      __$$_OptionsModelCopyWithImpl<_$_OptionsModel>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_OptionsToJson(
+    return _$$_OptionsModelToJson(
       this,
     );
   }
 }
 
-abstract class _Options extends Options {
-  const factory _Options(
-      {@JsonKey(name: 'pagination') final bool pagination,
-      @JsonKey(name: 'page') final int page,
-      @JsonKey(name: 'limit') final int limit,
-      @JsonKey(name: 'offset') final int offset,
-      @JsonKey(name: 'populate') final List<String> populate}) = _$_Options;
-  const _Options._() : super._();
+abstract class _OptionsModel extends OptionsModel {
+  const factory _OptionsModel(
+          {@JsonKey(name: 'pagination') final bool pagination,
+          @JsonKey(name: 'page') final int page,
+          @JsonKey(name: 'limit') final int limit,
+          @JsonKey(name: 'offset') final int offset,
+          @JsonKey(name: 'populate') final List<String> populate}) =
+      _$_OptionsModel;
+  const _OptionsModel._() : super._();
 
-  factory _Options.fromJson(Map<String, dynamic> json) = _$_Options.fromJson;
+  factory _OptionsModel.fromJson(Map<String, dynamic> json) =
+      _$_OptionsModel.fromJson;
 
   @override
   @JsonKey(name: 'pagination')
@@ -396,6 +409,6 @@ abstract class _Options extends Options {
   List<String> get populate;
   @override
   @JsonKey(ignore: true)
-  _$$_OptionsCopyWith<_$_Options> get copyWith =>
+  _$$_OptionsModelCopyWith<_$_OptionsModel> get copyWith =>
       throw _privateConstructorUsedError;
 }

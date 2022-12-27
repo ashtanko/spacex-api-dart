@@ -1,5 +1,5 @@
 import 'package:api/api/constants.dart';
-import 'package:api/models/query/query.dart' as q;
+import 'package:api/models/query/query_model.dart' as q;
 import 'package:api/models/response/api_paginated_list.dart';
 import 'package:api/models/vehicle/vehicle_model.dart';
 import 'package:dio/dio.dart';
@@ -20,7 +20,9 @@ abstract class VehicleApi {
   );
 
   @POST('/dragons/query')
-  Future<ApiPaginatedList<DragonVehicleModel>> queryDragons(@Body() q.Query query);
+  Future<ApiPaginatedList<DragonVehicleModel>> queryDragons(
+    @Body() q.QueryModel query,
+  );
 
   @GET('/ships')
   Future<List<ShipVehicleModel>> getAllShips();
@@ -31,11 +33,13 @@ abstract class VehicleApi {
   );
 
   @POST('/ships/query')
-  Future<ApiPaginatedList<ShipVehicleModel>> queryShips(@Body() q.Query query);
+  Future<ApiPaginatedList<ShipVehicleModel>> queryShips(
+    @Body() q.QueryModel query,
+  );
 
   @POST('/ships/query')
   Future<ApiPaginatedList<ShipFullVehicleModel>> queryFullShips(
-    @Body() q.Query query,
+    @Body() q.QueryModel query,
   );
 
   @GET('/rockets')
@@ -47,7 +51,9 @@ abstract class VehicleApi {
   );
 
   @POST('/ships/query')
-  Future<ApiPaginatedList<RocketVehicleModel>> queryRockets(@Body() q.Query query);
+  Future<ApiPaginatedList<RocketVehicleModel>> queryRockets(
+    @Body() q.QueryModel query,
+  );
 
   // roadster
   @GET('/roadster')

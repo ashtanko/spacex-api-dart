@@ -1,8 +1,7 @@
-import 'package:api/models/index.dart';
+import 'package:api/models/models.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'ship_model.freezed.dart';
-
 part 'ship_model.g.dart';
 
 @freezed

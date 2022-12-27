@@ -1,6 +1,6 @@
 import 'package:api/api/constants.dart';
-import 'package:api/models/crew_model/crew_model.dart';
-import 'package:api/models/query/query.dart' as q;
+import 'package:api/models/crew/crew_model.dart';
+import 'package:api/models/query/query_model.dart' as q;
 import 'package:api/models/response/api_paginated_list.dart';
 import 'package:dio/dio.dart';
 import 'package:retrofit/retrofit.dart';
@@ -20,8 +20,8 @@ abstract class CrewApi {
   );
 
   @POST('/crew/query')
-  Future<ApiPaginatedList<CrewModel>> queryCrew(@Body() q.Query query);
+  Future<ApiPaginatedList<CrewModel>> queryCrew(@Body() q.QueryModel query);
 
   @POST('/crew/query')
-  Future<ApiPaginatedList<FullCrewModel>> queryFullCrew(@Body() q.Query query);
+  Future<ApiPaginatedList<FullCrewModel>> queryFullCrew(@Body() q.QueryModel query);
 }

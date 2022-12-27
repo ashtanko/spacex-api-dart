@@ -1,8 +1,7 @@
-import 'package:api/models/index.dart';
+import 'package:api/models/models.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'landpad_model.freezed.dart';
-
 part 'landpad_model.g.dart';
 
 @freezed
@@ -48,7 +47,9 @@ class LandpadFullModel with _$LandpadFullModel {
     @JsonKey(name: 'landing_successes') int? landingSuccesses,
     @JsonKey(name: 'wikipedia') String? wikipedia,
     @JsonKey(name: 'details') String? details,
-    @JsonKey(name: 'launches') @Default(<LaunchModel>[]) List<LaunchModel> launches,
+    @JsonKey(name: 'launches')
+    @Default(<LaunchModel>[])
+        List<LaunchModel> launches,
   }) = _LandpadFullModel;
 
   const LandpadFullModel._();

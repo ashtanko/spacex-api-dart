@@ -1,4 +1,4 @@
-import 'package:api/models/index.dart';
+import 'package:api/models/models.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'query_full_ships.freezed.dart';

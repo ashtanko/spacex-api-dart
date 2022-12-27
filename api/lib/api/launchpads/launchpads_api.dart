@@ -1,6 +1,6 @@
 import 'package:api/api/constants.dart';
 import 'package:api/models/launchpad/launchpad_model.dart';
-import 'package:api/models/query/query.dart' as q;
+import 'package:api/models/query/query_model.dart' as q;
 import 'package:api/models/response/api_paginated_list.dart';
 import 'package:dio/dio.dart';
 import 'package:retrofit/retrofit.dart';
@@ -20,10 +20,12 @@ abstract class LaunchpadsApi {
   );
 
   @POST('/launchpads/query')
-  Future<ApiPaginatedList<LaunchpadModel>> queryLaunchpads(@Body() q.Query query);
+  Future<ApiPaginatedList<LaunchpadModel>> queryLaunchpads(
+    @Body() q.QueryModel query,
+  );
 
   @POST('/launchpads/query')
   Future<ApiPaginatedList<LaunchpadFullModel>> queryFullLaunchpads(
-    @Body() q.Query query,
+    @Body() q.QueryModel query,
   );
 }

@@ -1,6 +1,6 @@
 import 'package:api/api/dio/interceptors/logging_interceptor.dart';
 import 'package:api/api/payloads/payload_api.dart';
-import 'package:api/models/query/query.dart' as q;
+import 'package:api/models/query/query_model.dart' as q;
 import 'package:api/network/payload_data_source.dart';
 import 'package:dio/dio.dart';
 import 'package:test/test.dart';
@@ -45,7 +45,7 @@ void main() {
 
     // act
     final data = await dataSource.queryFullPayloads(
-      const q.Query(options: q.Options(populate: ['launch'])),
+      const q.QueryModel(options: q.OptionsModel(populate: ['launch'])),
     );
 
     // assert
@@ -61,7 +61,7 @@ void main() {
 
     // act
     final data = await dataSource
-        .queryPayloads(const q.Query(options: q.Options(offset: 5, page: 1)));
+        .queryPayloads(const q.QueryModel(options: q.OptionsModel(offset: 5, page: 1)));
 
     // assert
     expect(data.page, 1);

@@ -1,5 +1,4 @@
 import 'package:api/api.dart';
-import 'package:api/models/payload/payload_model.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'launch_model.freezed.dart';
@@ -121,7 +120,8 @@ class LaunchModel with _$LaunchModel {
 
   const LaunchModel._();
 
-  factory LaunchModel.fromJson(Map<String, dynamic> json) => _$LaunchModelFromJson(json);
+  factory LaunchModel.fromJson(Map<String, dynamic> json) =>
+      _$LaunchModelFromJson(json);
 }
 
 @freezed

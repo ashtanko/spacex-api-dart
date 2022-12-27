@@ -1,5 +1,5 @@
 import 'package:api/api/constants.dart';
-import 'package:api/models/query/query.dart' as q;
+import 'package:api/models/query/query_model.dart' as q;
 import 'package:api/models/response/api_paginated_list.dart';
 import 'package:api/models/starlink/starlink_model.dart';
 import 'package:dio/dio.dart';
@@ -21,11 +21,11 @@ abstract class StarlinkApi {
 
   @POST('/starlink/query')
   Future<ApiPaginatedList<StarlinkModel>> queryStarlinkList(
-    @Body() q.Query query,
+    @Body() q.QueryModel query,
   );
 
   @POST('/starlink/query')
   Future<ApiPaginatedList<StarlinkFullModel>> queryFullStarlinkList(
-    @Body() q.Query query,
+    @Body() q.QueryModel query,
   );
 }

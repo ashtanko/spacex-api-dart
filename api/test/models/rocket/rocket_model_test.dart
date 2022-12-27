@@ -1,5 +1,4 @@
 import 'package:api/api.dart';
-import 'package:api/models/landing_legs/landing_legs_model.dart';
 import 'package:test/test.dart';
 
 void main() {

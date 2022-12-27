@@ -2,7 +2,6 @@ import 'package:api/models/launch/launch_model.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'capsule_model.freezed.dart';
-
 part 'capsule_model.g.dart';
 
 /// Details about a specific capsule used in a CRS mission
@@ -34,7 +33,9 @@ class CapsuleFullModel with _$CapsuleFullModel {
     @JsonKey(name: 'water_landings') @Default(0) int waterLandings,
     @JsonKey(name: 'land_landings') @Default(0) int landLandings,
     @JsonKey(name: 'last_update') @Default('') String? lastUpdate,
-    @JsonKey(name: 'launches') @Default(<LaunchModel>[]) List<LaunchModel> launches,
+    @JsonKey(name: 'launches')
+    @Default(<LaunchModel>[])
+        List<LaunchModel> launches,
     @Default('') String serial,
     @Default('') String status,
     @Default('') String type,

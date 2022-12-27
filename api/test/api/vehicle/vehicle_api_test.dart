@@ -1,5 +1,5 @@
 import 'package:api/api/vehicle/vehicle_api.dart';
-import 'package:api/models/query/query.dart';
+import 'package:api/models/query/query_model.dart';
 import 'package:api/models/response/api_paginated_list.dart';
 import 'package:api/models/vehicle/vehicle_model.dart';
 import 'package:api/network/vehicle_data_source.dart';
@@ -76,7 +76,7 @@ void main() {
       ],
     );
     final queryRawJson = 'query/query.json'.toFixture();
-    final query = Query.fromJson(queryRawJson);
+    final query = QueryModel.fromJson(queryRawJson);
     test(
       'should perform a POST request on /dragons/query',
       () async {
@@ -150,7 +150,7 @@ void main() {
       ],
     );
     final queryRawJson = 'query/query.json'.toFixture();
-    final query = Query.fromJson(queryRawJson);
+    final query = QueryModel.fromJson(queryRawJson);
     test(
       'should perform a POST request on /ships/query',
       () async {
@@ -178,7 +178,7 @@ void main() {
       ],
     );
     final queryRawJson = 'query/query.json'.toFixture();
-    final query = Query.fromJson(queryRawJson);
+    final query = QueryModel.fromJson(queryRawJson);
     test(
       'should perform a POST request on /ships/query',
       () async {
@@ -252,7 +252,7 @@ void main() {
       ],
     );
     final queryRawJson = 'query/query.json'.toFixture();
-    final query = Query.fromJson(queryRawJson);
+    final query = QueryModel.fromJson(queryRawJson);
     test(
       'should perform a POST request on /rockets/query',
       () async {
@@ -332,7 +332,7 @@ void main() {
     test(
       'queryDragons, should throw a ServerException when the response code is 404 or other (unsuccessful)',
       () async {
-        const q = Query();
+        const q = QueryModel();
         // arrange
         when(() => api.queryDragons(q)).thenThrow(
           dioException,
@@ -384,7 +384,7 @@ void main() {
     test(
       'queryShips, should throw a ServerException when the response code is 404 or other (unsuccessful)',
       () async {
-        const q = Query();
+        const q = QueryModel();
         // arrange
         when(() => api.queryShips(q)).thenThrow(
           dioException,
@@ -402,7 +402,7 @@ void main() {
     test(
       'queryFullShips, should throw a ServerException when the response code is 404 or other (unsuccessful)',
       () async {
-        const q = Query();
+        const q = QueryModel();
         // arrange
         when(() => api.queryFullShips(q)).thenThrow(
           dioException,
@@ -454,7 +454,7 @@ void main() {
     test(
       'queryRockets, should throw a ServerException when the response code is 404 or other (unsuccessful)',
       () async {
-        const q = Query();
+        const q = QueryModel();
         // arrange
         when(() => api.queryRockets(q)).thenThrow(
           dioException,

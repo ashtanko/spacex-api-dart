@@ -1,5 +1,5 @@
 import 'package:api/api.dart';
-import 'package:api/models/crew_model/crew_status.dart';
+import 'package:api/models/crew/crew_status.dart';
 import 'package:test/test.dart';
 
 void main() {

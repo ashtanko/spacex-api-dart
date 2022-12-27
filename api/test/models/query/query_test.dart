@@ -1,12 +1,12 @@
-import 'package:api/models/query/query.dart';
+import 'package:api/models/query/query_model.dart';
 import 'package:test/test.dart';
 
 import '../../fixtures_reader.dart';
 
 void main() {
-  const q1 = Query();
-  const q2 = Query();
-  const q3 = Query(options: Options());
+  const q1 = QueryModel();
+  const q2 = QueryModel();
+  const q3 = QueryModel(options: OptionsModel());
 
   group('value comparison', () {
     test('should be equal', () {
@@ -21,8 +21,8 @@ void main() {
   });
 
   group('from json', () {
-    const query = Query(
-      options: Options(
+    const query = QueryModel(
+      options: OptionsModel(
         pagination: true,
         page: 1,
         populate: ['payloads', 'launchpad', 'rocket'],
@@ -35,7 +35,7 @@ void main() {
         final Map<String, dynamic> jsonMap = 'query/query.json'.toFixture();
 
         // act
-        final result = Query.fromJson(jsonMap);
+        final result = QueryModel.fromJson(jsonMap);
 
         // assert
         expect(result, equals(query));

@@ -1,6 +1,6 @@
 import 'package:api/api/payloads/payload_api.dart';
 import 'package:api/models/payload/payload_model.dart';
-import 'package:api/models/query/query.dart' as q;
+import 'package:api/models/query/query_model.dart' as q;
 import 'package:api/models/response/api_paginated_list.dart';
 import 'package:api/utils/exception.dart';
 import 'package:dio/dio.dart';
@@ -26,7 +26,7 @@ class PayloadDataSource {
     }
   }
 
-  Future<ApiPaginatedList<PayloadModel>> queryPayloads(q.Query query) async {
+  Future<ApiPaginatedList<PayloadModel>> queryPayloads(q.QueryModel query) async {
     try {
       return _api.queryPayloads(query);
     } on DioError catch (_) {
@@ -35,7 +35,7 @@ class PayloadDataSource {
   }
 
   Future<ApiPaginatedList<FullPayloadModel>> queryFullPayloads(
-    q.Query query,
+    q.QueryModel query,
   ) async {
     try {
       return _api.queryFullPayloads(query);

@@ -1,6 +1,6 @@
 import 'package:api/api/launchpads/launchpads_api.dart';
 import 'package:api/models/launchpad/launchpad_model.dart';
-import 'package:api/models/query/query.dart' as q;
+import 'package:api/models/query/query_model.dart' as q;
 import 'package:api/models/response/api_paginated_list.dart';
 import 'package:api/utils/exception.dart';
 import 'package:dio/dio.dart';
@@ -27,7 +27,7 @@ class LaunchpadsDataSource {
   }
 
   Future<ApiPaginatedList<LaunchpadModel>> queryLaunchpads(
-    q.Query query,
+    q.QueryModel query,
   ) async {
     try {
       return _api.queryLaunchpads(query);
@@ -37,7 +37,7 @@ class LaunchpadsDataSource {
   }
 
   Future<ApiPaginatedList<LaunchpadFullModel>> queryFullLaunchpads(
-    q.Query query,
+    q.QueryModel query,
   ) async {
     try {
       return _api.queryFullLaunchpads(query);

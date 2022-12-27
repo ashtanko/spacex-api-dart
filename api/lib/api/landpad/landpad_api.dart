@@ -1,6 +1,6 @@
 import 'package:api/api/constants.dart';
 import 'package:api/models/landpad/landpad_model.dart';
-import 'package:api/models/query/query.dart' as q;
+import 'package:api/models/query/query_model.dart' as q;
 import 'package:api/models/response/api_paginated_list.dart';
 import 'package:dio/dio.dart';
 import 'package:retrofit/retrofit.dart';
@@ -20,10 +20,10 @@ abstract class LandpadApi {
   );
 
   @POST('/landpads/query')
-  Future<ApiPaginatedList<LandpadModel>> queryLandpads(@Body() q.Query query);
+  Future<ApiPaginatedList<LandpadModel>> queryLandpads(@Body() q.QueryModel query);
 
   @POST('/landpads/query')
   Future<ApiPaginatedList<LandpadFullModel>> queryFullLandpads(
-    @Body() q.Query query,
+    @Body() q.QueryModel query,
   );
 }

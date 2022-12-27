@@ -1,6 +1,6 @@
 import 'package:api/api/crew/crew_api.dart';
-import 'package:api/models/crew_model/crew_model.dart';
-import 'package:api/models/query/query.dart' as q;
+import 'package:api/models/crew/crew_model.dart';
+import 'package:api/models/query/query_model.dart' as q;
 import 'package:api/models/response/api_paginated_list.dart';
 import 'package:api/utils/exception.dart';
 import 'package:dio/dio.dart';
@@ -26,7 +26,7 @@ class CrewDataSource {
     }
   }
 
-  Future<ApiPaginatedList<CrewModel>> queryCrew(q.Query query) async {
+  Future<ApiPaginatedList<CrewModel>> queryCrew(q.QueryModel query) async {
     try {
       return _api.queryCrew(query);
     } on DioError catch (_) {
@@ -34,7 +34,7 @@ class CrewDataSource {
     }
   }
 
-  Future<ApiPaginatedList<FullCrewModel>> queryFullCrew(q.Query query) async {
+  Future<ApiPaginatedList<FullCrewModel>> queryFullCrew(q.QueryModel query) async {
     try {
       return _api.queryFullCrew(query);
     } on DioError catch (_) {
