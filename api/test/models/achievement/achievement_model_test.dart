@@ -1,32 +1,18 @@
 import 'package:api/models/models.dart';
 import 'package:test/test.dart';
 
+import '../../fixtures/fixtures.dart';
 import '../../fixtures_reader.dart';
 
 void main() {
-  final achievementModel = AchievementModel(
-    links: const AchievementLinksModel(
-      article: 'http://www.spacex.com/news/2013/02/11/flight-4-launch-update-0',
-    ),
-    name: 'Falcon reaches Earth orbit',
-    date: DateTime.parse('2008-09-28T23:15:00Z'),
-    details:
-        'Falcon 1 becomes the first privately developed liquid-fuel rocket to reach Earth orbit.',
-    id: '5f6fb2cfdcfdf403df37971e',
-  );
-
-  const a1 = AchievementModel(id: '0');
-  const a2 = AchievementModel(id: '0');
-  const a3 = AchievementModel(id: '1');
-
   group('value comparison', () {
     test('should be equal', () {
-      expect(a1, a2);
-      assert(a1 == a2);
+      expect(achievement1, achievement2);
+      assert(achievement1 == achievement2);
     });
 
     test('should not be equal', () {
-      assert(a1 != a3);
+      assert(achievement1 != achievement3);
     });
   });
 

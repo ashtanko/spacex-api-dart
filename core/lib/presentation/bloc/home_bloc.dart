@@ -1,6 +1,6 @@
 import 'package:api/example/capsules_api_example.dart';
 import 'package:api/example/info_api_example.dart';
-import 'package:api/models/query/query.dart';
+import 'package:api/models/query/query_model.dart';
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
 
@@ -27,8 +27,8 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
 
       try {
         final paginatedCapsules = await queryCapsules(
-          const Query(
-            options: Options(page: 2),
+          const QueryModel(
+            options: OptionsModel(page: 2),
           ),
         );
         final capsules = paginatedCapsules.results;
@@ -39,8 +39,8 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
 
       try {
         final paginatedFullCapsules = await queryFullCapsules(
-          const Query(
-            options: Options(populate: ['launches']),
+          const QueryModel(
+            options: OptionsModel(populate: ['launches']),
           ),
         );
         final capsules = paginatedFullCapsules.results;

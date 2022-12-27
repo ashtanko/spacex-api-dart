@@ -23,7 +23,7 @@ void main() {
   });
 
   group('get all capsules', () {
-    final rawJson = 'capsules/one_capsule.json'.toFixture();
+    final rawJson = 'capsules/capsule.json'.toFixture();
     final allCapsulesMockResponse = [CapsuleModel.fromJson(rawJson)];
     test(
       'should perform a GET request on /capsules',
@@ -46,7 +46,7 @@ void main() {
 
   group('get one capsule', () {
     const capsuleId = '5e9e2c5bf35918ed873b2664';
-    final capsuleRawJson = 'capsules/one_capsule.json'.toFixture();
+    final capsuleRawJson = 'capsules/capsule.json'.toFixture();
     final oneCapsuleMockResponse = CapsuleModel.fromJson(capsuleRawJson);
     test(
       'should perform a GET request on /capsules/{$capsuleId}',
@@ -74,7 +74,7 @@ void main() {
         CapsuleModel.fromJson(rawJson),
       ],
     );
-    final queryRawJson = 'capsules/capsules_query.json'.toFixture();
+    final queryRawJson = 'query/query.json'.toFixture();
     final query = QueryModel.fromJson(queryRawJson);
     test(
       'should perform a POST request on /capsules/query',
@@ -96,13 +96,13 @@ void main() {
   });
 
   group('query full capsules', () {
-    final rawJson = 'capsules/capsule_with_launches.json'.toFixture();
+    final rawJson = 'capsules/full_capsule.json'.toFixture();
     final queryCapsulesMockResponse = ApiPaginatedList(
       results: [
         CapsuleFullModel.fromJson(rawJson),
       ],
     );
-    final queryRawJson = 'capsules/capsules_query.json'.toFixture();
+    final queryRawJson = 'query/query.json'.toFixture();
     final query = QueryModel.fromJson(queryRawJson);
     test(
       'should perform a POST request on /capsules/query',
