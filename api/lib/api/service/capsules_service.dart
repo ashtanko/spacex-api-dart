@@ -1,4 +1,0 @@
-class CapsulesService {
-  //Future<List<>>
-
-}

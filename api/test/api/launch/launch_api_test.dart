@@ -232,22 +232,22 @@ void main() {
       },
     );
 
-    // test(
-    //   'getUpcomingLaunches, should throw a ServerException when the response code is 404 or other (unsuccessful)',
-    //   () async {
-    //     // arrange
-    //     when(() => api.getUpcomingLaunches()).thenThrow(
-    //       dioException,
-    //     );
-    //     // act
-    //     final call = dataSource.getUpcomingLaunches();
-    //     // assert
-    //     expect(
-    //       () => call,
-    //       throwsA(const TypeMatcher<ServerException>()),
-    //     );
-    //   },
-    // );
+    test(
+      'getUpcomingLaunches, should throw a ServerException when the response code is 404 or other (unsuccessful)',
+      () async {
+        // arrange
+        when(() => api.getUpcomingLaunches()).thenThrow(
+          dioException,
+        );
+        // act
+        final call = dataSource.getUpcomingLaunches();
+        // assert
+        expect(
+          () => call,
+          throwsA(const TypeMatcher<ServerException>()),
+        );
+      },
+    );
 
     test(
       'getPastLaunches, should throw a ServerException when the response code is 404 or other (unsuccessful)',

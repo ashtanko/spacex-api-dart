@@ -18,7 +18,7 @@ class LaunchDataSource {
     }
   }
 
-  Future<List<LaunchSimpleModel>> getUpcomingLaunches() {
+  Future<List<LaunchSimpleModel>> getUpcomingLaunches() async {
     try {
       return _api.getUpcomingLaunches();
     } on DioError catch (_) {
