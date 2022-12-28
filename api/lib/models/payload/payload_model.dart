@@ -98,8 +98,8 @@ class PayloadDragonModel with _$PayloadDragonModel {
     @JsonKey(name: 'mass_returned_lbs') double? massReturnedLbs,
     @JsonKey(name: 'flight_time_sec') double? flightTimeSec,
     @JsonKey(name: 'manifest') String? manifest,
-    @JsonKey(name: 'water_landing') @Default(false) bool waterLanding,
-    @JsonKey(name: 'land_landing') @Default(false) bool landLanding,
+    @JsonKey(name: 'water_landing') bool? waterLanding,
+    @JsonKey(name: 'land_landing') bool? landLanding,
   }) = _PayloadDragonModel;
 
   const PayloadDragonModel._();

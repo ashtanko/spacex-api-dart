@@ -190,8 +190,8 @@ _$_PayloadDragonModel _$$_PayloadDragonModelFromJson(
       massReturnedLbs: (json['mass_returned_lbs'] as num?)?.toDouble(),
       flightTimeSec: (json['flight_time_sec'] as num?)?.toDouble(),
       manifest: json['manifest'] as String?,
-      waterLanding: json['water_landing'] as bool? ?? false,
-      landLanding: json['land_landing'] as bool? ?? false,
+      waterLanding: json['water_landing'] as bool?,
+      landLanding: json['land_landing'] as bool?,
     );
 
 Map<String, dynamic> _$$_PayloadDragonModelToJson(
@@ -209,7 +209,7 @@ Map<String, dynamic> _$$_PayloadDragonModelToJson(
   writeNotNull('mass_returned_lbs', instance.massReturnedLbs);
   writeNotNull('flight_time_sec', instance.flightTimeSec);
   writeNotNull('manifest', instance.manifest);
-  val['water_landing'] = instance.waterLanding;
-  val['land_landing'] = instance.landLanding;
+  writeNotNull('water_landing', instance.waterLanding);
+  writeNotNull('land_landing', instance.landLanding);
   return val;
 }

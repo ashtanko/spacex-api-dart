@@ -40,7 +40,7 @@ mixin _$FullLaunchModel {
   @JsonKey(name: 'flight_number')
   int get flightNumber => throw _privateConstructorUsedError;
   @JsonKey(name: 'launchpad')
-  LandpadModel? get launchpad => throw _privateConstructorUsedError;
+  LaunchpadModel? get launchpad => throw _privateConstructorUsedError;
   @JsonKey(name: 'payloads')
   List<PayloadModel> get payloads => throw _privateConstructorUsedError;
   @JsonKey(name: 'capsules')
@@ -95,7 +95,7 @@ abstract class $FullLaunchModelCopyWith<$Res> {
       @JsonKey(name: 'date_utc') String dateUtc,
       @JsonKey(name: 'name') String name,
       @JsonKey(name: 'flight_number') int flightNumber,
-      @JsonKey(name: 'launchpad') LandpadModel? launchpad,
+      @JsonKey(name: 'launchpad') LaunchpadModel? launchpad,
       @JsonKey(name: 'payloads') List<PayloadModel> payloads,
       @JsonKey(name: 'capsules') List<CapsuleModel> capsules,
       @JsonKey(name: 'ships') List<ShipModel> ships,
@@ -112,7 +112,7 @@ abstract class $FullLaunchModelCopyWith<$Res> {
       @JsonKey(name: 'fairings') FairingsModel? fairings,
       @JsonKey(name: 'launch_library_id') String? launchLibraryId});
 
-  $LandpadModelCopyWith<$Res>? get launchpad;
+  $LaunchpadModelCopyWith<$Res>? get launchpad;
   $RocketModelCopyWith<$Res>? get rocket;
   $LaunchLinksModelCopyWith<$Res>? get links;
   $FairingsModelCopyWith<$Res>? get fairings;
@@ -205,7 +205,7 @@ class _$FullLaunchModelCopyWithImpl<$Res>
       launchpad: launchpad == freezed
           ? _value.launchpad
           : launchpad // ignore: cast_nullable_to_non_nullable
-              as LandpadModel?,
+              as LaunchpadModel?,
       payloads: payloads == freezed
           ? _value.payloads
           : payloads // ignore: cast_nullable_to_non_nullable
@@ -270,12 +270,12 @@ class _$FullLaunchModelCopyWithImpl<$Res>
   }
 
   @override
-  $LandpadModelCopyWith<$Res>? get launchpad {
+  $LaunchpadModelCopyWith<$Res>? get launchpad {
     if (_value.launchpad == null) {
       return null;
     }
 
-    return $LandpadModelCopyWith<$Res>(_value.launchpad!, (value) {
+    return $LaunchpadModelCopyWith<$Res>(_value.launchpad!, (value) {
       return _then(_value.copyWith(launchpad: value));
     });
   }
@@ -333,7 +333,7 @@ abstract class _$$_FullLaunchModelCopyWith<$Res>
       @JsonKey(name: 'date_utc') String dateUtc,
       @JsonKey(name: 'name') String name,
       @JsonKey(name: 'flight_number') int flightNumber,
-      @JsonKey(name: 'launchpad') LandpadModel? launchpad,
+      @JsonKey(name: 'launchpad') LaunchpadModel? launchpad,
       @JsonKey(name: 'payloads') List<PayloadModel> payloads,
       @JsonKey(name: 'capsules') List<CapsuleModel> capsules,
       @JsonKey(name: 'ships') List<ShipModel> ships,
@@ -351,7 +351,7 @@ abstract class _$$_FullLaunchModelCopyWith<$Res>
       @JsonKey(name: 'launch_library_id') String? launchLibraryId});
 
   @override
-  $LandpadModelCopyWith<$Res>? get launchpad;
+  $LaunchpadModelCopyWith<$Res>? get launchpad;
   @override
   $RocketModelCopyWith<$Res>? get rocket;
   @override
@@ -449,7 +449,7 @@ class __$$_FullLaunchModelCopyWithImpl<$Res>
       launchpad: launchpad == freezed
           ? _value.launchpad
           : launchpad // ignore: cast_nullable_to_non_nullable
-              as LandpadModel?,
+              as LaunchpadModel?,
       payloads: payloads == freezed
           ? _value._payloads
           : payloads // ignore: cast_nullable_to_non_nullable
@@ -619,7 +619,7 @@ class _$_FullLaunchModel extends _FullLaunchModel {
   final int flightNumber;
   @override
   @JsonKey(name: 'launchpad')
-  final LandpadModel? launchpad;
+  final LaunchpadModel? launchpad;
   final List<PayloadModel> _payloads;
   @override
   @JsonKey(name: 'payloads')
@@ -795,7 +795,7 @@ abstract class _FullLaunchModel extends FullLaunchModel {
           @JsonKey(name: 'date_utc') final String dateUtc,
           @JsonKey(name: 'name') final String name,
           @JsonKey(name: 'flight_number') final int flightNumber,
-          @JsonKey(name: 'launchpad') final LandpadModel? launchpad,
+          @JsonKey(name: 'launchpad') final LaunchpadModel? launchpad,
           @JsonKey(name: 'payloads') final List<PayloadModel> payloads,
           @JsonKey(name: 'capsules') final List<CapsuleModel> capsules,
           @JsonKey(name: 'ships') final List<ShipModel> ships,
@@ -849,7 +849,7 @@ abstract class _FullLaunchModel extends FullLaunchModel {
   int get flightNumber;
   @override
   @JsonKey(name: 'launchpad')
-  LandpadModel? get launchpad;
+  LaunchpadModel? get launchpad;
   @override
   @JsonKey(name: 'payloads')
   List<PayloadModel> get payloads;

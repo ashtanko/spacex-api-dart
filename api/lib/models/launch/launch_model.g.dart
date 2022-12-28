@@ -24,7 +24,7 @@ _$_FullLaunchModel _$$_FullLaunchModelFromJson(Map<String, dynamic> json) =>
       flightNumber: json['flight_number'] as int? ?? 0,
       launchpad: json['launchpad'] == null
           ? null
-          : LandpadModel.fromJson(json['launchpad'] as Map<String, dynamic>),
+          : LaunchpadModel.fromJson(json['launchpad'] as Map<String, dynamic>),
       payloads: (json['payloads'] as List<dynamic>?)
               ?.map((e) => PayloadModel.fromJson(e as Map<String, dynamic>))
               .toList() ??

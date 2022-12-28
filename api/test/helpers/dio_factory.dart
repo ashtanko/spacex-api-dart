@@ -8,8 +8,8 @@ class DioFactory {
     ]);
 
   BaseOptions _createBaseOptions() => BaseOptions(
-        receiveTimeout: 15000,
-        sendTimeout: 15000,
+        receiveTimeout: 20000,
+        sendTimeout: 20000,
         connectTimeout: 5000,
       );
 }

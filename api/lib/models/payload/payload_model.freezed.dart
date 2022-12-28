@@ -1794,9 +1794,9 @@ mixin _$PayloadDragonModel {
   @JsonKey(name: 'manifest')
   String? get manifest => throw _privateConstructorUsedError;
   @JsonKey(name: 'water_landing')
-  bool get waterLanding => throw _privateConstructorUsedError;
+  bool? get waterLanding => throw _privateConstructorUsedError;
   @JsonKey(name: 'land_landing')
-  bool get landLanding => throw _privateConstructorUsedError;
+  bool? get landLanding => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -1815,8 +1815,8 @@ abstract class $PayloadDragonModelCopyWith<$Res> {
       @JsonKey(name: 'mass_returned_lbs') double? massReturnedLbs,
       @JsonKey(name: 'flight_time_sec') double? flightTimeSec,
       @JsonKey(name: 'manifest') String? manifest,
-      @JsonKey(name: 'water_landing') bool waterLanding,
-      @JsonKey(name: 'land_landing') bool landLanding});
+      @JsonKey(name: 'water_landing') bool? waterLanding,
+      @JsonKey(name: 'land_landing') bool? landLanding});
 }
 
 /// @nodoc
@@ -1862,11 +1862,11 @@ class _$PayloadDragonModelCopyWithImpl<$Res>
       waterLanding: waterLanding == freezed
           ? _value.waterLanding
           : waterLanding // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
       landLanding: landLanding == freezed
           ? _value.landLanding
           : landLanding // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
     ));
   }
 }
@@ -1884,8 +1884,8 @@ abstract class _$$_PayloadDragonModelCopyWith<$Res>
       @JsonKey(name: 'mass_returned_lbs') double? massReturnedLbs,
       @JsonKey(name: 'flight_time_sec') double? flightTimeSec,
       @JsonKey(name: 'manifest') String? manifest,
-      @JsonKey(name: 'water_landing') bool waterLanding,
-      @JsonKey(name: 'land_landing') bool landLanding});
+      @JsonKey(name: 'water_landing') bool? waterLanding,
+      @JsonKey(name: 'land_landing') bool? landLanding});
 }
 
 /// @nodoc
@@ -1933,11 +1933,11 @@ class __$$_PayloadDragonModelCopyWithImpl<$Res>
       waterLanding: waterLanding == freezed
           ? _value.waterLanding
           : waterLanding // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
       landLanding: landLanding == freezed
           ? _value.landLanding
           : landLanding // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
     ));
   }
 }
@@ -1951,8 +1951,8 @@ class _$_PayloadDragonModel extends _PayloadDragonModel {
       @JsonKey(name: 'mass_returned_lbs') this.massReturnedLbs,
       @JsonKey(name: 'flight_time_sec') this.flightTimeSec,
       @JsonKey(name: 'manifest') this.manifest,
-      @JsonKey(name: 'water_landing') this.waterLanding = false,
-      @JsonKey(name: 'land_landing') this.landLanding = false})
+      @JsonKey(name: 'water_landing') this.waterLanding,
+      @JsonKey(name: 'land_landing') this.landLanding})
       : super._();
 
   factory _$_PayloadDragonModel.fromJson(Map<String, dynamic> json) =>
@@ -1975,10 +1975,10 @@ class _$_PayloadDragonModel extends _PayloadDragonModel {
   final String? manifest;
   @override
   @JsonKey(name: 'water_landing')
-  final bool waterLanding;
+  final bool? waterLanding;
   @override
   @JsonKey(name: 'land_landing')
-  final bool landLanding;
+  final bool? landLanding;
 
   @override
   String toString() {
@@ -2037,8 +2037,8 @@ abstract class _PayloadDragonModel extends PayloadDragonModel {
           @JsonKey(name: 'mass_returned_lbs') final double? massReturnedLbs,
           @JsonKey(name: 'flight_time_sec') final double? flightTimeSec,
           @JsonKey(name: 'manifest') final String? manifest,
-          @JsonKey(name: 'water_landing') final bool waterLanding,
-          @JsonKey(name: 'land_landing') final bool landLanding}) =
+          @JsonKey(name: 'water_landing') final bool? waterLanding,
+          @JsonKey(name: 'land_landing') final bool? landLanding}) =
       _$_PayloadDragonModel;
   const _PayloadDragonModel._() : super._();
 
@@ -2062,10 +2062,10 @@ abstract class _PayloadDragonModel extends PayloadDragonModel {
   String? get manifest;
   @override
   @JsonKey(name: 'water_landing')
-  bool get waterLanding;
+  bool? get waterLanding;
   @override
   @JsonKey(name: 'land_landing')
-  bool get landLanding;
+  bool? get landLanding;
   @override
   @JsonKey(ignore: true)
   _$$_PayloadDragonModelCopyWith<_$_PayloadDragonModel> get copyWith =>
