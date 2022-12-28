@@ -3,7 +3,6 @@ export 'capsule/capsule_model.dart';
 export 'company_info/company_info_model.dart';
 export 'core/core_model.dart';
 export 'crew/crew_model.dart';
-export 'engine/engine_model.dart';
 export 'fairing/fairings_model.dart';
 export 'images/images_model.dart';
 export 'landpad//landpad_model.dart';

@@ -16,7 +16,7 @@ _$_RoadsterVehicleModel _$$_RoadsterVehicleModelFromJson(
       images: (json['flickr_images'] as List<dynamic>?)
               ?.map((e) => e as String?)
               .toList() ??
-          const [],
+          const <String?>[],
       marsDistanceMi: json['mars_distance_mi'] as num? ?? 174097385.75079587,
       marsDistanceKm: json['mars_distance_km'] as num? ?? 280182669.8555225,
       earthDistanceMi: json['earth_distance_mi'] as num? ?? 225671372.24986014,
@@ -58,7 +58,7 @@ Map<String, dynamic> _$$_RoadsterVehicleModelToJson(
   writeNotNull('video', instance.video);
   writeNotNull('wikipedia', instance.wikipedia);
   val['flickr_images'] = instance.images;
-  val['mars_distance_mi'] = instance.marsDistanceMi;
+  writeNotNull('mars_distance_mi', instance.marsDistanceMi);
   val['mars_distance_km'] = instance.marsDistanceKm;
   val['earth_distance_mi'] = instance.earthDistanceMi;
   val['earth_distance_km'] = instance.earthDistanceKm;
@@ -101,14 +101,14 @@ _$_RocketModel _$$_RocketModelFromJson(Map<String, dynamic> json) =>
       images: (json['flickr_images'] as List<dynamic>?)
               ?.map((e) => e as String)
               .toList() ??
-          const [],
+          const <String>[],
       payloadWeights: (json['payload_weights'] as List<dynamic>?)
               ?.map(
                   (e) => PayloadWeightModel.fromJson(e as Map<String, dynamic>))
               .toList() ??
-          const [],
+          const <PayloadWeightModel>[],
       engines: json['engines'] == null
-          ? const EngineModel()
+          ? null
           : EngineModel.fromJson(json['engines'] as Map<String, dynamic>),
       height: json['height'] == null
           ? null
@@ -159,13 +159,59 @@ Map<String, dynamic> _$$_RocketModelToJson(_$_RocketModel instance) {
   val['flickr_images'] = instance.images;
   val['payload_weights'] =
       instance.payloadWeights.map((e) => e.toJson()).toList();
-  val['engines'] = instance.engines.toJson();
+  writeNotNull('engines', instance.engines?.toJson());
   writeNotNull('height', instance.height?.toJson());
   writeNotNull('diameter', instance.diameter?.toJson());
   writeNotNull('mass', instance.mass?.toJson());
   writeNotNull('first_stage', instance.firstStage?.toJson());
   writeNotNull('second_stage', instance.secondStage?.toJson());
   writeNotNull('landing_legs', instance.landingLegs?.toJson());
+  return val;
+}
+
+_$_EngineModel _$$_EngineModelFromJson(Map<String, dynamic> json) =>
+    _$_EngineModel(
+      isp: json['isp'] == null
+          ? null
+          : IspModel.fromJson(json['isp'] as Map<String, dynamic>),
+      thrustSeaLevel: json['thrust_sea_level'] == null
+          ? null
+          : KnotPoundModel.fromJson(
+              json['thrust_sea_level'] as Map<String, dynamic>),
+      thrustVacuum: json['thrust_vacuum'] == null
+          ? null
+          : KnotPoundModel.fromJson(
+              json['thrust_vacuum'] as Map<String, dynamic>),
+      number: json['number'] as num?,
+      type: json['type'] as String?,
+      version: json['version'] as String?,
+      layout: json['layout'] as String?,
+      engineLossMax: json['engine_loss_max'] as num?,
+      firstPropellant: json['propellant_1'] as String?,
+      secondPropellant: json['propellant_2'] as String?,
+      thrustToWeight: json['thrust_to_weight'] as num?,
+    );
+
+Map<String, dynamic> _$$_EngineModelToJson(_$_EngineModel instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('isp', instance.isp?.toJson());
+  writeNotNull('thrust_sea_level', instance.thrustSeaLevel?.toJson());
+  writeNotNull('thrust_vacuum', instance.thrustVacuum?.toJson());
+  writeNotNull('number', instance.number);
+  writeNotNull('type', instance.type);
+  writeNotNull('version', instance.version);
+  writeNotNull('layout', instance.layout);
+  writeNotNull('engine_loss_max', instance.engineLossMax);
+  writeNotNull('propellant_1', instance.firstPropellant);
+  writeNotNull('propellant_2', instance.secondPropellant);
+  writeNotNull('thrust_to_weight', instance.thrustToWeight);
   return val;
 }
 
@@ -286,7 +332,7 @@ _$_ShipModel _$$_ShipModelFromJson(Map<String, dynamic> json) => _$_ShipModel(
       launches: (json['launches'] as List<dynamic>?)
               ?.map((e) => e as String)
               .toList() ??
-          const [],
+          const <String>[],
       isActive: json['active'] as bool? ?? false,
       name: json['name'] as String?,
       image: json['image'] as String?,
@@ -306,7 +352,7 @@ _$_ShipModel _$$_ShipModelFromJson(Map<String, dynamic> json) => _$_ShipModel(
       mmsi: json['mmsi'] as int?,
       roles:
           (json['roles'] as List<dynamic>?)?.map((e) => e as String).toList() ??
-              const [],
+              const <String>[],
       type: json['type'] as String?,
       model: json['model'] as String?,
       legacyId: json['legacy_id'] as String?,
@@ -373,7 +419,7 @@ _$_ShipFullModel _$$_ShipFullModelFromJson(Map<String, dynamic> json) =>
       imo: json['imo'] as int?,
       roles:
           (json['roles'] as List<dynamic>?)?.map((e) => e as String).toList() ??
-              const [],
+              const <String>[],
       type: json['type'] as String?,
       model: json['model'] as String?,
       legacyId: json['legacy_id'] as String?,
@@ -422,7 +468,7 @@ _$_DragonModel _$$_DragonModelFromJson(Map<String, dynamic> json) =>
       thrusters: (json['thrusters'] as List<dynamic>?)
               ?.map((e) => ThrusterModel.fromJson(e as Map<String, dynamic>))
               .toList() ??
-          const [],
+          const <ThrusterModel>[],
       dryMassLb: json['dry_mass_lb'] as int?,
       dryMassKg: json['dry_mass_kg'] as int?,
       orbitDurationYr: json['orbit_duration_yr'] as int?,
@@ -434,7 +480,7 @@ _$_DragonModel _$$_DragonModelFromJson(Map<String, dynamic> json) =>
       images: (json['flickr_images'] as List<dynamic>?)
               ?.map((e) => e as String)
               .toList() ??
-          const [],
+          const <String>[],
       firstFlight: json['first_flight'] as String?,
       diameter: json['diameter'] == null
           ? null
