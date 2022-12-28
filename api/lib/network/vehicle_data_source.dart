@@ -7,7 +7,7 @@ class VehicleDataSource {
 
   final VehicleApi _api;
 
-  Future<List<DragonVehicleModel>> getAllDragons() async {
+  Future<List<DragonModel>> getAllDragons() async {
     try {
       return _api.getAllDragons();
     } on DioError catch (_) {
@@ -15,7 +15,7 @@ class VehicleDataSource {
     }
   }
 
-  Future<DragonVehicleModel> getDragon(String id) async {
+  Future<DragonModel> getDragon(String id) async {
     try {
       return _api.getDragon(id);
     } on DioError catch (_) {
@@ -23,7 +23,7 @@ class VehicleDataSource {
     }
   }
 
-  Future<ApiPaginatedList<DragonVehicleModel>> queryDragons(
+  Future<ApiPaginatedList<DragonModel>> queryDragons(
     q.QueryModel query,
   ) async {
     try {
@@ -34,7 +34,7 @@ class VehicleDataSource {
   }
 
   // ships
-  Future<List<ShipVehicleModel>> getAllShips() async {
+  Future<List<ShipModel>> getAllShips() async {
     try {
       return _api.getAllShips();
     } on DioError catch (_) {
@@ -42,7 +42,7 @@ class VehicleDataSource {
     }
   }
 
-  Future<ShipVehicleModel> getShip(String id) async {
+  Future<ShipModel> getShip(String id) async {
     try {
       return _api.getShip(id);
     } on DioError catch (_) {
@@ -50,7 +50,7 @@ class VehicleDataSource {
     }
   }
 
-  Future<ApiPaginatedList<ShipVehicleModel>> queryShips(
+  Future<ApiPaginatedList<ShipModel>> queryShips(
     q.QueryModel query,
   ) async {
     try {
@@ -60,7 +60,7 @@ class VehicleDataSource {
     }
   }
 
-  Future<ApiPaginatedList<ShipFullVehicleModel>> queryFullShips(
+  Future<ApiPaginatedList<ShipFullModel>> queryFullShips(
     q.QueryModel query,
   ) async {
     try {
@@ -71,7 +71,7 @@ class VehicleDataSource {
   }
 
   // rockets
-  Future<List<RocketVehicleModel>> getAllRockets() async {
+  Future<List<RocketModel>> getAllRockets() async {
     try {
       return _api.getAllRockets();
     } on DioError catch (_) {
@@ -79,7 +79,7 @@ class VehicleDataSource {
     }
   }
 
-  Future<RocketVehicleModel> getRocket(String id) async {
+  Future<RocketModel> getRocket(String id) async {
     try {
       return _api.getRocket(id);
     } on DioError catch (_) {
@@ -87,7 +87,7 @@ class VehicleDataSource {
     }
   }
 
-  Future<ApiPaginatedList<RocketVehicleModel>> queryRockets(
+  Future<ApiPaginatedList<RocketModel>> queryRockets(
     q.QueryModel query,
   ) async {
     try {

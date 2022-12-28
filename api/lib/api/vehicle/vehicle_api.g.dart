@@ -18,186 +18,183 @@ class _VehicleApi implements VehicleApi {
   String? baseUrl;
 
   @override
-  Future<List<DragonVehicleModel>> getAllDragons() async {
+  Future<List<DragonModel>> getAllDragons() async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     final _result = await _dio.fetch<List<dynamic>>(
-        _setStreamType<List<DragonVehicleModel>>(
+        _setStreamType<List<DragonModel>>(
             Options(method: 'GET', headers: _headers, extra: _extra)
                 .compose(_dio.options, '/dragons',
                     queryParameters: queryParameters, data: _data)
                 .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
     var value = _result.data!
-        .map((dynamic i) =>
-            DragonVehicleModel.fromJson(i as Map<String, dynamic>))
+        .map((dynamic i) => DragonModel.fromJson(i as Map<String, dynamic>))
         .toList();
     return value;
   }
 
   @override
-  Future<DragonVehicleModel> getDragon(id) async {
+  Future<DragonModel> getDragon(id) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     final _result = await _dio.fetch<Map<String, dynamic>>(
-        _setStreamType<DragonVehicleModel>(
+        _setStreamType<DragonModel>(
             Options(method: 'GET', headers: _headers, extra: _extra)
                 .compose(_dio.options, '/dragons/${id}',
                     queryParameters: queryParameters, data: _data)
                 .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
-    final value = DragonVehicleModel.fromJson(_result.data!);
+    final value = DragonModel.fromJson(_result.data!);
     return value;
   }
 
   @override
-  Future<ApiPaginatedList<DragonVehicleModel>> queryDragons(query) async {
+  Future<ApiPaginatedList<DragonModel>> queryDragons(query) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     _data.addAll(query.toJson());
     final _result = await _dio.fetch<Map<String, dynamic>>(
-        _setStreamType<ApiPaginatedList<DragonVehicleModel>>(
+        _setStreamType<ApiPaginatedList<DragonModel>>(
             Options(method: 'POST', headers: _headers, extra: _extra)
                 .compose(_dio.options, '/dragons/query',
                     queryParameters: queryParameters, data: _data)
                 .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
-    final value = ApiPaginatedList<DragonVehicleModel>.fromJson(
+    final value = ApiPaginatedList<DragonModel>.fromJson(
       _result.data!,
-      (json) => DragonVehicleModel.fromJson(json as Map<String, dynamic>),
+      (json) => DragonModel.fromJson(json as Map<String, dynamic>),
     );
     return value;
   }
 
   @override
-  Future<List<ShipVehicleModel>> getAllShips() async {
+  Future<List<ShipModel>> getAllShips() async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     final _result = await _dio.fetch<List<dynamic>>(
-        _setStreamType<List<ShipVehicleModel>>(
+        _setStreamType<List<ShipModel>>(
             Options(method: 'GET', headers: _headers, extra: _extra)
                 .compose(_dio.options, '/ships',
                     queryParameters: queryParameters, data: _data)
                 .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
     var value = _result.data!
-        .map(
-            (dynamic i) => ShipVehicleModel.fromJson(i as Map<String, dynamic>))
+        .map((dynamic i) => ShipModel.fromJson(i as Map<String, dynamic>))
         .toList();
     return value;
   }
 
   @override
-  Future<ShipVehicleModel> getShip(id) async {
+  Future<ShipModel> getShip(id) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     final _result = await _dio.fetch<Map<String, dynamic>>(
-        _setStreamType<ShipVehicleModel>(
+        _setStreamType<ShipModel>(
             Options(method: 'GET', headers: _headers, extra: _extra)
                 .compose(_dio.options, '/ships/${id}',
                     queryParameters: queryParameters, data: _data)
                 .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
-    final value = ShipVehicleModel.fromJson(_result.data!);
+    final value = ShipModel.fromJson(_result.data!);
     return value;
   }
 
   @override
-  Future<ApiPaginatedList<ShipVehicleModel>> queryShips(query) async {
+  Future<ApiPaginatedList<ShipModel>> queryShips(query) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     _data.addAll(query.toJson());
     final _result = await _dio.fetch<Map<String, dynamic>>(
-        _setStreamType<ApiPaginatedList<ShipVehicleModel>>(
+        _setStreamType<ApiPaginatedList<ShipModel>>(
             Options(method: 'POST', headers: _headers, extra: _extra)
                 .compose(_dio.options, '/ships/query',
                     queryParameters: queryParameters, data: _data)
                 .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
-    final value = ApiPaginatedList<ShipVehicleModel>.fromJson(
+    final value = ApiPaginatedList<ShipModel>.fromJson(
       _result.data!,
-      (json) => ShipVehicleModel.fromJson(json as Map<String, dynamic>),
+      (json) => ShipModel.fromJson(json as Map<String, dynamic>),
     );
     return value;
   }
 
   @override
-  Future<ApiPaginatedList<ShipFullVehicleModel>> queryFullShips(query) async {
+  Future<ApiPaginatedList<ShipFullModel>> queryFullShips(query) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     _data.addAll(query.toJson());
     final _result = await _dio.fetch<Map<String, dynamic>>(
-        _setStreamType<ApiPaginatedList<ShipFullVehicleModel>>(
+        _setStreamType<ApiPaginatedList<ShipFullModel>>(
             Options(method: 'POST', headers: _headers, extra: _extra)
                 .compose(_dio.options, '/ships/query',
                     queryParameters: queryParameters, data: _data)
                 .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
-    final value = ApiPaginatedList<ShipFullVehicleModel>.fromJson(
+    final value = ApiPaginatedList<ShipFullModel>.fromJson(
       _result.data!,
-      (json) => ShipFullVehicleModel.fromJson(json as Map<String, dynamic>),
+      (json) => ShipFullModel.fromJson(json as Map<String, dynamic>),
     );
     return value;
   }
 
   @override
-  Future<List<RocketVehicleModel>> getAllRockets() async {
+  Future<List<RocketModel>> getAllRockets() async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     final _result = await _dio.fetch<List<dynamic>>(
-        _setStreamType<List<RocketVehicleModel>>(
+        _setStreamType<List<RocketModel>>(
             Options(method: 'GET', headers: _headers, extra: _extra)
                 .compose(_dio.options, '/rockets',
                     queryParameters: queryParameters, data: _data)
                 .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
     var value = _result.data!
-        .map((dynamic i) =>
-            RocketVehicleModel.fromJson(i as Map<String, dynamic>))
+        .map((dynamic i) => RocketModel.fromJson(i as Map<String, dynamic>))
         .toList();
     return value;
   }
 
   @override
-  Future<RocketVehicleModel> getRocket(id) async {
+  Future<RocketModel> getRocket(id) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     final _result = await _dio.fetch<Map<String, dynamic>>(
-        _setStreamType<RocketVehicleModel>(
+        _setStreamType<RocketModel>(
             Options(method: 'GET', headers: _headers, extra: _extra)
                 .compose(_dio.options, '/rockets/${id}',
                     queryParameters: queryParameters, data: _data)
                 .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
-    final value = RocketVehicleModel.fromJson(_result.data!);
+    final value = RocketModel.fromJson(_result.data!);
     return value;
   }
 
   @override
-  Future<ApiPaginatedList<RocketVehicleModel>> queryRockets(query) async {
+  Future<ApiPaginatedList<RocketModel>> queryRockets(query) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     _data.addAll(query.toJson());
     final _result = await _dio.fetch<Map<String, dynamic>>(
-        _setStreamType<ApiPaginatedList<RocketVehicleModel>>(
+        _setStreamType<ApiPaginatedList<RocketModel>>(
             Options(method: 'POST', headers: _headers, extra: _extra)
                 .compose(_dio.options, '/ships/query',
                     queryParameters: queryParameters, data: _data)
                 .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
-    final value = ApiPaginatedList<RocketVehicleModel>.fromJson(
+    final value = ApiPaginatedList<RocketModel>.fromJson(
       _result.data!,
-      (json) => RocketVehicleModel.fromJson(json as Map<String, dynamic>),
+      (json) => RocketModel.fromJson(json as Map<String, dynamic>),
     );
     return value;
   }

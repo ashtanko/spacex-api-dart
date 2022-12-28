@@ -49,7 +49,7 @@ _$_FullLaunchModel _$$_FullLaunchModelFromJson(Map<String, dynamic> json) =>
       success: json['success'] as bool? ?? false,
       rocket: json['rocket'] == null
           ? null
-          : RocketVehicleModel.fromJson(json['rocket'] as Map<String, dynamic>),
+          : RocketModel.fromJson(json['rocket'] as Map<String, dynamic>),
       window: json['window'] as int? ?? 0,
       net: json['net'] as bool? ?? false,
       staticFireDateUnix: json['static_fire_date_unix'] as int? ?? 0,

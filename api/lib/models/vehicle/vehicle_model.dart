@@ -2,8 +2,10 @@ import 'package:api/api.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'vehicle_model.freezed.dart';
+
 part 'vehicle_model.g.dart';
 
+/// roadster
 @freezed
 class RoadsterVehicleModel with _$RoadsterVehicleModel {
   const factory RoadsterVehicleModel({
@@ -58,136 +60,254 @@ class RoadsterVehicleModel with _$RoadsterVehicleModel {
       _$RoadsterVehicleModelFromJson(json);
 }
 
+/// rocket
 @freezed
-class RocketVehicleModel with _$RocketVehicleModel {
-  const factory RocketVehicleModel({
-    required String id,
-    @Default('') String description,
-    @Default('https://en.wikipedia.org/wiki/Falcon_1') String wikipedia,
-    @Default('SpaceX') String company,
-    @Default('Republic of the Marshall Islands') String country,
-    @JsonKey(name: 'first_flight') @Default('') String firstFlight,
-    @JsonKey(name: 'success_rate_pct') @Default(0) num successRatePct,
-    @JsonKey(name: 'cost_per_launch') @Default(0) num costPerLaunch,
-    @JsonKey(name: 'boosters') @Default(0) num boosters,
-    @JsonKey(name: 'stages') @Default(0) num stages,
+class RocketModel with _$RocketModel {
+  const factory RocketModel({
+    @JsonKey(name: 'id') required String id,
+    @JsonKey(name: 'description') String? description,
+    @JsonKey(name: 'wikipedia') String? wikipedia,
+    @JsonKey(name: 'company') String? company,
+    @JsonKey(name: 'country') String? country,
+    @JsonKey(name: 'first_flight') String? firstFlight,
+    @JsonKey(name: 'success_rate_pct') num? successRatePct,
+    @JsonKey(name: 'cost_per_launch') num? costPerLaunch,
+    @JsonKey(name: 'boosters') num? boosters,
+    @JsonKey(name: 'stages') num? stages,
     @JsonKey(name: 'active') @Default(false) bool isActive,
-    @JsonKey(name: 'type') @Default('rocket') String type,
-    @JsonKey(name: 'name') @Default('Falcon 1') String name,
+    @JsonKey(name: 'type') String? type,
+    @JsonKey(name: 'name') String? name,
     @JsonKey(name: 'flickr_images') @Default([]) List<String> images,
     @JsonKey(name: 'payload_weights')
     @Default([])
         List<PayloadWeightModel> payloadWeights,
-    @JsonKey(name: 'landing_legs') dynamic landingLegs,
     @JsonKey(name: 'engines') @Default(EngineModel()) EngineModel engines,
-  }) = _RocketVehicleModel;
+    @JsonKey(name: 'height') HeightModel? height,
+    @JsonKey(name: 'diameter') DiameterModel? diameter,
+    @JsonKey(name: 'mass') MassModel? mass,
+    @JsonKey(name: 'first_stage') FirstStageModel? firstStage,
+    @JsonKey(name: 'second_stage') SecondStageModel? secondStage,
+    @JsonKey(name: 'landing_legs') LandingLegsModel? landingLegs,
+  }) = _RocketModel;
 
-  const RocketVehicleModel._();
+  const RocketModel._();
 
-  factory RocketVehicleModel.fromJson(Map<String, dynamic> json) =>
-      _$RocketVehicleModelFromJson(json);
+  factory RocketModel.fromJson(Map<String, dynamic> json) =>
+      _$RocketModelFromJson(json);
 }
 
 @freezed
-class ShipVehicleModel with _$ShipVehicleModel {
-  const factory ShipVehicleModel({
-    required String id,
-    @Default([]) List<String> launches,
+class LandingLegsModel with _$LandingLegsModel {
+  const factory LandingLegsModel({
+    @JsonKey(name: 'number') num? number,
+    @JsonKey(name: 'material') String? material,
+  }) = _LandingLegsModel;
+
+  const LandingLegsModel._();
+
+  factory LandingLegsModel.fromJson(Map<String, dynamic> json) =>
+      _$LandingLegsModelFromJson(json);
+}
+
+@freezed
+class RocketPayloadModel with _$RocketPayloadModel {
+  const factory RocketPayloadModel({
+    @JsonKey(name: 'composite_fairing') CompositeFairingModel? compositeFairing,
+    @JsonKey(name: 'option_1') String? option1,
+  }) = _RocketPayloadModel;
+
+  const RocketPayloadModel._();
+
+  factory RocketPayloadModel.fromJson(Map<String, dynamic> json) =>
+      _$RocketPayloadModelFromJson(json);
+}
+
+@freezed
+class FirstStageModel with _$FirstStageModel {
+  const factory FirstStageModel({
+    @JsonKey(name: 'thrust_sea_level') KnotPoundModel? thrustSeaLevel,
+    @JsonKey(name: 'thrust_vacuum') KnotPoundModel? thrustVacuum,
+    @JsonKey(name: 'reusable') @Default(false) bool reusable,
+    @JsonKey(name: 'engines') num? engines,
+    @JsonKey(name: 'fuel_amount_tons') num? fuelAmountTons,
+    @JsonKey(name: 'burn_time_sec') int? burnTimeSec,
+  }) = _FirstStageModel;
+
+  const FirstStageModel._();
+
+  factory FirstStageModel.fromJson(Map<String, dynamic> json) =>
+      _$FirstStageModelFromJson(json);
+}
+
+@freezed
+class SecondStageModel with _$SecondStageModel {
+  const factory SecondStageModel({
+    @JsonKey(name: 'thrust') ThrustModel? thrust,
+    @JsonKey(name: 'payloads') RocketPayloadModel? payloads,
+    @JsonKey(name: 'reusable') @Default(false) bool reusable,
+    @JsonKey(name: 'engines') num? engines,
+    @JsonKey(name: 'fuel_amount_tons') num? fuelAmountTons,
+    @JsonKey(name: 'burn_time_sec') int? burnTimeSec,
+  }) = _SecondStageModel;
+
+  const SecondStageModel._();
+
+  factory SecondStageModel.fromJson(Map<String, dynamic> json) =>
+      _$SecondStageModelFromJson(json);
+}
+
+@freezed
+class ShipModel with _$ShipModel {
+  const factory ShipModel({
+    @JsonKey(name: 'id') required String id,
+    @JsonKey(name: 'launches') @Default([]) List<String> launches,
     @JsonKey(name: 'active') @Default(false) bool isActive,
-    @JsonKey(name: 'name') @Default('') String name,
-    @JsonKey(name: 'image')
-    @Default('https://i.imgur.com/woCxpkj.jpg')
-        String image,
-    @JsonKey(name: 'link')
-    @Default('https://www.marinetraffic.com/en/ais/details/ships/shipid:434663/mmsi:367020820/imo:7434016/vessel:AMERICAN_CHAMPION')
-        String link,
+    @JsonKey(name: 'name') String? name,
+    @JsonKey(name: 'image') String? image,
+    @JsonKey(name: 'link') String? link,
     @JsonKey(name: 'longitude') dynamic longitude,
     @JsonKey(name: 'latitude') dynamic latitude,
     @JsonKey(name: 'course_deg') num? courseDeg,
     @JsonKey(name: 'speed_kn') num? speedKn,
-    @JsonKey(name: 'status') @Default('') String status,
-    @JsonKey(name: 'home_port') @Default('') String homePort,
-    @JsonKey(name: 'year_built') @Default(0) int yearBuilt,
-    @JsonKey(name: 'mass_lbs') @Default(0) int massLbs,
-    @JsonKey(name: 'mass_kg') @Default(0) int massKg,
-    @JsonKey(name: 'class') @Default(0) int vehicleClass,
-    @JsonKey(name: 'abs') @Default(0) int abs,
-    @JsonKey(name: 'imo') @Default(0) int imo,
-    @Default([]) List<String> roles,
-    @JsonKey(name: 'type') @Default('Cargo') String type,
+    @JsonKey(name: 'status') String? status,
+    @JsonKey(name: 'home_port') String? homePort,
+    @JsonKey(name: 'year_built') int? yearBuilt,
+    @JsonKey(name: 'mass_lbs') int? massLbs,
+    @JsonKey(name: 'mass_kg') int? massKg,
+    @JsonKey(name: 'class') int? vehicleClass,
+    @JsonKey(name: 'abs') int? abs,
+    @JsonKey(name: 'imo') int? imo,
+    @JsonKey(name: 'mmsi') int? mmsi,
+    @JsonKey(name: 'roles') @Default([]) List<String> roles,
+    @JsonKey(name: 'type') String? type,
     @JsonKey(name: 'model') String? model,
-    @JsonKey(name: 'legacy_id') @Default('AMERICANSPIRIT') String legacyId,
-  }) = _ShipVehicleModel;
+    @JsonKey(name: 'legacy_id') String? legacyId,
+  }) = _ShipModel;
 
-  const ShipVehicleModel._();
+  const ShipModel._();
 
-  factory ShipVehicleModel.fromJson(Map<String, dynamic> json) =>
-      _$ShipVehicleModelFromJson(json);
+  factory ShipModel.fromJson(Map<String, dynamic> json) =>
+      _$ShipModelFromJson(json);
 }
 
 @freezed
-class ShipFullVehicleModel with _$ShipFullVehicleModel {
-  const factory ShipFullVehicleModel({
-    required String id,
-    @Default(<LaunchModel>[]) List<LaunchModel> launches,
+class ShipFullModel with _$ShipFullModel {
+  const factory ShipFullModel({
+    @JsonKey(name: 'id') required String id,
+    @JsonKey(name: 'launches')
+    @Default(<LaunchModel>[])
+        List<LaunchModel> launches,
     @JsonKey(name: 'active') @Default(false) bool isActive,
-    @JsonKey(name: 'name') @Default('') String name,
-    @JsonKey(name: 'image')
-    @Default('https://i.imgur.com/woCxpkj.jpg')
-        String image,
-    @JsonKey(name: 'link')
-    @Default('https://www.marinetraffic.com/en/ais/details/ships/shipid:434663/mmsi:367020820/imo:7434016/vessel:AMERICAN_CHAMPION')
-        String link,
+    @JsonKey(name: 'name') String? name,
+    @JsonKey(name: 'image') String? image,
+    @JsonKey(name: 'link') String? link,
     @JsonKey(name: 'longitude') dynamic longitude,
     @JsonKey(name: 'latitude') dynamic latitude,
     @JsonKey(name: 'course_deg') num? courseDeg,
     @JsonKey(name: 'speed_kn') num? speedKn,
-    @JsonKey(name: 'status') @Default('') String status,
-    @JsonKey(name: 'home_port') @Default('') String homePort,
-    @JsonKey(name: 'year_built') @Default(0) int yearBuilt,
-    @JsonKey(name: 'mass_lbs') @Default(0) int massLbs,
-    @JsonKey(name: 'mass_kg') @Default(0) int massKg,
-    @JsonKey(name: 'class') @Default(0) int vehicleClass,
-    @JsonKey(name: 'abs') @Default(0) int abs,
-    @JsonKey(name: 'imo') @Default(0) int imo,
+    @JsonKey(name: 'status') String? status,
+    @JsonKey(name: 'home_port') String? homePort,
+    @JsonKey(name: 'year_built') int? yearBuilt,
+    @JsonKey(name: 'mass_lbs') int? massLbs,
+    @JsonKey(name: 'mass_kg') int? massKg,
+    @JsonKey(name: 'class') int? vehicleClass,
+    @JsonKey(name: 'abs') int? abs,
+    @JsonKey(name: 'imo') int? imo,
     @Default([]) List<String> roles,
-    @JsonKey(name: 'type') @Default('Cargo') String type,
+    @JsonKey(name: 'type') String? type,
     @JsonKey(name: 'model') String? model,
-    @JsonKey(name: 'legacy_id') @Default('AMERICANSPIRIT') String legacyId,
-  }) = _ShipFullVehicleModel;
+    @JsonKey(name: 'legacy_id') String? legacyId,
+  }) = _ShipFullModel;
 
-  const ShipFullVehicleModel._();
+  const ShipFullModel._();
 
-  factory ShipFullVehicleModel.fromJson(Map<String, dynamic> json) =>
-      _$ShipFullVehicleModelFromJson(json);
+  factory ShipFullModel.fromJson(Map<String, dynamic> json) =>
+      _$ShipFullModelFromJson(json);
 }
 
 @freezed
-class DragonVehicleModel with _$DragonVehicleModel {
-  const factory DragonVehicleModel({
-    required String id,
-    @Default('') String description,
-    @Default('https://en.wikipedia.org/wiki/SpaceX_Dragon') String wikipedia,
-    @Default([]) List<ThrusterModel> thrusters,
-    @JsonKey(name: 'dry_mass_lb') @Default(9300) int dryMassLb,
-    @JsonKey(name: 'dry_mass_kg') @Default(4200) int dryMassKg,
-    @JsonKey(name: 'orbit_duration_yr') @Default(2) int orbitDurationYr,
-    @JsonKey(name: 'sidewall_angle_deg') @Default(15) int sidewallAngleDeg,
-    @JsonKey(name: 'crew_capacity') @Default(0) int crewCapacity,
+class DragonModel with _$DragonModel {
+  const factory DragonModel({
+    @JsonKey(name: 'id') required String id,
+    @JsonKey(name: 'description') String? description,
+    @JsonKey(name: 'wikipedia') String? wiki,
+    @JsonKey(name: 'thrusters') @Default([]) List<ThrusterModel> thrusters,
+    @JsonKey(name: 'dry_mass_lb') int? dryMassLb,
+    @JsonKey(name: 'dry_mass_kg') int? dryMassKg,
+    @JsonKey(name: 'orbit_duration_yr') int? orbitDurationYr,
+    @JsonKey(name: 'sidewall_angle_deg') int? sidewallAngleDeg,
+    @JsonKey(name: 'crew_capacity') int? crewCapacity,
     @JsonKey(name: 'active') @Default(false) bool isActive,
-    @JsonKey(name: 'type') @Default('capsule') String type,
-    @JsonKey(name: 'name') @Default('') String name,
+    @JsonKey(name: 'type') String? type,
+    @JsonKey(name: 'name') String? name,
     @JsonKey(name: 'flickr_images') @Default([]) List<String> images,
-    @JsonKey(name: 'first_flight') @Default('2010-12-08') String firstFlight,
-    @JsonKey(name: 'diameter') @Default(DiameterModel()) DiameterModel diameter,
-    @JsonKey(name: 'height_w_trunk')
-    @Default(DiameterModel())
-        DiameterModel heightWTrunk,
-    @JsonKey(name: 'trunk') @Default(TrunkModel()) TrunkModel trunk,
-  }) = _DragonVehicleModel;
+    @JsonKey(name: 'first_flight') String? firstFlight,
+    @JsonKey(name: 'diameter') DiameterModel? diameter,
+    @JsonKey(name: 'height_w_trunk') DiameterModel? heightWTrunk,
+    @JsonKey(name: 'trunk') TrunkModel? trunk,
+  }) = _DragonModel;
 
-  const DragonVehicleModel._();
+  const DragonModel._();
 
-  factory DragonVehicleModel.fromJson(Map<String, dynamic> json) =>
-      _$DragonVehicleModelFromJson(json);
+  factory DragonModel.fromJson(Map<String, dynamic> json) =>
+      _$DragonModelFromJson(json);
+}
+
+@freezed
+class ThrusterModel with _$ThrusterModel {
+  const factory ThrusterModel({
+    @JsonKey(name: 'type') String? type,
+    @JsonKey(name: 'amount') int? amount,
+    @JsonKey(name: 'pods') int? pods,
+    @JsonKey(name: 'fuel_1') String? firstFuel,
+    @JsonKey(name: 'fuel_2') String? secondFuel,
+    @JsonKey(name: 'isp') int? isp,
+    @JsonKey(name: 'thrust') ThrustModel? thrust,
+  }) = _ThrusterModel;
+
+  const ThrusterModel._();
+
+  factory ThrusterModel.fromJson(Map<String, dynamic> json) =>
+      _$ThrusterModelFromJson(json);
+}
+
+@freezed
+class TrunkModel with _$TrunkModel {
+  const factory TrunkModel({
+    @JsonKey(name: 'trunk_volume') TrunkVolumeModel? volume,
+    @JsonKey(name: 'cargo') CargoModel? cargo,
+  }) = _TrunkModel;
+
+  const TrunkModel._();
+
+  factory TrunkModel.fromJson(Map<String, dynamic> json) =>
+      _$TrunkModelFromJson(json);
+}
+
+@freezed
+class TrunkVolumeModel with _$TrunkVolumeModel {
+  const factory TrunkVolumeModel({
+    @JsonKey(name: 'cubic_meters') num? cubicMeters,
+    @JsonKey(name: 'cubic_feet') num? cubicFeet,
+  }) = _TrunkVolumeModel;
+
+  const TrunkVolumeModel._();
+
+  factory TrunkVolumeModel.fromJson(Map<String, dynamic> json) =>
+      _$TrunkVolumeModelFromJson(json);
+}
+
+@freezed
+class CargoModel with _$CargoModel {
+  const factory CargoModel({
+    @JsonKey(name: 'solar_array') num? solarArray,
+    @JsonKey(name: 'unpressurized_cargo')
+    @Default(false)
+        bool isUnpressurizedCargo,
+  }) = _CargoModel;
+
+  const CargoModel._();
+
+  factory CargoModel.fromJson(Map<String, dynamic> json) =>
+      _$CargoModelFromJson(json);
 }

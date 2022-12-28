@@ -24,7 +24,7 @@ void main() {
 
   group('getAllDragons', () {
     final rawJson = 'vehicle/dragon.json'.toFixture();
-    final model = DragonVehicleModel.fromJson(rawJson);
+    final model = DragonModel.fromJson(rawJson);
     final mockResponse = [model];
     test(
       'should perform a GET request on /dragons',
@@ -48,7 +48,7 @@ void main() {
   group('getDragon', () {
     const id = '5e9d058759b1ff74a7ad5f8f';
     final rawJson = 'vehicle/dragon.json'.toFixture();
-    final mockResponse = DragonVehicleModel.fromJson(rawJson);
+    final mockResponse = DragonModel.fromJson(rawJson);
     test(
       'should perform a GET request on /dragons/{$id}',
       () async {
@@ -72,7 +72,7 @@ void main() {
     final rawJson = 'vehicle/dragon.json'.toFixture();
     final mockResponse = ApiPaginatedList(
       results: [
-        DragonVehicleModel.fromJson(rawJson),
+        DragonModel.fromJson(rawJson),
       ],
     );
     final queryRawJson = 'query/query.json'.toFixture();
@@ -98,7 +98,7 @@ void main() {
 
   group('getAllShips', () {
     final rawJson = 'vehicle/ship.json'.toFixture();
-    final model = ShipVehicleModel.fromJson(rawJson);
+    final model = ShipModel.fromJson(rawJson);
     final mockResponse = [model];
     test(
       'should perform a GET request on /ships',
@@ -122,7 +122,7 @@ void main() {
   group('getShip', () {
     const id = '5e9d058759b1ff74a7ad5f8f';
     final rawJson = 'vehicle/ship.json'.toFixture();
-    final mockResponse = ShipVehicleModel.fromJson(rawJson);
+    final mockResponse = ShipModel.fromJson(rawJson);
     test(
       'should perform a GET request on /ships/{$id}',
       () async {
@@ -146,7 +146,7 @@ void main() {
     final rawJson = 'vehicle/ship.json'.toFixture();
     final mockResponse = ApiPaginatedList(
       results: [
-        ShipVehicleModel.fromJson(rawJson),
+        ShipModel.fromJson(rawJson),
       ],
     );
     final queryRawJson = 'query/query.json'.toFixture();
@@ -174,7 +174,7 @@ void main() {
     final rawJson = 'vehicle/full_ship.json'.toFixture();
     final mockResponse = ApiPaginatedList(
       results: [
-        ShipFullVehicleModel.fromJson(rawJson),
+        ShipFullModel.fromJson(rawJson),
       ],
     );
     final queryRawJson = 'query/query.json'.toFixture();
@@ -200,7 +200,7 @@ void main() {
 
   group('getAllRockets', () {
     final rawJson = 'vehicle/rocket.json'.toFixture();
-    final model = RocketVehicleModel.fromJson(rawJson);
+    final model = RocketModel.fromJson(rawJson);
     final mockResponse = [model];
     test(
       'should perform a GET request on /rockets',
@@ -224,7 +224,7 @@ void main() {
   group('getRocket', () {
     const id = '5e9d0d95eda69955f709d1eb';
     final rawJson = 'vehicle/rocket.json'.toFixture();
-    final mockResponse = RocketVehicleModel.fromJson(rawJson);
+    final mockResponse = RocketModel.fromJson(rawJson);
     test(
       'should perform a GET request on /rockets/{$id}',
       () async {
@@ -248,7 +248,7 @@ void main() {
     final rawJson = 'vehicle/rocket.json'.toFixture();
     final mockResponse = ApiPaginatedList(
       results: [
-        RocketVehicleModel.fromJson(rawJson),
+        RocketModel.fromJson(rawJson),
       ],
     );
     final queryRawJson = 'query/query.json'.toFixture();

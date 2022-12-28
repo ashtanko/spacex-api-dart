@@ -56,7 +56,7 @@ mixin _$FullLaunchModel {
   @JsonKey(name: 'success')
   bool get success => throw _privateConstructorUsedError;
   @JsonKey(name: 'rocket')
-  RocketVehicleModel? get rocket => throw _privateConstructorUsedError;
+  RocketModel? get rocket => throw _privateConstructorUsedError;
   @JsonKey(name: 'window')
   int get window => throw _privateConstructorUsedError;
   @JsonKey(name: 'net')
@@ -103,7 +103,7 @@ abstract class $FullLaunchModelCopyWith<$Res> {
       @JsonKey(name: 'details') String details,
       @JsonKey(name: 'failures') List<LaunchFailureModel> failures,
       @JsonKey(name: 'success') bool success,
-      @JsonKey(name: 'rocket') RocketVehicleModel? rocket,
+      @JsonKey(name: 'rocket') RocketModel? rocket,
       @JsonKey(name: 'window') int window,
       @JsonKey(name: 'net') bool net,
       @JsonKey(name: 'static_fire_date_unix') int staticFireDateUnix,
@@ -113,7 +113,7 @@ abstract class $FullLaunchModelCopyWith<$Res> {
       @JsonKey(name: 'launch_library_id') String? launchLibraryId});
 
   $LandpadModelCopyWith<$Res>? get launchpad;
-  $RocketVehicleModelCopyWith<$Res>? get rocket;
+  $RocketModelCopyWith<$Res>? get rocket;
   $LaunchLinksModelCopyWith<$Res>? get links;
   $FairingsModelCopyWith<$Res>? get fairings;
 }
@@ -237,7 +237,7 @@ class _$FullLaunchModelCopyWithImpl<$Res>
       rocket: rocket == freezed
           ? _value.rocket
           : rocket // ignore: cast_nullable_to_non_nullable
-              as RocketVehicleModel?,
+              as RocketModel?,
       window: window == freezed
           ? _value.window
           : window // ignore: cast_nullable_to_non_nullable
@@ -281,12 +281,12 @@ class _$FullLaunchModelCopyWithImpl<$Res>
   }
 
   @override
-  $RocketVehicleModelCopyWith<$Res>? get rocket {
+  $RocketModelCopyWith<$Res>? get rocket {
     if (_value.rocket == null) {
       return null;
     }
 
-    return $RocketVehicleModelCopyWith<$Res>(_value.rocket!, (value) {
+    return $RocketModelCopyWith<$Res>(_value.rocket!, (value) {
       return _then(_value.copyWith(rocket: value));
     });
   }
@@ -341,7 +341,7 @@ abstract class _$$_FullLaunchModelCopyWith<$Res>
       @JsonKey(name: 'details') String details,
       @JsonKey(name: 'failures') List<LaunchFailureModel> failures,
       @JsonKey(name: 'success') bool success,
-      @JsonKey(name: 'rocket') RocketVehicleModel? rocket,
+      @JsonKey(name: 'rocket') RocketModel? rocket,
       @JsonKey(name: 'window') int window,
       @JsonKey(name: 'net') bool net,
       @JsonKey(name: 'static_fire_date_unix') int staticFireDateUnix,
@@ -353,7 +353,7 @@ abstract class _$$_FullLaunchModelCopyWith<$Res>
   @override
   $LandpadModelCopyWith<$Res>? get launchpad;
   @override
-  $RocketVehicleModelCopyWith<$Res>? get rocket;
+  $RocketModelCopyWith<$Res>? get rocket;
   @override
   $LaunchLinksModelCopyWith<$Res>? get links;
   @override
@@ -481,7 +481,7 @@ class __$$_FullLaunchModelCopyWithImpl<$Res>
       rocket: rocket == freezed
           ? _value.rocket
           : rocket // ignore: cast_nullable_to_non_nullable
-              as RocketVehicleModel?,
+              as RocketModel?,
       window: window == freezed
           ? _value.window
           : window // ignore: cast_nullable_to_non_nullable
@@ -668,7 +668,7 @@ class _$_FullLaunchModel extends _FullLaunchModel {
   final bool success;
   @override
   @JsonKey(name: 'rocket')
-  final RocketVehicleModel? rocket;
+  final RocketModel? rocket;
   @override
   @JsonKey(name: 'window')
   final int window;
@@ -803,7 +803,7 @@ abstract class _FullLaunchModel extends FullLaunchModel {
           @JsonKey(name: 'details') final String details,
           @JsonKey(name: 'failures') final List<LaunchFailureModel> failures,
           @JsonKey(name: 'success') final bool success,
-          @JsonKey(name: 'rocket') final RocketVehicleModel? rocket,
+          @JsonKey(name: 'rocket') final RocketModel? rocket,
           @JsonKey(name: 'window') final int window,
           @JsonKey(name: 'net') final bool net,
           @JsonKey(name: 'static_fire_date_unix') final int staticFireDateUnix,
@@ -873,7 +873,7 @@ abstract class _FullLaunchModel extends FullLaunchModel {
   bool get success;
   @override
   @JsonKey(name: 'rocket')
-  RocketVehicleModel? get rocket;
+  RocketModel? get rocket;
   @override
   @JsonKey(name: 'window')
   int get window;

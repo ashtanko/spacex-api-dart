@@ -27,7 +27,7 @@ class FullLaunchModel with _$FullLaunchModel {
     @JsonKey(name: 'details') @Default('') String details,
     @JsonKey(name: 'failures') @Default([]) List<LaunchFailureModel> failures,
     @JsonKey(name: 'success') @Default(false) bool success,
-    @JsonKey(name: 'rocket') RocketVehicleModel? rocket,
+    @JsonKey(name: 'rocket') RocketModel? rocket,
     @JsonKey(name: 'window') @Default(0) int window,
     @JsonKey(name: 'net') @Default(false) bool net,
     @JsonKey(name: 'static_fire_date_unix') @Default(0) int staticFireDateUnix,

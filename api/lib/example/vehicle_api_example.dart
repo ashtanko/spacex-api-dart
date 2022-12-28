@@ -1,10 +1,10 @@
 import 'package:api/api.dart';
 
-Future<List<DragonVehicleModel>> getAllDragons() async {
+Future<List<DragonModel>> getAllDragons() async {
   return getVehicleRepository().getAllDragons();
 }
 
-Future<DragonVehicleModel> getDragon(String id) async {
+Future<DragonModel> getDragon(String id) async {
   return getVehicleRepository().getDragon(id);
 }
 

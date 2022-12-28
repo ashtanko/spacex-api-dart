@@ -816,84 +816,109 @@ abstract class _RoadsterVehicleModel extends RoadsterVehicleModel {
       throw _privateConstructorUsedError;
 }
 
-RocketVehicleModel _$RocketVehicleModelFromJson(Map<String, dynamic> json) {
-  return _RocketVehicleModel.fromJson(json);
+RocketModel _$RocketModelFromJson(Map<String, dynamic> json) {
+  return _RocketModel.fromJson(json);
 }
 
 /// @nodoc
-mixin _$RocketVehicleModel {
+mixin _$RocketModel {
+  @JsonKey(name: 'id')
   String get id => throw _privateConstructorUsedError;
-  String get description => throw _privateConstructorUsedError;
-  String get wikipedia => throw _privateConstructorUsedError;
-  String get company => throw _privateConstructorUsedError;
-  String get country => throw _privateConstructorUsedError;
+  @JsonKey(name: 'description')
+  String? get description => throw _privateConstructorUsedError;
+  @JsonKey(name: 'wikipedia')
+  String? get wikipedia => throw _privateConstructorUsedError;
+  @JsonKey(name: 'company')
+  String? get company => throw _privateConstructorUsedError;
+  @JsonKey(name: 'country')
+  String? get country => throw _privateConstructorUsedError;
   @JsonKey(name: 'first_flight')
-  String get firstFlight => throw _privateConstructorUsedError;
+  String? get firstFlight => throw _privateConstructorUsedError;
   @JsonKey(name: 'success_rate_pct')
-  num get successRatePct => throw _privateConstructorUsedError;
+  num? get successRatePct => throw _privateConstructorUsedError;
   @JsonKey(name: 'cost_per_launch')
-  num get costPerLaunch => throw _privateConstructorUsedError;
+  num? get costPerLaunch => throw _privateConstructorUsedError;
   @JsonKey(name: 'boosters')
-  num get boosters => throw _privateConstructorUsedError;
+  num? get boosters => throw _privateConstructorUsedError;
   @JsonKey(name: 'stages')
-  num get stages => throw _privateConstructorUsedError;
+  num? get stages => throw _privateConstructorUsedError;
   @JsonKey(name: 'active')
   bool get isActive => throw _privateConstructorUsedError;
   @JsonKey(name: 'type')
-  String get type => throw _privateConstructorUsedError;
+  String? get type => throw _privateConstructorUsedError;
   @JsonKey(name: 'name')
-  String get name => throw _privateConstructorUsedError;
+  String? get name => throw _privateConstructorUsedError;
   @JsonKey(name: 'flickr_images')
   List<String> get images => throw _privateConstructorUsedError;
   @JsonKey(name: 'payload_weights')
   List<PayloadWeightModel> get payloadWeights =>
       throw _privateConstructorUsedError;
-  @JsonKey(name: 'landing_legs')
-  dynamic get landingLegs => throw _privateConstructorUsedError;
   @JsonKey(name: 'engines')
   EngineModel get engines => throw _privateConstructorUsedError;
+  @JsonKey(name: 'height')
+  HeightModel? get height => throw _privateConstructorUsedError;
+  @JsonKey(name: 'diameter')
+  DiameterModel? get diameter => throw _privateConstructorUsedError;
+  @JsonKey(name: 'mass')
+  MassModel? get mass => throw _privateConstructorUsedError;
+  @JsonKey(name: 'first_stage')
+  FirstStageModel? get firstStage => throw _privateConstructorUsedError;
+  @JsonKey(name: 'second_stage')
+  SecondStageModel? get secondStage => throw _privateConstructorUsedError;
+  @JsonKey(name: 'landing_legs')
+  LandingLegsModel? get landingLegs => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $RocketVehicleModelCopyWith<RocketVehicleModel> get copyWith =>
+  $RocketModelCopyWith<RocketModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $RocketVehicleModelCopyWith<$Res> {
-  factory $RocketVehicleModelCopyWith(
-          RocketVehicleModel value, $Res Function(RocketVehicleModel) then) =
-      _$RocketVehicleModelCopyWithImpl<$Res>;
+abstract class $RocketModelCopyWith<$Res> {
+  factory $RocketModelCopyWith(
+          RocketModel value, $Res Function(RocketModel) then) =
+      _$RocketModelCopyWithImpl<$Res>;
   $Res call(
-      {String id,
-      String description,
-      String wikipedia,
-      String company,
-      String country,
-      @JsonKey(name: 'first_flight') String firstFlight,
-      @JsonKey(name: 'success_rate_pct') num successRatePct,
-      @JsonKey(name: 'cost_per_launch') num costPerLaunch,
-      @JsonKey(name: 'boosters') num boosters,
-      @JsonKey(name: 'stages') num stages,
+      {@JsonKey(name: 'id') String id,
+      @JsonKey(name: 'description') String? description,
+      @JsonKey(name: 'wikipedia') String? wikipedia,
+      @JsonKey(name: 'company') String? company,
+      @JsonKey(name: 'country') String? country,
+      @JsonKey(name: 'first_flight') String? firstFlight,
+      @JsonKey(name: 'success_rate_pct') num? successRatePct,
+      @JsonKey(name: 'cost_per_launch') num? costPerLaunch,
+      @JsonKey(name: 'boosters') num? boosters,
+      @JsonKey(name: 'stages') num? stages,
       @JsonKey(name: 'active') bool isActive,
-      @JsonKey(name: 'type') String type,
-      @JsonKey(name: 'name') String name,
+      @JsonKey(name: 'type') String? type,
+      @JsonKey(name: 'name') String? name,
       @JsonKey(name: 'flickr_images') List<String> images,
       @JsonKey(name: 'payload_weights') List<PayloadWeightModel> payloadWeights,
-      @JsonKey(name: 'landing_legs') dynamic landingLegs,
-      @JsonKey(name: 'engines') EngineModel engines});
+      @JsonKey(name: 'engines') EngineModel engines,
+      @JsonKey(name: 'height') HeightModel? height,
+      @JsonKey(name: 'diameter') DiameterModel? diameter,
+      @JsonKey(name: 'mass') MassModel? mass,
+      @JsonKey(name: 'first_stage') FirstStageModel? firstStage,
+      @JsonKey(name: 'second_stage') SecondStageModel? secondStage,
+      @JsonKey(name: 'landing_legs') LandingLegsModel? landingLegs});
 
   $EngineModelCopyWith<$Res> get engines;
+  $HeightModelCopyWith<$Res>? get height;
+  $DiameterModelCopyWith<$Res>? get diameter;
+  $MassModelCopyWith<$Res>? get mass;
+  $FirstStageModelCopyWith<$Res>? get firstStage;
+  $SecondStageModelCopyWith<$Res>? get secondStage;
+  $LandingLegsModelCopyWith<$Res>? get landingLegs;
 }
 
 /// @nodoc
-class _$RocketVehicleModelCopyWithImpl<$Res>
-    implements $RocketVehicleModelCopyWith<$Res> {
-  _$RocketVehicleModelCopyWithImpl(this._value, this._then);
+class _$RocketModelCopyWithImpl<$Res> implements $RocketModelCopyWith<$Res> {
+  _$RocketModelCopyWithImpl(this._value, this._then);
 
-  final RocketVehicleModel _value;
+  final RocketModel _value;
   // ignore: unused_field
-  final $Res Function(RocketVehicleModel) _then;
+  final $Res Function(RocketModel) _then;
 
   @override
   $Res call({
@@ -912,8 +937,13 @@ class _$RocketVehicleModelCopyWithImpl<$Res>
     Object? name = freezed,
     Object? images = freezed,
     Object? payloadWeights = freezed,
-    Object? landingLegs = freezed,
     Object? engines = freezed,
+    Object? height = freezed,
+    Object? diameter = freezed,
+    Object? mass = freezed,
+    Object? firstStage = freezed,
+    Object? secondStage = freezed,
+    Object? landingLegs = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed
@@ -923,39 +953,39 @@ class _$RocketVehicleModelCopyWithImpl<$Res>
       description: description == freezed
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       wikipedia: wikipedia == freezed
           ? _value.wikipedia
           : wikipedia // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       company: company == freezed
           ? _value.company
           : company // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       country: country == freezed
           ? _value.country
           : country // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       firstFlight: firstFlight == freezed
           ? _value.firstFlight
           : firstFlight // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       successRatePct: successRatePct == freezed
           ? _value.successRatePct
           : successRatePct // ignore: cast_nullable_to_non_nullable
-              as num,
+              as num?,
       costPerLaunch: costPerLaunch == freezed
           ? _value.costPerLaunch
           : costPerLaunch // ignore: cast_nullable_to_non_nullable
-              as num,
+              as num?,
       boosters: boosters == freezed
           ? _value.boosters
           : boosters // ignore: cast_nullable_to_non_nullable
-              as num,
+              as num?,
       stages: stages == freezed
           ? _value.stages
           : stages // ignore: cast_nullable_to_non_nullable
-              as num,
+              as num?,
       isActive: isActive == freezed
           ? _value.isActive
           : isActive // ignore: cast_nullable_to_non_nullable
@@ -963,11 +993,11 @@ class _$RocketVehicleModelCopyWithImpl<$Res>
       type: type == freezed
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       name: name == freezed
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       images: images == freezed
           ? _value.images
           : images // ignore: cast_nullable_to_non_nullable
@@ -976,14 +1006,34 @@ class _$RocketVehicleModelCopyWithImpl<$Res>
           ? _value.payloadWeights
           : payloadWeights // ignore: cast_nullable_to_non_nullable
               as List<PayloadWeightModel>,
-      landingLegs: landingLegs == freezed
-          ? _value.landingLegs
-          : landingLegs // ignore: cast_nullable_to_non_nullable
-              as dynamic,
       engines: engines == freezed
           ? _value.engines
           : engines // ignore: cast_nullable_to_non_nullable
               as EngineModel,
+      height: height == freezed
+          ? _value.height
+          : height // ignore: cast_nullable_to_non_nullable
+              as HeightModel?,
+      diameter: diameter == freezed
+          ? _value.diameter
+          : diameter // ignore: cast_nullable_to_non_nullable
+              as DiameterModel?,
+      mass: mass == freezed
+          ? _value.mass
+          : mass // ignore: cast_nullable_to_non_nullable
+              as MassModel?,
+      firstStage: firstStage == freezed
+          ? _value.firstStage
+          : firstStage // ignore: cast_nullable_to_non_nullable
+              as FirstStageModel?,
+      secondStage: secondStage == freezed
+          ? _value.secondStage
+          : secondStage // ignore: cast_nullable_to_non_nullable
+              as SecondStageModel?,
+      landingLegs: landingLegs == freezed
+          ? _value.landingLegs
+          : landingLegs // ignore: cast_nullable_to_non_nullable
+              as LandingLegsModel?,
     ));
   }
 
@@ -993,48 +1043,130 @@ class _$RocketVehicleModelCopyWithImpl<$Res>
       return _then(_value.copyWith(engines: value));
     });
   }
+
+  @override
+  $HeightModelCopyWith<$Res>? get height {
+    if (_value.height == null) {
+      return null;
+    }
+
+    return $HeightModelCopyWith<$Res>(_value.height!, (value) {
+      return _then(_value.copyWith(height: value));
+    });
+  }
+
+  @override
+  $DiameterModelCopyWith<$Res>? get diameter {
+    if (_value.diameter == null) {
+      return null;
+    }
+
+    return $DiameterModelCopyWith<$Res>(_value.diameter!, (value) {
+      return _then(_value.copyWith(diameter: value));
+    });
+  }
+
+  @override
+  $MassModelCopyWith<$Res>? get mass {
+    if (_value.mass == null) {
+      return null;
+    }
+
+    return $MassModelCopyWith<$Res>(_value.mass!, (value) {
+      return _then(_value.copyWith(mass: value));
+    });
+  }
+
+  @override
+  $FirstStageModelCopyWith<$Res>? get firstStage {
+    if (_value.firstStage == null) {
+      return null;
+    }
+
+    return $FirstStageModelCopyWith<$Res>(_value.firstStage!, (value) {
+      return _then(_value.copyWith(firstStage: value));
+    });
+  }
+
+  @override
+  $SecondStageModelCopyWith<$Res>? get secondStage {
+    if (_value.secondStage == null) {
+      return null;
+    }
+
+    return $SecondStageModelCopyWith<$Res>(_value.secondStage!, (value) {
+      return _then(_value.copyWith(secondStage: value));
+    });
+  }
+
+  @override
+  $LandingLegsModelCopyWith<$Res>? get landingLegs {
+    if (_value.landingLegs == null) {
+      return null;
+    }
+
+    return $LandingLegsModelCopyWith<$Res>(_value.landingLegs!, (value) {
+      return _then(_value.copyWith(landingLegs: value));
+    });
+  }
 }
 
 /// @nodoc
-abstract class _$$_RocketVehicleModelCopyWith<$Res>
-    implements $RocketVehicleModelCopyWith<$Res> {
-  factory _$$_RocketVehicleModelCopyWith(_$_RocketVehicleModel value,
-          $Res Function(_$_RocketVehicleModel) then) =
-      __$$_RocketVehicleModelCopyWithImpl<$Res>;
+abstract class _$$_RocketModelCopyWith<$Res>
+    implements $RocketModelCopyWith<$Res> {
+  factory _$$_RocketModelCopyWith(
+          _$_RocketModel value, $Res Function(_$_RocketModel) then) =
+      __$$_RocketModelCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String id,
-      String description,
-      String wikipedia,
-      String company,
-      String country,
-      @JsonKey(name: 'first_flight') String firstFlight,
-      @JsonKey(name: 'success_rate_pct') num successRatePct,
-      @JsonKey(name: 'cost_per_launch') num costPerLaunch,
-      @JsonKey(name: 'boosters') num boosters,
-      @JsonKey(name: 'stages') num stages,
+      {@JsonKey(name: 'id') String id,
+      @JsonKey(name: 'description') String? description,
+      @JsonKey(name: 'wikipedia') String? wikipedia,
+      @JsonKey(name: 'company') String? company,
+      @JsonKey(name: 'country') String? country,
+      @JsonKey(name: 'first_flight') String? firstFlight,
+      @JsonKey(name: 'success_rate_pct') num? successRatePct,
+      @JsonKey(name: 'cost_per_launch') num? costPerLaunch,
+      @JsonKey(name: 'boosters') num? boosters,
+      @JsonKey(name: 'stages') num? stages,
       @JsonKey(name: 'active') bool isActive,
-      @JsonKey(name: 'type') String type,
-      @JsonKey(name: 'name') String name,
+      @JsonKey(name: 'type') String? type,
+      @JsonKey(name: 'name') String? name,
       @JsonKey(name: 'flickr_images') List<String> images,
       @JsonKey(name: 'payload_weights') List<PayloadWeightModel> payloadWeights,
-      @JsonKey(name: 'landing_legs') dynamic landingLegs,
-      @JsonKey(name: 'engines') EngineModel engines});
+      @JsonKey(name: 'engines') EngineModel engines,
+      @JsonKey(name: 'height') HeightModel? height,
+      @JsonKey(name: 'diameter') DiameterModel? diameter,
+      @JsonKey(name: 'mass') MassModel? mass,
+      @JsonKey(name: 'first_stage') FirstStageModel? firstStage,
+      @JsonKey(name: 'second_stage') SecondStageModel? secondStage,
+      @JsonKey(name: 'landing_legs') LandingLegsModel? landingLegs});
 
   @override
   $EngineModelCopyWith<$Res> get engines;
+  @override
+  $HeightModelCopyWith<$Res>? get height;
+  @override
+  $DiameterModelCopyWith<$Res>? get diameter;
+  @override
+  $MassModelCopyWith<$Res>? get mass;
+  @override
+  $FirstStageModelCopyWith<$Res>? get firstStage;
+  @override
+  $SecondStageModelCopyWith<$Res>? get secondStage;
+  @override
+  $LandingLegsModelCopyWith<$Res>? get landingLegs;
 }
 
 /// @nodoc
-class __$$_RocketVehicleModelCopyWithImpl<$Res>
-    extends _$RocketVehicleModelCopyWithImpl<$Res>
-    implements _$$_RocketVehicleModelCopyWith<$Res> {
-  __$$_RocketVehicleModelCopyWithImpl(
-      _$_RocketVehicleModel _value, $Res Function(_$_RocketVehicleModel) _then)
-      : super(_value, (v) => _then(v as _$_RocketVehicleModel));
+class __$$_RocketModelCopyWithImpl<$Res> extends _$RocketModelCopyWithImpl<$Res>
+    implements _$$_RocketModelCopyWith<$Res> {
+  __$$_RocketModelCopyWithImpl(
+      _$_RocketModel _value, $Res Function(_$_RocketModel) _then)
+      : super(_value, (v) => _then(v as _$_RocketModel));
 
   @override
-  _$_RocketVehicleModel get _value => super._value as _$_RocketVehicleModel;
+  _$_RocketModel get _value => super._value as _$_RocketModel;
 
   @override
   $Res call({
@@ -1053,10 +1185,15 @@ class __$$_RocketVehicleModelCopyWithImpl<$Res>
     Object? name = freezed,
     Object? images = freezed,
     Object? payloadWeights = freezed,
-    Object? landingLegs = freezed,
     Object? engines = freezed,
+    Object? height = freezed,
+    Object? diameter = freezed,
+    Object? mass = freezed,
+    Object? firstStage = freezed,
+    Object? secondStage = freezed,
+    Object? landingLegs = freezed,
   }) {
-    return _then(_$_RocketVehicleModel(
+    return _then(_$_RocketModel(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -1064,39 +1201,39 @@ class __$$_RocketVehicleModelCopyWithImpl<$Res>
       description: description == freezed
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       wikipedia: wikipedia == freezed
           ? _value.wikipedia
           : wikipedia // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       company: company == freezed
           ? _value.company
           : company // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       country: country == freezed
           ? _value.country
           : country // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       firstFlight: firstFlight == freezed
           ? _value.firstFlight
           : firstFlight // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       successRatePct: successRatePct == freezed
           ? _value.successRatePct
           : successRatePct // ignore: cast_nullable_to_non_nullable
-              as num,
+              as num?,
       costPerLaunch: costPerLaunch == freezed
           ? _value.costPerLaunch
           : costPerLaunch // ignore: cast_nullable_to_non_nullable
-              as num,
+              as num?,
       boosters: boosters == freezed
           ? _value.boosters
           : boosters // ignore: cast_nullable_to_non_nullable
-              as num,
+              as num?,
       stages: stages == freezed
           ? _value.stages
           : stages // ignore: cast_nullable_to_non_nullable
-              as num,
+              as num?,
       isActive: isActive == freezed
           ? _value.isActive
           : isActive // ignore: cast_nullable_to_non_nullable
@@ -1104,11 +1241,11 @@ class __$$_RocketVehicleModelCopyWithImpl<$Res>
       type: type == freezed
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       name: name == freezed
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       images: images == freezed
           ? _value._images
           : images // ignore: cast_nullable_to_non_nullable
@@ -1117,96 +1254,132 @@ class __$$_RocketVehicleModelCopyWithImpl<$Res>
           ? _value._payloadWeights
           : payloadWeights // ignore: cast_nullable_to_non_nullable
               as List<PayloadWeightModel>,
-      landingLegs: landingLegs == freezed
-          ? _value.landingLegs
-          : landingLegs // ignore: cast_nullable_to_non_nullable
-              as dynamic,
       engines: engines == freezed
           ? _value.engines
           : engines // ignore: cast_nullable_to_non_nullable
               as EngineModel,
+      height: height == freezed
+          ? _value.height
+          : height // ignore: cast_nullable_to_non_nullable
+              as HeightModel?,
+      diameter: diameter == freezed
+          ? _value.diameter
+          : diameter // ignore: cast_nullable_to_non_nullable
+              as DiameterModel?,
+      mass: mass == freezed
+          ? _value.mass
+          : mass // ignore: cast_nullable_to_non_nullable
+              as MassModel?,
+      firstStage: firstStage == freezed
+          ? _value.firstStage
+          : firstStage // ignore: cast_nullable_to_non_nullable
+              as FirstStageModel?,
+      secondStage: secondStage == freezed
+          ? _value.secondStage
+          : secondStage // ignore: cast_nullable_to_non_nullable
+              as SecondStageModel?,
+      landingLegs: landingLegs == freezed
+          ? _value.landingLegs
+          : landingLegs // ignore: cast_nullable_to_non_nullable
+              as LandingLegsModel?,
     ));
   }
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$_RocketVehicleModel extends _RocketVehicleModel {
-  const _$_RocketVehicleModel(
-      {required this.id,
-      this.description = '',
-      this.wikipedia = 'https://en.wikipedia.org/wiki/Falcon_1',
-      this.company = 'SpaceX',
-      this.country = 'Republic of the Marshall Islands',
+class _$_RocketModel extends _RocketModel {
+  const _$_RocketModel(
+      {@JsonKey(name: 'id')
+          required this.id,
+      @JsonKey(name: 'description')
+          this.description,
+      @JsonKey(name: 'wikipedia')
+          this.wikipedia,
+      @JsonKey(name: 'company')
+          this.company,
+      @JsonKey(name: 'country')
+          this.country,
       @JsonKey(name: 'first_flight')
-          this.firstFlight = '',
+          this.firstFlight,
       @JsonKey(name: 'success_rate_pct')
-          this.successRatePct = 0,
+          this.successRatePct,
       @JsonKey(name: 'cost_per_launch')
-          this.costPerLaunch = 0,
+          this.costPerLaunch,
       @JsonKey(name: 'boosters')
-          this.boosters = 0,
+          this.boosters,
       @JsonKey(name: 'stages')
-          this.stages = 0,
+          this.stages,
       @JsonKey(name: 'active')
           this.isActive = false,
       @JsonKey(name: 'type')
-          this.type = 'rocket',
+          this.type,
       @JsonKey(name: 'name')
-          this.name = 'Falcon 1',
+          this.name,
       @JsonKey(name: 'flickr_images')
           final List<String> images = const [],
       @JsonKey(name: 'payload_weights')
           final List<PayloadWeightModel> payloadWeights = const [],
-      @JsonKey(name: 'landing_legs')
-          this.landingLegs,
       @JsonKey(name: 'engines')
-          this.engines = const EngineModel()})
+          this.engines = const EngineModel(),
+      @JsonKey(name: 'height')
+          this.height,
+      @JsonKey(name: 'diameter')
+          this.diameter,
+      @JsonKey(name: 'mass')
+          this.mass,
+      @JsonKey(name: 'first_stage')
+          this.firstStage,
+      @JsonKey(name: 'second_stage')
+          this.secondStage,
+      @JsonKey(name: 'landing_legs')
+          this.landingLegs})
       : _images = images,
         _payloadWeights = payloadWeights,
         super._();
 
-  factory _$_RocketVehicleModel.fromJson(Map<String, dynamic> json) =>
-      _$$_RocketVehicleModelFromJson(json);
+  factory _$_RocketModel.fromJson(Map<String, dynamic> json) =>
+      _$$_RocketModelFromJson(json);
 
   @override
+  @JsonKey(name: 'id')
   final String id;
   @override
-  @JsonKey()
-  final String description;
+  @JsonKey(name: 'description')
+  final String? description;
   @override
-  @JsonKey()
-  final String wikipedia;
+  @JsonKey(name: 'wikipedia')
+  final String? wikipedia;
   @override
-  @JsonKey()
-  final String company;
+  @JsonKey(name: 'company')
+  final String? company;
   @override
-  @JsonKey()
-  final String country;
+  @JsonKey(name: 'country')
+  final String? country;
   @override
   @JsonKey(name: 'first_flight')
-  final String firstFlight;
+  final String? firstFlight;
   @override
   @JsonKey(name: 'success_rate_pct')
-  final num successRatePct;
+  final num? successRatePct;
   @override
   @JsonKey(name: 'cost_per_launch')
-  final num costPerLaunch;
+  final num? costPerLaunch;
   @override
   @JsonKey(name: 'boosters')
-  final num boosters;
+  final num? boosters;
   @override
   @JsonKey(name: 'stages')
-  final num stages;
+  final num? stages;
   @override
   @JsonKey(name: 'active')
   final bool isActive;
   @override
   @JsonKey(name: 'type')
-  final String type;
+  final String? type;
   @override
   @JsonKey(name: 'name')
-  final String name;
+  final String? name;
   final List<String> _images;
   @override
   @JsonKey(name: 'flickr_images')
@@ -1224,22 +1397,37 @@ class _$_RocketVehicleModel extends _RocketVehicleModel {
   }
 
   @override
-  @JsonKey(name: 'landing_legs')
-  final dynamic landingLegs;
-  @override
   @JsonKey(name: 'engines')
   final EngineModel engines;
+  @override
+  @JsonKey(name: 'height')
+  final HeightModel? height;
+  @override
+  @JsonKey(name: 'diameter')
+  final DiameterModel? diameter;
+  @override
+  @JsonKey(name: 'mass')
+  final MassModel? mass;
+  @override
+  @JsonKey(name: 'first_stage')
+  final FirstStageModel? firstStage;
+  @override
+  @JsonKey(name: 'second_stage')
+  final SecondStageModel? secondStage;
+  @override
+  @JsonKey(name: 'landing_legs')
+  final LandingLegsModel? landingLegs;
 
   @override
   String toString() {
-    return 'RocketVehicleModel(id: $id, description: $description, wikipedia: $wikipedia, company: $company, country: $country, firstFlight: $firstFlight, successRatePct: $successRatePct, costPerLaunch: $costPerLaunch, boosters: $boosters, stages: $stages, isActive: $isActive, type: $type, name: $name, images: $images, payloadWeights: $payloadWeights, landingLegs: $landingLegs, engines: $engines)';
+    return 'RocketModel(id: $id, description: $description, wikipedia: $wikipedia, company: $company, country: $country, firstFlight: $firstFlight, successRatePct: $successRatePct, costPerLaunch: $costPerLaunch, boosters: $boosters, stages: $stages, isActive: $isActive, type: $type, name: $name, images: $images, payloadWeights: $payloadWeights, engines: $engines, height: $height, diameter: $diameter, mass: $mass, firstStage: $firstStage, secondStage: $secondStage, landingLegs: $landingLegs)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_RocketVehicleModel &&
+            other is _$_RocketModel &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
                 .equals(other.description, description) &&
@@ -1260,117 +1448,149 @@ class _$_RocketVehicleModel extends _RocketVehicleModel {
             const DeepCollectionEquality().equals(other._images, _images) &&
             const DeepCollectionEquality()
                 .equals(other._payloadWeights, _payloadWeights) &&
+            const DeepCollectionEquality().equals(other.engines, engines) &&
+            const DeepCollectionEquality().equals(other.height, height) &&
+            const DeepCollectionEquality().equals(other.diameter, diameter) &&
+            const DeepCollectionEquality().equals(other.mass, mass) &&
             const DeepCollectionEquality()
-                .equals(other.landingLegs, landingLegs) &&
-            const DeepCollectionEquality().equals(other.engines, engines));
+                .equals(other.firstStage, firstStage) &&
+            const DeepCollectionEquality()
+                .equals(other.secondStage, secondStage) &&
+            const DeepCollectionEquality()
+                .equals(other.landingLegs, landingLegs));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(description),
-      const DeepCollectionEquality().hash(wikipedia),
-      const DeepCollectionEquality().hash(company),
-      const DeepCollectionEquality().hash(country),
-      const DeepCollectionEquality().hash(firstFlight),
-      const DeepCollectionEquality().hash(successRatePct),
-      const DeepCollectionEquality().hash(costPerLaunch),
-      const DeepCollectionEquality().hash(boosters),
-      const DeepCollectionEquality().hash(stages),
-      const DeepCollectionEquality().hash(isActive),
-      const DeepCollectionEquality().hash(type),
-      const DeepCollectionEquality().hash(name),
-      const DeepCollectionEquality().hash(_images),
-      const DeepCollectionEquality().hash(_payloadWeights),
-      const DeepCollectionEquality().hash(landingLegs),
-      const DeepCollectionEquality().hash(engines));
+  int get hashCode => Object.hashAll([
+        runtimeType,
+        const DeepCollectionEquality().hash(id),
+        const DeepCollectionEquality().hash(description),
+        const DeepCollectionEquality().hash(wikipedia),
+        const DeepCollectionEquality().hash(company),
+        const DeepCollectionEquality().hash(country),
+        const DeepCollectionEquality().hash(firstFlight),
+        const DeepCollectionEquality().hash(successRatePct),
+        const DeepCollectionEquality().hash(costPerLaunch),
+        const DeepCollectionEquality().hash(boosters),
+        const DeepCollectionEquality().hash(stages),
+        const DeepCollectionEquality().hash(isActive),
+        const DeepCollectionEquality().hash(type),
+        const DeepCollectionEquality().hash(name),
+        const DeepCollectionEquality().hash(_images),
+        const DeepCollectionEquality().hash(_payloadWeights),
+        const DeepCollectionEquality().hash(engines),
+        const DeepCollectionEquality().hash(height),
+        const DeepCollectionEquality().hash(diameter),
+        const DeepCollectionEquality().hash(mass),
+        const DeepCollectionEquality().hash(firstStage),
+        const DeepCollectionEquality().hash(secondStage),
+        const DeepCollectionEquality().hash(landingLegs)
+      ]);
 
   @JsonKey(ignore: true)
   @override
-  _$$_RocketVehicleModelCopyWith<_$_RocketVehicleModel> get copyWith =>
-      __$$_RocketVehicleModelCopyWithImpl<_$_RocketVehicleModel>(
-          this, _$identity);
+  _$$_RocketModelCopyWith<_$_RocketModel> get copyWith =>
+      __$$_RocketModelCopyWithImpl<_$_RocketModel>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_RocketVehicleModelToJson(
+    return _$$_RocketModelToJson(
       this,
     );
   }
 }
 
-abstract class _RocketVehicleModel extends RocketVehicleModel {
-  const factory _RocketVehicleModel(
-      {required final String id,
-      final String description,
-      final String wikipedia,
-      final String company,
-      final String country,
+abstract class _RocketModel extends RocketModel {
+  const factory _RocketModel(
+      {@JsonKey(name: 'id')
+          required final String id,
+      @JsonKey(name: 'description')
+          final String? description,
+      @JsonKey(name: 'wikipedia')
+          final String? wikipedia,
+      @JsonKey(name: 'company')
+          final String? company,
+      @JsonKey(name: 'country')
+          final String? country,
       @JsonKey(name: 'first_flight')
-          final String firstFlight,
+          final String? firstFlight,
       @JsonKey(name: 'success_rate_pct')
-          final num successRatePct,
+          final num? successRatePct,
       @JsonKey(name: 'cost_per_launch')
-          final num costPerLaunch,
+          final num? costPerLaunch,
       @JsonKey(name: 'boosters')
-          final num boosters,
+          final num? boosters,
       @JsonKey(name: 'stages')
-          final num stages,
+          final num? stages,
       @JsonKey(name: 'active')
           final bool isActive,
       @JsonKey(name: 'type')
-          final String type,
+          final String? type,
       @JsonKey(name: 'name')
-          final String name,
+          final String? name,
       @JsonKey(name: 'flickr_images')
           final List<String> images,
       @JsonKey(name: 'payload_weights')
           final List<PayloadWeightModel> payloadWeights,
-      @JsonKey(name: 'landing_legs')
-          final dynamic landingLegs,
       @JsonKey(name: 'engines')
-          final EngineModel engines}) = _$_RocketVehicleModel;
-  const _RocketVehicleModel._() : super._();
+          final EngineModel engines,
+      @JsonKey(name: 'height')
+          final HeightModel? height,
+      @JsonKey(name: 'diameter')
+          final DiameterModel? diameter,
+      @JsonKey(name: 'mass')
+          final MassModel? mass,
+      @JsonKey(name: 'first_stage')
+          final FirstStageModel? firstStage,
+      @JsonKey(name: 'second_stage')
+          final SecondStageModel? secondStage,
+      @JsonKey(name: 'landing_legs')
+          final LandingLegsModel? landingLegs}) = _$_RocketModel;
+  const _RocketModel._() : super._();
 
-  factory _RocketVehicleModel.fromJson(Map<String, dynamic> json) =
-      _$_RocketVehicleModel.fromJson;
+  factory _RocketModel.fromJson(Map<String, dynamic> json) =
+      _$_RocketModel.fromJson;
 
   @override
+  @JsonKey(name: 'id')
   String get id;
   @override
-  String get description;
+  @JsonKey(name: 'description')
+  String? get description;
   @override
-  String get wikipedia;
+  @JsonKey(name: 'wikipedia')
+  String? get wikipedia;
   @override
-  String get company;
+  @JsonKey(name: 'company')
+  String? get company;
   @override
-  String get country;
+  @JsonKey(name: 'country')
+  String? get country;
   @override
   @JsonKey(name: 'first_flight')
-  String get firstFlight;
+  String? get firstFlight;
   @override
   @JsonKey(name: 'success_rate_pct')
-  num get successRatePct;
+  num? get successRatePct;
   @override
   @JsonKey(name: 'cost_per_launch')
-  num get costPerLaunch;
+  num? get costPerLaunch;
   @override
   @JsonKey(name: 'boosters')
-  num get boosters;
+  num? get boosters;
   @override
   @JsonKey(name: 'stages')
-  num get stages;
+  num? get stages;
   @override
   @JsonKey(name: 'active')
   bool get isActive;
   @override
   @JsonKey(name: 'type')
-  String get type;
+  String? get type;
   @override
   @JsonKey(name: 'name')
-  String get name;
+  String? get name;
   @override
   @JsonKey(name: 'flickr_images')
   List<String> get images;
@@ -1378,33 +1598,1013 @@ abstract class _RocketVehicleModel extends RocketVehicleModel {
   @JsonKey(name: 'payload_weights')
   List<PayloadWeightModel> get payloadWeights;
   @override
-  @JsonKey(name: 'landing_legs')
-  dynamic get landingLegs;
-  @override
   @JsonKey(name: 'engines')
   EngineModel get engines;
   @override
+  @JsonKey(name: 'height')
+  HeightModel? get height;
+  @override
+  @JsonKey(name: 'diameter')
+  DiameterModel? get diameter;
+  @override
+  @JsonKey(name: 'mass')
+  MassModel? get mass;
+  @override
+  @JsonKey(name: 'first_stage')
+  FirstStageModel? get firstStage;
+  @override
+  @JsonKey(name: 'second_stage')
+  SecondStageModel? get secondStage;
+  @override
+  @JsonKey(name: 'landing_legs')
+  LandingLegsModel? get landingLegs;
+  @override
   @JsonKey(ignore: true)
-  _$$_RocketVehicleModelCopyWith<_$_RocketVehicleModel> get copyWith =>
+  _$$_RocketModelCopyWith<_$_RocketModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
-ShipVehicleModel _$ShipVehicleModelFromJson(Map<String, dynamic> json) {
-  return _ShipVehicleModel.fromJson(json);
+LandingLegsModel _$LandingLegsModelFromJson(Map<String, dynamic> json) {
+  return _LandingLegsModel.fromJson(json);
 }
 
 /// @nodoc
-mixin _$ShipVehicleModel {
+mixin _$LandingLegsModel {
+  @JsonKey(name: 'number')
+  num? get number => throw _privateConstructorUsedError;
+  @JsonKey(name: 'material')
+  String? get material => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $LandingLegsModelCopyWith<LandingLegsModel> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $LandingLegsModelCopyWith<$Res> {
+  factory $LandingLegsModelCopyWith(
+          LandingLegsModel value, $Res Function(LandingLegsModel) then) =
+      _$LandingLegsModelCopyWithImpl<$Res>;
+  $Res call(
+      {@JsonKey(name: 'number') num? number,
+      @JsonKey(name: 'material') String? material});
+}
+
+/// @nodoc
+class _$LandingLegsModelCopyWithImpl<$Res>
+    implements $LandingLegsModelCopyWith<$Res> {
+  _$LandingLegsModelCopyWithImpl(this._value, this._then);
+
+  final LandingLegsModel _value;
+  // ignore: unused_field
+  final $Res Function(LandingLegsModel) _then;
+
+  @override
+  $Res call({
+    Object? number = freezed,
+    Object? material = freezed,
+  }) {
+    return _then(_value.copyWith(
+      number: number == freezed
+          ? _value.number
+          : number // ignore: cast_nullable_to_non_nullable
+              as num?,
+      material: material == freezed
+          ? _value.material
+          : material // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ));
+  }
+}
+
+/// @nodoc
+abstract class _$$_LandingLegsModelCopyWith<$Res>
+    implements $LandingLegsModelCopyWith<$Res> {
+  factory _$$_LandingLegsModelCopyWith(
+          _$_LandingLegsModel value, $Res Function(_$_LandingLegsModel) then) =
+      __$$_LandingLegsModelCopyWithImpl<$Res>;
+  @override
+  $Res call(
+      {@JsonKey(name: 'number') num? number,
+      @JsonKey(name: 'material') String? material});
+}
+
+/// @nodoc
+class __$$_LandingLegsModelCopyWithImpl<$Res>
+    extends _$LandingLegsModelCopyWithImpl<$Res>
+    implements _$$_LandingLegsModelCopyWith<$Res> {
+  __$$_LandingLegsModelCopyWithImpl(
+      _$_LandingLegsModel _value, $Res Function(_$_LandingLegsModel) _then)
+      : super(_value, (v) => _then(v as _$_LandingLegsModel));
+
+  @override
+  _$_LandingLegsModel get _value => super._value as _$_LandingLegsModel;
+
+  @override
+  $Res call({
+    Object? number = freezed,
+    Object? material = freezed,
+  }) {
+    return _then(_$_LandingLegsModel(
+      number: number == freezed
+          ? _value.number
+          : number // ignore: cast_nullable_to_non_nullable
+              as num?,
+      material: material == freezed
+          ? _value.material
+          : material // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$_LandingLegsModel extends _LandingLegsModel {
+  const _$_LandingLegsModel(
+      {@JsonKey(name: 'number') this.number,
+      @JsonKey(name: 'material') this.material})
+      : super._();
+
+  factory _$_LandingLegsModel.fromJson(Map<String, dynamic> json) =>
+      _$$_LandingLegsModelFromJson(json);
+
+  @override
+  @JsonKey(name: 'number')
+  final num? number;
+  @override
+  @JsonKey(name: 'material')
+  final String? material;
+
+  @override
+  String toString() {
+    return 'LandingLegsModel(number: $number, material: $material)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_LandingLegsModel &&
+            const DeepCollectionEquality().equals(other.number, number) &&
+            const DeepCollectionEquality().equals(other.material, material));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(number),
+      const DeepCollectionEquality().hash(material));
+
+  @JsonKey(ignore: true)
+  @override
+  _$$_LandingLegsModelCopyWith<_$_LandingLegsModel> get copyWith =>
+      __$$_LandingLegsModelCopyWithImpl<_$_LandingLegsModel>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_LandingLegsModelToJson(
+      this,
+    );
+  }
+}
+
+abstract class _LandingLegsModel extends LandingLegsModel {
+  const factory _LandingLegsModel(
+      {@JsonKey(name: 'number') final num? number,
+      @JsonKey(name: 'material') final String? material}) = _$_LandingLegsModel;
+  const _LandingLegsModel._() : super._();
+
+  factory _LandingLegsModel.fromJson(Map<String, dynamic> json) =
+      _$_LandingLegsModel.fromJson;
+
+  @override
+  @JsonKey(name: 'number')
+  num? get number;
+  @override
+  @JsonKey(name: 'material')
+  String? get material;
+  @override
+  @JsonKey(ignore: true)
+  _$$_LandingLegsModelCopyWith<_$_LandingLegsModel> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+RocketPayloadModel _$RocketPayloadModelFromJson(Map<String, dynamic> json) {
+  return _RocketPayloadModel.fromJson(json);
+}
+
+/// @nodoc
+mixin _$RocketPayloadModel {
+  @JsonKey(name: 'composite_fairing')
+  CompositeFairingModel? get compositeFairing =>
+      throw _privateConstructorUsedError;
+  @JsonKey(name: 'option_1')
+  String? get option1 => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $RocketPayloadModelCopyWith<RocketPayloadModel> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $RocketPayloadModelCopyWith<$Res> {
+  factory $RocketPayloadModelCopyWith(
+          RocketPayloadModel value, $Res Function(RocketPayloadModel) then) =
+      _$RocketPayloadModelCopyWithImpl<$Res>;
+  $Res call(
+      {@JsonKey(name: 'composite_fairing')
+          CompositeFairingModel? compositeFairing,
+      @JsonKey(name: 'option_1')
+          String? option1});
+
+  $CompositeFairingModelCopyWith<$Res>? get compositeFairing;
+}
+
+/// @nodoc
+class _$RocketPayloadModelCopyWithImpl<$Res>
+    implements $RocketPayloadModelCopyWith<$Res> {
+  _$RocketPayloadModelCopyWithImpl(this._value, this._then);
+
+  final RocketPayloadModel _value;
+  // ignore: unused_field
+  final $Res Function(RocketPayloadModel) _then;
+
+  @override
+  $Res call({
+    Object? compositeFairing = freezed,
+    Object? option1 = freezed,
+  }) {
+    return _then(_value.copyWith(
+      compositeFairing: compositeFairing == freezed
+          ? _value.compositeFairing
+          : compositeFairing // ignore: cast_nullable_to_non_nullable
+              as CompositeFairingModel?,
+      option1: option1 == freezed
+          ? _value.option1
+          : option1 // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ));
+  }
+
+  @override
+  $CompositeFairingModelCopyWith<$Res>? get compositeFairing {
+    if (_value.compositeFairing == null) {
+      return null;
+    }
+
+    return $CompositeFairingModelCopyWith<$Res>(_value.compositeFairing!,
+        (value) {
+      return _then(_value.copyWith(compositeFairing: value));
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$$_RocketPayloadModelCopyWith<$Res>
+    implements $RocketPayloadModelCopyWith<$Res> {
+  factory _$$_RocketPayloadModelCopyWith(_$_RocketPayloadModel value,
+          $Res Function(_$_RocketPayloadModel) then) =
+      __$$_RocketPayloadModelCopyWithImpl<$Res>;
+  @override
+  $Res call(
+      {@JsonKey(name: 'composite_fairing')
+          CompositeFairingModel? compositeFairing,
+      @JsonKey(name: 'option_1')
+          String? option1});
+
+  @override
+  $CompositeFairingModelCopyWith<$Res>? get compositeFairing;
+}
+
+/// @nodoc
+class __$$_RocketPayloadModelCopyWithImpl<$Res>
+    extends _$RocketPayloadModelCopyWithImpl<$Res>
+    implements _$$_RocketPayloadModelCopyWith<$Res> {
+  __$$_RocketPayloadModelCopyWithImpl(
+      _$_RocketPayloadModel _value, $Res Function(_$_RocketPayloadModel) _then)
+      : super(_value, (v) => _then(v as _$_RocketPayloadModel));
+
+  @override
+  _$_RocketPayloadModel get _value => super._value as _$_RocketPayloadModel;
+
+  @override
+  $Res call({
+    Object? compositeFairing = freezed,
+    Object? option1 = freezed,
+  }) {
+    return _then(_$_RocketPayloadModel(
+      compositeFairing: compositeFairing == freezed
+          ? _value.compositeFairing
+          : compositeFairing // ignore: cast_nullable_to_non_nullable
+              as CompositeFairingModel?,
+      option1: option1 == freezed
+          ? _value.option1
+          : option1 // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$_RocketPayloadModel extends _RocketPayloadModel {
+  const _$_RocketPayloadModel(
+      {@JsonKey(name: 'composite_fairing') this.compositeFairing,
+      @JsonKey(name: 'option_1') this.option1})
+      : super._();
+
+  factory _$_RocketPayloadModel.fromJson(Map<String, dynamic> json) =>
+      _$$_RocketPayloadModelFromJson(json);
+
+  @override
+  @JsonKey(name: 'composite_fairing')
+  final CompositeFairingModel? compositeFairing;
+  @override
+  @JsonKey(name: 'option_1')
+  final String? option1;
+
+  @override
+  String toString() {
+    return 'RocketPayloadModel(compositeFairing: $compositeFairing, option1: $option1)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_RocketPayloadModel &&
+            const DeepCollectionEquality()
+                .equals(other.compositeFairing, compositeFairing) &&
+            const DeepCollectionEquality().equals(other.option1, option1));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(compositeFairing),
+      const DeepCollectionEquality().hash(option1));
+
+  @JsonKey(ignore: true)
+  @override
+  _$$_RocketPayloadModelCopyWith<_$_RocketPayloadModel> get copyWith =>
+      __$$_RocketPayloadModelCopyWithImpl<_$_RocketPayloadModel>(
+          this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_RocketPayloadModelToJson(
+      this,
+    );
+  }
+}
+
+abstract class _RocketPayloadModel extends RocketPayloadModel {
+  const factory _RocketPayloadModel(
+      {@JsonKey(name: 'composite_fairing')
+          final CompositeFairingModel? compositeFairing,
+      @JsonKey(name: 'option_1')
+          final String? option1}) = _$_RocketPayloadModel;
+  const _RocketPayloadModel._() : super._();
+
+  factory _RocketPayloadModel.fromJson(Map<String, dynamic> json) =
+      _$_RocketPayloadModel.fromJson;
+
+  @override
+  @JsonKey(name: 'composite_fairing')
+  CompositeFairingModel? get compositeFairing;
+  @override
+  @JsonKey(name: 'option_1')
+  String? get option1;
+  @override
+  @JsonKey(ignore: true)
+  _$$_RocketPayloadModelCopyWith<_$_RocketPayloadModel> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+FirstStageModel _$FirstStageModelFromJson(Map<String, dynamic> json) {
+  return _FirstStageModel.fromJson(json);
+}
+
+/// @nodoc
+mixin _$FirstStageModel {
+  @JsonKey(name: 'thrust_sea_level')
+  KnotPoundModel? get thrustSeaLevel => throw _privateConstructorUsedError;
+  @JsonKey(name: 'thrust_vacuum')
+  KnotPoundModel? get thrustVacuum => throw _privateConstructorUsedError;
+  @JsonKey(name: 'reusable')
+  bool get reusable => throw _privateConstructorUsedError;
+  @JsonKey(name: 'engines')
+  num? get engines => throw _privateConstructorUsedError;
+  @JsonKey(name: 'fuel_amount_tons')
+  num? get fuelAmountTons => throw _privateConstructorUsedError;
+  @JsonKey(name: 'burn_time_sec')
+  int? get burnTimeSec => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $FirstStageModelCopyWith<FirstStageModel> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $FirstStageModelCopyWith<$Res> {
+  factory $FirstStageModelCopyWith(
+          FirstStageModel value, $Res Function(FirstStageModel) then) =
+      _$FirstStageModelCopyWithImpl<$Res>;
+  $Res call(
+      {@JsonKey(name: 'thrust_sea_level') KnotPoundModel? thrustSeaLevel,
+      @JsonKey(name: 'thrust_vacuum') KnotPoundModel? thrustVacuum,
+      @JsonKey(name: 'reusable') bool reusable,
+      @JsonKey(name: 'engines') num? engines,
+      @JsonKey(name: 'fuel_amount_tons') num? fuelAmountTons,
+      @JsonKey(name: 'burn_time_sec') int? burnTimeSec});
+
+  $KnotPoundModelCopyWith<$Res>? get thrustSeaLevel;
+  $KnotPoundModelCopyWith<$Res>? get thrustVacuum;
+}
+
+/// @nodoc
+class _$FirstStageModelCopyWithImpl<$Res>
+    implements $FirstStageModelCopyWith<$Res> {
+  _$FirstStageModelCopyWithImpl(this._value, this._then);
+
+  final FirstStageModel _value;
+  // ignore: unused_field
+  final $Res Function(FirstStageModel) _then;
+
+  @override
+  $Res call({
+    Object? thrustSeaLevel = freezed,
+    Object? thrustVacuum = freezed,
+    Object? reusable = freezed,
+    Object? engines = freezed,
+    Object? fuelAmountTons = freezed,
+    Object? burnTimeSec = freezed,
+  }) {
+    return _then(_value.copyWith(
+      thrustSeaLevel: thrustSeaLevel == freezed
+          ? _value.thrustSeaLevel
+          : thrustSeaLevel // ignore: cast_nullable_to_non_nullable
+              as KnotPoundModel?,
+      thrustVacuum: thrustVacuum == freezed
+          ? _value.thrustVacuum
+          : thrustVacuum // ignore: cast_nullable_to_non_nullable
+              as KnotPoundModel?,
+      reusable: reusable == freezed
+          ? _value.reusable
+          : reusable // ignore: cast_nullable_to_non_nullable
+              as bool,
+      engines: engines == freezed
+          ? _value.engines
+          : engines // ignore: cast_nullable_to_non_nullable
+              as num?,
+      fuelAmountTons: fuelAmountTons == freezed
+          ? _value.fuelAmountTons
+          : fuelAmountTons // ignore: cast_nullable_to_non_nullable
+              as num?,
+      burnTimeSec: burnTimeSec == freezed
+          ? _value.burnTimeSec
+          : burnTimeSec // ignore: cast_nullable_to_non_nullable
+              as int?,
+    ));
+  }
+
+  @override
+  $KnotPoundModelCopyWith<$Res>? get thrustSeaLevel {
+    if (_value.thrustSeaLevel == null) {
+      return null;
+    }
+
+    return $KnotPoundModelCopyWith<$Res>(_value.thrustSeaLevel!, (value) {
+      return _then(_value.copyWith(thrustSeaLevel: value));
+    });
+  }
+
+  @override
+  $KnotPoundModelCopyWith<$Res>? get thrustVacuum {
+    if (_value.thrustVacuum == null) {
+      return null;
+    }
+
+    return $KnotPoundModelCopyWith<$Res>(_value.thrustVacuum!, (value) {
+      return _then(_value.copyWith(thrustVacuum: value));
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$$_FirstStageModelCopyWith<$Res>
+    implements $FirstStageModelCopyWith<$Res> {
+  factory _$$_FirstStageModelCopyWith(
+          _$_FirstStageModel value, $Res Function(_$_FirstStageModel) then) =
+      __$$_FirstStageModelCopyWithImpl<$Res>;
+  @override
+  $Res call(
+      {@JsonKey(name: 'thrust_sea_level') KnotPoundModel? thrustSeaLevel,
+      @JsonKey(name: 'thrust_vacuum') KnotPoundModel? thrustVacuum,
+      @JsonKey(name: 'reusable') bool reusable,
+      @JsonKey(name: 'engines') num? engines,
+      @JsonKey(name: 'fuel_amount_tons') num? fuelAmountTons,
+      @JsonKey(name: 'burn_time_sec') int? burnTimeSec});
+
+  @override
+  $KnotPoundModelCopyWith<$Res>? get thrustSeaLevel;
+  @override
+  $KnotPoundModelCopyWith<$Res>? get thrustVacuum;
+}
+
+/// @nodoc
+class __$$_FirstStageModelCopyWithImpl<$Res>
+    extends _$FirstStageModelCopyWithImpl<$Res>
+    implements _$$_FirstStageModelCopyWith<$Res> {
+  __$$_FirstStageModelCopyWithImpl(
+      _$_FirstStageModel _value, $Res Function(_$_FirstStageModel) _then)
+      : super(_value, (v) => _then(v as _$_FirstStageModel));
+
+  @override
+  _$_FirstStageModel get _value => super._value as _$_FirstStageModel;
+
+  @override
+  $Res call({
+    Object? thrustSeaLevel = freezed,
+    Object? thrustVacuum = freezed,
+    Object? reusable = freezed,
+    Object? engines = freezed,
+    Object? fuelAmountTons = freezed,
+    Object? burnTimeSec = freezed,
+  }) {
+    return _then(_$_FirstStageModel(
+      thrustSeaLevel: thrustSeaLevel == freezed
+          ? _value.thrustSeaLevel
+          : thrustSeaLevel // ignore: cast_nullable_to_non_nullable
+              as KnotPoundModel?,
+      thrustVacuum: thrustVacuum == freezed
+          ? _value.thrustVacuum
+          : thrustVacuum // ignore: cast_nullable_to_non_nullable
+              as KnotPoundModel?,
+      reusable: reusable == freezed
+          ? _value.reusable
+          : reusable // ignore: cast_nullable_to_non_nullable
+              as bool,
+      engines: engines == freezed
+          ? _value.engines
+          : engines // ignore: cast_nullable_to_non_nullable
+              as num?,
+      fuelAmountTons: fuelAmountTons == freezed
+          ? _value.fuelAmountTons
+          : fuelAmountTons // ignore: cast_nullable_to_non_nullable
+              as num?,
+      burnTimeSec: burnTimeSec == freezed
+          ? _value.burnTimeSec
+          : burnTimeSec // ignore: cast_nullable_to_non_nullable
+              as int?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$_FirstStageModel extends _FirstStageModel {
+  const _$_FirstStageModel(
+      {@JsonKey(name: 'thrust_sea_level') this.thrustSeaLevel,
+      @JsonKey(name: 'thrust_vacuum') this.thrustVacuum,
+      @JsonKey(name: 'reusable') this.reusable = false,
+      @JsonKey(name: 'engines') this.engines,
+      @JsonKey(name: 'fuel_amount_tons') this.fuelAmountTons,
+      @JsonKey(name: 'burn_time_sec') this.burnTimeSec})
+      : super._();
+
+  factory _$_FirstStageModel.fromJson(Map<String, dynamic> json) =>
+      _$$_FirstStageModelFromJson(json);
+
+  @override
+  @JsonKey(name: 'thrust_sea_level')
+  final KnotPoundModel? thrustSeaLevel;
+  @override
+  @JsonKey(name: 'thrust_vacuum')
+  final KnotPoundModel? thrustVacuum;
+  @override
+  @JsonKey(name: 'reusable')
+  final bool reusable;
+  @override
+  @JsonKey(name: 'engines')
+  final num? engines;
+  @override
+  @JsonKey(name: 'fuel_amount_tons')
+  final num? fuelAmountTons;
+  @override
+  @JsonKey(name: 'burn_time_sec')
+  final int? burnTimeSec;
+
+  @override
+  String toString() {
+    return 'FirstStageModel(thrustSeaLevel: $thrustSeaLevel, thrustVacuum: $thrustVacuum, reusable: $reusable, engines: $engines, fuelAmountTons: $fuelAmountTons, burnTimeSec: $burnTimeSec)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_FirstStageModel &&
+            const DeepCollectionEquality()
+                .equals(other.thrustSeaLevel, thrustSeaLevel) &&
+            const DeepCollectionEquality()
+                .equals(other.thrustVacuum, thrustVacuum) &&
+            const DeepCollectionEquality().equals(other.reusable, reusable) &&
+            const DeepCollectionEquality().equals(other.engines, engines) &&
+            const DeepCollectionEquality()
+                .equals(other.fuelAmountTons, fuelAmountTons) &&
+            const DeepCollectionEquality()
+                .equals(other.burnTimeSec, burnTimeSec));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(thrustSeaLevel),
+      const DeepCollectionEquality().hash(thrustVacuum),
+      const DeepCollectionEquality().hash(reusable),
+      const DeepCollectionEquality().hash(engines),
+      const DeepCollectionEquality().hash(fuelAmountTons),
+      const DeepCollectionEquality().hash(burnTimeSec));
+
+  @JsonKey(ignore: true)
+  @override
+  _$$_FirstStageModelCopyWith<_$_FirstStageModel> get copyWith =>
+      __$$_FirstStageModelCopyWithImpl<_$_FirstStageModel>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_FirstStageModelToJson(
+      this,
+    );
+  }
+}
+
+abstract class _FirstStageModel extends FirstStageModel {
+  const factory _FirstStageModel(
+      {@JsonKey(name: 'thrust_sea_level')
+          final KnotPoundModel? thrustSeaLevel,
+      @JsonKey(name: 'thrust_vacuum')
+          final KnotPoundModel? thrustVacuum,
+      @JsonKey(name: 'reusable')
+          final bool reusable,
+      @JsonKey(name: 'engines')
+          final num? engines,
+      @JsonKey(name: 'fuel_amount_tons')
+          final num? fuelAmountTons,
+      @JsonKey(name: 'burn_time_sec')
+          final int? burnTimeSec}) = _$_FirstStageModel;
+  const _FirstStageModel._() : super._();
+
+  factory _FirstStageModel.fromJson(Map<String, dynamic> json) =
+      _$_FirstStageModel.fromJson;
+
+  @override
+  @JsonKey(name: 'thrust_sea_level')
+  KnotPoundModel? get thrustSeaLevel;
+  @override
+  @JsonKey(name: 'thrust_vacuum')
+  KnotPoundModel? get thrustVacuum;
+  @override
+  @JsonKey(name: 'reusable')
+  bool get reusable;
+  @override
+  @JsonKey(name: 'engines')
+  num? get engines;
+  @override
+  @JsonKey(name: 'fuel_amount_tons')
+  num? get fuelAmountTons;
+  @override
+  @JsonKey(name: 'burn_time_sec')
+  int? get burnTimeSec;
+  @override
+  @JsonKey(ignore: true)
+  _$$_FirstStageModelCopyWith<_$_FirstStageModel> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+SecondStageModel _$SecondStageModelFromJson(Map<String, dynamic> json) {
+  return _SecondStageModel.fromJson(json);
+}
+
+/// @nodoc
+mixin _$SecondStageModel {
+  @JsonKey(name: 'thrust')
+  ThrustModel? get thrust => throw _privateConstructorUsedError;
+  @JsonKey(name: 'payloads')
+  RocketPayloadModel? get payloads => throw _privateConstructorUsedError;
+  @JsonKey(name: 'reusable')
+  bool get reusable => throw _privateConstructorUsedError;
+  @JsonKey(name: 'engines')
+  num? get engines => throw _privateConstructorUsedError;
+  @JsonKey(name: 'fuel_amount_tons')
+  num? get fuelAmountTons => throw _privateConstructorUsedError;
+  @JsonKey(name: 'burn_time_sec')
+  int? get burnTimeSec => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $SecondStageModelCopyWith<SecondStageModel> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $SecondStageModelCopyWith<$Res> {
+  factory $SecondStageModelCopyWith(
+          SecondStageModel value, $Res Function(SecondStageModel) then) =
+      _$SecondStageModelCopyWithImpl<$Res>;
+  $Res call(
+      {@JsonKey(name: 'thrust') ThrustModel? thrust,
+      @JsonKey(name: 'payloads') RocketPayloadModel? payloads,
+      @JsonKey(name: 'reusable') bool reusable,
+      @JsonKey(name: 'engines') num? engines,
+      @JsonKey(name: 'fuel_amount_tons') num? fuelAmountTons,
+      @JsonKey(name: 'burn_time_sec') int? burnTimeSec});
+
+  $ThrustModelCopyWith<$Res>? get thrust;
+  $RocketPayloadModelCopyWith<$Res>? get payloads;
+}
+
+/// @nodoc
+class _$SecondStageModelCopyWithImpl<$Res>
+    implements $SecondStageModelCopyWith<$Res> {
+  _$SecondStageModelCopyWithImpl(this._value, this._then);
+
+  final SecondStageModel _value;
+  // ignore: unused_field
+  final $Res Function(SecondStageModel) _then;
+
+  @override
+  $Res call({
+    Object? thrust = freezed,
+    Object? payloads = freezed,
+    Object? reusable = freezed,
+    Object? engines = freezed,
+    Object? fuelAmountTons = freezed,
+    Object? burnTimeSec = freezed,
+  }) {
+    return _then(_value.copyWith(
+      thrust: thrust == freezed
+          ? _value.thrust
+          : thrust // ignore: cast_nullable_to_non_nullable
+              as ThrustModel?,
+      payloads: payloads == freezed
+          ? _value.payloads
+          : payloads // ignore: cast_nullable_to_non_nullable
+              as RocketPayloadModel?,
+      reusable: reusable == freezed
+          ? _value.reusable
+          : reusable // ignore: cast_nullable_to_non_nullable
+              as bool,
+      engines: engines == freezed
+          ? _value.engines
+          : engines // ignore: cast_nullable_to_non_nullable
+              as num?,
+      fuelAmountTons: fuelAmountTons == freezed
+          ? _value.fuelAmountTons
+          : fuelAmountTons // ignore: cast_nullable_to_non_nullable
+              as num?,
+      burnTimeSec: burnTimeSec == freezed
+          ? _value.burnTimeSec
+          : burnTimeSec // ignore: cast_nullable_to_non_nullable
+              as int?,
+    ));
+  }
+
+  @override
+  $ThrustModelCopyWith<$Res>? get thrust {
+    if (_value.thrust == null) {
+      return null;
+    }
+
+    return $ThrustModelCopyWith<$Res>(_value.thrust!, (value) {
+      return _then(_value.copyWith(thrust: value));
+    });
+  }
+
+  @override
+  $RocketPayloadModelCopyWith<$Res>? get payloads {
+    if (_value.payloads == null) {
+      return null;
+    }
+
+    return $RocketPayloadModelCopyWith<$Res>(_value.payloads!, (value) {
+      return _then(_value.copyWith(payloads: value));
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$$_SecondStageModelCopyWith<$Res>
+    implements $SecondStageModelCopyWith<$Res> {
+  factory _$$_SecondStageModelCopyWith(
+          _$_SecondStageModel value, $Res Function(_$_SecondStageModel) then) =
+      __$$_SecondStageModelCopyWithImpl<$Res>;
+  @override
+  $Res call(
+      {@JsonKey(name: 'thrust') ThrustModel? thrust,
+      @JsonKey(name: 'payloads') RocketPayloadModel? payloads,
+      @JsonKey(name: 'reusable') bool reusable,
+      @JsonKey(name: 'engines') num? engines,
+      @JsonKey(name: 'fuel_amount_tons') num? fuelAmountTons,
+      @JsonKey(name: 'burn_time_sec') int? burnTimeSec});
+
+  @override
+  $ThrustModelCopyWith<$Res>? get thrust;
+  @override
+  $RocketPayloadModelCopyWith<$Res>? get payloads;
+}
+
+/// @nodoc
+class __$$_SecondStageModelCopyWithImpl<$Res>
+    extends _$SecondStageModelCopyWithImpl<$Res>
+    implements _$$_SecondStageModelCopyWith<$Res> {
+  __$$_SecondStageModelCopyWithImpl(
+      _$_SecondStageModel _value, $Res Function(_$_SecondStageModel) _then)
+      : super(_value, (v) => _then(v as _$_SecondStageModel));
+
+  @override
+  _$_SecondStageModel get _value => super._value as _$_SecondStageModel;
+
+  @override
+  $Res call({
+    Object? thrust = freezed,
+    Object? payloads = freezed,
+    Object? reusable = freezed,
+    Object? engines = freezed,
+    Object? fuelAmountTons = freezed,
+    Object? burnTimeSec = freezed,
+  }) {
+    return _then(_$_SecondStageModel(
+      thrust: thrust == freezed
+          ? _value.thrust
+          : thrust // ignore: cast_nullable_to_non_nullable
+              as ThrustModel?,
+      payloads: payloads == freezed
+          ? _value.payloads
+          : payloads // ignore: cast_nullable_to_non_nullable
+              as RocketPayloadModel?,
+      reusable: reusable == freezed
+          ? _value.reusable
+          : reusable // ignore: cast_nullable_to_non_nullable
+              as bool,
+      engines: engines == freezed
+          ? _value.engines
+          : engines // ignore: cast_nullable_to_non_nullable
+              as num?,
+      fuelAmountTons: fuelAmountTons == freezed
+          ? _value.fuelAmountTons
+          : fuelAmountTons // ignore: cast_nullable_to_non_nullable
+              as num?,
+      burnTimeSec: burnTimeSec == freezed
+          ? _value.burnTimeSec
+          : burnTimeSec // ignore: cast_nullable_to_non_nullable
+              as int?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$_SecondStageModel extends _SecondStageModel {
+  const _$_SecondStageModel(
+      {@JsonKey(name: 'thrust') this.thrust,
+      @JsonKey(name: 'payloads') this.payloads,
+      @JsonKey(name: 'reusable') this.reusable = false,
+      @JsonKey(name: 'engines') this.engines,
+      @JsonKey(name: 'fuel_amount_tons') this.fuelAmountTons,
+      @JsonKey(name: 'burn_time_sec') this.burnTimeSec})
+      : super._();
+
+  factory _$_SecondStageModel.fromJson(Map<String, dynamic> json) =>
+      _$$_SecondStageModelFromJson(json);
+
+  @override
+  @JsonKey(name: 'thrust')
+  final ThrustModel? thrust;
+  @override
+  @JsonKey(name: 'payloads')
+  final RocketPayloadModel? payloads;
+  @override
+  @JsonKey(name: 'reusable')
+  final bool reusable;
+  @override
+  @JsonKey(name: 'engines')
+  final num? engines;
+  @override
+  @JsonKey(name: 'fuel_amount_tons')
+  final num? fuelAmountTons;
+  @override
+  @JsonKey(name: 'burn_time_sec')
+  final int? burnTimeSec;
+
+  @override
+  String toString() {
+    return 'SecondStageModel(thrust: $thrust, payloads: $payloads, reusable: $reusable, engines: $engines, fuelAmountTons: $fuelAmountTons, burnTimeSec: $burnTimeSec)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_SecondStageModel &&
+            const DeepCollectionEquality().equals(other.thrust, thrust) &&
+            const DeepCollectionEquality().equals(other.payloads, payloads) &&
+            const DeepCollectionEquality().equals(other.reusable, reusable) &&
+            const DeepCollectionEquality().equals(other.engines, engines) &&
+            const DeepCollectionEquality()
+                .equals(other.fuelAmountTons, fuelAmountTons) &&
+            const DeepCollectionEquality()
+                .equals(other.burnTimeSec, burnTimeSec));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(thrust),
+      const DeepCollectionEquality().hash(payloads),
+      const DeepCollectionEquality().hash(reusable),
+      const DeepCollectionEquality().hash(engines),
+      const DeepCollectionEquality().hash(fuelAmountTons),
+      const DeepCollectionEquality().hash(burnTimeSec));
+
+  @JsonKey(ignore: true)
+  @override
+  _$$_SecondStageModelCopyWith<_$_SecondStageModel> get copyWith =>
+      __$$_SecondStageModelCopyWithImpl<_$_SecondStageModel>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_SecondStageModelToJson(
+      this,
+    );
+  }
+}
+
+abstract class _SecondStageModel extends SecondStageModel {
+  const factory _SecondStageModel(
+          {@JsonKey(name: 'thrust') final ThrustModel? thrust,
+          @JsonKey(name: 'payloads') final RocketPayloadModel? payloads,
+          @JsonKey(name: 'reusable') final bool reusable,
+          @JsonKey(name: 'engines') final num? engines,
+          @JsonKey(name: 'fuel_amount_tons') final num? fuelAmountTons,
+          @JsonKey(name: 'burn_time_sec') final int? burnTimeSec}) =
+      _$_SecondStageModel;
+  const _SecondStageModel._() : super._();
+
+  factory _SecondStageModel.fromJson(Map<String, dynamic> json) =
+      _$_SecondStageModel.fromJson;
+
+  @override
+  @JsonKey(name: 'thrust')
+  ThrustModel? get thrust;
+  @override
+  @JsonKey(name: 'payloads')
+  RocketPayloadModel? get payloads;
+  @override
+  @JsonKey(name: 'reusable')
+  bool get reusable;
+  @override
+  @JsonKey(name: 'engines')
+  num? get engines;
+  @override
+  @JsonKey(name: 'fuel_amount_tons')
+  num? get fuelAmountTons;
+  @override
+  @JsonKey(name: 'burn_time_sec')
+  int? get burnTimeSec;
+  @override
+  @JsonKey(ignore: true)
+  _$$_SecondStageModelCopyWith<_$_SecondStageModel> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+ShipModel _$ShipModelFromJson(Map<String, dynamic> json) {
+  return _ShipModel.fromJson(json);
+}
+
+/// @nodoc
+mixin _$ShipModel {
+  @JsonKey(name: 'id')
   String get id => throw _privateConstructorUsedError;
+  @JsonKey(name: 'launches')
   List<String> get launches => throw _privateConstructorUsedError;
   @JsonKey(name: 'active')
   bool get isActive => throw _privateConstructorUsedError;
   @JsonKey(name: 'name')
-  String get name => throw _privateConstructorUsedError;
+  String? get name => throw _privateConstructorUsedError;
   @JsonKey(name: 'image')
-  String get image => throw _privateConstructorUsedError;
+  String? get image => throw _privateConstructorUsedError;
   @JsonKey(name: 'link')
-  String get link => throw _privateConstructorUsedError;
+  String? get link => throw _privateConstructorUsedError;
   @JsonKey(name: 'longitude')
   dynamic get longitude => throw _privateConstructorUsedError;
   @JsonKey(name: 'latitude')
@@ -1414,73 +2614,75 @@ mixin _$ShipVehicleModel {
   @JsonKey(name: 'speed_kn')
   num? get speedKn => throw _privateConstructorUsedError;
   @JsonKey(name: 'status')
-  String get status => throw _privateConstructorUsedError;
+  String? get status => throw _privateConstructorUsedError;
   @JsonKey(name: 'home_port')
-  String get homePort => throw _privateConstructorUsedError;
+  String? get homePort => throw _privateConstructorUsedError;
   @JsonKey(name: 'year_built')
-  int get yearBuilt => throw _privateConstructorUsedError;
+  int? get yearBuilt => throw _privateConstructorUsedError;
   @JsonKey(name: 'mass_lbs')
-  int get massLbs => throw _privateConstructorUsedError;
+  int? get massLbs => throw _privateConstructorUsedError;
   @JsonKey(name: 'mass_kg')
-  int get massKg => throw _privateConstructorUsedError;
+  int? get massKg => throw _privateConstructorUsedError;
   @JsonKey(name: 'class')
-  int get vehicleClass => throw _privateConstructorUsedError;
+  int? get vehicleClass => throw _privateConstructorUsedError;
   @JsonKey(name: 'abs')
-  int get abs => throw _privateConstructorUsedError;
+  int? get abs => throw _privateConstructorUsedError;
   @JsonKey(name: 'imo')
-  int get imo => throw _privateConstructorUsedError;
+  int? get imo => throw _privateConstructorUsedError;
+  @JsonKey(name: 'mmsi')
+  int? get mmsi => throw _privateConstructorUsedError;
+  @JsonKey(name: 'roles')
   List<String> get roles => throw _privateConstructorUsedError;
   @JsonKey(name: 'type')
-  String get type => throw _privateConstructorUsedError;
+  String? get type => throw _privateConstructorUsedError;
   @JsonKey(name: 'model')
   String? get model => throw _privateConstructorUsedError;
   @JsonKey(name: 'legacy_id')
-  String get legacyId => throw _privateConstructorUsedError;
+  String? get legacyId => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $ShipVehicleModelCopyWith<ShipVehicleModel> get copyWith =>
+  $ShipModelCopyWith<ShipModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $ShipVehicleModelCopyWith<$Res> {
-  factory $ShipVehicleModelCopyWith(
-          ShipVehicleModel value, $Res Function(ShipVehicleModel) then) =
-      _$ShipVehicleModelCopyWithImpl<$Res>;
+abstract class $ShipModelCopyWith<$Res> {
+  factory $ShipModelCopyWith(ShipModel value, $Res Function(ShipModel) then) =
+      _$ShipModelCopyWithImpl<$Res>;
   $Res call(
-      {String id,
-      List<String> launches,
+      {@JsonKey(name: 'id') String id,
+      @JsonKey(name: 'launches') List<String> launches,
       @JsonKey(name: 'active') bool isActive,
-      @JsonKey(name: 'name') String name,
-      @JsonKey(name: 'image') String image,
-      @JsonKey(name: 'link') String link,
+      @JsonKey(name: 'name') String? name,
+      @JsonKey(name: 'image') String? image,
+      @JsonKey(name: 'link') String? link,
       @JsonKey(name: 'longitude') dynamic longitude,
       @JsonKey(name: 'latitude') dynamic latitude,
       @JsonKey(name: 'course_deg') num? courseDeg,
       @JsonKey(name: 'speed_kn') num? speedKn,
-      @JsonKey(name: 'status') String status,
-      @JsonKey(name: 'home_port') String homePort,
-      @JsonKey(name: 'year_built') int yearBuilt,
-      @JsonKey(name: 'mass_lbs') int massLbs,
-      @JsonKey(name: 'mass_kg') int massKg,
-      @JsonKey(name: 'class') int vehicleClass,
-      @JsonKey(name: 'abs') int abs,
-      @JsonKey(name: 'imo') int imo,
-      List<String> roles,
-      @JsonKey(name: 'type') String type,
+      @JsonKey(name: 'status') String? status,
+      @JsonKey(name: 'home_port') String? homePort,
+      @JsonKey(name: 'year_built') int? yearBuilt,
+      @JsonKey(name: 'mass_lbs') int? massLbs,
+      @JsonKey(name: 'mass_kg') int? massKg,
+      @JsonKey(name: 'class') int? vehicleClass,
+      @JsonKey(name: 'abs') int? abs,
+      @JsonKey(name: 'imo') int? imo,
+      @JsonKey(name: 'mmsi') int? mmsi,
+      @JsonKey(name: 'roles') List<String> roles,
+      @JsonKey(name: 'type') String? type,
       @JsonKey(name: 'model') String? model,
-      @JsonKey(name: 'legacy_id') String legacyId});
+      @JsonKey(name: 'legacy_id') String? legacyId});
 }
 
 /// @nodoc
-class _$ShipVehicleModelCopyWithImpl<$Res>
-    implements $ShipVehicleModelCopyWith<$Res> {
-  _$ShipVehicleModelCopyWithImpl(this._value, this._then);
+class _$ShipModelCopyWithImpl<$Res> implements $ShipModelCopyWith<$Res> {
+  _$ShipModelCopyWithImpl(this._value, this._then);
 
-  final ShipVehicleModel _value;
+  final ShipModel _value;
   // ignore: unused_field
-  final $Res Function(ShipVehicleModel) _then;
+  final $Res Function(ShipModel) _then;
 
   @override
   $Res call({
@@ -1502,6 +2704,7 @@ class _$ShipVehicleModelCopyWithImpl<$Res>
     Object? vehicleClass = freezed,
     Object? abs = freezed,
     Object? imo = freezed,
+    Object? mmsi = freezed,
     Object? roles = freezed,
     Object? type = freezed,
     Object? model = freezed,
@@ -1523,15 +2726,15 @@ class _$ShipVehicleModelCopyWithImpl<$Res>
       name: name == freezed
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       image: image == freezed
           ? _value.image
           : image // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       link: link == freezed
           ? _value.link
           : link // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       longitude: longitude == freezed
           ? _value.longitude
           : longitude // ignore: cast_nullable_to_non_nullable
@@ -1551,35 +2754,39 @@ class _$ShipVehicleModelCopyWithImpl<$Res>
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       homePort: homePort == freezed
           ? _value.homePort
           : homePort // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       yearBuilt: yearBuilt == freezed
           ? _value.yearBuilt
           : yearBuilt // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       massLbs: massLbs == freezed
           ? _value.massLbs
           : massLbs // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       massKg: massKg == freezed
           ? _value.massKg
           : massKg // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       vehicleClass: vehicleClass == freezed
           ? _value.vehicleClass
           : vehicleClass // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       abs: abs == freezed
           ? _value.abs
           : abs // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       imo: imo == freezed
           ? _value.imo
           : imo // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
+      mmsi: mmsi == freezed
+          ? _value.mmsi
+          : mmsi // ignore: cast_nullable_to_non_nullable
+              as int?,
       roles: roles == freezed
           ? _value.roles
           : roles // ignore: cast_nullable_to_non_nullable
@@ -1587,7 +2794,7 @@ class _$ShipVehicleModelCopyWithImpl<$Res>
       type: type == freezed
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       model: model == freezed
           ? _value.model
           : model // ignore: cast_nullable_to_non_nullable
@@ -1595,53 +2802,52 @@ class _$ShipVehicleModelCopyWithImpl<$Res>
       legacyId: legacyId == freezed
           ? _value.legacyId
           : legacyId // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
     ));
   }
 }
 
 /// @nodoc
-abstract class _$$_ShipVehicleModelCopyWith<$Res>
-    implements $ShipVehicleModelCopyWith<$Res> {
-  factory _$$_ShipVehicleModelCopyWith(
-          _$_ShipVehicleModel value, $Res Function(_$_ShipVehicleModel) then) =
-      __$$_ShipVehicleModelCopyWithImpl<$Res>;
+abstract class _$$_ShipModelCopyWith<$Res> implements $ShipModelCopyWith<$Res> {
+  factory _$$_ShipModelCopyWith(
+          _$_ShipModel value, $Res Function(_$_ShipModel) then) =
+      __$$_ShipModelCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String id,
-      List<String> launches,
+      {@JsonKey(name: 'id') String id,
+      @JsonKey(name: 'launches') List<String> launches,
       @JsonKey(name: 'active') bool isActive,
-      @JsonKey(name: 'name') String name,
-      @JsonKey(name: 'image') String image,
-      @JsonKey(name: 'link') String link,
+      @JsonKey(name: 'name') String? name,
+      @JsonKey(name: 'image') String? image,
+      @JsonKey(name: 'link') String? link,
       @JsonKey(name: 'longitude') dynamic longitude,
       @JsonKey(name: 'latitude') dynamic latitude,
       @JsonKey(name: 'course_deg') num? courseDeg,
       @JsonKey(name: 'speed_kn') num? speedKn,
-      @JsonKey(name: 'status') String status,
-      @JsonKey(name: 'home_port') String homePort,
-      @JsonKey(name: 'year_built') int yearBuilt,
-      @JsonKey(name: 'mass_lbs') int massLbs,
-      @JsonKey(name: 'mass_kg') int massKg,
-      @JsonKey(name: 'class') int vehicleClass,
-      @JsonKey(name: 'abs') int abs,
-      @JsonKey(name: 'imo') int imo,
-      List<String> roles,
-      @JsonKey(name: 'type') String type,
+      @JsonKey(name: 'status') String? status,
+      @JsonKey(name: 'home_port') String? homePort,
+      @JsonKey(name: 'year_built') int? yearBuilt,
+      @JsonKey(name: 'mass_lbs') int? massLbs,
+      @JsonKey(name: 'mass_kg') int? massKg,
+      @JsonKey(name: 'class') int? vehicleClass,
+      @JsonKey(name: 'abs') int? abs,
+      @JsonKey(name: 'imo') int? imo,
+      @JsonKey(name: 'mmsi') int? mmsi,
+      @JsonKey(name: 'roles') List<String> roles,
+      @JsonKey(name: 'type') String? type,
       @JsonKey(name: 'model') String? model,
-      @JsonKey(name: 'legacy_id') String legacyId});
+      @JsonKey(name: 'legacy_id') String? legacyId});
 }
 
 /// @nodoc
-class __$$_ShipVehicleModelCopyWithImpl<$Res>
-    extends _$ShipVehicleModelCopyWithImpl<$Res>
-    implements _$$_ShipVehicleModelCopyWith<$Res> {
-  __$$_ShipVehicleModelCopyWithImpl(
-      _$_ShipVehicleModel _value, $Res Function(_$_ShipVehicleModel) _then)
-      : super(_value, (v) => _then(v as _$_ShipVehicleModel));
+class __$$_ShipModelCopyWithImpl<$Res> extends _$ShipModelCopyWithImpl<$Res>
+    implements _$$_ShipModelCopyWith<$Res> {
+  __$$_ShipModelCopyWithImpl(
+      _$_ShipModel _value, $Res Function(_$_ShipModel) _then)
+      : super(_value, (v) => _then(v as _$_ShipModel));
 
   @override
-  _$_ShipVehicleModel get _value => super._value as _$_ShipVehicleModel;
+  _$_ShipModel get _value => super._value as _$_ShipModel;
 
   @override
   $Res call({
@@ -1663,12 +2869,13 @@ class __$$_ShipVehicleModelCopyWithImpl<$Res>
     Object? vehicleClass = freezed,
     Object? abs = freezed,
     Object? imo = freezed,
+    Object? mmsi = freezed,
     Object? roles = freezed,
     Object? type = freezed,
     Object? model = freezed,
     Object? legacyId = freezed,
   }) {
-    return _then(_$_ShipVehicleModel(
+    return _then(_$_ShipModel(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -1684,15 +2891,15 @@ class __$$_ShipVehicleModelCopyWithImpl<$Res>
       name: name == freezed
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       image: image == freezed
           ? _value.image
           : image // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       link: link == freezed
           ? _value.link
           : link // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       longitude: longitude == freezed
           ? _value.longitude
           : longitude // ignore: cast_nullable_to_non_nullable
@@ -1712,35 +2919,39 @@ class __$$_ShipVehicleModelCopyWithImpl<$Res>
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       homePort: homePort == freezed
           ? _value.homePort
           : homePort // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       yearBuilt: yearBuilt == freezed
           ? _value.yearBuilt
           : yearBuilt // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       massLbs: massLbs == freezed
           ? _value.massLbs
           : massLbs // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       massKg: massKg == freezed
           ? _value.massKg
           : massKg // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       vehicleClass: vehicleClass == freezed
           ? _value.vehicleClass
           : vehicleClass // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       abs: abs == freezed
           ? _value.abs
           : abs // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       imo: imo == freezed
           ? _value.imo
           : imo // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
+      mmsi: mmsi == freezed
+          ? _value.mmsi
+          : mmsi // ignore: cast_nullable_to_non_nullable
+              as int?,
       roles: roles == freezed
           ? _value._roles
           : roles // ignore: cast_nullable_to_non_nullable
@@ -1748,7 +2959,7 @@ class __$$_ShipVehicleModelCopyWithImpl<$Res>
       type: type == freezed
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       model: model == freezed
           ? _value.model
           : model // ignore: cast_nullable_to_non_nullable
@@ -1756,50 +2967,51 @@ class __$$_ShipVehicleModelCopyWithImpl<$Res>
       legacyId: legacyId == freezed
           ? _value.legacyId
           : legacyId // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
     ));
   }
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$_ShipVehicleModel extends _ShipVehicleModel {
-  const _$_ShipVehicleModel(
-      {required this.id,
-      final List<String> launches = const [],
+class _$_ShipModel extends _ShipModel {
+  const _$_ShipModel(
+      {@JsonKey(name: 'id') required this.id,
+      @JsonKey(name: 'launches') final List<String> launches = const [],
       @JsonKey(name: 'active') this.isActive = false,
-      @JsonKey(name: 'name') this.name = '',
-      @JsonKey(name: 'image') this.image = 'https://i.imgur.com/woCxpkj.jpg',
-      @JsonKey(name: 'link') this.link =
-          'https://www.marinetraffic.com/en/ais/details/ships/shipid:434663/mmsi:367020820/imo:7434016/vessel:AMERICAN_CHAMPION',
+      @JsonKey(name: 'name') this.name,
+      @JsonKey(name: 'image') this.image,
+      @JsonKey(name: 'link') this.link,
       @JsonKey(name: 'longitude') this.longitude,
       @JsonKey(name: 'latitude') this.latitude,
       @JsonKey(name: 'course_deg') this.courseDeg,
       @JsonKey(name: 'speed_kn') this.speedKn,
-      @JsonKey(name: 'status') this.status = '',
-      @JsonKey(name: 'home_port') this.homePort = '',
-      @JsonKey(name: 'year_built') this.yearBuilt = 0,
-      @JsonKey(name: 'mass_lbs') this.massLbs = 0,
-      @JsonKey(name: 'mass_kg') this.massKg = 0,
-      @JsonKey(name: 'class') this.vehicleClass = 0,
-      @JsonKey(name: 'abs') this.abs = 0,
-      @JsonKey(name: 'imo') this.imo = 0,
-      final List<String> roles = const [],
-      @JsonKey(name: 'type') this.type = 'Cargo',
+      @JsonKey(name: 'status') this.status,
+      @JsonKey(name: 'home_port') this.homePort,
+      @JsonKey(name: 'year_built') this.yearBuilt,
+      @JsonKey(name: 'mass_lbs') this.massLbs,
+      @JsonKey(name: 'mass_kg') this.massKg,
+      @JsonKey(name: 'class') this.vehicleClass,
+      @JsonKey(name: 'abs') this.abs,
+      @JsonKey(name: 'imo') this.imo,
+      @JsonKey(name: 'mmsi') this.mmsi,
+      @JsonKey(name: 'roles') final List<String> roles = const [],
+      @JsonKey(name: 'type') this.type,
       @JsonKey(name: 'model') this.model,
-      @JsonKey(name: 'legacy_id') this.legacyId = 'AMERICANSPIRIT'})
+      @JsonKey(name: 'legacy_id') this.legacyId})
       : _launches = launches,
         _roles = roles,
         super._();
 
-  factory _$_ShipVehicleModel.fromJson(Map<String, dynamic> json) =>
-      _$$_ShipVehicleModelFromJson(json);
+  factory _$_ShipModel.fromJson(Map<String, dynamic> json) =>
+      _$$_ShipModelFromJson(json);
 
   @override
+  @JsonKey(name: 'id')
   final String id;
   final List<String> _launches;
   @override
-  @JsonKey()
+  @JsonKey(name: 'launches')
   List<String> get launches {
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_launches);
@@ -1810,13 +3022,13 @@ class _$_ShipVehicleModel extends _ShipVehicleModel {
   final bool isActive;
   @override
   @JsonKey(name: 'name')
-  final String name;
+  final String? name;
   @override
   @JsonKey(name: 'image')
-  final String image;
+  final String? image;
   @override
   @JsonKey(name: 'link')
-  final String link;
+  final String? link;
   @override
   @JsonKey(name: 'longitude')
   final dynamic longitude;
@@ -1831,31 +3043,34 @@ class _$_ShipVehicleModel extends _ShipVehicleModel {
   final num? speedKn;
   @override
   @JsonKey(name: 'status')
-  final String status;
+  final String? status;
   @override
   @JsonKey(name: 'home_port')
-  final String homePort;
+  final String? homePort;
   @override
   @JsonKey(name: 'year_built')
-  final int yearBuilt;
+  final int? yearBuilt;
   @override
   @JsonKey(name: 'mass_lbs')
-  final int massLbs;
+  final int? massLbs;
   @override
   @JsonKey(name: 'mass_kg')
-  final int massKg;
+  final int? massKg;
   @override
   @JsonKey(name: 'class')
-  final int vehicleClass;
+  final int? vehicleClass;
   @override
   @JsonKey(name: 'abs')
-  final int abs;
+  final int? abs;
   @override
   @JsonKey(name: 'imo')
-  final int imo;
+  final int? imo;
+  @override
+  @JsonKey(name: 'mmsi')
+  final int? mmsi;
   final List<String> _roles;
   @override
-  @JsonKey()
+  @JsonKey(name: 'roles')
   List<String> get roles {
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_roles);
@@ -1863,24 +3078,24 @@ class _$_ShipVehicleModel extends _ShipVehicleModel {
 
   @override
   @JsonKey(name: 'type')
-  final String type;
+  final String? type;
   @override
   @JsonKey(name: 'model')
   final String? model;
   @override
   @JsonKey(name: 'legacy_id')
-  final String legacyId;
+  final String? legacyId;
 
   @override
   String toString() {
-    return 'ShipVehicleModel(id: $id, launches: $launches, isActive: $isActive, name: $name, image: $image, link: $link, longitude: $longitude, latitude: $latitude, courseDeg: $courseDeg, speedKn: $speedKn, status: $status, homePort: $homePort, yearBuilt: $yearBuilt, massLbs: $massLbs, massKg: $massKg, vehicleClass: $vehicleClass, abs: $abs, imo: $imo, roles: $roles, type: $type, model: $model, legacyId: $legacyId)';
+    return 'ShipModel(id: $id, launches: $launches, isActive: $isActive, name: $name, image: $image, link: $link, longitude: $longitude, latitude: $latitude, courseDeg: $courseDeg, speedKn: $speedKn, status: $status, homePort: $homePort, yearBuilt: $yearBuilt, massLbs: $massLbs, massKg: $massKg, vehicleClass: $vehicleClass, abs: $abs, imo: $imo, mmsi: $mmsi, roles: $roles, type: $type, model: $model, legacyId: $legacyId)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_ShipVehicleModel &&
+            other is _$_ShipModel &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality().equals(other._launches, _launches) &&
             const DeepCollectionEquality().equals(other.isActive, isActive) &&
@@ -1900,6 +3115,7 @@ class _$_ShipVehicleModel extends _ShipVehicleModel {
                 .equals(other.vehicleClass, vehicleClass) &&
             const DeepCollectionEquality().equals(other.abs, abs) &&
             const DeepCollectionEquality().equals(other.imo, imo) &&
+            const DeepCollectionEquality().equals(other.mmsi, mmsi) &&
             const DeepCollectionEquality().equals(other._roles, _roles) &&
             const DeepCollectionEquality().equals(other.type, type) &&
             const DeepCollectionEquality().equals(other.model, model) &&
@@ -1928,6 +3144,7 @@ class _$_ShipVehicleModel extends _ShipVehicleModel {
         const DeepCollectionEquality().hash(vehicleClass),
         const DeepCollectionEquality().hash(abs),
         const DeepCollectionEquality().hash(imo),
+        const DeepCollectionEquality().hash(mmsi),
         const DeepCollectionEquality().hash(_roles),
         const DeepCollectionEquality().hash(type),
         const DeepCollectionEquality().hash(model),
@@ -1936,62 +3153,65 @@ class _$_ShipVehicleModel extends _ShipVehicleModel {
 
   @JsonKey(ignore: true)
   @override
-  _$$_ShipVehicleModelCopyWith<_$_ShipVehicleModel> get copyWith =>
-      __$$_ShipVehicleModelCopyWithImpl<_$_ShipVehicleModel>(this, _$identity);
+  _$$_ShipModelCopyWith<_$_ShipModel> get copyWith =>
+      __$$_ShipModelCopyWithImpl<_$_ShipModel>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ShipVehicleModelToJson(
+    return _$$_ShipModelToJson(
       this,
     );
   }
 }
 
-abstract class _ShipVehicleModel extends ShipVehicleModel {
-  const factory _ShipVehicleModel(
-      {required final String id,
-      final List<String> launches,
+abstract class _ShipModel extends ShipModel {
+  const factory _ShipModel(
+      {@JsonKey(name: 'id') required final String id,
+      @JsonKey(name: 'launches') final List<String> launches,
       @JsonKey(name: 'active') final bool isActive,
-      @JsonKey(name: 'name') final String name,
-      @JsonKey(name: 'image') final String image,
-      @JsonKey(name: 'link') final String link,
+      @JsonKey(name: 'name') final String? name,
+      @JsonKey(name: 'image') final String? image,
+      @JsonKey(name: 'link') final String? link,
       @JsonKey(name: 'longitude') final dynamic longitude,
       @JsonKey(name: 'latitude') final dynamic latitude,
       @JsonKey(name: 'course_deg') final num? courseDeg,
       @JsonKey(name: 'speed_kn') final num? speedKn,
-      @JsonKey(name: 'status') final String status,
-      @JsonKey(name: 'home_port') final String homePort,
-      @JsonKey(name: 'year_built') final int yearBuilt,
-      @JsonKey(name: 'mass_lbs') final int massLbs,
-      @JsonKey(name: 'mass_kg') final int massKg,
-      @JsonKey(name: 'class') final int vehicleClass,
-      @JsonKey(name: 'abs') final int abs,
-      @JsonKey(name: 'imo') final int imo,
-      final List<String> roles,
-      @JsonKey(name: 'type') final String type,
+      @JsonKey(name: 'status') final String? status,
+      @JsonKey(name: 'home_port') final String? homePort,
+      @JsonKey(name: 'year_built') final int? yearBuilt,
+      @JsonKey(name: 'mass_lbs') final int? massLbs,
+      @JsonKey(name: 'mass_kg') final int? massKg,
+      @JsonKey(name: 'class') final int? vehicleClass,
+      @JsonKey(name: 'abs') final int? abs,
+      @JsonKey(name: 'imo') final int? imo,
+      @JsonKey(name: 'mmsi') final int? mmsi,
+      @JsonKey(name: 'roles') final List<String> roles,
+      @JsonKey(name: 'type') final String? type,
       @JsonKey(name: 'model') final String? model,
-      @JsonKey(name: 'legacy_id') final String legacyId}) = _$_ShipVehicleModel;
-  const _ShipVehicleModel._() : super._();
+      @JsonKey(name: 'legacy_id') final String? legacyId}) = _$_ShipModel;
+  const _ShipModel._() : super._();
 
-  factory _ShipVehicleModel.fromJson(Map<String, dynamic> json) =
-      _$_ShipVehicleModel.fromJson;
+  factory _ShipModel.fromJson(Map<String, dynamic> json) =
+      _$_ShipModel.fromJson;
 
   @override
+  @JsonKey(name: 'id')
   String get id;
   @override
+  @JsonKey(name: 'launches')
   List<String> get launches;
   @override
   @JsonKey(name: 'active')
   bool get isActive;
   @override
   @JsonKey(name: 'name')
-  String get name;
+  String? get name;
   @override
   @JsonKey(name: 'image')
-  String get image;
+  String? get image;
   @override
   @JsonKey(name: 'link')
-  String get link;
+  String? get link;
   @override
   @JsonKey(name: 'longitude')
   dynamic get longitude;
@@ -2006,61 +3226,67 @@ abstract class _ShipVehicleModel extends ShipVehicleModel {
   num? get speedKn;
   @override
   @JsonKey(name: 'status')
-  String get status;
+  String? get status;
   @override
   @JsonKey(name: 'home_port')
-  String get homePort;
+  String? get homePort;
   @override
   @JsonKey(name: 'year_built')
-  int get yearBuilt;
+  int? get yearBuilt;
   @override
   @JsonKey(name: 'mass_lbs')
-  int get massLbs;
+  int? get massLbs;
   @override
   @JsonKey(name: 'mass_kg')
-  int get massKg;
+  int? get massKg;
   @override
   @JsonKey(name: 'class')
-  int get vehicleClass;
+  int? get vehicleClass;
   @override
   @JsonKey(name: 'abs')
-  int get abs;
+  int? get abs;
   @override
   @JsonKey(name: 'imo')
-  int get imo;
+  int? get imo;
   @override
+  @JsonKey(name: 'mmsi')
+  int? get mmsi;
+  @override
+  @JsonKey(name: 'roles')
   List<String> get roles;
   @override
   @JsonKey(name: 'type')
-  String get type;
+  String? get type;
   @override
   @JsonKey(name: 'model')
   String? get model;
   @override
   @JsonKey(name: 'legacy_id')
-  String get legacyId;
+  String? get legacyId;
   @override
   @JsonKey(ignore: true)
-  _$$_ShipVehicleModelCopyWith<_$_ShipVehicleModel> get copyWith =>
+  _$$_ShipModelCopyWith<_$_ShipModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
-ShipFullVehicleModel _$ShipFullVehicleModelFromJson(Map<String, dynamic> json) {
-  return _ShipFullVehicleModel.fromJson(json);
+ShipFullModel _$ShipFullModelFromJson(Map<String, dynamic> json) {
+  return _ShipFullModel.fromJson(json);
 }
 
 /// @nodoc
-mixin _$ShipFullVehicleModel {
+mixin _$ShipFullModel {
+  @JsonKey(name: 'id')
   String get id => throw _privateConstructorUsedError;
+  @JsonKey(name: 'launches')
   List<LaunchModel> get launches => throw _privateConstructorUsedError;
   @JsonKey(name: 'active')
   bool get isActive => throw _privateConstructorUsedError;
   @JsonKey(name: 'name')
-  String get name => throw _privateConstructorUsedError;
+  String? get name => throw _privateConstructorUsedError;
   @JsonKey(name: 'image')
-  String get image => throw _privateConstructorUsedError;
+  String? get image => throw _privateConstructorUsedError;
   @JsonKey(name: 'link')
-  String get link => throw _privateConstructorUsedError;
+  String? get link => throw _privateConstructorUsedError;
   @JsonKey(name: 'longitude')
   dynamic get longitude => throw _privateConstructorUsedError;
   @JsonKey(name: 'latitude')
@@ -2070,73 +3296,73 @@ mixin _$ShipFullVehicleModel {
   @JsonKey(name: 'speed_kn')
   num? get speedKn => throw _privateConstructorUsedError;
   @JsonKey(name: 'status')
-  String get status => throw _privateConstructorUsedError;
+  String? get status => throw _privateConstructorUsedError;
   @JsonKey(name: 'home_port')
-  String get homePort => throw _privateConstructorUsedError;
+  String? get homePort => throw _privateConstructorUsedError;
   @JsonKey(name: 'year_built')
-  int get yearBuilt => throw _privateConstructorUsedError;
+  int? get yearBuilt => throw _privateConstructorUsedError;
   @JsonKey(name: 'mass_lbs')
-  int get massLbs => throw _privateConstructorUsedError;
+  int? get massLbs => throw _privateConstructorUsedError;
   @JsonKey(name: 'mass_kg')
-  int get massKg => throw _privateConstructorUsedError;
+  int? get massKg => throw _privateConstructorUsedError;
   @JsonKey(name: 'class')
-  int get vehicleClass => throw _privateConstructorUsedError;
+  int? get vehicleClass => throw _privateConstructorUsedError;
   @JsonKey(name: 'abs')
-  int get abs => throw _privateConstructorUsedError;
+  int? get abs => throw _privateConstructorUsedError;
   @JsonKey(name: 'imo')
-  int get imo => throw _privateConstructorUsedError;
+  int? get imo => throw _privateConstructorUsedError;
   List<String> get roles => throw _privateConstructorUsedError;
   @JsonKey(name: 'type')
-  String get type => throw _privateConstructorUsedError;
+  String? get type => throw _privateConstructorUsedError;
   @JsonKey(name: 'model')
   String? get model => throw _privateConstructorUsedError;
   @JsonKey(name: 'legacy_id')
-  String get legacyId => throw _privateConstructorUsedError;
+  String? get legacyId => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $ShipFullVehicleModelCopyWith<ShipFullVehicleModel> get copyWith =>
+  $ShipFullModelCopyWith<ShipFullModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $ShipFullVehicleModelCopyWith<$Res> {
-  factory $ShipFullVehicleModelCopyWith(ShipFullVehicleModel value,
-          $Res Function(ShipFullVehicleModel) then) =
-      _$ShipFullVehicleModelCopyWithImpl<$Res>;
+abstract class $ShipFullModelCopyWith<$Res> {
+  factory $ShipFullModelCopyWith(
+          ShipFullModel value, $Res Function(ShipFullModel) then) =
+      _$ShipFullModelCopyWithImpl<$Res>;
   $Res call(
-      {String id,
-      List<LaunchModel> launches,
+      {@JsonKey(name: 'id') String id,
+      @JsonKey(name: 'launches') List<LaunchModel> launches,
       @JsonKey(name: 'active') bool isActive,
-      @JsonKey(name: 'name') String name,
-      @JsonKey(name: 'image') String image,
-      @JsonKey(name: 'link') String link,
+      @JsonKey(name: 'name') String? name,
+      @JsonKey(name: 'image') String? image,
+      @JsonKey(name: 'link') String? link,
       @JsonKey(name: 'longitude') dynamic longitude,
       @JsonKey(name: 'latitude') dynamic latitude,
       @JsonKey(name: 'course_deg') num? courseDeg,
       @JsonKey(name: 'speed_kn') num? speedKn,
-      @JsonKey(name: 'status') String status,
-      @JsonKey(name: 'home_port') String homePort,
-      @JsonKey(name: 'year_built') int yearBuilt,
-      @JsonKey(name: 'mass_lbs') int massLbs,
-      @JsonKey(name: 'mass_kg') int massKg,
-      @JsonKey(name: 'class') int vehicleClass,
-      @JsonKey(name: 'abs') int abs,
-      @JsonKey(name: 'imo') int imo,
+      @JsonKey(name: 'status') String? status,
+      @JsonKey(name: 'home_port') String? homePort,
+      @JsonKey(name: 'year_built') int? yearBuilt,
+      @JsonKey(name: 'mass_lbs') int? massLbs,
+      @JsonKey(name: 'mass_kg') int? massKg,
+      @JsonKey(name: 'class') int? vehicleClass,
+      @JsonKey(name: 'abs') int? abs,
+      @JsonKey(name: 'imo') int? imo,
       List<String> roles,
-      @JsonKey(name: 'type') String type,
+      @JsonKey(name: 'type') String? type,
       @JsonKey(name: 'model') String? model,
-      @JsonKey(name: 'legacy_id') String legacyId});
+      @JsonKey(name: 'legacy_id') String? legacyId});
 }
 
 /// @nodoc
-class _$ShipFullVehicleModelCopyWithImpl<$Res>
-    implements $ShipFullVehicleModelCopyWith<$Res> {
-  _$ShipFullVehicleModelCopyWithImpl(this._value, this._then);
+class _$ShipFullModelCopyWithImpl<$Res>
+    implements $ShipFullModelCopyWith<$Res> {
+  _$ShipFullModelCopyWithImpl(this._value, this._then);
 
-  final ShipFullVehicleModel _value;
+  final ShipFullModel _value;
   // ignore: unused_field
-  final $Res Function(ShipFullVehicleModel) _then;
+  final $Res Function(ShipFullModel) _then;
 
   @override
   $Res call({
@@ -2179,15 +3405,15 @@ class _$ShipFullVehicleModelCopyWithImpl<$Res>
       name: name == freezed
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       image: image == freezed
           ? _value.image
           : image // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       link: link == freezed
           ? _value.link
           : link // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       longitude: longitude == freezed
           ? _value.longitude
           : longitude // ignore: cast_nullable_to_non_nullable
@@ -2207,35 +3433,35 @@ class _$ShipFullVehicleModelCopyWithImpl<$Res>
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       homePort: homePort == freezed
           ? _value.homePort
           : homePort // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       yearBuilt: yearBuilt == freezed
           ? _value.yearBuilt
           : yearBuilt // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       massLbs: massLbs == freezed
           ? _value.massLbs
           : massLbs // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       massKg: massKg == freezed
           ? _value.massKg
           : massKg // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       vehicleClass: vehicleClass == freezed
           ? _value.vehicleClass
           : vehicleClass // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       abs: abs == freezed
           ? _value.abs
           : abs // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       imo: imo == freezed
           ? _value.imo
           : imo // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       roles: roles == freezed
           ? _value.roles
           : roles // ignore: cast_nullable_to_non_nullable
@@ -2243,7 +3469,7 @@ class _$ShipFullVehicleModelCopyWithImpl<$Res>
       type: type == freezed
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       model: model == freezed
           ? _value.model
           : model // ignore: cast_nullable_to_non_nullable
@@ -2251,53 +3477,53 @@ class _$ShipFullVehicleModelCopyWithImpl<$Res>
       legacyId: legacyId == freezed
           ? _value.legacyId
           : legacyId // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
     ));
   }
 }
 
 /// @nodoc
-abstract class _$$_ShipFullVehicleModelCopyWith<$Res>
-    implements $ShipFullVehicleModelCopyWith<$Res> {
-  factory _$$_ShipFullVehicleModelCopyWith(_$_ShipFullVehicleModel value,
-          $Res Function(_$_ShipFullVehicleModel) then) =
-      __$$_ShipFullVehicleModelCopyWithImpl<$Res>;
+abstract class _$$_ShipFullModelCopyWith<$Res>
+    implements $ShipFullModelCopyWith<$Res> {
+  factory _$$_ShipFullModelCopyWith(
+          _$_ShipFullModel value, $Res Function(_$_ShipFullModel) then) =
+      __$$_ShipFullModelCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String id,
-      List<LaunchModel> launches,
+      {@JsonKey(name: 'id') String id,
+      @JsonKey(name: 'launches') List<LaunchModel> launches,
       @JsonKey(name: 'active') bool isActive,
-      @JsonKey(name: 'name') String name,
-      @JsonKey(name: 'image') String image,
-      @JsonKey(name: 'link') String link,
+      @JsonKey(name: 'name') String? name,
+      @JsonKey(name: 'image') String? image,
+      @JsonKey(name: 'link') String? link,
       @JsonKey(name: 'longitude') dynamic longitude,
       @JsonKey(name: 'latitude') dynamic latitude,
       @JsonKey(name: 'course_deg') num? courseDeg,
       @JsonKey(name: 'speed_kn') num? speedKn,
-      @JsonKey(name: 'status') String status,
-      @JsonKey(name: 'home_port') String homePort,
-      @JsonKey(name: 'year_built') int yearBuilt,
-      @JsonKey(name: 'mass_lbs') int massLbs,
-      @JsonKey(name: 'mass_kg') int massKg,
-      @JsonKey(name: 'class') int vehicleClass,
-      @JsonKey(name: 'abs') int abs,
-      @JsonKey(name: 'imo') int imo,
+      @JsonKey(name: 'status') String? status,
+      @JsonKey(name: 'home_port') String? homePort,
+      @JsonKey(name: 'year_built') int? yearBuilt,
+      @JsonKey(name: 'mass_lbs') int? massLbs,
+      @JsonKey(name: 'mass_kg') int? massKg,
+      @JsonKey(name: 'class') int? vehicleClass,
+      @JsonKey(name: 'abs') int? abs,
+      @JsonKey(name: 'imo') int? imo,
       List<String> roles,
-      @JsonKey(name: 'type') String type,
+      @JsonKey(name: 'type') String? type,
       @JsonKey(name: 'model') String? model,
-      @JsonKey(name: 'legacy_id') String legacyId});
+      @JsonKey(name: 'legacy_id') String? legacyId});
 }
 
 /// @nodoc
-class __$$_ShipFullVehicleModelCopyWithImpl<$Res>
-    extends _$ShipFullVehicleModelCopyWithImpl<$Res>
-    implements _$$_ShipFullVehicleModelCopyWith<$Res> {
-  __$$_ShipFullVehicleModelCopyWithImpl(_$_ShipFullVehicleModel _value,
-      $Res Function(_$_ShipFullVehicleModel) _then)
-      : super(_value, (v) => _then(v as _$_ShipFullVehicleModel));
+class __$$_ShipFullModelCopyWithImpl<$Res>
+    extends _$ShipFullModelCopyWithImpl<$Res>
+    implements _$$_ShipFullModelCopyWith<$Res> {
+  __$$_ShipFullModelCopyWithImpl(
+      _$_ShipFullModel _value, $Res Function(_$_ShipFullModel) _then)
+      : super(_value, (v) => _then(v as _$_ShipFullModel));
 
   @override
-  _$_ShipFullVehicleModel get _value => super._value as _$_ShipFullVehicleModel;
+  _$_ShipFullModel get _value => super._value as _$_ShipFullModel;
 
   @override
   $Res call({
@@ -2324,7 +3550,7 @@ class __$$_ShipFullVehicleModelCopyWithImpl<$Res>
     Object? model = freezed,
     Object? legacyId = freezed,
   }) {
-    return _then(_$_ShipFullVehicleModel(
+    return _then(_$_ShipFullModel(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -2340,15 +3566,15 @@ class __$$_ShipFullVehicleModelCopyWithImpl<$Res>
       name: name == freezed
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       image: image == freezed
           ? _value.image
           : image // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       link: link == freezed
           ? _value.link
           : link // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       longitude: longitude == freezed
           ? _value.longitude
           : longitude // ignore: cast_nullable_to_non_nullable
@@ -2368,35 +3594,35 @@ class __$$_ShipFullVehicleModelCopyWithImpl<$Res>
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       homePort: homePort == freezed
           ? _value.homePort
           : homePort // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       yearBuilt: yearBuilt == freezed
           ? _value.yearBuilt
           : yearBuilt // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       massLbs: massLbs == freezed
           ? _value.massLbs
           : massLbs // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       massKg: massKg == freezed
           ? _value.massKg
           : massKg // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       vehicleClass: vehicleClass == freezed
           ? _value.vehicleClass
           : vehicleClass // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       abs: abs == freezed
           ? _value.abs
           : abs // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       imo: imo == freezed
           ? _value.imo
           : imo // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       roles: roles == freezed
           ? _value._roles
           : roles // ignore: cast_nullable_to_non_nullable
@@ -2404,7 +3630,7 @@ class __$$_ShipFullVehicleModelCopyWithImpl<$Res>
       type: type == freezed
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       model: model == freezed
           ? _value.model
           : model // ignore: cast_nullable_to_non_nullable
@@ -2412,50 +3638,71 @@ class __$$_ShipFullVehicleModelCopyWithImpl<$Res>
       legacyId: legacyId == freezed
           ? _value.legacyId
           : legacyId // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
     ));
   }
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$_ShipFullVehicleModel extends _ShipFullVehicleModel {
-  const _$_ShipFullVehicleModel(
-      {required this.id,
-      final List<LaunchModel> launches = const <LaunchModel>[],
-      @JsonKey(name: 'active') this.isActive = false,
-      @JsonKey(name: 'name') this.name = '',
-      @JsonKey(name: 'image') this.image = 'https://i.imgur.com/woCxpkj.jpg',
-      @JsonKey(name: 'link') this.link =
-          'https://www.marinetraffic.com/en/ais/details/ships/shipid:434663/mmsi:367020820/imo:7434016/vessel:AMERICAN_CHAMPION',
-      @JsonKey(name: 'longitude') this.longitude,
-      @JsonKey(name: 'latitude') this.latitude,
-      @JsonKey(name: 'course_deg') this.courseDeg,
-      @JsonKey(name: 'speed_kn') this.speedKn,
-      @JsonKey(name: 'status') this.status = '',
-      @JsonKey(name: 'home_port') this.homePort = '',
-      @JsonKey(name: 'year_built') this.yearBuilt = 0,
-      @JsonKey(name: 'mass_lbs') this.massLbs = 0,
-      @JsonKey(name: 'mass_kg') this.massKg = 0,
-      @JsonKey(name: 'class') this.vehicleClass = 0,
-      @JsonKey(name: 'abs') this.abs = 0,
-      @JsonKey(name: 'imo') this.imo = 0,
+class _$_ShipFullModel extends _ShipFullModel {
+  const _$_ShipFullModel(
+      {@JsonKey(name: 'id')
+          required this.id,
+      @JsonKey(name: 'launches')
+          final List<LaunchModel> launches = const <LaunchModel>[],
+      @JsonKey(name: 'active')
+          this.isActive = false,
+      @JsonKey(name: 'name')
+          this.name,
+      @JsonKey(name: 'image')
+          this.image,
+      @JsonKey(name: 'link')
+          this.link,
+      @JsonKey(name: 'longitude')
+          this.longitude,
+      @JsonKey(name: 'latitude')
+          this.latitude,
+      @JsonKey(name: 'course_deg')
+          this.courseDeg,
+      @JsonKey(name: 'speed_kn')
+          this.speedKn,
+      @JsonKey(name: 'status')
+          this.status,
+      @JsonKey(name: 'home_port')
+          this.homePort,
+      @JsonKey(name: 'year_built')
+          this.yearBuilt,
+      @JsonKey(name: 'mass_lbs')
+          this.massLbs,
+      @JsonKey(name: 'mass_kg')
+          this.massKg,
+      @JsonKey(name: 'class')
+          this.vehicleClass,
+      @JsonKey(name: 'abs')
+          this.abs,
+      @JsonKey(name: 'imo')
+          this.imo,
       final List<String> roles = const [],
-      @JsonKey(name: 'type') this.type = 'Cargo',
-      @JsonKey(name: 'model') this.model,
-      @JsonKey(name: 'legacy_id') this.legacyId = 'AMERICANSPIRIT'})
+      @JsonKey(name: 'type')
+          this.type,
+      @JsonKey(name: 'model')
+          this.model,
+      @JsonKey(name: 'legacy_id')
+          this.legacyId})
       : _launches = launches,
         _roles = roles,
         super._();
 
-  factory _$_ShipFullVehicleModel.fromJson(Map<String, dynamic> json) =>
-      _$$_ShipFullVehicleModelFromJson(json);
+  factory _$_ShipFullModel.fromJson(Map<String, dynamic> json) =>
+      _$$_ShipFullModelFromJson(json);
 
   @override
+  @JsonKey(name: 'id')
   final String id;
   final List<LaunchModel> _launches;
   @override
-  @JsonKey()
+  @JsonKey(name: 'launches')
   List<LaunchModel> get launches {
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_launches);
@@ -2466,13 +3713,13 @@ class _$_ShipFullVehicleModel extends _ShipFullVehicleModel {
   final bool isActive;
   @override
   @JsonKey(name: 'name')
-  final String name;
+  final String? name;
   @override
   @JsonKey(name: 'image')
-  final String image;
+  final String? image;
   @override
   @JsonKey(name: 'link')
-  final String link;
+  final String? link;
   @override
   @JsonKey(name: 'longitude')
   final dynamic longitude;
@@ -2487,28 +3734,28 @@ class _$_ShipFullVehicleModel extends _ShipFullVehicleModel {
   final num? speedKn;
   @override
   @JsonKey(name: 'status')
-  final String status;
+  final String? status;
   @override
   @JsonKey(name: 'home_port')
-  final String homePort;
+  final String? homePort;
   @override
   @JsonKey(name: 'year_built')
-  final int yearBuilt;
+  final int? yearBuilt;
   @override
   @JsonKey(name: 'mass_lbs')
-  final int massLbs;
+  final int? massLbs;
   @override
   @JsonKey(name: 'mass_kg')
-  final int massKg;
+  final int? massKg;
   @override
   @JsonKey(name: 'class')
-  final int vehicleClass;
+  final int? vehicleClass;
   @override
   @JsonKey(name: 'abs')
-  final int abs;
+  final int? abs;
   @override
   @JsonKey(name: 'imo')
-  final int imo;
+  final int? imo;
   final List<String> _roles;
   @override
   @JsonKey()
@@ -2519,24 +3766,24 @@ class _$_ShipFullVehicleModel extends _ShipFullVehicleModel {
 
   @override
   @JsonKey(name: 'type')
-  final String type;
+  final String? type;
   @override
   @JsonKey(name: 'model')
   final String? model;
   @override
   @JsonKey(name: 'legacy_id')
-  final String legacyId;
+  final String? legacyId;
 
   @override
   String toString() {
-    return 'ShipFullVehicleModel(id: $id, launches: $launches, isActive: $isActive, name: $name, image: $image, link: $link, longitude: $longitude, latitude: $latitude, courseDeg: $courseDeg, speedKn: $speedKn, status: $status, homePort: $homePort, yearBuilt: $yearBuilt, massLbs: $massLbs, massKg: $massKg, vehicleClass: $vehicleClass, abs: $abs, imo: $imo, roles: $roles, type: $type, model: $model, legacyId: $legacyId)';
+    return 'ShipFullModel(id: $id, launches: $launches, isActive: $isActive, name: $name, image: $image, link: $link, longitude: $longitude, latitude: $latitude, courseDeg: $courseDeg, speedKn: $speedKn, status: $status, homePort: $homePort, yearBuilt: $yearBuilt, massLbs: $massLbs, massKg: $massKg, vehicleClass: $vehicleClass, abs: $abs, imo: $imo, roles: $roles, type: $type, model: $model, legacyId: $legacyId)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_ShipFullVehicleModel &&
+            other is _$_ShipFullModel &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality().equals(other._launches, _launches) &&
             const DeepCollectionEquality().equals(other.isActive, isActive) &&
@@ -2592,64 +3839,64 @@ class _$_ShipFullVehicleModel extends _ShipFullVehicleModel {
 
   @JsonKey(ignore: true)
   @override
-  _$$_ShipFullVehicleModelCopyWith<_$_ShipFullVehicleModel> get copyWith =>
-      __$$_ShipFullVehicleModelCopyWithImpl<_$_ShipFullVehicleModel>(
-          this, _$identity);
+  _$$_ShipFullModelCopyWith<_$_ShipFullModel> get copyWith =>
+      __$$_ShipFullModelCopyWithImpl<_$_ShipFullModel>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ShipFullVehicleModelToJson(
+    return _$$_ShipFullModelToJson(
       this,
     );
   }
 }
 
-abstract class _ShipFullVehicleModel extends ShipFullVehicleModel {
-  const factory _ShipFullVehicleModel(
-          {required final String id,
-          final List<LaunchModel> launches,
-          @JsonKey(name: 'active') final bool isActive,
-          @JsonKey(name: 'name') final String name,
-          @JsonKey(name: 'image') final String image,
-          @JsonKey(name: 'link') final String link,
-          @JsonKey(name: 'longitude') final dynamic longitude,
-          @JsonKey(name: 'latitude') final dynamic latitude,
-          @JsonKey(name: 'course_deg') final num? courseDeg,
-          @JsonKey(name: 'speed_kn') final num? speedKn,
-          @JsonKey(name: 'status') final String status,
-          @JsonKey(name: 'home_port') final String homePort,
-          @JsonKey(name: 'year_built') final int yearBuilt,
-          @JsonKey(name: 'mass_lbs') final int massLbs,
-          @JsonKey(name: 'mass_kg') final int massKg,
-          @JsonKey(name: 'class') final int vehicleClass,
-          @JsonKey(name: 'abs') final int abs,
-          @JsonKey(name: 'imo') final int imo,
-          final List<String> roles,
-          @JsonKey(name: 'type') final String type,
-          @JsonKey(name: 'model') final String? model,
-          @JsonKey(name: 'legacy_id') final String legacyId}) =
-      _$_ShipFullVehicleModel;
-  const _ShipFullVehicleModel._() : super._();
+abstract class _ShipFullModel extends ShipFullModel {
+  const factory _ShipFullModel(
+      {@JsonKey(name: 'id') required final String id,
+      @JsonKey(name: 'launches') final List<LaunchModel> launches,
+      @JsonKey(name: 'active') final bool isActive,
+      @JsonKey(name: 'name') final String? name,
+      @JsonKey(name: 'image') final String? image,
+      @JsonKey(name: 'link') final String? link,
+      @JsonKey(name: 'longitude') final dynamic longitude,
+      @JsonKey(name: 'latitude') final dynamic latitude,
+      @JsonKey(name: 'course_deg') final num? courseDeg,
+      @JsonKey(name: 'speed_kn') final num? speedKn,
+      @JsonKey(name: 'status') final String? status,
+      @JsonKey(name: 'home_port') final String? homePort,
+      @JsonKey(name: 'year_built') final int? yearBuilt,
+      @JsonKey(name: 'mass_lbs') final int? massLbs,
+      @JsonKey(name: 'mass_kg') final int? massKg,
+      @JsonKey(name: 'class') final int? vehicleClass,
+      @JsonKey(name: 'abs') final int? abs,
+      @JsonKey(name: 'imo') final int? imo,
+      final List<String> roles,
+      @JsonKey(name: 'type') final String? type,
+      @JsonKey(name: 'model') final String? model,
+      @JsonKey(name: 'legacy_id') final String? legacyId}) = _$_ShipFullModel;
+  const _ShipFullModel._() : super._();
 
-  factory _ShipFullVehicleModel.fromJson(Map<String, dynamic> json) =
-      _$_ShipFullVehicleModel.fromJson;
+  factory _ShipFullModel.fromJson(Map<String, dynamic> json) =
+      _$_ShipFullModel.fromJson;
 
   @override
+  @JsonKey(name: 'id')
   String get id;
   @override
+  @JsonKey(name: 'launches')
   List<LaunchModel> get launches;
   @override
   @JsonKey(name: 'active')
   bool get isActive;
   @override
   @JsonKey(name: 'name')
-  String get name;
+  String? get name;
   @override
   @JsonKey(name: 'image')
-  String get image;
+  String? get image;
   @override
   @JsonKey(name: 'link')
-  String get link;
+  String? get link;
   @override
   @JsonKey(name: 'longitude')
   dynamic get longitude;
@@ -2664,131 +3911,134 @@ abstract class _ShipFullVehicleModel extends ShipFullVehicleModel {
   num? get speedKn;
   @override
   @JsonKey(name: 'status')
-  String get status;
+  String? get status;
   @override
   @JsonKey(name: 'home_port')
-  String get homePort;
+  String? get homePort;
   @override
   @JsonKey(name: 'year_built')
-  int get yearBuilt;
+  int? get yearBuilt;
   @override
   @JsonKey(name: 'mass_lbs')
-  int get massLbs;
+  int? get massLbs;
   @override
   @JsonKey(name: 'mass_kg')
-  int get massKg;
+  int? get massKg;
   @override
   @JsonKey(name: 'class')
-  int get vehicleClass;
+  int? get vehicleClass;
   @override
   @JsonKey(name: 'abs')
-  int get abs;
+  int? get abs;
   @override
   @JsonKey(name: 'imo')
-  int get imo;
+  int? get imo;
   @override
   List<String> get roles;
   @override
   @JsonKey(name: 'type')
-  String get type;
+  String? get type;
   @override
   @JsonKey(name: 'model')
   String? get model;
   @override
   @JsonKey(name: 'legacy_id')
-  String get legacyId;
+  String? get legacyId;
   @override
   @JsonKey(ignore: true)
-  _$$_ShipFullVehicleModelCopyWith<_$_ShipFullVehicleModel> get copyWith =>
+  _$$_ShipFullModelCopyWith<_$_ShipFullModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
-DragonVehicleModel _$DragonVehicleModelFromJson(Map<String, dynamic> json) {
-  return _DragonVehicleModel.fromJson(json);
+DragonModel _$DragonModelFromJson(Map<String, dynamic> json) {
+  return _DragonModel.fromJson(json);
 }
 
 /// @nodoc
-mixin _$DragonVehicleModel {
+mixin _$DragonModel {
+  @JsonKey(name: 'id')
   String get id => throw _privateConstructorUsedError;
-  String get description => throw _privateConstructorUsedError;
-  String get wikipedia => throw _privateConstructorUsedError;
+  @JsonKey(name: 'description')
+  String? get description => throw _privateConstructorUsedError;
+  @JsonKey(name: 'wikipedia')
+  String? get wiki => throw _privateConstructorUsedError;
+  @JsonKey(name: 'thrusters')
   List<ThrusterModel> get thrusters => throw _privateConstructorUsedError;
   @JsonKey(name: 'dry_mass_lb')
-  int get dryMassLb => throw _privateConstructorUsedError;
+  int? get dryMassLb => throw _privateConstructorUsedError;
   @JsonKey(name: 'dry_mass_kg')
-  int get dryMassKg => throw _privateConstructorUsedError;
+  int? get dryMassKg => throw _privateConstructorUsedError;
   @JsonKey(name: 'orbit_duration_yr')
-  int get orbitDurationYr => throw _privateConstructorUsedError;
+  int? get orbitDurationYr => throw _privateConstructorUsedError;
   @JsonKey(name: 'sidewall_angle_deg')
-  int get sidewallAngleDeg => throw _privateConstructorUsedError;
+  int? get sidewallAngleDeg => throw _privateConstructorUsedError;
   @JsonKey(name: 'crew_capacity')
-  int get crewCapacity => throw _privateConstructorUsedError;
+  int? get crewCapacity => throw _privateConstructorUsedError;
   @JsonKey(name: 'active')
   bool get isActive => throw _privateConstructorUsedError;
   @JsonKey(name: 'type')
-  String get type => throw _privateConstructorUsedError;
+  String? get type => throw _privateConstructorUsedError;
   @JsonKey(name: 'name')
-  String get name => throw _privateConstructorUsedError;
+  String? get name => throw _privateConstructorUsedError;
   @JsonKey(name: 'flickr_images')
   List<String> get images => throw _privateConstructorUsedError;
   @JsonKey(name: 'first_flight')
-  String get firstFlight => throw _privateConstructorUsedError;
+  String? get firstFlight => throw _privateConstructorUsedError;
   @JsonKey(name: 'diameter')
-  DiameterModel get diameter => throw _privateConstructorUsedError;
+  DiameterModel? get diameter => throw _privateConstructorUsedError;
   @JsonKey(name: 'height_w_trunk')
-  DiameterModel get heightWTrunk => throw _privateConstructorUsedError;
+  DiameterModel? get heightWTrunk => throw _privateConstructorUsedError;
   @JsonKey(name: 'trunk')
-  TrunkModel get trunk => throw _privateConstructorUsedError;
+  TrunkModel? get trunk => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $DragonVehicleModelCopyWith<DragonVehicleModel> get copyWith =>
+  $DragonModelCopyWith<DragonModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $DragonVehicleModelCopyWith<$Res> {
-  factory $DragonVehicleModelCopyWith(
-          DragonVehicleModel value, $Res Function(DragonVehicleModel) then) =
-      _$DragonVehicleModelCopyWithImpl<$Res>;
+abstract class $DragonModelCopyWith<$Res> {
+  factory $DragonModelCopyWith(
+          DragonModel value, $Res Function(DragonModel) then) =
+      _$DragonModelCopyWithImpl<$Res>;
   $Res call(
-      {String id,
-      String description,
-      String wikipedia,
-      List<ThrusterModel> thrusters,
-      @JsonKey(name: 'dry_mass_lb') int dryMassLb,
-      @JsonKey(name: 'dry_mass_kg') int dryMassKg,
-      @JsonKey(name: 'orbit_duration_yr') int orbitDurationYr,
-      @JsonKey(name: 'sidewall_angle_deg') int sidewallAngleDeg,
-      @JsonKey(name: 'crew_capacity') int crewCapacity,
+      {@JsonKey(name: 'id') String id,
+      @JsonKey(name: 'description') String? description,
+      @JsonKey(name: 'wikipedia') String? wiki,
+      @JsonKey(name: 'thrusters') List<ThrusterModel> thrusters,
+      @JsonKey(name: 'dry_mass_lb') int? dryMassLb,
+      @JsonKey(name: 'dry_mass_kg') int? dryMassKg,
+      @JsonKey(name: 'orbit_duration_yr') int? orbitDurationYr,
+      @JsonKey(name: 'sidewall_angle_deg') int? sidewallAngleDeg,
+      @JsonKey(name: 'crew_capacity') int? crewCapacity,
       @JsonKey(name: 'active') bool isActive,
-      @JsonKey(name: 'type') String type,
-      @JsonKey(name: 'name') String name,
+      @JsonKey(name: 'type') String? type,
+      @JsonKey(name: 'name') String? name,
       @JsonKey(name: 'flickr_images') List<String> images,
-      @JsonKey(name: 'first_flight') String firstFlight,
-      @JsonKey(name: 'diameter') DiameterModel diameter,
-      @JsonKey(name: 'height_w_trunk') DiameterModel heightWTrunk,
-      @JsonKey(name: 'trunk') TrunkModel trunk});
+      @JsonKey(name: 'first_flight') String? firstFlight,
+      @JsonKey(name: 'diameter') DiameterModel? diameter,
+      @JsonKey(name: 'height_w_trunk') DiameterModel? heightWTrunk,
+      @JsonKey(name: 'trunk') TrunkModel? trunk});
 
-  $DiameterModelCopyWith<$Res> get diameter;
-  $DiameterModelCopyWith<$Res> get heightWTrunk;
-  $TrunkModelCopyWith<$Res> get trunk;
+  $DiameterModelCopyWith<$Res>? get diameter;
+  $DiameterModelCopyWith<$Res>? get heightWTrunk;
+  $TrunkModelCopyWith<$Res>? get trunk;
 }
 
 /// @nodoc
-class _$DragonVehicleModelCopyWithImpl<$Res>
-    implements $DragonVehicleModelCopyWith<$Res> {
-  _$DragonVehicleModelCopyWithImpl(this._value, this._then);
+class _$DragonModelCopyWithImpl<$Res> implements $DragonModelCopyWith<$Res> {
+  _$DragonModelCopyWithImpl(this._value, this._then);
 
-  final DragonVehicleModel _value;
+  final DragonModel _value;
   // ignore: unused_field
-  final $Res Function(DragonVehicleModel) _then;
+  final $Res Function(DragonModel) _then;
 
   @override
   $Res call({
     Object? id = freezed,
     Object? description = freezed,
-    Object? wikipedia = freezed,
+    Object? wiki = freezed,
     Object? thrusters = freezed,
     Object? dryMassLb = freezed,
     Object? dryMassKg = freezed,
@@ -2812,11 +4062,11 @@ class _$DragonVehicleModelCopyWithImpl<$Res>
       description: description == freezed
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as String,
-      wikipedia: wikipedia == freezed
-          ? _value.wikipedia
-          : wikipedia // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
+      wiki: wiki == freezed
+          ? _value.wiki
+          : wiki // ignore: cast_nullable_to_non_nullable
+              as String?,
       thrusters: thrusters == freezed
           ? _value.thrusters
           : thrusters // ignore: cast_nullable_to_non_nullable
@@ -2824,23 +4074,23 @@ class _$DragonVehicleModelCopyWithImpl<$Res>
       dryMassLb: dryMassLb == freezed
           ? _value.dryMassLb
           : dryMassLb // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       dryMassKg: dryMassKg == freezed
           ? _value.dryMassKg
           : dryMassKg // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       orbitDurationYr: orbitDurationYr == freezed
           ? _value.orbitDurationYr
           : orbitDurationYr // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       sidewallAngleDeg: sidewallAngleDeg == freezed
           ? _value.sidewallAngleDeg
           : sidewallAngleDeg // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       crewCapacity: crewCapacity == freezed
           ? _value.crewCapacity
           : crewCapacity // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       isActive: isActive == freezed
           ? _value.isActive
           : isActive // ignore: cast_nullable_to_non_nullable
@@ -2848,11 +4098,11 @@ class _$DragonVehicleModelCopyWithImpl<$Res>
       type: type == freezed
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       name: name == freezed
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       images: images == freezed
           ? _value.images
           : images // ignore: cast_nullable_to_non_nullable
@@ -2860,94 +4110,105 @@ class _$DragonVehicleModelCopyWithImpl<$Res>
       firstFlight: firstFlight == freezed
           ? _value.firstFlight
           : firstFlight // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       diameter: diameter == freezed
           ? _value.diameter
           : diameter // ignore: cast_nullable_to_non_nullable
-              as DiameterModel,
+              as DiameterModel?,
       heightWTrunk: heightWTrunk == freezed
           ? _value.heightWTrunk
           : heightWTrunk // ignore: cast_nullable_to_non_nullable
-              as DiameterModel,
+              as DiameterModel?,
       trunk: trunk == freezed
           ? _value.trunk
           : trunk // ignore: cast_nullable_to_non_nullable
-              as TrunkModel,
+              as TrunkModel?,
     ));
   }
 
   @override
-  $DiameterModelCopyWith<$Res> get diameter {
-    return $DiameterModelCopyWith<$Res>(_value.diameter, (value) {
+  $DiameterModelCopyWith<$Res>? get diameter {
+    if (_value.diameter == null) {
+      return null;
+    }
+
+    return $DiameterModelCopyWith<$Res>(_value.diameter!, (value) {
       return _then(_value.copyWith(diameter: value));
     });
   }
 
   @override
-  $DiameterModelCopyWith<$Res> get heightWTrunk {
-    return $DiameterModelCopyWith<$Res>(_value.heightWTrunk, (value) {
+  $DiameterModelCopyWith<$Res>? get heightWTrunk {
+    if (_value.heightWTrunk == null) {
+      return null;
+    }
+
+    return $DiameterModelCopyWith<$Res>(_value.heightWTrunk!, (value) {
       return _then(_value.copyWith(heightWTrunk: value));
     });
   }
 
   @override
-  $TrunkModelCopyWith<$Res> get trunk {
-    return $TrunkModelCopyWith<$Res>(_value.trunk, (value) {
+  $TrunkModelCopyWith<$Res>? get trunk {
+    if (_value.trunk == null) {
+      return null;
+    }
+
+    return $TrunkModelCopyWith<$Res>(_value.trunk!, (value) {
       return _then(_value.copyWith(trunk: value));
     });
   }
 }
 
 /// @nodoc
-abstract class _$$_DragonVehicleModelCopyWith<$Res>
-    implements $DragonVehicleModelCopyWith<$Res> {
-  factory _$$_DragonVehicleModelCopyWith(_$_DragonVehicleModel value,
-          $Res Function(_$_DragonVehicleModel) then) =
-      __$$_DragonVehicleModelCopyWithImpl<$Res>;
+abstract class _$$_DragonModelCopyWith<$Res>
+    implements $DragonModelCopyWith<$Res> {
+  factory _$$_DragonModelCopyWith(
+          _$_DragonModel value, $Res Function(_$_DragonModel) then) =
+      __$$_DragonModelCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String id,
-      String description,
-      String wikipedia,
-      List<ThrusterModel> thrusters,
-      @JsonKey(name: 'dry_mass_lb') int dryMassLb,
-      @JsonKey(name: 'dry_mass_kg') int dryMassKg,
-      @JsonKey(name: 'orbit_duration_yr') int orbitDurationYr,
-      @JsonKey(name: 'sidewall_angle_deg') int sidewallAngleDeg,
-      @JsonKey(name: 'crew_capacity') int crewCapacity,
+      {@JsonKey(name: 'id') String id,
+      @JsonKey(name: 'description') String? description,
+      @JsonKey(name: 'wikipedia') String? wiki,
+      @JsonKey(name: 'thrusters') List<ThrusterModel> thrusters,
+      @JsonKey(name: 'dry_mass_lb') int? dryMassLb,
+      @JsonKey(name: 'dry_mass_kg') int? dryMassKg,
+      @JsonKey(name: 'orbit_duration_yr') int? orbitDurationYr,
+      @JsonKey(name: 'sidewall_angle_deg') int? sidewallAngleDeg,
+      @JsonKey(name: 'crew_capacity') int? crewCapacity,
       @JsonKey(name: 'active') bool isActive,
-      @JsonKey(name: 'type') String type,
-      @JsonKey(name: 'name') String name,
+      @JsonKey(name: 'type') String? type,
+      @JsonKey(name: 'name') String? name,
       @JsonKey(name: 'flickr_images') List<String> images,
-      @JsonKey(name: 'first_flight') String firstFlight,
-      @JsonKey(name: 'diameter') DiameterModel diameter,
-      @JsonKey(name: 'height_w_trunk') DiameterModel heightWTrunk,
-      @JsonKey(name: 'trunk') TrunkModel trunk});
+      @JsonKey(name: 'first_flight') String? firstFlight,
+      @JsonKey(name: 'diameter') DiameterModel? diameter,
+      @JsonKey(name: 'height_w_trunk') DiameterModel? heightWTrunk,
+      @JsonKey(name: 'trunk') TrunkModel? trunk});
 
   @override
-  $DiameterModelCopyWith<$Res> get diameter;
+  $DiameterModelCopyWith<$Res>? get diameter;
   @override
-  $DiameterModelCopyWith<$Res> get heightWTrunk;
+  $DiameterModelCopyWith<$Res>? get heightWTrunk;
   @override
-  $TrunkModelCopyWith<$Res> get trunk;
+  $TrunkModelCopyWith<$Res>? get trunk;
 }
 
 /// @nodoc
-class __$$_DragonVehicleModelCopyWithImpl<$Res>
-    extends _$DragonVehicleModelCopyWithImpl<$Res>
-    implements _$$_DragonVehicleModelCopyWith<$Res> {
-  __$$_DragonVehicleModelCopyWithImpl(
-      _$_DragonVehicleModel _value, $Res Function(_$_DragonVehicleModel) _then)
-      : super(_value, (v) => _then(v as _$_DragonVehicleModel));
+class __$$_DragonModelCopyWithImpl<$Res> extends _$DragonModelCopyWithImpl<$Res>
+    implements _$$_DragonModelCopyWith<$Res> {
+  __$$_DragonModelCopyWithImpl(
+      _$_DragonModel _value, $Res Function(_$_DragonModel) _then)
+      : super(_value, (v) => _then(v as _$_DragonModel));
 
   @override
-  _$_DragonVehicleModel get _value => super._value as _$_DragonVehicleModel;
+  _$_DragonModel get _value => super._value as _$_DragonModel;
 
   @override
   $Res call({
     Object? id = freezed,
     Object? description = freezed,
-    Object? wikipedia = freezed,
+    Object? wiki = freezed,
     Object? thrusters = freezed,
     Object? dryMassLb = freezed,
     Object? dryMassKg = freezed,
@@ -2963,7 +4224,7 @@ class __$$_DragonVehicleModelCopyWithImpl<$Res>
     Object? heightWTrunk = freezed,
     Object? trunk = freezed,
   }) {
-    return _then(_$_DragonVehicleModel(
+    return _then(_$_DragonModel(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -2971,11 +4232,11 @@ class __$$_DragonVehicleModelCopyWithImpl<$Res>
       description: description == freezed
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as String,
-      wikipedia: wikipedia == freezed
-          ? _value.wikipedia
-          : wikipedia // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
+      wiki: wiki == freezed
+          ? _value.wiki
+          : wiki // ignore: cast_nullable_to_non_nullable
+              as String?,
       thrusters: thrusters == freezed
           ? _value._thrusters
           : thrusters // ignore: cast_nullable_to_non_nullable
@@ -2983,23 +4244,23 @@ class __$$_DragonVehicleModelCopyWithImpl<$Res>
       dryMassLb: dryMassLb == freezed
           ? _value.dryMassLb
           : dryMassLb // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       dryMassKg: dryMassKg == freezed
           ? _value.dryMassKg
           : dryMassKg // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       orbitDurationYr: orbitDurationYr == freezed
           ? _value.orbitDurationYr
           : orbitDurationYr // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       sidewallAngleDeg: sidewallAngleDeg == freezed
           ? _value.sidewallAngleDeg
           : sidewallAngleDeg // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       crewCapacity: crewCapacity == freezed
           ? _value.crewCapacity
           : crewCapacity // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       isActive: isActive == freezed
           ? _value.isActive
           : isActive // ignore: cast_nullable_to_non_nullable
@@ -3007,11 +4268,11 @@ class __$$_DragonVehicleModelCopyWithImpl<$Res>
       type: type == freezed
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       name: name == freezed
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       images: images == freezed
           ? _value._images
           : images // ignore: cast_nullable_to_non_nullable
@@ -3019,75 +4280,80 @@ class __$$_DragonVehicleModelCopyWithImpl<$Res>
       firstFlight: firstFlight == freezed
           ? _value.firstFlight
           : firstFlight // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       diameter: diameter == freezed
           ? _value.diameter
           : diameter // ignore: cast_nullable_to_non_nullable
-              as DiameterModel,
+              as DiameterModel?,
       heightWTrunk: heightWTrunk == freezed
           ? _value.heightWTrunk
           : heightWTrunk // ignore: cast_nullable_to_non_nullable
-              as DiameterModel,
+              as DiameterModel?,
       trunk: trunk == freezed
           ? _value.trunk
           : trunk // ignore: cast_nullable_to_non_nullable
-              as TrunkModel,
+              as TrunkModel?,
     ));
   }
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$_DragonVehicleModel extends _DragonVehicleModel {
-  const _$_DragonVehicleModel(
-      {required this.id,
-      this.description = '',
-      this.wikipedia = 'https://en.wikipedia.org/wiki/SpaceX_Dragon',
-      final List<ThrusterModel> thrusters = const [],
+class _$_DragonModel extends _DragonModel {
+  const _$_DragonModel(
+      {@JsonKey(name: 'id')
+          required this.id,
+      @JsonKey(name: 'description')
+          this.description,
+      @JsonKey(name: 'wikipedia')
+          this.wiki,
+      @JsonKey(name: 'thrusters')
+          final List<ThrusterModel> thrusters = const [],
       @JsonKey(name: 'dry_mass_lb')
-          this.dryMassLb = 9300,
+          this.dryMassLb,
       @JsonKey(name: 'dry_mass_kg')
-          this.dryMassKg = 4200,
+          this.dryMassKg,
       @JsonKey(name: 'orbit_duration_yr')
-          this.orbitDurationYr = 2,
+          this.orbitDurationYr,
       @JsonKey(name: 'sidewall_angle_deg')
-          this.sidewallAngleDeg = 15,
+          this.sidewallAngleDeg,
       @JsonKey(name: 'crew_capacity')
-          this.crewCapacity = 0,
+          this.crewCapacity,
       @JsonKey(name: 'active')
           this.isActive = false,
       @JsonKey(name: 'type')
-          this.type = 'capsule',
+          this.type,
       @JsonKey(name: 'name')
-          this.name = '',
+          this.name,
       @JsonKey(name: 'flickr_images')
           final List<String> images = const [],
       @JsonKey(name: 'first_flight')
-          this.firstFlight = '2010-12-08',
+          this.firstFlight,
       @JsonKey(name: 'diameter')
-          this.diameter = const DiameterModel(),
+          this.diameter,
       @JsonKey(name: 'height_w_trunk')
-          this.heightWTrunk = const DiameterModel(),
+          this.heightWTrunk,
       @JsonKey(name: 'trunk')
-          this.trunk = const TrunkModel()})
+          this.trunk})
       : _thrusters = thrusters,
         _images = images,
         super._();
 
-  factory _$_DragonVehicleModel.fromJson(Map<String, dynamic> json) =>
-      _$$_DragonVehicleModelFromJson(json);
+  factory _$_DragonModel.fromJson(Map<String, dynamic> json) =>
+      _$$_DragonModelFromJson(json);
 
   @override
+  @JsonKey(name: 'id')
   final String id;
   @override
-  @JsonKey()
-  final String description;
+  @JsonKey(name: 'description')
+  final String? description;
   @override
-  @JsonKey()
-  final String wikipedia;
+  @JsonKey(name: 'wikipedia')
+  final String? wiki;
   final List<ThrusterModel> _thrusters;
   @override
-  @JsonKey()
+  @JsonKey(name: 'thrusters')
   List<ThrusterModel> get thrusters {
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_thrusters);
@@ -3095,28 +4361,28 @@ class _$_DragonVehicleModel extends _DragonVehicleModel {
 
   @override
   @JsonKey(name: 'dry_mass_lb')
-  final int dryMassLb;
+  final int? dryMassLb;
   @override
   @JsonKey(name: 'dry_mass_kg')
-  final int dryMassKg;
+  final int? dryMassKg;
   @override
   @JsonKey(name: 'orbit_duration_yr')
-  final int orbitDurationYr;
+  final int? orbitDurationYr;
   @override
   @JsonKey(name: 'sidewall_angle_deg')
-  final int sidewallAngleDeg;
+  final int? sidewallAngleDeg;
   @override
   @JsonKey(name: 'crew_capacity')
-  final int crewCapacity;
+  final int? crewCapacity;
   @override
   @JsonKey(name: 'active')
   final bool isActive;
   @override
   @JsonKey(name: 'type')
-  final String type;
+  final String? type;
   @override
   @JsonKey(name: 'name')
-  final String name;
+  final String? name;
   final List<String> _images;
   @override
   @JsonKey(name: 'flickr_images')
@@ -3127,31 +4393,31 @@ class _$_DragonVehicleModel extends _DragonVehicleModel {
 
   @override
   @JsonKey(name: 'first_flight')
-  final String firstFlight;
+  final String? firstFlight;
   @override
   @JsonKey(name: 'diameter')
-  final DiameterModel diameter;
+  final DiameterModel? diameter;
   @override
   @JsonKey(name: 'height_w_trunk')
-  final DiameterModel heightWTrunk;
+  final DiameterModel? heightWTrunk;
   @override
   @JsonKey(name: 'trunk')
-  final TrunkModel trunk;
+  final TrunkModel? trunk;
 
   @override
   String toString() {
-    return 'DragonVehicleModel(id: $id, description: $description, wikipedia: $wikipedia, thrusters: $thrusters, dryMassLb: $dryMassLb, dryMassKg: $dryMassKg, orbitDurationYr: $orbitDurationYr, sidewallAngleDeg: $sidewallAngleDeg, crewCapacity: $crewCapacity, isActive: $isActive, type: $type, name: $name, images: $images, firstFlight: $firstFlight, diameter: $diameter, heightWTrunk: $heightWTrunk, trunk: $trunk)';
+    return 'DragonModel(id: $id, description: $description, wiki: $wiki, thrusters: $thrusters, dryMassLb: $dryMassLb, dryMassKg: $dryMassKg, orbitDurationYr: $orbitDurationYr, sidewallAngleDeg: $sidewallAngleDeg, crewCapacity: $crewCapacity, isActive: $isActive, type: $type, name: $name, images: $images, firstFlight: $firstFlight, diameter: $diameter, heightWTrunk: $heightWTrunk, trunk: $trunk)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_DragonVehicleModel &&
+            other is _$_DragonModel &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
                 .equals(other.description, description) &&
-            const DeepCollectionEquality().equals(other.wikipedia, wikipedia) &&
+            const DeepCollectionEquality().equals(other.wiki, wiki) &&
             const DeepCollectionEquality()
                 .equals(other._thrusters, _thrusters) &&
             const DeepCollectionEquality().equals(other.dryMassLb, dryMassLb) &&
@@ -3180,7 +4446,7 @@ class _$_DragonVehicleModel extends _DragonVehicleModel {
       runtimeType,
       const DeepCollectionEquality().hash(id),
       const DeepCollectionEquality().hash(description),
-      const DeepCollectionEquality().hash(wikipedia),
+      const DeepCollectionEquality().hash(wiki),
       const DeepCollectionEquality().hash(_thrusters),
       const DeepCollectionEquality().hash(dryMassLb),
       const DeepCollectionEquality().hash(dryMassKg),
@@ -3198,91 +4464,934 @@ class _$_DragonVehicleModel extends _DragonVehicleModel {
 
   @JsonKey(ignore: true)
   @override
-  _$$_DragonVehicleModelCopyWith<_$_DragonVehicleModel> get copyWith =>
-      __$$_DragonVehicleModelCopyWithImpl<_$_DragonVehicleModel>(
-          this, _$identity);
+  _$$_DragonModelCopyWith<_$_DragonModel> get copyWith =>
+      __$$_DragonModelCopyWithImpl<_$_DragonModel>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_DragonVehicleModelToJson(
+    return _$$_DragonModelToJson(
       this,
     );
   }
 }
 
-abstract class _DragonVehicleModel extends DragonVehicleModel {
-  const factory _DragonVehicleModel(
-      {required final String id,
-      final String description,
-      final String wikipedia,
-      final List<ThrusterModel> thrusters,
-      @JsonKey(name: 'dry_mass_lb') final int dryMassLb,
-      @JsonKey(name: 'dry_mass_kg') final int dryMassKg,
-      @JsonKey(name: 'orbit_duration_yr') final int orbitDurationYr,
-      @JsonKey(name: 'sidewall_angle_deg') final int sidewallAngleDeg,
-      @JsonKey(name: 'crew_capacity') final int crewCapacity,
+abstract class _DragonModel extends DragonModel {
+  const factory _DragonModel(
+      {@JsonKey(name: 'id') required final String id,
+      @JsonKey(name: 'description') final String? description,
+      @JsonKey(name: 'wikipedia') final String? wiki,
+      @JsonKey(name: 'thrusters') final List<ThrusterModel> thrusters,
+      @JsonKey(name: 'dry_mass_lb') final int? dryMassLb,
+      @JsonKey(name: 'dry_mass_kg') final int? dryMassKg,
+      @JsonKey(name: 'orbit_duration_yr') final int? orbitDurationYr,
+      @JsonKey(name: 'sidewall_angle_deg') final int? sidewallAngleDeg,
+      @JsonKey(name: 'crew_capacity') final int? crewCapacity,
       @JsonKey(name: 'active') final bool isActive,
-      @JsonKey(name: 'type') final String type,
-      @JsonKey(name: 'name') final String name,
+      @JsonKey(name: 'type') final String? type,
+      @JsonKey(name: 'name') final String? name,
       @JsonKey(name: 'flickr_images') final List<String> images,
-      @JsonKey(name: 'first_flight') final String firstFlight,
-      @JsonKey(name: 'diameter') final DiameterModel diameter,
-      @JsonKey(name: 'height_w_trunk') final DiameterModel heightWTrunk,
-      @JsonKey(name: 'trunk') final TrunkModel trunk}) = _$_DragonVehicleModel;
-  const _DragonVehicleModel._() : super._();
+      @JsonKey(name: 'first_flight') final String? firstFlight,
+      @JsonKey(name: 'diameter') final DiameterModel? diameter,
+      @JsonKey(name: 'height_w_trunk') final DiameterModel? heightWTrunk,
+      @JsonKey(name: 'trunk') final TrunkModel? trunk}) = _$_DragonModel;
+  const _DragonModel._() : super._();
 
-  factory _DragonVehicleModel.fromJson(Map<String, dynamic> json) =
-      _$_DragonVehicleModel.fromJson;
+  factory _DragonModel.fromJson(Map<String, dynamic> json) =
+      _$_DragonModel.fromJson;
 
   @override
+  @JsonKey(name: 'id')
   String get id;
   @override
-  String get description;
+  @JsonKey(name: 'description')
+  String? get description;
   @override
-  String get wikipedia;
+  @JsonKey(name: 'wikipedia')
+  String? get wiki;
   @override
+  @JsonKey(name: 'thrusters')
   List<ThrusterModel> get thrusters;
   @override
   @JsonKey(name: 'dry_mass_lb')
-  int get dryMassLb;
+  int? get dryMassLb;
   @override
   @JsonKey(name: 'dry_mass_kg')
-  int get dryMassKg;
+  int? get dryMassKg;
   @override
   @JsonKey(name: 'orbit_duration_yr')
-  int get orbitDurationYr;
+  int? get orbitDurationYr;
   @override
   @JsonKey(name: 'sidewall_angle_deg')
-  int get sidewallAngleDeg;
+  int? get sidewallAngleDeg;
   @override
   @JsonKey(name: 'crew_capacity')
-  int get crewCapacity;
+  int? get crewCapacity;
   @override
   @JsonKey(name: 'active')
   bool get isActive;
   @override
   @JsonKey(name: 'type')
-  String get type;
+  String? get type;
   @override
   @JsonKey(name: 'name')
-  String get name;
+  String? get name;
   @override
   @JsonKey(name: 'flickr_images')
   List<String> get images;
   @override
   @JsonKey(name: 'first_flight')
-  String get firstFlight;
+  String? get firstFlight;
   @override
   @JsonKey(name: 'diameter')
-  DiameterModel get diameter;
+  DiameterModel? get diameter;
   @override
   @JsonKey(name: 'height_w_trunk')
-  DiameterModel get heightWTrunk;
+  DiameterModel? get heightWTrunk;
   @override
   @JsonKey(name: 'trunk')
-  TrunkModel get trunk;
+  TrunkModel? get trunk;
   @override
   @JsonKey(ignore: true)
-  _$$_DragonVehicleModelCopyWith<_$_DragonVehicleModel> get copyWith =>
+  _$$_DragonModelCopyWith<_$_DragonModel> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+ThrusterModel _$ThrusterModelFromJson(Map<String, dynamic> json) {
+  return _ThrusterModel.fromJson(json);
+}
+
+/// @nodoc
+mixin _$ThrusterModel {
+  @JsonKey(name: 'type')
+  String? get type => throw _privateConstructorUsedError;
+  @JsonKey(name: 'amount')
+  int? get amount => throw _privateConstructorUsedError;
+  @JsonKey(name: 'pods')
+  int? get pods => throw _privateConstructorUsedError;
+  @JsonKey(name: 'fuel_1')
+  String? get firstFuel => throw _privateConstructorUsedError;
+  @JsonKey(name: 'fuel_2')
+  String? get secondFuel => throw _privateConstructorUsedError;
+  @JsonKey(name: 'isp')
+  int? get isp => throw _privateConstructorUsedError;
+  @JsonKey(name: 'thrust')
+  ThrustModel? get thrust => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $ThrusterModelCopyWith<ThrusterModel> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $ThrusterModelCopyWith<$Res> {
+  factory $ThrusterModelCopyWith(
+          ThrusterModel value, $Res Function(ThrusterModel) then) =
+      _$ThrusterModelCopyWithImpl<$Res>;
+  $Res call(
+      {@JsonKey(name: 'type') String? type,
+      @JsonKey(name: 'amount') int? amount,
+      @JsonKey(name: 'pods') int? pods,
+      @JsonKey(name: 'fuel_1') String? firstFuel,
+      @JsonKey(name: 'fuel_2') String? secondFuel,
+      @JsonKey(name: 'isp') int? isp,
+      @JsonKey(name: 'thrust') ThrustModel? thrust});
+
+  $ThrustModelCopyWith<$Res>? get thrust;
+}
+
+/// @nodoc
+class _$ThrusterModelCopyWithImpl<$Res>
+    implements $ThrusterModelCopyWith<$Res> {
+  _$ThrusterModelCopyWithImpl(this._value, this._then);
+
+  final ThrusterModel _value;
+  // ignore: unused_field
+  final $Res Function(ThrusterModel) _then;
+
+  @override
+  $Res call({
+    Object? type = freezed,
+    Object? amount = freezed,
+    Object? pods = freezed,
+    Object? firstFuel = freezed,
+    Object? secondFuel = freezed,
+    Object? isp = freezed,
+    Object? thrust = freezed,
+  }) {
+    return _then(_value.copyWith(
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as String?,
+      amount: amount == freezed
+          ? _value.amount
+          : amount // ignore: cast_nullable_to_non_nullable
+              as int?,
+      pods: pods == freezed
+          ? _value.pods
+          : pods // ignore: cast_nullable_to_non_nullable
+              as int?,
+      firstFuel: firstFuel == freezed
+          ? _value.firstFuel
+          : firstFuel // ignore: cast_nullable_to_non_nullable
+              as String?,
+      secondFuel: secondFuel == freezed
+          ? _value.secondFuel
+          : secondFuel // ignore: cast_nullable_to_non_nullable
+              as String?,
+      isp: isp == freezed
+          ? _value.isp
+          : isp // ignore: cast_nullable_to_non_nullable
+              as int?,
+      thrust: thrust == freezed
+          ? _value.thrust
+          : thrust // ignore: cast_nullable_to_non_nullable
+              as ThrustModel?,
+    ));
+  }
+
+  @override
+  $ThrustModelCopyWith<$Res>? get thrust {
+    if (_value.thrust == null) {
+      return null;
+    }
+
+    return $ThrustModelCopyWith<$Res>(_value.thrust!, (value) {
+      return _then(_value.copyWith(thrust: value));
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$$_ThrusterModelCopyWith<$Res>
+    implements $ThrusterModelCopyWith<$Res> {
+  factory _$$_ThrusterModelCopyWith(
+          _$_ThrusterModel value, $Res Function(_$_ThrusterModel) then) =
+      __$$_ThrusterModelCopyWithImpl<$Res>;
+  @override
+  $Res call(
+      {@JsonKey(name: 'type') String? type,
+      @JsonKey(name: 'amount') int? amount,
+      @JsonKey(name: 'pods') int? pods,
+      @JsonKey(name: 'fuel_1') String? firstFuel,
+      @JsonKey(name: 'fuel_2') String? secondFuel,
+      @JsonKey(name: 'isp') int? isp,
+      @JsonKey(name: 'thrust') ThrustModel? thrust});
+
+  @override
+  $ThrustModelCopyWith<$Res>? get thrust;
+}
+
+/// @nodoc
+class __$$_ThrusterModelCopyWithImpl<$Res>
+    extends _$ThrusterModelCopyWithImpl<$Res>
+    implements _$$_ThrusterModelCopyWith<$Res> {
+  __$$_ThrusterModelCopyWithImpl(
+      _$_ThrusterModel _value, $Res Function(_$_ThrusterModel) _then)
+      : super(_value, (v) => _then(v as _$_ThrusterModel));
+
+  @override
+  _$_ThrusterModel get _value => super._value as _$_ThrusterModel;
+
+  @override
+  $Res call({
+    Object? type = freezed,
+    Object? amount = freezed,
+    Object? pods = freezed,
+    Object? firstFuel = freezed,
+    Object? secondFuel = freezed,
+    Object? isp = freezed,
+    Object? thrust = freezed,
+  }) {
+    return _then(_$_ThrusterModel(
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as String?,
+      amount: amount == freezed
+          ? _value.amount
+          : amount // ignore: cast_nullable_to_non_nullable
+              as int?,
+      pods: pods == freezed
+          ? _value.pods
+          : pods // ignore: cast_nullable_to_non_nullable
+              as int?,
+      firstFuel: firstFuel == freezed
+          ? _value.firstFuel
+          : firstFuel // ignore: cast_nullable_to_non_nullable
+              as String?,
+      secondFuel: secondFuel == freezed
+          ? _value.secondFuel
+          : secondFuel // ignore: cast_nullable_to_non_nullable
+              as String?,
+      isp: isp == freezed
+          ? _value.isp
+          : isp // ignore: cast_nullable_to_non_nullable
+              as int?,
+      thrust: thrust == freezed
+          ? _value.thrust
+          : thrust // ignore: cast_nullable_to_non_nullable
+              as ThrustModel?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$_ThrusterModel extends _ThrusterModel {
+  const _$_ThrusterModel(
+      {@JsonKey(name: 'type') this.type,
+      @JsonKey(name: 'amount') this.amount,
+      @JsonKey(name: 'pods') this.pods,
+      @JsonKey(name: 'fuel_1') this.firstFuel,
+      @JsonKey(name: 'fuel_2') this.secondFuel,
+      @JsonKey(name: 'isp') this.isp,
+      @JsonKey(name: 'thrust') this.thrust})
+      : super._();
+
+  factory _$_ThrusterModel.fromJson(Map<String, dynamic> json) =>
+      _$$_ThrusterModelFromJson(json);
+
+  @override
+  @JsonKey(name: 'type')
+  final String? type;
+  @override
+  @JsonKey(name: 'amount')
+  final int? amount;
+  @override
+  @JsonKey(name: 'pods')
+  final int? pods;
+  @override
+  @JsonKey(name: 'fuel_1')
+  final String? firstFuel;
+  @override
+  @JsonKey(name: 'fuel_2')
+  final String? secondFuel;
+  @override
+  @JsonKey(name: 'isp')
+  final int? isp;
+  @override
+  @JsonKey(name: 'thrust')
+  final ThrustModel? thrust;
+
+  @override
+  String toString() {
+    return 'ThrusterModel(type: $type, amount: $amount, pods: $pods, firstFuel: $firstFuel, secondFuel: $secondFuel, isp: $isp, thrust: $thrust)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_ThrusterModel &&
+            const DeepCollectionEquality().equals(other.type, type) &&
+            const DeepCollectionEquality().equals(other.amount, amount) &&
+            const DeepCollectionEquality().equals(other.pods, pods) &&
+            const DeepCollectionEquality().equals(other.firstFuel, firstFuel) &&
+            const DeepCollectionEquality()
+                .equals(other.secondFuel, secondFuel) &&
+            const DeepCollectionEquality().equals(other.isp, isp) &&
+            const DeepCollectionEquality().equals(other.thrust, thrust));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(type),
+      const DeepCollectionEquality().hash(amount),
+      const DeepCollectionEquality().hash(pods),
+      const DeepCollectionEquality().hash(firstFuel),
+      const DeepCollectionEquality().hash(secondFuel),
+      const DeepCollectionEquality().hash(isp),
+      const DeepCollectionEquality().hash(thrust));
+
+  @JsonKey(ignore: true)
+  @override
+  _$$_ThrusterModelCopyWith<_$_ThrusterModel> get copyWith =>
+      __$$_ThrusterModelCopyWithImpl<_$_ThrusterModel>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_ThrusterModelToJson(
+      this,
+    );
+  }
+}
+
+abstract class _ThrusterModel extends ThrusterModel {
+  const factory _ThrusterModel(
+      {@JsonKey(name: 'type') final String? type,
+      @JsonKey(name: 'amount') final int? amount,
+      @JsonKey(name: 'pods') final int? pods,
+      @JsonKey(name: 'fuel_1') final String? firstFuel,
+      @JsonKey(name: 'fuel_2') final String? secondFuel,
+      @JsonKey(name: 'isp') final int? isp,
+      @JsonKey(name: 'thrust') final ThrustModel? thrust}) = _$_ThrusterModel;
+  const _ThrusterModel._() : super._();
+
+  factory _ThrusterModel.fromJson(Map<String, dynamic> json) =
+      _$_ThrusterModel.fromJson;
+
+  @override
+  @JsonKey(name: 'type')
+  String? get type;
+  @override
+  @JsonKey(name: 'amount')
+  int? get amount;
+  @override
+  @JsonKey(name: 'pods')
+  int? get pods;
+  @override
+  @JsonKey(name: 'fuel_1')
+  String? get firstFuel;
+  @override
+  @JsonKey(name: 'fuel_2')
+  String? get secondFuel;
+  @override
+  @JsonKey(name: 'isp')
+  int? get isp;
+  @override
+  @JsonKey(name: 'thrust')
+  ThrustModel? get thrust;
+  @override
+  @JsonKey(ignore: true)
+  _$$_ThrusterModelCopyWith<_$_ThrusterModel> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+TrunkModel _$TrunkModelFromJson(Map<String, dynamic> json) {
+  return _TrunkModel.fromJson(json);
+}
+
+/// @nodoc
+mixin _$TrunkModel {
+  @JsonKey(name: 'trunk_volume')
+  TrunkVolumeModel? get volume => throw _privateConstructorUsedError;
+  @JsonKey(name: 'cargo')
+  CargoModel? get cargo => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $TrunkModelCopyWith<TrunkModel> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $TrunkModelCopyWith<$Res> {
+  factory $TrunkModelCopyWith(
+          TrunkModel value, $Res Function(TrunkModel) then) =
+      _$TrunkModelCopyWithImpl<$Res>;
+  $Res call(
+      {@JsonKey(name: 'trunk_volume') TrunkVolumeModel? volume,
+      @JsonKey(name: 'cargo') CargoModel? cargo});
+
+  $TrunkVolumeModelCopyWith<$Res>? get volume;
+  $CargoModelCopyWith<$Res>? get cargo;
+}
+
+/// @nodoc
+class _$TrunkModelCopyWithImpl<$Res> implements $TrunkModelCopyWith<$Res> {
+  _$TrunkModelCopyWithImpl(this._value, this._then);
+
+  final TrunkModel _value;
+  // ignore: unused_field
+  final $Res Function(TrunkModel) _then;
+
+  @override
+  $Res call({
+    Object? volume = freezed,
+    Object? cargo = freezed,
+  }) {
+    return _then(_value.copyWith(
+      volume: volume == freezed
+          ? _value.volume
+          : volume // ignore: cast_nullable_to_non_nullable
+              as TrunkVolumeModel?,
+      cargo: cargo == freezed
+          ? _value.cargo
+          : cargo // ignore: cast_nullable_to_non_nullable
+              as CargoModel?,
+    ));
+  }
+
+  @override
+  $TrunkVolumeModelCopyWith<$Res>? get volume {
+    if (_value.volume == null) {
+      return null;
+    }
+
+    return $TrunkVolumeModelCopyWith<$Res>(_value.volume!, (value) {
+      return _then(_value.copyWith(volume: value));
+    });
+  }
+
+  @override
+  $CargoModelCopyWith<$Res>? get cargo {
+    if (_value.cargo == null) {
+      return null;
+    }
+
+    return $CargoModelCopyWith<$Res>(_value.cargo!, (value) {
+      return _then(_value.copyWith(cargo: value));
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$$_TrunkModelCopyWith<$Res>
+    implements $TrunkModelCopyWith<$Res> {
+  factory _$$_TrunkModelCopyWith(
+          _$_TrunkModel value, $Res Function(_$_TrunkModel) then) =
+      __$$_TrunkModelCopyWithImpl<$Res>;
+  @override
+  $Res call(
+      {@JsonKey(name: 'trunk_volume') TrunkVolumeModel? volume,
+      @JsonKey(name: 'cargo') CargoModel? cargo});
+
+  @override
+  $TrunkVolumeModelCopyWith<$Res>? get volume;
+  @override
+  $CargoModelCopyWith<$Res>? get cargo;
+}
+
+/// @nodoc
+class __$$_TrunkModelCopyWithImpl<$Res> extends _$TrunkModelCopyWithImpl<$Res>
+    implements _$$_TrunkModelCopyWith<$Res> {
+  __$$_TrunkModelCopyWithImpl(
+      _$_TrunkModel _value, $Res Function(_$_TrunkModel) _then)
+      : super(_value, (v) => _then(v as _$_TrunkModel));
+
+  @override
+  _$_TrunkModel get _value => super._value as _$_TrunkModel;
+
+  @override
+  $Res call({
+    Object? volume = freezed,
+    Object? cargo = freezed,
+  }) {
+    return _then(_$_TrunkModel(
+      volume: volume == freezed
+          ? _value.volume
+          : volume // ignore: cast_nullable_to_non_nullable
+              as TrunkVolumeModel?,
+      cargo: cargo == freezed
+          ? _value.cargo
+          : cargo // ignore: cast_nullable_to_non_nullable
+              as CargoModel?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$_TrunkModel extends _TrunkModel {
+  const _$_TrunkModel(
+      {@JsonKey(name: 'trunk_volume') this.volume,
+      @JsonKey(name: 'cargo') this.cargo})
+      : super._();
+
+  factory _$_TrunkModel.fromJson(Map<String, dynamic> json) =>
+      _$$_TrunkModelFromJson(json);
+
+  @override
+  @JsonKey(name: 'trunk_volume')
+  final TrunkVolumeModel? volume;
+  @override
+  @JsonKey(name: 'cargo')
+  final CargoModel? cargo;
+
+  @override
+  String toString() {
+    return 'TrunkModel(volume: $volume, cargo: $cargo)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_TrunkModel &&
+            const DeepCollectionEquality().equals(other.volume, volume) &&
+            const DeepCollectionEquality().equals(other.cargo, cargo));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(volume),
+      const DeepCollectionEquality().hash(cargo));
+
+  @JsonKey(ignore: true)
+  @override
+  _$$_TrunkModelCopyWith<_$_TrunkModel> get copyWith =>
+      __$$_TrunkModelCopyWithImpl<_$_TrunkModel>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_TrunkModelToJson(
+      this,
+    );
+  }
+}
+
+abstract class _TrunkModel extends TrunkModel {
+  const factory _TrunkModel(
+      {@JsonKey(name: 'trunk_volume') final TrunkVolumeModel? volume,
+      @JsonKey(name: 'cargo') final CargoModel? cargo}) = _$_TrunkModel;
+  const _TrunkModel._() : super._();
+
+  factory _TrunkModel.fromJson(Map<String, dynamic> json) =
+      _$_TrunkModel.fromJson;
+
+  @override
+  @JsonKey(name: 'trunk_volume')
+  TrunkVolumeModel? get volume;
+  @override
+  @JsonKey(name: 'cargo')
+  CargoModel? get cargo;
+  @override
+  @JsonKey(ignore: true)
+  _$$_TrunkModelCopyWith<_$_TrunkModel> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+TrunkVolumeModel _$TrunkVolumeModelFromJson(Map<String, dynamic> json) {
+  return _TrunkVolumeModel.fromJson(json);
+}
+
+/// @nodoc
+mixin _$TrunkVolumeModel {
+  @JsonKey(name: 'cubic_meters')
+  num? get cubicMeters => throw _privateConstructorUsedError;
+  @JsonKey(name: 'cubic_feet')
+  num? get cubicFeet => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $TrunkVolumeModelCopyWith<TrunkVolumeModel> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $TrunkVolumeModelCopyWith<$Res> {
+  factory $TrunkVolumeModelCopyWith(
+          TrunkVolumeModel value, $Res Function(TrunkVolumeModel) then) =
+      _$TrunkVolumeModelCopyWithImpl<$Res>;
+  $Res call(
+      {@JsonKey(name: 'cubic_meters') num? cubicMeters,
+      @JsonKey(name: 'cubic_feet') num? cubicFeet});
+}
+
+/// @nodoc
+class _$TrunkVolumeModelCopyWithImpl<$Res>
+    implements $TrunkVolumeModelCopyWith<$Res> {
+  _$TrunkVolumeModelCopyWithImpl(this._value, this._then);
+
+  final TrunkVolumeModel _value;
+  // ignore: unused_field
+  final $Res Function(TrunkVolumeModel) _then;
+
+  @override
+  $Res call({
+    Object? cubicMeters = freezed,
+    Object? cubicFeet = freezed,
+  }) {
+    return _then(_value.copyWith(
+      cubicMeters: cubicMeters == freezed
+          ? _value.cubicMeters
+          : cubicMeters // ignore: cast_nullable_to_non_nullable
+              as num?,
+      cubicFeet: cubicFeet == freezed
+          ? _value.cubicFeet
+          : cubicFeet // ignore: cast_nullable_to_non_nullable
+              as num?,
+    ));
+  }
+}
+
+/// @nodoc
+abstract class _$$_TrunkVolumeModelCopyWith<$Res>
+    implements $TrunkVolumeModelCopyWith<$Res> {
+  factory _$$_TrunkVolumeModelCopyWith(
+          _$_TrunkVolumeModel value, $Res Function(_$_TrunkVolumeModel) then) =
+      __$$_TrunkVolumeModelCopyWithImpl<$Res>;
+  @override
+  $Res call(
+      {@JsonKey(name: 'cubic_meters') num? cubicMeters,
+      @JsonKey(name: 'cubic_feet') num? cubicFeet});
+}
+
+/// @nodoc
+class __$$_TrunkVolumeModelCopyWithImpl<$Res>
+    extends _$TrunkVolumeModelCopyWithImpl<$Res>
+    implements _$$_TrunkVolumeModelCopyWith<$Res> {
+  __$$_TrunkVolumeModelCopyWithImpl(
+      _$_TrunkVolumeModel _value, $Res Function(_$_TrunkVolumeModel) _then)
+      : super(_value, (v) => _then(v as _$_TrunkVolumeModel));
+
+  @override
+  _$_TrunkVolumeModel get _value => super._value as _$_TrunkVolumeModel;
+
+  @override
+  $Res call({
+    Object? cubicMeters = freezed,
+    Object? cubicFeet = freezed,
+  }) {
+    return _then(_$_TrunkVolumeModel(
+      cubicMeters: cubicMeters == freezed
+          ? _value.cubicMeters
+          : cubicMeters // ignore: cast_nullable_to_non_nullable
+              as num?,
+      cubicFeet: cubicFeet == freezed
+          ? _value.cubicFeet
+          : cubicFeet // ignore: cast_nullable_to_non_nullable
+              as num?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$_TrunkVolumeModel extends _TrunkVolumeModel {
+  const _$_TrunkVolumeModel(
+      {@JsonKey(name: 'cubic_meters') this.cubicMeters,
+      @JsonKey(name: 'cubic_feet') this.cubicFeet})
+      : super._();
+
+  factory _$_TrunkVolumeModel.fromJson(Map<String, dynamic> json) =>
+      _$$_TrunkVolumeModelFromJson(json);
+
+  @override
+  @JsonKey(name: 'cubic_meters')
+  final num? cubicMeters;
+  @override
+  @JsonKey(name: 'cubic_feet')
+  final num? cubicFeet;
+
+  @override
+  String toString() {
+    return 'TrunkVolumeModel(cubicMeters: $cubicMeters, cubicFeet: $cubicFeet)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_TrunkVolumeModel &&
+            const DeepCollectionEquality()
+                .equals(other.cubicMeters, cubicMeters) &&
+            const DeepCollectionEquality().equals(other.cubicFeet, cubicFeet));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(cubicMeters),
+      const DeepCollectionEquality().hash(cubicFeet));
+
+  @JsonKey(ignore: true)
+  @override
+  _$$_TrunkVolumeModelCopyWith<_$_TrunkVolumeModel> get copyWith =>
+      __$$_TrunkVolumeModelCopyWithImpl<_$_TrunkVolumeModel>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_TrunkVolumeModelToJson(
+      this,
+    );
+  }
+}
+
+abstract class _TrunkVolumeModel extends TrunkVolumeModel {
+  const factory _TrunkVolumeModel(
+      {@JsonKey(name: 'cubic_meters') final num? cubicMeters,
+      @JsonKey(name: 'cubic_feet') final num? cubicFeet}) = _$_TrunkVolumeModel;
+  const _TrunkVolumeModel._() : super._();
+
+  factory _TrunkVolumeModel.fromJson(Map<String, dynamic> json) =
+      _$_TrunkVolumeModel.fromJson;
+
+  @override
+  @JsonKey(name: 'cubic_meters')
+  num? get cubicMeters;
+  @override
+  @JsonKey(name: 'cubic_feet')
+  num? get cubicFeet;
+  @override
+  @JsonKey(ignore: true)
+  _$$_TrunkVolumeModelCopyWith<_$_TrunkVolumeModel> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+CargoModel _$CargoModelFromJson(Map<String, dynamic> json) {
+  return _CargoModel.fromJson(json);
+}
+
+/// @nodoc
+mixin _$CargoModel {
+  @JsonKey(name: 'solar_array')
+  num? get solarArray => throw _privateConstructorUsedError;
+  @JsonKey(name: 'unpressurized_cargo')
+  bool get isUnpressurizedCargo => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $CargoModelCopyWith<CargoModel> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $CargoModelCopyWith<$Res> {
+  factory $CargoModelCopyWith(
+          CargoModel value, $Res Function(CargoModel) then) =
+      _$CargoModelCopyWithImpl<$Res>;
+  $Res call(
+      {@JsonKey(name: 'solar_array') num? solarArray,
+      @JsonKey(name: 'unpressurized_cargo') bool isUnpressurizedCargo});
+}
+
+/// @nodoc
+class _$CargoModelCopyWithImpl<$Res> implements $CargoModelCopyWith<$Res> {
+  _$CargoModelCopyWithImpl(this._value, this._then);
+
+  final CargoModel _value;
+  // ignore: unused_field
+  final $Res Function(CargoModel) _then;
+
+  @override
+  $Res call({
+    Object? solarArray = freezed,
+    Object? isUnpressurizedCargo = freezed,
+  }) {
+    return _then(_value.copyWith(
+      solarArray: solarArray == freezed
+          ? _value.solarArray
+          : solarArray // ignore: cast_nullable_to_non_nullable
+              as num?,
+      isUnpressurizedCargo: isUnpressurizedCargo == freezed
+          ? _value.isUnpressurizedCargo
+          : isUnpressurizedCargo // ignore: cast_nullable_to_non_nullable
+              as bool,
+    ));
+  }
+}
+
+/// @nodoc
+abstract class _$$_CargoModelCopyWith<$Res>
+    implements $CargoModelCopyWith<$Res> {
+  factory _$$_CargoModelCopyWith(
+          _$_CargoModel value, $Res Function(_$_CargoModel) then) =
+      __$$_CargoModelCopyWithImpl<$Res>;
+  @override
+  $Res call(
+      {@JsonKey(name: 'solar_array') num? solarArray,
+      @JsonKey(name: 'unpressurized_cargo') bool isUnpressurizedCargo});
+}
+
+/// @nodoc
+class __$$_CargoModelCopyWithImpl<$Res> extends _$CargoModelCopyWithImpl<$Res>
+    implements _$$_CargoModelCopyWith<$Res> {
+  __$$_CargoModelCopyWithImpl(
+      _$_CargoModel _value, $Res Function(_$_CargoModel) _then)
+      : super(_value, (v) => _then(v as _$_CargoModel));
+
+  @override
+  _$_CargoModel get _value => super._value as _$_CargoModel;
+
+  @override
+  $Res call({
+    Object? solarArray = freezed,
+    Object? isUnpressurizedCargo = freezed,
+  }) {
+    return _then(_$_CargoModel(
+      solarArray: solarArray == freezed
+          ? _value.solarArray
+          : solarArray // ignore: cast_nullable_to_non_nullable
+              as num?,
+      isUnpressurizedCargo: isUnpressurizedCargo == freezed
+          ? _value.isUnpressurizedCargo
+          : isUnpressurizedCargo // ignore: cast_nullable_to_non_nullable
+              as bool,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$_CargoModel extends _CargoModel {
+  const _$_CargoModel(
+      {@JsonKey(name: 'solar_array') this.solarArray,
+      @JsonKey(name: 'unpressurized_cargo') this.isUnpressurizedCargo = false})
+      : super._();
+
+  factory _$_CargoModel.fromJson(Map<String, dynamic> json) =>
+      _$$_CargoModelFromJson(json);
+
+  @override
+  @JsonKey(name: 'solar_array')
+  final num? solarArray;
+  @override
+  @JsonKey(name: 'unpressurized_cargo')
+  final bool isUnpressurizedCargo;
+
+  @override
+  String toString() {
+    return 'CargoModel(solarArray: $solarArray, isUnpressurizedCargo: $isUnpressurizedCargo)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_CargoModel &&
+            const DeepCollectionEquality()
+                .equals(other.solarArray, solarArray) &&
+            const DeepCollectionEquality()
+                .equals(other.isUnpressurizedCargo, isUnpressurizedCargo));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(solarArray),
+      const DeepCollectionEquality().hash(isUnpressurizedCargo));
+
+  @JsonKey(ignore: true)
+  @override
+  _$$_CargoModelCopyWith<_$_CargoModel> get copyWith =>
+      __$$_CargoModelCopyWithImpl<_$_CargoModel>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_CargoModelToJson(
+      this,
+    );
+  }
+}
+
+abstract class _CargoModel extends CargoModel {
+  const factory _CargoModel(
+      {@JsonKey(name: 'solar_array')
+          final num? solarArray,
+      @JsonKey(name: 'unpressurized_cargo')
+          final bool isUnpressurizedCargo}) = _$_CargoModel;
+  const _CargoModel._() : super._();
+
+  factory _CargoModel.fromJson(Map<String, dynamic> json) =
+      _$_CargoModel.fromJson;
+
+  @override
+  @JsonKey(name: 'solar_array')
+  num? get solarArray;
+  @override
+  @JsonKey(name: 'unpressurized_cargo')
+  bool get isUnpressurizedCargo;
+  @override
+  @JsonKey(ignore: true)
+  _$$_CargoModelCopyWith<_$_CargoModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
