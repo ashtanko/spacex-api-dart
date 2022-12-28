@@ -557,3 +557,114 @@ const dragonModel = DragonModel(
       'Dragon is a reusable spacecraft developed by SpaceX, an American private space transportation company based in Hawthorne, California. Dragon is launched into space by the SpaceX Falcon 9 two-stage-to-orbit launch vehicle. The Dragon spacecraft was originally designed for human travel, but so far has only been used to deliver cargo to the International Space Station (ISS).',
   id: '5e9d058759b1ff74a7ad5f8f',
 );
+
+const landpadModel1 = LandpadModel(id: '0');
+const landpadModel2 = LandpadModel(id: '0');
+const landpadModel = LandpadModel(
+  images: ImagesModel(large: ['https://i.imgur.com/KHBk6jO.png']),
+  name: 'LZ-1',
+  fullName: 'Landing Zone 1',
+  status: 'active',
+  type: 'RTLS',
+  locality: 'Cape Canaveral',
+  region: 'Florida',
+  latitude: 28.485833,
+  longitude: -80.544444,
+  landingAttempts: 20,
+  landingSuccesses: 19,
+  wikipedia: 'https://en.wikipedia.org/wiki/Landing_Zones_1_and_2',
+  details:
+      "SpaceX's first east coast landing pad is Landing Zone 1, where the historic first Falcon 9 landing occurred in December 2015. LC-13 was originally used as a launch pad for early Atlas missiles and rockets from Lockheed Martin. LC-1 was later expanded to include Landing Zone 2 for side booster RTLS Falcon Heavy missions, and it was first used in February 2018 for that purpose.",
+  launches: [
+    '5eb87cefffd86e000604b342',
+    '5eb87cf9ffd86e000604b349',
+    '5eb87cfeffd86e000604b34d',
+    '5eb87d01ffd86e000604b350',
+    '5eb87d03ffd86e000604b352',
+    '5eb87d07ffd86e000604b356',
+    '5eb87d09ffd86e000604b358',
+    '5eb87d0effd86e000604b35c',
+    '5eb87d10ffd86e000604b35e',
+    '5eb87d13ffd86e000604b360',
+    '5eb87d26ffd86e000604b371',
+    '5eb87d2dffd86e000604b376',
+    '5eb87d35ffd86e000604b37a',
+    '5eb87d36ffd86e000604b37b',
+    '5eb87d42ffd86e000604b384',
+    '5eb87d47ffd86e000604b38a',
+    '5f8399fb818d8b59f5740d43',
+    '600f9b6d8f798e2a4d5f979f',
+    '61bf3e31cd5ab50b0d936345',
+    '6161d32d6db1a92bfba85359'
+  ],
+  id: '5e9e3032383ecb267a34e7c7',
+);
+
+const landpadFullModel1 = LandpadFullModel(id: '0');
+const landpadFullModel2 = LandpadFullModel(id: '0');
+const landpadFullModel = LandpadFullModel(
+  images: ImagesModel(large: ['https://i.imgur.com/KHBk6jO.png']),
+  name: 'LZ-1',
+  fullName: 'Landing Zone 1',
+  status: 'active',
+  type: 'RTLS',
+  locality: 'Cape Canaveral',
+  region: 'Florida',
+  latitude: 28.485833,
+  longitude: -80.544444,
+  landingAttempts: 21,
+  landingSuccesses: 20,
+  wikipedia: 'https://en.wikipedia.org/wiki/Landing_Zones_1_and_2',
+  details:
+      "SpaceX's first east coast landing pad is Landing Zone 1, where the historic first Falcon 9 landing occurred in December 2015. LC-13 was originally used as a launch pad for early Atlas missiles and rockets from Lockheed Martin. LC-1 was later expanded to include Landing Zone 2 for side booster RTLS Falcon Heavy missions, and it was first used in February 2018 for that purpose.",
+  launches: [
+    LaunchModel(
+      links: LaunchLinksModel(
+        patch: LaunchPatchModel(
+          small: 'https://images2.imgbox.com/fa/dc/FOUDQ0Sn_o.png',
+          large: 'https://images2.imgbox.com/04/6e/kniggvWD_o.png',
+        ),
+        reddit: LaunchRedditModel(),
+        flickr: LaunchFlickrModel(small: [], original: []),
+        presskit: 'http://www.spacex.com/files/downloads/cots1-20101206.pdf',
+        webcast: 'https://www.youtube.com/watch?v=cdLITgWKe_0',
+        youtubeId: 'cdLITgWKe_0',
+        article: 'https://en.wikipedia.org/wiki/SpaceX_COTS_Demo_Flight_1',
+        wikipedia: 'https://en.wikipedia.org/wiki/SpaceX_COTS_Demo_Flight_1',
+      ),
+      staticFireDateUtc: '2010-12-04T00:00:00.000Z',
+      staticFireDateUnix: 1291420800,
+      net: false,
+      window: 0,
+      rocket: '5e9d0d95eda69973a809d1ec',
+      success: true,
+      failures: [],
+      crew: [],
+      ships: ['5ea6ed2d080df4000697c901'],
+      capsules: ['5e9e2c5bf35918ed873b2664'],
+      payloads: ['5eb0e4b9b6c3bb0006eeb1e8', '5eb0e4b9b6c3bb0006eeb1e9'],
+      launchpad: '5e9e4501f509094ba4566f84',
+      flightNumber: 7,
+      name: 'COTS 1',
+      dateUtc: '2010-12-08T15:43:00.000Z',
+      dateUnix: 1291822980,
+      dateLocal: '2010-12-08T11:43:00-04:00',
+      datePrecision: 'hour',
+      upcoming: false,
+      cores: [
+        CoreModel(
+          core: '5e9e289ef35918187c3b2629',
+          flight: 1,
+          hasGridfins: false,
+          hasLegs: false,
+          reused: false,
+          landingAttempt: false,
+        )
+      ],
+      autoUpdate: true,
+      tbd: false,
+      id: '5eb87cdeffd86e000604b330',
+    ),
+  ],
+  id: '5e9e3032383ecb267a34e7c7',
+);
