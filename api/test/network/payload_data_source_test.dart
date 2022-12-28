@@ -5,20 +5,19 @@ import 'package:api/network/payload_data_source.dart';
 import 'package:dio/dio.dart';
 import 'package:test/test.dart';
 
+import '../helpers/dio_factory.dart';
+
 void main() {
   late Dio dio;
   late PayloadDataSource dataSource;
 
   setUp(() {
-    dio = Dio();
+    dio = DioFactory().create();
     dataSource = PayloadDataSource(PayloadApi(dio));
   });
 
   test('getAllPayloads with no empty query data, returns data from api',
       () async {
-    // arrange
-    dio.interceptors.add(LoggingInterceptor());
-
     // act
     final data = await dataSource.getAllPayloads();
 
@@ -28,8 +27,6 @@ void main() {
 
   test('queryPayload with offset 5, returns data from api', () async {
     const id = '5eb0e4b5b6c3bb0006eeb1e1';
-    // arrange
-    dio.interceptors.add(LoggingInterceptor());
 
     // act
     final data = await dataSource.getOnePayload(id);
@@ -40,9 +37,6 @@ void main() {
 
   test('query full payloads with populated launch data, returns data from api',
       () async {
-    // arrange
-    dio.interceptors.add(LoggingInterceptor());
-
     // act
     final data = await dataSource.queryFullPayloads(
       const q.QueryModel(options: q.OptionsModel(populate: ['launch'])),
@@ -54,14 +48,14 @@ void main() {
   });
 
   test('queryPayloads with offset 5, returns data from api', () async {
-    // arrange
     dio.interceptors.add(
       LoggingInterceptor(),
     );
 
     // act
-    final data = await dataSource
-        .queryPayloads(const q.QueryModel(options: q.OptionsModel(offset: 5, page: 1)));
+    final data = await dataSource.queryPayloads(
+      const q.QueryModel(options: q.OptionsModel(offset: 5, page: 1)),
+    );
 
     // assert
     expect(data.page, 1);

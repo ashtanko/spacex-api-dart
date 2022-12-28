@@ -214,7 +214,7 @@ void main() {
               reddit: LaunchRedditModel(),
               flickr: LaunchFlickrModel(small: [], original: []),
               webcast: 'https://www.youtube.com/watch?v=Lk4zQ2wP-Nc',
-              youtubeID: 'Lk4zQ2wP-Nc',
+              youtubeId: 'Lk4zQ2wP-Nc',
               article:
                   'https://www.space.com/3590-spacex-falcon-1-rocket-fails-reach-orbit.html',
               wikipedia: 'https://en.wikipedia.org/wiki/DemoSat',

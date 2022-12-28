@@ -1,23 +1,21 @@
-import 'package:api/api/dio/interceptors/logging_interceptor.dart';
 import 'package:api/api/launch/launch_api.dart';
 import 'package:api/models/query/query_model.dart' as q;
 import 'package:api/network/launch_data_source.dart';
 import 'package:dio/dio.dart';
 import 'package:test/test.dart';
 
+import '../helpers/dio_factory.dart';
+
 void main() {
   late Dio dio;
   late LaunchDataSource dataSource;
 
   setUp(() {
-    dio = Dio();
+    dio = DioFactory().create();
     dataSource = LaunchDataSource(LaunchApi(dio));
   });
 
   test('getAllLaunches with empty query data, returns data from api', () async {
-    // arrange
-    dio.interceptors.add(LoggingInterceptor());
-
     // act
     final data = await dataSource.getAllLaunches();
 
@@ -27,9 +25,6 @@ void main() {
 
   test('getUpcomingLaunches with empty query data, returns data from api',
       () async {
-    // arrange
-    dio.interceptors.add(LoggingInterceptor());
-
     // act
     final data = await dataSource.getUpcomingLaunches();
 
@@ -39,9 +34,6 @@ void main() {
 
   test('getPastLaunches with empty query data, returns data from api',
       () async {
-    // arrange
-    dio.interceptors.add(LoggingInterceptor());
-
     // act
     final data = await dataSource.getPastLaunches();
 
@@ -51,9 +43,6 @@ void main() {
 
   test('getLatestLaunch with empty query data, returns data from api',
       () async {
-    // arrange
-    dio.interceptors.add(LoggingInterceptor());
-
     // act
     final data = await dataSource.getLatestLaunch();
 
@@ -62,9 +51,6 @@ void main() {
   });
 
   test('getNextLaunch with empty query data, returns data from api', () async {
-    // arrange
-    dio.interceptors.add(LoggingInterceptor());
-
     // act
     final data = await dataSource.getNextLaunch();
 
@@ -73,9 +59,6 @@ void main() {
   });
 
   test('queryLaunches with empty query data, returns data from api', () async {
-    // arrange
-    dio.interceptors.add(LoggingInterceptor());
-
     // act
     final data = await dataSource.queryLaunches(const q.QueryModel());
 
@@ -85,9 +68,6 @@ void main() {
   });
 
   test('queryLaunches with offset 5, returns data from api', () async {
-    // arrange
-    dio.interceptors.add(LoggingInterceptor());
-
     // act
     final data = await dataSource.queryLaunches(
       const q.QueryModel(options: q.OptionsModel(offset: 5, page: 1)),
@@ -99,9 +79,6 @@ void main() {
   });
 
   test('queryFullLaunches with offset 5, returns data from api', () async {
-    // arrange
-    dio.interceptors.add(LoggingInterceptor());
-
     // act
     final data = await dataSource.queryFullLaunches(
       const q.QueryModel(
@@ -125,8 +102,6 @@ void main() {
 
   test('getLaunch, returns data from api', () async {
     const id = '5eb87cd9ffd86e000604b32a';
-    // arrange
-    dio.interceptors.add(LoggingInterceptor());
 
     // act
     final data = await dataSource.getLaunch(id);

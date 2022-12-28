@@ -228,7 +228,7 @@ _$_LaunchModel _$$_LaunchModelFromJson(Map<String, dynamic> json) =>
               ?.map((e) => ShortCrewModel.fromJson(e as Map<String, dynamic>))
               .toList() ??
           const <ShortCrewModel>[],
-      details: json['details'] as String? ?? '',
+      details: json['details'] as String?,
       failures: (json['failures'] as List<dynamic>?)
               ?.map(
                   (e) => LaunchFailureModel.fromJson(e as Map<String, dynamic>))
@@ -267,14 +267,6 @@ Map<String, dynamic> _$$_LaunchModelToJson(_$_LaunchModel instance) {
     'capsules': instance.capsules,
     'ships': instance.ships,
     'crew': instance.crew.map((e) => e.toJson()).toList(),
-    'details': instance.details,
-    'failures': instance.failures.map((e) => e.toJson()).toList(),
-    'success': instance.success,
-    'rocket': instance.rocket,
-    'window': instance.window,
-    'net': instance.net,
-    'static_fire_date_unix': instance.staticFireDateUnix,
-    'static_fire_date_utc': instance.staticFireDateUtc,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -283,6 +275,14 @@ Map<String, dynamic> _$$_LaunchModelToJson(_$_LaunchModel instance) {
     }
   }
 
+  writeNotNull('details', instance.details);
+  val['failures'] = instance.failures.map((e) => e.toJson()).toList();
+  val['success'] = instance.success;
+  val['rocket'] = instance.rocket;
+  val['window'] = instance.window;
+  val['net'] = instance.net;
+  val['static_fire_date_unix'] = instance.staticFireDateUnix;
+  val['static_fire_date_utc'] = instance.staticFireDateUtc;
   writeNotNull('links', instance.links?.toJson());
   writeNotNull('fairings', instance.fairings?.toJson());
   writeNotNull('launch_library_id', instance.launchLibraryId);
@@ -302,7 +302,7 @@ _$_LaunchLinksModel _$$_LaunchLinksModelFromJson(Map<String, dynamic> json) =>
           : LaunchFlickrModel.fromJson(json['flickr'] as Map<String, dynamic>),
       presskit: json['presskit'] as String?,
       webcast: json['webcast'] as String?,
-      youtubeID: json['youtube_id'] as String?,
+      youtubeId: json['youtube_id'] as String?,
       article: json['article'] as String?,
       wikipedia: json['wikipedia'] as String?,
     );
@@ -321,7 +321,7 @@ Map<String, dynamic> _$$_LaunchLinksModelToJson(_$_LaunchLinksModel instance) {
   writeNotNull('flickr', instance.flickr?.toJson());
   writeNotNull('presskit', instance.presskit);
   writeNotNull('webcast', instance.webcast);
-  writeNotNull('youtube_id', instance.youtubeID);
+  writeNotNull('youtube_id', instance.youtubeId);
   writeNotNull('article', instance.article);
   writeNotNull('wikipedia', instance.wikipedia);
   return val;

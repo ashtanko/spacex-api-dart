@@ -1,5 +1,4 @@
-import 'package:api/models/space_track/space_track_model.dart';
-import 'package:api/models/starlink/starlink_model.dart';
+import 'package:api/api.dart';
 import 'package:test/test.dart';
 
 void main() {

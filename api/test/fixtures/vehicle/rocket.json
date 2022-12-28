@@ -71,8 +71,7 @@
     "thrust_to_weight": 96
   },
   "landing_legs": {
-    "number": 0,
-    "material": null
+    "number": 0
   },
   "payload_weights": [
     {

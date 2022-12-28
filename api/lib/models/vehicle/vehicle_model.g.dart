@@ -31,7 +31,7 @@ _$_RoadsterVehicleModel _$$_RoadsterVehicleModelFromJson(
       semiMajorAxisAu: json['semi_major_axis_au'] as num? ?? 265.9404414116724,
       periapsisAu: json['periapsis_au'] as num? ?? 0.9860659532962203,
       apoapsisAu: json['apoapsis_au'] as num? ?? 1.664347009550897,
-      orbitYype: json['orbit_type'] as String? ?? 'heliocentric',
+      orbitType: json['orbit_type'] as String? ?? 'heliocentric',
       epochJd: json['epoch_jd'] as num? ?? 2459679.347222222,
       noradId: json['norad_id'] as num? ?? 43205,
       launchMassLbs: json['launch_mass_lbs'] as num? ?? 2976,
@@ -72,7 +72,7 @@ Map<String, dynamic> _$$_RoadsterVehicleModelToJson(
   val['semi_major_axis_au'] = instance.semiMajorAxisAu;
   val['periapsis_au'] = instance.periapsisAu;
   val['apoapsis_au'] = instance.apoapsisAu;
-  val['orbit_type'] = instance.orbitYype;
+  val['orbit_type'] = instance.orbitType;
   val['epoch_jd'] = instance.epochJd;
   val['norad_id'] = instance.noradId;
   val['launch_mass_lbs'] = instance.launchMassLbs;
@@ -397,6 +397,7 @@ Map<String, dynamic> _$$_ShipModelToJson(_$_ShipModel instance) {
 _$_ShipFullModel _$$_ShipFullModelFromJson(Map<String, dynamic> json) =>
     _$_ShipFullModel(
       id: json['id'] as String,
+      lastAisUpdate: json['last_ais_update'],
       launches: (json['launches'] as List<dynamic>?)
               ?.map((e) => LaunchModel.fromJson(e as Map<String, dynamic>))
               .toList() ??
@@ -417,6 +418,7 @@ _$_ShipFullModel _$$_ShipFullModelFromJson(Map<String, dynamic> json) =>
       vehicleClass: json['class'] as int?,
       abs: json['abs'] as int?,
       imo: json['imo'] as int?,
+      mmsi: json['mmsi'] as int?,
       roles:
           (json['roles'] as List<dynamic>?)?.map((e) => e as String).toList() ??
               const <String>[],
@@ -428,8 +430,6 @@ _$_ShipFullModel _$$_ShipFullModelFromJson(Map<String, dynamic> json) =>
 Map<String, dynamic> _$$_ShipFullModelToJson(_$_ShipFullModel instance) {
   final val = <String, dynamic>{
     'id': instance.id,
-    'launches': instance.launches.map((e) => e.toJson()).toList(),
-    'active': instance.isActive,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -438,6 +438,9 @@ Map<String, dynamic> _$$_ShipFullModelToJson(_$_ShipFullModel instance) {
     }
   }
 
+  writeNotNull('last_ais_update', instance.lastAisUpdate);
+  val['launches'] = instance.launches.map((e) => e.toJson()).toList();
+  val['active'] = instance.isActive;
   writeNotNull('name', instance.name);
   writeNotNull('image', instance.image);
   writeNotNull('link', instance.link);
@@ -453,6 +456,7 @@ Map<String, dynamic> _$$_ShipFullModelToJson(_$_ShipFullModel instance) {
   writeNotNull('class', instance.vehicleClass);
   writeNotNull('abs', instance.abs);
   writeNotNull('imo', instance.imo);
+  writeNotNull('mmsi', instance.mmsi);
   val['roles'] = instance.roles;
   writeNotNull('type', instance.type);
   writeNotNull('model', instance.model);
@@ -464,6 +468,30 @@ _$_DragonModel _$$_DragonModelFromJson(Map<String, dynamic> json) =>
     _$_DragonModel(
       id: json['id'] as String,
       description: json['description'] as String?,
+      heatShield: json['heat_shield'] == null
+          ? null
+          : HeatShieldModel.fromJson(
+              json['heat_shield'] as Map<String, dynamic>),
+      launchPayloadMass: json['launch_payload_mass'] == null
+          ? null
+          : MassModel.fromJson(
+              json['launch_payload_mass'] as Map<String, dynamic>),
+      launchPayloadVol: json['launch_payload_vol'] == null
+          ? null
+          : CubicLenModel.fromJson(
+              json['launch_payload_vol'] as Map<String, dynamic>),
+      returnPayloadMass: json['return_payload_mass'] == null
+          ? null
+          : MassModel.fromJson(
+              json['return_payload_mass'] as Map<String, dynamic>),
+      returnPayloadVol: json['return_payload_vol'] == null
+          ? null
+          : CubicLenModel.fromJson(
+              json['return_payload_vol'] as Map<String, dynamic>),
+      pressurizedCapsule: json['pressurized_capsule'] == null
+          ? null
+          : PressurizedCapsuleModel.fromJson(
+              json['pressurized_capsule'] as Map<String, dynamic>),
       wiki: json['wikipedia'] as String?,
       thrusters: (json['thrusters'] as List<dynamic>?)
               ?.map((e) => ThrusterModel.fromJson(e as Map<String, dynamic>))
@@ -506,6 +534,12 @@ Map<String, dynamic> _$$_DragonModelToJson(_$_DragonModel instance) {
   }
 
   writeNotNull('description', instance.description);
+  writeNotNull('heat_shield', instance.heatShield?.toJson());
+  writeNotNull('launch_payload_mass', instance.launchPayloadMass?.toJson());
+  writeNotNull('launch_payload_vol', instance.launchPayloadVol?.toJson());
+  writeNotNull('return_payload_mass', instance.returnPayloadMass?.toJson());
+  writeNotNull('return_payload_vol', instance.returnPayloadVol?.toJson());
+  writeNotNull('pressurized_capsule', instance.pressurizedCapsule?.toJson());
   writeNotNull('wikipedia', instance.wiki);
   val['thrusters'] = instance.thrusters.map((e) => e.toJson()).toList();
   writeNotNull('dry_mass_lb', instance.dryMassLb);
@@ -521,6 +555,53 @@ Map<String, dynamic> _$$_DragonModelToJson(_$_DragonModel instance) {
   writeNotNull('diameter', instance.diameter?.toJson());
   writeNotNull('height_w_trunk', instance.heightWTrunk?.toJson());
   writeNotNull('trunk', instance.trunk?.toJson());
+  return val;
+}
+
+_$_PressurizedCapsuleModel _$$_PressurizedCapsuleModelFromJson(
+        Map<String, dynamic> json) =>
+    _$_PressurizedCapsuleModel(
+      payloadVolume: json['payload_volume'] == null
+          ? null
+          : CubicLenModel.fromJson(
+              json['payload_volume'] as Map<String, dynamic>),
+    );
+
+Map<String, dynamic> _$$_PressurizedCapsuleModelToJson(
+    _$_PressurizedCapsuleModel instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('payload_volume', instance.payloadVolume?.toJson());
+  return val;
+}
+
+_$_HeatShieldModel _$$_HeatShieldModelFromJson(Map<String, dynamic> json) =>
+    _$_HeatShieldModel(
+      material: json['material'] as String?,
+      sizeMeters: json['size_meters'] as num?,
+      tempDegrees: json['temp_degrees'] as int?,
+      devPartner: json['dev_partner'] as String?,
+    );
+
+Map<String, dynamic> _$$_HeatShieldModelToJson(_$_HeatShieldModel instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('material', instance.material);
+  writeNotNull('size_meters', instance.sizeMeters);
+  writeNotNull('temp_degrees', instance.tempDegrees);
+  writeNotNull('dev_partner', instance.devPartner);
   return val;
 }
 
@@ -560,7 +641,7 @@ _$_TrunkModel _$$_TrunkModelFromJson(Map<String, dynamic> json) =>
     _$_TrunkModel(
       volume: json['trunk_volume'] == null
           ? null
-          : TrunkVolumeModel.fromJson(
+          : CubicLenModel.fromJson(
               json['trunk_volume'] as Map<String, dynamic>),
       cargo: json['cargo'] == null
           ? null
@@ -578,26 +659,6 @@ Map<String, dynamic> _$$_TrunkModelToJson(_$_TrunkModel instance) {
 
   writeNotNull('trunk_volume', instance.volume?.toJson());
   writeNotNull('cargo', instance.cargo?.toJson());
-  return val;
-}
-
-_$_TrunkVolumeModel _$$_TrunkVolumeModelFromJson(Map<String, dynamic> json) =>
-    _$_TrunkVolumeModel(
-      cubicMeters: json['cubic_meters'] as num?,
-      cubicFeet: json['cubic_feet'] as num?,
-    );
-
-Map<String, dynamic> _$$_TrunkVolumeModelToJson(_$_TrunkVolumeModel instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('cubic_meters', instance.cubicMeters);
-  writeNotNull('cubic_feet', instance.cubicFeet);
   return val;
 }
 

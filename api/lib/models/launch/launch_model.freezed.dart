@@ -1802,7 +1802,7 @@ mixin _$LaunchModel {
   @JsonKey(name: 'crew')
   List<ShortCrewModel> get crew => throw _privateConstructorUsedError;
   @JsonKey(name: 'details')
-  String get details => throw _privateConstructorUsedError;
+  String? get details => throw _privateConstructorUsedError;
   @JsonKey(name: 'failures')
   List<LaunchFailureModel> get failures => throw _privateConstructorUsedError;
   @JsonKey(name: 'success')
@@ -1852,7 +1852,7 @@ abstract class $LaunchModelCopyWith<$Res> {
       @JsonKey(name: 'capsules') List<String> capsules,
       @JsonKey(name: 'ships') List<String> ships,
       @JsonKey(name: 'crew') List<ShortCrewModel> crew,
-      @JsonKey(name: 'details') String details,
+      @JsonKey(name: 'details') String? details,
       @JsonKey(name: 'failures') List<LaunchFailureModel> failures,
       @JsonKey(name: 'success') bool success,
       @JsonKey(name: 'rocket') String rocket,
@@ -1974,7 +1974,7 @@ class _$LaunchModelCopyWithImpl<$Res> implements $LaunchModelCopyWith<$Res> {
       details: details == freezed
           ? _value.details
           : details // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       failures: failures == freezed
           ? _value.failures
           : failures // ignore: cast_nullable_to_non_nullable
@@ -2065,7 +2065,7 @@ abstract class _$$_LaunchModelCopyWith<$Res>
       @JsonKey(name: 'capsules') List<String> capsules,
       @JsonKey(name: 'ships') List<String> ships,
       @JsonKey(name: 'crew') List<ShortCrewModel> crew,
-      @JsonKey(name: 'details') String details,
+      @JsonKey(name: 'details') String? details,
       @JsonKey(name: 'failures') List<LaunchFailureModel> failures,
       @JsonKey(name: 'success') bool success,
       @JsonKey(name: 'rocket') String rocket,
@@ -2191,7 +2191,7 @@ class __$$_LaunchModelCopyWithImpl<$Res> extends _$LaunchModelCopyWithImpl<$Res>
       details: details == freezed
           ? _value.details
           : details // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       failures: failures == freezed
           ? _value._failures
           : failures // ignore: cast_nullable_to_non_nullable
@@ -2271,7 +2271,7 @@ class _$_LaunchModel extends _LaunchModel {
       @JsonKey(name: 'crew')
           final List<ShortCrewModel> crew = const <ShortCrewModel>[],
       @JsonKey(name: 'details')
-          this.details = '',
+          this.details,
       @JsonKey(name: 'failures')
           final List<LaunchFailureModel> failures = const [],
       @JsonKey(name: 'success')
@@ -2378,7 +2378,7 @@ class _$_LaunchModel extends _LaunchModel {
 
   @override
   @JsonKey(name: 'details')
-  final String details;
+  final String? details;
   final List<LaunchFailureModel> _failures;
   @override
   @JsonKey(name: 'failures')
@@ -2524,7 +2524,7 @@ abstract class _LaunchModel extends LaunchModel {
           @JsonKey(name: 'capsules') final List<String> capsules,
           @JsonKey(name: 'ships') final List<String> ships,
           @JsonKey(name: 'crew') final List<ShortCrewModel> crew,
-          @JsonKey(name: 'details') final String details,
+          @JsonKey(name: 'details') final String? details,
           @JsonKey(name: 'failures') final List<LaunchFailureModel> failures,
           @JsonKey(name: 'success') final bool success,
           @JsonKey(name: 'rocket') final String rocket,
@@ -2589,7 +2589,7 @@ abstract class _LaunchModel extends LaunchModel {
   List<ShortCrewModel> get crew;
   @override
   @JsonKey(name: 'details')
-  String get details;
+  String? get details;
   @override
   @JsonKey(name: 'failures')
   List<LaunchFailureModel> get failures;
@@ -2638,7 +2638,7 @@ mixin _$LaunchLinksModel {
   String? get presskit => throw _privateConstructorUsedError;
   String? get webcast => throw _privateConstructorUsedError;
   @JsonKey(name: 'youtube_id')
-  String? get youtubeID => throw _privateConstructorUsedError;
+  String? get youtubeId => throw _privateConstructorUsedError;
   @JsonKey(name: 'article')
   String? get article => throw _privateConstructorUsedError;
   @JsonKey(name: 'wikipedia')
@@ -2661,7 +2661,7 @@ abstract class $LaunchLinksModelCopyWith<$Res> {
       LaunchFlickrModel? flickr,
       String? presskit,
       String? webcast,
-      @JsonKey(name: 'youtube_id') String? youtubeID,
+      @JsonKey(name: 'youtube_id') String? youtubeId,
       @JsonKey(name: 'article') String? article,
       @JsonKey(name: 'wikipedia') String? wikipedia});
 
@@ -2686,7 +2686,7 @@ class _$LaunchLinksModelCopyWithImpl<$Res>
     Object? flickr = freezed,
     Object? presskit = freezed,
     Object? webcast = freezed,
-    Object? youtubeID = freezed,
+    Object? youtubeId = freezed,
     Object? article = freezed,
     Object? wikipedia = freezed,
   }) {
@@ -2711,9 +2711,9 @@ class _$LaunchLinksModelCopyWithImpl<$Res>
           ? _value.webcast
           : webcast // ignore: cast_nullable_to_non_nullable
               as String?,
-      youtubeID: youtubeID == freezed
-          ? _value.youtubeID
-          : youtubeID // ignore: cast_nullable_to_non_nullable
+      youtubeId: youtubeId == freezed
+          ? _value.youtubeId
+          : youtubeId // ignore: cast_nullable_to_non_nullable
               as String?,
       article: article == freezed
           ? _value.article
@@ -2773,7 +2773,7 @@ abstract class _$$_LaunchLinksModelCopyWith<$Res>
       LaunchFlickrModel? flickr,
       String? presskit,
       String? webcast,
-      @JsonKey(name: 'youtube_id') String? youtubeID,
+      @JsonKey(name: 'youtube_id') String? youtubeId,
       @JsonKey(name: 'article') String? article,
       @JsonKey(name: 'wikipedia') String? wikipedia});
 
@@ -2803,7 +2803,7 @@ class __$$_LaunchLinksModelCopyWithImpl<$Res>
     Object? flickr = freezed,
     Object? presskit = freezed,
     Object? webcast = freezed,
-    Object? youtubeID = freezed,
+    Object? youtubeId = freezed,
     Object? article = freezed,
     Object? wikipedia = freezed,
   }) {
@@ -2828,9 +2828,9 @@ class __$$_LaunchLinksModelCopyWithImpl<$Res>
           ? _value.webcast
           : webcast // ignore: cast_nullable_to_non_nullable
               as String?,
-      youtubeID: youtubeID == freezed
-          ? _value.youtubeID
-          : youtubeID // ignore: cast_nullable_to_non_nullable
+      youtubeId: youtubeId == freezed
+          ? _value.youtubeId
+          : youtubeId // ignore: cast_nullable_to_non_nullable
               as String?,
       article: article == freezed
           ? _value.article
@@ -2853,7 +2853,7 @@ class _$_LaunchLinksModel extends _LaunchLinksModel {
       this.flickr,
       this.presskit,
       this.webcast,
-      @JsonKey(name: 'youtube_id') this.youtubeID,
+      @JsonKey(name: 'youtube_id') this.youtubeId,
       @JsonKey(name: 'article') this.article,
       @JsonKey(name: 'wikipedia') this.wikipedia})
       : super._();
@@ -2873,7 +2873,7 @@ class _$_LaunchLinksModel extends _LaunchLinksModel {
   final String? webcast;
   @override
   @JsonKey(name: 'youtube_id')
-  final String? youtubeID;
+  final String? youtubeId;
   @override
   @JsonKey(name: 'article')
   final String? article;
@@ -2883,7 +2883,7 @@ class _$_LaunchLinksModel extends _LaunchLinksModel {
 
   @override
   String toString() {
-    return 'LaunchLinksModel(patch: $patch, reddit: $reddit, flickr: $flickr, presskit: $presskit, webcast: $webcast, youtubeID: $youtubeID, article: $article, wikipedia: $wikipedia)';
+    return 'LaunchLinksModel(patch: $patch, reddit: $reddit, flickr: $flickr, presskit: $presskit, webcast: $webcast, youtubeId: $youtubeId, article: $article, wikipedia: $wikipedia)';
   }
 
   @override
@@ -2896,7 +2896,7 @@ class _$_LaunchLinksModel extends _LaunchLinksModel {
             const DeepCollectionEquality().equals(other.flickr, flickr) &&
             const DeepCollectionEquality().equals(other.presskit, presskit) &&
             const DeepCollectionEquality().equals(other.webcast, webcast) &&
-            const DeepCollectionEquality().equals(other.youtubeID, youtubeID) &&
+            const DeepCollectionEquality().equals(other.youtubeId, youtubeId) &&
             const DeepCollectionEquality().equals(other.article, article) &&
             const DeepCollectionEquality().equals(other.wikipedia, wikipedia));
   }
@@ -2910,7 +2910,7 @@ class _$_LaunchLinksModel extends _LaunchLinksModel {
       const DeepCollectionEquality().hash(flickr),
       const DeepCollectionEquality().hash(presskit),
       const DeepCollectionEquality().hash(webcast),
-      const DeepCollectionEquality().hash(youtubeID),
+      const DeepCollectionEquality().hash(youtubeId),
       const DeepCollectionEquality().hash(article),
       const DeepCollectionEquality().hash(wikipedia));
 
@@ -2934,7 +2934,7 @@ abstract class _LaunchLinksModel extends LaunchLinksModel {
           final LaunchFlickrModel? flickr,
           final String? presskit,
           final String? webcast,
-          @JsonKey(name: 'youtube_id') final String? youtubeID,
+          @JsonKey(name: 'youtube_id') final String? youtubeId,
           @JsonKey(name: 'article') final String? article,
           @JsonKey(name: 'wikipedia') final String? wikipedia}) =
       _$_LaunchLinksModel;
@@ -2955,7 +2955,7 @@ abstract class _LaunchLinksModel extends LaunchLinksModel {
   String? get webcast;
   @override
   @JsonKey(name: 'youtube_id')
-  String? get youtubeID;
+  String? get youtubeId;
   @override
   @JsonKey(name: 'article')
   String? get article;

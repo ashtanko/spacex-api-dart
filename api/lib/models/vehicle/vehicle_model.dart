@@ -5,7 +5,7 @@ part 'vehicle_model.freezed.dart';
 
 part 'vehicle_model.g.dart';
 
-/// roadster
+/// Roadster model
 @freezed
 class RoadsterVehicleModel with _$RoadsterVehicleModel {
   const factory RoadsterVehicleModel({
@@ -42,7 +42,7 @@ class RoadsterVehicleModel with _$RoadsterVehicleModel {
         num semiMajorAxisAu,
     @JsonKey(name: 'periapsis_au') @Default(0.9860659532962203) num periapsisAu,
     @JsonKey(name: 'apoapsis_au') @Default(1.664347009550897) num apoapsisAu,
-    @JsonKey(name: 'orbit_type') @Default('heliocentric') String orbitYype,
+    @JsonKey(name: 'orbit_type') @Default('heliocentric') String orbitType,
     @JsonKey(name: 'epoch_jd') @Default(2459679.347222222) num epochJd,
     @JsonKey(name: 'norad_id') @Default(43205) num noradId,
     @JsonKey(name: 'launch_mass_lbs') @Default(2976) num launchMassLbs,
@@ -60,7 +60,7 @@ class RoadsterVehicleModel with _$RoadsterVehicleModel {
       _$RoadsterVehicleModelFromJson(json);
 }
 
-/// rocket
+/// Rocket model
 @freezed
 class RocketModel with _$RocketModel {
   const factory RocketModel({
@@ -178,6 +178,7 @@ class SecondStageModel with _$SecondStageModel {
       _$SecondStageModelFromJson(json);
 }
 
+/// Ship model
 @freezed
 class ShipModel with _$ShipModel {
   const factory ShipModel({
@@ -212,10 +213,12 @@ class ShipModel with _$ShipModel {
       _$ShipModelFromJson(json);
 }
 
+/// Ship full model
 @freezed
 class ShipFullModel with _$ShipFullModel {
   const factory ShipFullModel({
     @JsonKey(name: 'id') required String id,
+    @JsonKey(name: 'last_ais_update') dynamic lastAisUpdate,
     @JsonKey(name: 'launches')
     @Default(<LaunchModel>[])
         List<LaunchModel> launches,
@@ -235,6 +238,7 @@ class ShipFullModel with _$ShipFullModel {
     @JsonKey(name: 'class') int? vehicleClass,
     @JsonKey(name: 'abs') int? abs,
     @JsonKey(name: 'imo') int? imo,
+    @JsonKey(name: 'mmsi') int? mmsi,
     @Default(<String>[]) List<String> roles,
     @JsonKey(name: 'type') String? type,
     @JsonKey(name: 'model') String? model,
@@ -247,11 +251,19 @@ class ShipFullModel with _$ShipFullModel {
       _$ShipFullModelFromJson(json);
 }
 
+/// Dragon model
 @freezed
 class DragonModel with _$DragonModel {
   const factory DragonModel({
     @JsonKey(name: 'id') required String id,
     @JsonKey(name: 'description') String? description,
+    @JsonKey(name: 'heat_shield') HeatShieldModel? heatShield,
+    @JsonKey(name: 'launch_payload_mass') MassModel? launchPayloadMass,
+    @JsonKey(name: 'launch_payload_vol') CubicLenModel? launchPayloadVol,
+    @JsonKey(name: 'return_payload_mass') MassModel? returnPayloadMass,
+    @JsonKey(name: 'return_payload_vol') CubicLenModel? returnPayloadVol,
+    @JsonKey(name: 'pressurized_capsule')
+        PressurizedCapsuleModel? pressurizedCapsule,
     @JsonKey(name: 'wikipedia') String? wiki,
     @JsonKey(name: 'thrusters')
     @Default(<ThrusterModel>[])
@@ -278,6 +290,33 @@ class DragonModel with _$DragonModel {
 }
 
 @freezed
+class PressurizedCapsuleModel with _$PressurizedCapsuleModel {
+  const factory PressurizedCapsuleModel({
+    @JsonKey(name: 'payload_volume') CubicLenModel? payloadVolume,
+  }) = _PressurizedCapsuleModel;
+
+  const PressurizedCapsuleModel._();
+
+  factory PressurizedCapsuleModel.fromJson(Map<String, dynamic> json) =>
+      _$PressurizedCapsuleModelFromJson(json);
+}
+
+@freezed
+class HeatShieldModel with _$HeatShieldModel {
+  const factory HeatShieldModel({
+    @JsonKey(name: 'material') String? material,
+    @JsonKey(name: 'size_meters') num? sizeMeters,
+    @JsonKey(name: 'temp_degrees') int? tempDegrees,
+    @JsonKey(name: 'dev_partner') String? devPartner,
+  }) = _HeatShieldModel;
+
+  const HeatShieldModel._();
+
+  factory HeatShieldModel.fromJson(Map<String, dynamic> json) =>
+      _$HeatShieldModelFromJson(json);
+}
+
+@freezed
 class ThrusterModel with _$ThrusterModel {
   const factory ThrusterModel({
     @JsonKey(name: 'type') String? type,
@@ -298,7 +337,7 @@ class ThrusterModel with _$ThrusterModel {
 @freezed
 class TrunkModel with _$TrunkModel {
   const factory TrunkModel({
-    @JsonKey(name: 'trunk_volume') TrunkVolumeModel? volume,
+    @JsonKey(name: 'trunk_volume') CubicLenModel? volume,
     @JsonKey(name: 'cargo') CargoModel? cargo,
   }) = _TrunkModel;
 
@@ -306,19 +345,6 @@ class TrunkModel with _$TrunkModel {
 
   factory TrunkModel.fromJson(Map<String, dynamic> json) =>
       _$TrunkModelFromJson(json);
-}
-
-@freezed
-class TrunkVolumeModel with _$TrunkVolumeModel {
-  const factory TrunkVolumeModel({
-    @JsonKey(name: 'cubic_meters') num? cubicMeters,
-    @JsonKey(name: 'cubic_feet') num? cubicFeet,
-  }) = _TrunkVolumeModel;
-
-  const TrunkVolumeModel._();
-
-  factory TrunkVolumeModel.fromJson(Map<String, dynamic> json) =>
-      _$TrunkVolumeModelFromJson(json);
 }
 
 @freezed

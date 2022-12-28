@@ -1,24 +1,22 @@
-import 'package:api/api/dio/interceptors/logging_interceptor.dart';
 import 'package:api/api/launchpads/launchpads_api.dart';
 import 'package:api/models/query/query_model.dart' as q;
 import 'package:api/network/launchpads_data_source.dart';
 import 'package:dio/dio.dart';
 import 'package:test/test.dart';
 
+import '../helpers/dio_factory.dart';
+
 void main() {
   late Dio dio;
   late LaunchpadsDataSource dataSource;
 
   setUp(() {
-    dio = Dio();
+    dio = DioFactory().create();
     dataSource = LaunchpadsDataSource(LaunchpadsApi(dio));
   });
 
   test('getAllLaunchpads with empty query data, returns data from api',
       () async {
-    // arrange
-    dio.interceptors.add(LoggingInterceptor());
-
     // act
     final data = await dataSource.getAllLaunchpads();
 
@@ -28,8 +26,6 @@ void main() {
 
   test('getOneLaunchpad with offset 5, returns data from api', () async {
     const id = '5e9e4501f509094ba4566f84';
-    // arrange
-    dio.interceptors.add(LoggingInterceptor());
 
     // act
     final data = await dataSource.getLaunchpad(id);
@@ -40,9 +36,6 @@ void main() {
 
   test('queryLaunchpads with empty query data, returns data from api',
       () async {
-    // arrange
-    dio.interceptors.add(LoggingInterceptor());
-
     // act
     final data = await dataSource.queryLaunchpads(const q.QueryModel());
 
@@ -52,12 +45,10 @@ void main() {
   });
 
   test('queryLaunchpads with offset 5, returns data from api', () async {
-    // arrange
-    dio.interceptors.add(LoggingInterceptor());
-
     // act
-    final data = await dataSource
-        .queryLaunchpads(const q.QueryModel(options: q.OptionsModel(offset: 5, page: 1)));
+    final data = await dataSource.queryLaunchpads(
+      const q.QueryModel(options: q.OptionsModel(offset: 5, page: 1)),
+    );
 
     // assert
     expect(data.page, 1);
@@ -65,12 +56,11 @@ void main() {
   });
 
   test('queryFullLaunchpads with offset 5, returns data from api', () async {
-    // arrange
-    dio.interceptors.add(LoggingInterceptor());
-
     // act
     final data = await dataSource.queryFullLaunchpads(
-      const q.QueryModel(options: q.OptionsModel(populate: ['launches', 'rockets'])),
+      const q.QueryModel(
+        options: q.OptionsModel(populate: ['launches', 'rockets']),
+      ),
     );
 
     // assert

@@ -11,7 +11,6 @@ export 'launchpad/launchpad_model.dart';
 export 'payload/payload_model.dart';
 export 'query/query_model.dart';
 export 'response/api_paginated_list.dart';
-export 'space_track/space_track_model.dart';
 export 'starlink/starlink_model.dart';
 export 'unit/unit_model.dart';
 export 'vehicle/vehicle_model.dart';

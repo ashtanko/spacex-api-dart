@@ -106,7 +106,7 @@ class LaunchModel with _$LaunchModel {
     @JsonKey(name: 'crew')
     @Default(<ShortCrewModel>[])
         List<ShortCrewModel> crew,
-    @JsonKey(name: 'details') @Default('') String details,
+    @JsonKey(name: 'details') String? details,
     @JsonKey(name: 'failures') @Default([]) List<LaunchFailureModel> failures,
     @JsonKey(name: 'success') @Default(false) bool success,
     @JsonKey(name: 'rocket') @Default('') String rocket,
@@ -135,7 +135,7 @@ class LaunchLinksModel with _$LaunchLinksModel {
     LaunchFlickrModel? flickr,
     String? presskit,
     String? webcast,
-    @JsonKey(name: 'youtube_id') String? youtubeID,
+    @JsonKey(name: 'youtube_id') String? youtubeId,
     @JsonKey(name: 'article') String? article,
     @JsonKey(name: 'wikipedia') String? wikipedia,
   }) = _LaunchLinksModel;

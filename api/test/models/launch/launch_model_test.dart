@@ -23,7 +23,7 @@ void main() {
       reddit: LaunchRedditModel(),
       flickr: LaunchFlickrModel(),
       webcast: 'https://www.youtube.com/watch?v=0a_00nJ_Y88',
-      youtubeID: '0a_00nJ_Y88',
+      youtubeId: '0a_00nJ_Y88',
       article:
           'https://www.space.com/2196-spacex-inaugural-falcon-1-rocket-lost-launch.html',
       wikipedia: 'https://en.wikipedia.org/wiki/DemoSat',

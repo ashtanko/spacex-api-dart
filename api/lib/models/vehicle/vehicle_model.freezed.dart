@@ -59,7 +59,7 @@ mixin _$RoadsterVehicleModel {
   @JsonKey(name: 'apoapsis_au')
   num get apoapsisAu => throw _privateConstructorUsedError;
   @JsonKey(name: 'orbit_type')
-  String get orbitYype => throw _privateConstructorUsedError;
+  String get orbitType => throw _privateConstructorUsedError;
   @JsonKey(name: 'epoch_jd')
   num get epochJd => throw _privateConstructorUsedError;
   @JsonKey(name: 'norad_id')
@@ -106,7 +106,7 @@ abstract class $RoadsterVehicleModelCopyWith<$Res> {
       @JsonKey(name: 'semi_major_axis_au') num semiMajorAxisAu,
       @JsonKey(name: 'periapsis_au') num periapsisAu,
       @JsonKey(name: 'apoapsis_au') num apoapsisAu,
-      @JsonKey(name: 'orbit_type') String orbitYype,
+      @JsonKey(name: 'orbit_type') String orbitType,
       @JsonKey(name: 'epoch_jd') num epochJd,
       @JsonKey(name: 'norad_id') num noradId,
       @JsonKey(name: 'launch_mass_lbs') num launchMassLbs,
@@ -146,7 +146,7 @@ class _$RoadsterVehicleModelCopyWithImpl<$Res>
     Object? semiMajorAxisAu = freezed,
     Object? periapsisAu = freezed,
     Object? apoapsisAu = freezed,
-    Object? orbitYype = freezed,
+    Object? orbitType = freezed,
     Object? epochJd = freezed,
     Object? noradId = freezed,
     Object? launchMassLbs = freezed,
@@ -232,9 +232,9 @@ class _$RoadsterVehicleModelCopyWithImpl<$Res>
           ? _value.apoapsisAu
           : apoapsisAu // ignore: cast_nullable_to_non_nullable
               as num,
-      orbitYype: orbitYype == freezed
-          ? _value.orbitYype
-          : orbitYype // ignore: cast_nullable_to_non_nullable
+      orbitType: orbitType == freezed
+          ? _value.orbitType
+          : orbitType // ignore: cast_nullable_to_non_nullable
               as String,
       epochJd: epochJd == freezed
           ? _value.epochJd
@@ -295,7 +295,7 @@ abstract class _$$_RoadsterVehicleModelCopyWith<$Res>
       @JsonKey(name: 'semi_major_axis_au') num semiMajorAxisAu,
       @JsonKey(name: 'periapsis_au') num periapsisAu,
       @JsonKey(name: 'apoapsis_au') num apoapsisAu,
-      @JsonKey(name: 'orbit_type') String orbitYype,
+      @JsonKey(name: 'orbit_type') String orbitType,
       @JsonKey(name: 'epoch_jd') num epochJd,
       @JsonKey(name: 'norad_id') num noradId,
       @JsonKey(name: 'launch_mass_lbs') num launchMassLbs,
@@ -337,7 +337,7 @@ class __$$_RoadsterVehicleModelCopyWithImpl<$Res>
     Object? semiMajorAxisAu = freezed,
     Object? periapsisAu = freezed,
     Object? apoapsisAu = freezed,
-    Object? orbitYype = freezed,
+    Object? orbitType = freezed,
     Object? epochJd = freezed,
     Object? noradId = freezed,
     Object? launchMassLbs = freezed,
@@ -423,9 +423,9 @@ class __$$_RoadsterVehicleModelCopyWithImpl<$Res>
           ? _value.apoapsisAu
           : apoapsisAu // ignore: cast_nullable_to_non_nullable
               as num,
-      orbitYype: orbitYype == freezed
-          ? _value.orbitYype
-          : orbitYype // ignore: cast_nullable_to_non_nullable
+      orbitType: orbitType == freezed
+          ? _value.orbitType
+          : orbitType // ignore: cast_nullable_to_non_nullable
               as String,
       epochJd: epochJd == freezed
           ? _value.epochJd
@@ -502,7 +502,7 @@ class _$_RoadsterVehicleModel extends _RoadsterVehicleModel {
       @JsonKey(name: 'apoapsis_au')
           this.apoapsisAu = 1.664347009550897,
       @JsonKey(name: 'orbit_type')
-          this.orbitYype = 'heliocentric',
+          this.orbitType = 'heliocentric',
       @JsonKey(name: 'epoch_jd')
           this.epochJd = 2459679.347222222,
       @JsonKey(name: 'norad_id')
@@ -587,7 +587,7 @@ class _$_RoadsterVehicleModel extends _RoadsterVehicleModel {
   final num apoapsisAu;
   @override
   @JsonKey(name: 'orbit_type')
-  final String orbitYype;
+  final String orbitType;
   @override
   @JsonKey(name: 'epoch_jd')
   final num epochJd;
@@ -612,7 +612,7 @@ class _$_RoadsterVehicleModel extends _RoadsterVehicleModel {
 
   @override
   String toString() {
-    return 'RoadsterVehicleModel(id: $id, details: $details, video: $video, wikipedia: $wikipedia, images: $images, marsDistanceMi: $marsDistanceMi, marsDistanceKm: $marsDistanceKm, earthDistanceMi: $earthDistanceMi, earthDistanceKm: $earthDistanceKm, speedMph: $speedMph, speedKph: $speedKph, periodDays: $periodDays, periapsisArg: $periapsisArg, longitude: $longitude, inclination: $inclination, eccentricity: $eccentricity, semiMajorAxisAu: $semiMajorAxisAu, periapsisAu: $periapsisAu, apoapsisAu: $apoapsisAu, orbitYype: $orbitYype, epochJd: $epochJd, noradId: $noradId, launchMassLbs: $launchMassLbs, launchMassKg: $launchMassKg, launchDateUnix: $launchDateUnix, launchDateUtc: $launchDateUtc, name: $name)';
+    return 'RoadsterVehicleModel(id: $id, details: $details, video: $video, wikipedia: $wikipedia, images: $images, marsDistanceMi: $marsDistanceMi, marsDistanceKm: $marsDistanceKm, earthDistanceMi: $earthDistanceMi, earthDistanceKm: $earthDistanceKm, speedMph: $speedMph, speedKph: $speedKph, periodDays: $periodDays, periapsisArg: $periapsisArg, longitude: $longitude, inclination: $inclination, eccentricity: $eccentricity, semiMajorAxisAu: $semiMajorAxisAu, periapsisAu: $periapsisAu, apoapsisAu: $apoapsisAu, orbitType: $orbitType, epochJd: $epochJd, noradId: $noradId, launchMassLbs: $launchMassLbs, launchMassKg: $launchMassKg, launchDateUnix: $launchDateUnix, launchDateUtc: $launchDateUtc, name: $name)';
   }
 
   @override
@@ -650,7 +650,7 @@ class _$_RoadsterVehicleModel extends _RoadsterVehicleModel {
                 .equals(other.periapsisAu, periapsisAu) &&
             const DeepCollectionEquality()
                 .equals(other.apoapsisAu, apoapsisAu) &&
-            const DeepCollectionEquality().equals(other.orbitYype, orbitYype) &&
+            const DeepCollectionEquality().equals(other.orbitType, orbitType) &&
             const DeepCollectionEquality().equals(other.epochJd, epochJd) &&
             const DeepCollectionEquality().equals(other.noradId, noradId) &&
             const DeepCollectionEquality()
@@ -687,7 +687,7 @@ class _$_RoadsterVehicleModel extends _RoadsterVehicleModel {
         const DeepCollectionEquality().hash(semiMajorAxisAu),
         const DeepCollectionEquality().hash(periapsisAu),
         const DeepCollectionEquality().hash(apoapsisAu),
-        const DeepCollectionEquality().hash(orbitYype),
+        const DeepCollectionEquality().hash(orbitType),
         const DeepCollectionEquality().hash(epochJd),
         const DeepCollectionEquality().hash(noradId),
         const DeepCollectionEquality().hash(launchMassLbs),
@@ -732,7 +732,7 @@ abstract class _RoadsterVehicleModel extends RoadsterVehicleModel {
       @JsonKey(name: 'semi_major_axis_au') final num semiMajorAxisAu,
       @JsonKey(name: 'periapsis_au') final num periapsisAu,
       @JsonKey(name: 'apoapsis_au') final num apoapsisAu,
-      @JsonKey(name: 'orbit_type') final String orbitYype,
+      @JsonKey(name: 'orbit_type') final String orbitType,
       @JsonKey(name: 'epoch_jd') final num epochJd,
       @JsonKey(name: 'norad_id') final num noradId,
       @JsonKey(name: 'launch_mass_lbs') final num launchMassLbs,
@@ -804,7 +804,7 @@ abstract class _RoadsterVehicleModel extends RoadsterVehicleModel {
   num get apoapsisAu;
   @override
   @JsonKey(name: 'orbit_type')
-  String get orbitYype;
+  String get orbitType;
   @override
   @JsonKey(name: 'epoch_jd')
   num get epochJd;
@@ -3741,6 +3741,8 @@ ShipFullModel _$ShipFullModelFromJson(Map<String, dynamic> json) {
 mixin _$ShipFullModel {
   @JsonKey(name: 'id')
   String get id => throw _privateConstructorUsedError;
+  @JsonKey(name: 'last_ais_update')
+  dynamic get lastAisUpdate => throw _privateConstructorUsedError;
   @JsonKey(name: 'launches')
   List<LaunchModel> get launches => throw _privateConstructorUsedError;
   @JsonKey(name: 'active')
@@ -3775,6 +3777,8 @@ mixin _$ShipFullModel {
   int? get abs => throw _privateConstructorUsedError;
   @JsonKey(name: 'imo')
   int? get imo => throw _privateConstructorUsedError;
+  @JsonKey(name: 'mmsi')
+  int? get mmsi => throw _privateConstructorUsedError;
   List<String> get roles => throw _privateConstructorUsedError;
   @JsonKey(name: 'type')
   String? get type => throw _privateConstructorUsedError;
@@ -3796,6 +3800,7 @@ abstract class $ShipFullModelCopyWith<$Res> {
       _$ShipFullModelCopyWithImpl<$Res>;
   $Res call(
       {@JsonKey(name: 'id') String id,
+      @JsonKey(name: 'last_ais_update') dynamic lastAisUpdate,
       @JsonKey(name: 'launches') List<LaunchModel> launches,
       @JsonKey(name: 'active') bool isActive,
       @JsonKey(name: 'name') String? name,
@@ -3813,6 +3818,7 @@ abstract class $ShipFullModelCopyWith<$Res> {
       @JsonKey(name: 'class') int? vehicleClass,
       @JsonKey(name: 'abs') int? abs,
       @JsonKey(name: 'imo') int? imo,
+      @JsonKey(name: 'mmsi') int? mmsi,
       List<String> roles,
       @JsonKey(name: 'type') String? type,
       @JsonKey(name: 'model') String? model,
@@ -3831,6 +3837,7 @@ class _$ShipFullModelCopyWithImpl<$Res>
   @override
   $Res call({
     Object? id = freezed,
+    Object? lastAisUpdate = freezed,
     Object? launches = freezed,
     Object? isActive = freezed,
     Object? name = freezed,
@@ -3848,6 +3855,7 @@ class _$ShipFullModelCopyWithImpl<$Res>
     Object? vehicleClass = freezed,
     Object? abs = freezed,
     Object? imo = freezed,
+    Object? mmsi = freezed,
     Object? roles = freezed,
     Object? type = freezed,
     Object? model = freezed,
@@ -3858,6 +3866,10 @@ class _$ShipFullModelCopyWithImpl<$Res>
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String,
+      lastAisUpdate: lastAisUpdate == freezed
+          ? _value.lastAisUpdate
+          : lastAisUpdate // ignore: cast_nullable_to_non_nullable
+              as dynamic,
       launches: launches == freezed
           ? _value.launches
           : launches // ignore: cast_nullable_to_non_nullable
@@ -3926,6 +3938,10 @@ class _$ShipFullModelCopyWithImpl<$Res>
           ? _value.imo
           : imo // ignore: cast_nullable_to_non_nullable
               as int?,
+      mmsi: mmsi == freezed
+          ? _value.mmsi
+          : mmsi // ignore: cast_nullable_to_non_nullable
+              as int?,
       roles: roles == freezed
           ? _value.roles
           : roles // ignore: cast_nullable_to_non_nullable
@@ -3955,6 +3971,7 @@ abstract class _$$_ShipFullModelCopyWith<$Res>
   @override
   $Res call(
       {@JsonKey(name: 'id') String id,
+      @JsonKey(name: 'last_ais_update') dynamic lastAisUpdate,
       @JsonKey(name: 'launches') List<LaunchModel> launches,
       @JsonKey(name: 'active') bool isActive,
       @JsonKey(name: 'name') String? name,
@@ -3972,6 +3989,7 @@ abstract class _$$_ShipFullModelCopyWith<$Res>
       @JsonKey(name: 'class') int? vehicleClass,
       @JsonKey(name: 'abs') int? abs,
       @JsonKey(name: 'imo') int? imo,
+      @JsonKey(name: 'mmsi') int? mmsi,
       List<String> roles,
       @JsonKey(name: 'type') String? type,
       @JsonKey(name: 'model') String? model,
@@ -3992,6 +4010,7 @@ class __$$_ShipFullModelCopyWithImpl<$Res>
   @override
   $Res call({
     Object? id = freezed,
+    Object? lastAisUpdate = freezed,
     Object? launches = freezed,
     Object? isActive = freezed,
     Object? name = freezed,
@@ -4009,6 +4028,7 @@ class __$$_ShipFullModelCopyWithImpl<$Res>
     Object? vehicleClass = freezed,
     Object? abs = freezed,
     Object? imo = freezed,
+    Object? mmsi = freezed,
     Object? roles = freezed,
     Object? type = freezed,
     Object? model = freezed,
@@ -4019,6 +4039,10 @@ class __$$_ShipFullModelCopyWithImpl<$Res>
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String,
+      lastAisUpdate: lastAisUpdate == freezed
+          ? _value.lastAisUpdate
+          : lastAisUpdate // ignore: cast_nullable_to_non_nullable
+              as dynamic,
       launches: launches == freezed
           ? _value._launches
           : launches // ignore: cast_nullable_to_non_nullable
@@ -4087,6 +4111,10 @@ class __$$_ShipFullModelCopyWithImpl<$Res>
           ? _value.imo
           : imo // ignore: cast_nullable_to_non_nullable
               as int?,
+      mmsi: mmsi == freezed
+          ? _value.mmsi
+          : mmsi // ignore: cast_nullable_to_non_nullable
+              as int?,
       roles: roles == freezed
           ? _value._roles
           : roles // ignore: cast_nullable_to_non_nullable
@@ -4113,6 +4141,8 @@ class _$_ShipFullModel extends _ShipFullModel {
   const _$_ShipFullModel(
       {@JsonKey(name: 'id')
           required this.id,
+      @JsonKey(name: 'last_ais_update')
+          this.lastAisUpdate,
       @JsonKey(name: 'launches')
           final List<LaunchModel> launches = const <LaunchModel>[],
       @JsonKey(name: 'active')
@@ -4147,6 +4177,8 @@ class _$_ShipFullModel extends _ShipFullModel {
           this.abs,
       @JsonKey(name: 'imo')
           this.imo,
+      @JsonKey(name: 'mmsi')
+          this.mmsi,
       final List<String> roles = const <String>[],
       @JsonKey(name: 'type')
           this.type,
@@ -4164,6 +4196,9 @@ class _$_ShipFullModel extends _ShipFullModel {
   @override
   @JsonKey(name: 'id')
   final String id;
+  @override
+  @JsonKey(name: 'last_ais_update')
+  final dynamic lastAisUpdate;
   final List<LaunchModel> _launches;
   @override
   @JsonKey(name: 'launches')
@@ -4220,6 +4255,9 @@ class _$_ShipFullModel extends _ShipFullModel {
   @override
   @JsonKey(name: 'imo')
   final int? imo;
+  @override
+  @JsonKey(name: 'mmsi')
+  final int? mmsi;
   final List<String> _roles;
   @override
   @JsonKey()
@@ -4240,7 +4278,7 @@ class _$_ShipFullModel extends _ShipFullModel {
 
   @override
   String toString() {
-    return 'ShipFullModel(id: $id, launches: $launches, isActive: $isActive, name: $name, image: $image, link: $link, longitude: $longitude, latitude: $latitude, courseDeg: $courseDeg, speedKn: $speedKn, status: $status, homePort: $homePort, yearBuilt: $yearBuilt, massLbs: $massLbs, massKg: $massKg, vehicleClass: $vehicleClass, abs: $abs, imo: $imo, roles: $roles, type: $type, model: $model, legacyId: $legacyId)';
+    return 'ShipFullModel(id: $id, lastAisUpdate: $lastAisUpdate, launches: $launches, isActive: $isActive, name: $name, image: $image, link: $link, longitude: $longitude, latitude: $latitude, courseDeg: $courseDeg, speedKn: $speedKn, status: $status, homePort: $homePort, yearBuilt: $yearBuilt, massLbs: $massLbs, massKg: $massKg, vehicleClass: $vehicleClass, abs: $abs, imo: $imo, mmsi: $mmsi, roles: $roles, type: $type, model: $model, legacyId: $legacyId)';
   }
 
   @override
@@ -4249,6 +4287,8 @@ class _$_ShipFullModel extends _ShipFullModel {
         (other.runtimeType == runtimeType &&
             other is _$_ShipFullModel &&
             const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality()
+                .equals(other.lastAisUpdate, lastAisUpdate) &&
             const DeepCollectionEquality().equals(other._launches, _launches) &&
             const DeepCollectionEquality().equals(other.isActive, isActive) &&
             const DeepCollectionEquality().equals(other.name, name) &&
@@ -4267,6 +4307,7 @@ class _$_ShipFullModel extends _ShipFullModel {
                 .equals(other.vehicleClass, vehicleClass) &&
             const DeepCollectionEquality().equals(other.abs, abs) &&
             const DeepCollectionEquality().equals(other.imo, imo) &&
+            const DeepCollectionEquality().equals(other.mmsi, mmsi) &&
             const DeepCollectionEquality().equals(other._roles, _roles) &&
             const DeepCollectionEquality().equals(other.type, type) &&
             const DeepCollectionEquality().equals(other.model, model) &&
@@ -4278,6 +4319,7 @@ class _$_ShipFullModel extends _ShipFullModel {
   int get hashCode => Object.hashAll([
         runtimeType,
         const DeepCollectionEquality().hash(id),
+        const DeepCollectionEquality().hash(lastAisUpdate),
         const DeepCollectionEquality().hash(_launches),
         const DeepCollectionEquality().hash(isActive),
         const DeepCollectionEquality().hash(name),
@@ -4295,6 +4337,7 @@ class _$_ShipFullModel extends _ShipFullModel {
         const DeepCollectionEquality().hash(vehicleClass),
         const DeepCollectionEquality().hash(abs),
         const DeepCollectionEquality().hash(imo),
+        const DeepCollectionEquality().hash(mmsi),
         const DeepCollectionEquality().hash(_roles),
         const DeepCollectionEquality().hash(type),
         const DeepCollectionEquality().hash(model),
@@ -4317,6 +4360,7 @@ class _$_ShipFullModel extends _ShipFullModel {
 abstract class _ShipFullModel extends ShipFullModel {
   const factory _ShipFullModel(
       {@JsonKey(name: 'id') required final String id,
+      @JsonKey(name: 'last_ais_update') final dynamic lastAisUpdate,
       @JsonKey(name: 'launches') final List<LaunchModel> launches,
       @JsonKey(name: 'active') final bool isActive,
       @JsonKey(name: 'name') final String? name,
@@ -4334,6 +4378,7 @@ abstract class _ShipFullModel extends ShipFullModel {
       @JsonKey(name: 'class') final int? vehicleClass,
       @JsonKey(name: 'abs') final int? abs,
       @JsonKey(name: 'imo') final int? imo,
+      @JsonKey(name: 'mmsi') final int? mmsi,
       final List<String> roles,
       @JsonKey(name: 'type') final String? type,
       @JsonKey(name: 'model') final String? model,
@@ -4346,6 +4391,9 @@ abstract class _ShipFullModel extends ShipFullModel {
   @override
   @JsonKey(name: 'id')
   String get id;
+  @override
+  @JsonKey(name: 'last_ais_update')
+  dynamic get lastAisUpdate;
   @override
   @JsonKey(name: 'launches')
   List<LaunchModel> get launches;
@@ -4398,6 +4446,9 @@ abstract class _ShipFullModel extends ShipFullModel {
   @JsonKey(name: 'imo')
   int? get imo;
   @override
+  @JsonKey(name: 'mmsi')
+  int? get mmsi;
+  @override
   List<String> get roles;
   @override
   @JsonKey(name: 'type')
@@ -4424,6 +4475,19 @@ mixin _$DragonModel {
   String get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'description')
   String? get description => throw _privateConstructorUsedError;
+  @JsonKey(name: 'heat_shield')
+  HeatShieldModel? get heatShield => throw _privateConstructorUsedError;
+  @JsonKey(name: 'launch_payload_mass')
+  MassModel? get launchPayloadMass => throw _privateConstructorUsedError;
+  @JsonKey(name: 'launch_payload_vol')
+  CubicLenModel? get launchPayloadVol => throw _privateConstructorUsedError;
+  @JsonKey(name: 'return_payload_mass')
+  MassModel? get returnPayloadMass => throw _privateConstructorUsedError;
+  @JsonKey(name: 'return_payload_vol')
+  CubicLenModel? get returnPayloadVol => throw _privateConstructorUsedError;
+  @JsonKey(name: 'pressurized_capsule')
+  PressurizedCapsuleModel? get pressurizedCapsule =>
+      throw _privateConstructorUsedError;
   @JsonKey(name: 'wikipedia')
   String? get wiki => throw _privateConstructorUsedError;
   @JsonKey(name: 'thrusters')
@@ -4467,24 +4531,59 @@ abstract class $DragonModelCopyWith<$Res> {
           DragonModel value, $Res Function(DragonModel) then) =
       _$DragonModelCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(name: 'id') String id,
-      @JsonKey(name: 'description') String? description,
-      @JsonKey(name: 'wikipedia') String? wiki,
-      @JsonKey(name: 'thrusters') List<ThrusterModel> thrusters,
-      @JsonKey(name: 'dry_mass_lb') int? dryMassLb,
-      @JsonKey(name: 'dry_mass_kg') int? dryMassKg,
-      @JsonKey(name: 'orbit_duration_yr') int? orbitDurationYr,
-      @JsonKey(name: 'sidewall_angle_deg') int? sidewallAngleDeg,
-      @JsonKey(name: 'crew_capacity') int? crewCapacity,
-      @JsonKey(name: 'active') bool isActive,
-      @JsonKey(name: 'type') String? type,
-      @JsonKey(name: 'name') String? name,
-      @JsonKey(name: 'flickr_images') List<String> images,
-      @JsonKey(name: 'first_flight') String? firstFlight,
-      @JsonKey(name: 'diameter') DiameterModel? diameter,
-      @JsonKey(name: 'height_w_trunk') DiameterModel? heightWTrunk,
-      @JsonKey(name: 'trunk') TrunkModel? trunk});
+      {@JsonKey(name: 'id')
+          String id,
+      @JsonKey(name: 'description')
+          String? description,
+      @JsonKey(name: 'heat_shield')
+          HeatShieldModel? heatShield,
+      @JsonKey(name: 'launch_payload_mass')
+          MassModel? launchPayloadMass,
+      @JsonKey(name: 'launch_payload_vol')
+          CubicLenModel? launchPayloadVol,
+      @JsonKey(name: 'return_payload_mass')
+          MassModel? returnPayloadMass,
+      @JsonKey(name: 'return_payload_vol')
+          CubicLenModel? returnPayloadVol,
+      @JsonKey(name: 'pressurized_capsule')
+          PressurizedCapsuleModel? pressurizedCapsule,
+      @JsonKey(name: 'wikipedia')
+          String? wiki,
+      @JsonKey(name: 'thrusters')
+          List<ThrusterModel> thrusters,
+      @JsonKey(name: 'dry_mass_lb')
+          int? dryMassLb,
+      @JsonKey(name: 'dry_mass_kg')
+          int? dryMassKg,
+      @JsonKey(name: 'orbit_duration_yr')
+          int? orbitDurationYr,
+      @JsonKey(name: 'sidewall_angle_deg')
+          int? sidewallAngleDeg,
+      @JsonKey(name: 'crew_capacity')
+          int? crewCapacity,
+      @JsonKey(name: 'active')
+          bool isActive,
+      @JsonKey(name: 'type')
+          String? type,
+      @JsonKey(name: 'name')
+          String? name,
+      @JsonKey(name: 'flickr_images')
+          List<String> images,
+      @JsonKey(name: 'first_flight')
+          String? firstFlight,
+      @JsonKey(name: 'diameter')
+          DiameterModel? diameter,
+      @JsonKey(name: 'height_w_trunk')
+          DiameterModel? heightWTrunk,
+      @JsonKey(name: 'trunk')
+          TrunkModel? trunk});
 
+  $HeatShieldModelCopyWith<$Res>? get heatShield;
+  $MassModelCopyWith<$Res>? get launchPayloadMass;
+  $CubicLenModelCopyWith<$Res>? get launchPayloadVol;
+  $MassModelCopyWith<$Res>? get returnPayloadMass;
+  $CubicLenModelCopyWith<$Res>? get returnPayloadVol;
+  $PressurizedCapsuleModelCopyWith<$Res>? get pressurizedCapsule;
   $DiameterModelCopyWith<$Res>? get diameter;
   $DiameterModelCopyWith<$Res>? get heightWTrunk;
   $TrunkModelCopyWith<$Res>? get trunk;
@@ -4502,6 +4601,12 @@ class _$DragonModelCopyWithImpl<$Res> implements $DragonModelCopyWith<$Res> {
   $Res call({
     Object? id = freezed,
     Object? description = freezed,
+    Object? heatShield = freezed,
+    Object? launchPayloadMass = freezed,
+    Object? launchPayloadVol = freezed,
+    Object? returnPayloadMass = freezed,
+    Object? returnPayloadVol = freezed,
+    Object? pressurizedCapsule = freezed,
     Object? wiki = freezed,
     Object? thrusters = freezed,
     Object? dryMassLb = freezed,
@@ -4527,6 +4632,30 @@ class _$DragonModelCopyWithImpl<$Res> implements $DragonModelCopyWith<$Res> {
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
               as String?,
+      heatShield: heatShield == freezed
+          ? _value.heatShield
+          : heatShield // ignore: cast_nullable_to_non_nullable
+              as HeatShieldModel?,
+      launchPayloadMass: launchPayloadMass == freezed
+          ? _value.launchPayloadMass
+          : launchPayloadMass // ignore: cast_nullable_to_non_nullable
+              as MassModel?,
+      launchPayloadVol: launchPayloadVol == freezed
+          ? _value.launchPayloadVol
+          : launchPayloadVol // ignore: cast_nullable_to_non_nullable
+              as CubicLenModel?,
+      returnPayloadMass: returnPayloadMass == freezed
+          ? _value.returnPayloadMass
+          : returnPayloadMass // ignore: cast_nullable_to_non_nullable
+              as MassModel?,
+      returnPayloadVol: returnPayloadVol == freezed
+          ? _value.returnPayloadVol
+          : returnPayloadVol // ignore: cast_nullable_to_non_nullable
+              as CubicLenModel?,
+      pressurizedCapsule: pressurizedCapsule == freezed
+          ? _value.pressurizedCapsule
+          : pressurizedCapsule // ignore: cast_nullable_to_non_nullable
+              as PressurizedCapsuleModel?,
       wiki: wiki == freezed
           ? _value.wiki
           : wiki // ignore: cast_nullable_to_non_nullable
@@ -4591,6 +4720,73 @@ class _$DragonModelCopyWithImpl<$Res> implements $DragonModelCopyWith<$Res> {
   }
 
   @override
+  $HeatShieldModelCopyWith<$Res>? get heatShield {
+    if (_value.heatShield == null) {
+      return null;
+    }
+
+    return $HeatShieldModelCopyWith<$Res>(_value.heatShield!, (value) {
+      return _then(_value.copyWith(heatShield: value));
+    });
+  }
+
+  @override
+  $MassModelCopyWith<$Res>? get launchPayloadMass {
+    if (_value.launchPayloadMass == null) {
+      return null;
+    }
+
+    return $MassModelCopyWith<$Res>(_value.launchPayloadMass!, (value) {
+      return _then(_value.copyWith(launchPayloadMass: value));
+    });
+  }
+
+  @override
+  $CubicLenModelCopyWith<$Res>? get launchPayloadVol {
+    if (_value.launchPayloadVol == null) {
+      return null;
+    }
+
+    return $CubicLenModelCopyWith<$Res>(_value.launchPayloadVol!, (value) {
+      return _then(_value.copyWith(launchPayloadVol: value));
+    });
+  }
+
+  @override
+  $MassModelCopyWith<$Res>? get returnPayloadMass {
+    if (_value.returnPayloadMass == null) {
+      return null;
+    }
+
+    return $MassModelCopyWith<$Res>(_value.returnPayloadMass!, (value) {
+      return _then(_value.copyWith(returnPayloadMass: value));
+    });
+  }
+
+  @override
+  $CubicLenModelCopyWith<$Res>? get returnPayloadVol {
+    if (_value.returnPayloadVol == null) {
+      return null;
+    }
+
+    return $CubicLenModelCopyWith<$Res>(_value.returnPayloadVol!, (value) {
+      return _then(_value.copyWith(returnPayloadVol: value));
+    });
+  }
+
+  @override
+  $PressurizedCapsuleModelCopyWith<$Res>? get pressurizedCapsule {
+    if (_value.pressurizedCapsule == null) {
+      return null;
+    }
+
+    return $PressurizedCapsuleModelCopyWith<$Res>(_value.pressurizedCapsule!,
+        (value) {
+      return _then(_value.copyWith(pressurizedCapsule: value));
+    });
+  }
+
+  @override
   $DiameterModelCopyWith<$Res>? get diameter {
     if (_value.diameter == null) {
       return null;
@@ -4632,24 +4828,65 @@ abstract class _$$_DragonModelCopyWith<$Res>
       __$$_DragonModelCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(name: 'id') String id,
-      @JsonKey(name: 'description') String? description,
-      @JsonKey(name: 'wikipedia') String? wiki,
-      @JsonKey(name: 'thrusters') List<ThrusterModel> thrusters,
-      @JsonKey(name: 'dry_mass_lb') int? dryMassLb,
-      @JsonKey(name: 'dry_mass_kg') int? dryMassKg,
-      @JsonKey(name: 'orbit_duration_yr') int? orbitDurationYr,
-      @JsonKey(name: 'sidewall_angle_deg') int? sidewallAngleDeg,
-      @JsonKey(name: 'crew_capacity') int? crewCapacity,
-      @JsonKey(name: 'active') bool isActive,
-      @JsonKey(name: 'type') String? type,
-      @JsonKey(name: 'name') String? name,
-      @JsonKey(name: 'flickr_images') List<String> images,
-      @JsonKey(name: 'first_flight') String? firstFlight,
-      @JsonKey(name: 'diameter') DiameterModel? diameter,
-      @JsonKey(name: 'height_w_trunk') DiameterModel? heightWTrunk,
-      @JsonKey(name: 'trunk') TrunkModel? trunk});
+      {@JsonKey(name: 'id')
+          String id,
+      @JsonKey(name: 'description')
+          String? description,
+      @JsonKey(name: 'heat_shield')
+          HeatShieldModel? heatShield,
+      @JsonKey(name: 'launch_payload_mass')
+          MassModel? launchPayloadMass,
+      @JsonKey(name: 'launch_payload_vol')
+          CubicLenModel? launchPayloadVol,
+      @JsonKey(name: 'return_payload_mass')
+          MassModel? returnPayloadMass,
+      @JsonKey(name: 'return_payload_vol')
+          CubicLenModel? returnPayloadVol,
+      @JsonKey(name: 'pressurized_capsule')
+          PressurizedCapsuleModel? pressurizedCapsule,
+      @JsonKey(name: 'wikipedia')
+          String? wiki,
+      @JsonKey(name: 'thrusters')
+          List<ThrusterModel> thrusters,
+      @JsonKey(name: 'dry_mass_lb')
+          int? dryMassLb,
+      @JsonKey(name: 'dry_mass_kg')
+          int? dryMassKg,
+      @JsonKey(name: 'orbit_duration_yr')
+          int? orbitDurationYr,
+      @JsonKey(name: 'sidewall_angle_deg')
+          int? sidewallAngleDeg,
+      @JsonKey(name: 'crew_capacity')
+          int? crewCapacity,
+      @JsonKey(name: 'active')
+          bool isActive,
+      @JsonKey(name: 'type')
+          String? type,
+      @JsonKey(name: 'name')
+          String? name,
+      @JsonKey(name: 'flickr_images')
+          List<String> images,
+      @JsonKey(name: 'first_flight')
+          String? firstFlight,
+      @JsonKey(name: 'diameter')
+          DiameterModel? diameter,
+      @JsonKey(name: 'height_w_trunk')
+          DiameterModel? heightWTrunk,
+      @JsonKey(name: 'trunk')
+          TrunkModel? trunk});
 
+  @override
+  $HeatShieldModelCopyWith<$Res>? get heatShield;
+  @override
+  $MassModelCopyWith<$Res>? get launchPayloadMass;
+  @override
+  $CubicLenModelCopyWith<$Res>? get launchPayloadVol;
+  @override
+  $MassModelCopyWith<$Res>? get returnPayloadMass;
+  @override
+  $CubicLenModelCopyWith<$Res>? get returnPayloadVol;
+  @override
+  $PressurizedCapsuleModelCopyWith<$Res>? get pressurizedCapsule;
   @override
   $DiameterModelCopyWith<$Res>? get diameter;
   @override
@@ -4672,6 +4909,12 @@ class __$$_DragonModelCopyWithImpl<$Res> extends _$DragonModelCopyWithImpl<$Res>
   $Res call({
     Object? id = freezed,
     Object? description = freezed,
+    Object? heatShield = freezed,
+    Object? launchPayloadMass = freezed,
+    Object? launchPayloadVol = freezed,
+    Object? returnPayloadMass = freezed,
+    Object? returnPayloadVol = freezed,
+    Object? pressurizedCapsule = freezed,
     Object? wiki = freezed,
     Object? thrusters = freezed,
     Object? dryMassLb = freezed,
@@ -4697,6 +4940,30 @@ class __$$_DragonModelCopyWithImpl<$Res> extends _$DragonModelCopyWithImpl<$Res>
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
               as String?,
+      heatShield: heatShield == freezed
+          ? _value.heatShield
+          : heatShield // ignore: cast_nullable_to_non_nullable
+              as HeatShieldModel?,
+      launchPayloadMass: launchPayloadMass == freezed
+          ? _value.launchPayloadMass
+          : launchPayloadMass // ignore: cast_nullable_to_non_nullable
+              as MassModel?,
+      launchPayloadVol: launchPayloadVol == freezed
+          ? _value.launchPayloadVol
+          : launchPayloadVol // ignore: cast_nullable_to_non_nullable
+              as CubicLenModel?,
+      returnPayloadMass: returnPayloadMass == freezed
+          ? _value.returnPayloadMass
+          : returnPayloadMass // ignore: cast_nullable_to_non_nullable
+              as MassModel?,
+      returnPayloadVol: returnPayloadVol == freezed
+          ? _value.returnPayloadVol
+          : returnPayloadVol // ignore: cast_nullable_to_non_nullable
+              as CubicLenModel?,
+      pressurizedCapsule: pressurizedCapsule == freezed
+          ? _value.pressurizedCapsule
+          : pressurizedCapsule // ignore: cast_nullable_to_non_nullable
+              as PressurizedCapsuleModel?,
       wiki: wiki == freezed
           ? _value.wiki
           : wiki // ignore: cast_nullable_to_non_nullable
@@ -4769,6 +5036,18 @@ class _$_DragonModel extends _DragonModel {
           required this.id,
       @JsonKey(name: 'description')
           this.description,
+      @JsonKey(name: 'heat_shield')
+          this.heatShield,
+      @JsonKey(name: 'launch_payload_mass')
+          this.launchPayloadMass,
+      @JsonKey(name: 'launch_payload_vol')
+          this.launchPayloadVol,
+      @JsonKey(name: 'return_payload_mass')
+          this.returnPayloadMass,
+      @JsonKey(name: 'return_payload_vol')
+          this.returnPayloadVol,
+      @JsonKey(name: 'pressurized_capsule')
+          this.pressurizedCapsule,
       @JsonKey(name: 'wikipedia')
           this.wiki,
       @JsonKey(name: 'thrusters')
@@ -4812,6 +5091,24 @@ class _$_DragonModel extends _DragonModel {
   @override
   @JsonKey(name: 'description')
   final String? description;
+  @override
+  @JsonKey(name: 'heat_shield')
+  final HeatShieldModel? heatShield;
+  @override
+  @JsonKey(name: 'launch_payload_mass')
+  final MassModel? launchPayloadMass;
+  @override
+  @JsonKey(name: 'launch_payload_vol')
+  final CubicLenModel? launchPayloadVol;
+  @override
+  @JsonKey(name: 'return_payload_mass')
+  final MassModel? returnPayloadMass;
+  @override
+  @JsonKey(name: 'return_payload_vol')
+  final CubicLenModel? returnPayloadVol;
+  @override
+  @JsonKey(name: 'pressurized_capsule')
+  final PressurizedCapsuleModel? pressurizedCapsule;
   @override
   @JsonKey(name: 'wikipedia')
   final String? wiki;
@@ -4870,7 +5167,7 @@ class _$_DragonModel extends _DragonModel {
 
   @override
   String toString() {
-    return 'DragonModel(id: $id, description: $description, wiki: $wiki, thrusters: $thrusters, dryMassLb: $dryMassLb, dryMassKg: $dryMassKg, orbitDurationYr: $orbitDurationYr, sidewallAngleDeg: $sidewallAngleDeg, crewCapacity: $crewCapacity, isActive: $isActive, type: $type, name: $name, images: $images, firstFlight: $firstFlight, diameter: $diameter, heightWTrunk: $heightWTrunk, trunk: $trunk)';
+    return 'DragonModel(id: $id, description: $description, heatShield: $heatShield, launchPayloadMass: $launchPayloadMass, launchPayloadVol: $launchPayloadVol, returnPayloadMass: $returnPayloadMass, returnPayloadVol: $returnPayloadVol, pressurizedCapsule: $pressurizedCapsule, wiki: $wiki, thrusters: $thrusters, dryMassLb: $dryMassLb, dryMassKg: $dryMassKg, orbitDurationYr: $orbitDurationYr, sidewallAngleDeg: $sidewallAngleDeg, crewCapacity: $crewCapacity, isActive: $isActive, type: $type, name: $name, images: $images, firstFlight: $firstFlight, diameter: $diameter, heightWTrunk: $heightWTrunk, trunk: $trunk)';
   }
 
   @override
@@ -4881,6 +5178,18 @@ class _$_DragonModel extends _DragonModel {
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
                 .equals(other.description, description) &&
+            const DeepCollectionEquality()
+                .equals(other.heatShield, heatShield) &&
+            const DeepCollectionEquality()
+                .equals(other.launchPayloadMass, launchPayloadMass) &&
+            const DeepCollectionEquality()
+                .equals(other.launchPayloadVol, launchPayloadVol) &&
+            const DeepCollectionEquality()
+                .equals(other.returnPayloadMass, returnPayloadMass) &&
+            const DeepCollectionEquality()
+                .equals(other.returnPayloadVol, returnPayloadVol) &&
+            const DeepCollectionEquality()
+                .equals(other.pressurizedCapsule, pressurizedCapsule) &&
             const DeepCollectionEquality().equals(other.wiki, wiki) &&
             const DeepCollectionEquality()
                 .equals(other._thrusters, _thrusters) &&
@@ -4906,25 +5215,32 @@ class _$_DragonModel extends _DragonModel {
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(description),
-      const DeepCollectionEquality().hash(wiki),
-      const DeepCollectionEquality().hash(_thrusters),
-      const DeepCollectionEquality().hash(dryMassLb),
-      const DeepCollectionEquality().hash(dryMassKg),
-      const DeepCollectionEquality().hash(orbitDurationYr),
-      const DeepCollectionEquality().hash(sidewallAngleDeg),
-      const DeepCollectionEquality().hash(crewCapacity),
-      const DeepCollectionEquality().hash(isActive),
-      const DeepCollectionEquality().hash(type),
-      const DeepCollectionEquality().hash(name),
-      const DeepCollectionEquality().hash(_images),
-      const DeepCollectionEquality().hash(firstFlight),
-      const DeepCollectionEquality().hash(diameter),
-      const DeepCollectionEquality().hash(heightWTrunk),
-      const DeepCollectionEquality().hash(trunk));
+  int get hashCode => Object.hashAll([
+        runtimeType,
+        const DeepCollectionEquality().hash(id),
+        const DeepCollectionEquality().hash(description),
+        const DeepCollectionEquality().hash(heatShield),
+        const DeepCollectionEquality().hash(launchPayloadMass),
+        const DeepCollectionEquality().hash(launchPayloadVol),
+        const DeepCollectionEquality().hash(returnPayloadMass),
+        const DeepCollectionEquality().hash(returnPayloadVol),
+        const DeepCollectionEquality().hash(pressurizedCapsule),
+        const DeepCollectionEquality().hash(wiki),
+        const DeepCollectionEquality().hash(_thrusters),
+        const DeepCollectionEquality().hash(dryMassLb),
+        const DeepCollectionEquality().hash(dryMassKg),
+        const DeepCollectionEquality().hash(orbitDurationYr),
+        const DeepCollectionEquality().hash(sidewallAngleDeg),
+        const DeepCollectionEquality().hash(crewCapacity),
+        const DeepCollectionEquality().hash(isActive),
+        const DeepCollectionEquality().hash(type),
+        const DeepCollectionEquality().hash(name),
+        const DeepCollectionEquality().hash(_images),
+        const DeepCollectionEquality().hash(firstFlight),
+        const DeepCollectionEquality().hash(diameter),
+        const DeepCollectionEquality().hash(heightWTrunk),
+        const DeepCollectionEquality().hash(trunk)
+      ]);
 
   @JsonKey(ignore: true)
   @override
@@ -4941,23 +5257,52 @@ class _$_DragonModel extends _DragonModel {
 
 abstract class _DragonModel extends DragonModel {
   const factory _DragonModel(
-      {@JsonKey(name: 'id') required final String id,
-      @JsonKey(name: 'description') final String? description,
-      @JsonKey(name: 'wikipedia') final String? wiki,
-      @JsonKey(name: 'thrusters') final List<ThrusterModel> thrusters,
-      @JsonKey(name: 'dry_mass_lb') final int? dryMassLb,
-      @JsonKey(name: 'dry_mass_kg') final int? dryMassKg,
-      @JsonKey(name: 'orbit_duration_yr') final int? orbitDurationYr,
-      @JsonKey(name: 'sidewall_angle_deg') final int? sidewallAngleDeg,
-      @JsonKey(name: 'crew_capacity') final int? crewCapacity,
-      @JsonKey(name: 'active') final bool isActive,
-      @JsonKey(name: 'type') final String? type,
-      @JsonKey(name: 'name') final String? name,
-      @JsonKey(name: 'flickr_images') final List<String> images,
-      @JsonKey(name: 'first_flight') final String? firstFlight,
-      @JsonKey(name: 'diameter') final DiameterModel? diameter,
-      @JsonKey(name: 'height_w_trunk') final DiameterModel? heightWTrunk,
-      @JsonKey(name: 'trunk') final TrunkModel? trunk}) = _$_DragonModel;
+      {@JsonKey(name: 'id')
+          required final String id,
+      @JsonKey(name: 'description')
+          final String? description,
+      @JsonKey(name: 'heat_shield')
+          final HeatShieldModel? heatShield,
+      @JsonKey(name: 'launch_payload_mass')
+          final MassModel? launchPayloadMass,
+      @JsonKey(name: 'launch_payload_vol')
+          final CubicLenModel? launchPayloadVol,
+      @JsonKey(name: 'return_payload_mass')
+          final MassModel? returnPayloadMass,
+      @JsonKey(name: 'return_payload_vol')
+          final CubicLenModel? returnPayloadVol,
+      @JsonKey(name: 'pressurized_capsule')
+          final PressurizedCapsuleModel? pressurizedCapsule,
+      @JsonKey(name: 'wikipedia')
+          final String? wiki,
+      @JsonKey(name: 'thrusters')
+          final List<ThrusterModel> thrusters,
+      @JsonKey(name: 'dry_mass_lb')
+          final int? dryMassLb,
+      @JsonKey(name: 'dry_mass_kg')
+          final int? dryMassKg,
+      @JsonKey(name: 'orbit_duration_yr')
+          final int? orbitDurationYr,
+      @JsonKey(name: 'sidewall_angle_deg')
+          final int? sidewallAngleDeg,
+      @JsonKey(name: 'crew_capacity')
+          final int? crewCapacity,
+      @JsonKey(name: 'active')
+          final bool isActive,
+      @JsonKey(name: 'type')
+          final String? type,
+      @JsonKey(name: 'name')
+          final String? name,
+      @JsonKey(name: 'flickr_images')
+          final List<String> images,
+      @JsonKey(name: 'first_flight')
+          final String? firstFlight,
+      @JsonKey(name: 'diameter')
+          final DiameterModel? diameter,
+      @JsonKey(name: 'height_w_trunk')
+          final DiameterModel? heightWTrunk,
+      @JsonKey(name: 'trunk')
+          final TrunkModel? trunk}) = _$_DragonModel;
   const _DragonModel._() : super._();
 
   factory _DragonModel.fromJson(Map<String, dynamic> json) =
@@ -4969,6 +5314,24 @@ abstract class _DragonModel extends DragonModel {
   @override
   @JsonKey(name: 'description')
   String? get description;
+  @override
+  @JsonKey(name: 'heat_shield')
+  HeatShieldModel? get heatShield;
+  @override
+  @JsonKey(name: 'launch_payload_mass')
+  MassModel? get launchPayloadMass;
+  @override
+  @JsonKey(name: 'launch_payload_vol')
+  CubicLenModel? get launchPayloadVol;
+  @override
+  @JsonKey(name: 'return_payload_mass')
+  MassModel? get returnPayloadMass;
+  @override
+  @JsonKey(name: 'return_payload_vol')
+  CubicLenModel? get returnPayloadVol;
+  @override
+  @JsonKey(name: 'pressurized_capsule')
+  PressurizedCapsuleModel? get pressurizedCapsule;
   @override
   @JsonKey(name: 'wikipedia')
   String? get wiki;
@@ -5017,6 +5380,389 @@ abstract class _DragonModel extends DragonModel {
   @override
   @JsonKey(ignore: true)
   _$$_DragonModelCopyWith<_$_DragonModel> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+PressurizedCapsuleModel _$PressurizedCapsuleModelFromJson(
+    Map<String, dynamic> json) {
+  return _PressurizedCapsuleModel.fromJson(json);
+}
+
+/// @nodoc
+mixin _$PressurizedCapsuleModel {
+  @JsonKey(name: 'payload_volume')
+  CubicLenModel? get payloadVolume => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $PressurizedCapsuleModelCopyWith<PressurizedCapsuleModel> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $PressurizedCapsuleModelCopyWith<$Res> {
+  factory $PressurizedCapsuleModelCopyWith(PressurizedCapsuleModel value,
+          $Res Function(PressurizedCapsuleModel) then) =
+      _$PressurizedCapsuleModelCopyWithImpl<$Res>;
+  $Res call({@JsonKey(name: 'payload_volume') CubicLenModel? payloadVolume});
+
+  $CubicLenModelCopyWith<$Res>? get payloadVolume;
+}
+
+/// @nodoc
+class _$PressurizedCapsuleModelCopyWithImpl<$Res>
+    implements $PressurizedCapsuleModelCopyWith<$Res> {
+  _$PressurizedCapsuleModelCopyWithImpl(this._value, this._then);
+
+  final PressurizedCapsuleModel _value;
+  // ignore: unused_field
+  final $Res Function(PressurizedCapsuleModel) _then;
+
+  @override
+  $Res call({
+    Object? payloadVolume = freezed,
+  }) {
+    return _then(_value.copyWith(
+      payloadVolume: payloadVolume == freezed
+          ? _value.payloadVolume
+          : payloadVolume // ignore: cast_nullable_to_non_nullable
+              as CubicLenModel?,
+    ));
+  }
+
+  @override
+  $CubicLenModelCopyWith<$Res>? get payloadVolume {
+    if (_value.payloadVolume == null) {
+      return null;
+    }
+
+    return $CubicLenModelCopyWith<$Res>(_value.payloadVolume!, (value) {
+      return _then(_value.copyWith(payloadVolume: value));
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$$_PressurizedCapsuleModelCopyWith<$Res>
+    implements $PressurizedCapsuleModelCopyWith<$Res> {
+  factory _$$_PressurizedCapsuleModelCopyWith(_$_PressurizedCapsuleModel value,
+          $Res Function(_$_PressurizedCapsuleModel) then) =
+      __$$_PressurizedCapsuleModelCopyWithImpl<$Res>;
+  @override
+  $Res call({@JsonKey(name: 'payload_volume') CubicLenModel? payloadVolume});
+
+  @override
+  $CubicLenModelCopyWith<$Res>? get payloadVolume;
+}
+
+/// @nodoc
+class __$$_PressurizedCapsuleModelCopyWithImpl<$Res>
+    extends _$PressurizedCapsuleModelCopyWithImpl<$Res>
+    implements _$$_PressurizedCapsuleModelCopyWith<$Res> {
+  __$$_PressurizedCapsuleModelCopyWithImpl(_$_PressurizedCapsuleModel _value,
+      $Res Function(_$_PressurizedCapsuleModel) _then)
+      : super(_value, (v) => _then(v as _$_PressurizedCapsuleModel));
+
+  @override
+  _$_PressurizedCapsuleModel get _value =>
+      super._value as _$_PressurizedCapsuleModel;
+
+  @override
+  $Res call({
+    Object? payloadVolume = freezed,
+  }) {
+    return _then(_$_PressurizedCapsuleModel(
+      payloadVolume: payloadVolume == freezed
+          ? _value.payloadVolume
+          : payloadVolume // ignore: cast_nullable_to_non_nullable
+              as CubicLenModel?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$_PressurizedCapsuleModel extends _PressurizedCapsuleModel {
+  const _$_PressurizedCapsuleModel(
+      {@JsonKey(name: 'payload_volume') this.payloadVolume})
+      : super._();
+
+  factory _$_PressurizedCapsuleModel.fromJson(Map<String, dynamic> json) =>
+      _$$_PressurizedCapsuleModelFromJson(json);
+
+  @override
+  @JsonKey(name: 'payload_volume')
+  final CubicLenModel? payloadVolume;
+
+  @override
+  String toString() {
+    return 'PressurizedCapsuleModel(payloadVolume: $payloadVolume)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_PressurizedCapsuleModel &&
+            const DeepCollectionEquality()
+                .equals(other.payloadVolume, payloadVolume));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType, const DeepCollectionEquality().hash(payloadVolume));
+
+  @JsonKey(ignore: true)
+  @override
+  _$$_PressurizedCapsuleModelCopyWith<_$_PressurizedCapsuleModel>
+      get copyWith =>
+          __$$_PressurizedCapsuleModelCopyWithImpl<_$_PressurizedCapsuleModel>(
+              this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_PressurizedCapsuleModelToJson(
+      this,
+    );
+  }
+}
+
+abstract class _PressurizedCapsuleModel extends PressurizedCapsuleModel {
+  const factory _PressurizedCapsuleModel(
+      {@JsonKey(name: 'payload_volume')
+          final CubicLenModel? payloadVolume}) = _$_PressurizedCapsuleModel;
+  const _PressurizedCapsuleModel._() : super._();
+
+  factory _PressurizedCapsuleModel.fromJson(Map<String, dynamic> json) =
+      _$_PressurizedCapsuleModel.fromJson;
+
+  @override
+  @JsonKey(name: 'payload_volume')
+  CubicLenModel? get payloadVolume;
+  @override
+  @JsonKey(ignore: true)
+  _$$_PressurizedCapsuleModelCopyWith<_$_PressurizedCapsuleModel>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+HeatShieldModel _$HeatShieldModelFromJson(Map<String, dynamic> json) {
+  return _HeatShieldModel.fromJson(json);
+}
+
+/// @nodoc
+mixin _$HeatShieldModel {
+  @JsonKey(name: 'material')
+  String? get material => throw _privateConstructorUsedError;
+  @JsonKey(name: 'size_meters')
+  num? get sizeMeters => throw _privateConstructorUsedError;
+  @JsonKey(name: 'temp_degrees')
+  int? get tempDegrees => throw _privateConstructorUsedError;
+  @JsonKey(name: 'dev_partner')
+  String? get devPartner => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $HeatShieldModelCopyWith<HeatShieldModel> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $HeatShieldModelCopyWith<$Res> {
+  factory $HeatShieldModelCopyWith(
+          HeatShieldModel value, $Res Function(HeatShieldModel) then) =
+      _$HeatShieldModelCopyWithImpl<$Res>;
+  $Res call(
+      {@JsonKey(name: 'material') String? material,
+      @JsonKey(name: 'size_meters') num? sizeMeters,
+      @JsonKey(name: 'temp_degrees') int? tempDegrees,
+      @JsonKey(name: 'dev_partner') String? devPartner});
+}
+
+/// @nodoc
+class _$HeatShieldModelCopyWithImpl<$Res>
+    implements $HeatShieldModelCopyWith<$Res> {
+  _$HeatShieldModelCopyWithImpl(this._value, this._then);
+
+  final HeatShieldModel _value;
+  // ignore: unused_field
+  final $Res Function(HeatShieldModel) _then;
+
+  @override
+  $Res call({
+    Object? material = freezed,
+    Object? sizeMeters = freezed,
+    Object? tempDegrees = freezed,
+    Object? devPartner = freezed,
+  }) {
+    return _then(_value.copyWith(
+      material: material == freezed
+          ? _value.material
+          : material // ignore: cast_nullable_to_non_nullable
+              as String?,
+      sizeMeters: sizeMeters == freezed
+          ? _value.sizeMeters
+          : sizeMeters // ignore: cast_nullable_to_non_nullable
+              as num?,
+      tempDegrees: tempDegrees == freezed
+          ? _value.tempDegrees
+          : tempDegrees // ignore: cast_nullable_to_non_nullable
+              as int?,
+      devPartner: devPartner == freezed
+          ? _value.devPartner
+          : devPartner // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ));
+  }
+}
+
+/// @nodoc
+abstract class _$$_HeatShieldModelCopyWith<$Res>
+    implements $HeatShieldModelCopyWith<$Res> {
+  factory _$$_HeatShieldModelCopyWith(
+          _$_HeatShieldModel value, $Res Function(_$_HeatShieldModel) then) =
+      __$$_HeatShieldModelCopyWithImpl<$Res>;
+  @override
+  $Res call(
+      {@JsonKey(name: 'material') String? material,
+      @JsonKey(name: 'size_meters') num? sizeMeters,
+      @JsonKey(name: 'temp_degrees') int? tempDegrees,
+      @JsonKey(name: 'dev_partner') String? devPartner});
+}
+
+/// @nodoc
+class __$$_HeatShieldModelCopyWithImpl<$Res>
+    extends _$HeatShieldModelCopyWithImpl<$Res>
+    implements _$$_HeatShieldModelCopyWith<$Res> {
+  __$$_HeatShieldModelCopyWithImpl(
+      _$_HeatShieldModel _value, $Res Function(_$_HeatShieldModel) _then)
+      : super(_value, (v) => _then(v as _$_HeatShieldModel));
+
+  @override
+  _$_HeatShieldModel get _value => super._value as _$_HeatShieldModel;
+
+  @override
+  $Res call({
+    Object? material = freezed,
+    Object? sizeMeters = freezed,
+    Object? tempDegrees = freezed,
+    Object? devPartner = freezed,
+  }) {
+    return _then(_$_HeatShieldModel(
+      material: material == freezed
+          ? _value.material
+          : material // ignore: cast_nullable_to_non_nullable
+              as String?,
+      sizeMeters: sizeMeters == freezed
+          ? _value.sizeMeters
+          : sizeMeters // ignore: cast_nullable_to_non_nullable
+              as num?,
+      tempDegrees: tempDegrees == freezed
+          ? _value.tempDegrees
+          : tempDegrees // ignore: cast_nullable_to_non_nullable
+              as int?,
+      devPartner: devPartner == freezed
+          ? _value.devPartner
+          : devPartner // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$_HeatShieldModel extends _HeatShieldModel {
+  const _$_HeatShieldModel(
+      {@JsonKey(name: 'material') this.material,
+      @JsonKey(name: 'size_meters') this.sizeMeters,
+      @JsonKey(name: 'temp_degrees') this.tempDegrees,
+      @JsonKey(name: 'dev_partner') this.devPartner})
+      : super._();
+
+  factory _$_HeatShieldModel.fromJson(Map<String, dynamic> json) =>
+      _$$_HeatShieldModelFromJson(json);
+
+  @override
+  @JsonKey(name: 'material')
+  final String? material;
+  @override
+  @JsonKey(name: 'size_meters')
+  final num? sizeMeters;
+  @override
+  @JsonKey(name: 'temp_degrees')
+  final int? tempDegrees;
+  @override
+  @JsonKey(name: 'dev_partner')
+  final String? devPartner;
+
+  @override
+  String toString() {
+    return 'HeatShieldModel(material: $material, sizeMeters: $sizeMeters, tempDegrees: $tempDegrees, devPartner: $devPartner)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_HeatShieldModel &&
+            const DeepCollectionEquality().equals(other.material, material) &&
+            const DeepCollectionEquality()
+                .equals(other.sizeMeters, sizeMeters) &&
+            const DeepCollectionEquality()
+                .equals(other.tempDegrees, tempDegrees) &&
+            const DeepCollectionEquality()
+                .equals(other.devPartner, devPartner));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(material),
+      const DeepCollectionEquality().hash(sizeMeters),
+      const DeepCollectionEquality().hash(tempDegrees),
+      const DeepCollectionEquality().hash(devPartner));
+
+  @JsonKey(ignore: true)
+  @override
+  _$$_HeatShieldModelCopyWith<_$_HeatShieldModel> get copyWith =>
+      __$$_HeatShieldModelCopyWithImpl<_$_HeatShieldModel>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_HeatShieldModelToJson(
+      this,
+    );
+  }
+}
+
+abstract class _HeatShieldModel extends HeatShieldModel {
+  const factory _HeatShieldModel(
+          {@JsonKey(name: 'material') final String? material,
+          @JsonKey(name: 'size_meters') final num? sizeMeters,
+          @JsonKey(name: 'temp_degrees') final int? tempDegrees,
+          @JsonKey(name: 'dev_partner') final String? devPartner}) =
+      _$_HeatShieldModel;
+  const _HeatShieldModel._() : super._();
+
+  factory _HeatShieldModel.fromJson(Map<String, dynamic> json) =
+      _$_HeatShieldModel.fromJson;
+
+  @override
+  @JsonKey(name: 'material')
+  String? get material;
+  @override
+  @JsonKey(name: 'size_meters')
+  num? get sizeMeters;
+  @override
+  @JsonKey(name: 'temp_degrees')
+  int? get tempDegrees;
+  @override
+  @JsonKey(name: 'dev_partner')
+  String? get devPartner;
+  @override
+  @JsonKey(ignore: true)
+  _$$_HeatShieldModelCopyWith<_$_HeatShieldModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -5332,7 +6078,7 @@ TrunkModel _$TrunkModelFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$TrunkModel {
   @JsonKey(name: 'trunk_volume')
-  TrunkVolumeModel? get volume => throw _privateConstructorUsedError;
+  CubicLenModel? get volume => throw _privateConstructorUsedError;
   @JsonKey(name: 'cargo')
   CargoModel? get cargo => throw _privateConstructorUsedError;
 
@@ -5348,10 +6094,10 @@ abstract class $TrunkModelCopyWith<$Res> {
           TrunkModel value, $Res Function(TrunkModel) then) =
       _$TrunkModelCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(name: 'trunk_volume') TrunkVolumeModel? volume,
+      {@JsonKey(name: 'trunk_volume') CubicLenModel? volume,
       @JsonKey(name: 'cargo') CargoModel? cargo});
 
-  $TrunkVolumeModelCopyWith<$Res>? get volume;
+  $CubicLenModelCopyWith<$Res>? get volume;
   $CargoModelCopyWith<$Res>? get cargo;
 }
 
@@ -5372,7 +6118,7 @@ class _$TrunkModelCopyWithImpl<$Res> implements $TrunkModelCopyWith<$Res> {
       volume: volume == freezed
           ? _value.volume
           : volume // ignore: cast_nullable_to_non_nullable
-              as TrunkVolumeModel?,
+              as CubicLenModel?,
       cargo: cargo == freezed
           ? _value.cargo
           : cargo // ignore: cast_nullable_to_non_nullable
@@ -5381,12 +6127,12 @@ class _$TrunkModelCopyWithImpl<$Res> implements $TrunkModelCopyWith<$Res> {
   }
 
   @override
-  $TrunkVolumeModelCopyWith<$Res>? get volume {
+  $CubicLenModelCopyWith<$Res>? get volume {
     if (_value.volume == null) {
       return null;
     }
 
-    return $TrunkVolumeModelCopyWith<$Res>(_value.volume!, (value) {
+    return $CubicLenModelCopyWith<$Res>(_value.volume!, (value) {
       return _then(_value.copyWith(volume: value));
     });
   }
@@ -5411,11 +6157,11 @@ abstract class _$$_TrunkModelCopyWith<$Res>
       __$$_TrunkModelCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(name: 'trunk_volume') TrunkVolumeModel? volume,
+      {@JsonKey(name: 'trunk_volume') CubicLenModel? volume,
       @JsonKey(name: 'cargo') CargoModel? cargo});
 
   @override
-  $TrunkVolumeModelCopyWith<$Res>? get volume;
+  $CubicLenModelCopyWith<$Res>? get volume;
   @override
   $CargoModelCopyWith<$Res>? get cargo;
 }
@@ -5439,7 +6185,7 @@ class __$$_TrunkModelCopyWithImpl<$Res> extends _$TrunkModelCopyWithImpl<$Res>
       volume: volume == freezed
           ? _value.volume
           : volume // ignore: cast_nullable_to_non_nullable
-              as TrunkVolumeModel?,
+              as CubicLenModel?,
       cargo: cargo == freezed
           ? _value.cargo
           : cargo // ignore: cast_nullable_to_non_nullable
@@ -5461,7 +6207,7 @@ class _$_TrunkModel extends _TrunkModel {
 
   @override
   @JsonKey(name: 'trunk_volume')
-  final TrunkVolumeModel? volume;
+  final CubicLenModel? volume;
   @override
   @JsonKey(name: 'cargo')
   final CargoModel? cargo;
@@ -5502,7 +6248,7 @@ class _$_TrunkModel extends _TrunkModel {
 
 abstract class _TrunkModel extends TrunkModel {
   const factory _TrunkModel(
-      {@JsonKey(name: 'trunk_volume') final TrunkVolumeModel? volume,
+      {@JsonKey(name: 'trunk_volume') final CubicLenModel? volume,
       @JsonKey(name: 'cargo') final CargoModel? cargo}) = _$_TrunkModel;
   const _TrunkModel._() : super._();
 
@@ -5511,182 +6257,13 @@ abstract class _TrunkModel extends TrunkModel {
 
   @override
   @JsonKey(name: 'trunk_volume')
-  TrunkVolumeModel? get volume;
+  CubicLenModel? get volume;
   @override
   @JsonKey(name: 'cargo')
   CargoModel? get cargo;
   @override
   @JsonKey(ignore: true)
   _$$_TrunkModelCopyWith<_$_TrunkModel> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-TrunkVolumeModel _$TrunkVolumeModelFromJson(Map<String, dynamic> json) {
-  return _TrunkVolumeModel.fromJson(json);
-}
-
-/// @nodoc
-mixin _$TrunkVolumeModel {
-  @JsonKey(name: 'cubic_meters')
-  num? get cubicMeters => throw _privateConstructorUsedError;
-  @JsonKey(name: 'cubic_feet')
-  num? get cubicFeet => throw _privateConstructorUsedError;
-
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
-  $TrunkVolumeModelCopyWith<TrunkVolumeModel> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $TrunkVolumeModelCopyWith<$Res> {
-  factory $TrunkVolumeModelCopyWith(
-          TrunkVolumeModel value, $Res Function(TrunkVolumeModel) then) =
-      _$TrunkVolumeModelCopyWithImpl<$Res>;
-  $Res call(
-      {@JsonKey(name: 'cubic_meters') num? cubicMeters,
-      @JsonKey(name: 'cubic_feet') num? cubicFeet});
-}
-
-/// @nodoc
-class _$TrunkVolumeModelCopyWithImpl<$Res>
-    implements $TrunkVolumeModelCopyWith<$Res> {
-  _$TrunkVolumeModelCopyWithImpl(this._value, this._then);
-
-  final TrunkVolumeModel _value;
-  // ignore: unused_field
-  final $Res Function(TrunkVolumeModel) _then;
-
-  @override
-  $Res call({
-    Object? cubicMeters = freezed,
-    Object? cubicFeet = freezed,
-  }) {
-    return _then(_value.copyWith(
-      cubicMeters: cubicMeters == freezed
-          ? _value.cubicMeters
-          : cubicMeters // ignore: cast_nullable_to_non_nullable
-              as num?,
-      cubicFeet: cubicFeet == freezed
-          ? _value.cubicFeet
-          : cubicFeet // ignore: cast_nullable_to_non_nullable
-              as num?,
-    ));
-  }
-}
-
-/// @nodoc
-abstract class _$$_TrunkVolumeModelCopyWith<$Res>
-    implements $TrunkVolumeModelCopyWith<$Res> {
-  factory _$$_TrunkVolumeModelCopyWith(
-          _$_TrunkVolumeModel value, $Res Function(_$_TrunkVolumeModel) then) =
-      __$$_TrunkVolumeModelCopyWithImpl<$Res>;
-  @override
-  $Res call(
-      {@JsonKey(name: 'cubic_meters') num? cubicMeters,
-      @JsonKey(name: 'cubic_feet') num? cubicFeet});
-}
-
-/// @nodoc
-class __$$_TrunkVolumeModelCopyWithImpl<$Res>
-    extends _$TrunkVolumeModelCopyWithImpl<$Res>
-    implements _$$_TrunkVolumeModelCopyWith<$Res> {
-  __$$_TrunkVolumeModelCopyWithImpl(
-      _$_TrunkVolumeModel _value, $Res Function(_$_TrunkVolumeModel) _then)
-      : super(_value, (v) => _then(v as _$_TrunkVolumeModel));
-
-  @override
-  _$_TrunkVolumeModel get _value => super._value as _$_TrunkVolumeModel;
-
-  @override
-  $Res call({
-    Object? cubicMeters = freezed,
-    Object? cubicFeet = freezed,
-  }) {
-    return _then(_$_TrunkVolumeModel(
-      cubicMeters: cubicMeters == freezed
-          ? _value.cubicMeters
-          : cubicMeters // ignore: cast_nullable_to_non_nullable
-              as num?,
-      cubicFeet: cubicFeet == freezed
-          ? _value.cubicFeet
-          : cubicFeet // ignore: cast_nullable_to_non_nullable
-              as num?,
-    ));
-  }
-}
-
-/// @nodoc
-@JsonSerializable()
-class _$_TrunkVolumeModel extends _TrunkVolumeModel {
-  const _$_TrunkVolumeModel(
-      {@JsonKey(name: 'cubic_meters') this.cubicMeters,
-      @JsonKey(name: 'cubic_feet') this.cubicFeet})
-      : super._();
-
-  factory _$_TrunkVolumeModel.fromJson(Map<String, dynamic> json) =>
-      _$$_TrunkVolumeModelFromJson(json);
-
-  @override
-  @JsonKey(name: 'cubic_meters')
-  final num? cubicMeters;
-  @override
-  @JsonKey(name: 'cubic_feet')
-  final num? cubicFeet;
-
-  @override
-  String toString() {
-    return 'TrunkVolumeModel(cubicMeters: $cubicMeters, cubicFeet: $cubicFeet)';
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$_TrunkVolumeModel &&
-            const DeepCollectionEquality()
-                .equals(other.cubicMeters, cubicMeters) &&
-            const DeepCollectionEquality().equals(other.cubicFeet, cubicFeet));
-  }
-
-  @JsonKey(ignore: true)
-  @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(cubicMeters),
-      const DeepCollectionEquality().hash(cubicFeet));
-
-  @JsonKey(ignore: true)
-  @override
-  _$$_TrunkVolumeModelCopyWith<_$_TrunkVolumeModel> get copyWith =>
-      __$$_TrunkVolumeModelCopyWithImpl<_$_TrunkVolumeModel>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$_TrunkVolumeModelToJson(
-      this,
-    );
-  }
-}
-
-abstract class _TrunkVolumeModel extends TrunkVolumeModel {
-  const factory _TrunkVolumeModel(
-      {@JsonKey(name: 'cubic_meters') final num? cubicMeters,
-      @JsonKey(name: 'cubic_feet') final num? cubicFeet}) = _$_TrunkVolumeModel;
-  const _TrunkVolumeModel._() : super._();
-
-  factory _TrunkVolumeModel.fromJson(Map<String, dynamic> json) =
-      _$_TrunkVolumeModel.fromJson;
-
-  @override
-  @JsonKey(name: 'cubic_meters')
-  num? get cubicMeters;
-  @override
-  @JsonKey(name: 'cubic_feet')
-  num? get cubicFeet;
-  @override
-  @JsonKey(ignore: true)
-  _$$_TrunkVolumeModelCopyWith<_$_TrunkVolumeModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
