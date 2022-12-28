@@ -1,83 +1,119 @@
 import 'package:api/api.dart';
-import 'package:api/models/crew/crew_status.dart';
 import 'package:test/test.dart';
 
+import '../../fixtures/fixtures.dart';
+import '../../fixtures_reader.dart';
+
 void main() {
-  group('Full Crew', () {
-    test('supports value comparison', () {
-      expect(const FullCrewModel(id: '0'), const FullCrewModel(id: '0'));
+  group('value comparison', () {
+    test('short models should be equal', () {
+      expect(shortCrew1, shortCrew2);
+      assert(shortCrew1 == shortCrew2);
     });
 
-    test('is correctly generated from a JSON', () {
-      expect(
-        FullCrewModel.fromJson(const {
-          'name': 'Robert Behnken',
-          'agency': 'NASA',
-          'image': 'https://imgur.com/0smMgMH.png',
-          'wikipedia': 'https://en.wikipedia.org/wiki/Robert_L._Behnken',
-          'launches': [
-            {'id': '5eb87d46ffd86e000604b388'}
-          ],
-          'status': 'active',
-          'id': '5ebf1a6e23a9a60006e03a7a'
-        }),
-        const FullCrewModel(
-          id: '5ebf1a6e23a9a60006e03a7a',
-          name: 'Robert Behnken',
-          agency: 'NASA',
-          image: 'https://imgur.com/0smMgMH.png',
-          wikipedia: 'https://en.wikipedia.org/wiki/Robert_L._Behnken',
-          launches: [LaunchModel(id: '5eb87d46ffd86e000604b388')],
-          status: CrewStatus.active,
-        ),
-      );
+    test('short models should not be equal', () {
+      assert(shortCrew1 != shortCrew);
+      assert(shortCrew2 != shortCrew);
+    });
+
+    test('should be equal', () {
+      expect(crew1, crew2);
+      assert(crew1 == crew2);
+    });
+
+    test('should not be equal', () {
+      assert(crew1 != crew);
+      assert(crew1 != crew);
+    });
+
+    test('full model should be equal', () {
+      expect(fullCrew1, fullCrew2);
+      assert(fullCrew1 == fullCrew2);
+    });
+
+    test('full model should not be equal', () {
+      assert(fullCrew1 != fullCrew);
+      assert(fullCrew2 != fullCrew);
     });
   });
 
-  group('Crew', () {
-    test('supports value comparison', () {
-      expect(const CrewModel(id: '0'), const CrewModel(id: '0'));
-    });
+  group('from json', () {
+    test(
+      'should return a valid short model from json fixture',
+      () async {
+        // arrange
+        final Map<String, dynamic> jsonMap = 'crew/short.json'.toFixture();
+        // act
+        final result = ShortCrewModel.fromJson(jsonMap);
+        // assert
+        expect(result, equals(shortCrew));
+      },
+    );
 
-    test('is correctly generated from a JSON', () {
-      expect(
-        CrewModel.fromJson(const {
-          'name': 'Robert Behnken',
-          'agency': 'NASA',
-          'image': 'https://imgur.com/0smMgMH.png',
-          'wikipedia': 'https://en.wikipedia.org/wiki/Robert_L._Behnken',
-          'launches': ['5eb87d46ffd86e000604b388'],
-          'status': 'active',
-          'id': '5ebf1a6e23a9a60006e03a7a'
-        }),
-        const CrewModel(
-          id: '5ebf1a6e23a9a60006e03a7a',
-          name: 'Robert Behnken',
-          agency: 'NASA',
-          image: 'https://imgur.com/0smMgMH.png',
-          wikipedia: 'https://en.wikipedia.org/wiki/Robert_L._Behnken',
-          launches: ['5eb87d46ffd86e000604b388'],
-          status: CrewStatus.active,
-        ),
-      );
-    });
+    test(
+      'should return a valid model from json fixture',
+      () async {
+        // arrange
+        final Map<String, dynamic> jsonMap = 'crew/member.json'.toFixture();
+        // act
+        final result = CrewModel.fromJson(jsonMap);
+        // assert
+        expect(result, equals(crew));
+      },
+    );
+
+    test(
+      'should return a valid full model from json fixture',
+      () async {
+        // arrange
+        final Map<String, dynamic> jsonMap =
+            'crew/full_member.json'.toFixture();
+        // act
+        final result = FullCrewModel.fromJson(jsonMap);
+        // assert
+        expect(result, equals(fullCrew));
+      },
+    );
   });
 
-  group('Short Crew', () {
-    test('supports value comparison', () {
-      expect(const ShortCrewModel(crew: '0'), const ShortCrewModel(crew: '0'));
-    });
+  group('to json', () {
+    test(
+      'short model, should return a json map containing proper data',
+      () async {
+        // act
+        final result = shortCrew.toJson();
 
-    test('is correctly generated from a JSON', () {
-      expect(
-        ShortCrewModel.fromJson(
-          const {'crew': '5ebf1a6e23a9a60006e03a7a', 'role': 'Commander'},
-        ),
-        const ShortCrewModel(
-          crew: '5ebf1a6e23a9a60006e03a7a',
-          role: 'Commander',
-        ),
-      );
-    });
+        // assert
+        final Map<String, dynamic> expectedJsonMap =
+            'crew/short.json'.toFixture();
+        expect(result, equals(expectedJsonMap));
+      },
+    );
+
+    test(
+      'model, should return a json map containing proper data',
+      () async {
+        // act
+        final result = crew.toJson();
+
+        // assert
+        final Map<String, dynamic> expectedJsonMap =
+            'crew/member.json'.toFixture();
+        expect(result, equals(expectedJsonMap));
+      },
+    );
+
+    test(
+      'full model, should return a json map containing proper data',
+      () async {
+        // act
+        final result = fullCrew.toJson();
+
+        // assert
+        final Map<String, dynamic> expectedJsonMap =
+            'crew/full_member.json'.toFixture();
+        expect(result, equals(expectedJsonMap));
+      },
+    );
   });
 }

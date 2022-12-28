@@ -89,8 +89,9 @@ void main() {
     dio.interceptors.add(LoggingInterceptor());
 
     // act
-    final data = await dataSource
-        .queryLaunches(const q.QueryModel(options: q.OptionsModel(offset: 5, page: 1)));
+    final data = await dataSource.queryLaunches(
+      const q.QueryModel(options: q.OptionsModel(offset: 5, page: 1)),
+    );
 
     // assert
     expect(data.page, 1);
@@ -105,7 +106,14 @@ void main() {
     final data = await dataSource.queryFullLaunches(
       const q.QueryModel(
         options: q.OptionsModel(
-          populate: ['payloads', 'launchpad', 'rocket', 'capsules', 'crew'],
+          populate: [
+            'payloads',
+            'launchpad',
+            'rocket',
+            'capsules',
+            'crew',
+            'ships',
+          ],
         ),
       ),
     );

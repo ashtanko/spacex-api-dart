@@ -2,19 +2,20 @@ import 'package:api/models/launch/launch_model.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'core_model.freezed.dart';
+
 part 'core_model.g.dart';
 
 @freezed
 class CoreModel with _$CoreModel {
   const factory CoreModel({
     String? id,
-    @Default(0) int block,
-    @JsonKey(name: 'reuse_count') @Default(0) int reuseCount,
-    @JsonKey(name: 'rtls_attempts') @Default(0) int rtlsAttempts,
-    @JsonKey(name: 'rtls_landings') @Default(0) int rtlsLandings,
-    @JsonKey(name: 'asds_attempts') @Default(0) int asdsAttempts,
-    @JsonKey(name: 'asds_landings') @Default(0) int asdsLandings,
-    @JsonKey(name: 'last_update') @Default('') String lastUpdate,
+    @JsonKey(name: 'block') int? block,
+    @JsonKey(name: 'reuse_count') int? reuseCount,
+    @JsonKey(name: 'rtls_attempts') int? rtlsAttempts,
+    @JsonKey(name: 'rtls_landings') int? rtlsLandings,
+    @JsonKey(name: 'asds_attempts') int? asdsAttempts,
+    @JsonKey(name: 'asds_landings') int? asdsLandings,
+    @JsonKey(name: 'last_update') String? lastUpdate,
     @JsonKey(name: 'launches') @Default([]) List<String> launches,
     @JsonKey(name: 'serial') String? serial,
     @JsonKey(name: 'status') String? status,
@@ -39,13 +40,13 @@ class CoreModel with _$CoreModel {
 class CoreFullModel with _$CoreFullModel {
   const factory CoreFullModel({
     String? id,
-    @Default(0) int block,
-    @JsonKey(name: 'reuse_count') @Default(0) int reuseCount,
-    @JsonKey(name: 'rtls_attempts') @Default(0) int rtlsAttempts,
-    @JsonKey(name: 'rtls_landings') @Default(0) int rtlsLandings,
-    @JsonKey(name: 'asds_attempts') @Default(0) int asdsAttempts,
-    @JsonKey(name: 'asds_landings') @Default(0) int asdsLandings,
-    @JsonKey(name: 'last_update') @Default('') String lastUpdate,
+    @JsonKey(name: 'block') int? block,
+    @JsonKey(name: 'reuse_count') int? reuseCount,
+    @JsonKey(name: 'rtls_attempts') int? rtlsAttempts,
+    @JsonKey(name: 'rtls_landings') int? rtlsLandings,
+    @JsonKey(name: 'asds_attempts') int? asdsAttempts,
+    @JsonKey(name: 'asds_landings') int? asdsLandings,
+    @JsonKey(name: 'last_update') String? lastUpdate,
     @JsonKey(name: 'launches')
     @Default(<LaunchModel>[])
         List<LaunchModel> launches,

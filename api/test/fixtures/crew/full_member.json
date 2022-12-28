@@ -5,7 +5,6 @@
   "wikipedia": "https://en.wikipedia.org/wiki/Robert_L._Behnken",
   "launches": [
     {
-      "fairings": null,
       "links": {
         "patch": {
           "small": "https://images2.imgbox.com/48/a8/LTqq8OrE_o.png",
@@ -89,12 +88,12 @@
           "landing_attempt": true,
           "landing_success": true,
           "landing_type": "ASDS",
-          "landpad": "5e9e3032383ecb6bb234e7ca"
+          "landpad": "5e9e3032383ecb6bb234e7ca",
+          "launches": []
         }
       ],
       "auto_update": true,
       "tbd": false,
-      "launch_library_id": null,
       "id": "5eb87d46ffd86e000604b388"
     }
   ],

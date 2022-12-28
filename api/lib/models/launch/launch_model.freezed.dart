@@ -44,8 +44,9 @@ mixin _$FullLaunchModel {
   @JsonKey(name: 'payloads')
   List<PayloadModel> get payloads => throw _privateConstructorUsedError;
   @JsonKey(name: 'capsules')
-  List<CapsuleModel> get capsules =>
-      throw _privateConstructorUsedError; //@JsonKey(name: 'ships') @Default([]) List<Ship> ships,
+  List<CapsuleModel> get capsules => throw _privateConstructorUsedError;
+  @JsonKey(name: 'ships')
+  List<ShipModel> get ships => throw _privateConstructorUsedError;
   @JsonKey(name: 'crew')
   List<String> get crew => throw _privateConstructorUsedError;
   @JsonKey(name: 'details')
@@ -68,6 +69,8 @@ mixin _$FullLaunchModel {
   LaunchLinksModel? get links => throw _privateConstructorUsedError;
   @JsonKey(name: 'fairings')
   FairingsModel? get fairings => throw _privateConstructorUsedError;
+  @JsonKey(name: 'launch_library_id')
+  String? get launchLibraryId => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -95,6 +98,7 @@ abstract class $FullLaunchModelCopyWith<$Res> {
       @JsonKey(name: 'launchpad') LandpadModel? launchpad,
       @JsonKey(name: 'payloads') List<PayloadModel> payloads,
       @JsonKey(name: 'capsules') List<CapsuleModel> capsules,
+      @JsonKey(name: 'ships') List<ShipModel> ships,
       @JsonKey(name: 'crew') List<String> crew,
       @JsonKey(name: 'details') String details,
       @JsonKey(name: 'failures') List<LaunchFailureModel> failures,
@@ -105,7 +109,8 @@ abstract class $FullLaunchModelCopyWith<$Res> {
       @JsonKey(name: 'static_fire_date_unix') int staticFireDateUnix,
       @JsonKey(name: 'static_fire_date_utc') String staticFireDateUtc,
       @JsonKey(name: 'links') LaunchLinksModel? links,
-      @JsonKey(name: 'fairings') FairingsModel? fairings});
+      @JsonKey(name: 'fairings') FairingsModel? fairings,
+      @JsonKey(name: 'launch_library_id') String? launchLibraryId});
 
   $LandpadModelCopyWith<$Res>? get launchpad;
   $RocketVehicleModelCopyWith<$Res>? get rocket;
@@ -138,6 +143,7 @@ class _$FullLaunchModelCopyWithImpl<$Res>
     Object? launchpad = freezed,
     Object? payloads = freezed,
     Object? capsules = freezed,
+    Object? ships = freezed,
     Object? crew = freezed,
     Object? details = freezed,
     Object? failures = freezed,
@@ -149,6 +155,7 @@ class _$FullLaunchModelCopyWithImpl<$Res>
     Object? staticFireDateUtc = freezed,
     Object? links = freezed,
     Object? fairings = freezed,
+    Object? launchLibraryId = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed
@@ -207,6 +214,10 @@ class _$FullLaunchModelCopyWithImpl<$Res>
           ? _value.capsules
           : capsules // ignore: cast_nullable_to_non_nullable
               as List<CapsuleModel>,
+      ships: ships == freezed
+          ? _value.ships
+          : ships // ignore: cast_nullable_to_non_nullable
+              as List<ShipModel>,
       crew: crew == freezed
           ? _value.crew
           : crew // ignore: cast_nullable_to_non_nullable
@@ -251,6 +262,10 @@ class _$FullLaunchModelCopyWithImpl<$Res>
           ? _value.fairings
           : fairings // ignore: cast_nullable_to_non_nullable
               as FairingsModel?,
+      launchLibraryId: launchLibraryId == freezed
+          ? _value.launchLibraryId
+          : launchLibraryId // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 
@@ -321,6 +336,7 @@ abstract class _$$_FullLaunchModelCopyWith<$Res>
       @JsonKey(name: 'launchpad') LandpadModel? launchpad,
       @JsonKey(name: 'payloads') List<PayloadModel> payloads,
       @JsonKey(name: 'capsules') List<CapsuleModel> capsules,
+      @JsonKey(name: 'ships') List<ShipModel> ships,
       @JsonKey(name: 'crew') List<String> crew,
       @JsonKey(name: 'details') String details,
       @JsonKey(name: 'failures') List<LaunchFailureModel> failures,
@@ -331,7 +347,8 @@ abstract class _$$_FullLaunchModelCopyWith<$Res>
       @JsonKey(name: 'static_fire_date_unix') int staticFireDateUnix,
       @JsonKey(name: 'static_fire_date_utc') String staticFireDateUtc,
       @JsonKey(name: 'links') LaunchLinksModel? links,
-      @JsonKey(name: 'fairings') FairingsModel? fairings});
+      @JsonKey(name: 'fairings') FairingsModel? fairings,
+      @JsonKey(name: 'launch_library_id') String? launchLibraryId});
 
   @override
   $LandpadModelCopyWith<$Res>? get launchpad;
@@ -370,6 +387,7 @@ class __$$_FullLaunchModelCopyWithImpl<$Res>
     Object? launchpad = freezed,
     Object? payloads = freezed,
     Object? capsules = freezed,
+    Object? ships = freezed,
     Object? crew = freezed,
     Object? details = freezed,
     Object? failures = freezed,
@@ -381,6 +399,7 @@ class __$$_FullLaunchModelCopyWithImpl<$Res>
     Object? staticFireDateUtc = freezed,
     Object? links = freezed,
     Object? fairings = freezed,
+    Object? launchLibraryId = freezed,
   }) {
     return _then(_$_FullLaunchModel(
       id: id == freezed
@@ -439,6 +458,10 @@ class __$$_FullLaunchModelCopyWithImpl<$Res>
           ? _value._capsules
           : capsules // ignore: cast_nullable_to_non_nullable
               as List<CapsuleModel>,
+      ships: ships == freezed
+          ? _value._ships
+          : ships // ignore: cast_nullable_to_non_nullable
+              as List<ShipModel>,
       crew: crew == freezed
           ? _value._crew
           : crew // ignore: cast_nullable_to_non_nullable
@@ -483,6 +506,10 @@ class __$$_FullLaunchModelCopyWithImpl<$Res>
           ? _value.fairings
           : fairings // ignore: cast_nullable_to_non_nullable
               as FairingsModel?,
+      launchLibraryId: launchLibraryId == freezed
+          ? _value.launchLibraryId
+          : launchLibraryId // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -516,6 +543,8 @@ class _$_FullLaunchModel extends _FullLaunchModel {
           final List<PayloadModel> payloads = const [],
       @JsonKey(name: 'capsules')
           final List<CapsuleModel> capsules = const [],
+      @JsonKey(name: 'ships')
+          final List<ShipModel> ships = const [],
       @JsonKey(name: 'crew')
           final List<String> crew = const [],
       @JsonKey(name: 'details')
@@ -537,10 +566,13 @@ class _$_FullLaunchModel extends _FullLaunchModel {
       @JsonKey(name: 'links')
           this.links,
       @JsonKey(name: 'fairings')
-          this.fairings})
+          this.fairings,
+      @JsonKey(name: 'launch_library_id')
+          this.launchLibraryId})
       : _cores = cores,
         _payloads = payloads,
         _capsules = capsules,
+        _ships = ships,
         _crew = crew,
         _failures = failures,
         super._();
@@ -604,9 +636,15 @@ class _$_FullLaunchModel extends _FullLaunchModel {
     return EqualUnmodifiableListView(_capsules);
   }
 
-//@JsonKey(name: 'ships') @Default([]) List<Ship> ships,
+  final List<ShipModel> _ships;
+  @override
+  @JsonKey(name: 'ships')
+  List<ShipModel> get ships {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_ships);
+  }
+
   final List<String> _crew;
-//@JsonKey(name: 'ships') @Default([]) List<Ship> ships,
   @override
   @JsonKey(name: 'crew')
   List<String> get crew {
@@ -649,10 +687,13 @@ class _$_FullLaunchModel extends _FullLaunchModel {
   @override
   @JsonKey(name: 'fairings')
   final FairingsModel? fairings;
+  @override
+  @JsonKey(name: 'launch_library_id')
+  final String? launchLibraryId;
 
   @override
   String toString() {
-    return 'FullLaunchModel(id: $id, tbd: $tbd, autoUpdate: $autoUpdate, cores: $cores, upcoming: $upcoming, datePrecision: $datePrecision, dateLocal: $dateLocal, dateUnix: $dateUnix, dateUtc: $dateUtc, name: $name, flightNumber: $flightNumber, launchpad: $launchpad, payloads: $payloads, capsules: $capsules, crew: $crew, details: $details, failures: $failures, success: $success, rocket: $rocket, window: $window, net: $net, staticFireDateUnix: $staticFireDateUnix, staticFireDateUtc: $staticFireDateUtc, links: $links, fairings: $fairings)';
+    return 'FullLaunchModel(id: $id, tbd: $tbd, autoUpdate: $autoUpdate, cores: $cores, upcoming: $upcoming, datePrecision: $datePrecision, dateLocal: $dateLocal, dateUnix: $dateUnix, dateUtc: $dateUtc, name: $name, flightNumber: $flightNumber, launchpad: $launchpad, payloads: $payloads, capsules: $capsules, ships: $ships, crew: $crew, details: $details, failures: $failures, success: $success, rocket: $rocket, window: $window, net: $net, staticFireDateUnix: $staticFireDateUnix, staticFireDateUtc: $staticFireDateUtc, links: $links, fairings: $fairings, launchLibraryId: $launchLibraryId)';
   }
 
   @override
@@ -677,6 +718,7 @@ class _$_FullLaunchModel extends _FullLaunchModel {
             const DeepCollectionEquality().equals(other.launchpad, launchpad) &&
             const DeepCollectionEquality().equals(other._payloads, _payloads) &&
             const DeepCollectionEquality().equals(other._capsules, _capsules) &&
+            const DeepCollectionEquality().equals(other._ships, _ships) &&
             const DeepCollectionEquality().equals(other._crew, _crew) &&
             const DeepCollectionEquality().equals(other.details, details) &&
             const DeepCollectionEquality().equals(other._failures, _failures) &&
@@ -689,7 +731,9 @@ class _$_FullLaunchModel extends _FullLaunchModel {
             const DeepCollectionEquality()
                 .equals(other.staticFireDateUtc, staticFireDateUtc) &&
             const DeepCollectionEquality().equals(other.links, links) &&
-            const DeepCollectionEquality().equals(other.fairings, fairings));
+            const DeepCollectionEquality().equals(other.fairings, fairings) &&
+            const DeepCollectionEquality()
+                .equals(other.launchLibraryId, launchLibraryId));
   }
 
   @JsonKey(ignore: true)
@@ -710,6 +754,7 @@ class _$_FullLaunchModel extends _FullLaunchModel {
         const DeepCollectionEquality().hash(launchpad),
         const DeepCollectionEquality().hash(_payloads),
         const DeepCollectionEquality().hash(_capsules),
+        const DeepCollectionEquality().hash(_ships),
         const DeepCollectionEquality().hash(_crew),
         const DeepCollectionEquality().hash(details),
         const DeepCollectionEquality().hash(_failures),
@@ -720,7 +765,8 @@ class _$_FullLaunchModel extends _FullLaunchModel {
         const DeepCollectionEquality().hash(staticFireDateUnix),
         const DeepCollectionEquality().hash(staticFireDateUtc),
         const DeepCollectionEquality().hash(links),
-        const DeepCollectionEquality().hash(fairings)
+        const DeepCollectionEquality().hash(fairings),
+        const DeepCollectionEquality().hash(launchLibraryId)
       ]);
 
   @JsonKey(ignore: true)
@@ -752,6 +798,7 @@ abstract class _FullLaunchModel extends FullLaunchModel {
           @JsonKey(name: 'launchpad') final LandpadModel? launchpad,
           @JsonKey(name: 'payloads') final List<PayloadModel> payloads,
           @JsonKey(name: 'capsules') final List<CapsuleModel> capsules,
+          @JsonKey(name: 'ships') final List<ShipModel> ships,
           @JsonKey(name: 'crew') final List<String> crew,
           @JsonKey(name: 'details') final String details,
           @JsonKey(name: 'failures') final List<LaunchFailureModel> failures,
@@ -762,7 +809,8 @@ abstract class _FullLaunchModel extends FullLaunchModel {
           @JsonKey(name: 'static_fire_date_unix') final int staticFireDateUnix,
           @JsonKey(name: 'static_fire_date_utc') final String staticFireDateUtc,
           @JsonKey(name: 'links') final LaunchLinksModel? links,
-          @JsonKey(name: 'fairings') final FairingsModel? fairings}) =
+          @JsonKey(name: 'fairings') final FairingsModel? fairings,
+          @JsonKey(name: 'launch_library_id') final String? launchLibraryId}) =
       _$_FullLaunchModel;
   const _FullLaunchModel._() : super._();
 
@@ -808,7 +856,10 @@ abstract class _FullLaunchModel extends FullLaunchModel {
   @override
   @JsonKey(name: 'capsules')
   List<CapsuleModel> get capsules;
-  @override //@JsonKey(name: 'ships') @Default([]) List<Ship> ships,
+  @override
+  @JsonKey(name: 'ships')
+  List<ShipModel> get ships;
+  @override
   @JsonKey(name: 'crew')
   List<String> get crew;
   @override
@@ -841,6 +892,9 @@ abstract class _FullLaunchModel extends FullLaunchModel {
   @override
   @JsonKey(name: 'fairings')
   FairingsModel? get fairings;
+  @override
+  @JsonKey(name: 'launch_library_id')
+  String? get launchLibraryId;
   @override
   @JsonKey(ignore: true)
   _$$_FullLaunchModelCopyWith<_$_FullLaunchModel> get copyWith =>
@@ -878,8 +932,9 @@ mixin _$LaunchSimpleModel {
   @JsonKey(name: 'payloads')
   List<String> get payloads => throw _privateConstructorUsedError;
   @JsonKey(name: 'capsules')
-  List<String> get capsules =>
-      throw _privateConstructorUsedError; //@JsonKey(name: 'ships') @Default([]) List<Ship> ships,
+  List<String> get capsules => throw _privateConstructorUsedError;
+  @JsonKey(name: 'ships')
+  List<String> get ships => throw _privateConstructorUsedError;
   @JsonKey(name: 'crew')
   List<String> get crew => throw _privateConstructorUsedError;
   @JsonKey(name: 'details')
@@ -902,6 +957,8 @@ mixin _$LaunchSimpleModel {
   LaunchLinksModel? get links => throw _privateConstructorUsedError;
   @JsonKey(name: 'fairings')
   FairingsModel? get fairings => throw _privateConstructorUsedError;
+  @JsonKey(name: 'launch_library_id')
+  String? get launchLibraryId => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -929,6 +986,7 @@ abstract class $LaunchSimpleModelCopyWith<$Res> {
       @JsonKey(name: 'launchpad') String launchpad,
       @JsonKey(name: 'payloads') List<String> payloads,
       @JsonKey(name: 'capsules') List<String> capsules,
+      @JsonKey(name: 'ships') List<String> ships,
       @JsonKey(name: 'crew') List<String> crew,
       @JsonKey(name: 'details') String details,
       @JsonKey(name: 'failures') List<LaunchFailureModel> failures,
@@ -939,7 +997,8 @@ abstract class $LaunchSimpleModelCopyWith<$Res> {
       @JsonKey(name: 'static_fire_date_unix') int staticFireDateUnix,
       @JsonKey(name: 'static_fire_date_utc') String staticFireDateUtc,
       @JsonKey(name: 'links') LaunchLinksModel? links,
-      @JsonKey(name: 'fairings') FairingsModel? fairings});
+      @JsonKey(name: 'fairings') FairingsModel? fairings,
+      @JsonKey(name: 'launch_library_id') String? launchLibraryId});
 
   $LaunchLinksModelCopyWith<$Res>? get links;
   $FairingsModelCopyWith<$Res>? get fairings;
@@ -970,6 +1029,7 @@ class _$LaunchSimpleModelCopyWithImpl<$Res>
     Object? launchpad = freezed,
     Object? payloads = freezed,
     Object? capsules = freezed,
+    Object? ships = freezed,
     Object? crew = freezed,
     Object? details = freezed,
     Object? failures = freezed,
@@ -981,6 +1041,7 @@ class _$LaunchSimpleModelCopyWithImpl<$Res>
     Object? staticFireDateUtc = freezed,
     Object? links = freezed,
     Object? fairings = freezed,
+    Object? launchLibraryId = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed
@@ -1039,6 +1100,10 @@ class _$LaunchSimpleModelCopyWithImpl<$Res>
           ? _value.capsules
           : capsules // ignore: cast_nullable_to_non_nullable
               as List<String>,
+      ships: ships == freezed
+          ? _value.ships
+          : ships // ignore: cast_nullable_to_non_nullable
+              as List<String>,
       crew: crew == freezed
           ? _value.crew
           : crew // ignore: cast_nullable_to_non_nullable
@@ -1083,6 +1148,10 @@ class _$LaunchSimpleModelCopyWithImpl<$Res>
           ? _value.fairings
           : fairings // ignore: cast_nullable_to_non_nullable
               as FairingsModel?,
+      launchLibraryId: launchLibraryId == freezed
+          ? _value.launchLibraryId
+          : launchLibraryId // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 
@@ -1131,6 +1200,7 @@ abstract class _$$_LaunchSimpleModelCopyWith<$Res>
       @JsonKey(name: 'launchpad') String launchpad,
       @JsonKey(name: 'payloads') List<String> payloads,
       @JsonKey(name: 'capsules') List<String> capsules,
+      @JsonKey(name: 'ships') List<String> ships,
       @JsonKey(name: 'crew') List<String> crew,
       @JsonKey(name: 'details') String details,
       @JsonKey(name: 'failures') List<LaunchFailureModel> failures,
@@ -1141,7 +1211,8 @@ abstract class _$$_LaunchSimpleModelCopyWith<$Res>
       @JsonKey(name: 'static_fire_date_unix') int staticFireDateUnix,
       @JsonKey(name: 'static_fire_date_utc') String staticFireDateUtc,
       @JsonKey(name: 'links') LaunchLinksModel? links,
-      @JsonKey(name: 'fairings') FairingsModel? fairings});
+      @JsonKey(name: 'fairings') FairingsModel? fairings,
+      @JsonKey(name: 'launch_library_id') String? launchLibraryId});
 
   @override
   $LaunchLinksModelCopyWith<$Res>? get links;
@@ -1176,6 +1247,7 @@ class __$$_LaunchSimpleModelCopyWithImpl<$Res>
     Object? launchpad = freezed,
     Object? payloads = freezed,
     Object? capsules = freezed,
+    Object? ships = freezed,
     Object? crew = freezed,
     Object? details = freezed,
     Object? failures = freezed,
@@ -1187,6 +1259,7 @@ class __$$_LaunchSimpleModelCopyWithImpl<$Res>
     Object? staticFireDateUtc = freezed,
     Object? links = freezed,
     Object? fairings = freezed,
+    Object? launchLibraryId = freezed,
   }) {
     return _then(_$_LaunchSimpleModel(
       id: id == freezed
@@ -1245,6 +1318,10 @@ class __$$_LaunchSimpleModelCopyWithImpl<$Res>
           ? _value._capsules
           : capsules // ignore: cast_nullable_to_non_nullable
               as List<String>,
+      ships: ships == freezed
+          ? _value._ships
+          : ships // ignore: cast_nullable_to_non_nullable
+              as List<String>,
       crew: crew == freezed
           ? _value._crew
           : crew // ignore: cast_nullable_to_non_nullable
@@ -1289,6 +1366,10 @@ class __$$_LaunchSimpleModelCopyWithImpl<$Res>
           ? _value.fairings
           : fairings // ignore: cast_nullable_to_non_nullable
               as FairingsModel?,
+      launchLibraryId: launchLibraryId == freezed
+          ? _value.launchLibraryId
+          : launchLibraryId // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -1323,6 +1404,8 @@ class _$_LaunchSimpleModel extends _LaunchSimpleModel {
           final List<String> payloads = const [],
       @JsonKey(name: 'capsules')
           final List<String> capsules = const [],
+      @JsonKey(name: 'ships')
+          final List<String> ships = const [],
       @JsonKey(name: 'crew')
           final List<String> crew = const <String>[],
       @JsonKey(name: 'details')
@@ -1344,10 +1427,13 @@ class _$_LaunchSimpleModel extends _LaunchSimpleModel {
       @JsonKey(name: 'links')
           this.links,
       @JsonKey(name: 'fairings')
-          this.fairings})
+          this.fairings,
+      @JsonKey(name: 'launch_library_id')
+          this.launchLibraryId})
       : _cores = cores,
         _payloads = payloads,
         _capsules = capsules,
+        _ships = ships,
         _crew = crew,
         _failures = failures,
         super._();
@@ -1412,9 +1498,15 @@ class _$_LaunchSimpleModel extends _LaunchSimpleModel {
     return EqualUnmodifiableListView(_capsules);
   }
 
-//@JsonKey(name: 'ships') @Default([]) List<Ship> ships,
+  final List<String> _ships;
+  @override
+  @JsonKey(name: 'ships')
+  List<String> get ships {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_ships);
+  }
+
   final List<String> _crew;
-//@JsonKey(name: 'ships') @Default([]) List<Ship> ships,
   @override
   @JsonKey(name: 'crew')
   List<String> get crew {
@@ -1457,10 +1549,13 @@ class _$_LaunchSimpleModel extends _LaunchSimpleModel {
   @override
   @JsonKey(name: 'fairings')
   final FairingsModel? fairings;
+  @override
+  @JsonKey(name: 'launch_library_id')
+  final String? launchLibraryId;
 
   @override
   String toString() {
-    return 'LaunchSimpleModel(id: $id, tbd: $tbd, autoUpdate: $autoUpdate, cores: $cores, upcoming: $upcoming, datePrecision: $datePrecision, dateLocal: $dateLocal, dateUnix: $dateUnix, dateUtc: $dateUtc, name: $name, flightNumber: $flightNumber, launchpad: $launchpad, payloads: $payloads, capsules: $capsules, crew: $crew, details: $details, failures: $failures, success: $success, rocket: $rocket, window: $window, net: $net, staticFireDateUnix: $staticFireDateUnix, staticFireDateUtc: $staticFireDateUtc, links: $links, fairings: $fairings)';
+    return 'LaunchSimpleModel(id: $id, tbd: $tbd, autoUpdate: $autoUpdate, cores: $cores, upcoming: $upcoming, datePrecision: $datePrecision, dateLocal: $dateLocal, dateUnix: $dateUnix, dateUtc: $dateUtc, name: $name, flightNumber: $flightNumber, launchpad: $launchpad, payloads: $payloads, capsules: $capsules, ships: $ships, crew: $crew, details: $details, failures: $failures, success: $success, rocket: $rocket, window: $window, net: $net, staticFireDateUnix: $staticFireDateUnix, staticFireDateUtc: $staticFireDateUtc, links: $links, fairings: $fairings, launchLibraryId: $launchLibraryId)';
   }
 
   @override
@@ -1485,6 +1580,7 @@ class _$_LaunchSimpleModel extends _LaunchSimpleModel {
             const DeepCollectionEquality().equals(other.launchpad, launchpad) &&
             const DeepCollectionEquality().equals(other._payloads, _payloads) &&
             const DeepCollectionEquality().equals(other._capsules, _capsules) &&
+            const DeepCollectionEquality().equals(other._ships, _ships) &&
             const DeepCollectionEquality().equals(other._crew, _crew) &&
             const DeepCollectionEquality().equals(other.details, details) &&
             const DeepCollectionEquality().equals(other._failures, _failures) &&
@@ -1497,7 +1593,9 @@ class _$_LaunchSimpleModel extends _LaunchSimpleModel {
             const DeepCollectionEquality()
                 .equals(other.staticFireDateUtc, staticFireDateUtc) &&
             const DeepCollectionEquality().equals(other.links, links) &&
-            const DeepCollectionEquality().equals(other.fairings, fairings));
+            const DeepCollectionEquality().equals(other.fairings, fairings) &&
+            const DeepCollectionEquality()
+                .equals(other.launchLibraryId, launchLibraryId));
   }
 
   @JsonKey(ignore: true)
@@ -1518,6 +1616,7 @@ class _$_LaunchSimpleModel extends _LaunchSimpleModel {
         const DeepCollectionEquality().hash(launchpad),
         const DeepCollectionEquality().hash(_payloads),
         const DeepCollectionEquality().hash(_capsules),
+        const DeepCollectionEquality().hash(_ships),
         const DeepCollectionEquality().hash(_crew),
         const DeepCollectionEquality().hash(details),
         const DeepCollectionEquality().hash(_failures),
@@ -1528,7 +1627,8 @@ class _$_LaunchSimpleModel extends _LaunchSimpleModel {
         const DeepCollectionEquality().hash(staticFireDateUnix),
         const DeepCollectionEquality().hash(staticFireDateUtc),
         const DeepCollectionEquality().hash(links),
-        const DeepCollectionEquality().hash(fairings)
+        const DeepCollectionEquality().hash(fairings),
+        const DeepCollectionEquality().hash(launchLibraryId)
       ]);
 
   @JsonKey(ignore: true)
@@ -1561,6 +1661,7 @@ abstract class _LaunchSimpleModel extends LaunchSimpleModel {
           @JsonKey(name: 'launchpad') final String launchpad,
           @JsonKey(name: 'payloads') final List<String> payloads,
           @JsonKey(name: 'capsules') final List<String> capsules,
+          @JsonKey(name: 'ships') final List<String> ships,
           @JsonKey(name: 'crew') final List<String> crew,
           @JsonKey(name: 'details') final String details,
           @JsonKey(name: 'failures') final List<LaunchFailureModel> failures,
@@ -1571,7 +1672,8 @@ abstract class _LaunchSimpleModel extends LaunchSimpleModel {
           @JsonKey(name: 'static_fire_date_unix') final int staticFireDateUnix,
           @JsonKey(name: 'static_fire_date_utc') final String staticFireDateUtc,
           @JsonKey(name: 'links') final LaunchLinksModel? links,
-          @JsonKey(name: 'fairings') final FairingsModel? fairings}) =
+          @JsonKey(name: 'fairings') final FairingsModel? fairings,
+          @JsonKey(name: 'launch_library_id') final String? launchLibraryId}) =
       _$_LaunchSimpleModel;
   const _LaunchSimpleModel._() : super._();
 
@@ -1618,7 +1720,10 @@ abstract class _LaunchSimpleModel extends LaunchSimpleModel {
   @override
   @JsonKey(name: 'capsules')
   List<String> get capsules;
-  @override //@JsonKey(name: 'ships') @Default([]) List<Ship> ships,
+  @override
+  @JsonKey(name: 'ships')
+  List<String> get ships;
+  @override
   @JsonKey(name: 'crew')
   List<String> get crew;
   @override
@@ -1651,6 +1756,9 @@ abstract class _LaunchSimpleModel extends LaunchSimpleModel {
   @override
   @JsonKey(name: 'fairings')
   FairingsModel? get fairings;
+  @override
+  @JsonKey(name: 'launch_library_id')
+  String? get launchLibraryId;
   @override
   @JsonKey(ignore: true)
   _$$_LaunchSimpleModelCopyWith<_$_LaunchSimpleModel> get copyWith =>
@@ -1688,8 +1796,9 @@ mixin _$LaunchModel {
   @JsonKey(name: 'payloads')
   List<String> get payloads => throw _privateConstructorUsedError;
   @JsonKey(name: 'capsules')
-  List<String> get capsules =>
-      throw _privateConstructorUsedError; //@JsonKey(name: 'ships') @Default([]) List<Ship> ships,
+  List<String> get capsules => throw _privateConstructorUsedError;
+  @JsonKey(name: 'ships')
+  List<String> get ships => throw _privateConstructorUsedError;
   @JsonKey(name: 'crew')
   List<ShortCrewModel> get crew => throw _privateConstructorUsedError;
   @JsonKey(name: 'details')
@@ -1712,6 +1821,8 @@ mixin _$LaunchModel {
   LaunchLinksModel? get links => throw _privateConstructorUsedError;
   @JsonKey(name: 'fairings')
   FairingsModel? get fairings => throw _privateConstructorUsedError;
+  @JsonKey(name: 'launch_library_id')
+  String? get launchLibraryId => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -1739,6 +1850,7 @@ abstract class $LaunchModelCopyWith<$Res> {
       @JsonKey(name: 'launchpad') String launchpad,
       @JsonKey(name: 'payloads') List<String> payloads,
       @JsonKey(name: 'capsules') List<String> capsules,
+      @JsonKey(name: 'ships') List<String> ships,
       @JsonKey(name: 'crew') List<ShortCrewModel> crew,
       @JsonKey(name: 'details') String details,
       @JsonKey(name: 'failures') List<LaunchFailureModel> failures,
@@ -1749,7 +1861,8 @@ abstract class $LaunchModelCopyWith<$Res> {
       @JsonKey(name: 'static_fire_date_unix') int staticFireDateUnix,
       @JsonKey(name: 'static_fire_date_utc') String staticFireDateUtc,
       @JsonKey(name: 'links') LaunchLinksModel? links,
-      @JsonKey(name: 'fairings') FairingsModel? fairings});
+      @JsonKey(name: 'fairings') FairingsModel? fairings,
+      @JsonKey(name: 'launch_library_id') String? launchLibraryId});
 
   $LaunchLinksModelCopyWith<$Res>? get links;
   $FairingsModelCopyWith<$Res>? get fairings;
@@ -1779,6 +1892,7 @@ class _$LaunchModelCopyWithImpl<$Res> implements $LaunchModelCopyWith<$Res> {
     Object? launchpad = freezed,
     Object? payloads = freezed,
     Object? capsules = freezed,
+    Object? ships = freezed,
     Object? crew = freezed,
     Object? details = freezed,
     Object? failures = freezed,
@@ -1790,6 +1904,7 @@ class _$LaunchModelCopyWithImpl<$Res> implements $LaunchModelCopyWith<$Res> {
     Object? staticFireDateUtc = freezed,
     Object? links = freezed,
     Object? fairings = freezed,
+    Object? launchLibraryId = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed
@@ -1848,6 +1963,10 @@ class _$LaunchModelCopyWithImpl<$Res> implements $LaunchModelCopyWith<$Res> {
           ? _value.capsules
           : capsules // ignore: cast_nullable_to_non_nullable
               as List<String>,
+      ships: ships == freezed
+          ? _value.ships
+          : ships // ignore: cast_nullable_to_non_nullable
+              as List<String>,
       crew: crew == freezed
           ? _value.crew
           : crew // ignore: cast_nullable_to_non_nullable
@@ -1892,6 +2011,10 @@ class _$LaunchModelCopyWithImpl<$Res> implements $LaunchModelCopyWith<$Res> {
           ? _value.fairings
           : fairings // ignore: cast_nullable_to_non_nullable
               as FairingsModel?,
+      launchLibraryId: launchLibraryId == freezed
+          ? _value.launchLibraryId
+          : launchLibraryId // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 
@@ -1940,6 +2063,7 @@ abstract class _$$_LaunchModelCopyWith<$Res>
       @JsonKey(name: 'launchpad') String launchpad,
       @JsonKey(name: 'payloads') List<String> payloads,
       @JsonKey(name: 'capsules') List<String> capsules,
+      @JsonKey(name: 'ships') List<String> ships,
       @JsonKey(name: 'crew') List<ShortCrewModel> crew,
       @JsonKey(name: 'details') String details,
       @JsonKey(name: 'failures') List<LaunchFailureModel> failures,
@@ -1950,7 +2074,8 @@ abstract class _$$_LaunchModelCopyWith<$Res>
       @JsonKey(name: 'static_fire_date_unix') int staticFireDateUnix,
       @JsonKey(name: 'static_fire_date_utc') String staticFireDateUtc,
       @JsonKey(name: 'links') LaunchLinksModel? links,
-      @JsonKey(name: 'fairings') FairingsModel? fairings});
+      @JsonKey(name: 'fairings') FairingsModel? fairings,
+      @JsonKey(name: 'launch_library_id') String? launchLibraryId});
 
   @override
   $LaunchLinksModelCopyWith<$Res>? get links;
@@ -1984,6 +2109,7 @@ class __$$_LaunchModelCopyWithImpl<$Res> extends _$LaunchModelCopyWithImpl<$Res>
     Object? launchpad = freezed,
     Object? payloads = freezed,
     Object? capsules = freezed,
+    Object? ships = freezed,
     Object? crew = freezed,
     Object? details = freezed,
     Object? failures = freezed,
@@ -1995,6 +2121,7 @@ class __$$_LaunchModelCopyWithImpl<$Res> extends _$LaunchModelCopyWithImpl<$Res>
     Object? staticFireDateUtc = freezed,
     Object? links = freezed,
     Object? fairings = freezed,
+    Object? launchLibraryId = freezed,
   }) {
     return _then(_$_LaunchModel(
       id: id == freezed
@@ -2053,6 +2180,10 @@ class __$$_LaunchModelCopyWithImpl<$Res> extends _$LaunchModelCopyWithImpl<$Res>
           ? _value._capsules
           : capsules // ignore: cast_nullable_to_non_nullable
               as List<String>,
+      ships: ships == freezed
+          ? _value._ships
+          : ships // ignore: cast_nullable_to_non_nullable
+              as List<String>,
       crew: crew == freezed
           ? _value._crew
           : crew // ignore: cast_nullable_to_non_nullable
@@ -2097,6 +2228,10 @@ class __$$_LaunchModelCopyWithImpl<$Res> extends _$LaunchModelCopyWithImpl<$Res>
           ? _value.fairings
           : fairings // ignore: cast_nullable_to_non_nullable
               as FairingsModel?,
+      launchLibraryId: launchLibraryId == freezed
+          ? _value.launchLibraryId
+          : launchLibraryId // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -2131,6 +2266,8 @@ class _$_LaunchModel extends _LaunchModel {
           final List<String> payloads = const [],
       @JsonKey(name: 'capsules')
           final List<String> capsules = const [],
+      @JsonKey(name: 'ships')
+          final List<String> ships = const [],
       @JsonKey(name: 'crew')
           final List<ShortCrewModel> crew = const <ShortCrewModel>[],
       @JsonKey(name: 'details')
@@ -2152,10 +2289,13 @@ class _$_LaunchModel extends _LaunchModel {
       @JsonKey(name: 'links')
           this.links,
       @JsonKey(name: 'fairings')
-          this.fairings})
+          this.fairings,
+      @JsonKey(name: 'launch_library_id')
+          this.launchLibraryId})
       : _cores = cores,
         _payloads = payloads,
         _capsules = capsules,
+        _ships = ships,
         _crew = crew,
         _failures = failures,
         super._();
@@ -2220,9 +2360,15 @@ class _$_LaunchModel extends _LaunchModel {
     return EqualUnmodifiableListView(_capsules);
   }
 
-//@JsonKey(name: 'ships') @Default([]) List<Ship> ships,
+  final List<String> _ships;
+  @override
+  @JsonKey(name: 'ships')
+  List<String> get ships {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_ships);
+  }
+
   final List<ShortCrewModel> _crew;
-//@JsonKey(name: 'ships') @Default([]) List<Ship> ships,
   @override
   @JsonKey(name: 'crew')
   List<ShortCrewModel> get crew {
@@ -2265,10 +2411,13 @@ class _$_LaunchModel extends _LaunchModel {
   @override
   @JsonKey(name: 'fairings')
   final FairingsModel? fairings;
+  @override
+  @JsonKey(name: 'launch_library_id')
+  final String? launchLibraryId;
 
   @override
   String toString() {
-    return 'LaunchModel(id: $id, tbd: $tbd, autoUpdate: $autoUpdate, cores: $cores, upcoming: $upcoming, datePrecision: $datePrecision, dateLocal: $dateLocal, dateUnix: $dateUnix, dateUtc: $dateUtc, name: $name, flightNumber: $flightNumber, launchpad: $launchpad, payloads: $payloads, capsules: $capsules, crew: $crew, details: $details, failures: $failures, success: $success, rocket: $rocket, window: $window, net: $net, staticFireDateUnix: $staticFireDateUnix, staticFireDateUtc: $staticFireDateUtc, links: $links, fairings: $fairings)';
+    return 'LaunchModel(id: $id, tbd: $tbd, autoUpdate: $autoUpdate, cores: $cores, upcoming: $upcoming, datePrecision: $datePrecision, dateLocal: $dateLocal, dateUnix: $dateUnix, dateUtc: $dateUtc, name: $name, flightNumber: $flightNumber, launchpad: $launchpad, payloads: $payloads, capsules: $capsules, ships: $ships, crew: $crew, details: $details, failures: $failures, success: $success, rocket: $rocket, window: $window, net: $net, staticFireDateUnix: $staticFireDateUnix, staticFireDateUtc: $staticFireDateUtc, links: $links, fairings: $fairings, launchLibraryId: $launchLibraryId)';
   }
 
   @override
@@ -2293,6 +2442,7 @@ class _$_LaunchModel extends _LaunchModel {
             const DeepCollectionEquality().equals(other.launchpad, launchpad) &&
             const DeepCollectionEquality().equals(other._payloads, _payloads) &&
             const DeepCollectionEquality().equals(other._capsules, _capsules) &&
+            const DeepCollectionEquality().equals(other._ships, _ships) &&
             const DeepCollectionEquality().equals(other._crew, _crew) &&
             const DeepCollectionEquality().equals(other.details, details) &&
             const DeepCollectionEquality().equals(other._failures, _failures) &&
@@ -2305,7 +2455,9 @@ class _$_LaunchModel extends _LaunchModel {
             const DeepCollectionEquality()
                 .equals(other.staticFireDateUtc, staticFireDateUtc) &&
             const DeepCollectionEquality().equals(other.links, links) &&
-            const DeepCollectionEquality().equals(other.fairings, fairings));
+            const DeepCollectionEquality().equals(other.fairings, fairings) &&
+            const DeepCollectionEquality()
+                .equals(other.launchLibraryId, launchLibraryId));
   }
 
   @JsonKey(ignore: true)
@@ -2326,6 +2478,7 @@ class _$_LaunchModel extends _LaunchModel {
         const DeepCollectionEquality().hash(launchpad),
         const DeepCollectionEquality().hash(_payloads),
         const DeepCollectionEquality().hash(_capsules),
+        const DeepCollectionEquality().hash(_ships),
         const DeepCollectionEquality().hash(_crew),
         const DeepCollectionEquality().hash(details),
         const DeepCollectionEquality().hash(_failures),
@@ -2336,7 +2489,8 @@ class _$_LaunchModel extends _LaunchModel {
         const DeepCollectionEquality().hash(staticFireDateUnix),
         const DeepCollectionEquality().hash(staticFireDateUtc),
         const DeepCollectionEquality().hash(links),
-        const DeepCollectionEquality().hash(fairings)
+        const DeepCollectionEquality().hash(fairings),
+        const DeepCollectionEquality().hash(launchLibraryId)
       ]);
 
   @JsonKey(ignore: true)
@@ -2368,6 +2522,7 @@ abstract class _LaunchModel extends LaunchModel {
           @JsonKey(name: 'launchpad') final String launchpad,
           @JsonKey(name: 'payloads') final List<String> payloads,
           @JsonKey(name: 'capsules') final List<String> capsules,
+          @JsonKey(name: 'ships') final List<String> ships,
           @JsonKey(name: 'crew') final List<ShortCrewModel> crew,
           @JsonKey(name: 'details') final String details,
           @JsonKey(name: 'failures') final List<LaunchFailureModel> failures,
@@ -2378,7 +2533,8 @@ abstract class _LaunchModel extends LaunchModel {
           @JsonKey(name: 'static_fire_date_unix') final int staticFireDateUnix,
           @JsonKey(name: 'static_fire_date_utc') final String staticFireDateUtc,
           @JsonKey(name: 'links') final LaunchLinksModel? links,
-          @JsonKey(name: 'fairings') final FairingsModel? fairings}) =
+          @JsonKey(name: 'fairings') final FairingsModel? fairings,
+          @JsonKey(name: 'launch_library_id') final String? launchLibraryId}) =
       _$_LaunchModel;
   const _LaunchModel._() : super._();
 
@@ -2425,7 +2581,10 @@ abstract class _LaunchModel extends LaunchModel {
   @override
   @JsonKey(name: 'capsules')
   List<String> get capsules;
-  @override //@JsonKey(name: 'ships') @Default([]) List<Ship> ships,
+  @override
+  @JsonKey(name: 'ships')
+  List<String> get ships;
+  @override
   @JsonKey(name: 'crew')
   List<ShortCrewModel> get crew;
   @override
@@ -2458,6 +2617,9 @@ abstract class _LaunchModel extends LaunchModel {
   @override
   @JsonKey(name: 'fairings')
   FairingsModel? get fairings;
+  @override
+  @JsonKey(name: 'launch_library_id')
+  String? get launchLibraryId;
   @override
   @JsonKey(ignore: true)
   _$$_LaunchModelCopyWith<_$_LaunchModel> get copyWith =>

@@ -33,6 +33,10 @@ _$_FullLaunchModel _$$_FullLaunchModelFromJson(Map<String, dynamic> json) =>
               ?.map((e) => CapsuleModel.fromJson(e as Map<String, dynamic>))
               .toList() ??
           const [],
+      ships: (json['ships'] as List<dynamic>?)
+              ?.map((e) => ShipModel.fromJson(e as Map<String, dynamic>))
+              .toList() ??
+          const [],
       crew:
           (json['crew'] as List<dynamic>?)?.map((e) => e as String).toList() ??
               const [],
@@ -56,6 +60,7 @@ _$_FullLaunchModel _$$_FullLaunchModelFromJson(Map<String, dynamic> json) =>
       fairings: json['fairings'] == null
           ? null
           : FairingsModel.fromJson(json['fairings'] as Map<String, dynamic>),
+      launchLibraryId: json['launch_library_id'] as String?,
     );
 
 Map<String, dynamic> _$$_FullLaunchModelToJson(_$_FullLaunchModel instance) {
@@ -82,6 +87,7 @@ Map<String, dynamic> _$$_FullLaunchModelToJson(_$_FullLaunchModel instance) {
   writeNotNull('launchpad', instance.launchpad?.toJson());
   val['payloads'] = instance.payloads.map((e) => e.toJson()).toList();
   val['capsules'] = instance.capsules.map((e) => e.toJson()).toList();
+  val['ships'] = instance.ships.map((e) => e.toJson()).toList();
   val['crew'] = instance.crew;
   val['details'] = instance.details;
   val['failures'] = instance.failures.map((e) => e.toJson()).toList();
@@ -93,6 +99,7 @@ Map<String, dynamic> _$$_FullLaunchModelToJson(_$_FullLaunchModel instance) {
   val['static_fire_date_utc'] = instance.staticFireDateUtc;
   writeNotNull('links', instance.links?.toJson());
   writeNotNull('fairings', instance.fairings?.toJson());
+  writeNotNull('launch_library_id', instance.launchLibraryId);
   return val;
 }
 
@@ -121,6 +128,9 @@ _$_LaunchSimpleModel _$$_LaunchSimpleModelFromJson(Map<String, dynamic> json) =>
               ?.map((e) => e as String)
               .toList() ??
           const [],
+      ships:
+          (json['ships'] as List<dynamic>?)?.map((e) => e as String).toList() ??
+              const [],
       crew:
           (json['crew'] as List<dynamic>?)?.map((e) => e as String).toList() ??
               const <String>[],
@@ -142,6 +152,7 @@ _$_LaunchSimpleModel _$$_LaunchSimpleModelFromJson(Map<String, dynamic> json) =>
       fairings: json['fairings'] == null
           ? null
           : FairingsModel.fromJson(json['fairings'] as Map<String, dynamic>),
+      launchLibraryId: json['launch_library_id'] as String?,
     );
 
 Map<String, dynamic> _$$_LaunchSimpleModelToJson(
@@ -161,6 +172,7 @@ Map<String, dynamic> _$$_LaunchSimpleModelToJson(
     'launchpad': instance.launchpad,
     'payloads': instance.payloads,
     'capsules': instance.capsules,
+    'ships': instance.ships,
     'crew': instance.crew,
     'details': instance.details,
     'failures': instance.failures.map((e) => e.toJson()).toList(),
@@ -180,6 +192,7 @@ Map<String, dynamic> _$$_LaunchSimpleModelToJson(
 
   writeNotNull('links', instance.links?.toJson());
   writeNotNull('fairings', instance.fairings?.toJson());
+  writeNotNull('launch_library_id', instance.launchLibraryId);
   return val;
 }
 
@@ -208,6 +221,9 @@ _$_LaunchModel _$$_LaunchModelFromJson(Map<String, dynamic> json) =>
               ?.map((e) => e as String)
               .toList() ??
           const [],
+      ships:
+          (json['ships'] as List<dynamic>?)?.map((e) => e as String).toList() ??
+              const [],
       crew: (json['crew'] as List<dynamic>?)
               ?.map((e) => ShortCrewModel.fromJson(e as Map<String, dynamic>))
               .toList() ??
@@ -230,6 +246,7 @@ _$_LaunchModel _$$_LaunchModelFromJson(Map<String, dynamic> json) =>
       fairings: json['fairings'] == null
           ? null
           : FairingsModel.fromJson(json['fairings'] as Map<String, dynamic>),
+      launchLibraryId: json['launch_library_id'] as String?,
     );
 
 Map<String, dynamic> _$$_LaunchModelToJson(_$_LaunchModel instance) {
@@ -248,6 +265,7 @@ Map<String, dynamic> _$$_LaunchModelToJson(_$_LaunchModel instance) {
     'launchpad': instance.launchpad,
     'payloads': instance.payloads,
     'capsules': instance.capsules,
+    'ships': instance.ships,
     'crew': instance.crew.map((e) => e.toJson()).toList(),
     'details': instance.details,
     'failures': instance.failures.map((e) => e.toJson()).toList(),
@@ -267,6 +285,7 @@ Map<String, dynamic> _$$_LaunchModelToJson(_$_LaunchModel instance) {
 
   writeNotNull('links', instance.links?.toJson());
   writeNotNull('fairings', instance.fairings?.toJson());
+  writeNotNull('launch_library_id', instance.launchLibraryId);
   return val;
 }
 

@@ -21,19 +21,20 @@ CoreModel _$CoreModelFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$CoreModel {
   String? get id => throw _privateConstructorUsedError;
-  int get block => throw _privateConstructorUsedError;
+  @JsonKey(name: 'block')
+  int? get block => throw _privateConstructorUsedError;
   @JsonKey(name: 'reuse_count')
-  int get reuseCount => throw _privateConstructorUsedError;
+  int? get reuseCount => throw _privateConstructorUsedError;
   @JsonKey(name: 'rtls_attempts')
-  int get rtlsAttempts => throw _privateConstructorUsedError;
+  int? get rtlsAttempts => throw _privateConstructorUsedError;
   @JsonKey(name: 'rtls_landings')
-  int get rtlsLandings => throw _privateConstructorUsedError;
+  int? get rtlsLandings => throw _privateConstructorUsedError;
   @JsonKey(name: 'asds_attempts')
-  int get asdsAttempts => throw _privateConstructorUsedError;
+  int? get asdsAttempts => throw _privateConstructorUsedError;
   @JsonKey(name: 'asds_landings')
-  int get asdsLandings => throw _privateConstructorUsedError;
+  int? get asdsLandings => throw _privateConstructorUsedError;
   @JsonKey(name: 'last_update')
-  String get lastUpdate => throw _privateConstructorUsedError;
+  String? get lastUpdate => throw _privateConstructorUsedError;
   @JsonKey(name: 'launches')
   List<String> get launches => throw _privateConstructorUsedError;
   @JsonKey(name: 'serial')
@@ -71,13 +72,13 @@ abstract class $CoreModelCopyWith<$Res> {
       _$CoreModelCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      int block,
-      @JsonKey(name: 'reuse_count') int reuseCount,
-      @JsonKey(name: 'rtls_attempts') int rtlsAttempts,
-      @JsonKey(name: 'rtls_landings') int rtlsLandings,
-      @JsonKey(name: 'asds_attempts') int asdsAttempts,
-      @JsonKey(name: 'asds_landings') int asdsLandings,
-      @JsonKey(name: 'last_update') String lastUpdate,
+      @JsonKey(name: 'block') int? block,
+      @JsonKey(name: 'reuse_count') int? reuseCount,
+      @JsonKey(name: 'rtls_attempts') int? rtlsAttempts,
+      @JsonKey(name: 'rtls_landings') int? rtlsLandings,
+      @JsonKey(name: 'asds_attempts') int? asdsAttempts,
+      @JsonKey(name: 'asds_landings') int? asdsLandings,
+      @JsonKey(name: 'last_update') String? lastUpdate,
       @JsonKey(name: 'launches') List<String> launches,
       @JsonKey(name: 'serial') String? serial,
       @JsonKey(name: 'status') String? status,
@@ -131,31 +132,31 @@ class _$CoreModelCopyWithImpl<$Res> implements $CoreModelCopyWith<$Res> {
       block: block == freezed
           ? _value.block
           : block // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       reuseCount: reuseCount == freezed
           ? _value.reuseCount
           : reuseCount // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       rtlsAttempts: rtlsAttempts == freezed
           ? _value.rtlsAttempts
           : rtlsAttempts // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       rtlsLandings: rtlsLandings == freezed
           ? _value.rtlsLandings
           : rtlsLandings // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       asdsAttempts: asdsAttempts == freezed
           ? _value.asdsAttempts
           : asdsAttempts // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       asdsLandings: asdsLandings == freezed
           ? _value.asdsLandings
           : asdsLandings // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       lastUpdate: lastUpdate == freezed
           ? _value.lastUpdate
           : lastUpdate // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       launches: launches == freezed
           ? _value.launches
           : launches // ignore: cast_nullable_to_non_nullable
@@ -216,13 +217,13 @@ abstract class _$$_CoreModelCopyWith<$Res> implements $CoreModelCopyWith<$Res> {
   @override
   $Res call(
       {String? id,
-      int block,
-      @JsonKey(name: 'reuse_count') int reuseCount,
-      @JsonKey(name: 'rtls_attempts') int rtlsAttempts,
-      @JsonKey(name: 'rtls_landings') int rtlsLandings,
-      @JsonKey(name: 'asds_attempts') int asdsAttempts,
-      @JsonKey(name: 'asds_landings') int asdsLandings,
-      @JsonKey(name: 'last_update') String lastUpdate,
+      @JsonKey(name: 'block') int? block,
+      @JsonKey(name: 'reuse_count') int? reuseCount,
+      @JsonKey(name: 'rtls_attempts') int? rtlsAttempts,
+      @JsonKey(name: 'rtls_landings') int? rtlsLandings,
+      @JsonKey(name: 'asds_attempts') int? asdsAttempts,
+      @JsonKey(name: 'asds_landings') int? asdsLandings,
+      @JsonKey(name: 'last_update') String? lastUpdate,
       @JsonKey(name: 'launches') List<String> launches,
       @JsonKey(name: 'serial') String? serial,
       @JsonKey(name: 'status') String? status,
@@ -278,31 +279,31 @@ class __$$_CoreModelCopyWithImpl<$Res> extends _$CoreModelCopyWithImpl<$Res>
       block: block == freezed
           ? _value.block
           : block // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       reuseCount: reuseCount == freezed
           ? _value.reuseCount
           : reuseCount // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       rtlsAttempts: rtlsAttempts == freezed
           ? _value.rtlsAttempts
           : rtlsAttempts // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       rtlsLandings: rtlsLandings == freezed
           ? _value.rtlsLandings
           : rtlsLandings // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       asdsAttempts: asdsAttempts == freezed
           ? _value.asdsAttempts
           : asdsAttempts // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       asdsLandings: asdsLandings == freezed
           ? _value.asdsLandings
           : asdsLandings // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       lastUpdate: lastUpdate == freezed
           ? _value.lastUpdate
           : lastUpdate // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       launches: launches == freezed
           ? _value._launches
           : launches // ignore: cast_nullable_to_non_nullable
@@ -360,13 +361,13 @@ class __$$_CoreModelCopyWithImpl<$Res> extends _$CoreModelCopyWithImpl<$Res>
 class _$_CoreModel extends _CoreModel {
   const _$_CoreModel(
       {this.id,
-      this.block = 0,
-      @JsonKey(name: 'reuse_count') this.reuseCount = 0,
-      @JsonKey(name: 'rtls_attempts') this.rtlsAttempts = 0,
-      @JsonKey(name: 'rtls_landings') this.rtlsLandings = 0,
-      @JsonKey(name: 'asds_attempts') this.asdsAttempts = 0,
-      @JsonKey(name: 'asds_landings') this.asdsLandings = 0,
-      @JsonKey(name: 'last_update') this.lastUpdate = '',
+      @JsonKey(name: 'block') this.block,
+      @JsonKey(name: 'reuse_count') this.reuseCount,
+      @JsonKey(name: 'rtls_attempts') this.rtlsAttempts,
+      @JsonKey(name: 'rtls_landings') this.rtlsLandings,
+      @JsonKey(name: 'asds_attempts') this.asdsAttempts,
+      @JsonKey(name: 'asds_landings') this.asdsLandings,
+      @JsonKey(name: 'last_update') this.lastUpdate,
       @JsonKey(name: 'launches') final List<String> launches = const [],
       @JsonKey(name: 'serial') this.serial,
       @JsonKey(name: 'status') this.status,
@@ -388,26 +389,26 @@ class _$_CoreModel extends _CoreModel {
   @override
   final String? id;
   @override
-  @JsonKey()
-  final int block;
+  @JsonKey(name: 'block')
+  final int? block;
   @override
   @JsonKey(name: 'reuse_count')
-  final int reuseCount;
+  final int? reuseCount;
   @override
   @JsonKey(name: 'rtls_attempts')
-  final int rtlsAttempts;
+  final int? rtlsAttempts;
   @override
   @JsonKey(name: 'rtls_landings')
-  final int rtlsLandings;
+  final int? rtlsLandings;
   @override
   @JsonKey(name: 'asds_attempts')
-  final int asdsAttempts;
+  final int? asdsAttempts;
   @override
   @JsonKey(name: 'asds_landings')
-  final int asdsLandings;
+  final int? asdsLandings;
   @override
   @JsonKey(name: 'last_update')
-  final String lastUpdate;
+  final String? lastUpdate;
   final List<String> _launches;
   @override
   @JsonKey(name: 'launches')
@@ -534,13 +535,13 @@ class _$_CoreModel extends _CoreModel {
 abstract class _CoreModel extends CoreModel {
   const factory _CoreModel(
       {final String? id,
-      final int block,
-      @JsonKey(name: 'reuse_count') final int reuseCount,
-      @JsonKey(name: 'rtls_attempts') final int rtlsAttempts,
-      @JsonKey(name: 'rtls_landings') final int rtlsLandings,
-      @JsonKey(name: 'asds_attempts') final int asdsAttempts,
-      @JsonKey(name: 'asds_landings') final int asdsLandings,
-      @JsonKey(name: 'last_update') final String lastUpdate,
+      @JsonKey(name: 'block') final int? block,
+      @JsonKey(name: 'reuse_count') final int? reuseCount,
+      @JsonKey(name: 'rtls_attempts') final int? rtlsAttempts,
+      @JsonKey(name: 'rtls_landings') final int? rtlsLandings,
+      @JsonKey(name: 'asds_attempts') final int? asdsAttempts,
+      @JsonKey(name: 'asds_landings') final int? asdsLandings,
+      @JsonKey(name: 'last_update') final String? lastUpdate,
       @JsonKey(name: 'launches') final List<String> launches,
       @JsonKey(name: 'serial') final String? serial,
       @JsonKey(name: 'status') final String? status,
@@ -561,25 +562,26 @@ abstract class _CoreModel extends CoreModel {
   @override
   String? get id;
   @override
-  int get block;
+  @JsonKey(name: 'block')
+  int? get block;
   @override
   @JsonKey(name: 'reuse_count')
-  int get reuseCount;
+  int? get reuseCount;
   @override
   @JsonKey(name: 'rtls_attempts')
-  int get rtlsAttempts;
+  int? get rtlsAttempts;
   @override
   @JsonKey(name: 'rtls_landings')
-  int get rtlsLandings;
+  int? get rtlsLandings;
   @override
   @JsonKey(name: 'asds_attempts')
-  int get asdsAttempts;
+  int? get asdsAttempts;
   @override
   @JsonKey(name: 'asds_landings')
-  int get asdsLandings;
+  int? get asdsLandings;
   @override
   @JsonKey(name: 'last_update')
-  String get lastUpdate;
+  String? get lastUpdate;
   @override
   @JsonKey(name: 'launches')
   List<String> get launches;
@@ -629,19 +631,20 @@ CoreFullModel _$CoreFullModelFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$CoreFullModel {
   String? get id => throw _privateConstructorUsedError;
-  int get block => throw _privateConstructorUsedError;
+  @JsonKey(name: 'block')
+  int? get block => throw _privateConstructorUsedError;
   @JsonKey(name: 'reuse_count')
-  int get reuseCount => throw _privateConstructorUsedError;
+  int? get reuseCount => throw _privateConstructorUsedError;
   @JsonKey(name: 'rtls_attempts')
-  int get rtlsAttempts => throw _privateConstructorUsedError;
+  int? get rtlsAttempts => throw _privateConstructorUsedError;
   @JsonKey(name: 'rtls_landings')
-  int get rtlsLandings => throw _privateConstructorUsedError;
+  int? get rtlsLandings => throw _privateConstructorUsedError;
   @JsonKey(name: 'asds_attempts')
-  int get asdsAttempts => throw _privateConstructorUsedError;
+  int? get asdsAttempts => throw _privateConstructorUsedError;
   @JsonKey(name: 'asds_landings')
-  int get asdsLandings => throw _privateConstructorUsedError;
+  int? get asdsLandings => throw _privateConstructorUsedError;
   @JsonKey(name: 'last_update')
-  String get lastUpdate => throw _privateConstructorUsedError;
+  String? get lastUpdate => throw _privateConstructorUsedError;
   @JsonKey(name: 'launches')
   List<LaunchModel> get launches => throw _privateConstructorUsedError;
   @JsonKey(name: 'serial')
@@ -680,13 +683,13 @@ abstract class $CoreFullModelCopyWith<$Res> {
       _$CoreFullModelCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      int block,
-      @JsonKey(name: 'reuse_count') int reuseCount,
-      @JsonKey(name: 'rtls_attempts') int rtlsAttempts,
-      @JsonKey(name: 'rtls_landings') int rtlsLandings,
-      @JsonKey(name: 'asds_attempts') int asdsAttempts,
-      @JsonKey(name: 'asds_landings') int asdsLandings,
-      @JsonKey(name: 'last_update') String lastUpdate,
+      @JsonKey(name: 'block') int? block,
+      @JsonKey(name: 'reuse_count') int? reuseCount,
+      @JsonKey(name: 'rtls_attempts') int? rtlsAttempts,
+      @JsonKey(name: 'rtls_landings') int? rtlsLandings,
+      @JsonKey(name: 'asds_attempts') int? asdsAttempts,
+      @JsonKey(name: 'asds_landings') int? asdsLandings,
+      @JsonKey(name: 'last_update') String? lastUpdate,
       @JsonKey(name: 'launches') List<LaunchModel> launches,
       @JsonKey(name: 'serial') String? serial,
       @JsonKey(name: 'status') String? status,
@@ -741,31 +744,31 @@ class _$CoreFullModelCopyWithImpl<$Res>
       block: block == freezed
           ? _value.block
           : block // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       reuseCount: reuseCount == freezed
           ? _value.reuseCount
           : reuseCount // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       rtlsAttempts: rtlsAttempts == freezed
           ? _value.rtlsAttempts
           : rtlsAttempts // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       rtlsLandings: rtlsLandings == freezed
           ? _value.rtlsLandings
           : rtlsLandings // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       asdsAttempts: asdsAttempts == freezed
           ? _value.asdsAttempts
           : asdsAttempts // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       asdsLandings: asdsLandings == freezed
           ? _value.asdsLandings
           : asdsLandings // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       lastUpdate: lastUpdate == freezed
           ? _value.lastUpdate
           : lastUpdate // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       launches: launches == freezed
           ? _value.launches
           : launches // ignore: cast_nullable_to_non_nullable
@@ -827,13 +830,13 @@ abstract class _$$_CoreFullModelCopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      int block,
-      @JsonKey(name: 'reuse_count') int reuseCount,
-      @JsonKey(name: 'rtls_attempts') int rtlsAttempts,
-      @JsonKey(name: 'rtls_landings') int rtlsLandings,
-      @JsonKey(name: 'asds_attempts') int asdsAttempts,
-      @JsonKey(name: 'asds_landings') int asdsLandings,
-      @JsonKey(name: 'last_update') String lastUpdate,
+      @JsonKey(name: 'block') int? block,
+      @JsonKey(name: 'reuse_count') int? reuseCount,
+      @JsonKey(name: 'rtls_attempts') int? rtlsAttempts,
+      @JsonKey(name: 'rtls_landings') int? rtlsLandings,
+      @JsonKey(name: 'asds_attempts') int? asdsAttempts,
+      @JsonKey(name: 'asds_landings') int? asdsLandings,
+      @JsonKey(name: 'last_update') String? lastUpdate,
       @JsonKey(name: 'launches') List<LaunchModel> launches,
       @JsonKey(name: 'serial') String? serial,
       @JsonKey(name: 'status') String? status,
@@ -890,31 +893,31 @@ class __$$_CoreFullModelCopyWithImpl<$Res>
       block: block == freezed
           ? _value.block
           : block // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       reuseCount: reuseCount == freezed
           ? _value.reuseCount
           : reuseCount // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       rtlsAttempts: rtlsAttempts == freezed
           ? _value.rtlsAttempts
           : rtlsAttempts // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       rtlsLandings: rtlsLandings == freezed
           ? _value.rtlsLandings
           : rtlsLandings // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       asdsAttempts: asdsAttempts == freezed
           ? _value.asdsAttempts
           : asdsAttempts // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       asdsLandings: asdsLandings == freezed
           ? _value.asdsLandings
           : asdsLandings // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       lastUpdate: lastUpdate == freezed
           ? _value.lastUpdate
           : lastUpdate // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       launches: launches == freezed
           ? _value._launches
           : launches // ignore: cast_nullable_to_non_nullable
@@ -972,19 +975,20 @@ class __$$_CoreFullModelCopyWithImpl<$Res>
 class _$_CoreFullModel extends _CoreFullModel {
   const _$_CoreFullModel(
       {this.id,
-      this.block = 0,
+      @JsonKey(name: 'block')
+          this.block,
       @JsonKey(name: 'reuse_count')
-          this.reuseCount = 0,
+          this.reuseCount,
       @JsonKey(name: 'rtls_attempts')
-          this.rtlsAttempts = 0,
+          this.rtlsAttempts,
       @JsonKey(name: 'rtls_landings')
-          this.rtlsLandings = 0,
+          this.rtlsLandings,
       @JsonKey(name: 'asds_attempts')
-          this.asdsAttempts = 0,
+          this.asdsAttempts,
       @JsonKey(name: 'asds_landings')
-          this.asdsLandings = 0,
+          this.asdsLandings,
       @JsonKey(name: 'last_update')
-          this.lastUpdate = '',
+          this.lastUpdate,
       @JsonKey(name: 'launches')
           final List<LaunchModel> launches = const <LaunchModel>[],
       @JsonKey(name: 'serial')
@@ -1018,26 +1022,26 @@ class _$_CoreFullModel extends _CoreFullModel {
   @override
   final String? id;
   @override
-  @JsonKey()
-  final int block;
+  @JsonKey(name: 'block')
+  final int? block;
   @override
   @JsonKey(name: 'reuse_count')
-  final int reuseCount;
+  final int? reuseCount;
   @override
   @JsonKey(name: 'rtls_attempts')
-  final int rtlsAttempts;
+  final int? rtlsAttempts;
   @override
   @JsonKey(name: 'rtls_landings')
-  final int rtlsLandings;
+  final int? rtlsLandings;
   @override
   @JsonKey(name: 'asds_attempts')
-  final int asdsAttempts;
+  final int? asdsAttempts;
   @override
   @JsonKey(name: 'asds_landings')
-  final int asdsLandings;
+  final int? asdsLandings;
   @override
   @JsonKey(name: 'last_update')
-  final String lastUpdate;
+  final String? lastUpdate;
   final List<LaunchModel> _launches;
   @override
   @JsonKey(name: 'launches')
@@ -1164,13 +1168,13 @@ class _$_CoreFullModel extends _CoreFullModel {
 abstract class _CoreFullModel extends CoreFullModel {
   const factory _CoreFullModel(
       {final String? id,
-      final int block,
-      @JsonKey(name: 'reuse_count') final int reuseCount,
-      @JsonKey(name: 'rtls_attempts') final int rtlsAttempts,
-      @JsonKey(name: 'rtls_landings') final int rtlsLandings,
-      @JsonKey(name: 'asds_attempts') final int asdsAttempts,
-      @JsonKey(name: 'asds_landings') final int asdsLandings,
-      @JsonKey(name: 'last_update') final String lastUpdate,
+      @JsonKey(name: 'block') final int? block,
+      @JsonKey(name: 'reuse_count') final int? reuseCount,
+      @JsonKey(name: 'rtls_attempts') final int? rtlsAttempts,
+      @JsonKey(name: 'rtls_landings') final int? rtlsLandings,
+      @JsonKey(name: 'asds_attempts') final int? asdsAttempts,
+      @JsonKey(name: 'asds_landings') final int? asdsLandings,
+      @JsonKey(name: 'last_update') final String? lastUpdate,
       @JsonKey(name: 'launches') final List<LaunchModel> launches,
       @JsonKey(name: 'serial') final String? serial,
       @JsonKey(name: 'status') final String? status,
@@ -1191,25 +1195,26 @@ abstract class _CoreFullModel extends CoreFullModel {
   @override
   String? get id;
   @override
-  int get block;
+  @JsonKey(name: 'block')
+  int? get block;
   @override
   @JsonKey(name: 'reuse_count')
-  int get reuseCount;
+  int? get reuseCount;
   @override
   @JsonKey(name: 'rtls_attempts')
-  int get rtlsAttempts;
+  int? get rtlsAttempts;
   @override
   @JsonKey(name: 'rtls_landings')
-  int get rtlsLandings;
+  int? get rtlsLandings;
   @override
   @JsonKey(name: 'asds_attempts')
-  int get asdsAttempts;
+  int? get asdsAttempts;
   @override
   @JsonKey(name: 'asds_landings')
-  int get asdsLandings;
+  int? get asdsLandings;
   @override
   @JsonKey(name: 'last_update')
-  String get lastUpdate;
+  String? get lastUpdate;
   @override
   @JsonKey(name: 'launches')
   List<LaunchModel> get launches;

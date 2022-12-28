@@ -8,13 +8,13 @@ part of 'core_model.dart';
 
 _$_CoreModel _$$_CoreModelFromJson(Map<String, dynamic> json) => _$_CoreModel(
       id: json['id'] as String?,
-      block: json['block'] as int? ?? 0,
-      reuseCount: json['reuse_count'] as int? ?? 0,
-      rtlsAttempts: json['rtls_attempts'] as int? ?? 0,
-      rtlsLandings: json['rtls_landings'] as int? ?? 0,
-      asdsAttempts: json['asds_attempts'] as int? ?? 0,
-      asdsLandings: json['asds_landings'] as int? ?? 0,
-      lastUpdate: json['last_update'] as String? ?? '',
+      block: json['block'] as int?,
+      reuseCount: json['reuse_count'] as int?,
+      rtlsAttempts: json['rtls_attempts'] as int?,
+      rtlsLandings: json['rtls_landings'] as int?,
+      asdsAttempts: json['asds_attempts'] as int?,
+      asdsLandings: json['asds_landings'] as int?,
+      lastUpdate: json['last_update'] as String?,
       launches: (json['launches'] as List<dynamic>?)
               ?.map((e) => e as String)
               .toList() ??
@@ -42,13 +42,13 @@ Map<String, dynamic> _$$_CoreModelToJson(_$_CoreModel instance) {
   }
 
   writeNotNull('id', instance.id);
-  val['block'] = instance.block;
-  val['reuse_count'] = instance.reuseCount;
-  val['rtls_attempts'] = instance.rtlsAttempts;
-  val['rtls_landings'] = instance.rtlsLandings;
-  val['asds_attempts'] = instance.asdsAttempts;
-  val['asds_landings'] = instance.asdsLandings;
-  val['last_update'] = instance.lastUpdate;
+  writeNotNull('block', instance.block);
+  writeNotNull('reuse_count', instance.reuseCount);
+  writeNotNull('rtls_attempts', instance.rtlsAttempts);
+  writeNotNull('rtls_landings', instance.rtlsLandings);
+  writeNotNull('asds_attempts', instance.asdsAttempts);
+  writeNotNull('asds_landings', instance.asdsLandings);
+  writeNotNull('last_update', instance.lastUpdate);
   val['launches'] = instance.launches;
   writeNotNull('serial', instance.serial);
   writeNotNull('status', instance.status);
@@ -67,13 +67,13 @@ Map<String, dynamic> _$$_CoreModelToJson(_$_CoreModel instance) {
 _$_CoreFullModel _$$_CoreFullModelFromJson(Map<String, dynamic> json) =>
     _$_CoreFullModel(
       id: json['id'] as String?,
-      block: json['block'] as int? ?? 0,
-      reuseCount: json['reuse_count'] as int? ?? 0,
-      rtlsAttempts: json['rtls_attempts'] as int? ?? 0,
-      rtlsLandings: json['rtls_landings'] as int? ?? 0,
-      asdsAttempts: json['asds_attempts'] as int? ?? 0,
-      asdsLandings: json['asds_landings'] as int? ?? 0,
-      lastUpdate: json['last_update'] as String? ?? '',
+      block: json['block'] as int?,
+      reuseCount: json['reuse_count'] as int?,
+      rtlsAttempts: json['rtls_attempts'] as int?,
+      rtlsLandings: json['rtls_landings'] as int?,
+      asdsAttempts: json['asds_attempts'] as int?,
+      asdsLandings: json['asds_landings'] as int?,
+      lastUpdate: json['last_update'] as String?,
       launches: (json['launches'] as List<dynamic>?)
               ?.map((e) => LaunchModel.fromJson(e as Map<String, dynamic>))
               .toList() ??
@@ -101,13 +101,13 @@ Map<String, dynamic> _$$_CoreFullModelToJson(_$_CoreFullModel instance) {
   }
 
   writeNotNull('id', instance.id);
-  val['block'] = instance.block;
-  val['reuse_count'] = instance.reuseCount;
-  val['rtls_attempts'] = instance.rtlsAttempts;
-  val['rtls_landings'] = instance.rtlsLandings;
-  val['asds_attempts'] = instance.asdsAttempts;
-  val['asds_landings'] = instance.asdsLandings;
-  val['last_update'] = instance.lastUpdate;
+  writeNotNull('block', instance.block);
+  writeNotNull('reuse_count', instance.reuseCount);
+  writeNotNull('rtls_attempts', instance.rtlsAttempts);
+  writeNotNull('rtls_landings', instance.rtlsLandings);
+  writeNotNull('asds_attempts', instance.asdsAttempts);
+  writeNotNull('asds_landings', instance.asdsLandings);
+  writeNotNull('last_update', instance.lastUpdate);
   val['launches'] = instance.launches.map((e) => e.toJson()).toList();
   writeNotNull('serial', instance.serial);
   writeNotNull('status', instance.status);

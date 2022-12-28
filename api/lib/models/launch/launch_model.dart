@@ -22,7 +22,7 @@ class FullLaunchModel with _$FullLaunchModel {
     @JsonKey(name: 'launchpad') LandpadModel? launchpad,
     @JsonKey(name: 'payloads') @Default([]) List<PayloadModel> payloads,
     @JsonKey(name: 'capsules') @Default([]) List<CapsuleModel> capsules,
-    //@JsonKey(name: 'ships') @Default([]) List<Ship> ships,
+    @JsonKey(name: 'ships') @Default([]) List<ShipModel> ships,
     @JsonKey(name: 'crew') @Default([]) List<String> crew,
     @JsonKey(name: 'details') @Default('') String details,
     @JsonKey(name: 'failures') @Default([]) List<LaunchFailureModel> failures,
@@ -36,6 +36,7 @@ class FullLaunchModel with _$FullLaunchModel {
         String staticFireDateUtc,
     @JsonKey(name: 'links') LaunchLinksModel? links,
     @JsonKey(name: 'fairings') FairingsModel? fairings,
+    @JsonKey(name: 'launch_library_id') String? launchLibraryId,
   }) = _FullLaunchModel;
 
   const FullLaunchModel._();
@@ -61,7 +62,7 @@ class LaunchSimpleModel with _$LaunchSimpleModel {
     @JsonKey(name: 'launchpad') @Default('') String launchpad,
     @JsonKey(name: 'payloads') @Default([]) List<String> payloads,
     @JsonKey(name: 'capsules') @Default([]) List<String> capsules,
-    //@JsonKey(name: 'ships') @Default([]) List<Ship> ships,
+    @JsonKey(name: 'ships') @Default([]) List<String> ships,
     @JsonKey(name: 'crew') @Default(<String>[]) List<String> crew,
     @JsonKey(name: 'details') @Default('') String details,
     @JsonKey(name: 'failures') @Default([]) List<LaunchFailureModel> failures,
@@ -75,6 +76,7 @@ class LaunchSimpleModel with _$LaunchSimpleModel {
         String staticFireDateUtc,
     @JsonKey(name: 'links') LaunchLinksModel? links,
     @JsonKey(name: 'fairings') FairingsModel? fairings,
+    @JsonKey(name: 'launch_library_id') String? launchLibraryId,
   }) = _LaunchSimpleModel;
 
   const LaunchSimpleModel._();
@@ -100,7 +102,7 @@ class LaunchModel with _$LaunchModel {
     @JsonKey(name: 'launchpad') @Default('') String launchpad,
     @JsonKey(name: 'payloads') @Default([]) List<String> payloads,
     @JsonKey(name: 'capsules') @Default([]) List<String> capsules,
-    //@JsonKey(name: 'ships') @Default([]) List<Ship> ships,
+    @JsonKey(name: 'ships') @Default([]) List<String> ships,
     @JsonKey(name: 'crew')
     @Default(<ShortCrewModel>[])
         List<ShortCrewModel> crew,
@@ -116,6 +118,7 @@ class LaunchModel with _$LaunchModel {
         String staticFireDateUtc,
     @JsonKey(name: 'links') LaunchLinksModel? links,
     @JsonKey(name: 'fairings') FairingsModel? fairings,
+    @JsonKey(name: 'launch_library_id') String? launchLibraryId,
   }) = _LaunchModel;
 
   const LaunchModel._();
