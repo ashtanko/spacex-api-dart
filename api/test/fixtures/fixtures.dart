@@ -891,3 +891,115 @@ const fullLaunchModel = FullLaunchModel(
   tbd: false,
   id: '5eb87cd9ffd86e000604b32a',
 );
+
+const launchpadModel1 = LaunchpadModel(id: '0');
+const launchpadModel2 = LaunchpadModel(id: '0');
+const launchpadModel = LaunchpadModel(
+  images: ImagesModel(large: ['https://i.imgur.com/7uXe1Kv.png']),
+  name: 'VAFB SLC 3W',
+  fullName: 'Vandenberg Space Force Base Space Launch Complex 3W',
+  locality: 'Vandenberg Space Force Base',
+  region: 'California',
+  latitude: 34.6440904,
+  longitude: -120.5931438,
+  launchAttempts: 0,
+  launchSuccesses: 0,
+  rockets: ['5e9d0d95eda69955f709d1eb'],
+  timezone: 'America/Los_Angeles',
+  launches: [],
+  status: LaunchStatus.retired,
+  details:
+      "SpaceX's original west coast launch pad for Falcon 1. It was used in a static fire test but was never employed for a launch, and was abandoned due to range scheduling conflicts arising from overflying other active pads.",
+  id: '5e9e4501f5090910d4566f83',
+);
+
+const launchpadFullModel1 = LaunchpadFullModel(id: '0');
+const launchpadFullModel2 = LaunchpadFullModel(id: '0');
+const launchpadFullModel = LaunchpadFullModel(
+  images: ImagesModel(large: ['https://i.imgur.com/7uXe1Kv.png']),
+  name: 'VAFB SLC 3W',
+  fullName: 'Vandenberg Space Force Base Space Launch Complex 3W',
+  locality: 'Vandenberg Space Force Base',
+  region: 'California',
+  latitude: 34.6440904,
+  longitude: -120.5931438,
+  launchAttempts: 0,
+  launchSuccesses: 0,
+  rockets: [
+    RocketModel(
+      height: HeightModel(meters: 22.25, feet: 73),
+      diameter: DiameterModel(meters: 1.68, feet: 5.5),
+      mass: MassModel(kg: 30146, lb: 66460),
+      firstStage: FirstStageModel(
+        thrustSeaLevel: KnotPoundModel(kN: 420, lbf: 94000),
+        thrustVacuum: KnotPoundModel(kN: 480, lbf: 110000),
+        reusable: false,
+        engines: 1,
+        fuelAmountTons: 44.3,
+        burnTimeSec: 169,
+      ),
+      secondStage: SecondStageModel(
+        thrust: ThrustModel(kN: 31, lbf: 7000),
+        payloads: RocketPayloadModel(
+          compositeFairing: CompositeFairingModel(
+            height: HeightModel(meters: 3.5, feet: 11.5),
+            diameter: DiameterModel(meters: 1.5, feet: 4.9),
+          ),
+          option1: 'composite fairing',
+        ),
+        reusable: false,
+        engines: 1,
+        fuelAmountTons: 3.38,
+        burnTimeSec: 378,
+      ),
+      engines: EngineModel(
+        isp: IspModel(seaLevel: 267, vacuum: 304),
+        thrustSeaLevel: KnotPoundModel(kN: 420, lbf: 94000),
+        thrustVacuum: KnotPoundModel(kN: 480, lbf: 110000),
+        number: 1,
+        type: 'merlin',
+        version: '1C',
+        layout: 'single',
+        engineLossMax: 0,
+        firstPropellant: 'liquid oxygen',
+        secondPropellant: 'RP-1 kerosene',
+        thrustToWeight: 96,
+      ),
+      landingLegs: LandingLegsModel(
+        number: 0,
+      ),
+      payloadWeights: [
+        PayloadWeightModel(
+          id: 'leo',
+          name: 'Low Earth Orbit',
+          kg: 450,
+          lb: 992,
+        )
+      ],
+      images: [
+        'https://imgur.com/DaCfMsj.jpg',
+        'https://imgur.com/azYafd8.jpg'
+      ],
+      name: 'Falcon 1',
+      type: 'rocket',
+      isActive: false,
+      stages: 2,
+      boosters: 0,
+      costPerLaunch: 6700000,
+      successRatePct: 40,
+      firstFlight: '2006-03-24',
+      country: 'Republic of the Marshall Islands',
+      company: 'SpaceX',
+      wikipedia: 'https://en.wikipedia.org/wiki/Falcon_1',
+      description:
+          'The Falcon 1 was an expendable launch system privately developed and manufactured by SpaceX during 2006-2009. On 28 September 2008, Falcon 1 became the first privately-developed liquid-fuel launch vehicle to go into orbit around the Earth.',
+      id: '5e9d0d95eda69955f709d1eb',
+    )
+  ],
+  timezone: 'America/Los_Angeles',
+  launches: [],
+  status: LaunchStatus.retired,
+  details:
+      "SpaceX's original west coast launch pad for Falcon 1. It was used in a static fire test but was never employed for a launch, and was abandoned due to range scheduling conflicts arising from overflying other active pads.",
+  id: '5e9e4501f5090910d4566f83',
+);
