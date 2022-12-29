@@ -1003,3 +1003,49 @@ const launchpadFullModel = LaunchpadFullModel(
       "SpaceX's original west coast launch pad for Falcon 1. It was used in a static fire test but was never employed for a launch, and was abandoned due to range scheduling conflicts arising from overflying other active pads.",
   id: '5e9e4501f5090910d4566f83',
 );
+
+const payloadModel1 = PayloadModel(id: '0');
+const payloadModel2 = PayloadModel(id: '0');
+const payloadModel = PayloadModel(
+  dragon: PayloadDragonModel(),
+  name: 'FalconSAT-2',
+  type: 'Satellite',
+  reused: false,
+  launch: '5eb87cd9ffd86e000604b32a',
+  customers: ['DARPA'],
+  noradIds: [],
+  nationalities: ['United States'],
+  manufacturers: ['SSTL'],
+  massKg: 20,
+  massLbs: 43,
+  orbit: 'LEO',
+  referenceSystem: 'geocentric',
+  regime: 'low-earth',
+  periapsisKm: 400,
+  apoapsisKm: 500,
+  inclinationDeg: 39,
+  id: '5eb0e4b5b6c3bb0006eeb1e1',
+);
+
+const payloadFullModel1 = FullPayloadModel(id: '0');
+const payloadFullModel2 = FullPayloadModel(id: '0');
+const payloadFullModel = FullPayloadModel(
+  dragon: PayloadDragonModel(),
+  name: 'FalconSAT-2',
+  type: 'Satellite',
+  reused: false,
+  launch: launchModel,
+  customers: ['DARPA'],
+  noradIds: [],
+  nationalities: ['United States'],
+  manufacturers: ['SSTL'],
+  massKg: 20,
+  massLbs: 43,
+  orbit: 'LEO',
+  referenceSystem: 'geocentric',
+  regime: 'low-earth',
+  periapsisKm: 400,
+  apoapsisKm: 500,
+  inclinationDeg: 39,
+  id: '5eb0e4b5b6c3bb0006eeb1e1',
+);

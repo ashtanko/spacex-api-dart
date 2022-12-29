@@ -1,12 +1,5 @@
 {
   "dragon": {
-    "capsule": null,
-    "mass_returned_kg": null,
-    "mass_returned_lbs": null,
-    "flight_time_sec": null,
-    "manifest": null,
-    "water_landing": null,
-    "land_landing": null
   },
   "name": "FalconSAT-2",
   "type": "Satellite",
@@ -20,20 +13,15 @@
     },
     "links": {
       "patch": {
-        "small": "https://images2.imgbox.com/3c/0e/T8iJcSN3_o.png",
-        "large": "https://images2.imgbox.com/40/e3/GypSkayF_o.png"
+        "small": "https://images2.imgbox.com/94/f2/NN6Ph45r_o.png",
+        "large": "https://images2.imgbox.com/5b/02/QcxHUb5V_o.png"
       },
       "reddit": {
-        "campaign": null,
-        "launch": null,
-        "media": null,
-        "recovery": null
       },
       "flickr": {
         "small": [],
         "original": []
       },
-      "presskit": null,
       "webcast": "https://www.youtube.com/watch?v=0a_00nJ_Y88",
       "youtube_id": "0a_00nJ_Y88",
       "article": "https://www.space.com/2196-spacex-inaugural-falcon-1-rocket-lost-launch.html",
@@ -48,7 +36,6 @@
     "failures": [
       {
         "time": 33,
-        "altitude": null,
         "reason": "merlin engine failure"
       }
     ],
@@ -75,14 +62,11 @@
         "legs": false,
         "reused": false,
         "landing_attempt": false,
-        "landing_success": null,
-        "landing_type": null,
-        "landpad": null
+        "launches": []
       }
     ],
     "auto_update": true,
     "tbd": false,
-    "launch_library_id": null,
     "id": "5eb87cd9ffd86e000604b32a"
   },
   "customers": [
@@ -100,18 +84,8 @@
   "orbit": "LEO",
   "reference_system": "geocentric",
   "regime": "low-earth",
-  "longitude": null,
-  "semi_major_axis_km": null,
-  "eccentricity": null,
   "periapsis_km": 400,
   "apoapsis_km": 500,
   "inclination_deg": 39,
-  "period_min": null,
-  "lifespan_years": null,
-  "epoch": null,
-  "mean_motion": null,
-  "raan": null,
-  "arg_of_pericenter": null,
-  "mean_anomaly": null,
   "id": "5eb0e4b5b6c3bb0006eeb1e1"
 }
