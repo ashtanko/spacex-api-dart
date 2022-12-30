@@ -1060,3 +1060,20 @@ const queryModel = QueryModel(
     populate: ['payloads', 'launchpad', 'rocket'],
   ),
 );
+
+const emptyPaginatedList = ApiPaginatedList<int>(results: []);
+const paginatedList1 = ApiPaginatedList(results: [], totalDocs: 1);
+const paginatedList2 = ApiPaginatedList(results: [], totalDocs: 1);
+const paginatedList = ApiPaginatedList(
+  results: [1],
+  totalDocs: 1,
+  offset: 1,
+  limit: 1,
+  totalPages: 1,
+  page: 1,
+  pagingCounter: 1,
+  hasNextPage: true,
+  hasPrevPage: true,
+  prevPage: 1,
+  nextPage: 1,
+);
