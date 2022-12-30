@@ -1049,3 +1049,14 @@ const payloadFullModel = FullPayloadModel(
   inclinationDeg: 39,
   id: '5eb0e4b5b6c3bb0006eeb1e1',
 );
+
+const queryModel1 = QueryModel();
+const queryModel2 = QueryModel();
+const queryModel = QueryModel(
+  options: OptionsModel(
+    pagination: true,
+    page: 1,
+    limit: 5,
+    populate: ['payloads', 'launchpad', 'rocket'],
+  ),
+);
