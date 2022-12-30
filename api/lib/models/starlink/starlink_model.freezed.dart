@@ -23,17 +23,17 @@ mixin _$StarlinkModel {
   @JsonKey(name: 'id')
   String get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'launch')
-  String get launchID => throw _privateConstructorUsedError;
+  String? get launchID => throw _privateConstructorUsedError;
   @JsonKey(name: 'version')
-  String get version => throw _privateConstructorUsedError;
+  String? get version => throw _privateConstructorUsedError;
   @JsonKey(name: 'height_km')
-  double get heightKm => throw _privateConstructorUsedError;
+  double? get heightKm => throw _privateConstructorUsedError;
   @JsonKey(name: 'latitude')
-  double get latitude => throw _privateConstructorUsedError;
+  double? get latitude => throw _privateConstructorUsedError;
   @JsonKey(name: 'longitude')
-  double get longitude => throw _privateConstructorUsedError;
+  double? get longitude => throw _privateConstructorUsedError;
   @JsonKey(name: 'velocity_kms')
-  double get velocityKms => throw _privateConstructorUsedError;
+  double? get velocityKms => throw _privateConstructorUsedError;
   @JsonKey(name: 'spaceTrack')
   SpaceTrackModel? get spaceTrack => throw _privateConstructorUsedError;
 
@@ -50,12 +50,12 @@ abstract class $StarlinkModelCopyWith<$Res> {
       _$StarlinkModelCopyWithImpl<$Res>;
   $Res call(
       {@JsonKey(name: 'id') String id,
-      @JsonKey(name: 'launch') String launchID,
-      @JsonKey(name: 'version') String version,
-      @JsonKey(name: 'height_km') double heightKm,
-      @JsonKey(name: 'latitude') double latitude,
-      @JsonKey(name: 'longitude') double longitude,
-      @JsonKey(name: 'velocity_kms') double velocityKms,
+      @JsonKey(name: 'launch') String? launchID,
+      @JsonKey(name: 'version') String? version,
+      @JsonKey(name: 'height_km') double? heightKm,
+      @JsonKey(name: 'latitude') double? latitude,
+      @JsonKey(name: 'longitude') double? longitude,
+      @JsonKey(name: 'velocity_kms') double? velocityKms,
       @JsonKey(name: 'spaceTrack') SpaceTrackModel? spaceTrack});
 
   $SpaceTrackModelCopyWith<$Res>? get spaceTrack;
@@ -89,27 +89,27 @@ class _$StarlinkModelCopyWithImpl<$Res>
       launchID: launchID == freezed
           ? _value.launchID
           : launchID // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       version: version == freezed
           ? _value.version
           : version // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       heightKm: heightKm == freezed
           ? _value.heightKm
           : heightKm // ignore: cast_nullable_to_non_nullable
-              as double,
+              as double?,
       latitude: latitude == freezed
           ? _value.latitude
           : latitude // ignore: cast_nullable_to_non_nullable
-              as double,
+              as double?,
       longitude: longitude == freezed
           ? _value.longitude
           : longitude // ignore: cast_nullable_to_non_nullable
-              as double,
+              as double?,
       velocityKms: velocityKms == freezed
           ? _value.velocityKms
           : velocityKms // ignore: cast_nullable_to_non_nullable
-              as double,
+              as double?,
       spaceTrack: spaceTrack == freezed
           ? _value.spaceTrack
           : spaceTrack // ignore: cast_nullable_to_non_nullable
@@ -138,12 +138,12 @@ abstract class _$$_StarlinkModelCopyWith<$Res>
   @override
   $Res call(
       {@JsonKey(name: 'id') String id,
-      @JsonKey(name: 'launch') String launchID,
-      @JsonKey(name: 'version') String version,
-      @JsonKey(name: 'height_km') double heightKm,
-      @JsonKey(name: 'latitude') double latitude,
-      @JsonKey(name: 'longitude') double longitude,
-      @JsonKey(name: 'velocity_kms') double velocityKms,
+      @JsonKey(name: 'launch') String? launchID,
+      @JsonKey(name: 'version') String? version,
+      @JsonKey(name: 'height_km') double? heightKm,
+      @JsonKey(name: 'latitude') double? latitude,
+      @JsonKey(name: 'longitude') double? longitude,
+      @JsonKey(name: 'velocity_kms') double? velocityKms,
       @JsonKey(name: 'spaceTrack') SpaceTrackModel? spaceTrack});
 
   @override
@@ -180,27 +180,27 @@ class __$$_StarlinkModelCopyWithImpl<$Res>
       launchID: launchID == freezed
           ? _value.launchID
           : launchID // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       version: version == freezed
           ? _value.version
           : version // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       heightKm: heightKm == freezed
           ? _value.heightKm
           : heightKm // ignore: cast_nullable_to_non_nullable
-              as double,
+              as double?,
       latitude: latitude == freezed
           ? _value.latitude
           : latitude // ignore: cast_nullable_to_non_nullable
-              as double,
+              as double?,
       longitude: longitude == freezed
           ? _value.longitude
           : longitude // ignore: cast_nullable_to_non_nullable
-              as double,
+              as double?,
       velocityKms: velocityKms == freezed
           ? _value.velocityKms
           : velocityKms // ignore: cast_nullable_to_non_nullable
-              as double,
+              as double?,
       spaceTrack: spaceTrack == freezed
           ? _value.spaceTrack
           : spaceTrack // ignore: cast_nullable_to_non_nullable
@@ -214,12 +214,12 @@ class __$$_StarlinkModelCopyWithImpl<$Res>
 class _$_StarlinkModel extends _StarlinkModel {
   const _$_StarlinkModel(
       {@JsonKey(name: 'id') this.id = '',
-      @JsonKey(name: 'launch') this.launchID = '',
-      @JsonKey(name: 'version') this.version = '',
-      @JsonKey(name: 'height_km') this.heightKm = 0.0,
-      @JsonKey(name: 'latitude') this.latitude = 0.0,
-      @JsonKey(name: 'longitude') this.longitude = 0.0,
-      @JsonKey(name: 'velocity_kms') this.velocityKms = 0.0,
+      @JsonKey(name: 'launch') this.launchID,
+      @JsonKey(name: 'version') this.version,
+      @JsonKey(name: 'height_km') this.heightKm,
+      @JsonKey(name: 'latitude') this.latitude,
+      @JsonKey(name: 'longitude') this.longitude,
+      @JsonKey(name: 'velocity_kms') this.velocityKms,
       @JsonKey(name: 'spaceTrack') this.spaceTrack})
       : super._();
 
@@ -231,22 +231,22 @@ class _$_StarlinkModel extends _StarlinkModel {
   final String id;
   @override
   @JsonKey(name: 'launch')
-  final String launchID;
+  final String? launchID;
   @override
   @JsonKey(name: 'version')
-  final String version;
+  final String? version;
   @override
   @JsonKey(name: 'height_km')
-  final double heightKm;
+  final double? heightKm;
   @override
   @JsonKey(name: 'latitude')
-  final double latitude;
+  final double? latitude;
   @override
   @JsonKey(name: 'longitude')
-  final double longitude;
+  final double? longitude;
   @override
   @JsonKey(name: 'velocity_kms')
-  final double velocityKms;
+  final double? velocityKms;
   @override
   @JsonKey(name: 'spaceTrack')
   final SpaceTrackModel? spaceTrack;
@@ -302,12 +302,12 @@ class _$_StarlinkModel extends _StarlinkModel {
 abstract class _StarlinkModel extends StarlinkModel {
   const factory _StarlinkModel(
           {@JsonKey(name: 'id') final String id,
-          @JsonKey(name: 'launch') final String launchID,
-          @JsonKey(name: 'version') final String version,
-          @JsonKey(name: 'height_km') final double heightKm,
-          @JsonKey(name: 'latitude') final double latitude,
-          @JsonKey(name: 'longitude') final double longitude,
-          @JsonKey(name: 'velocity_kms') final double velocityKms,
+          @JsonKey(name: 'launch') final String? launchID,
+          @JsonKey(name: 'version') final String? version,
+          @JsonKey(name: 'height_km') final double? heightKm,
+          @JsonKey(name: 'latitude') final double? latitude,
+          @JsonKey(name: 'longitude') final double? longitude,
+          @JsonKey(name: 'velocity_kms') final double? velocityKms,
           @JsonKey(name: 'spaceTrack') final SpaceTrackModel? spaceTrack}) =
       _$_StarlinkModel;
   const _StarlinkModel._() : super._();
@@ -320,22 +320,22 @@ abstract class _StarlinkModel extends StarlinkModel {
   String get id;
   @override
   @JsonKey(name: 'launch')
-  String get launchID;
+  String? get launchID;
   @override
   @JsonKey(name: 'version')
-  String get version;
+  String? get version;
   @override
   @JsonKey(name: 'height_km')
-  double get heightKm;
+  double? get heightKm;
   @override
   @JsonKey(name: 'latitude')
-  double get latitude;
+  double? get latitude;
   @override
   @JsonKey(name: 'longitude')
-  double get longitude;
+  double? get longitude;
   @override
   @JsonKey(name: 'velocity_kms')
-  double get velocityKms;
+  double? get velocityKms;
   @override
   @JsonKey(name: 'spaceTrack')
   SpaceTrackModel? get spaceTrack;
@@ -358,13 +358,13 @@ mixin _$StarlinkFullModel {
   @JsonKey(name: 'version')
   String get version => throw _privateConstructorUsedError;
   @JsonKey(name: 'height_km')
-  double get heightKm => throw _privateConstructorUsedError;
+  double? get heightKm => throw _privateConstructorUsedError;
   @JsonKey(name: 'latitude')
-  double get latitude => throw _privateConstructorUsedError;
+  double? get latitude => throw _privateConstructorUsedError;
   @JsonKey(name: 'longitude')
-  double get longitude => throw _privateConstructorUsedError;
+  double? get longitude => throw _privateConstructorUsedError;
   @JsonKey(name: 'velocity_kms')
-  double get velocityKms => throw _privateConstructorUsedError;
+  double? get velocityKms => throw _privateConstructorUsedError;
   @JsonKey(name: 'spaceTrack')
   SpaceTrackModel? get spaceTrack => throw _privateConstructorUsedError;
 
@@ -383,10 +383,10 @@ abstract class $StarlinkFullModelCopyWith<$Res> {
       {@JsonKey(name: 'id') String id,
       @JsonKey(name: 'launch') LaunchModel? launch,
       @JsonKey(name: 'version') String version,
-      @JsonKey(name: 'height_km') double heightKm,
-      @JsonKey(name: 'latitude') double latitude,
-      @JsonKey(name: 'longitude') double longitude,
-      @JsonKey(name: 'velocity_kms') double velocityKms,
+      @JsonKey(name: 'height_km') double? heightKm,
+      @JsonKey(name: 'latitude') double? latitude,
+      @JsonKey(name: 'longitude') double? longitude,
+      @JsonKey(name: 'velocity_kms') double? velocityKms,
       @JsonKey(name: 'spaceTrack') SpaceTrackModel? spaceTrack});
 
   $LaunchModelCopyWith<$Res>? get launch;
@@ -429,19 +429,19 @@ class _$StarlinkFullModelCopyWithImpl<$Res>
       heightKm: heightKm == freezed
           ? _value.heightKm
           : heightKm // ignore: cast_nullable_to_non_nullable
-              as double,
+              as double?,
       latitude: latitude == freezed
           ? _value.latitude
           : latitude // ignore: cast_nullable_to_non_nullable
-              as double,
+              as double?,
       longitude: longitude == freezed
           ? _value.longitude
           : longitude // ignore: cast_nullable_to_non_nullable
-              as double,
+              as double?,
       velocityKms: velocityKms == freezed
           ? _value.velocityKms
           : velocityKms // ignore: cast_nullable_to_non_nullable
-              as double,
+              as double?,
       spaceTrack: spaceTrack == freezed
           ? _value.spaceTrack
           : spaceTrack // ignore: cast_nullable_to_non_nullable
@@ -483,10 +483,10 @@ abstract class _$$_StarlinkFullModelCopyWith<$Res>
       {@JsonKey(name: 'id') String id,
       @JsonKey(name: 'launch') LaunchModel? launch,
       @JsonKey(name: 'version') String version,
-      @JsonKey(name: 'height_km') double heightKm,
-      @JsonKey(name: 'latitude') double latitude,
-      @JsonKey(name: 'longitude') double longitude,
-      @JsonKey(name: 'velocity_kms') double velocityKms,
+      @JsonKey(name: 'height_km') double? heightKm,
+      @JsonKey(name: 'latitude') double? latitude,
+      @JsonKey(name: 'longitude') double? longitude,
+      @JsonKey(name: 'velocity_kms') double? velocityKms,
       @JsonKey(name: 'spaceTrack') SpaceTrackModel? spaceTrack});
 
   @override
@@ -533,19 +533,19 @@ class __$$_StarlinkFullModelCopyWithImpl<$Res>
       heightKm: heightKm == freezed
           ? _value.heightKm
           : heightKm // ignore: cast_nullable_to_non_nullable
-              as double,
+              as double?,
       latitude: latitude == freezed
           ? _value.latitude
           : latitude // ignore: cast_nullable_to_non_nullable
-              as double,
+              as double?,
       longitude: longitude == freezed
           ? _value.longitude
           : longitude // ignore: cast_nullable_to_non_nullable
-              as double,
+              as double?,
       velocityKms: velocityKms == freezed
           ? _value.velocityKms
           : velocityKms // ignore: cast_nullable_to_non_nullable
-              as double,
+              as double?,
       spaceTrack: spaceTrack == freezed
           ? _value.spaceTrack
           : spaceTrack // ignore: cast_nullable_to_non_nullable
@@ -561,10 +561,10 @@ class _$_StarlinkFullModel extends _StarlinkFullModel {
       {@JsonKey(name: 'id') this.id = '',
       @JsonKey(name: 'launch') this.launch,
       @JsonKey(name: 'version') this.version = '',
-      @JsonKey(name: 'height_km') this.heightKm = 0.0,
-      @JsonKey(name: 'latitude') this.latitude = 0.0,
-      @JsonKey(name: 'longitude') this.longitude = 0.0,
-      @JsonKey(name: 'velocity_kms') this.velocityKms = 0.0,
+      @JsonKey(name: 'height_km') this.heightKm,
+      @JsonKey(name: 'latitude') this.latitude,
+      @JsonKey(name: 'longitude') this.longitude,
+      @JsonKey(name: 'velocity_kms') this.velocityKms,
       @JsonKey(name: 'spaceTrack') this.spaceTrack})
       : super._();
 
@@ -582,16 +582,16 @@ class _$_StarlinkFullModel extends _StarlinkFullModel {
   final String version;
   @override
   @JsonKey(name: 'height_km')
-  final double heightKm;
+  final double? heightKm;
   @override
   @JsonKey(name: 'latitude')
-  final double latitude;
+  final double? latitude;
   @override
   @JsonKey(name: 'longitude')
-  final double longitude;
+  final double? longitude;
   @override
   @JsonKey(name: 'velocity_kms')
-  final double velocityKms;
+  final double? velocityKms;
   @override
   @JsonKey(name: 'spaceTrack')
   final SpaceTrackModel? spaceTrack;
@@ -650,10 +650,10 @@ abstract class _StarlinkFullModel extends StarlinkFullModel {
           {@JsonKey(name: 'id') final String id,
           @JsonKey(name: 'launch') final LaunchModel? launch,
           @JsonKey(name: 'version') final String version,
-          @JsonKey(name: 'height_km') final double heightKm,
-          @JsonKey(name: 'latitude') final double latitude,
-          @JsonKey(name: 'longitude') final double longitude,
-          @JsonKey(name: 'velocity_kms') final double velocityKms,
+          @JsonKey(name: 'height_km') final double? heightKm,
+          @JsonKey(name: 'latitude') final double? latitude,
+          @JsonKey(name: 'longitude') final double? longitude,
+          @JsonKey(name: 'velocity_kms') final double? velocityKms,
           @JsonKey(name: 'spaceTrack') final SpaceTrackModel? spaceTrack}) =
       _$_StarlinkFullModel;
   const _StarlinkFullModel._() : super._();
@@ -672,16 +672,16 @@ abstract class _StarlinkFullModel extends StarlinkFullModel {
   String get version;
   @override
   @JsonKey(name: 'height_km')
-  double get heightKm;
+  double? get heightKm;
   @override
   @JsonKey(name: 'latitude')
-  double get latitude;
+  double? get latitude;
   @override
   @JsonKey(name: 'longitude')
-  double get longitude;
+  double? get longitude;
   @override
   @JsonKey(name: 'velocity_kms')
-  double get velocityKms;
+  double? get velocityKms;
   @override
   @JsonKey(name: 'spaceTrack')
   SpaceTrackModel? get spaceTrack;

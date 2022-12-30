@@ -1077,3 +1077,58 @@ const paginatedList = ApiPaginatedList(
   prevPage: 1,
   nextPage: 1,
 );
+
+const spaceTrackModel = SpaceTrackModel(
+  ccsdsOmmVers: '2.0',
+  comment: 'GENERATED VIA SPACE-TRACK.ORG API',
+  creationDate: '2020-10-13T04:16:08',
+  originator: '18 SPCS',
+  objName: 'STARLINK-30',
+  objId: '2019-029K',
+  centerName: 'EARTH',
+  refFrame: 'TEME',
+  timeSystem: 'UTC',
+  meanElementTheory: 'SGP4',
+  epoch: '2020-10-13T02:56:59.566560',
+  meanMotion: 16.43170483,
+  eccentricity: 0.0003711,
+  inclination: 52.9708,
+  raOfAscNode: 332.0356,
+  argOfPericenter: 120.7278,
+  meanAnomaly: 242.0157,
+  ephemerisType: 0,
+  classificationType: 'U',
+  noradCatId: 44244,
+  elementSetNo: 999,
+  revAtEpoch: 7775,
+  bstar: 0.0022139,
+  meanMotionDot: 0.47180237,
+  meanMotionDdot: 0.000012426,
+  semimajorAxis: 6535.519,
+  period: 87.635,
+  apoapsis: 159.809,
+  periapsis: 154.958,
+  objectType: 'PAYLOAD',
+  rcsSize: 'LARGE',
+  countryCode: 'US',
+  launchDate: '2019-05-24',
+  site: 'AFETR',
+  decayDate: '2020-10-13',
+  decayed: 1,
+  file: 2850561,
+  gpId: 163365918,
+  tleLine0: '0 STARLINK-30',
+  tleLine1:
+      '1 44244U 19029K   20287.12291165  .47180237  12426-4  22139-2 0  9995',
+  tleLine2:
+      '2 44244  52.9708 332.0356 0003711 120.7278 242.0157 16.43170483 77756',
+);
+
+const starlinkModel1 = StarlinkModel();
+const starlinkModel2 = StarlinkModel();
+const starlinkModel = StarlinkModel(
+  spaceTrack: spaceTrackModel,
+  launchID: '5eb87d30ffd86e000604b378',
+  version: 'v0.9',
+  id: '5eed770f096e59000698560d',
+);
