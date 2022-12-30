@@ -42,6 +42,20 @@ void main() {
   });
 
   group('to json', () {
+
+    test(
+      'model, should return a json map containing proper data',
+          () async {
+        // act
+        final result = capsule1.toJson();
+
+        // assert
+        final Map<String, dynamic> expectedJsonMap =
+        'capsules/capsule.json'.toFixture();
+        expect(result, equals(expectedJsonMap));
+      },
+    );
+
     test(
       'should return a json map containing proper data',
       () async {

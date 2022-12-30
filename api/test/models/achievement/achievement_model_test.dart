@@ -35,36 +35,16 @@ void main() {
 
   group('to json', () {
     test(
-      'should return a json map containing proper data',
+      'model, should return a json map containing proper data',
       () async {
         // act
         final result = achievementModel.toJson();
 
         // assert
-        const expectedJsonMap = {
-          'id': '5f6fb2cfdcfdf403df37971e',
-          'title': 'Falcon reaches Earth orbit',
-          'details':
-              'Falcon 1 becomes the first privately developed liquid-fuel rocket to reach Earth orbit.',
-          'links': {
-            'article':
-                'http://www.spacex.com/news/2013/02/11/flight-4-launch-update-0'
-          },
-          'event_date_utc': '2008-09-28T23:15:00.000Z'
-        };
+        final Map<String, dynamic> expectedJsonMap =
+            'history/achievement.json'.toFixture();
         expect(result, equals(expectedJsonMap));
       },
     );
-  });
-
-  group('parse date', () {
-    test('correctly returns parsed date', () {
-      expect(
-        AchievementModel(date: DateTime.parse('2008-09-28T23:15:00Z'), id: '')
-            .date
-            ?.day,
-        28,
-      );
-    });
   });
 }

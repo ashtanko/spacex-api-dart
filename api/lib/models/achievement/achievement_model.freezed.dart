@@ -29,7 +29,9 @@ mixin _$AchievementModel {
   @JsonKey(name: 'links')
   AchievementLinksModel? get links => throw _privateConstructorUsedError;
   @JsonKey(name: 'event_date_utc')
-  DateTime? get date => throw _privateConstructorUsedError;
+  String? get eventDateUtc => throw _privateConstructorUsedError;
+  @JsonKey(name: 'event_date_unix')
+  int? get eventDateUnix => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -47,7 +49,8 @@ abstract class $AchievementModelCopyWith<$Res> {
       @JsonKey(name: 'title') String? name,
       @JsonKey(name: 'details') String? details,
       @JsonKey(name: 'links') AchievementLinksModel? links,
-      @JsonKey(name: 'event_date_utc') DateTime? date});
+      @JsonKey(name: 'event_date_utc') String? eventDateUtc,
+      @JsonKey(name: 'event_date_unix') int? eventDateUnix});
 
   $AchievementLinksModelCopyWith<$Res>? get links;
 }
@@ -67,7 +70,8 @@ class _$AchievementModelCopyWithImpl<$Res>
     Object? name = freezed,
     Object? details = freezed,
     Object? links = freezed,
-    Object? date = freezed,
+    Object? eventDateUtc = freezed,
+    Object? eventDateUnix = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed
@@ -86,10 +90,14 @@ class _$AchievementModelCopyWithImpl<$Res>
           ? _value.links
           : links // ignore: cast_nullable_to_non_nullable
               as AchievementLinksModel?,
-      date: date == freezed
-          ? _value.date
-          : date // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+      eventDateUtc: eventDateUtc == freezed
+          ? _value.eventDateUtc
+          : eventDateUtc // ignore: cast_nullable_to_non_nullable
+              as String?,
+      eventDateUnix: eventDateUnix == freezed
+          ? _value.eventDateUnix
+          : eventDateUnix // ignore: cast_nullable_to_non_nullable
+              as int?,
     ));
   }
 
@@ -117,7 +125,8 @@ abstract class _$$_AchievementModelCopyWith<$Res>
       @JsonKey(name: 'title') String? name,
       @JsonKey(name: 'details') String? details,
       @JsonKey(name: 'links') AchievementLinksModel? links,
-      @JsonKey(name: 'event_date_utc') DateTime? date});
+      @JsonKey(name: 'event_date_utc') String? eventDateUtc,
+      @JsonKey(name: 'event_date_unix') int? eventDateUnix});
 
   @override
   $AchievementLinksModelCopyWith<$Res>? get links;
@@ -140,7 +149,8 @@ class __$$_AchievementModelCopyWithImpl<$Res>
     Object? name = freezed,
     Object? details = freezed,
     Object? links = freezed,
-    Object? date = freezed,
+    Object? eventDateUtc = freezed,
+    Object? eventDateUnix = freezed,
   }) {
     return _then(_$_AchievementModel(
       id: id == freezed
@@ -159,10 +169,14 @@ class __$$_AchievementModelCopyWithImpl<$Res>
           ? _value.links
           : links // ignore: cast_nullable_to_non_nullable
               as AchievementLinksModel?,
-      date: date == freezed
-          ? _value.date
-          : date // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+      eventDateUtc: eventDateUtc == freezed
+          ? _value.eventDateUtc
+          : eventDateUtc // ignore: cast_nullable_to_non_nullable
+              as String?,
+      eventDateUnix: eventDateUnix == freezed
+          ? _value.eventDateUnix
+          : eventDateUnix // ignore: cast_nullable_to_non_nullable
+              as int?,
     ));
   }
 }
@@ -175,7 +189,8 @@ class _$_AchievementModel extends _AchievementModel {
       @JsonKey(name: 'title') this.name,
       @JsonKey(name: 'details') this.details,
       @JsonKey(name: 'links') this.links,
-      @JsonKey(name: 'event_date_utc') this.date})
+      @JsonKey(name: 'event_date_utc') this.eventDateUtc,
+      @JsonKey(name: 'event_date_unix') this.eventDateUnix})
       : super._();
 
   factory _$_AchievementModel.fromJson(Map<String, dynamic> json) =>
@@ -195,11 +210,14 @@ class _$_AchievementModel extends _AchievementModel {
   final AchievementLinksModel? links;
   @override
   @JsonKey(name: 'event_date_utc')
-  final DateTime? date;
+  final String? eventDateUtc;
+  @override
+  @JsonKey(name: 'event_date_unix')
+  final int? eventDateUnix;
 
   @override
   String toString() {
-    return 'AchievementModel(id: $id, name: $name, details: $details, links: $links, date: $date)';
+    return 'AchievementModel(id: $id, name: $name, details: $details, links: $links, eventDateUtc: $eventDateUtc, eventDateUnix: $eventDateUnix)';
   }
 
   @override
@@ -211,7 +229,10 @@ class _$_AchievementModel extends _AchievementModel {
             const DeepCollectionEquality().equals(other.name, name) &&
             const DeepCollectionEquality().equals(other.details, details) &&
             const DeepCollectionEquality().equals(other.links, links) &&
-            const DeepCollectionEquality().equals(other.date, date));
+            const DeepCollectionEquality()
+                .equals(other.eventDateUtc, eventDateUtc) &&
+            const DeepCollectionEquality()
+                .equals(other.eventDateUnix, eventDateUnix));
   }
 
   @JsonKey(ignore: true)
@@ -222,7 +243,8 @@ class _$_AchievementModel extends _AchievementModel {
       const DeepCollectionEquality().hash(name),
       const DeepCollectionEquality().hash(details),
       const DeepCollectionEquality().hash(links),
-      const DeepCollectionEquality().hash(date));
+      const DeepCollectionEquality().hash(eventDateUtc),
+      const DeepCollectionEquality().hash(eventDateUnix));
 
   @JsonKey(ignore: true)
   @override
@@ -243,7 +265,8 @@ abstract class _AchievementModel extends AchievementModel {
           @JsonKey(name: 'title') final String? name,
           @JsonKey(name: 'details') final String? details,
           @JsonKey(name: 'links') final AchievementLinksModel? links,
-          @JsonKey(name: 'event_date_utc') final DateTime? date}) =
+          @JsonKey(name: 'event_date_utc') final String? eventDateUtc,
+          @JsonKey(name: 'event_date_unix') final int? eventDateUnix}) =
       _$_AchievementModel;
   const _AchievementModel._() : super._();
 
@@ -264,7 +287,10 @@ abstract class _AchievementModel extends AchievementModel {
   AchievementLinksModel? get links;
   @override
   @JsonKey(name: 'event_date_utc')
-  DateTime? get date;
+  String? get eventDateUtc;
+  @override
+  @JsonKey(name: 'event_date_unix')
+  int? get eventDateUnix;
   @override
   @JsonKey(ignore: true)
   _$$_AchievementModelCopyWith<_$_AchievementModel> get copyWith =>

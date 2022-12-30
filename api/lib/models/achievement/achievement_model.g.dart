@@ -15,9 +15,8 @@ _$_AchievementModel _$$_AchievementModelFromJson(Map<String, dynamic> json) =>
           ? null
           : AchievementLinksModel.fromJson(
               json['links'] as Map<String, dynamic>),
-      date: json['event_date_utc'] == null
-          ? null
-          : DateTime.parse(json['event_date_utc'] as String),
+      eventDateUtc: json['event_date_utc'] as String?,
+      eventDateUnix: json['event_date_unix'] as int?,
     );
 
 Map<String, dynamic> _$$_AchievementModelToJson(_$_AchievementModel instance) {
@@ -34,7 +33,8 @@ Map<String, dynamic> _$$_AchievementModelToJson(_$_AchievementModel instance) {
   writeNotNull('title', instance.name);
   writeNotNull('details', instance.details);
   writeNotNull('links', instance.links?.toJson());
-  writeNotNull('event_date_utc', instance.date?.toIso8601String());
+  writeNotNull('event_date_utc', instance.eventDateUtc);
+  writeNotNull('event_date_unix', instance.eventDateUnix);
   return val;
 }
 

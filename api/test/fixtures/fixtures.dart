@@ -87,12 +87,13 @@ const fullCapsule3 = CapsuleFullModel(
 );
 
 /// achievements
-final achievementModel = AchievementModel(
-  links: const AchievementLinksModel(
+const achievementModel = AchievementModel(
+  links: AchievementLinksModel(
     article: 'http://www.spacex.com/news/2013/02/11/flight-4-launch-update-0',
   ),
   name: 'Falcon reaches Earth orbit',
-  date: DateTime.parse('2008-09-28T23:15:00Z'),
+  eventDateUtc: '2008-09-28T23:15:00Z',
+  eventDateUnix: 1222643700,
   details:
       'Falcon 1 becomes the first privately developed liquid-fuel rocket to reach Earth orbit.',
   id: '5f6fb2cfdcfdf403df37971e',

@@ -11,7 +11,8 @@ class AchievementModel with _$AchievementModel {
     @JsonKey(name: 'title') String? name,
     @JsonKey(name: 'details') String? details,
     @JsonKey(name: 'links') AchievementLinksModel? links,
-    @JsonKey(name: 'event_date_utc') DateTime? date,
+    @JsonKey(name: 'event_date_utc') String? eventDateUtc,
+    @JsonKey(name: 'event_date_unix') int? eventDateUnix,
   }) = _AchievementModel;
 
   const AchievementModel._();
