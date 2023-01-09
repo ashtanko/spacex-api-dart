@@ -1,7 +1,6 @@
 import 'package:dio/dio.dart';
 import 'package:retrofit/retrofit.dart';
 import 'package:spacex_api_dart/spacex_api_dart.dart';
-import 'package:spacex_api_dart/src/api/api.dart';
 
 part 'vehicle_api.g.dart';
 
