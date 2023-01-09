@@ -28,23 +28,3 @@ jobs:
         run: dart analyze
       - name: Run tests
         run: dart test
-
-  test_old_sdks:
-    runs-on: ${{ matrix.os }}
-    strategy:
-      matrix:
-        os: [ ubuntu-latest, macos-latest ]
-        sdk: [ 2.9.0, 2.8.1 ]
-    steps:
-      - uses: actions/checkout@v3
-      - uses: dart-lang/setup-dart@v1.3
-        with:
-          sdk: ${{ matrix.sdk }}
-      - name: Install dependencies
-        run: pub get
-      - name: Check formatting
-        run: dartfmt --dry-run --set-exit-if-changed .
-      - name: Analyze code
-        run: dartanalyzer --fatal-warnings .
-      - name: Run tests
-        run: pub run test
