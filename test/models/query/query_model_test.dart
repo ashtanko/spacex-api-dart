@@ -1,4 +1,4 @@
-import 'package:spacex_api_dart/src/models/models.dart';
+import 'package:data/data.dart';
 import 'package:test/test.dart';
 
 import '../../fixtures/fixtures.dart';

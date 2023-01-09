@@ -1,4 +1,4 @@
-import 'package:spacex_api_dart/src/models/models.dart';
+import 'package:data/data.dart';
 
 ///capsules
 const capsule1 = CapsuleModel(

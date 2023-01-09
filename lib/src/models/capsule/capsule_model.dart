@@ -1,5 +1,5 @@
+import 'package:data/data.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:spacex_api_dart/src/models/models.dart';
 
 part 'capsule_model.freezed.dart';
 

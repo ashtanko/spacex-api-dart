@@ -1,6 +1,6 @@
+import 'package:data/data.dart';
 import 'package:dio/dio.dart';
 import 'package:retrofit/retrofit.dart';
-import 'package:spacex_api_dart/spacex_api_dart.dart';
 
 part 'info_api.g.dart';
 

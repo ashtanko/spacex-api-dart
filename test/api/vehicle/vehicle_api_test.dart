@@ -1,5 +1,5 @@
+import 'package:data/data.dart';
 import 'package:mocktail/mocktail.dart';
-import 'package:spacex_api_dart/spacex_api_dart.dart';
 import 'package:test/test.dart';
 
 import '../../fixtures_reader.dart';

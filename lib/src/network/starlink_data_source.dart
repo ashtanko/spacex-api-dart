@@ -1,5 +1,5 @@
+import 'package:data/data.dart';
 import 'package:dio/dio.dart';
-import 'package:spacex_api_dart/spacex_api_dart.dart';
 
 class StarlinkDataSource {
   StarlinkDataSource(this._api);
