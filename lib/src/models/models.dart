@@ -13,5 +13,5 @@ export 'payload/payload_network_model.dart';
 export 'query/query_network_model.dart';
 export 'response/api_paginated_list.dart';
 export 'starlink/starlink_network_model.dart';
-export 'unit/unit_model.dart';
+export 'unit/unit_network_model.dart';
 export 'vehicle/vehicle_network_model.dart';

@@ -885,16 +885,16 @@ mixin _$RocketNetworkModel {
   @JsonKey(name: 'flickr_images')
   List<String> get images => throw _privateConstructorUsedError;
   @JsonKey(name: 'payload_weights')
-  List<PayloadWeightModel> get payloadWeights =>
+  List<PayloadWeightNetworkModel> get payloadWeights =>
       throw _privateConstructorUsedError;
   @JsonKey(name: 'engines')
   EngineNetworkModel? get engines => throw _privateConstructorUsedError;
   @JsonKey(name: 'height')
-  HeightModel? get height => throw _privateConstructorUsedError;
+  HeightNetworkModel? get height => throw _privateConstructorUsedError;
   @JsonKey(name: 'diameter')
-  DiameterModel? get diameter => throw _privateConstructorUsedError;
+  DiameterNetworkModel? get diameter => throw _privateConstructorUsedError;
   @JsonKey(name: 'mass')
-  MassModel? get mass => throw _privateConstructorUsedError;
+  MassNetworkModel? get mass => throw _privateConstructorUsedError;
   @JsonKey(name: 'first_stage')
   FirstStageNetworkModel? get firstStage => throw _privateConstructorUsedError;
   @JsonKey(name: 'second_stage')
@@ -917,33 +917,55 @@ abstract class $RocketNetworkModelCopyWith<$Res> {
       _$RocketNetworkModelCopyWithImpl<$Res, RocketNetworkModel>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'id') String id,
-      @JsonKey(name: 'description') String? description,
-      @JsonKey(name: 'wikipedia') String? wikipedia,
-      @JsonKey(name: 'company') String? company,
-      @JsonKey(name: 'country') String? country,
-      @JsonKey(name: 'first_flight') String? firstFlight,
-      @JsonKey(name: 'success_rate_pct') num? successRatePct,
-      @JsonKey(name: 'cost_per_launch') num? costPerLaunch,
-      @JsonKey(name: 'boosters') num? boosters,
-      @JsonKey(name: 'stages') num? stages,
-      @JsonKey(name: 'active') bool isActive,
-      @JsonKey(name: 'type') String? type,
-      @JsonKey(name: 'name') String? name,
-      @JsonKey(name: 'flickr_images') List<String> images,
-      @JsonKey(name: 'payload_weights') List<PayloadWeightModel> payloadWeights,
-      @JsonKey(name: 'engines') EngineNetworkModel? engines,
-      @JsonKey(name: 'height') HeightModel? height,
-      @JsonKey(name: 'diameter') DiameterModel? diameter,
-      @JsonKey(name: 'mass') MassModel? mass,
-      @JsonKey(name: 'first_stage') FirstStageNetworkModel? firstStage,
-      @JsonKey(name: 'second_stage') SecondStageNetworkModel? secondStage,
-      @JsonKey(name: 'landing_legs') LandingLegsNetworkModel? landingLegs});
+      {@JsonKey(name: 'id')
+          String id,
+      @JsonKey(name: 'description')
+          String? description,
+      @JsonKey(name: 'wikipedia')
+          String? wikipedia,
+      @JsonKey(name: 'company')
+          String? company,
+      @JsonKey(name: 'country')
+          String? country,
+      @JsonKey(name: 'first_flight')
+          String? firstFlight,
+      @JsonKey(name: 'success_rate_pct')
+          num? successRatePct,
+      @JsonKey(name: 'cost_per_launch')
+          num? costPerLaunch,
+      @JsonKey(name: 'boosters')
+          num? boosters,
+      @JsonKey(name: 'stages')
+          num? stages,
+      @JsonKey(name: 'active')
+          bool isActive,
+      @JsonKey(name: 'type')
+          String? type,
+      @JsonKey(name: 'name')
+          String? name,
+      @JsonKey(name: 'flickr_images')
+          List<String> images,
+      @JsonKey(name: 'payload_weights')
+          List<PayloadWeightNetworkModel> payloadWeights,
+      @JsonKey(name: 'engines')
+          EngineNetworkModel? engines,
+      @JsonKey(name: 'height')
+          HeightNetworkModel? height,
+      @JsonKey(name: 'diameter')
+          DiameterNetworkModel? diameter,
+      @JsonKey(name: 'mass')
+          MassNetworkModel? mass,
+      @JsonKey(name: 'first_stage')
+          FirstStageNetworkModel? firstStage,
+      @JsonKey(name: 'second_stage')
+          SecondStageNetworkModel? secondStage,
+      @JsonKey(name: 'landing_legs')
+          LandingLegsNetworkModel? landingLegs});
 
   $EngineNetworkModelCopyWith<$Res>? get engines;
-  $HeightModelCopyWith<$Res>? get height;
-  $DiameterModelCopyWith<$Res>? get diameter;
-  $MassModelCopyWith<$Res>? get mass;
+  $HeightNetworkModelCopyWith<$Res>? get height;
+  $DiameterNetworkModelCopyWith<$Res>? get diameter;
+  $MassNetworkModelCopyWith<$Res>? get mass;
   $FirstStageNetworkModelCopyWith<$Res>? get firstStage;
   $SecondStageNetworkModelCopyWith<$Res>? get secondStage;
   $LandingLegsNetworkModelCopyWith<$Res>? get landingLegs;
@@ -1045,7 +1067,7 @@ class _$RocketNetworkModelCopyWithImpl<$Res, $Val extends RocketNetworkModel>
       payloadWeights: null == payloadWeights
           ? _value.payloadWeights
           : payloadWeights // ignore: cast_nullable_to_non_nullable
-              as List<PayloadWeightModel>,
+              as List<PayloadWeightNetworkModel>,
       engines: freezed == engines
           ? _value.engines
           : engines // ignore: cast_nullable_to_non_nullable
@@ -1053,15 +1075,15 @@ class _$RocketNetworkModelCopyWithImpl<$Res, $Val extends RocketNetworkModel>
       height: freezed == height
           ? _value.height
           : height // ignore: cast_nullable_to_non_nullable
-              as HeightModel?,
+              as HeightNetworkModel?,
       diameter: freezed == diameter
           ? _value.diameter
           : diameter // ignore: cast_nullable_to_non_nullable
-              as DiameterModel?,
+              as DiameterNetworkModel?,
       mass: freezed == mass
           ? _value.mass
           : mass // ignore: cast_nullable_to_non_nullable
-              as MassModel?,
+              as MassNetworkModel?,
       firstStage: freezed == firstStage
           ? _value.firstStage
           : firstStage // ignore: cast_nullable_to_non_nullable
@@ -1091,36 +1113,36 @@ class _$RocketNetworkModelCopyWithImpl<$Res, $Val extends RocketNetworkModel>
 
   @override
   @pragma('vm:prefer-inline')
-  $HeightModelCopyWith<$Res>? get height {
+  $HeightNetworkModelCopyWith<$Res>? get height {
     if (_value.height == null) {
       return null;
     }
 
-    return $HeightModelCopyWith<$Res>(_value.height!, (value) {
+    return $HeightNetworkModelCopyWith<$Res>(_value.height!, (value) {
       return _then(_value.copyWith(height: value) as $Val);
     });
   }
 
   @override
   @pragma('vm:prefer-inline')
-  $DiameterModelCopyWith<$Res>? get diameter {
+  $DiameterNetworkModelCopyWith<$Res>? get diameter {
     if (_value.diameter == null) {
       return null;
     }
 
-    return $DiameterModelCopyWith<$Res>(_value.diameter!, (value) {
+    return $DiameterNetworkModelCopyWith<$Res>(_value.diameter!, (value) {
       return _then(_value.copyWith(diameter: value) as $Val);
     });
   }
 
   @override
   @pragma('vm:prefer-inline')
-  $MassModelCopyWith<$Res>? get mass {
+  $MassNetworkModelCopyWith<$Res>? get mass {
     if (_value.mass == null) {
       return null;
     }
 
-    return $MassModelCopyWith<$Res>(_value.mass!, (value) {
+    return $MassNetworkModelCopyWith<$Res>(_value.mass!, (value) {
       return _then(_value.copyWith(mass: value) as $Val);
     });
   }
@@ -1171,37 +1193,59 @@ abstract class _$$_RocketNetworkModelCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'id') String id,
-      @JsonKey(name: 'description') String? description,
-      @JsonKey(name: 'wikipedia') String? wikipedia,
-      @JsonKey(name: 'company') String? company,
-      @JsonKey(name: 'country') String? country,
-      @JsonKey(name: 'first_flight') String? firstFlight,
-      @JsonKey(name: 'success_rate_pct') num? successRatePct,
-      @JsonKey(name: 'cost_per_launch') num? costPerLaunch,
-      @JsonKey(name: 'boosters') num? boosters,
-      @JsonKey(name: 'stages') num? stages,
-      @JsonKey(name: 'active') bool isActive,
-      @JsonKey(name: 'type') String? type,
-      @JsonKey(name: 'name') String? name,
-      @JsonKey(name: 'flickr_images') List<String> images,
-      @JsonKey(name: 'payload_weights') List<PayloadWeightModel> payloadWeights,
-      @JsonKey(name: 'engines') EngineNetworkModel? engines,
-      @JsonKey(name: 'height') HeightModel? height,
-      @JsonKey(name: 'diameter') DiameterModel? diameter,
-      @JsonKey(name: 'mass') MassModel? mass,
-      @JsonKey(name: 'first_stage') FirstStageNetworkModel? firstStage,
-      @JsonKey(name: 'second_stage') SecondStageNetworkModel? secondStage,
-      @JsonKey(name: 'landing_legs') LandingLegsNetworkModel? landingLegs});
+      {@JsonKey(name: 'id')
+          String id,
+      @JsonKey(name: 'description')
+          String? description,
+      @JsonKey(name: 'wikipedia')
+          String? wikipedia,
+      @JsonKey(name: 'company')
+          String? company,
+      @JsonKey(name: 'country')
+          String? country,
+      @JsonKey(name: 'first_flight')
+          String? firstFlight,
+      @JsonKey(name: 'success_rate_pct')
+          num? successRatePct,
+      @JsonKey(name: 'cost_per_launch')
+          num? costPerLaunch,
+      @JsonKey(name: 'boosters')
+          num? boosters,
+      @JsonKey(name: 'stages')
+          num? stages,
+      @JsonKey(name: 'active')
+          bool isActive,
+      @JsonKey(name: 'type')
+          String? type,
+      @JsonKey(name: 'name')
+          String? name,
+      @JsonKey(name: 'flickr_images')
+          List<String> images,
+      @JsonKey(name: 'payload_weights')
+          List<PayloadWeightNetworkModel> payloadWeights,
+      @JsonKey(name: 'engines')
+          EngineNetworkModel? engines,
+      @JsonKey(name: 'height')
+          HeightNetworkModel? height,
+      @JsonKey(name: 'diameter')
+          DiameterNetworkModel? diameter,
+      @JsonKey(name: 'mass')
+          MassNetworkModel? mass,
+      @JsonKey(name: 'first_stage')
+          FirstStageNetworkModel? firstStage,
+      @JsonKey(name: 'second_stage')
+          SecondStageNetworkModel? secondStage,
+      @JsonKey(name: 'landing_legs')
+          LandingLegsNetworkModel? landingLegs});
 
   @override
   $EngineNetworkModelCopyWith<$Res>? get engines;
   @override
-  $HeightModelCopyWith<$Res>? get height;
+  $HeightNetworkModelCopyWith<$Res>? get height;
   @override
-  $DiameterModelCopyWith<$Res>? get diameter;
+  $DiameterNetworkModelCopyWith<$Res>? get diameter;
   @override
-  $MassModelCopyWith<$Res>? get mass;
+  $MassNetworkModelCopyWith<$Res>? get mass;
   @override
   $FirstStageNetworkModelCopyWith<$Res>? get firstStage;
   @override
@@ -1304,7 +1348,7 @@ class __$$_RocketNetworkModelCopyWithImpl<$Res>
       payloadWeights: null == payloadWeights
           ? _value._payloadWeights
           : payloadWeights // ignore: cast_nullable_to_non_nullable
-              as List<PayloadWeightModel>,
+              as List<PayloadWeightNetworkModel>,
       engines: freezed == engines
           ? _value.engines
           : engines // ignore: cast_nullable_to_non_nullable
@@ -1312,15 +1356,15 @@ class __$$_RocketNetworkModelCopyWithImpl<$Res>
       height: freezed == height
           ? _value.height
           : height // ignore: cast_nullable_to_non_nullable
-              as HeightModel?,
+              as HeightNetworkModel?,
       diameter: freezed == diameter
           ? _value.diameter
           : diameter // ignore: cast_nullable_to_non_nullable
-              as DiameterModel?,
+              as DiameterNetworkModel?,
       mass: freezed == mass
           ? _value.mass
           : mass // ignore: cast_nullable_to_non_nullable
-              as MassModel?,
+              as MassNetworkModel?,
       firstStage: freezed == firstStage
           ? _value.firstStage
           : firstStage // ignore: cast_nullable_to_non_nullable
@@ -1370,8 +1414,8 @@ class _$_RocketNetworkModel extends _RocketNetworkModel {
       @JsonKey(name: 'flickr_images')
           final List<String> images = const <String>[],
       @JsonKey(name: 'payload_weights')
-          final List<PayloadWeightModel>
-              payloadWeights = const <PayloadWeightModel>[],
+          final List<PayloadWeightNetworkModel>
+              payloadWeights = const <PayloadWeightNetworkModel>[],
       @JsonKey(name: 'engines')
           this.engines,
       @JsonKey(name: 'height')
@@ -1441,10 +1485,10 @@ class _$_RocketNetworkModel extends _RocketNetworkModel {
     return EqualUnmodifiableListView(_images);
   }
 
-  final List<PayloadWeightModel> _payloadWeights;
+  final List<PayloadWeightNetworkModel> _payloadWeights;
   @override
   @JsonKey(name: 'payload_weights')
-  List<PayloadWeightModel> get payloadWeights {
+  List<PayloadWeightNetworkModel> get payloadWeights {
     if (_payloadWeights is EqualUnmodifiableListView) return _payloadWeights;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_payloadWeights);
@@ -1455,13 +1499,13 @@ class _$_RocketNetworkModel extends _RocketNetworkModel {
   final EngineNetworkModel? engines;
   @override
   @JsonKey(name: 'height')
-  final HeightModel? height;
+  final HeightNetworkModel? height;
   @override
   @JsonKey(name: 'diameter')
-  final DiameterModel? diameter;
+  final DiameterNetworkModel? diameter;
   @override
   @JsonKey(name: 'mass')
-  final MassModel? mass;
+  final MassNetworkModel? mass;
   @override
   @JsonKey(name: 'first_stage')
   final FirstStageNetworkModel? firstStage;
@@ -1592,15 +1636,15 @@ abstract class _RocketNetworkModel extends RocketNetworkModel {
       @JsonKey(name: 'flickr_images')
           final List<String> images,
       @JsonKey(name: 'payload_weights')
-          final List<PayloadWeightModel> payloadWeights,
+          final List<PayloadWeightNetworkModel> payloadWeights,
       @JsonKey(name: 'engines')
           final EngineNetworkModel? engines,
       @JsonKey(name: 'height')
-          final HeightModel? height,
+          final HeightNetworkModel? height,
       @JsonKey(name: 'diameter')
-          final DiameterModel? diameter,
+          final DiameterNetworkModel? diameter,
       @JsonKey(name: 'mass')
-          final MassModel? mass,
+          final MassNetworkModel? mass,
       @JsonKey(name: 'first_stage')
           final FirstStageNetworkModel? firstStage,
       @JsonKey(name: 'second_stage')
@@ -1656,19 +1700,19 @@ abstract class _RocketNetworkModel extends RocketNetworkModel {
   List<String> get images;
   @override
   @JsonKey(name: 'payload_weights')
-  List<PayloadWeightModel> get payloadWeights;
+  List<PayloadWeightNetworkModel> get payloadWeights;
   @override
   @JsonKey(name: 'engines')
   EngineNetworkModel? get engines;
   @override
   @JsonKey(name: 'height')
-  HeightModel? get height;
+  HeightNetworkModel? get height;
   @override
   @JsonKey(name: 'diameter')
-  DiameterModel? get diameter;
+  DiameterNetworkModel? get diameter;
   @override
   @JsonKey(name: 'mass')
-  MassModel? get mass;
+  MassNetworkModel? get mass;
   @override
   @JsonKey(name: 'first_stage')
   FirstStageNetworkModel? get firstStage;
@@ -1691,11 +1735,12 @@ EngineNetworkModel _$EngineNetworkModelFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$EngineNetworkModel {
   @JsonKey(name: 'isp')
-  IspModel? get isp => throw _privateConstructorUsedError;
+  IspNetworkModel? get isp => throw _privateConstructorUsedError;
   @JsonKey(name: 'thrust_sea_level')
-  KnotPoundModel? get thrustSeaLevel => throw _privateConstructorUsedError;
+  KnotPoundNetworkModel? get thrustSeaLevel =>
+      throw _privateConstructorUsedError;
   @JsonKey(name: 'thrust_vacuum')
-  KnotPoundModel? get thrustVacuum => throw _privateConstructorUsedError;
+  KnotPoundNetworkModel? get thrustVacuum => throw _privateConstructorUsedError;
   @JsonKey(name: 'number')
   num? get number => throw _privateConstructorUsedError;
   @JsonKey(name: 'type')
@@ -1726,9 +1771,9 @@ abstract class $EngineNetworkModelCopyWith<$Res> {
       _$EngineNetworkModelCopyWithImpl<$Res, EngineNetworkModel>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'isp') IspModel? isp,
-      @JsonKey(name: 'thrust_sea_level') KnotPoundModel? thrustSeaLevel,
-      @JsonKey(name: 'thrust_vacuum') KnotPoundModel? thrustVacuum,
+      {@JsonKey(name: 'isp') IspNetworkModel? isp,
+      @JsonKey(name: 'thrust_sea_level') KnotPoundNetworkModel? thrustSeaLevel,
+      @JsonKey(name: 'thrust_vacuum') KnotPoundNetworkModel? thrustVacuum,
       @JsonKey(name: 'number') num? number,
       @JsonKey(name: 'type') String? type,
       @JsonKey(name: 'version') String? version,
@@ -1738,9 +1783,9 @@ abstract class $EngineNetworkModelCopyWith<$Res> {
       @JsonKey(name: 'propellant_2') String? secondPropellant,
       @JsonKey(name: 'thrust_to_weight') num? thrustToWeight});
 
-  $IspModelCopyWith<$Res>? get isp;
-  $KnotPoundModelCopyWith<$Res>? get thrustSeaLevel;
-  $KnotPoundModelCopyWith<$Res>? get thrustVacuum;
+  $IspNetworkModelCopyWith<$Res>? get isp;
+  $KnotPoundNetworkModelCopyWith<$Res>? get thrustSeaLevel;
+  $KnotPoundNetworkModelCopyWith<$Res>? get thrustVacuum;
 }
 
 /// @nodoc
@@ -1772,15 +1817,15 @@ class _$EngineNetworkModelCopyWithImpl<$Res, $Val extends EngineNetworkModel>
       isp: freezed == isp
           ? _value.isp
           : isp // ignore: cast_nullable_to_non_nullable
-              as IspModel?,
+              as IspNetworkModel?,
       thrustSeaLevel: freezed == thrustSeaLevel
           ? _value.thrustSeaLevel
           : thrustSeaLevel // ignore: cast_nullable_to_non_nullable
-              as KnotPoundModel?,
+              as KnotPoundNetworkModel?,
       thrustVacuum: freezed == thrustVacuum
           ? _value.thrustVacuum
           : thrustVacuum // ignore: cast_nullable_to_non_nullable
-              as KnotPoundModel?,
+              as KnotPoundNetworkModel?,
       number: freezed == number
           ? _value.number
           : number // ignore: cast_nullable_to_non_nullable
@@ -1818,36 +1863,37 @@ class _$EngineNetworkModelCopyWithImpl<$Res, $Val extends EngineNetworkModel>
 
   @override
   @pragma('vm:prefer-inline')
-  $IspModelCopyWith<$Res>? get isp {
+  $IspNetworkModelCopyWith<$Res>? get isp {
     if (_value.isp == null) {
       return null;
     }
 
-    return $IspModelCopyWith<$Res>(_value.isp!, (value) {
+    return $IspNetworkModelCopyWith<$Res>(_value.isp!, (value) {
       return _then(_value.copyWith(isp: value) as $Val);
     });
   }
 
   @override
   @pragma('vm:prefer-inline')
-  $KnotPoundModelCopyWith<$Res>? get thrustSeaLevel {
+  $KnotPoundNetworkModelCopyWith<$Res>? get thrustSeaLevel {
     if (_value.thrustSeaLevel == null) {
       return null;
     }
 
-    return $KnotPoundModelCopyWith<$Res>(_value.thrustSeaLevel!, (value) {
+    return $KnotPoundNetworkModelCopyWith<$Res>(_value.thrustSeaLevel!,
+        (value) {
       return _then(_value.copyWith(thrustSeaLevel: value) as $Val);
     });
   }
 
   @override
   @pragma('vm:prefer-inline')
-  $KnotPoundModelCopyWith<$Res>? get thrustVacuum {
+  $KnotPoundNetworkModelCopyWith<$Res>? get thrustVacuum {
     if (_value.thrustVacuum == null) {
       return null;
     }
 
-    return $KnotPoundModelCopyWith<$Res>(_value.thrustVacuum!, (value) {
+    return $KnotPoundNetworkModelCopyWith<$Res>(_value.thrustVacuum!, (value) {
       return _then(_value.copyWith(thrustVacuum: value) as $Val);
     });
   }
@@ -1862,9 +1908,9 @@ abstract class _$$_EngineNetworkModelCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'isp') IspModel? isp,
-      @JsonKey(name: 'thrust_sea_level') KnotPoundModel? thrustSeaLevel,
-      @JsonKey(name: 'thrust_vacuum') KnotPoundModel? thrustVacuum,
+      {@JsonKey(name: 'isp') IspNetworkModel? isp,
+      @JsonKey(name: 'thrust_sea_level') KnotPoundNetworkModel? thrustSeaLevel,
+      @JsonKey(name: 'thrust_vacuum') KnotPoundNetworkModel? thrustVacuum,
       @JsonKey(name: 'number') num? number,
       @JsonKey(name: 'type') String? type,
       @JsonKey(name: 'version') String? version,
@@ -1875,11 +1921,11 @@ abstract class _$$_EngineNetworkModelCopyWith<$Res>
       @JsonKey(name: 'thrust_to_weight') num? thrustToWeight});
 
   @override
-  $IspModelCopyWith<$Res>? get isp;
+  $IspNetworkModelCopyWith<$Res>? get isp;
   @override
-  $KnotPoundModelCopyWith<$Res>? get thrustSeaLevel;
+  $KnotPoundNetworkModelCopyWith<$Res>? get thrustSeaLevel;
   @override
-  $KnotPoundModelCopyWith<$Res>? get thrustVacuum;
+  $KnotPoundNetworkModelCopyWith<$Res>? get thrustVacuum;
 }
 
 /// @nodoc
@@ -1909,15 +1955,15 @@ class __$$_EngineNetworkModelCopyWithImpl<$Res>
       isp: freezed == isp
           ? _value.isp
           : isp // ignore: cast_nullable_to_non_nullable
-              as IspModel?,
+              as IspNetworkModel?,
       thrustSeaLevel: freezed == thrustSeaLevel
           ? _value.thrustSeaLevel
           : thrustSeaLevel // ignore: cast_nullable_to_non_nullable
-              as KnotPoundModel?,
+              as KnotPoundNetworkModel?,
       thrustVacuum: freezed == thrustVacuum
           ? _value.thrustVacuum
           : thrustVacuum // ignore: cast_nullable_to_non_nullable
-              as KnotPoundModel?,
+              as KnotPoundNetworkModel?,
       number: freezed == number
           ? _value.number
           : number // ignore: cast_nullable_to_non_nullable
@@ -1976,13 +2022,13 @@ class _$_EngineNetworkModel extends _EngineNetworkModel {
 
   @override
   @JsonKey(name: 'isp')
-  final IspModel? isp;
+  final IspNetworkModel? isp;
   @override
   @JsonKey(name: 'thrust_sea_level')
-  final KnotPoundModel? thrustSeaLevel;
+  final KnotPoundNetworkModel? thrustSeaLevel;
   @override
   @JsonKey(name: 'thrust_vacuum')
-  final KnotPoundModel? thrustVacuum;
+  final KnotPoundNetworkModel? thrustVacuum;
   @override
   @JsonKey(name: 'number')
   final num? number;
@@ -2071,11 +2117,11 @@ class _$_EngineNetworkModel extends _EngineNetworkModel {
 abstract class _EngineNetworkModel extends EngineNetworkModel {
   const factory _EngineNetworkModel(
       {@JsonKey(name: 'isp')
-          final IspModel? isp,
+          final IspNetworkModel? isp,
       @JsonKey(name: 'thrust_sea_level')
-          final KnotPoundModel? thrustSeaLevel,
+          final KnotPoundNetworkModel? thrustSeaLevel,
       @JsonKey(name: 'thrust_vacuum')
-          final KnotPoundModel? thrustVacuum,
+          final KnotPoundNetworkModel? thrustVacuum,
       @JsonKey(name: 'number')
           final num? number,
       @JsonKey(name: 'type')
@@ -2099,13 +2145,13 @@ abstract class _EngineNetworkModel extends EngineNetworkModel {
 
   @override
   @JsonKey(name: 'isp')
-  IspModel? get isp;
+  IspNetworkModel? get isp;
   @override
   @JsonKey(name: 'thrust_sea_level')
-  KnotPoundModel? get thrustSeaLevel;
+  KnotPoundNetworkModel? get thrustSeaLevel;
   @override
   @JsonKey(name: 'thrust_vacuum')
-  KnotPoundModel? get thrustVacuum;
+  KnotPoundNetworkModel? get thrustVacuum;
   @override
   @JsonKey(name: 'number')
   num? get number;
@@ -2319,7 +2365,7 @@ RocketPayloadNetworkModel _$RocketPayloadNetworkModelFromJson(
 /// @nodoc
 mixin _$RocketPayloadNetworkModel {
   @JsonKey(name: 'composite_fairing')
-  CompositeFairingModel? get compositeFairing =>
+  CompositeFairingNetworkModel? get compositeFairing =>
       throw _privateConstructorUsedError;
   @JsonKey(name: 'option_1')
   String? get option1 => throw _privateConstructorUsedError;
@@ -2338,11 +2384,11 @@ abstract class $RocketPayloadNetworkModelCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(name: 'composite_fairing')
-          CompositeFairingModel? compositeFairing,
+          CompositeFairingNetworkModel? compositeFairing,
       @JsonKey(name: 'option_1')
           String? option1});
 
-  $CompositeFairingModelCopyWith<$Res>? get compositeFairing;
+  $CompositeFairingNetworkModelCopyWith<$Res>? get compositeFairing;
 }
 
 /// @nodoc
@@ -2366,7 +2412,7 @@ class _$RocketPayloadNetworkModelCopyWithImpl<$Res,
       compositeFairing: freezed == compositeFairing
           ? _value.compositeFairing
           : compositeFairing // ignore: cast_nullable_to_non_nullable
-              as CompositeFairingModel?,
+              as CompositeFairingNetworkModel?,
       option1: freezed == option1
           ? _value.option1
           : option1 // ignore: cast_nullable_to_non_nullable
@@ -2376,12 +2422,12 @@ class _$RocketPayloadNetworkModelCopyWithImpl<$Res,
 
   @override
   @pragma('vm:prefer-inline')
-  $CompositeFairingModelCopyWith<$Res>? get compositeFairing {
+  $CompositeFairingNetworkModelCopyWith<$Res>? get compositeFairing {
     if (_value.compositeFairing == null) {
       return null;
     }
 
-    return $CompositeFairingModelCopyWith<$Res>(_value.compositeFairing!,
+    return $CompositeFairingNetworkModelCopyWith<$Res>(_value.compositeFairing!,
         (value) {
       return _then(_value.copyWith(compositeFairing: value) as $Val);
     });
@@ -2399,12 +2445,12 @@ abstract class _$$_RocketPayloadNetworkModelCopyWith<$Res>
   @useResult
   $Res call(
       {@JsonKey(name: 'composite_fairing')
-          CompositeFairingModel? compositeFairing,
+          CompositeFairingNetworkModel? compositeFairing,
       @JsonKey(name: 'option_1')
           String? option1});
 
   @override
-  $CompositeFairingModelCopyWith<$Res>? get compositeFairing;
+  $CompositeFairingNetworkModelCopyWith<$Res>? get compositeFairing;
 }
 
 /// @nodoc
@@ -2427,7 +2473,7 @@ class __$$_RocketPayloadNetworkModelCopyWithImpl<$Res>
       compositeFairing: freezed == compositeFairing
           ? _value.compositeFairing
           : compositeFairing // ignore: cast_nullable_to_non_nullable
-              as CompositeFairingModel?,
+              as CompositeFairingNetworkModel?,
       option1: freezed == option1
           ? _value.option1
           : option1 // ignore: cast_nullable_to_non_nullable
@@ -2449,7 +2495,7 @@ class _$_RocketPayloadNetworkModel extends _RocketPayloadNetworkModel {
 
   @override
   @JsonKey(name: 'composite_fairing')
-  final CompositeFairingModel? compositeFairing;
+  final CompositeFairingNetworkModel? compositeFairing;
   @override
   @JsonKey(name: 'option_1')
   final String? option1;
@@ -2491,7 +2537,7 @@ class _$_RocketPayloadNetworkModel extends _RocketPayloadNetworkModel {
 abstract class _RocketPayloadNetworkModel extends RocketPayloadNetworkModel {
   const factory _RocketPayloadNetworkModel(
       {@JsonKey(name: 'composite_fairing')
-          final CompositeFairingModel? compositeFairing,
+          final CompositeFairingNetworkModel? compositeFairing,
       @JsonKey(name: 'option_1')
           final String? option1}) = _$_RocketPayloadNetworkModel;
   const _RocketPayloadNetworkModel._() : super._();
@@ -2501,7 +2547,7 @@ abstract class _RocketPayloadNetworkModel extends RocketPayloadNetworkModel {
 
   @override
   @JsonKey(name: 'composite_fairing')
-  CompositeFairingModel? get compositeFairing;
+  CompositeFairingNetworkModel? get compositeFairing;
   @override
   @JsonKey(name: 'option_1')
   String? get option1;
@@ -2519,9 +2565,10 @@ FirstStageNetworkModel _$FirstStageNetworkModelFromJson(
 /// @nodoc
 mixin _$FirstStageNetworkModel {
   @JsonKey(name: 'thrust_sea_level')
-  KnotPoundModel? get thrustSeaLevel => throw _privateConstructorUsedError;
+  KnotPoundNetworkModel? get thrustSeaLevel =>
+      throw _privateConstructorUsedError;
   @JsonKey(name: 'thrust_vacuum')
-  KnotPoundModel? get thrustVacuum => throw _privateConstructorUsedError;
+  KnotPoundNetworkModel? get thrustVacuum => throw _privateConstructorUsedError;
   @JsonKey(name: 'reusable')
   bool get reusable => throw _privateConstructorUsedError;
   @JsonKey(name: 'engines')
@@ -2544,15 +2591,15 @@ abstract class $FirstStageNetworkModelCopyWith<$Res> {
       _$FirstStageNetworkModelCopyWithImpl<$Res, FirstStageNetworkModel>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'thrust_sea_level') KnotPoundModel? thrustSeaLevel,
-      @JsonKey(name: 'thrust_vacuum') KnotPoundModel? thrustVacuum,
+      {@JsonKey(name: 'thrust_sea_level') KnotPoundNetworkModel? thrustSeaLevel,
+      @JsonKey(name: 'thrust_vacuum') KnotPoundNetworkModel? thrustVacuum,
       @JsonKey(name: 'reusable') bool reusable,
       @JsonKey(name: 'engines') num? engines,
       @JsonKey(name: 'fuel_amount_tons') num? fuelAmountTons,
       @JsonKey(name: 'burn_time_sec') int? burnTimeSec});
 
-  $KnotPoundModelCopyWith<$Res>? get thrustSeaLevel;
-  $KnotPoundModelCopyWith<$Res>? get thrustVacuum;
+  $KnotPoundNetworkModelCopyWith<$Res>? get thrustSeaLevel;
+  $KnotPoundNetworkModelCopyWith<$Res>? get thrustVacuum;
 }
 
 /// @nodoc
@@ -2580,11 +2627,11 @@ class _$FirstStageNetworkModelCopyWithImpl<$Res,
       thrustSeaLevel: freezed == thrustSeaLevel
           ? _value.thrustSeaLevel
           : thrustSeaLevel // ignore: cast_nullable_to_non_nullable
-              as KnotPoundModel?,
+              as KnotPoundNetworkModel?,
       thrustVacuum: freezed == thrustVacuum
           ? _value.thrustVacuum
           : thrustVacuum // ignore: cast_nullable_to_non_nullable
-              as KnotPoundModel?,
+              as KnotPoundNetworkModel?,
       reusable: null == reusable
           ? _value.reusable
           : reusable // ignore: cast_nullable_to_non_nullable
@@ -2606,24 +2653,25 @@ class _$FirstStageNetworkModelCopyWithImpl<$Res,
 
   @override
   @pragma('vm:prefer-inline')
-  $KnotPoundModelCopyWith<$Res>? get thrustSeaLevel {
+  $KnotPoundNetworkModelCopyWith<$Res>? get thrustSeaLevel {
     if (_value.thrustSeaLevel == null) {
       return null;
     }
 
-    return $KnotPoundModelCopyWith<$Res>(_value.thrustSeaLevel!, (value) {
+    return $KnotPoundNetworkModelCopyWith<$Res>(_value.thrustSeaLevel!,
+        (value) {
       return _then(_value.copyWith(thrustSeaLevel: value) as $Val);
     });
   }
 
   @override
   @pragma('vm:prefer-inline')
-  $KnotPoundModelCopyWith<$Res>? get thrustVacuum {
+  $KnotPoundNetworkModelCopyWith<$Res>? get thrustVacuum {
     if (_value.thrustVacuum == null) {
       return null;
     }
 
-    return $KnotPoundModelCopyWith<$Res>(_value.thrustVacuum!, (value) {
+    return $KnotPoundNetworkModelCopyWith<$Res>(_value.thrustVacuum!, (value) {
       return _then(_value.copyWith(thrustVacuum: value) as $Val);
     });
   }
@@ -2638,17 +2686,17 @@ abstract class _$$_FirstStageNetworkModelCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'thrust_sea_level') KnotPoundModel? thrustSeaLevel,
-      @JsonKey(name: 'thrust_vacuum') KnotPoundModel? thrustVacuum,
+      {@JsonKey(name: 'thrust_sea_level') KnotPoundNetworkModel? thrustSeaLevel,
+      @JsonKey(name: 'thrust_vacuum') KnotPoundNetworkModel? thrustVacuum,
       @JsonKey(name: 'reusable') bool reusable,
       @JsonKey(name: 'engines') num? engines,
       @JsonKey(name: 'fuel_amount_tons') num? fuelAmountTons,
       @JsonKey(name: 'burn_time_sec') int? burnTimeSec});
 
   @override
-  $KnotPoundModelCopyWith<$Res>? get thrustSeaLevel;
+  $KnotPoundNetworkModelCopyWith<$Res>? get thrustSeaLevel;
   @override
-  $KnotPoundModelCopyWith<$Res>? get thrustVacuum;
+  $KnotPoundNetworkModelCopyWith<$Res>? get thrustVacuum;
 }
 
 /// @nodoc
@@ -2674,11 +2722,11 @@ class __$$_FirstStageNetworkModelCopyWithImpl<$Res>
       thrustSeaLevel: freezed == thrustSeaLevel
           ? _value.thrustSeaLevel
           : thrustSeaLevel // ignore: cast_nullable_to_non_nullable
-              as KnotPoundModel?,
+              as KnotPoundNetworkModel?,
       thrustVacuum: freezed == thrustVacuum
           ? _value.thrustVacuum
           : thrustVacuum // ignore: cast_nullable_to_non_nullable
-              as KnotPoundModel?,
+              as KnotPoundNetworkModel?,
       reusable: null == reusable
           ? _value.reusable
           : reusable // ignore: cast_nullable_to_non_nullable
@@ -2716,10 +2764,10 @@ class _$_FirstStageNetworkModel extends _FirstStageNetworkModel {
 
   @override
   @JsonKey(name: 'thrust_sea_level')
-  final KnotPoundModel? thrustSeaLevel;
+  final KnotPoundNetworkModel? thrustSeaLevel;
   @override
   @JsonKey(name: 'thrust_vacuum')
-  final KnotPoundModel? thrustVacuum;
+  final KnotPoundNetworkModel? thrustVacuum;
   @override
   @JsonKey(name: 'reusable')
   final bool reusable;
@@ -2779,9 +2827,9 @@ class _$_FirstStageNetworkModel extends _FirstStageNetworkModel {
 abstract class _FirstStageNetworkModel extends FirstStageNetworkModel {
   const factory _FirstStageNetworkModel(
       {@JsonKey(name: 'thrust_sea_level')
-          final KnotPoundModel? thrustSeaLevel,
+          final KnotPoundNetworkModel? thrustSeaLevel,
       @JsonKey(name: 'thrust_vacuum')
-          final KnotPoundModel? thrustVacuum,
+          final KnotPoundNetworkModel? thrustVacuum,
       @JsonKey(name: 'reusable')
           final bool reusable,
       @JsonKey(name: 'engines')
@@ -2797,10 +2845,10 @@ abstract class _FirstStageNetworkModel extends FirstStageNetworkModel {
 
   @override
   @JsonKey(name: 'thrust_sea_level')
-  KnotPoundModel? get thrustSeaLevel;
+  KnotPoundNetworkModel? get thrustSeaLevel;
   @override
   @JsonKey(name: 'thrust_vacuum')
-  KnotPoundModel? get thrustVacuum;
+  KnotPoundNetworkModel? get thrustVacuum;
   @override
   @JsonKey(name: 'reusable')
   bool get reusable;
@@ -2827,7 +2875,7 @@ SecondStageNetworkModel _$SecondStageNetworkModelFromJson(
 /// @nodoc
 mixin _$SecondStageNetworkModel {
   @JsonKey(name: 'thrust')
-  ThrustModel? get thrust => throw _privateConstructorUsedError;
+  ThrustNetworkModel? get thrust => throw _privateConstructorUsedError;
   @JsonKey(name: 'payloads')
   RocketPayloadNetworkModel? get payloads => throw _privateConstructorUsedError;
   @JsonKey(name: 'reusable')
@@ -2852,14 +2900,14 @@ abstract class $SecondStageNetworkModelCopyWith<$Res> {
       _$SecondStageNetworkModelCopyWithImpl<$Res, SecondStageNetworkModel>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'thrust') ThrustModel? thrust,
+      {@JsonKey(name: 'thrust') ThrustNetworkModel? thrust,
       @JsonKey(name: 'payloads') RocketPayloadNetworkModel? payloads,
       @JsonKey(name: 'reusable') bool reusable,
       @JsonKey(name: 'engines') num? engines,
       @JsonKey(name: 'fuel_amount_tons') num? fuelAmountTons,
       @JsonKey(name: 'burn_time_sec') int? burnTimeSec});
 
-  $ThrustModelCopyWith<$Res>? get thrust;
+  $ThrustNetworkModelCopyWith<$Res>? get thrust;
   $RocketPayloadNetworkModelCopyWith<$Res>? get payloads;
 }
 
@@ -2888,7 +2936,7 @@ class _$SecondStageNetworkModelCopyWithImpl<$Res,
       thrust: freezed == thrust
           ? _value.thrust
           : thrust // ignore: cast_nullable_to_non_nullable
-              as ThrustModel?,
+              as ThrustNetworkModel?,
       payloads: freezed == payloads
           ? _value.payloads
           : payloads // ignore: cast_nullable_to_non_nullable
@@ -2914,12 +2962,12 @@ class _$SecondStageNetworkModelCopyWithImpl<$Res,
 
   @override
   @pragma('vm:prefer-inline')
-  $ThrustModelCopyWith<$Res>? get thrust {
+  $ThrustNetworkModelCopyWith<$Res>? get thrust {
     if (_value.thrust == null) {
       return null;
     }
 
-    return $ThrustModelCopyWith<$Res>(_value.thrust!, (value) {
+    return $ThrustNetworkModelCopyWith<$Res>(_value.thrust!, (value) {
       return _then(_value.copyWith(thrust: value) as $Val);
     });
   }
@@ -2946,7 +2994,7 @@ abstract class _$$_SecondStageNetworkModelCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'thrust') ThrustModel? thrust,
+      {@JsonKey(name: 'thrust') ThrustNetworkModel? thrust,
       @JsonKey(name: 'payloads') RocketPayloadNetworkModel? payloads,
       @JsonKey(name: 'reusable') bool reusable,
       @JsonKey(name: 'engines') num? engines,
@@ -2954,7 +3002,7 @@ abstract class _$$_SecondStageNetworkModelCopyWith<$Res>
       @JsonKey(name: 'burn_time_sec') int? burnTimeSec});
 
   @override
-  $ThrustModelCopyWith<$Res>? get thrust;
+  $ThrustNetworkModelCopyWith<$Res>? get thrust;
   @override
   $RocketPayloadNetworkModelCopyWith<$Res>? get payloads;
 }
@@ -2982,7 +3030,7 @@ class __$$_SecondStageNetworkModelCopyWithImpl<$Res>
       thrust: freezed == thrust
           ? _value.thrust
           : thrust // ignore: cast_nullable_to_non_nullable
-              as ThrustModel?,
+              as ThrustNetworkModel?,
       payloads: freezed == payloads
           ? _value.payloads
           : payloads // ignore: cast_nullable_to_non_nullable
@@ -3024,7 +3072,7 @@ class _$_SecondStageNetworkModel extends _SecondStageNetworkModel {
 
   @override
   @JsonKey(name: 'thrust')
-  final ThrustModel? thrust;
+  final ThrustNetworkModel? thrust;
   @override
   @JsonKey(name: 'payloads')
   final RocketPayloadNetworkModel? payloads;
@@ -3086,7 +3134,7 @@ class _$_SecondStageNetworkModel extends _SecondStageNetworkModel {
 
 abstract class _SecondStageNetworkModel extends SecondStageNetworkModel {
   const factory _SecondStageNetworkModel(
-          {@JsonKey(name: 'thrust') final ThrustModel? thrust,
+          {@JsonKey(name: 'thrust') final ThrustNetworkModel? thrust,
           @JsonKey(name: 'payloads') final RocketPayloadNetworkModel? payloads,
           @JsonKey(name: 'reusable') final bool reusable,
           @JsonKey(name: 'engines') final num? engines,
@@ -3100,7 +3148,7 @@ abstract class _SecondStageNetworkModel extends SecondStageNetworkModel {
 
   @override
   @JsonKey(name: 'thrust')
-  ThrustModel? get thrust;
+  ThrustNetworkModel? get thrust;
   @override
   @JsonKey(name: 'payloads')
   RocketPayloadNetworkModel? get payloads;
@@ -4555,13 +4603,15 @@ mixin _$DragonNetworkModel {
   @JsonKey(name: 'heat_shield')
   HeatShieldNetworkModel? get heatShield => throw _privateConstructorUsedError;
   @JsonKey(name: 'launch_payload_mass')
-  MassModel? get launchPayloadMass => throw _privateConstructorUsedError;
+  MassNetworkModel? get launchPayloadMass => throw _privateConstructorUsedError;
   @JsonKey(name: 'launch_payload_vol')
-  CubicLenModel? get launchPayloadVol => throw _privateConstructorUsedError;
+  CubicLenNetworkModel? get launchPayloadVol =>
+      throw _privateConstructorUsedError;
   @JsonKey(name: 'return_payload_mass')
-  MassModel? get returnPayloadMass => throw _privateConstructorUsedError;
+  MassNetworkModel? get returnPayloadMass => throw _privateConstructorUsedError;
   @JsonKey(name: 'return_payload_vol')
-  CubicLenModel? get returnPayloadVol => throw _privateConstructorUsedError;
+  CubicLenNetworkModel? get returnPayloadVol =>
+      throw _privateConstructorUsedError;
   @JsonKey(name: 'pressurized_capsule')
   PressurizedCapsuleNetworkModel? get pressurizedCapsule =>
       throw _privateConstructorUsedError;
@@ -4591,9 +4641,9 @@ mixin _$DragonNetworkModel {
   @JsonKey(name: 'first_flight')
   String? get firstFlight => throw _privateConstructorUsedError;
   @JsonKey(name: 'diameter')
-  DiameterModel? get diameter => throw _privateConstructorUsedError;
+  DiameterNetworkModel? get diameter => throw _privateConstructorUsedError;
   @JsonKey(name: 'height_w_trunk')
-  DiameterModel? get heightWTrunk => throw _privateConstructorUsedError;
+  DiameterNetworkModel? get heightWTrunk => throw _privateConstructorUsedError;
   @JsonKey(name: 'trunk')
   TrunkNetworkModel? get trunk => throw _privateConstructorUsedError;
 
@@ -4617,13 +4667,13 @@ abstract class $DragonNetworkModelCopyWith<$Res> {
       @JsonKey(name: 'heat_shield')
           HeatShieldNetworkModel? heatShield,
       @JsonKey(name: 'launch_payload_mass')
-          MassModel? launchPayloadMass,
+          MassNetworkModel? launchPayloadMass,
       @JsonKey(name: 'launch_payload_vol')
-          CubicLenModel? launchPayloadVol,
+          CubicLenNetworkModel? launchPayloadVol,
       @JsonKey(name: 'return_payload_mass')
-          MassModel? returnPayloadMass,
+          MassNetworkModel? returnPayloadMass,
       @JsonKey(name: 'return_payload_vol')
-          CubicLenModel? returnPayloadVol,
+          CubicLenNetworkModel? returnPayloadVol,
       @JsonKey(name: 'pressurized_capsule')
           PressurizedCapsuleNetworkModel? pressurizedCapsule,
       @JsonKey(name: 'wikipedia')
@@ -4651,20 +4701,20 @@ abstract class $DragonNetworkModelCopyWith<$Res> {
       @JsonKey(name: 'first_flight')
           String? firstFlight,
       @JsonKey(name: 'diameter')
-          DiameterModel? diameter,
+          DiameterNetworkModel? diameter,
       @JsonKey(name: 'height_w_trunk')
-          DiameterModel? heightWTrunk,
+          DiameterNetworkModel? heightWTrunk,
       @JsonKey(name: 'trunk')
           TrunkNetworkModel? trunk});
 
   $HeatShieldNetworkModelCopyWith<$Res>? get heatShield;
-  $MassModelCopyWith<$Res>? get launchPayloadMass;
-  $CubicLenModelCopyWith<$Res>? get launchPayloadVol;
-  $MassModelCopyWith<$Res>? get returnPayloadMass;
-  $CubicLenModelCopyWith<$Res>? get returnPayloadVol;
+  $MassNetworkModelCopyWith<$Res>? get launchPayloadMass;
+  $CubicLenNetworkModelCopyWith<$Res>? get launchPayloadVol;
+  $MassNetworkModelCopyWith<$Res>? get returnPayloadMass;
+  $CubicLenNetworkModelCopyWith<$Res>? get returnPayloadVol;
   $PressurizedCapsuleNetworkModelCopyWith<$Res>? get pressurizedCapsule;
-  $DiameterModelCopyWith<$Res>? get diameter;
-  $DiameterModelCopyWith<$Res>? get heightWTrunk;
+  $DiameterNetworkModelCopyWith<$Res>? get diameter;
+  $DiameterNetworkModelCopyWith<$Res>? get heightWTrunk;
   $TrunkNetworkModelCopyWith<$Res>? get trunk;
 }
 
@@ -4721,19 +4771,19 @@ class _$DragonNetworkModelCopyWithImpl<$Res, $Val extends DragonNetworkModel>
       launchPayloadMass: freezed == launchPayloadMass
           ? _value.launchPayloadMass
           : launchPayloadMass // ignore: cast_nullable_to_non_nullable
-              as MassModel?,
+              as MassNetworkModel?,
       launchPayloadVol: freezed == launchPayloadVol
           ? _value.launchPayloadVol
           : launchPayloadVol // ignore: cast_nullable_to_non_nullable
-              as CubicLenModel?,
+              as CubicLenNetworkModel?,
       returnPayloadMass: freezed == returnPayloadMass
           ? _value.returnPayloadMass
           : returnPayloadMass // ignore: cast_nullable_to_non_nullable
-              as MassModel?,
+              as MassNetworkModel?,
       returnPayloadVol: freezed == returnPayloadVol
           ? _value.returnPayloadVol
           : returnPayloadVol // ignore: cast_nullable_to_non_nullable
-              as CubicLenModel?,
+              as CubicLenNetworkModel?,
       pressurizedCapsule: freezed == pressurizedCapsule
           ? _value.pressurizedCapsule
           : pressurizedCapsule // ignore: cast_nullable_to_non_nullable
@@ -4789,11 +4839,11 @@ class _$DragonNetworkModelCopyWithImpl<$Res, $Val extends DragonNetworkModel>
       diameter: freezed == diameter
           ? _value.diameter
           : diameter // ignore: cast_nullable_to_non_nullable
-              as DiameterModel?,
+              as DiameterNetworkModel?,
       heightWTrunk: freezed == heightWTrunk
           ? _value.heightWTrunk
           : heightWTrunk // ignore: cast_nullable_to_non_nullable
-              as DiameterModel?,
+              as DiameterNetworkModel?,
       trunk: freezed == trunk
           ? _value.trunk
           : trunk // ignore: cast_nullable_to_non_nullable
@@ -4815,48 +4865,50 @@ class _$DragonNetworkModelCopyWithImpl<$Res, $Val extends DragonNetworkModel>
 
   @override
   @pragma('vm:prefer-inline')
-  $MassModelCopyWith<$Res>? get launchPayloadMass {
+  $MassNetworkModelCopyWith<$Res>? get launchPayloadMass {
     if (_value.launchPayloadMass == null) {
       return null;
     }
 
-    return $MassModelCopyWith<$Res>(_value.launchPayloadMass!, (value) {
+    return $MassNetworkModelCopyWith<$Res>(_value.launchPayloadMass!, (value) {
       return _then(_value.copyWith(launchPayloadMass: value) as $Val);
     });
   }
 
   @override
   @pragma('vm:prefer-inline')
-  $CubicLenModelCopyWith<$Res>? get launchPayloadVol {
+  $CubicLenNetworkModelCopyWith<$Res>? get launchPayloadVol {
     if (_value.launchPayloadVol == null) {
       return null;
     }
 
-    return $CubicLenModelCopyWith<$Res>(_value.launchPayloadVol!, (value) {
+    return $CubicLenNetworkModelCopyWith<$Res>(_value.launchPayloadVol!,
+        (value) {
       return _then(_value.copyWith(launchPayloadVol: value) as $Val);
     });
   }
 
   @override
   @pragma('vm:prefer-inline')
-  $MassModelCopyWith<$Res>? get returnPayloadMass {
+  $MassNetworkModelCopyWith<$Res>? get returnPayloadMass {
     if (_value.returnPayloadMass == null) {
       return null;
     }
 
-    return $MassModelCopyWith<$Res>(_value.returnPayloadMass!, (value) {
+    return $MassNetworkModelCopyWith<$Res>(_value.returnPayloadMass!, (value) {
       return _then(_value.copyWith(returnPayloadMass: value) as $Val);
     });
   }
 
   @override
   @pragma('vm:prefer-inline')
-  $CubicLenModelCopyWith<$Res>? get returnPayloadVol {
+  $CubicLenNetworkModelCopyWith<$Res>? get returnPayloadVol {
     if (_value.returnPayloadVol == null) {
       return null;
     }
 
-    return $CubicLenModelCopyWith<$Res>(_value.returnPayloadVol!, (value) {
+    return $CubicLenNetworkModelCopyWith<$Res>(_value.returnPayloadVol!,
+        (value) {
       return _then(_value.copyWith(returnPayloadVol: value) as $Val);
     });
   }
@@ -4876,24 +4928,24 @@ class _$DragonNetworkModelCopyWithImpl<$Res, $Val extends DragonNetworkModel>
 
   @override
   @pragma('vm:prefer-inline')
-  $DiameterModelCopyWith<$Res>? get diameter {
+  $DiameterNetworkModelCopyWith<$Res>? get diameter {
     if (_value.diameter == null) {
       return null;
     }
 
-    return $DiameterModelCopyWith<$Res>(_value.diameter!, (value) {
+    return $DiameterNetworkModelCopyWith<$Res>(_value.diameter!, (value) {
       return _then(_value.copyWith(diameter: value) as $Val);
     });
   }
 
   @override
   @pragma('vm:prefer-inline')
-  $DiameterModelCopyWith<$Res>? get heightWTrunk {
+  $DiameterNetworkModelCopyWith<$Res>? get heightWTrunk {
     if (_value.heightWTrunk == null) {
       return null;
     }
 
-    return $DiameterModelCopyWith<$Res>(_value.heightWTrunk!, (value) {
+    return $DiameterNetworkModelCopyWith<$Res>(_value.heightWTrunk!, (value) {
       return _then(_value.copyWith(heightWTrunk: value) as $Val);
     });
   }
@@ -4927,13 +4979,13 @@ abstract class _$$_DragonNetworkModelCopyWith<$Res>
       @JsonKey(name: 'heat_shield')
           HeatShieldNetworkModel? heatShield,
       @JsonKey(name: 'launch_payload_mass')
-          MassModel? launchPayloadMass,
+          MassNetworkModel? launchPayloadMass,
       @JsonKey(name: 'launch_payload_vol')
-          CubicLenModel? launchPayloadVol,
+          CubicLenNetworkModel? launchPayloadVol,
       @JsonKey(name: 'return_payload_mass')
-          MassModel? returnPayloadMass,
+          MassNetworkModel? returnPayloadMass,
       @JsonKey(name: 'return_payload_vol')
-          CubicLenModel? returnPayloadVol,
+          CubicLenNetworkModel? returnPayloadVol,
       @JsonKey(name: 'pressurized_capsule')
           PressurizedCapsuleNetworkModel? pressurizedCapsule,
       @JsonKey(name: 'wikipedia')
@@ -4961,28 +5013,28 @@ abstract class _$$_DragonNetworkModelCopyWith<$Res>
       @JsonKey(name: 'first_flight')
           String? firstFlight,
       @JsonKey(name: 'diameter')
-          DiameterModel? diameter,
+          DiameterNetworkModel? diameter,
       @JsonKey(name: 'height_w_trunk')
-          DiameterModel? heightWTrunk,
+          DiameterNetworkModel? heightWTrunk,
       @JsonKey(name: 'trunk')
           TrunkNetworkModel? trunk});
 
   @override
   $HeatShieldNetworkModelCopyWith<$Res>? get heatShield;
   @override
-  $MassModelCopyWith<$Res>? get launchPayloadMass;
+  $MassNetworkModelCopyWith<$Res>? get launchPayloadMass;
   @override
-  $CubicLenModelCopyWith<$Res>? get launchPayloadVol;
+  $CubicLenNetworkModelCopyWith<$Res>? get launchPayloadVol;
   @override
-  $MassModelCopyWith<$Res>? get returnPayloadMass;
+  $MassNetworkModelCopyWith<$Res>? get returnPayloadMass;
   @override
-  $CubicLenModelCopyWith<$Res>? get returnPayloadVol;
+  $CubicLenNetworkModelCopyWith<$Res>? get returnPayloadVol;
   @override
   $PressurizedCapsuleNetworkModelCopyWith<$Res>? get pressurizedCapsule;
   @override
-  $DiameterModelCopyWith<$Res>? get diameter;
+  $DiameterNetworkModelCopyWith<$Res>? get diameter;
   @override
-  $DiameterModelCopyWith<$Res>? get heightWTrunk;
+  $DiameterNetworkModelCopyWith<$Res>? get heightWTrunk;
   @override
   $TrunkNetworkModelCopyWith<$Res>? get trunk;
 }
@@ -5038,19 +5090,19 @@ class __$$_DragonNetworkModelCopyWithImpl<$Res>
       launchPayloadMass: freezed == launchPayloadMass
           ? _value.launchPayloadMass
           : launchPayloadMass // ignore: cast_nullable_to_non_nullable
-              as MassModel?,
+              as MassNetworkModel?,
       launchPayloadVol: freezed == launchPayloadVol
           ? _value.launchPayloadVol
           : launchPayloadVol // ignore: cast_nullable_to_non_nullable
-              as CubicLenModel?,
+              as CubicLenNetworkModel?,
       returnPayloadMass: freezed == returnPayloadMass
           ? _value.returnPayloadMass
           : returnPayloadMass // ignore: cast_nullable_to_non_nullable
-              as MassModel?,
+              as MassNetworkModel?,
       returnPayloadVol: freezed == returnPayloadVol
           ? _value.returnPayloadVol
           : returnPayloadVol // ignore: cast_nullable_to_non_nullable
-              as CubicLenModel?,
+              as CubicLenNetworkModel?,
       pressurizedCapsule: freezed == pressurizedCapsule
           ? _value.pressurizedCapsule
           : pressurizedCapsule // ignore: cast_nullable_to_non_nullable
@@ -5106,11 +5158,11 @@ class __$$_DragonNetworkModelCopyWithImpl<$Res>
       diameter: freezed == diameter
           ? _value.diameter
           : diameter // ignore: cast_nullable_to_non_nullable
-              as DiameterModel?,
+              as DiameterNetworkModel?,
       heightWTrunk: freezed == heightWTrunk
           ? _value.heightWTrunk
           : heightWTrunk // ignore: cast_nullable_to_non_nullable
-              as DiameterModel?,
+              as DiameterNetworkModel?,
       trunk: freezed == trunk
           ? _value.trunk
           : trunk // ignore: cast_nullable_to_non_nullable
@@ -5188,16 +5240,16 @@ class _$_DragonNetworkModel extends _DragonNetworkModel {
   final HeatShieldNetworkModel? heatShield;
   @override
   @JsonKey(name: 'launch_payload_mass')
-  final MassModel? launchPayloadMass;
+  final MassNetworkModel? launchPayloadMass;
   @override
   @JsonKey(name: 'launch_payload_vol')
-  final CubicLenModel? launchPayloadVol;
+  final CubicLenNetworkModel? launchPayloadVol;
   @override
   @JsonKey(name: 'return_payload_mass')
-  final MassModel? returnPayloadMass;
+  final MassNetworkModel? returnPayloadMass;
   @override
   @JsonKey(name: 'return_payload_vol')
-  final CubicLenModel? returnPayloadVol;
+  final CubicLenNetworkModel? returnPayloadVol;
   @override
   @JsonKey(name: 'pressurized_capsule')
   final PressurizedCapsuleNetworkModel? pressurizedCapsule;
@@ -5251,10 +5303,10 @@ class _$_DragonNetworkModel extends _DragonNetworkModel {
   final String? firstFlight;
   @override
   @JsonKey(name: 'diameter')
-  final DiameterModel? diameter;
+  final DiameterNetworkModel? diameter;
   @override
   @JsonKey(name: 'height_w_trunk')
-  final DiameterModel? heightWTrunk;
+  final DiameterNetworkModel? heightWTrunk;
   @override
   @JsonKey(name: 'trunk')
   final TrunkNetworkModel? trunk;
@@ -5364,13 +5416,13 @@ abstract class _DragonNetworkModel extends DragonNetworkModel {
       @JsonKey(name: 'heat_shield')
           final HeatShieldNetworkModel? heatShield,
       @JsonKey(name: 'launch_payload_mass')
-          final MassModel? launchPayloadMass,
+          final MassNetworkModel? launchPayloadMass,
       @JsonKey(name: 'launch_payload_vol')
-          final CubicLenModel? launchPayloadVol,
+          final CubicLenNetworkModel? launchPayloadVol,
       @JsonKey(name: 'return_payload_mass')
-          final MassModel? returnPayloadMass,
+          final MassNetworkModel? returnPayloadMass,
       @JsonKey(name: 'return_payload_vol')
-          final CubicLenModel? returnPayloadVol,
+          final CubicLenNetworkModel? returnPayloadVol,
       @JsonKey(name: 'pressurized_capsule')
           final PressurizedCapsuleNetworkModel? pressurizedCapsule,
       @JsonKey(name: 'wikipedia')
@@ -5398,9 +5450,9 @@ abstract class _DragonNetworkModel extends DragonNetworkModel {
       @JsonKey(name: 'first_flight')
           final String? firstFlight,
       @JsonKey(name: 'diameter')
-          final DiameterModel? diameter,
+          final DiameterNetworkModel? diameter,
       @JsonKey(name: 'height_w_trunk')
-          final DiameterModel? heightWTrunk,
+          final DiameterNetworkModel? heightWTrunk,
       @JsonKey(name: 'trunk')
           final TrunkNetworkModel? trunk}) = _$_DragonNetworkModel;
   const _DragonNetworkModel._() : super._();
@@ -5419,16 +5471,16 @@ abstract class _DragonNetworkModel extends DragonNetworkModel {
   HeatShieldNetworkModel? get heatShield;
   @override
   @JsonKey(name: 'launch_payload_mass')
-  MassModel? get launchPayloadMass;
+  MassNetworkModel? get launchPayloadMass;
   @override
   @JsonKey(name: 'launch_payload_vol')
-  CubicLenModel? get launchPayloadVol;
+  CubicLenNetworkModel? get launchPayloadVol;
   @override
   @JsonKey(name: 'return_payload_mass')
-  MassModel? get returnPayloadMass;
+  MassNetworkModel? get returnPayloadMass;
   @override
   @JsonKey(name: 'return_payload_vol')
-  CubicLenModel? get returnPayloadVol;
+  CubicLenNetworkModel? get returnPayloadVol;
   @override
   @JsonKey(name: 'pressurized_capsule')
   PressurizedCapsuleNetworkModel? get pressurizedCapsule;
@@ -5470,10 +5522,10 @@ abstract class _DragonNetworkModel extends DragonNetworkModel {
   String? get firstFlight;
   @override
   @JsonKey(name: 'diameter')
-  DiameterModel? get diameter;
+  DiameterNetworkModel? get diameter;
   @override
   @JsonKey(name: 'height_w_trunk')
-  DiameterModel? get heightWTrunk;
+  DiameterNetworkModel? get heightWTrunk;
   @override
   @JsonKey(name: 'trunk')
   TrunkNetworkModel? get trunk;
@@ -5491,7 +5543,7 @@ PressurizedCapsuleNetworkModel _$PressurizedCapsuleNetworkModelFromJson(
 /// @nodoc
 mixin _$PressurizedCapsuleNetworkModel {
   @JsonKey(name: 'payload_volume')
-  CubicLenModel? get payloadVolume => throw _privateConstructorUsedError;
+  CubicLenNetworkModel? get payloadVolume => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -5507,9 +5559,10 @@ abstract class $PressurizedCapsuleNetworkModelCopyWith<$Res> {
       _$PressurizedCapsuleNetworkModelCopyWithImpl<$Res,
           PressurizedCapsuleNetworkModel>;
   @useResult
-  $Res call({@JsonKey(name: 'payload_volume') CubicLenModel? payloadVolume});
+  $Res call(
+      {@JsonKey(name: 'payload_volume') CubicLenNetworkModel? payloadVolume});
 
-  $CubicLenModelCopyWith<$Res>? get payloadVolume;
+  $CubicLenNetworkModelCopyWith<$Res>? get payloadVolume;
 }
 
 /// @nodoc
@@ -5532,18 +5585,18 @@ class _$PressurizedCapsuleNetworkModelCopyWithImpl<$Res,
       payloadVolume: freezed == payloadVolume
           ? _value.payloadVolume
           : payloadVolume // ignore: cast_nullable_to_non_nullable
-              as CubicLenModel?,
+              as CubicLenNetworkModel?,
     ) as $Val);
   }
 
   @override
   @pragma('vm:prefer-inline')
-  $CubicLenModelCopyWith<$Res>? get payloadVolume {
+  $CubicLenNetworkModelCopyWith<$Res>? get payloadVolume {
     if (_value.payloadVolume == null) {
       return null;
     }
 
-    return $CubicLenModelCopyWith<$Res>(_value.payloadVolume!, (value) {
+    return $CubicLenNetworkModelCopyWith<$Res>(_value.payloadVolume!, (value) {
       return _then(_value.copyWith(payloadVolume: value) as $Val);
     });
   }
@@ -5558,10 +5611,11 @@ abstract class _$$_PressurizedCapsuleNetworkModelCopyWith<$Res>
       __$$_PressurizedCapsuleNetworkModelCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({@JsonKey(name: 'payload_volume') CubicLenModel? payloadVolume});
+  $Res call(
+      {@JsonKey(name: 'payload_volume') CubicLenNetworkModel? payloadVolume});
 
   @override
-  $CubicLenModelCopyWith<$Res>? get payloadVolume;
+  $CubicLenNetworkModelCopyWith<$Res>? get payloadVolume;
 }
 
 /// @nodoc
@@ -5583,7 +5637,7 @@ class __$$_PressurizedCapsuleNetworkModelCopyWithImpl<$Res>
       payloadVolume: freezed == payloadVolume
           ? _value.payloadVolume
           : payloadVolume // ignore: cast_nullable_to_non_nullable
-              as CubicLenModel?,
+              as CubicLenNetworkModel?,
     ));
   }
 }
@@ -5602,7 +5656,7 @@ class _$_PressurizedCapsuleNetworkModel
 
   @override
   @JsonKey(name: 'payload_volume')
-  final CubicLenModel? payloadVolume;
+  final CubicLenNetworkModel? payloadVolume;
 
   @override
   String toString() {
@@ -5641,7 +5695,7 @@ abstract class _PressurizedCapsuleNetworkModel
     extends PressurizedCapsuleNetworkModel {
   const factory _PressurizedCapsuleNetworkModel(
           {@JsonKey(name: 'payload_volume')
-              final CubicLenModel? payloadVolume}) =
+              final CubicLenNetworkModel? payloadVolume}) =
       _$_PressurizedCapsuleNetworkModel;
   const _PressurizedCapsuleNetworkModel._() : super._();
 
@@ -5650,7 +5704,7 @@ abstract class _PressurizedCapsuleNetworkModel
 
   @override
   @JsonKey(name: 'payload_volume')
-  CubicLenModel? get payloadVolume;
+  CubicLenNetworkModel? get payloadVolume;
   @override
   @JsonKey(ignore: true)
   _$$_PressurizedCapsuleNetworkModelCopyWith<_$_PressurizedCapsuleNetworkModel>
@@ -5900,7 +5954,7 @@ mixin _$ThrusterNetworkModel {
   @JsonKey(name: 'isp')
   int? get isp => throw _privateConstructorUsedError;
   @JsonKey(name: 'thrust')
-  ThrustModel? get thrust => throw _privateConstructorUsedError;
+  ThrustNetworkModel? get thrust => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -5921,9 +5975,9 @@ abstract class $ThrusterNetworkModelCopyWith<$Res> {
       @JsonKey(name: 'fuel_1') String? firstFuel,
       @JsonKey(name: 'fuel_2') String? secondFuel,
       @JsonKey(name: 'isp') int? isp,
-      @JsonKey(name: 'thrust') ThrustModel? thrust});
+      @JsonKey(name: 'thrust') ThrustNetworkModel? thrust});
 
-  $ThrustModelCopyWith<$Res>? get thrust;
+  $ThrustNetworkModelCopyWith<$Res>? get thrust;
 }
 
 /// @nodoc
@@ -5976,18 +6030,18 @@ class _$ThrusterNetworkModelCopyWithImpl<$Res,
       thrust: freezed == thrust
           ? _value.thrust
           : thrust // ignore: cast_nullable_to_non_nullable
-              as ThrustModel?,
+              as ThrustNetworkModel?,
     ) as $Val);
   }
 
   @override
   @pragma('vm:prefer-inline')
-  $ThrustModelCopyWith<$Res>? get thrust {
+  $ThrustNetworkModelCopyWith<$Res>? get thrust {
     if (_value.thrust == null) {
       return null;
     }
 
-    return $ThrustModelCopyWith<$Res>(_value.thrust!, (value) {
+    return $ThrustNetworkModelCopyWith<$Res>(_value.thrust!, (value) {
       return _then(_value.copyWith(thrust: value) as $Val);
     });
   }
@@ -6008,10 +6062,10 @@ abstract class _$$_ThrusterNetworkModelCopyWith<$Res>
       @JsonKey(name: 'fuel_1') String? firstFuel,
       @JsonKey(name: 'fuel_2') String? secondFuel,
       @JsonKey(name: 'isp') int? isp,
-      @JsonKey(name: 'thrust') ThrustModel? thrust});
+      @JsonKey(name: 'thrust') ThrustNetworkModel? thrust});
 
   @override
-  $ThrustModelCopyWith<$Res>? get thrust;
+  $ThrustNetworkModelCopyWith<$Res>? get thrust;
 }
 
 /// @nodoc
@@ -6061,7 +6115,7 @@ class __$$_ThrusterNetworkModelCopyWithImpl<$Res>
       thrust: freezed == thrust
           ? _value.thrust
           : thrust // ignore: cast_nullable_to_non_nullable
-              as ThrustModel?,
+              as ThrustNetworkModel?,
     ));
   }
 }
@@ -6102,7 +6156,7 @@ class _$_ThrusterNetworkModel extends _ThrusterNetworkModel {
   final int? isp;
   @override
   @JsonKey(name: 'thrust')
-  final ThrustModel? thrust;
+  final ThrustNetworkModel? thrust;
 
   @override
   String toString() {
@@ -6153,7 +6207,7 @@ abstract class _ThrusterNetworkModel extends ThrusterNetworkModel {
           @JsonKey(name: 'fuel_1') final String? firstFuel,
           @JsonKey(name: 'fuel_2') final String? secondFuel,
           @JsonKey(name: 'isp') final int? isp,
-          @JsonKey(name: 'thrust') final ThrustModel? thrust}) =
+          @JsonKey(name: 'thrust') final ThrustNetworkModel? thrust}) =
       _$_ThrusterNetworkModel;
   const _ThrusterNetworkModel._() : super._();
 
@@ -6180,7 +6234,7 @@ abstract class _ThrusterNetworkModel extends ThrusterNetworkModel {
   int? get isp;
   @override
   @JsonKey(name: 'thrust')
-  ThrustModel? get thrust;
+  ThrustNetworkModel? get thrust;
   @override
   @JsonKey(ignore: true)
   _$$_ThrusterNetworkModelCopyWith<_$_ThrusterNetworkModel> get copyWith =>
@@ -6194,7 +6248,7 @@ TrunkNetworkModel _$TrunkNetworkModelFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$TrunkNetworkModel {
   @JsonKey(name: 'trunk_volume')
-  CubicLenModel? get volume => throw _privateConstructorUsedError;
+  CubicLenNetworkModel? get volume => throw _privateConstructorUsedError;
   @JsonKey(name: 'cargo')
   CargoNetworkModel? get cargo => throw _privateConstructorUsedError;
 
@@ -6211,10 +6265,10 @@ abstract class $TrunkNetworkModelCopyWith<$Res> {
       _$TrunkNetworkModelCopyWithImpl<$Res, TrunkNetworkModel>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'trunk_volume') CubicLenModel? volume,
+      {@JsonKey(name: 'trunk_volume') CubicLenNetworkModel? volume,
       @JsonKey(name: 'cargo') CargoNetworkModel? cargo});
 
-  $CubicLenModelCopyWith<$Res>? get volume;
+  $CubicLenNetworkModelCopyWith<$Res>? get volume;
   $CargoNetworkModelCopyWith<$Res>? get cargo;
 }
 
@@ -6238,7 +6292,7 @@ class _$TrunkNetworkModelCopyWithImpl<$Res, $Val extends TrunkNetworkModel>
       volume: freezed == volume
           ? _value.volume
           : volume // ignore: cast_nullable_to_non_nullable
-              as CubicLenModel?,
+              as CubicLenNetworkModel?,
       cargo: freezed == cargo
           ? _value.cargo
           : cargo // ignore: cast_nullable_to_non_nullable
@@ -6248,12 +6302,12 @@ class _$TrunkNetworkModelCopyWithImpl<$Res, $Val extends TrunkNetworkModel>
 
   @override
   @pragma('vm:prefer-inline')
-  $CubicLenModelCopyWith<$Res>? get volume {
+  $CubicLenNetworkModelCopyWith<$Res>? get volume {
     if (_value.volume == null) {
       return null;
     }
 
-    return $CubicLenModelCopyWith<$Res>(_value.volume!, (value) {
+    return $CubicLenNetworkModelCopyWith<$Res>(_value.volume!, (value) {
       return _then(_value.copyWith(volume: value) as $Val);
     });
   }
@@ -6280,11 +6334,11 @@ abstract class _$$_TrunkNetworkModelCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'trunk_volume') CubicLenModel? volume,
+      {@JsonKey(name: 'trunk_volume') CubicLenNetworkModel? volume,
       @JsonKey(name: 'cargo') CargoNetworkModel? cargo});
 
   @override
-  $CubicLenModelCopyWith<$Res>? get volume;
+  $CubicLenNetworkModelCopyWith<$Res>? get volume;
   @override
   $CargoNetworkModelCopyWith<$Res>? get cargo;
 }
@@ -6307,7 +6361,7 @@ class __$$_TrunkNetworkModelCopyWithImpl<$Res>
       volume: freezed == volume
           ? _value.volume
           : volume // ignore: cast_nullable_to_non_nullable
-              as CubicLenModel?,
+              as CubicLenNetworkModel?,
       cargo: freezed == cargo
           ? _value.cargo
           : cargo // ignore: cast_nullable_to_non_nullable
@@ -6329,7 +6383,7 @@ class _$_TrunkNetworkModel extends _TrunkNetworkModel {
 
   @override
   @JsonKey(name: 'trunk_volume')
-  final CubicLenModel? volume;
+  final CubicLenNetworkModel? volume;
   @override
   @JsonKey(name: 'cargo')
   final CargoNetworkModel? cargo;
@@ -6369,7 +6423,7 @@ class _$_TrunkNetworkModel extends _TrunkNetworkModel {
 
 abstract class _TrunkNetworkModel extends TrunkNetworkModel {
   const factory _TrunkNetworkModel(
-          {@JsonKey(name: 'trunk_volume') final CubicLenModel? volume,
+          {@JsonKey(name: 'trunk_volume') final CubicLenNetworkModel? volume,
           @JsonKey(name: 'cargo') final CargoNetworkModel? cargo}) =
       _$_TrunkNetworkModel;
   const _TrunkNetworkModel._() : super._();
@@ -6379,7 +6433,7 @@ abstract class _TrunkNetworkModel extends TrunkNetworkModel {
 
   @override
   @JsonKey(name: 'trunk_volume')
-  CubicLenModel? get volume;
+  CubicLenNetworkModel? get volume;
   @override
   @JsonKey(name: 'cargo')
   CargoNetworkModel? get cargo;

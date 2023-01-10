@@ -352,23 +352,23 @@ const roadsterVehicleModel = RoadsterVehicleNetworkModel(
 const rocketModel1 = RocketNetworkModel(id: '0');
 const rocketModel2 = RocketNetworkModel(id: '0');
 const rocketModel = RocketNetworkModel(
-  height: HeightModel(meters: 22.25, feet: 73),
-  diameter: DiameterModel(meters: 1.68, feet: 5.5),
-  mass: MassModel(kg: 30146, lb: 66460),
+  height: HeightNetworkModel(meters: 22.25, feet: 73),
+  diameter: DiameterNetworkModel(meters: 1.68, feet: 5.5),
+  mass: MassNetworkModel(kg: 30146, lb: 66460),
   firstStage: FirstStageNetworkModel(
-    thrustSeaLevel: KnotPoundModel(kN: 420, lbf: 94000),
-    thrustVacuum: KnotPoundModel(kN: 480, lbf: 110000),
+    thrustSeaLevel: KnotPoundNetworkModel(kN: 420, lbf: 94000),
+    thrustVacuum: KnotPoundNetworkModel(kN: 480, lbf: 110000),
     reusable: false,
     engines: 1,
     fuelAmountTons: 44.3,
     burnTimeSec: 169,
   ),
   secondStage: SecondStageNetworkModel(
-    thrust: ThrustModel(kN: 31, lbf: 7000),
+    thrust: ThrustNetworkModel(kN: 31, lbf: 7000),
     payloads: RocketPayloadNetworkModel(
-      compositeFairing: CompositeFairingModel(
-        height: HeightModel(meters: 3.5, feet: 11.5),
-        diameter: DiameterModel(meters: 1.5, feet: 4.9),
+      compositeFairing: CompositeFairingNetworkModel(
+        height: HeightNetworkModel(meters: 3.5, feet: 11.5),
+        diameter: DiameterNetworkModel(meters: 1.5, feet: 4.9),
       ),
       option1: 'composite fairing',
     ),
@@ -378,9 +378,9 @@ const rocketModel = RocketNetworkModel(
     burnTimeSec: 378,
   ),
   engines: EngineNetworkModel(
-    isp: IspModel(seaLevel: 267, vacuum: 304),
-    thrustSeaLevel: KnotPoundModel(kN: 420, lbf: 94000),
-    thrustVacuum: KnotPoundModel(kN: 480, lbf: 110000),
+    isp: IspNetworkModel(seaLevel: 267, vacuum: 304),
+    thrustSeaLevel: KnotPoundNetworkModel(kN: 420, lbf: 94000),
+    thrustVacuum: KnotPoundNetworkModel(kN: 480, lbf: 110000),
     number: 1,
     type: 'merlin',
     version: '1C',
@@ -392,7 +392,12 @@ const rocketModel = RocketNetworkModel(
   ),
   landingLegs: LandingLegsNetworkModel(number: 0),
   payloadWeights: [
-    PayloadWeightModel(id: 'leo', name: 'Low Earth Orbit', kg: 450, lb: 992)
+    PayloadWeightNetworkModel(
+      id: 'leo',
+      name: 'Low Earth Orbit',
+      kg: 450,
+      lb: 992,
+    )
   ],
   images: ['https://imgur.com/DaCfMsj.jpg', 'https://imgur.com/azYafd8.jpg'],
   name: 'Falcon 1',
@@ -516,19 +521,19 @@ const dragonModel = DragonNetworkModel(
     tempDegrees: 3000,
     devPartner: 'NASA',
   ),
-  launchPayloadMass: MassModel(kg: 6000, lb: 13228),
-  launchPayloadVol: CubicLenModel(meters: 25, feet: 883),
-  returnPayloadMass: MassModel(kg: 3000, lb: 6614),
-  returnPayloadVol: CubicLenModel(meters: 11, feet: 388),
+  launchPayloadMass: MassNetworkModel(kg: 6000, lb: 13228),
+  launchPayloadVol: CubicLenNetworkModel(meters: 25, feet: 883),
+  returnPayloadMass: MassNetworkModel(kg: 3000, lb: 6614),
+  returnPayloadVol: CubicLenNetworkModel(meters: 11, feet: 388),
   pressurizedCapsule: PressurizedCapsuleNetworkModel(
-    payloadVolume: CubicLenModel(meters: 11, feet: 388),
+    payloadVolume: CubicLenNetworkModel(meters: 11, feet: 388),
   ),
   trunk: TrunkNetworkModel(
-    volume: CubicLenModel(meters: 14, feet: 494),
+    volume: CubicLenNetworkModel(meters: 14, feet: 494),
     cargo: CargoNetworkModel(solarArray: 2, isUnpressurizedCargo: true),
   ),
-  heightWTrunk: DiameterModel(meters: 7.2, feet: 23.6),
-  diameter: DiameterModel(meters: 3.7, feet: 12),
+  heightWTrunk: DiameterNetworkModel(meters: 7.2, feet: 23.6),
+  diameter: DiameterNetworkModel(meters: 3.7, feet: 12),
   firstFlight: '2010-12-08',
   images: [
     'https://i.imgur.com/9fWdwNv.jpg',
@@ -552,7 +557,7 @@ const dragonModel = DragonNetworkModel(
       firstFuel: 'nitrogen tetroxide',
       secondFuel: 'monomethylhydrazine',
       isp: 300,
-      thrust: ThrustModel(kN: 0.4, lbf: 90),
+      thrust: ThrustNetworkModel(kN: 0.4, lbf: 90),
     )
   ],
   wiki: 'https://en.wikipedia.org/wiki/SpaceX_Dragon',
@@ -756,23 +761,23 @@ const fullLaunchModel = LaunchNetworkFullModel(
   net: false,
   window: 0,
   rocket: RocketNetworkModel(
-    height: HeightModel(meters: 22.25, feet: 73),
-    diameter: DiameterModel(meters: 1.68, feet: 5.5),
-    mass: MassModel(kg: 30146, lb: 66460),
+    height: HeightNetworkModel(meters: 22.25, feet: 73),
+    diameter: DiameterNetworkModel(meters: 1.68, feet: 5.5),
+    mass: MassNetworkModel(kg: 30146, lb: 66460),
     firstStage: FirstStageNetworkModel(
-      thrustSeaLevel: KnotPoundModel(kN: 420, lbf: 94000),
-      thrustVacuum: KnotPoundModel(kN: 480, lbf: 110000),
+      thrustSeaLevel: KnotPoundNetworkModel(kN: 420, lbf: 94000),
+      thrustVacuum: KnotPoundNetworkModel(kN: 480, lbf: 110000),
       reusable: false,
       engines: 1,
       fuelAmountTons: 44.3,
       burnTimeSec: 169,
     ),
     secondStage: SecondStageNetworkModel(
-      thrust: ThrustModel(kN: 31, lbf: 7000),
+      thrust: ThrustNetworkModel(kN: 31, lbf: 7000),
       payloads: RocketPayloadNetworkModel(
-        compositeFairing: CompositeFairingModel(
-          height: HeightModel(meters: 3.5, feet: 11.5),
-          diameter: DiameterModel(meters: 1.5, feet: 4.9),
+        compositeFairing: CompositeFairingNetworkModel(
+          height: HeightNetworkModel(meters: 3.5, feet: 11.5),
+          diameter: DiameterNetworkModel(meters: 1.5, feet: 4.9),
         ),
         option1: 'composite fairing',
       ),
@@ -782,9 +787,9 @@ const fullLaunchModel = LaunchNetworkFullModel(
       burnTimeSec: 378,
     ),
     engines: EngineNetworkModel(
-      isp: IspModel(seaLevel: 267, vacuum: 304),
-      thrustSeaLevel: KnotPoundModel(kN: 420, lbf: 94000),
-      thrustVacuum: KnotPoundModel(kN: 480, lbf: 110000),
+      isp: IspNetworkModel(seaLevel: 267, vacuum: 304),
+      thrustSeaLevel: KnotPoundNetworkModel(kN: 420, lbf: 94000),
+      thrustVacuum: KnotPoundNetworkModel(kN: 480, lbf: 110000),
       number: 1,
       type: 'merlin',
       version: '1C',
@@ -798,7 +803,7 @@ const fullLaunchModel = LaunchNetworkFullModel(
       number: 0,
     ),
     payloadWeights: [
-      PayloadWeightModel(
+      PayloadWeightNetworkModel(
         id: 'leo',
         name: 'Low Earth Orbit',
         kg: 450,
@@ -932,23 +937,23 @@ const launchpadFullModel = LaunchpadNetworkFullModel(
   launchSuccesses: 0,
   rockets: [
     RocketNetworkModel(
-      height: HeightModel(meters: 22.25, feet: 73),
-      diameter: DiameterModel(meters: 1.68, feet: 5.5),
-      mass: MassModel(kg: 30146, lb: 66460),
+      height: HeightNetworkModel(meters: 22.25, feet: 73),
+      diameter: DiameterNetworkModel(meters: 1.68, feet: 5.5),
+      mass: MassNetworkModel(kg: 30146, lb: 66460),
       firstStage: FirstStageNetworkModel(
-        thrustSeaLevel: KnotPoundModel(kN: 420, lbf: 94000),
-        thrustVacuum: KnotPoundModel(kN: 480, lbf: 110000),
+        thrustSeaLevel: KnotPoundNetworkModel(kN: 420, lbf: 94000),
+        thrustVacuum: KnotPoundNetworkModel(kN: 480, lbf: 110000),
         reusable: false,
         engines: 1,
         fuelAmountTons: 44.3,
         burnTimeSec: 169,
       ),
       secondStage: SecondStageNetworkModel(
-        thrust: ThrustModel(kN: 31, lbf: 7000),
+        thrust: ThrustNetworkModel(kN: 31, lbf: 7000),
         payloads: RocketPayloadNetworkModel(
-          compositeFairing: CompositeFairingModel(
-            height: HeightModel(meters: 3.5, feet: 11.5),
-            diameter: DiameterModel(meters: 1.5, feet: 4.9),
+          compositeFairing: CompositeFairingNetworkModel(
+            height: HeightNetworkModel(meters: 3.5, feet: 11.5),
+            diameter: DiameterNetworkModel(meters: 1.5, feet: 4.9),
           ),
           option1: 'composite fairing',
         ),
@@ -958,9 +963,9 @@ const launchpadFullModel = LaunchpadNetworkFullModel(
         burnTimeSec: 378,
       ),
       engines: EngineNetworkModel(
-        isp: IspModel(seaLevel: 267, vacuum: 304),
-        thrustSeaLevel: KnotPoundModel(kN: 420, lbf: 94000),
-        thrustVacuum: KnotPoundModel(kN: 480, lbf: 110000),
+        isp: IspNetworkModel(seaLevel: 267, vacuum: 304),
+        thrustSeaLevel: KnotPoundNetworkModel(kN: 420, lbf: 94000),
+        thrustVacuum: KnotPoundNetworkModel(kN: 480, lbf: 110000),
         number: 1,
         type: 'merlin',
         version: '1C',
@@ -974,7 +979,7 @@ const launchpadFullModel = LaunchpadNetworkFullModel(
         number: 0,
       ),
       payloadWeights: [
-        PayloadWeightModel(
+        PayloadWeightNetworkModel(
           id: 'leo',
           name: 'Low Earth Orbit',
           kg: 450,

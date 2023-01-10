@@ -79,12 +79,12 @@ class RocketNetworkModel with _$RocketNetworkModel {
     @JsonKey(name: 'name') String? name,
     @JsonKey(name: 'flickr_images') @Default(<String>[]) List<String> images,
     @JsonKey(name: 'payload_weights')
-    @Default(<PayloadWeightModel>[])
-        List<PayloadWeightModel> payloadWeights,
+    @Default(<PayloadWeightNetworkModel>[])
+        List<PayloadWeightNetworkModel> payloadWeights,
     @JsonKey(name: 'engines') EngineNetworkModel? engines,
-    @JsonKey(name: 'height') HeightModel? height,
-    @JsonKey(name: 'diameter') DiameterModel? diameter,
-    @JsonKey(name: 'mass') MassModel? mass,
+    @JsonKey(name: 'height') HeightNetworkModel? height,
+    @JsonKey(name: 'diameter') DiameterNetworkModel? diameter,
+    @JsonKey(name: 'mass') MassNetworkModel? mass,
     @JsonKey(name: 'first_stage') FirstStageNetworkModel? firstStage,
     @JsonKey(name: 'second_stage') SecondStageNetworkModel? secondStage,
     @JsonKey(name: 'landing_legs') LandingLegsNetworkModel? landingLegs,
@@ -99,9 +99,9 @@ class RocketNetworkModel with _$RocketNetworkModel {
 @freezed
 class EngineNetworkModel with _$EngineNetworkModel {
   const factory EngineNetworkModel({
-    @JsonKey(name: 'isp') IspModel? isp,
-    @JsonKey(name: 'thrust_sea_level') KnotPoundModel? thrustSeaLevel,
-    @JsonKey(name: 'thrust_vacuum') KnotPoundModel? thrustVacuum,
+    @JsonKey(name: 'isp') IspNetworkModel? isp,
+    @JsonKey(name: 'thrust_sea_level') KnotPoundNetworkModel? thrustSeaLevel,
+    @JsonKey(name: 'thrust_vacuum') KnotPoundNetworkModel? thrustVacuum,
     @JsonKey(name: 'number') num? number,
     @JsonKey(name: 'type') String? type,
     @JsonKey(name: 'version') String? version,
@@ -134,7 +134,8 @@ class LandingLegsNetworkModel with _$LandingLegsNetworkModel {
 @freezed
 class RocketPayloadNetworkModel with _$RocketPayloadNetworkModel {
   const factory RocketPayloadNetworkModel({
-    @JsonKey(name: 'composite_fairing') CompositeFairingModel? compositeFairing,
+    @JsonKey(name: 'composite_fairing')
+        CompositeFairingNetworkModel? compositeFairing,
     @JsonKey(name: 'option_1') String? option1,
   }) = _RocketPayloadNetworkModel;
 
@@ -147,8 +148,8 @@ class RocketPayloadNetworkModel with _$RocketPayloadNetworkModel {
 @freezed
 class FirstStageNetworkModel with _$FirstStageNetworkModel {
   const factory FirstStageNetworkModel({
-    @JsonKey(name: 'thrust_sea_level') KnotPoundModel? thrustSeaLevel,
-    @JsonKey(name: 'thrust_vacuum') KnotPoundModel? thrustVacuum,
+    @JsonKey(name: 'thrust_sea_level') KnotPoundNetworkModel? thrustSeaLevel,
+    @JsonKey(name: 'thrust_vacuum') KnotPoundNetworkModel? thrustVacuum,
     @JsonKey(name: 'reusable') @Default(false) bool reusable,
     @JsonKey(name: 'engines') num? engines,
     @JsonKey(name: 'fuel_amount_tons') num? fuelAmountTons,
@@ -164,7 +165,7 @@ class FirstStageNetworkModel with _$FirstStageNetworkModel {
 @freezed
 class SecondStageNetworkModel with _$SecondStageNetworkModel {
   const factory SecondStageNetworkModel({
-    @JsonKey(name: 'thrust') ThrustModel? thrust,
+    @JsonKey(name: 'thrust') ThrustNetworkModel? thrust,
     @JsonKey(name: 'payloads') RocketPayloadNetworkModel? payloads,
     @JsonKey(name: 'reusable') @Default(false) bool reusable,
     @JsonKey(name: 'engines') num? engines,
@@ -258,10 +259,10 @@ class DragonNetworkModel with _$DragonNetworkModel {
     @JsonKey(name: 'id') required String id,
     @JsonKey(name: 'description') String? description,
     @JsonKey(name: 'heat_shield') HeatShieldNetworkModel? heatShield,
-    @JsonKey(name: 'launch_payload_mass') MassModel? launchPayloadMass,
-    @JsonKey(name: 'launch_payload_vol') CubicLenModel? launchPayloadVol,
-    @JsonKey(name: 'return_payload_mass') MassModel? returnPayloadMass,
-    @JsonKey(name: 'return_payload_vol') CubicLenModel? returnPayloadVol,
+    @JsonKey(name: 'launch_payload_mass') MassNetworkModel? launchPayloadMass,
+    @JsonKey(name: 'launch_payload_vol') CubicLenNetworkModel? launchPayloadVol,
+    @JsonKey(name: 'return_payload_mass') MassNetworkModel? returnPayloadMass,
+    @JsonKey(name: 'return_payload_vol') CubicLenNetworkModel? returnPayloadVol,
     @JsonKey(name: 'pressurized_capsule')
         PressurizedCapsuleNetworkModel? pressurizedCapsule,
     @JsonKey(name: 'wikipedia') String? wiki,
@@ -278,8 +279,8 @@ class DragonNetworkModel with _$DragonNetworkModel {
     @JsonKey(name: 'name') String? name,
     @JsonKey(name: 'flickr_images') @Default(<String>[]) List<String> images,
     @JsonKey(name: 'first_flight') String? firstFlight,
-    @JsonKey(name: 'diameter') DiameterModel? diameter,
-    @JsonKey(name: 'height_w_trunk') DiameterModel? heightWTrunk,
+    @JsonKey(name: 'diameter') DiameterNetworkModel? diameter,
+    @JsonKey(name: 'height_w_trunk') DiameterNetworkModel? heightWTrunk,
     @JsonKey(name: 'trunk') TrunkNetworkModel? trunk,
   }) = _DragonNetworkModel;
 
@@ -292,7 +293,7 @@ class DragonNetworkModel with _$DragonNetworkModel {
 @freezed
 class PressurizedCapsuleNetworkModel with _$PressurizedCapsuleNetworkModel {
   const factory PressurizedCapsuleNetworkModel({
-    @JsonKey(name: 'payload_volume') CubicLenModel? payloadVolume,
+    @JsonKey(name: 'payload_volume') CubicLenNetworkModel? payloadVolume,
   }) = _PressurizedCapsuleNetworkModel;
 
   const PressurizedCapsuleNetworkModel._();
@@ -325,7 +326,7 @@ class ThrusterNetworkModel with _$ThrusterNetworkModel {
     @JsonKey(name: 'fuel_1') String? firstFuel,
     @JsonKey(name: 'fuel_2') String? secondFuel,
     @JsonKey(name: 'isp') int? isp,
-    @JsonKey(name: 'thrust') ThrustModel? thrust,
+    @JsonKey(name: 'thrust') ThrustNetworkModel? thrust,
   }) = _ThrusterNetworkModel;
 
   const ThrusterNetworkModel._();
@@ -337,7 +338,7 @@ class ThrusterNetworkModel with _$ThrusterNetworkModel {
 @freezed
 class TrunkNetworkModel with _$TrunkNetworkModel {
   const factory TrunkNetworkModel({
-    @JsonKey(name: 'trunk_volume') CubicLenModel? volume,
+    @JsonKey(name: 'trunk_volume') CubicLenNetworkModel? volume,
     @JsonKey(name: 'cargo') CargoNetworkModel? cargo,
   }) = _TrunkNetworkModel;
 

@@ -104,23 +104,24 @@ _$_RocketNetworkModel _$$_RocketNetworkModelFromJson(
               .toList() ??
           const <String>[],
       payloadWeights: (json['payload_weights'] as List<dynamic>?)
-              ?.map(
-                  (e) => PayloadWeightModel.fromJson(e as Map<String, dynamic>))
+              ?.map((e) =>
+                  PayloadWeightNetworkModel.fromJson(e as Map<String, dynamic>))
               .toList() ??
-          const <PayloadWeightModel>[],
+          const <PayloadWeightNetworkModel>[],
       engines: json['engines'] == null
           ? null
           : EngineNetworkModel.fromJson(
               json['engines'] as Map<String, dynamic>),
       height: json['height'] == null
           ? null
-          : HeightModel.fromJson(json['height'] as Map<String, dynamic>),
+          : HeightNetworkModel.fromJson(json['height'] as Map<String, dynamic>),
       diameter: json['diameter'] == null
           ? null
-          : DiameterModel.fromJson(json['diameter'] as Map<String, dynamic>),
+          : DiameterNetworkModel.fromJson(
+              json['diameter'] as Map<String, dynamic>),
       mass: json['mass'] == null
           ? null
-          : MassModel.fromJson(json['mass'] as Map<String, dynamic>),
+          : MassNetworkModel.fromJson(json['mass'] as Map<String, dynamic>),
       firstStage: json['first_stage'] == null
           ? null
           : FirstStageNetworkModel.fromJson(
@@ -177,14 +178,14 @@ _$_EngineNetworkModel _$$_EngineNetworkModelFromJson(
     _$_EngineNetworkModel(
       isp: json['isp'] == null
           ? null
-          : IspModel.fromJson(json['isp'] as Map<String, dynamic>),
+          : IspNetworkModel.fromJson(json['isp'] as Map<String, dynamic>),
       thrustSeaLevel: json['thrust_sea_level'] == null
           ? null
-          : KnotPoundModel.fromJson(
+          : KnotPoundNetworkModel.fromJson(
               json['thrust_sea_level'] as Map<String, dynamic>),
       thrustVacuum: json['thrust_vacuum'] == null
           ? null
-          : KnotPoundModel.fromJson(
+          : KnotPoundNetworkModel.fromJson(
               json['thrust_vacuum'] as Map<String, dynamic>),
       number: json['number'] as num?,
       type: json['type'] as String?,
@@ -247,7 +248,7 @@ _$_RocketPayloadNetworkModel _$$_RocketPayloadNetworkModelFromJson(
     _$_RocketPayloadNetworkModel(
       compositeFairing: json['composite_fairing'] == null
           ? null
-          : CompositeFairingModel.fromJson(
+          : CompositeFairingNetworkModel.fromJson(
               json['composite_fairing'] as Map<String, dynamic>),
       option1: json['option_1'] as String?,
     );
@@ -272,11 +273,11 @@ _$_FirstStageNetworkModel _$$_FirstStageNetworkModelFromJson(
     _$_FirstStageNetworkModel(
       thrustSeaLevel: json['thrust_sea_level'] == null
           ? null
-          : KnotPoundModel.fromJson(
+          : KnotPoundNetworkModel.fromJson(
               json['thrust_sea_level'] as Map<String, dynamic>),
       thrustVacuum: json['thrust_vacuum'] == null
           ? null
-          : KnotPoundModel.fromJson(
+          : KnotPoundNetworkModel.fromJson(
               json['thrust_vacuum'] as Map<String, dynamic>),
       reusable: json['reusable'] as bool? ?? false,
       engines: json['engines'] as num?,
@@ -308,7 +309,7 @@ _$_SecondStageNetworkModel _$$_SecondStageNetworkModelFromJson(
     _$_SecondStageNetworkModel(
       thrust: json['thrust'] == null
           ? null
-          : ThrustModel.fromJson(json['thrust'] as Map<String, dynamic>),
+          : ThrustNetworkModel.fromJson(json['thrust'] as Map<String, dynamic>),
       payloads: json['payloads'] == null
           ? null
           : RocketPayloadNetworkModel.fromJson(
@@ -490,19 +491,19 @@ _$_DragonNetworkModel _$$_DragonNetworkModelFromJson(
               json['heat_shield'] as Map<String, dynamic>),
       launchPayloadMass: json['launch_payload_mass'] == null
           ? null
-          : MassModel.fromJson(
+          : MassNetworkModel.fromJson(
               json['launch_payload_mass'] as Map<String, dynamic>),
       launchPayloadVol: json['launch_payload_vol'] == null
           ? null
-          : CubicLenModel.fromJson(
+          : CubicLenNetworkModel.fromJson(
               json['launch_payload_vol'] as Map<String, dynamic>),
       returnPayloadMass: json['return_payload_mass'] == null
           ? null
-          : MassModel.fromJson(
+          : MassNetworkModel.fromJson(
               json['return_payload_mass'] as Map<String, dynamic>),
       returnPayloadVol: json['return_payload_vol'] == null
           ? null
-          : CubicLenModel.fromJson(
+          : CubicLenNetworkModel.fromJson(
               json['return_payload_vol'] as Map<String, dynamic>),
       pressurizedCapsule: json['pressurized_capsule'] == null
           ? null
@@ -529,10 +530,11 @@ _$_DragonNetworkModel _$$_DragonNetworkModelFromJson(
       firstFlight: json['first_flight'] as String?,
       diameter: json['diameter'] == null
           ? null
-          : DiameterModel.fromJson(json['diameter'] as Map<String, dynamic>),
+          : DiameterNetworkModel.fromJson(
+              json['diameter'] as Map<String, dynamic>),
       heightWTrunk: json['height_w_trunk'] == null
           ? null
-          : DiameterModel.fromJson(
+          : DiameterNetworkModel.fromJson(
               json['height_w_trunk'] as Map<String, dynamic>),
       trunk: json['trunk'] == null
           ? null
@@ -581,7 +583,7 @@ _$_PressurizedCapsuleNetworkModel _$$_PressurizedCapsuleNetworkModelFromJson(
     _$_PressurizedCapsuleNetworkModel(
       payloadVolume: json['payload_volume'] == null
           ? null
-          : CubicLenModel.fromJson(
+          : CubicLenNetworkModel.fromJson(
               json['payload_volume'] as Map<String, dynamic>),
     );
 
@@ -636,7 +638,7 @@ _$_ThrusterNetworkModel _$$_ThrusterNetworkModelFromJson(
       isp: json['isp'] as int?,
       thrust: json['thrust'] == null
           ? null
-          : ThrustModel.fromJson(json['thrust'] as Map<String, dynamic>),
+          : ThrustNetworkModel.fromJson(json['thrust'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$$_ThrusterNetworkModelToJson(
@@ -663,7 +665,7 @@ _$_TrunkNetworkModel _$$_TrunkNetworkModelFromJson(Map<String, dynamic> json) =>
     _$_TrunkNetworkModel(
       volume: json['trunk_volume'] == null
           ? null
-          : CubicLenModel.fromJson(
+          : CubicLenNetworkModel.fromJson(
               json['trunk_volume'] as Map<String, dynamic>),
       cargo: json['cargo'] == null
           ? null

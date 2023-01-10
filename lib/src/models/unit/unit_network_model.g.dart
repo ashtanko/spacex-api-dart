@@ -1,24 +1,25 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'unit_model.dart';
+part of 'unit_network_model.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_CompositeFairingModel _$$_CompositeFairingModelFromJson(
+_$_CompositeFairingNetworkModel _$$_CompositeFairingNetworkModelFromJson(
         Map<String, dynamic> json) =>
-    _$_CompositeFairingModel(
+    _$_CompositeFairingNetworkModel(
       height: json['height'] == null
           ? null
-          : HeightModel.fromJson(json['height'] as Map<String, dynamic>),
+          : HeightNetworkModel.fromJson(json['height'] as Map<String, dynamic>),
       diameter: json['diameter'] == null
           ? null
-          : DiameterModel.fromJson(json['diameter'] as Map<String, dynamic>),
+          : DiameterNetworkModel.fromJson(
+              json['diameter'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_CompositeFairingModelToJson(
-    _$_CompositeFairingModel instance) {
+Map<String, dynamic> _$$_CompositeFairingNetworkModelToJson(
+    _$_CompositeFairingNetworkModel instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -32,76 +33,85 @@ Map<String, dynamic> _$$_CompositeFairingModelToJson(
   return val;
 }
 
-_$_ThrustModel _$$_ThrustModelFromJson(Map<String, dynamic> json) =>
-    _$_ThrustModel(
+_$_ThrustNetworkModel _$$_ThrustNetworkModelFromJson(
+        Map<String, dynamic> json) =>
+    _$_ThrustNetworkModel(
       kN: json['kN'] as num? ?? 0,
       lbf: json['lbf'] as num? ?? 0,
     );
 
-Map<String, dynamic> _$$_ThrustModelToJson(_$_ThrustModel instance) =>
+Map<String, dynamic> _$$_ThrustNetworkModelToJson(
+        _$_ThrustNetworkModel instance) =>
     <String, dynamic>{
       'kN': instance.kN,
       'lbf': instance.lbf,
     };
 
-_$_HeightModel _$$_HeightModelFromJson(Map<String, dynamic> json) =>
-    _$_HeightModel(
+_$_HeightNetworkModel _$$_HeightNetworkModelFromJson(
+        Map<String, dynamic> json) =>
+    _$_HeightNetworkModel(
       meters: json['meters'] as num? ?? 0,
       feet: json['feet'] as num? ?? 0,
     );
 
-Map<String, dynamic> _$$_HeightModelToJson(_$_HeightModel instance) =>
+Map<String, dynamic> _$$_HeightNetworkModelToJson(
+        _$_HeightNetworkModel instance) =>
     <String, dynamic>{
       'meters': instance.meters,
       'feet': instance.feet,
     };
 
-_$_MassModel _$$_MassModelFromJson(Map<String, dynamic> json) => _$_MassModel(
+_$_MassNetworkModel _$$_MassNetworkModelFromJson(Map<String, dynamic> json) =>
+    _$_MassNetworkModel(
       kg: json['kg'] as num? ?? 0,
       lb: json['lb'] as num? ?? 0,
     );
 
-Map<String, dynamic> _$$_MassModelToJson(_$_MassModel instance) =>
+Map<String, dynamic> _$$_MassNetworkModelToJson(_$_MassNetworkModel instance) =>
     <String, dynamic>{
       'kg': instance.kg,
       'lb': instance.lb,
     };
 
-_$_CubicLenModel _$$_CubicLenModelFromJson(Map<String, dynamic> json) =>
-    _$_CubicLenModel(
+_$_CubicLenNetworkModel _$$_CubicLenNetworkModelFromJson(
+        Map<String, dynamic> json) =>
+    _$_CubicLenNetworkModel(
       meters: json['cubic_meters'] as num? ?? 0,
       feet: json['cubic_feet'] as num? ?? 0,
     );
 
-Map<String, dynamic> _$$_CubicLenModelToJson(_$_CubicLenModel instance) =>
+Map<String, dynamic> _$$_CubicLenNetworkModelToJson(
+        _$_CubicLenNetworkModel instance) =>
     <String, dynamic>{
       'cubic_meters': instance.meters,
       'cubic_feet': instance.feet,
     };
 
-_$_DiameterModel _$$_DiameterModelFromJson(Map<String, dynamic> json) =>
-    _$_DiameterModel(
+_$_DiameterNetworkModel _$$_DiameterNetworkModelFromJson(
+        Map<String, dynamic> json) =>
+    _$_DiameterNetworkModel(
       meters: json['meters'] as num? ?? 0.0,
       feet: json['feet'] as num? ?? 0,
     );
 
-Map<String, dynamic> _$$_DiameterModelToJson(_$_DiameterModel instance) =>
+Map<String, dynamic> _$$_DiameterNetworkModelToJson(
+        _$_DiameterNetworkModel instance) =>
     <String, dynamic>{
       'meters': instance.meters,
       'feet': instance.feet,
     };
 
-_$_PayloadWeightModel _$$_PayloadWeightModelFromJson(
+_$_PayloadWeightNetworkModel _$$_PayloadWeightNetworkModelFromJson(
         Map<String, dynamic> json) =>
-    _$_PayloadWeightModel(
+    _$_PayloadWeightNetworkModel(
       id: json['id'] as String?,
       name: json['name'] as String?,
       kg: json['kg'] as num? ?? 0,
       lb: json['lb'] as num? ?? 0,
     );
 
-Map<String, dynamic> _$$_PayloadWeightModelToJson(
-    _$_PayloadWeightModel instance) {
+Map<String, dynamic> _$$_PayloadWeightNetworkModelToJson(
+    _$_PayloadWeightNetworkModel instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -117,24 +127,27 @@ Map<String, dynamic> _$$_PayloadWeightModelToJson(
   return val;
 }
 
-_$_IspModel _$$_IspModelFromJson(Map<String, dynamic> json) => _$_IspModel(
+_$_IspNetworkModel _$$_IspNetworkModelFromJson(Map<String, dynamic> json) =>
+    _$_IspNetworkModel(
       seaLevel: json['sea_level'] as num? ?? 0,
       vacuum: json['vacuum'] as num? ?? 0,
     );
 
-Map<String, dynamic> _$$_IspModelToJson(_$_IspModel instance) =>
+Map<String, dynamic> _$$_IspNetworkModelToJson(_$_IspNetworkModel instance) =>
     <String, dynamic>{
       'sea_level': instance.seaLevel,
       'vacuum': instance.vacuum,
     };
 
-_$_KnotPoundModel _$$_KnotPoundModelFromJson(Map<String, dynamic> json) =>
-    _$_KnotPoundModel(
+_$_KnotPoundNetworkModel _$$_KnotPoundNetworkModelFromJson(
+        Map<String, dynamic> json) =>
+    _$_KnotPoundNetworkModel(
       kN: json['kN'] as num? ?? 0,
       lbf: json['lbf'] as num? ?? 0,
     );
 
-Map<String, dynamic> _$$_KnotPoundModelToJson(_$_KnotPoundModel instance) =>
+Map<String, dynamic> _$$_KnotPoundNetworkModelToJson(
+        _$_KnotPoundNetworkModel instance) =>
     <String, dynamic>{
       'kN': instance.kN,
       'lbf': instance.lbf,
