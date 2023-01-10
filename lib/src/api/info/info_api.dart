@@ -9,5 +9,5 @@ abstract class InfoApi {
   factory InfoApi(Dio dio) = _InfoApi;
 
   @GET('/company')
-  Future<CompanyInfoModel> getCompanyInfo();
+  Future<CompanyInfoNetworkModel> getCompanyInfo();
 }

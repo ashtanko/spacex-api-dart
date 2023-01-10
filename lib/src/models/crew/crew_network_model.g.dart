@@ -1,13 +1,14 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'crew_model.dart';
+part of 'crew_network_model.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_FullCrewModel _$$_FullCrewModelFromJson(Map<String, dynamic> json) =>
-    _$_FullCrewModel(
+_$_FullCrewNetworkModel _$$_FullCrewNetworkModelFromJson(
+        Map<String, dynamic> json) =>
+    _$_FullCrewNetworkModel(
       id: json['id'] as String? ?? '',
       name: json['name'] as String? ?? '',
       agency: json['agency'] as String? ?? '',
@@ -22,7 +23,8 @@ _$_FullCrewModel _$$_FullCrewModelFromJson(Map<String, dynamic> json) =>
           CrewStatus.unknown,
     );
 
-Map<String, dynamic> _$$_FullCrewModelToJson(_$_FullCrewModel instance) =>
+Map<String, dynamic> _$$_FullCrewNetworkModelToJson(
+        _$_FullCrewNetworkModel instance) =>
     <String, dynamic>{
       'id': instance.id,
       'name': instance.name,
@@ -38,7 +40,8 @@ const _$CrewStatusEnumMap = {
   CrewStatus.active: 'active',
 };
 
-_$_CrewModel _$$_CrewModelFromJson(Map<String, dynamic> json) => _$_CrewModel(
+_$_CrewNetworkModel _$$_CrewNetworkModelFromJson(Map<String, dynamic> json) =>
+    _$_CrewNetworkModel(
       id: json['id'] as String? ?? '',
       name: json['name'] as String? ?? '',
       agency: json['agency'] as String? ?? '',
@@ -53,7 +56,7 @@ _$_CrewModel _$$_CrewModelFromJson(Map<String, dynamic> json) => _$_CrewModel(
           CrewStatus.unknown,
     );
 
-Map<String, dynamic> _$$_CrewModelToJson(_$_CrewModel instance) =>
+Map<String, dynamic> _$$_CrewNetworkModelToJson(_$_CrewNetworkModel instance) =>
     <String, dynamic>{
       'id': instance.id,
       'name': instance.name,
@@ -64,13 +67,15 @@ Map<String, dynamic> _$$_CrewModelToJson(_$_CrewModel instance) =>
       'status': _$CrewStatusEnumMap[instance.status]!,
     };
 
-_$_ShortCrewModel _$$_ShortCrewModelFromJson(Map<String, dynamic> json) =>
-    _$_ShortCrewModel(
+_$_ShortCrewNetworkModel _$$_ShortCrewNetworkModelFromJson(
+        Map<String, dynamic> json) =>
+    _$_ShortCrewNetworkModel(
       crew: json['crew'] as String? ?? '',
       role: json['role'] as String? ?? '',
     );
 
-Map<String, dynamic> _$$_ShortCrewModelToJson(_$_ShortCrewModel instance) =>
+Map<String, dynamic> _$$_ShortCrewNetworkModelToJson(
+        _$_ShortCrewNetworkModel instance) =>
     <String, dynamic>{
       'crew': instance.crew,
       'role': instance.role,

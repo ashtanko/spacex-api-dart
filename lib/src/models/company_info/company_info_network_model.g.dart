@@ -1,21 +1,22 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'company_info_model.dart';
+part of 'company_info_network_model.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_CompanyInfoModel _$$_CompanyInfoModelFromJson(Map<String, dynamic> json) =>
-    _$_CompanyInfoModel(
+_$_CompanyInfoNetworkModel _$$_CompanyInfoNetworkModelFromJson(
+        Map<String, dynamic> json) =>
+    _$_CompanyInfoNetworkModel(
       id: json['id'] as String,
       headquarters: json['headquarters'] == null
           ? null
-          : HeadquarterModel.fromJson(
+          : HeadquarterNetworkModel.fromJson(
               json['headquarters'] as Map<String, dynamic>),
       links: json['links'] == null
           ? null
-          : LinksModel.fromJson(json['links'] as Map<String, dynamic>),
+          : LinksNetworkModel.fromJson(json['links'] as Map<String, dynamic>),
       fullName: json['fullName'] as String? ??
           'Space Exploration Technologies Corporation',
       name: json['name'] as String? ?? 'SpaceX',
@@ -33,7 +34,8 @@ _$_CompanyInfoModel _$$_CompanyInfoModelFromJson(Map<String, dynamic> json) =>
       details: json['summary'] as String?,
     );
 
-Map<String, dynamic> _$$_CompanyInfoModelToJson(_$_CompanyInfoModel instance) {
+Map<String, dynamic> _$$_CompanyInfoNetworkModelToJson(
+    _$_CompanyInfoNetworkModel instance) {
   final val = <String, dynamic>{
     'id': instance.id,
   };
@@ -63,22 +65,24 @@ Map<String, dynamic> _$$_CompanyInfoModelToJson(_$_CompanyInfoModel instance) {
   return val;
 }
 
-_$_HeadquarterModel _$$_HeadquarterModelFromJson(Map<String, dynamic> json) =>
-    _$_HeadquarterModel(
+_$_HeadquarterNetworkModel _$$_HeadquarterNetworkModelFromJson(
+        Map<String, dynamic> json) =>
+    _$_HeadquarterNetworkModel(
       address: json['address'] as String? ?? 'Rocket Road',
       city: json['city'] as String? ?? 'Hawthorne',
       state: json['state'] as String? ?? 'California',
     );
 
-Map<String, dynamic> _$$_HeadquarterModelToJson(_$_HeadquarterModel instance) =>
+Map<String, dynamic> _$$_HeadquarterNetworkModelToJson(
+        _$_HeadquarterNetworkModel instance) =>
     <String, dynamic>{
       'address': instance.address,
       'city': instance.city,
       'state': instance.state,
     };
 
-_$_LinksModel _$$_LinksModelFromJson(Map<String, dynamic> json) =>
-    _$_LinksModel(
+_$_LinksNetworkModel _$$_LinksNetworkModelFromJson(Map<String, dynamic> json) =>
+    _$_LinksNetworkModel(
       website: json['website'] as String? ?? 'https://www.spacex.com/',
       flickr:
           json['flickr'] as String? ?? 'https://www.flickr.com/photos/spacex/',
@@ -87,7 +91,8 @@ _$_LinksModel _$$_LinksModelFromJson(Map<String, dynamic> json) =>
           json['elon_twitter'] as String? ?? 'https://twitter.com/elonmusk',
     );
 
-Map<String, dynamic> _$$_LinksModelToJson(_$_LinksModel instance) =>
+Map<String, dynamic> _$$_LinksNetworkModelToJson(
+        _$_LinksNetworkModel instance) =>
     <String, dynamic>{
       'website': instance.website,
       'flickr': instance.flickr,

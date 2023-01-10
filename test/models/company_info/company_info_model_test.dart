@@ -25,7 +25,7 @@ void main() {
             'info/company_info.json'.toFixture();
 
         // act
-        final result = CompanyInfoModel.fromJson(jsonMap);
+        final result = CompanyInfoNetworkModel.fromJson(jsonMap);
 
         // assert
         expect(result, equals(fullInfo));
@@ -63,14 +63,14 @@ void main() {
             'SpaceX designs, manufactures and launches advanced rockets and spacecraft. The company was founded in 2002 to revolutionize space technology, with the ultimate goal of enabling people to live on other planets.'
       };
 
-      final model = CompanyInfoModel.fromJson(json);
-      const expected = CompanyInfoModel(
-        headquarters: HeadquarterModel(
+      final model = CompanyInfoNetworkModel.fromJson(json);
+      const expected = CompanyInfoNetworkModel(
+        headquarters: HeadquarterNetworkModel(
           address: 'Rocket Road',
           city: 'Hawthorne',
           state: 'California',
         ),
-        links: LinksModel(
+        links: LinksNetworkModel(
           website: 'https://www.spacex.com/',
           flickr: 'https://www.flickr.com/photos/spacex/',
           twitter: 'https://twitter.com/SpaceX',

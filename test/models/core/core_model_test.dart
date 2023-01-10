@@ -33,7 +33,7 @@ void main() {
         // arrange
         final Map<String, dynamic> jsonMap = 'cores/core.json'.toFixture();
         // act
-        final result = CoreModel.fromJson(jsonMap);
+        final result = CoreNetworkModel.fromJson(jsonMap);
         // assert
         expect(result, equals(core));
       },
@@ -54,9 +54,9 @@ void main() {
         'id': '5fe3b8fbb3467846b3242182'
       };
 
-      final actual = CoreModel.fromJson(json);
+      final actual = CoreNetworkModel.fromJson(json);
 
-      const expected = CoreModel(
+      const expected = CoreNetworkModel(
         block: 5,
         reuseCount: 0,
         rtlsAttempts: 0,

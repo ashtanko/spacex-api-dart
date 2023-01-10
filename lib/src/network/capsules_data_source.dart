@@ -23,7 +23,9 @@ class CapsulesDataSource {
     }
   }
 
-  Future<ApiPaginatedList<CapsuleNetworkModel>> queryCapsules(QueryModel query) async {
+  Future<ApiPaginatedList<CapsuleNetworkModel>> queryCapsules(
+    QueryModel query,
+  ) async {
     try {
       final capsules = await _api.queryCapsules(query);
       return capsules;

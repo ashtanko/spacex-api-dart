@@ -9,18 +9,20 @@ abstract class CrewApi {
   factory CrewApi(Dio dio) = _CrewApi;
 
   @GET('/crew')
-  Future<List<CrewModel>> getAllCrew();
+  Future<List<CrewNetworkModel>> getAllCrew();
 
   @GET('/crew/{id}')
-  Future<CrewModel> getOneMember(
+  Future<CrewNetworkModel> getOneMember(
     @Path() String id,
   );
 
   @POST('/crew/query')
-  Future<ApiPaginatedList<CrewModel>> queryCrew(@Body() QueryModel query);
+  Future<ApiPaginatedList<CrewNetworkModel>> queryCrew(
+    @Body() QueryModel query,
+  );
 
   @POST('/crew/query')
-  Future<ApiPaginatedList<FullCrewModel>> queryFullCrew(
+  Future<ApiPaginatedList<FullCrewNetworkModel>> queryFullCrew(
     @Body() QueryModel query,
   );
 }

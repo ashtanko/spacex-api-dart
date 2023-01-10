@@ -6,7 +6,7 @@ class CoresDataSource {
 
   final CoresApi _api;
 
-  Future<List<CoreModel>> getAllCores() async {
+  Future<List<CoreNetworkModel>> getAllCores() async {
     try {
       return _api.getAllCores();
     } on DioError catch (_) {
@@ -14,7 +14,7 @@ class CoresDataSource {
     }
   }
 
-  Future<CoreModel> getCore(String id) async {
+  Future<CoreNetworkModel> getCore(String id) async {
     try {
       return _api.getCore(id);
     } on DioError catch (_) {
@@ -22,7 +22,9 @@ class CoresDataSource {
     }
   }
 
-  Future<ApiPaginatedList<CoreModel>> queryCores(QueryModel query) async {
+  Future<ApiPaginatedList<CoreNetworkModel>> queryCores(
+    QueryModel query,
+  ) async {
     try {
       return _api.queryCores(query);
     } on DioError catch (_) {
@@ -30,7 +32,7 @@ class CoresDataSource {
     }
   }
 
-  Future<ApiPaginatedList<CoreFullModel>> queryFullCores(
+  Future<ApiPaginatedList<CoreNetworkFullModel>> queryFullCores(
     QueryModel query,
   ) async {
     try {

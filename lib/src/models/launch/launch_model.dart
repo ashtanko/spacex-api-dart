@@ -11,7 +11,7 @@ class FullLaunchModel with _$FullLaunchModel {
     required String id,
     @Default(false) bool tbd,
     @JsonKey(name: 'auto_update') @Default(false) bool autoUpdate,
-    @JsonKey(name: 'cores') @Default(<CoreModel>[]) List<CoreModel> cores,
+    @JsonKey(name: 'cores') @Default(<CoreNetworkModel>[]) List<CoreNetworkModel> cores,
     @Default(false) bool upcoming,
     @JsonKey(name: 'date_precision') @Default('') String datePrecision,
     @JsonKey(name: 'date_local') @Default('') String dateLocal,
@@ -51,7 +51,7 @@ class LaunchSimpleModel with _$LaunchSimpleModel {
     @JsonKey(name: 'id') required String id,
     @Default(false) bool tbd,
     @JsonKey(name: 'auto_update') @Default(false) bool autoUpdate,
-    @JsonKey(name: 'cores') @Default(<CoreModel>[]) List<CoreModel> cores,
+    @JsonKey(name: 'cores') @Default(<CoreNetworkModel>[]) List<CoreNetworkModel> cores,
     @Default(false) bool upcoming,
     @JsonKey(name: 'date_precision') @Default('') String datePrecision,
     @JsonKey(name: 'date_local') @Default('') String dateLocal,
@@ -91,7 +91,7 @@ class LaunchModel with _$LaunchModel {
     @JsonKey(name: 'id') required String id,
     @Default(false) bool tbd,
     @JsonKey(name: 'auto_update') @Default(false) bool autoUpdate,
-    @JsonKey(name: 'cores') @Default(<CoreModel>[]) List<CoreModel> cores,
+    @JsonKey(name: 'cores') @Default(<CoreNetworkModel>[]) List<CoreNetworkModel> cores,
     @Default(false) bool upcoming,
     @JsonKey(name: 'date_precision') @Default('') String datePrecision,
     @JsonKey(name: 'date_local') @Default('') String dateLocal,
@@ -104,8 +104,8 @@ class LaunchModel with _$LaunchModel {
     @JsonKey(name: 'capsules') @Default([]) List<String> capsules,
     @JsonKey(name: 'ships') @Default([]) List<String> ships,
     @JsonKey(name: 'crew')
-    @Default(<ShortCrewModel>[])
-        List<ShortCrewModel> crew,
+    @Default(<ShortCrewNetworkModel>[])
+        List<ShortCrewNetworkModel> crew,
     @JsonKey(name: 'details') String? details,
     @JsonKey(name: 'failures') @Default([]) List<LaunchFailureModel> failures,
     @JsonKey(name: 'success') @Default(false) bool success,

@@ -44,7 +44,7 @@ void main() {
         // arrange
         final Map<String, dynamic> jsonMap = 'crew/short.json'.toFixture();
         // act
-        final result = ShortCrewModel.fromJson(jsonMap);
+        final result = ShortCrewNetworkModel.fromJson(jsonMap);
         // assert
         expect(result, equals(shortCrew));
       },
@@ -56,7 +56,7 @@ void main() {
         // arrange
         final Map<String, dynamic> jsonMap = 'crew/member.json'.toFixture();
         // act
-        final result = CrewModel.fromJson(jsonMap);
+        final result = CrewNetworkModel.fromJson(jsonMap);
         // assert
         expect(result, equals(crew));
       },
@@ -69,7 +69,7 @@ void main() {
         final Map<String, dynamic> jsonMap =
             'crew/full_member.json'.toFixture();
         // act
-        final result = FullCrewModel.fromJson(jsonMap);
+        final result = FullCrewNetworkModel.fromJson(jsonMap);
         // assert
         expect(result, equals(fullCrew));
       },

@@ -1,8 +1,8 @@
 export 'achievement/achievement_network_model.dart';
 export 'capsule/capsule_network_model.dart';
-export 'company_info/company_info_model.dart';
-export 'core/core_model.dart';
-export 'crew/crew_model.dart';
+export 'company_info/company_info_network_model.dart';
+export 'core/core_network_model.dart';
+export 'crew/crew_network_model.dart';
 export 'crew/crew_status.dart';
 export 'fairing/fairings_model.dart';
 export 'images/images_model.dart';

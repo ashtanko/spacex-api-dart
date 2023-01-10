@@ -21,13 +21,13 @@ class _CrewApi implements CrewApi {
   String? baseUrl;
 
   @override
-  Future<List<CrewModel>> getAllCrew() async {
+  Future<List<CrewNetworkModel>> getAllCrew() async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
-    final _result =
-        await _dio.fetch<List<dynamic>>(_setStreamType<List<CrewModel>>(Options(
+    final _result = await _dio
+        .fetch<List<dynamic>>(_setStreamType<List<CrewNetworkModel>>(Options(
       method: 'GET',
       headers: _headers,
       extra: _extra,
@@ -40,19 +40,20 @@ class _CrewApi implements CrewApi {
             )
             .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
     var value = _result.data!
-        .map((dynamic i) => CrewModel.fromJson(i as Map<String, dynamic>))
+        .map(
+            (dynamic i) => CrewNetworkModel.fromJson(i as Map<String, dynamic>))
         .toList();
     return value;
   }
 
   @override
-  Future<CrewModel> getOneMember(id) async {
+  Future<CrewNetworkModel> getOneMember(id) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     final _result = await _dio
-        .fetch<Map<String, dynamic>>(_setStreamType<CrewModel>(Options(
+        .fetch<Map<String, dynamic>>(_setStreamType<CrewNetworkModel>(Options(
       method: 'GET',
       headers: _headers,
       extra: _extra,
@@ -64,19 +65,19 @@ class _CrewApi implements CrewApi {
               data: _data,
             )
             .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
-    final value = CrewModel.fromJson(_result.data!);
+    final value = CrewNetworkModel.fromJson(_result.data!);
     return value;
   }
 
   @override
-  Future<ApiPaginatedList<CrewModel>> queryCrew(query) async {
+  Future<ApiPaginatedList<CrewNetworkModel>> queryCrew(query) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     _data.addAll(query.toJson());
     final _result = await _dio.fetch<Map<String, dynamic>>(
-        _setStreamType<ApiPaginatedList<CrewModel>>(Options(
+        _setStreamType<ApiPaginatedList<CrewNetworkModel>>(Options(
       method: 'POST',
       headers: _headers,
       extra: _extra,
@@ -88,22 +89,22 @@ class _CrewApi implements CrewApi {
               data: _data,
             )
             .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
-    final value = ApiPaginatedList<CrewModel>.fromJson(
+    final value = ApiPaginatedList<CrewNetworkModel>.fromJson(
       _result.data!,
-      (json) => CrewModel.fromJson(json as Map<String, dynamic>),
+      (json) => CrewNetworkModel.fromJson(json as Map<String, dynamic>),
     );
     return value;
   }
 
   @override
-  Future<ApiPaginatedList<FullCrewModel>> queryFullCrew(query) async {
+  Future<ApiPaginatedList<dynamic>> queryFullCrew(query) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     _data.addAll(query.toJson());
     final _result = await _dio.fetch<Map<String, dynamic>>(
-        _setStreamType<ApiPaginatedList<FullCrewModel>>(Options(
+        _setStreamType<ApiPaginatedList<dynamic>>(Options(
       method: 'POST',
       headers: _headers,
       extra: _extra,
@@ -115,9 +116,9 @@ class _CrewApi implements CrewApi {
               data: _data,
             )
             .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
-    final value = ApiPaginatedList<FullCrewModel>.fromJson(
+    final value = ApiPaginatedList<dynamic>.fromJson(
       _result.data!,
-      (json) => FullCrewModel.fromJson(json as Map<String, dynamic>),
+      (json) => json as dynamic,
     );
     return value;
   }

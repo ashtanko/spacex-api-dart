@@ -6,7 +6,7 @@ class CrewDataSource {
 
   final CrewApi _api;
 
-  Future<List<CrewModel>> getAllCrew() async {
+  Future<List<CrewNetworkModel>> getAllCrew() async {
     try {
       return _api.getAllCrew();
     } on DioError catch (_) {
@@ -14,7 +14,7 @@ class CrewDataSource {
     }
   }
 
-  Future<CrewModel> getCrewMember(String id) async {
+  Future<CrewNetworkModel> getCrewMember(String id) async {
     try {
       return _api.getOneMember(id);
     } on DioError catch (_) {
@@ -22,7 +22,7 @@ class CrewDataSource {
     }
   }
 
-  Future<ApiPaginatedList<CrewModel>> queryCrew(QueryModel query) async {
+  Future<ApiPaginatedList<CrewNetworkModel>> queryCrew(QueryModel query) async {
     try {
       return _api.queryCrew(query);
     } on DioError catch (_) {
@@ -30,7 +30,7 @@ class CrewDataSource {
     }
   }
 
-  Future<ApiPaginatedList<FullCrewModel>> queryFullCrew(
+  Future<ApiPaginatedList<FullCrewNetworkModel>> queryFullCrew(
     QueryModel query,
   ) async {
     try {

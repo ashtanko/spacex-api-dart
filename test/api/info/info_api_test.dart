@@ -19,7 +19,7 @@ void main() {
 
   group('get company info', () {
     final rawJson = 'info/company_info.json'.toFixture();
-    final model = CompanyInfoModel.fromJson(rawJson);
+    final model = CompanyInfoNetworkModel.fromJson(rawJson);
     test(
       'should perform a GET request on /company',
       () async {

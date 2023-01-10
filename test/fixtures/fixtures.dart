@@ -103,16 +103,16 @@ const achievement2 = AchievementNetworkModel(id: '0');
 const achievement3 = AchievementNetworkModel(id: '1');
 
 /// info
-const info1 = CompanyInfoModel(id: '0');
-const info2 = CompanyInfoModel(id: '0');
-const info3 = CompanyInfoModel(id: '1');
-const fullInfo = CompanyInfoModel(
-  headquarters: HeadquarterModel(
+const info1 = CompanyInfoNetworkModel(id: '0');
+const info2 = CompanyInfoNetworkModel(id: '0');
+const info3 = CompanyInfoNetworkModel(id: '1');
+const fullInfo = CompanyInfoNetworkModel(
+  headquarters: HeadquarterNetworkModel(
     address: 'Rocket Road',
     city: 'Hawthorne',
     state: 'California',
   ),
-  links: LinksModel(
+  links: LinksNetworkModel(
     website: 'https://www.spacex.com/',
     flickr: 'https://www.flickr.com/photos/spacex/',
     twitter: 'https://twitter.com/SpaceX',
@@ -136,9 +136,9 @@ const fullInfo = CompanyInfoModel(
 );
 
 /// core
-const core1 = CoreModel(id: '0');
-const core2 = CoreModel(id: '0');
-const core3 = CoreModel(
+const core1 = CoreNetworkModel(id: '0');
+const core2 = CoreNetworkModel(id: '0');
+const core3 = CoreNetworkModel(
   block: 5,
   reuseCount: 0,
   rtlsAttempts: 0,
@@ -154,9 +154,9 @@ const core3 = CoreModel(
   id: '5fe3b8fbb3467846b3242182',
 );
 
-const fullCore1 = CoreFullModel(id: '0');
-const fullCore2 = CoreFullModel(id: '0');
-const fullCore3 = CoreFullModel(
+const fullCore1 = CoreNetworkFullModel(id: '0');
+const fullCore2 = CoreNetworkFullModel(id: '0');
+const fullCore3 = CoreNetworkFullModel(
   block: 5,
   reuseCount: 0,
   rtlsAttempts: 0,
@@ -170,7 +170,7 @@ const fullCore3 = CoreFullModel(
   id: '5fe3b8fbb3467846b3242182',
 );
 
-const core = CoreModel(
+const core = CoreNetworkModel(
   block: 1,
   reuseCount: 0,
   rtlsAttempts: 0,
@@ -185,16 +185,16 @@ const core = CoreModel(
 );
 
 /// crew
-const shortCrew1 = ShortCrewModel(crew: '');
-const shortCrew2 = ShortCrewModel(crew: '');
-const shortCrew = ShortCrewModel(
+const shortCrew1 = ShortCrewNetworkModel(crew: '');
+const shortCrew2 = ShortCrewNetworkModel(crew: '');
+const shortCrew = ShortCrewNetworkModel(
   crew: '5ebf1a6e23a9a60006e03a7a',
   role: 'Commander',
 );
 
-const crew1 = CrewModel(id: '0');
-const crew2 = CrewModel(id: '0');
-const crew = CrewModel(
+const crew1 = CrewNetworkModel(id: '0');
+const crew2 = CrewNetworkModel(id: '0');
+const crew = CrewNetworkModel(
   id: '5ebf1a6e23a9a60006e03a7a',
   name: 'Robert Behnken',
   agency: 'NASA',
@@ -204,9 +204,9 @@ const crew = CrewModel(
   status: CrewStatus.active,
 );
 
-const fullCrew1 = FullCrewModel(id: '0');
-const fullCrew2 = FullCrewModel(id: '0');
-const fullCrew = FullCrewModel(
+const fullCrew1 = FullCrewNetworkModel(id: '0');
+const fullCrew2 = FullCrewNetworkModel(id: '0');
+const fullCrew = FullCrewNetworkModel(
   name: 'Robert Behnken',
   agency: 'NASA',
   image: 'https://imgur.com/0smMgMH.png',
@@ -263,11 +263,14 @@ const fullCrew = FullCrewModel(
       details:
           "SpaceX will launch the second demonstration mission of its Crew Dragon vehicle as part of NASA's Commercial Crew Transportation Capability Program (CCtCap), carrying two NASA astronauts to the International Space Station. Barring unexpected developments, this mission will be the first crewed flight to launch from the United States since the end of the Space Shuttle program in 2011. DM-2 demonstrates the Falcon 9 and Crew Dragon's ability to safely transport crew to the space station and back to Earth and it is the last major milestone for certification of Crew Dragon. Initially the mission duration was planned to be no longer than two weeks, however NASA has been considering an extension to as much as six weeks or three months. The astronauts have been undergoing additional training for the possible longer mission.",
       crew: [
-        ShortCrewModel(
+        ShortCrewNetworkModel(
           crew: '5ebf1a6e23a9a60006e03a7a',
           role: 'Joint Commander',
         ),
-        ShortCrewModel(crew: '5ebf1b7323a9a60006e03a7b', role: 'Commander')
+        ShortCrewNetworkModel(
+          crew: '5ebf1b7323a9a60006e03a7b',
+          role: 'Commander',
+        )
       ],
       ships: [
         '5ea6ed30080df4000697c913',
@@ -287,7 +290,7 @@ const fullCrew = FullCrewModel(
       datePrecision: 'hour',
       upcoming: false,
       cores: [
-        CoreModel(
+        CoreNetworkModel(
           core: '5e9e28a7f3591817f23b2663',
           flight: 1,
           hasGridfins: true,
@@ -487,7 +490,7 @@ const shipFullModel = ShipFullModel(
       datePrecision: 'hour',
       upcoming: false,
       cores: [
-        CoreModel(
+        CoreNetworkModel(
           core: '5e9e289ef35918187c3b2629',
           flight: 1,
           hasGridfins: false,
@@ -652,7 +655,7 @@ const landpadFullModel = LandpadFullModel(
       datePrecision: 'hour',
       upcoming: false,
       cores: [
-        CoreModel(
+        CoreNetworkModel(
           core: '5e9e289ef35918187c3b2629',
           flight: 1,
           hasGridfins: false,
@@ -713,7 +716,7 @@ const launchModel = LaunchModel(
   datePrecision: 'hour',
   upcoming: false,
   cores: [
-    CoreModel(
+    CoreNetworkModel(
       core: '5e9e289df35918033d3b2623',
       flight: 1,
       hasGridfins: false,
@@ -878,7 +881,7 @@ const fullLaunchModel = FullLaunchModel(
   datePrecision: 'hour',
   upcoming: false,
   cores: [
-    CoreModel(
+    CoreNetworkModel(
       core: '5e9e289df35918033d3b2623',
       flight: 1,
       hasGridfins: false,

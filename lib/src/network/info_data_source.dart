@@ -6,7 +6,7 @@ class InfoDataSource {
 
   final InfoApi _infoApi;
 
-  Future<CompanyInfoModel> getCompanyInfo() async {
+  Future<CompanyInfoNetworkModel> getCompanyInfo() async {
     try {
       return _infoApi.getCompanyInfo();
     } on DioError catch (_) {

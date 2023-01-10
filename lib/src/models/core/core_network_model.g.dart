@@ -1,12 +1,13 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'core_model.dart';
+part of 'core_network_model.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_CoreModel _$$_CoreModelFromJson(Map<String, dynamic> json) => _$_CoreModel(
+_$_CoreNetworkModel _$$_CoreNetworkModelFromJson(Map<String, dynamic> json) =>
+    _$_CoreNetworkModel(
       id: json['id'] as String?,
       block: json['block'] as int?,
       reuseCount: json['reuse_count'] as int?,
@@ -32,7 +33,7 @@ _$_CoreModel _$$_CoreModelFromJson(Map<String, dynamic> json) => _$_CoreModel(
       landpad: json['landpad'] as String?,
     );
 
-Map<String, dynamic> _$$_CoreModelToJson(_$_CoreModel instance) {
+Map<String, dynamic> _$$_CoreNetworkModelToJson(_$_CoreNetworkModel instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -64,8 +65,9 @@ Map<String, dynamic> _$$_CoreModelToJson(_$_CoreModel instance) {
   return val;
 }
 
-_$_CoreFullModel _$$_CoreFullModelFromJson(Map<String, dynamic> json) =>
-    _$_CoreFullModel(
+_$_CoreNetworkFullModel _$$_CoreNetworkFullModelFromJson(
+        Map<String, dynamic> json) =>
+    _$_CoreNetworkFullModel(
       id: json['id'] as String?,
       block: json['block'] as int?,
       reuseCount: json['reuse_count'] as int?,
@@ -91,7 +93,8 @@ _$_CoreFullModel _$$_CoreFullModelFromJson(Map<String, dynamic> json) =>
       landpad: json['landpad'] as String?,
     );
 
-Map<String, dynamic> _$$_CoreFullModelToJson(_$_CoreFullModel instance) {
+Map<String, dynamic> _$$_CoreNetworkFullModelToJson(
+    _$_CoreNetworkFullModel instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {

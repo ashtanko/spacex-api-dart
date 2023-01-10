@@ -1,13 +1,13 @@
 import 'package:data/data.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-part 'crew_model.freezed.dart';
+part 'crew_network_model.freezed.dart';
 
-part 'crew_model.g.dart';
+part 'crew_network_model.g.dart';
 
 @freezed
-class FullCrewModel with _$FullCrewModel {
-  const factory FullCrewModel({
+class FullCrewNetworkModel with _$FullCrewNetworkModel {
+  const factory FullCrewNetworkModel({
     @JsonKey(name: 'id') @Default('') String id,
     @JsonKey(name: 'name') @Default('') String name,
     @JsonKey(name: 'agency') @Default('') String agency,
@@ -17,17 +17,17 @@ class FullCrewModel with _$FullCrewModel {
     @JsonKey(name: 'status', unknownEnumValue: CrewStatus.unknown)
     @Default(CrewStatus.unknown)
         CrewStatus status,
-  }) = _FullCrewModel;
+  }) = _FullCrewNetworkModel;
 
-  const FullCrewModel._();
+  const FullCrewNetworkModel._();
 
-  factory FullCrewModel.fromJson(Map<String, dynamic> json) =>
-      _$FullCrewModelFromJson(json);
+  factory FullCrewNetworkModel.fromJson(Map<String, dynamic> json) =>
+      _$FullCrewNetworkModelFromJson(json);
 }
 
 @freezed
-class CrewModel with _$CrewModel {
-  const factory CrewModel({
+class CrewNetworkModel with _$CrewNetworkModel {
+  const factory CrewNetworkModel({
     @JsonKey(name: 'id') @Default('') String id,
     @JsonKey(name: 'name') @Default('') String name,
     @JsonKey(name: 'agency') @Default('') String agency,
@@ -37,23 +37,23 @@ class CrewModel with _$CrewModel {
     @JsonKey(name: 'status', unknownEnumValue: CrewStatus.unknown)
     @Default(CrewStatus.unknown)
         CrewStatus status,
-  }) = _CrewModel;
+  }) = _CrewNetworkModel;
 
-  const CrewModel._();
+  const CrewNetworkModel._();
 
-  factory CrewModel.fromJson(Map<String, dynamic> json) =>
-      _$CrewModelFromJson(json);
+  factory CrewNetworkModel.fromJson(Map<String, dynamic> json) =>
+      _$CrewNetworkModelFromJson(json);
 }
 
 @freezed
-class ShortCrewModel with _$ShortCrewModel {
-  const factory ShortCrewModel({
+class ShortCrewNetworkModel with _$ShortCrewNetworkModel {
+  const factory ShortCrewNetworkModel({
     @JsonKey(name: 'crew') @Default('') String crew,
     @JsonKey(name: 'role') @Default('') String role,
-  }) = _ShortCrewModel;
+  }) = _ShortCrewNetworkModel;
 
-  const ShortCrewModel._();
+  const ShortCrewNetworkModel._();
 
-  factory ShortCrewModel.fromJson(Map<String, dynamic> json) =>
-      _$ShortCrewModelFromJson(json);
+  factory ShortCrewNetworkModel.fromJson(Map<String, dynamic> json) =>
+      _$ShortCrewNetworkModelFromJson(json);
 }

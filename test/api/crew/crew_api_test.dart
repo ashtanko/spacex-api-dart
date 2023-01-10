@@ -19,7 +19,7 @@ void main() {
 
   group('get all crew members', () {
     final rawJson = 'crew/member.json'.toFixture();
-    final model = CrewModel.fromJson(rawJson);
+    final model = CrewNetworkModel.fromJson(rawJson);
     final mockResponse = [model];
     test(
       'should perform a GET request on /crew',
@@ -43,7 +43,7 @@ void main() {
   group('get one member', () {
     const id = '5ebf1a6e23a9a60006e03a7a';
     final rawJson = 'crew/member.json'.toFixture();
-    final mockResponse = CrewModel.fromJson(rawJson);
+    final mockResponse = CrewNetworkModel.fromJson(rawJson);
     test(
       'should perform a GET request on /crew/{$id}',
       () async {
@@ -67,7 +67,7 @@ void main() {
     final rawJson = 'crew/member.json'.toFixture();
     final mockResponse = ApiPaginatedList(
       results: [
-        CrewModel.fromJson(rawJson),
+        CrewNetworkModel.fromJson(rawJson),
       ],
     );
     final queryRawJson = 'query/query.json'.toFixture();
@@ -95,7 +95,7 @@ void main() {
     final rawJson = 'crew/full_member.json'.toFixture();
     final mockResponse = ApiPaginatedList(
       results: [
-        FullCrewModel.fromJson(rawJson),
+        FullCrewNetworkModel.fromJson(rawJson),
       ],
     );
     final queryRawJson = 'query/query.json'.toFixture();

@@ -9,18 +9,18 @@ abstract class CoresApi {
   factory CoresApi(Dio dio) = _CoresApi;
 
   @GET('/cores')
-  Future<List<CoreModel>> getAllCores();
+  Future<List<CoreNetworkModel>> getAllCores();
 
   @GET('/cores/{id}')
-  Future<CoreModel> getCore(
+  Future<CoreNetworkModel> getCore(
     @Path() String id,
   );
 
   @POST('/cores/query')
-  Future<ApiPaginatedList<CoreModel>> queryCores(@Body() QueryModel query);
+  Future<ApiPaginatedList<CoreNetworkModel>> queryCores(@Body() QueryModel query);
 
   @POST('/capsules/query')
-  Future<ApiPaginatedList<CoreFullModel>> queryFullCores(
+  Future<ApiPaginatedList<CoreNetworkFullModel>> queryFullCores(
     @Body() QueryModel query,
   );
 }

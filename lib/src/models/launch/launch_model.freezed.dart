@@ -25,7 +25,7 @@ mixin _$FullLaunchModel {
   @JsonKey(name: 'auto_update')
   bool get autoUpdate => throw _privateConstructorUsedError;
   @JsonKey(name: 'cores')
-  List<CoreModel> get cores => throw _privateConstructorUsedError;
+  List<CoreNetworkModel> get cores => throw _privateConstructorUsedError;
   bool get upcoming => throw _privateConstructorUsedError;
   @JsonKey(name: 'date_precision')
   String get datePrecision => throw _privateConstructorUsedError;
@@ -88,7 +88,7 @@ abstract class $FullLaunchModelCopyWith<$Res> {
       {String id,
       bool tbd,
       @JsonKey(name: 'auto_update') bool autoUpdate,
-      @JsonKey(name: 'cores') List<CoreModel> cores,
+      @JsonKey(name: 'cores') List<CoreNetworkModel> cores,
       bool upcoming,
       @JsonKey(name: 'date_precision') String datePrecision,
       @JsonKey(name: 'date_local') String dateLocal,
@@ -176,7 +176,7 @@ class _$FullLaunchModelCopyWithImpl<$Res, $Val extends FullLaunchModel>
       cores: null == cores
           ? _value.cores
           : cores // ignore: cast_nullable_to_non_nullable
-              as List<CoreModel>,
+              as List<CoreNetworkModel>,
       upcoming: null == upcoming
           ? _value.upcoming
           : upcoming // ignore: cast_nullable_to_non_nullable
@@ -333,7 +333,7 @@ abstract class _$$_FullLaunchModelCopyWith<$Res>
       {String id,
       bool tbd,
       @JsonKey(name: 'auto_update') bool autoUpdate,
-      @JsonKey(name: 'cores') List<CoreModel> cores,
+      @JsonKey(name: 'cores') List<CoreNetworkModel> cores,
       bool upcoming,
       @JsonKey(name: 'date_precision') String datePrecision,
       @JsonKey(name: 'date_local') String dateLocal,
@@ -423,7 +423,7 @@ class __$$_FullLaunchModelCopyWithImpl<$Res>
       cores: null == cores
           ? _value._cores
           : cores // ignore: cast_nullable_to_non_nullable
-              as List<CoreModel>,
+              as List<CoreNetworkModel>,
       upcoming: null == upcoming
           ? _value.upcoming
           : upcoming // ignore: cast_nullable_to_non_nullable
@@ -529,7 +529,7 @@ class _$_FullLaunchModel extends _FullLaunchModel {
       @JsonKey(name: 'auto_update')
           this.autoUpdate = false,
       @JsonKey(name: 'cores')
-          final List<CoreModel> cores = const <CoreModel>[],
+          final List<CoreNetworkModel> cores = const <CoreNetworkModel>[],
       this.upcoming = false,
       @JsonKey(name: 'date_precision')
           this.datePrecision = '',
@@ -594,10 +594,10 @@ class _$_FullLaunchModel extends _FullLaunchModel {
   @override
   @JsonKey(name: 'auto_update')
   final bool autoUpdate;
-  final List<CoreModel> _cores;
+  final List<CoreNetworkModel> _cores;
   @override
   @JsonKey(name: 'cores')
-  List<CoreModel> get cores {
+  List<CoreNetworkModel> get cores {
     if (_cores is EqualUnmodifiableListView) return _cores;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_cores);
@@ -805,7 +805,7 @@ abstract class _FullLaunchModel extends FullLaunchModel {
           {required final String id,
           final bool tbd,
           @JsonKey(name: 'auto_update') final bool autoUpdate,
-          @JsonKey(name: 'cores') final List<CoreModel> cores,
+          @JsonKey(name: 'cores') final List<CoreNetworkModel> cores,
           final bool upcoming,
           @JsonKey(name: 'date_precision') final String datePrecision,
           @JsonKey(name: 'date_local') final String dateLocal,
@@ -844,7 +844,7 @@ abstract class _FullLaunchModel extends FullLaunchModel {
   bool get autoUpdate;
   @override
   @JsonKey(name: 'cores')
-  List<CoreModel> get cores;
+  List<CoreNetworkModel> get cores;
   @override
   bool get upcoming;
   @override
@@ -931,7 +931,7 @@ mixin _$LaunchSimpleModel {
   @JsonKey(name: 'auto_update')
   bool get autoUpdate => throw _privateConstructorUsedError;
   @JsonKey(name: 'cores')
-  List<CoreModel> get cores => throw _privateConstructorUsedError;
+  List<CoreNetworkModel> get cores => throw _privateConstructorUsedError;
   bool get upcoming => throw _privateConstructorUsedError;
   @JsonKey(name: 'date_precision')
   String get datePrecision => throw _privateConstructorUsedError;
@@ -994,7 +994,7 @@ abstract class $LaunchSimpleModelCopyWith<$Res> {
       {@JsonKey(name: 'id') String id,
       bool tbd,
       @JsonKey(name: 'auto_update') bool autoUpdate,
-      @JsonKey(name: 'cores') List<CoreModel> cores,
+      @JsonKey(name: 'cores') List<CoreNetworkModel> cores,
       bool upcoming,
       @JsonKey(name: 'date_precision') String datePrecision,
       @JsonKey(name: 'date_local') String dateLocal,
@@ -1080,7 +1080,7 @@ class _$LaunchSimpleModelCopyWithImpl<$Res, $Val extends LaunchSimpleModel>
       cores: null == cores
           ? _value.cores
           : cores // ignore: cast_nullable_to_non_nullable
-              as List<CoreModel>,
+              as List<CoreNetworkModel>,
       upcoming: null == upcoming
           ? _value.upcoming
           : upcoming // ignore: cast_nullable_to_non_nullable
@@ -1213,7 +1213,7 @@ abstract class _$$_LaunchSimpleModelCopyWith<$Res>
       {@JsonKey(name: 'id') String id,
       bool tbd,
       @JsonKey(name: 'auto_update') bool autoUpdate,
-      @JsonKey(name: 'cores') List<CoreModel> cores,
+      @JsonKey(name: 'cores') List<CoreNetworkModel> cores,
       bool upcoming,
       @JsonKey(name: 'date_precision') String datePrecision,
       @JsonKey(name: 'date_local') String dateLocal,
@@ -1299,7 +1299,7 @@ class __$$_LaunchSimpleModelCopyWithImpl<$Res>
       cores: null == cores
           ? _value._cores
           : cores // ignore: cast_nullable_to_non_nullable
-              as List<CoreModel>,
+              as List<CoreNetworkModel>,
       upcoming: null == upcoming
           ? _value.upcoming
           : upcoming // ignore: cast_nullable_to_non_nullable
@@ -1406,7 +1406,7 @@ class _$_LaunchSimpleModel extends _LaunchSimpleModel {
       @JsonKey(name: 'auto_update')
           this.autoUpdate = false,
       @JsonKey(name: 'cores')
-          final List<CoreModel> cores = const <CoreModel>[],
+          final List<CoreNetworkModel> cores = const <CoreNetworkModel>[],
       this.upcoming = false,
       @JsonKey(name: 'date_precision')
           this.datePrecision = '',
@@ -1472,10 +1472,10 @@ class _$_LaunchSimpleModel extends _LaunchSimpleModel {
   @override
   @JsonKey(name: 'auto_update')
   final bool autoUpdate;
-  final List<CoreModel> _cores;
+  final List<CoreNetworkModel> _cores;
   @override
   @JsonKey(name: 'cores')
-  List<CoreModel> get cores {
+  List<CoreNetworkModel> get cores {
     if (_cores is EqualUnmodifiableListView) return _cores;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_cores);
@@ -1684,7 +1684,7 @@ abstract class _LaunchSimpleModel extends LaunchSimpleModel {
           {@JsonKey(name: 'id') required final String id,
           final bool tbd,
           @JsonKey(name: 'auto_update') final bool autoUpdate,
-          @JsonKey(name: 'cores') final List<CoreModel> cores,
+          @JsonKey(name: 'cores') final List<CoreNetworkModel> cores,
           final bool upcoming,
           @JsonKey(name: 'date_precision') final String datePrecision,
           @JsonKey(name: 'date_local') final String dateLocal,
@@ -1724,7 +1724,7 @@ abstract class _LaunchSimpleModel extends LaunchSimpleModel {
   bool get autoUpdate;
   @override
   @JsonKey(name: 'cores')
-  List<CoreModel> get cores;
+  List<CoreNetworkModel> get cores;
   @override
   bool get upcoming;
   @override
@@ -1811,7 +1811,7 @@ mixin _$LaunchModel {
   @JsonKey(name: 'auto_update')
   bool get autoUpdate => throw _privateConstructorUsedError;
   @JsonKey(name: 'cores')
-  List<CoreModel> get cores => throw _privateConstructorUsedError;
+  List<CoreNetworkModel> get cores => throw _privateConstructorUsedError;
   bool get upcoming => throw _privateConstructorUsedError;
   @JsonKey(name: 'date_precision')
   String get datePrecision => throw _privateConstructorUsedError;
@@ -1834,7 +1834,7 @@ mixin _$LaunchModel {
   @JsonKey(name: 'ships')
   List<String> get ships => throw _privateConstructorUsedError;
   @JsonKey(name: 'crew')
-  List<ShortCrewModel> get crew => throw _privateConstructorUsedError;
+  List<ShortCrewNetworkModel> get crew => throw _privateConstructorUsedError;
   @JsonKey(name: 'details')
   String? get details => throw _privateConstructorUsedError;
   @JsonKey(name: 'failures')
@@ -1874,7 +1874,7 @@ abstract class $LaunchModelCopyWith<$Res> {
       {@JsonKey(name: 'id') String id,
       bool tbd,
       @JsonKey(name: 'auto_update') bool autoUpdate,
-      @JsonKey(name: 'cores') List<CoreModel> cores,
+      @JsonKey(name: 'cores') List<CoreNetworkModel> cores,
       bool upcoming,
       @JsonKey(name: 'date_precision') String datePrecision,
       @JsonKey(name: 'date_local') String dateLocal,
@@ -1886,7 +1886,7 @@ abstract class $LaunchModelCopyWith<$Res> {
       @JsonKey(name: 'payloads') List<String> payloads,
       @JsonKey(name: 'capsules') List<String> capsules,
       @JsonKey(name: 'ships') List<String> ships,
-      @JsonKey(name: 'crew') List<ShortCrewModel> crew,
+      @JsonKey(name: 'crew') List<ShortCrewNetworkModel> crew,
       @JsonKey(name: 'details') String? details,
       @JsonKey(name: 'failures') List<LaunchFailureModel> failures,
       @JsonKey(name: 'success') bool success,
@@ -1960,7 +1960,7 @@ class _$LaunchModelCopyWithImpl<$Res, $Val extends LaunchModel>
       cores: null == cores
           ? _value.cores
           : cores // ignore: cast_nullable_to_non_nullable
-              as List<CoreModel>,
+              as List<CoreNetworkModel>,
       upcoming: null == upcoming
           ? _value.upcoming
           : upcoming // ignore: cast_nullable_to_non_nullable
@@ -2008,7 +2008,7 @@ class _$LaunchModelCopyWithImpl<$Res, $Val extends LaunchModel>
       crew: null == crew
           ? _value.crew
           : crew // ignore: cast_nullable_to_non_nullable
-              as List<ShortCrewModel>,
+              as List<ShortCrewNetworkModel>,
       details: freezed == details
           ? _value.details
           : details // ignore: cast_nullable_to_non_nullable
@@ -2093,7 +2093,7 @@ abstract class _$$_LaunchModelCopyWith<$Res>
       {@JsonKey(name: 'id') String id,
       bool tbd,
       @JsonKey(name: 'auto_update') bool autoUpdate,
-      @JsonKey(name: 'cores') List<CoreModel> cores,
+      @JsonKey(name: 'cores') List<CoreNetworkModel> cores,
       bool upcoming,
       @JsonKey(name: 'date_precision') String datePrecision,
       @JsonKey(name: 'date_local') String dateLocal,
@@ -2105,7 +2105,7 @@ abstract class _$$_LaunchModelCopyWith<$Res>
       @JsonKey(name: 'payloads') List<String> payloads,
       @JsonKey(name: 'capsules') List<String> capsules,
       @JsonKey(name: 'ships') List<String> ships,
-      @JsonKey(name: 'crew') List<ShortCrewModel> crew,
+      @JsonKey(name: 'crew') List<ShortCrewNetworkModel> crew,
       @JsonKey(name: 'details') String? details,
       @JsonKey(name: 'failures') List<LaunchFailureModel> failures,
       @JsonKey(name: 'success') bool success,
@@ -2179,7 +2179,7 @@ class __$$_LaunchModelCopyWithImpl<$Res>
       cores: null == cores
           ? _value._cores
           : cores // ignore: cast_nullable_to_non_nullable
-              as List<CoreModel>,
+              as List<CoreNetworkModel>,
       upcoming: null == upcoming
           ? _value.upcoming
           : upcoming // ignore: cast_nullable_to_non_nullable
@@ -2227,7 +2227,7 @@ class __$$_LaunchModelCopyWithImpl<$Res>
       crew: null == crew
           ? _value._crew
           : crew // ignore: cast_nullable_to_non_nullable
-              as List<ShortCrewModel>,
+              as List<ShortCrewNetworkModel>,
       details: freezed == details
           ? _value.details
           : details // ignore: cast_nullable_to_non_nullable
@@ -2286,7 +2286,7 @@ class _$_LaunchModel extends _LaunchModel {
       @JsonKey(name: 'auto_update')
           this.autoUpdate = false,
       @JsonKey(name: 'cores')
-          final List<CoreModel> cores = const <CoreModel>[],
+          final List<CoreNetworkModel> cores = const <CoreNetworkModel>[],
       this.upcoming = false,
       @JsonKey(name: 'date_precision')
           this.datePrecision = '',
@@ -2309,7 +2309,8 @@ class _$_LaunchModel extends _LaunchModel {
       @JsonKey(name: 'ships')
           final List<String> ships = const [],
       @JsonKey(name: 'crew')
-          final List<ShortCrewModel> crew = const <ShortCrewModel>[],
+          final List<ShortCrewNetworkModel>
+              crew = const <ShortCrewNetworkModel>[],
       @JsonKey(name: 'details')
           this.details,
       @JsonKey(name: 'failures')
@@ -2352,10 +2353,10 @@ class _$_LaunchModel extends _LaunchModel {
   @override
   @JsonKey(name: 'auto_update')
   final bool autoUpdate;
-  final List<CoreModel> _cores;
+  final List<CoreNetworkModel> _cores;
   @override
   @JsonKey(name: 'cores')
-  List<CoreModel> get cores {
+  List<CoreNetworkModel> get cores {
     if (_cores is EqualUnmodifiableListView) return _cores;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_cores);
@@ -2412,10 +2413,10 @@ class _$_LaunchModel extends _LaunchModel {
     return EqualUnmodifiableListView(_ships);
   }
 
-  final List<ShortCrewModel> _crew;
+  final List<ShortCrewNetworkModel> _crew;
   @override
   @JsonKey(name: 'crew')
-  List<ShortCrewModel> get crew {
+  List<ShortCrewNetworkModel> get crew {
     if (_crew is EqualUnmodifiableListView) return _crew;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_crew);
@@ -2563,7 +2564,7 @@ abstract class _LaunchModel extends LaunchModel {
           {@JsonKey(name: 'id') required final String id,
           final bool tbd,
           @JsonKey(name: 'auto_update') final bool autoUpdate,
-          @JsonKey(name: 'cores') final List<CoreModel> cores,
+          @JsonKey(name: 'cores') final List<CoreNetworkModel> cores,
           final bool upcoming,
           @JsonKey(name: 'date_precision') final String datePrecision,
           @JsonKey(name: 'date_local') final String dateLocal,
@@ -2575,7 +2576,7 @@ abstract class _LaunchModel extends LaunchModel {
           @JsonKey(name: 'payloads') final List<String> payloads,
           @JsonKey(name: 'capsules') final List<String> capsules,
           @JsonKey(name: 'ships') final List<String> ships,
-          @JsonKey(name: 'crew') final List<ShortCrewModel> crew,
+          @JsonKey(name: 'crew') final List<ShortCrewNetworkModel> crew,
           @JsonKey(name: 'details') final String? details,
           @JsonKey(name: 'failures') final List<LaunchFailureModel> failures,
           @JsonKey(name: 'success') final bool success,
@@ -2603,7 +2604,7 @@ abstract class _LaunchModel extends LaunchModel {
   bool get autoUpdate;
   @override
   @JsonKey(name: 'cores')
-  List<CoreModel> get cores;
+  List<CoreNetworkModel> get cores;
   @override
   bool get upcoming;
   @override
@@ -2638,7 +2639,7 @@ abstract class _LaunchModel extends LaunchModel {
   List<String> get ships;
   @override
   @JsonKey(name: 'crew')
-  List<ShortCrewModel> get crew;
+  List<ShortCrewNetworkModel> get crew;
   @override
   @JsonKey(name: 'details')
   String? get details;

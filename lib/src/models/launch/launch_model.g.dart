@@ -12,9 +12,9 @@ _$_FullLaunchModel _$$_FullLaunchModelFromJson(Map<String, dynamic> json) =>
       tbd: json['tbd'] as bool? ?? false,
       autoUpdate: json['auto_update'] as bool? ?? false,
       cores: (json['cores'] as List<dynamic>?)
-              ?.map((e) => CoreModel.fromJson(e as Map<String, dynamic>))
+              ?.map((e) => CoreNetworkModel.fromJson(e as Map<String, dynamic>))
               .toList() ??
-          const <CoreModel>[],
+          const <CoreNetworkModel>[],
       upcoming: json['upcoming'] as bool? ?? false,
       datePrecision: json['date_precision'] as String? ?? '',
       dateLocal: json['date_local'] as String? ?? '',
@@ -110,9 +110,9 @@ _$_LaunchSimpleModel _$$_LaunchSimpleModelFromJson(Map<String, dynamic> json) =>
       tbd: json['tbd'] as bool? ?? false,
       autoUpdate: json['auto_update'] as bool? ?? false,
       cores: (json['cores'] as List<dynamic>?)
-              ?.map((e) => CoreModel.fromJson(e as Map<String, dynamic>))
+              ?.map((e) => CoreNetworkModel.fromJson(e as Map<String, dynamic>))
               .toList() ??
-          const <CoreModel>[],
+          const <CoreNetworkModel>[],
       upcoming: json['upcoming'] as bool? ?? false,
       datePrecision: json['date_precision'] as String? ?? '',
       dateLocal: json['date_local'] as String? ?? '',
@@ -203,9 +203,9 @@ _$_LaunchModel _$$_LaunchModelFromJson(Map<String, dynamic> json) =>
       tbd: json['tbd'] as bool? ?? false,
       autoUpdate: json['auto_update'] as bool? ?? false,
       cores: (json['cores'] as List<dynamic>?)
-              ?.map((e) => CoreModel.fromJson(e as Map<String, dynamic>))
+              ?.map((e) => CoreNetworkModel.fromJson(e as Map<String, dynamic>))
               .toList() ??
-          const <CoreModel>[],
+          const <CoreNetworkModel>[],
       upcoming: json['upcoming'] as bool? ?? false,
       datePrecision: json['date_precision'] as String? ?? '',
       dateLocal: json['date_local'] as String? ?? '',
@@ -226,9 +226,10 @@ _$_LaunchModel _$$_LaunchModelFromJson(Map<String, dynamic> json) =>
           (json['ships'] as List<dynamic>?)?.map((e) => e as String).toList() ??
               const [],
       crew: (json['crew'] as List<dynamic>?)
-              ?.map((e) => ShortCrewModel.fromJson(e as Map<String, dynamic>))
+              ?.map((e) =>
+                  ShortCrewNetworkModel.fromJson(e as Map<String, dynamic>))
               .toList() ??
-          const <ShortCrewModel>[],
+          const <ShortCrewNetworkModel>[],
       details: json['details'] as String?,
       failures: (json['failures'] as List<dynamic>?)
               ?.map(

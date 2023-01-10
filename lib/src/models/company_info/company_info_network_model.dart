@@ -1,16 +1,17 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-part 'company_info_model.freezed.dart';
-part 'company_info_model.g.dart';
+part 'company_info_network_model.freezed.dart';
+
+part 'company_info_network_model.g.dart';
 
 /// General information about SpaceX's company data.
 /// Used in the 'Company' tab, under the SpaceX screen.
 @freezed
-class CompanyInfoModel with _$CompanyInfoModel {
-  const factory CompanyInfoModel({
+class CompanyInfoNetworkModel with _$CompanyInfoNetworkModel {
+  const factory CompanyInfoNetworkModel({
     required String id,
-    HeadquarterModel? headquarters,
-    LinksModel? links,
+    HeadquarterNetworkModel? headquarters,
+    LinksNetworkModel? links,
     @Default('Space Exploration Technologies Corporation') String fullName,
     @Default('SpaceX') String name,
     @Default('Elon Musk') String founder,
@@ -25,43 +26,43 @@ class CompanyInfoModel with _$CompanyInfoModel {
     @Default('') @JsonKey(name: 'cto_propulsion') String ctoPropulsion,
     @Default(74000000000) num valuation,
     @JsonKey(name: 'summary') String? details,
-  }) = _CompanyInfoModel;
+  }) = _CompanyInfoNetworkModel;
 
-  const CompanyInfoModel._();
+  const CompanyInfoNetworkModel._();
 
-  factory CompanyInfoModel.fromJson(Map<String, dynamic> json) =>
-      _$CompanyInfoModelFromJson(json);
+  factory CompanyInfoNetworkModel.fromJson(Map<String, dynamic> json) =>
+      _$CompanyInfoNetworkModelFromJson(json);
 
   String get getLocation => '${headquarters?.city}, ${headquarters?.state}';
 }
 
 @freezed
-class HeadquarterModel with _$HeadquarterModel {
-  const factory HeadquarterModel({
+class HeadquarterNetworkModel with _$HeadquarterNetworkModel {
+  const factory HeadquarterNetworkModel({
     @Default('Rocket Road') String address,
     @Default('Hawthorne') String city,
     @Default('California') String state,
-  }) = _HeadquarterModel;
+  }) = _HeadquarterNetworkModel;
 
-  const HeadquarterModel._();
+  const HeadquarterNetworkModel._();
 
-  factory HeadquarterModel.fromJson(Map<String, dynamic> json) =>
-      _$HeadquarterModelFromJson(json);
+  factory HeadquarterNetworkModel.fromJson(Map<String, dynamic> json) =>
+      _$HeadquarterNetworkModelFromJson(json);
 }
 
 @freezed
-class LinksModel with _$LinksModel {
-  const factory LinksModel({
+class LinksNetworkModel with _$LinksNetworkModel {
+  const factory LinksNetworkModel({
     @Default('https://www.spacex.com/') String website,
     @Default('https://www.flickr.com/photos/spacex/') String flickr,
     @Default('https://twitter.com/SpaceX') String twitter,
     @JsonKey(name: 'elon_twitter')
     @Default('https://twitter.com/elonmusk')
         String elonTwitter,
-  }) = _LinksModel;
+  }) = _LinksNetworkModel;
 
-  const LinksModel._();
+  const LinksNetworkModel._();
 
-  factory LinksModel.fromJson(Map<String, dynamic> json) =>
-      _$LinksModelFromJson(json);
+  factory LinksNetworkModel.fromJson(Map<String, dynamic> json) =>
+      _$LinksNetworkModelFromJson(json);
 }

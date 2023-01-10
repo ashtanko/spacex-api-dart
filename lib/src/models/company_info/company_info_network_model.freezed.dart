@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'company_info_model.dart';
+part of 'company_info_network_model.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -14,15 +14,17 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
-CompanyInfoModel _$CompanyInfoModelFromJson(Map<String, dynamic> json) {
-  return _CompanyInfoModel.fromJson(json);
+CompanyInfoNetworkModel _$CompanyInfoNetworkModelFromJson(
+    Map<String, dynamic> json) {
+  return _CompanyInfoNetworkModel.fromJson(json);
 }
 
 /// @nodoc
-mixin _$CompanyInfoModel {
+mixin _$CompanyInfoNetworkModel {
   String get id => throw _privateConstructorUsedError;
-  HeadquarterModel? get headquarters => throw _privateConstructorUsedError;
-  LinksModel? get links => throw _privateConstructorUsedError;
+  HeadquarterNetworkModel? get headquarters =>
+      throw _privateConstructorUsedError;
+  LinksNetworkModel? get links => throw _privateConstructorUsedError;
   String get fullName => throw _privateConstructorUsedError;
   String get name => throw _privateConstructorUsedError;
   String get founder => throw _privateConstructorUsedError;
@@ -44,20 +46,20 @@ mixin _$CompanyInfoModel {
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $CompanyInfoModelCopyWith<CompanyInfoModel> get copyWith =>
+  $CompanyInfoNetworkModelCopyWith<CompanyInfoNetworkModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $CompanyInfoModelCopyWith<$Res> {
-  factory $CompanyInfoModelCopyWith(
-          CompanyInfoModel value, $Res Function(CompanyInfoModel) then) =
-      _$CompanyInfoModelCopyWithImpl<$Res, CompanyInfoModel>;
+abstract class $CompanyInfoNetworkModelCopyWith<$Res> {
+  factory $CompanyInfoNetworkModelCopyWith(CompanyInfoNetworkModel value,
+          $Res Function(CompanyInfoNetworkModel) then) =
+      _$CompanyInfoNetworkModelCopyWithImpl<$Res, CompanyInfoNetworkModel>;
   @useResult
   $Res call(
       {String id,
-      HeadquarterModel? headquarters,
-      LinksModel? links,
+      HeadquarterNetworkModel? headquarters,
+      LinksNetworkModel? links,
       String fullName,
       String name,
       String founder,
@@ -73,14 +75,15 @@ abstract class $CompanyInfoModelCopyWith<$Res> {
       num valuation,
       @JsonKey(name: 'summary') String? details});
 
-  $HeadquarterModelCopyWith<$Res>? get headquarters;
-  $LinksModelCopyWith<$Res>? get links;
+  $HeadquarterNetworkModelCopyWith<$Res>? get headquarters;
+  $LinksNetworkModelCopyWith<$Res>? get links;
 }
 
 /// @nodoc
-class _$CompanyInfoModelCopyWithImpl<$Res, $Val extends CompanyInfoModel>
-    implements $CompanyInfoModelCopyWith<$Res> {
-  _$CompanyInfoModelCopyWithImpl(this._value, this._then);
+class _$CompanyInfoNetworkModelCopyWithImpl<$Res,
+        $Val extends CompanyInfoNetworkModel>
+    implements $CompanyInfoNetworkModelCopyWith<$Res> {
+  _$CompanyInfoNetworkModelCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -116,11 +119,11 @@ class _$CompanyInfoModelCopyWithImpl<$Res, $Val extends CompanyInfoModel>
       headquarters: freezed == headquarters
           ? _value.headquarters
           : headquarters // ignore: cast_nullable_to_non_nullable
-              as HeadquarterModel?,
+              as HeadquarterNetworkModel?,
       links: freezed == links
           ? _value.links
           : links // ignore: cast_nullable_to_non_nullable
-              as LinksModel?,
+              as LinksNetworkModel?,
       fullName: null == fullName
           ? _value.fullName
           : fullName // ignore: cast_nullable_to_non_nullable
@@ -182,41 +185,42 @@ class _$CompanyInfoModelCopyWithImpl<$Res, $Val extends CompanyInfoModel>
 
   @override
   @pragma('vm:prefer-inline')
-  $HeadquarterModelCopyWith<$Res>? get headquarters {
+  $HeadquarterNetworkModelCopyWith<$Res>? get headquarters {
     if (_value.headquarters == null) {
       return null;
     }
 
-    return $HeadquarterModelCopyWith<$Res>(_value.headquarters!, (value) {
+    return $HeadquarterNetworkModelCopyWith<$Res>(_value.headquarters!,
+        (value) {
       return _then(_value.copyWith(headquarters: value) as $Val);
     });
   }
 
   @override
   @pragma('vm:prefer-inline')
-  $LinksModelCopyWith<$Res>? get links {
+  $LinksNetworkModelCopyWith<$Res>? get links {
     if (_value.links == null) {
       return null;
     }
 
-    return $LinksModelCopyWith<$Res>(_value.links!, (value) {
+    return $LinksNetworkModelCopyWith<$Res>(_value.links!, (value) {
       return _then(_value.copyWith(links: value) as $Val);
     });
   }
 }
 
 /// @nodoc
-abstract class _$$_CompanyInfoModelCopyWith<$Res>
-    implements $CompanyInfoModelCopyWith<$Res> {
-  factory _$$_CompanyInfoModelCopyWith(
-          _$_CompanyInfoModel value, $Res Function(_$_CompanyInfoModel) then) =
-      __$$_CompanyInfoModelCopyWithImpl<$Res>;
+abstract class _$$_CompanyInfoNetworkModelCopyWith<$Res>
+    implements $CompanyInfoNetworkModelCopyWith<$Res> {
+  factory _$$_CompanyInfoNetworkModelCopyWith(_$_CompanyInfoNetworkModel value,
+          $Res Function(_$_CompanyInfoNetworkModel) then) =
+      __$$_CompanyInfoNetworkModelCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
       {String id,
-      HeadquarterModel? headquarters,
-      LinksModel? links,
+      HeadquarterNetworkModel? headquarters,
+      LinksNetworkModel? links,
       String fullName,
       String name,
       String founder,
@@ -233,17 +237,18 @@ abstract class _$$_CompanyInfoModelCopyWith<$Res>
       @JsonKey(name: 'summary') String? details});
 
   @override
-  $HeadquarterModelCopyWith<$Res>? get headquarters;
+  $HeadquarterNetworkModelCopyWith<$Res>? get headquarters;
   @override
-  $LinksModelCopyWith<$Res>? get links;
+  $LinksNetworkModelCopyWith<$Res>? get links;
 }
 
 /// @nodoc
-class __$$_CompanyInfoModelCopyWithImpl<$Res>
-    extends _$CompanyInfoModelCopyWithImpl<$Res, _$_CompanyInfoModel>
-    implements _$$_CompanyInfoModelCopyWith<$Res> {
-  __$$_CompanyInfoModelCopyWithImpl(
-      _$_CompanyInfoModel _value, $Res Function(_$_CompanyInfoModel) _then)
+class __$$_CompanyInfoNetworkModelCopyWithImpl<$Res>
+    extends _$CompanyInfoNetworkModelCopyWithImpl<$Res,
+        _$_CompanyInfoNetworkModel>
+    implements _$$_CompanyInfoNetworkModelCopyWith<$Res> {
+  __$$_CompanyInfoNetworkModelCopyWithImpl(_$_CompanyInfoNetworkModel _value,
+      $Res Function(_$_CompanyInfoNetworkModel) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -267,7 +272,7 @@ class __$$_CompanyInfoModelCopyWithImpl<$Res>
     Object? valuation = null,
     Object? details = freezed,
   }) {
-    return _then(_$_CompanyInfoModel(
+    return _then(_$_CompanyInfoNetworkModel(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -275,11 +280,11 @@ class __$$_CompanyInfoModelCopyWithImpl<$Res>
       headquarters: freezed == headquarters
           ? _value.headquarters
           : headquarters // ignore: cast_nullable_to_non_nullable
-              as HeadquarterModel?,
+              as HeadquarterNetworkModel?,
       links: freezed == links
           ? _value.links
           : links // ignore: cast_nullable_to_non_nullable
-              as LinksModel?,
+              as LinksNetworkModel?,
       fullName: null == fullName
           ? _value.fullName
           : fullName // ignore: cast_nullable_to_non_nullable
@@ -342,8 +347,8 @@ class __$$_CompanyInfoModelCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_CompanyInfoModel extends _CompanyInfoModel {
-  const _$_CompanyInfoModel(
+class _$_CompanyInfoNetworkModel extends _CompanyInfoNetworkModel {
+  const _$_CompanyInfoNetworkModel(
       {required this.id,
       this.headquarters,
       this.links,
@@ -363,15 +368,15 @@ class _$_CompanyInfoModel extends _CompanyInfoModel {
       @JsonKey(name: 'summary') this.details})
       : super._();
 
-  factory _$_CompanyInfoModel.fromJson(Map<String, dynamic> json) =>
-      _$$_CompanyInfoModelFromJson(json);
+  factory _$_CompanyInfoNetworkModel.fromJson(Map<String, dynamic> json) =>
+      _$$_CompanyInfoNetworkModelFromJson(json);
 
   @override
   final String id;
   @override
-  final HeadquarterModel? headquarters;
+  final HeadquarterNetworkModel? headquarters;
   @override
-  final LinksModel? links;
+  final LinksNetworkModel? links;
   @override
   @JsonKey()
   final String fullName;
@@ -417,14 +422,14 @@ class _$_CompanyInfoModel extends _CompanyInfoModel {
 
   @override
   String toString() {
-    return 'CompanyInfoModel(id: $id, headquarters: $headquarters, links: $links, fullName: $fullName, name: $name, founder: $founder, founded: $founded, employees: $employees, vehicles: $vehicles, launchSites: $launchSites, testSites: $testSites, ceo: $ceo, cto: $cto, coo: $coo, ctoPropulsion: $ctoPropulsion, valuation: $valuation, details: $details)';
+    return 'CompanyInfoNetworkModel(id: $id, headquarters: $headquarters, links: $links, fullName: $fullName, name: $name, founder: $founder, founded: $founded, employees: $employees, vehicles: $vehicles, launchSites: $launchSites, testSites: $testSites, ceo: $ceo, cto: $cto, coo: $coo, ctoPropulsion: $ctoPropulsion, valuation: $valuation, details: $details)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_CompanyInfoModel &&
+            other is _$_CompanyInfoNetworkModel &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.headquarters, headquarters) ||
                 other.headquarters == headquarters) &&
@@ -477,47 +482,50 @@ class _$_CompanyInfoModel extends _CompanyInfoModel {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_CompanyInfoModelCopyWith<_$_CompanyInfoModel> get copyWith =>
-      __$$_CompanyInfoModelCopyWithImpl<_$_CompanyInfoModel>(this, _$identity);
+  _$$_CompanyInfoNetworkModelCopyWith<_$_CompanyInfoNetworkModel>
+      get copyWith =>
+          __$$_CompanyInfoNetworkModelCopyWithImpl<_$_CompanyInfoNetworkModel>(
+              this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CompanyInfoModelToJson(
+    return _$$_CompanyInfoNetworkModelToJson(
       this,
     );
   }
 }
 
-abstract class _CompanyInfoModel extends CompanyInfoModel {
-  const factory _CompanyInfoModel(
-      {required final String id,
-      final HeadquarterModel? headquarters,
-      final LinksModel? links,
-      final String fullName,
-      final String name,
-      final String founder,
-      final int founded,
-      final int employees,
-      final int vehicles,
-      @JsonKey(name: 'launch_sites') final int launchSites,
-      @JsonKey(name: 'test_sites') final int testSites,
-      final String ceo,
-      final String cto,
-      final String coo,
-      @JsonKey(name: 'cto_propulsion') final String ctoPropulsion,
-      final num valuation,
-      @JsonKey(name: 'summary') final String? details}) = _$_CompanyInfoModel;
-  const _CompanyInfoModel._() : super._();
+abstract class _CompanyInfoNetworkModel extends CompanyInfoNetworkModel {
+  const factory _CompanyInfoNetworkModel(
+          {required final String id,
+          final HeadquarterNetworkModel? headquarters,
+          final LinksNetworkModel? links,
+          final String fullName,
+          final String name,
+          final String founder,
+          final int founded,
+          final int employees,
+          final int vehicles,
+          @JsonKey(name: 'launch_sites') final int launchSites,
+          @JsonKey(name: 'test_sites') final int testSites,
+          final String ceo,
+          final String cto,
+          final String coo,
+          @JsonKey(name: 'cto_propulsion') final String ctoPropulsion,
+          final num valuation,
+          @JsonKey(name: 'summary') final String? details}) =
+      _$_CompanyInfoNetworkModel;
+  const _CompanyInfoNetworkModel._() : super._();
 
-  factory _CompanyInfoModel.fromJson(Map<String, dynamic> json) =
-      _$_CompanyInfoModel.fromJson;
+  factory _CompanyInfoNetworkModel.fromJson(Map<String, dynamic> json) =
+      _$_CompanyInfoNetworkModel.fromJson;
 
   @override
   String get id;
   @override
-  HeadquarterModel? get headquarters;
+  HeadquarterNetworkModel? get headquarters;
   @override
-  LinksModel? get links;
+  LinksNetworkModel? get links;
   @override
   String get fullName;
   @override
@@ -552,39 +560,41 @@ abstract class _CompanyInfoModel extends CompanyInfoModel {
   String? get details;
   @override
   @JsonKey(ignore: true)
-  _$$_CompanyInfoModelCopyWith<_$_CompanyInfoModel> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$_CompanyInfoNetworkModelCopyWith<_$_CompanyInfoNetworkModel>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
-HeadquarterModel _$HeadquarterModelFromJson(Map<String, dynamic> json) {
-  return _HeadquarterModel.fromJson(json);
+HeadquarterNetworkModel _$HeadquarterNetworkModelFromJson(
+    Map<String, dynamic> json) {
+  return _HeadquarterNetworkModel.fromJson(json);
 }
 
 /// @nodoc
-mixin _$HeadquarterModel {
+mixin _$HeadquarterNetworkModel {
   String get address => throw _privateConstructorUsedError;
   String get city => throw _privateConstructorUsedError;
   String get state => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $HeadquarterModelCopyWith<HeadquarterModel> get copyWith =>
+  $HeadquarterNetworkModelCopyWith<HeadquarterNetworkModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $HeadquarterModelCopyWith<$Res> {
-  factory $HeadquarterModelCopyWith(
-          HeadquarterModel value, $Res Function(HeadquarterModel) then) =
-      _$HeadquarterModelCopyWithImpl<$Res, HeadquarterModel>;
+abstract class $HeadquarterNetworkModelCopyWith<$Res> {
+  factory $HeadquarterNetworkModelCopyWith(HeadquarterNetworkModel value,
+          $Res Function(HeadquarterNetworkModel) then) =
+      _$HeadquarterNetworkModelCopyWithImpl<$Res, HeadquarterNetworkModel>;
   @useResult
   $Res call({String address, String city, String state});
 }
 
 /// @nodoc
-class _$HeadquarterModelCopyWithImpl<$Res, $Val extends HeadquarterModel>
-    implements $HeadquarterModelCopyWith<$Res> {
-  _$HeadquarterModelCopyWithImpl(this._value, this._then);
+class _$HeadquarterNetworkModelCopyWithImpl<$Res,
+        $Val extends HeadquarterNetworkModel>
+    implements $HeadquarterNetworkModelCopyWith<$Res> {
+  _$HeadquarterNetworkModelCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -616,22 +626,23 @@ class _$HeadquarterModelCopyWithImpl<$Res, $Val extends HeadquarterModel>
 }
 
 /// @nodoc
-abstract class _$$_HeadquarterModelCopyWith<$Res>
-    implements $HeadquarterModelCopyWith<$Res> {
-  factory _$$_HeadquarterModelCopyWith(
-          _$_HeadquarterModel value, $Res Function(_$_HeadquarterModel) then) =
-      __$$_HeadquarterModelCopyWithImpl<$Res>;
+abstract class _$$_HeadquarterNetworkModelCopyWith<$Res>
+    implements $HeadquarterNetworkModelCopyWith<$Res> {
+  factory _$$_HeadquarterNetworkModelCopyWith(_$_HeadquarterNetworkModel value,
+          $Res Function(_$_HeadquarterNetworkModel) then) =
+      __$$_HeadquarterNetworkModelCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String address, String city, String state});
 }
 
 /// @nodoc
-class __$$_HeadquarterModelCopyWithImpl<$Res>
-    extends _$HeadquarterModelCopyWithImpl<$Res, _$_HeadquarterModel>
-    implements _$$_HeadquarterModelCopyWith<$Res> {
-  __$$_HeadquarterModelCopyWithImpl(
-      _$_HeadquarterModel _value, $Res Function(_$_HeadquarterModel) _then)
+class __$$_HeadquarterNetworkModelCopyWithImpl<$Res>
+    extends _$HeadquarterNetworkModelCopyWithImpl<$Res,
+        _$_HeadquarterNetworkModel>
+    implements _$$_HeadquarterNetworkModelCopyWith<$Res> {
+  __$$_HeadquarterNetworkModelCopyWithImpl(_$_HeadquarterNetworkModel _value,
+      $Res Function(_$_HeadquarterNetworkModel) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -641,7 +652,7 @@ class __$$_HeadquarterModelCopyWithImpl<$Res>
     Object? city = null,
     Object? state = null,
   }) {
-    return _then(_$_HeadquarterModel(
+    return _then(_$_HeadquarterNetworkModel(
       address: null == address
           ? _value.address
           : address // ignore: cast_nullable_to_non_nullable
@@ -660,15 +671,15 @@ class __$$_HeadquarterModelCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_HeadquarterModel extends _HeadquarterModel {
-  const _$_HeadquarterModel(
+class _$_HeadquarterNetworkModel extends _HeadquarterNetworkModel {
+  const _$_HeadquarterNetworkModel(
       {this.address = 'Rocket Road',
       this.city = 'Hawthorne',
       this.state = 'California'})
       : super._();
 
-  factory _$_HeadquarterModel.fromJson(Map<String, dynamic> json) =>
-      _$$_HeadquarterModelFromJson(json);
+  factory _$_HeadquarterNetworkModel.fromJson(Map<String, dynamic> json) =>
+      _$$_HeadquarterNetworkModelFromJson(json);
 
   @override
   @JsonKey()
@@ -682,14 +693,14 @@ class _$_HeadquarterModel extends _HeadquarterModel {
 
   @override
   String toString() {
-    return 'HeadquarterModel(address: $address, city: $city, state: $state)';
+    return 'HeadquarterNetworkModel(address: $address, city: $city, state: $state)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_HeadquarterModel &&
+            other is _$_HeadquarterNetworkModel &&
             (identical(other.address, address) || other.address == address) &&
             (identical(other.city, city) || other.city == city) &&
             (identical(other.state, state) || other.state == state));
@@ -702,26 +713,28 @@ class _$_HeadquarterModel extends _HeadquarterModel {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_HeadquarterModelCopyWith<_$_HeadquarterModel> get copyWith =>
-      __$$_HeadquarterModelCopyWithImpl<_$_HeadquarterModel>(this, _$identity);
+  _$$_HeadquarterNetworkModelCopyWith<_$_HeadquarterNetworkModel>
+      get copyWith =>
+          __$$_HeadquarterNetworkModelCopyWithImpl<_$_HeadquarterNetworkModel>(
+              this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_HeadquarterModelToJson(
+    return _$$_HeadquarterNetworkModelToJson(
       this,
     );
   }
 }
 
-abstract class _HeadquarterModel extends HeadquarterModel {
-  const factory _HeadquarterModel(
+abstract class _HeadquarterNetworkModel extends HeadquarterNetworkModel {
+  const factory _HeadquarterNetworkModel(
       {final String address,
       final String city,
-      final String state}) = _$_HeadquarterModel;
-  const _HeadquarterModel._() : super._();
+      final String state}) = _$_HeadquarterNetworkModel;
+  const _HeadquarterNetworkModel._() : super._();
 
-  factory _HeadquarterModel.fromJson(Map<String, dynamic> json) =
-      _$_HeadquarterModel.fromJson;
+  factory _HeadquarterNetworkModel.fromJson(Map<String, dynamic> json) =
+      _$_HeadquarterNetworkModel.fromJson;
 
   @override
   String get address;
@@ -731,16 +744,16 @@ abstract class _HeadquarterModel extends HeadquarterModel {
   String get state;
   @override
   @JsonKey(ignore: true)
-  _$$_HeadquarterModelCopyWith<_$_HeadquarterModel> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$_HeadquarterNetworkModelCopyWith<_$_HeadquarterNetworkModel>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
-LinksModel _$LinksModelFromJson(Map<String, dynamic> json) {
-  return _LinksModel.fromJson(json);
+LinksNetworkModel _$LinksNetworkModelFromJson(Map<String, dynamic> json) {
+  return _LinksNetworkModel.fromJson(json);
 }
 
 /// @nodoc
-mixin _$LinksModel {
+mixin _$LinksNetworkModel {
   String get website => throw _privateConstructorUsedError;
   String get flickr => throw _privateConstructorUsedError;
   String get twitter => throw _privateConstructorUsedError;
@@ -749,15 +762,15 @@ mixin _$LinksModel {
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $LinksModelCopyWith<LinksModel> get copyWith =>
+  $LinksNetworkModelCopyWith<LinksNetworkModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $LinksModelCopyWith<$Res> {
-  factory $LinksModelCopyWith(
-          LinksModel value, $Res Function(LinksModel) then) =
-      _$LinksModelCopyWithImpl<$Res, LinksModel>;
+abstract class $LinksNetworkModelCopyWith<$Res> {
+  factory $LinksNetworkModelCopyWith(
+          LinksNetworkModel value, $Res Function(LinksNetworkModel) then) =
+      _$LinksNetworkModelCopyWithImpl<$Res, LinksNetworkModel>;
   @useResult
   $Res call(
       {String website,
@@ -767,9 +780,9 @@ abstract class $LinksModelCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$LinksModelCopyWithImpl<$Res, $Val extends LinksModel>
-    implements $LinksModelCopyWith<$Res> {
-  _$LinksModelCopyWithImpl(this._value, this._then);
+class _$LinksNetworkModelCopyWithImpl<$Res, $Val extends LinksNetworkModel>
+    implements $LinksNetworkModelCopyWith<$Res> {
+  _$LinksNetworkModelCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -806,11 +819,11 @@ class _$LinksModelCopyWithImpl<$Res, $Val extends LinksModel>
 }
 
 /// @nodoc
-abstract class _$$_LinksModelCopyWith<$Res>
-    implements $LinksModelCopyWith<$Res> {
-  factory _$$_LinksModelCopyWith(
-          _$_LinksModel value, $Res Function(_$_LinksModel) then) =
-      __$$_LinksModelCopyWithImpl<$Res>;
+abstract class _$$_LinksNetworkModelCopyWith<$Res>
+    implements $LinksNetworkModelCopyWith<$Res> {
+  factory _$$_LinksNetworkModelCopyWith(_$_LinksNetworkModel value,
+          $Res Function(_$_LinksNetworkModel) then) =
+      __$$_LinksNetworkModelCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -821,11 +834,11 @@ abstract class _$$_LinksModelCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_LinksModelCopyWithImpl<$Res>
-    extends _$LinksModelCopyWithImpl<$Res, _$_LinksModel>
-    implements _$$_LinksModelCopyWith<$Res> {
-  __$$_LinksModelCopyWithImpl(
-      _$_LinksModel _value, $Res Function(_$_LinksModel) _then)
+class __$$_LinksNetworkModelCopyWithImpl<$Res>
+    extends _$LinksNetworkModelCopyWithImpl<$Res, _$_LinksNetworkModel>
+    implements _$$_LinksNetworkModelCopyWith<$Res> {
+  __$$_LinksNetworkModelCopyWithImpl(
+      _$_LinksNetworkModel _value, $Res Function(_$_LinksNetworkModel) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -836,7 +849,7 @@ class __$$_LinksModelCopyWithImpl<$Res>
     Object? twitter = null,
     Object? elonTwitter = null,
   }) {
-    return _then(_$_LinksModel(
+    return _then(_$_LinksNetworkModel(
       website: null == website
           ? _value.website
           : website // ignore: cast_nullable_to_non_nullable
@@ -859,8 +872,8 @@ class __$$_LinksModelCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_LinksModel extends _LinksModel {
-  const _$_LinksModel(
+class _$_LinksNetworkModel extends _LinksNetworkModel {
+  const _$_LinksNetworkModel(
       {this.website = 'https://www.spacex.com/',
       this.flickr = 'https://www.flickr.com/photos/spacex/',
       this.twitter = 'https://twitter.com/SpaceX',
@@ -868,8 +881,8 @@ class _$_LinksModel extends _LinksModel {
           this.elonTwitter = 'https://twitter.com/elonmusk'})
       : super._();
 
-  factory _$_LinksModel.fromJson(Map<String, dynamic> json) =>
-      _$$_LinksModelFromJson(json);
+  factory _$_LinksNetworkModel.fromJson(Map<String, dynamic> json) =>
+      _$$_LinksNetworkModelFromJson(json);
 
   @override
   @JsonKey()
@@ -886,14 +899,14 @@ class _$_LinksModel extends _LinksModel {
 
   @override
   String toString() {
-    return 'LinksModel(website: $website, flickr: $flickr, twitter: $twitter, elonTwitter: $elonTwitter)';
+    return 'LinksNetworkModel(website: $website, flickr: $flickr, twitter: $twitter, elonTwitter: $elonTwitter)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_LinksModel &&
+            other is _$_LinksNetworkModel &&
             (identical(other.website, website) || other.website == website) &&
             (identical(other.flickr, flickr) || other.flickr == flickr) &&
             (identical(other.twitter, twitter) || other.twitter == twitter) &&
@@ -909,27 +922,29 @@ class _$_LinksModel extends _LinksModel {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_LinksModelCopyWith<_$_LinksModel> get copyWith =>
-      __$$_LinksModelCopyWithImpl<_$_LinksModel>(this, _$identity);
+  _$$_LinksNetworkModelCopyWith<_$_LinksNetworkModel> get copyWith =>
+      __$$_LinksNetworkModelCopyWithImpl<_$_LinksNetworkModel>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_LinksModelToJson(
+    return _$$_LinksNetworkModelToJson(
       this,
     );
   }
 }
 
-abstract class _LinksModel extends LinksModel {
-  const factory _LinksModel(
-      {final String website,
-      final String flickr,
-      final String twitter,
-      @JsonKey(name: 'elon_twitter') final String elonTwitter}) = _$_LinksModel;
-  const _LinksModel._() : super._();
+abstract class _LinksNetworkModel extends LinksNetworkModel {
+  const factory _LinksNetworkModel(
+          {final String website,
+          final String flickr,
+          final String twitter,
+          @JsonKey(name: 'elon_twitter') final String elonTwitter}) =
+      _$_LinksNetworkModel;
+  const _LinksNetworkModel._() : super._();
 
-  factory _LinksModel.fromJson(Map<String, dynamic> json) =
-      _$_LinksModel.fromJson;
+  factory _LinksNetworkModel.fromJson(Map<String, dynamic> json) =
+      _$_LinksNetworkModel.fromJson;
 
   @override
   String get website;
@@ -942,6 +957,6 @@ abstract class _LinksModel extends LinksModel {
   String get elonTwitter;
   @override
   @JsonKey(ignore: true)
-  _$$_LinksModelCopyWith<_$_LinksModel> get copyWith =>
+  _$$_LinksNetworkModelCopyWith<_$_LinksNetworkModel> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -21,13 +21,13 @@ class _CoresApi implements CoresApi {
   String? baseUrl;
 
   @override
-  Future<List<CoreModel>> getAllCores() async {
+  Future<List<CoreNetworkModel>> getAllCores() async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
-    final _result =
-        await _dio.fetch<List<dynamic>>(_setStreamType<List<CoreModel>>(Options(
+    final _result = await _dio
+        .fetch<List<dynamic>>(_setStreamType<List<CoreNetworkModel>>(Options(
       method: 'GET',
       headers: _headers,
       extra: _extra,
@@ -40,19 +40,20 @@ class _CoresApi implements CoresApi {
             )
             .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
     var value = _result.data!
-        .map((dynamic i) => CoreModel.fromJson(i as Map<String, dynamic>))
+        .map(
+            (dynamic i) => CoreNetworkModel.fromJson(i as Map<String, dynamic>))
         .toList();
     return value;
   }
 
   @override
-  Future<CoreModel> getCore(id) async {
+  Future<CoreNetworkModel> getCore(id) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     final _result = await _dio
-        .fetch<Map<String, dynamic>>(_setStreamType<CoreModel>(Options(
+        .fetch<Map<String, dynamic>>(_setStreamType<CoreNetworkModel>(Options(
       method: 'GET',
       headers: _headers,
       extra: _extra,
@@ -64,19 +65,19 @@ class _CoresApi implements CoresApi {
               data: _data,
             )
             .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
-    final value = CoreModel.fromJson(_result.data!);
+    final value = CoreNetworkModel.fromJson(_result.data!);
     return value;
   }
 
   @override
-  Future<ApiPaginatedList<CoreModel>> queryCores(query) async {
+  Future<ApiPaginatedList<CoreNetworkModel>> queryCores(query) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     _data.addAll(query.toJson());
     final _result = await _dio.fetch<Map<String, dynamic>>(
-        _setStreamType<ApiPaginatedList<CoreModel>>(Options(
+        _setStreamType<ApiPaginatedList<CoreNetworkModel>>(Options(
       method: 'POST',
       headers: _headers,
       extra: _extra,
@@ -88,22 +89,22 @@ class _CoresApi implements CoresApi {
               data: _data,
             )
             .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
-    final value = ApiPaginatedList<CoreModel>.fromJson(
+    final value = ApiPaginatedList<CoreNetworkModel>.fromJson(
       _result.data!,
-      (json) => CoreModel.fromJson(json as Map<String, dynamic>),
+      (json) => CoreNetworkModel.fromJson(json as Map<String, dynamic>),
     );
     return value;
   }
 
   @override
-  Future<ApiPaginatedList<CoreFullModel>> queryFullCores(query) async {
+  Future<ApiPaginatedList<CoreNetworkFullModel>> queryFullCores(query) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     _data.addAll(query.toJson());
     final _result = await _dio.fetch<Map<String, dynamic>>(
-        _setStreamType<ApiPaginatedList<CoreFullModel>>(Options(
+        _setStreamType<ApiPaginatedList<CoreNetworkFullModel>>(Options(
       method: 'POST',
       headers: _headers,
       extra: _extra,
@@ -115,9 +116,9 @@ class _CoresApi implements CoresApi {
               data: _data,
             )
             .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
-    final value = ApiPaginatedList<CoreFullModel>.fromJson(
+    final value = ApiPaginatedList<CoreNetworkFullModel>.fromJson(
       _result.data!,
-      (json) => CoreFullModel.fromJson(json as Map<String, dynamic>),
+      (json) => CoreNetworkFullModel.fromJson(json as Map<String, dynamic>),
     );
     return value;
   }

@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'crew_model.dart';
+part of 'crew_network_model.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -14,12 +14,12 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
-FullCrewModel _$FullCrewModelFromJson(Map<String, dynamic> json) {
-  return _FullCrewModel.fromJson(json);
+FullCrewNetworkModel _$FullCrewNetworkModelFromJson(Map<String, dynamic> json) {
+  return _FullCrewNetworkModel.fromJson(json);
 }
 
 /// @nodoc
-mixin _$FullCrewModel {
+mixin _$FullCrewNetworkModel {
   @JsonKey(name: 'id')
   String get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'name')
@@ -37,15 +37,15 @@ mixin _$FullCrewModel {
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $FullCrewModelCopyWith<FullCrewModel> get copyWith =>
+  $FullCrewNetworkModelCopyWith<FullCrewNetworkModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $FullCrewModelCopyWith<$Res> {
-  factory $FullCrewModelCopyWith(
-          FullCrewModel value, $Res Function(FullCrewModel) then) =
-      _$FullCrewModelCopyWithImpl<$Res, FullCrewModel>;
+abstract class $FullCrewNetworkModelCopyWith<$Res> {
+  factory $FullCrewNetworkModelCopyWith(FullCrewNetworkModel value,
+          $Res Function(FullCrewNetworkModel) then) =
+      _$FullCrewNetworkModelCopyWithImpl<$Res, FullCrewNetworkModel>;
   @useResult
   $Res call(
       {@JsonKey(name: 'id')
@@ -65,9 +65,10 @@ abstract class $FullCrewModelCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$FullCrewModelCopyWithImpl<$Res, $Val extends FullCrewModel>
-    implements $FullCrewModelCopyWith<$Res> {
-  _$FullCrewModelCopyWithImpl(this._value, this._then);
+class _$FullCrewNetworkModelCopyWithImpl<$Res,
+        $Val extends FullCrewNetworkModel>
+    implements $FullCrewNetworkModelCopyWith<$Res> {
+  _$FullCrewNetworkModelCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -119,11 +120,11 @@ class _$FullCrewModelCopyWithImpl<$Res, $Val extends FullCrewModel>
 }
 
 /// @nodoc
-abstract class _$$_FullCrewModelCopyWith<$Res>
-    implements $FullCrewModelCopyWith<$Res> {
-  factory _$$_FullCrewModelCopyWith(
-          _$_FullCrewModel value, $Res Function(_$_FullCrewModel) then) =
-      __$$_FullCrewModelCopyWithImpl<$Res>;
+abstract class _$$_FullCrewNetworkModelCopyWith<$Res>
+    implements $FullCrewNetworkModelCopyWith<$Res> {
+  factory _$$_FullCrewNetworkModelCopyWith(_$_FullCrewNetworkModel value,
+          $Res Function(_$_FullCrewNetworkModel) then) =
+      __$$_FullCrewNetworkModelCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -144,11 +145,11 @@ abstract class _$$_FullCrewModelCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_FullCrewModelCopyWithImpl<$Res>
-    extends _$FullCrewModelCopyWithImpl<$Res, _$_FullCrewModel>
-    implements _$$_FullCrewModelCopyWith<$Res> {
-  __$$_FullCrewModelCopyWithImpl(
-      _$_FullCrewModel _value, $Res Function(_$_FullCrewModel) _then)
+class __$$_FullCrewNetworkModelCopyWithImpl<$Res>
+    extends _$FullCrewNetworkModelCopyWithImpl<$Res, _$_FullCrewNetworkModel>
+    implements _$$_FullCrewNetworkModelCopyWith<$Res> {
+  __$$_FullCrewNetworkModelCopyWithImpl(_$_FullCrewNetworkModel _value,
+      $Res Function(_$_FullCrewNetworkModel) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -162,7 +163,7 @@ class __$$_FullCrewModelCopyWithImpl<$Res>
     Object? launches = null,
     Object? status = null,
   }) {
-    return _then(_$_FullCrewModel(
+    return _then(_$_FullCrewNetworkModel(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -197,8 +198,8 @@ class __$$_FullCrewModelCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_FullCrewModel extends _FullCrewModel {
-  const _$_FullCrewModel(
+class _$_FullCrewNetworkModel extends _FullCrewNetworkModel {
+  const _$_FullCrewNetworkModel(
       {@JsonKey(name: 'id')
           this.id = '',
       @JsonKey(name: 'name')
@@ -216,8 +217,8 @@ class _$_FullCrewModel extends _FullCrewModel {
       : _launches = launches,
         super._();
 
-  factory _$_FullCrewModel.fromJson(Map<String, dynamic> json) =>
-      _$$_FullCrewModelFromJson(json);
+  factory _$_FullCrewNetworkModel.fromJson(Map<String, dynamic> json) =>
+      _$$_FullCrewNetworkModelFromJson(json);
 
   @override
   @JsonKey(name: 'id')
@@ -249,14 +250,14 @@ class _$_FullCrewModel extends _FullCrewModel {
 
   @override
   String toString() {
-    return 'FullCrewModel(id: $id, name: $name, agency: $agency, image: $image, wikipedia: $wikipedia, launches: $launches, status: $status)';
+    return 'FullCrewNetworkModel(id: $id, name: $name, agency: $agency, image: $image, wikipedia: $wikipedia, launches: $launches, status: $status)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_FullCrewModel &&
+            other is _$_FullCrewNetworkModel &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.name, name) || other.name == name) &&
             (identical(other.agency, agency) || other.agency == agency) &&
@@ -275,19 +276,20 @@ class _$_FullCrewModel extends _FullCrewModel {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_FullCrewModelCopyWith<_$_FullCrewModel> get copyWith =>
-      __$$_FullCrewModelCopyWithImpl<_$_FullCrewModel>(this, _$identity);
+  _$$_FullCrewNetworkModelCopyWith<_$_FullCrewNetworkModel> get copyWith =>
+      __$$_FullCrewNetworkModelCopyWithImpl<_$_FullCrewNetworkModel>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_FullCrewModelToJson(
+    return _$$_FullCrewNetworkModelToJson(
       this,
     );
   }
 }
 
-abstract class _FullCrewModel extends FullCrewModel {
-  const factory _FullCrewModel(
+abstract class _FullCrewNetworkModel extends FullCrewNetworkModel {
+  const factory _FullCrewNetworkModel(
       {@JsonKey(name: 'id')
           final String id,
       @JsonKey(name: 'name')
@@ -301,11 +303,11 @@ abstract class _FullCrewModel extends FullCrewModel {
       @JsonKey(name: 'launches')
           final List<LaunchModel> launches,
       @JsonKey(name: 'status', unknownEnumValue: CrewStatus.unknown)
-          final CrewStatus status}) = _$_FullCrewModel;
-  const _FullCrewModel._() : super._();
+          final CrewStatus status}) = _$_FullCrewNetworkModel;
+  const _FullCrewNetworkModel._() : super._();
 
-  factory _FullCrewModel.fromJson(Map<String, dynamic> json) =
-      _$_FullCrewModel.fromJson;
+  factory _FullCrewNetworkModel.fromJson(Map<String, dynamic> json) =
+      _$_FullCrewNetworkModel.fromJson;
 
   @override
   @JsonKey(name: 'id')
@@ -330,16 +332,16 @@ abstract class _FullCrewModel extends FullCrewModel {
   CrewStatus get status;
   @override
   @JsonKey(ignore: true)
-  _$$_FullCrewModelCopyWith<_$_FullCrewModel> get copyWith =>
+  _$$_FullCrewNetworkModelCopyWith<_$_FullCrewNetworkModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
-CrewModel _$CrewModelFromJson(Map<String, dynamic> json) {
-  return _CrewModel.fromJson(json);
+CrewNetworkModel _$CrewNetworkModelFromJson(Map<String, dynamic> json) {
+  return _CrewNetworkModel.fromJson(json);
 }
 
 /// @nodoc
-mixin _$CrewModel {
+mixin _$CrewNetworkModel {
   @JsonKey(name: 'id')
   String get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'name')
@@ -357,14 +359,15 @@ mixin _$CrewModel {
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $CrewModelCopyWith<CrewModel> get copyWith =>
+  $CrewNetworkModelCopyWith<CrewNetworkModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $CrewModelCopyWith<$Res> {
-  factory $CrewModelCopyWith(CrewModel value, $Res Function(CrewModel) then) =
-      _$CrewModelCopyWithImpl<$Res, CrewModel>;
+abstract class $CrewNetworkModelCopyWith<$Res> {
+  factory $CrewNetworkModelCopyWith(
+          CrewNetworkModel value, $Res Function(CrewNetworkModel) then) =
+      _$CrewNetworkModelCopyWithImpl<$Res, CrewNetworkModel>;
   @useResult
   $Res call(
       {@JsonKey(name: 'id')
@@ -384,9 +387,9 @@ abstract class $CrewModelCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$CrewModelCopyWithImpl<$Res, $Val extends CrewModel>
-    implements $CrewModelCopyWith<$Res> {
-  _$CrewModelCopyWithImpl(this._value, this._then);
+class _$CrewNetworkModelCopyWithImpl<$Res, $Val extends CrewNetworkModel>
+    implements $CrewNetworkModelCopyWith<$Res> {
+  _$CrewNetworkModelCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -438,10 +441,11 @@ class _$CrewModelCopyWithImpl<$Res, $Val extends CrewModel>
 }
 
 /// @nodoc
-abstract class _$$_CrewModelCopyWith<$Res> implements $CrewModelCopyWith<$Res> {
-  factory _$$_CrewModelCopyWith(
-          _$_CrewModel value, $Res Function(_$_CrewModel) then) =
-      __$$_CrewModelCopyWithImpl<$Res>;
+abstract class _$$_CrewNetworkModelCopyWith<$Res>
+    implements $CrewNetworkModelCopyWith<$Res> {
+  factory _$$_CrewNetworkModelCopyWith(
+          _$_CrewNetworkModel value, $Res Function(_$_CrewNetworkModel) then) =
+      __$$_CrewNetworkModelCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -462,11 +466,11 @@ abstract class _$$_CrewModelCopyWith<$Res> implements $CrewModelCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_CrewModelCopyWithImpl<$Res>
-    extends _$CrewModelCopyWithImpl<$Res, _$_CrewModel>
-    implements _$$_CrewModelCopyWith<$Res> {
-  __$$_CrewModelCopyWithImpl(
-      _$_CrewModel _value, $Res Function(_$_CrewModel) _then)
+class __$$_CrewNetworkModelCopyWithImpl<$Res>
+    extends _$CrewNetworkModelCopyWithImpl<$Res, _$_CrewNetworkModel>
+    implements _$$_CrewNetworkModelCopyWith<$Res> {
+  __$$_CrewNetworkModelCopyWithImpl(
+      _$_CrewNetworkModel _value, $Res Function(_$_CrewNetworkModel) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -480,7 +484,7 @@ class __$$_CrewModelCopyWithImpl<$Res>
     Object? launches = null,
     Object? status = null,
   }) {
-    return _then(_$_CrewModel(
+    return _then(_$_CrewNetworkModel(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -515,8 +519,8 @@ class __$$_CrewModelCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_CrewModel extends _CrewModel {
-  const _$_CrewModel(
+class _$_CrewNetworkModel extends _CrewNetworkModel {
+  const _$_CrewNetworkModel(
       {@JsonKey(name: 'id')
           this.id = '',
       @JsonKey(name: 'name')
@@ -534,8 +538,8 @@ class _$_CrewModel extends _CrewModel {
       : _launches = launches,
         super._();
 
-  factory _$_CrewModel.fromJson(Map<String, dynamic> json) =>
-      _$$_CrewModelFromJson(json);
+  factory _$_CrewNetworkModel.fromJson(Map<String, dynamic> json) =>
+      _$$_CrewNetworkModelFromJson(json);
 
   @override
   @JsonKey(name: 'id')
@@ -567,14 +571,14 @@ class _$_CrewModel extends _CrewModel {
 
   @override
   String toString() {
-    return 'CrewModel(id: $id, name: $name, agency: $agency, image: $image, wikipedia: $wikipedia, launches: $launches, status: $status)';
+    return 'CrewNetworkModel(id: $id, name: $name, agency: $agency, image: $image, wikipedia: $wikipedia, launches: $launches, status: $status)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_CrewModel &&
+            other is _$_CrewNetworkModel &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.name, name) || other.name == name) &&
             (identical(other.agency, agency) || other.agency == agency) &&
@@ -593,19 +597,19 @@ class _$_CrewModel extends _CrewModel {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_CrewModelCopyWith<_$_CrewModel> get copyWith =>
-      __$$_CrewModelCopyWithImpl<_$_CrewModel>(this, _$identity);
+  _$$_CrewNetworkModelCopyWith<_$_CrewNetworkModel> get copyWith =>
+      __$$_CrewNetworkModelCopyWithImpl<_$_CrewNetworkModel>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CrewModelToJson(
+    return _$$_CrewNetworkModelToJson(
       this,
     );
   }
 }
 
-abstract class _CrewModel extends CrewModel {
-  const factory _CrewModel(
+abstract class _CrewNetworkModel extends CrewNetworkModel {
+  const factory _CrewNetworkModel(
       {@JsonKey(name: 'id')
           final String id,
       @JsonKey(name: 'name')
@@ -619,11 +623,11 @@ abstract class _CrewModel extends CrewModel {
       @JsonKey(name: 'launches')
           final List<String> launches,
       @JsonKey(name: 'status', unknownEnumValue: CrewStatus.unknown)
-          final CrewStatus status}) = _$_CrewModel;
-  const _CrewModel._() : super._();
+          final CrewStatus status}) = _$_CrewNetworkModel;
+  const _CrewNetworkModel._() : super._();
 
-  factory _CrewModel.fromJson(Map<String, dynamic> json) =
-      _$_CrewModel.fromJson;
+  factory _CrewNetworkModel.fromJson(Map<String, dynamic> json) =
+      _$_CrewNetworkModel.fromJson;
 
   @override
   @JsonKey(name: 'id')
@@ -648,16 +652,17 @@ abstract class _CrewModel extends CrewModel {
   CrewStatus get status;
   @override
   @JsonKey(ignore: true)
-  _$$_CrewModelCopyWith<_$_CrewModel> get copyWith =>
+  _$$_CrewNetworkModelCopyWith<_$_CrewNetworkModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
-ShortCrewModel _$ShortCrewModelFromJson(Map<String, dynamic> json) {
-  return _ShortCrewModel.fromJson(json);
+ShortCrewNetworkModel _$ShortCrewNetworkModelFromJson(
+    Map<String, dynamic> json) {
+  return _ShortCrewNetworkModel.fromJson(json);
 }
 
 /// @nodoc
-mixin _$ShortCrewModel {
+mixin _$ShortCrewNetworkModel {
   @JsonKey(name: 'crew')
   String get crew => throw _privateConstructorUsedError;
   @JsonKey(name: 'role')
@@ -665,24 +670,25 @@ mixin _$ShortCrewModel {
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $ShortCrewModelCopyWith<ShortCrewModel> get copyWith =>
+  $ShortCrewNetworkModelCopyWith<ShortCrewNetworkModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $ShortCrewModelCopyWith<$Res> {
-  factory $ShortCrewModelCopyWith(
-          ShortCrewModel value, $Res Function(ShortCrewModel) then) =
-      _$ShortCrewModelCopyWithImpl<$Res, ShortCrewModel>;
+abstract class $ShortCrewNetworkModelCopyWith<$Res> {
+  factory $ShortCrewNetworkModelCopyWith(ShortCrewNetworkModel value,
+          $Res Function(ShortCrewNetworkModel) then) =
+      _$ShortCrewNetworkModelCopyWithImpl<$Res, ShortCrewNetworkModel>;
   @useResult
   $Res call(
       {@JsonKey(name: 'crew') String crew, @JsonKey(name: 'role') String role});
 }
 
 /// @nodoc
-class _$ShortCrewModelCopyWithImpl<$Res, $Val extends ShortCrewModel>
-    implements $ShortCrewModelCopyWith<$Res> {
-  _$ShortCrewModelCopyWithImpl(this._value, this._then);
+class _$ShortCrewNetworkModelCopyWithImpl<$Res,
+        $Val extends ShortCrewNetworkModel>
+    implements $ShortCrewNetworkModelCopyWith<$Res> {
+  _$ShortCrewNetworkModelCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -709,11 +715,11 @@ class _$ShortCrewModelCopyWithImpl<$Res, $Val extends ShortCrewModel>
 }
 
 /// @nodoc
-abstract class _$$_ShortCrewModelCopyWith<$Res>
-    implements $ShortCrewModelCopyWith<$Res> {
-  factory _$$_ShortCrewModelCopyWith(
-          _$_ShortCrewModel value, $Res Function(_$_ShortCrewModel) then) =
-      __$$_ShortCrewModelCopyWithImpl<$Res>;
+abstract class _$$_ShortCrewNetworkModelCopyWith<$Res>
+    implements $ShortCrewNetworkModelCopyWith<$Res> {
+  factory _$$_ShortCrewNetworkModelCopyWith(_$_ShortCrewNetworkModel value,
+          $Res Function(_$_ShortCrewNetworkModel) then) =
+      __$$_ShortCrewNetworkModelCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -721,11 +727,11 @@ abstract class _$$_ShortCrewModelCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_ShortCrewModelCopyWithImpl<$Res>
-    extends _$ShortCrewModelCopyWithImpl<$Res, _$_ShortCrewModel>
-    implements _$$_ShortCrewModelCopyWith<$Res> {
-  __$$_ShortCrewModelCopyWithImpl(
-      _$_ShortCrewModel _value, $Res Function(_$_ShortCrewModel) _then)
+class __$$_ShortCrewNetworkModelCopyWithImpl<$Res>
+    extends _$ShortCrewNetworkModelCopyWithImpl<$Res, _$_ShortCrewNetworkModel>
+    implements _$$_ShortCrewNetworkModelCopyWith<$Res> {
+  __$$_ShortCrewNetworkModelCopyWithImpl(_$_ShortCrewNetworkModel _value,
+      $Res Function(_$_ShortCrewNetworkModel) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -734,7 +740,7 @@ class __$$_ShortCrewModelCopyWithImpl<$Res>
     Object? crew = null,
     Object? role = null,
   }) {
-    return _then(_$_ShortCrewModel(
+    return _then(_$_ShortCrewNetworkModel(
       crew: null == crew
           ? _value.crew
           : crew // ignore: cast_nullable_to_non_nullable
@@ -749,14 +755,14 @@ class __$$_ShortCrewModelCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_ShortCrewModel extends _ShortCrewModel {
-  const _$_ShortCrewModel(
+class _$_ShortCrewNetworkModel extends _ShortCrewNetworkModel {
+  const _$_ShortCrewNetworkModel(
       {@JsonKey(name: 'crew') this.crew = '',
       @JsonKey(name: 'role') this.role = ''})
       : super._();
 
-  factory _$_ShortCrewModel.fromJson(Map<String, dynamic> json) =>
-      _$$_ShortCrewModelFromJson(json);
+  factory _$_ShortCrewNetworkModel.fromJson(Map<String, dynamic> json) =>
+      _$$_ShortCrewNetworkModelFromJson(json);
 
   @override
   @JsonKey(name: 'crew')
@@ -767,14 +773,14 @@ class _$_ShortCrewModel extends _ShortCrewModel {
 
   @override
   String toString() {
-    return 'ShortCrewModel(crew: $crew, role: $role)';
+    return 'ShortCrewNetworkModel(crew: $crew, role: $role)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_ShortCrewModel &&
+            other is _$_ShortCrewNetworkModel &&
             (identical(other.crew, crew) || other.crew == crew) &&
             (identical(other.role, role) || other.role == role));
   }
@@ -786,25 +792,26 @@ class _$_ShortCrewModel extends _ShortCrewModel {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ShortCrewModelCopyWith<_$_ShortCrewModel> get copyWith =>
-      __$$_ShortCrewModelCopyWithImpl<_$_ShortCrewModel>(this, _$identity);
+  _$$_ShortCrewNetworkModelCopyWith<_$_ShortCrewNetworkModel> get copyWith =>
+      __$$_ShortCrewNetworkModelCopyWithImpl<_$_ShortCrewNetworkModel>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ShortCrewModelToJson(
+    return _$$_ShortCrewNetworkModelToJson(
       this,
     );
   }
 }
 
-abstract class _ShortCrewModel extends ShortCrewModel {
-  const factory _ShortCrewModel(
+abstract class _ShortCrewNetworkModel extends ShortCrewNetworkModel {
+  const factory _ShortCrewNetworkModel(
       {@JsonKey(name: 'crew') final String crew,
-      @JsonKey(name: 'role') final String role}) = _$_ShortCrewModel;
-  const _ShortCrewModel._() : super._();
+      @JsonKey(name: 'role') final String role}) = _$_ShortCrewNetworkModel;
+  const _ShortCrewNetworkModel._() : super._();
 
-  factory _ShortCrewModel.fromJson(Map<String, dynamic> json) =
-      _$_ShortCrewModel.fromJson;
+  factory _ShortCrewNetworkModel.fromJson(Map<String, dynamic> json) =
+      _$_ShortCrewNetworkModel.fromJson;
 
   @override
   @JsonKey(name: 'crew')
@@ -814,6 +821,6 @@ abstract class _ShortCrewModel extends ShortCrewModel {
   String get role;
   @override
   @JsonKey(ignore: true)
-  _$$_ShortCrewModelCopyWith<_$_ShortCrewModel> get copyWith =>
+  _$$_ShortCrewNetworkModelCopyWith<_$_ShortCrewNetworkModel> get copyWith =>
       throw _privateConstructorUsedError;
 }

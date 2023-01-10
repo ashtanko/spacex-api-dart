@@ -1,13 +1,13 @@
 import 'package:data/data.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-part 'core_model.freezed.dart';
+part 'core_network_model.freezed.dart';
 
-part 'core_model.g.dart';
+part 'core_network_model.g.dart';
 
 @freezed
-class CoreModel with _$CoreModel {
-  const factory CoreModel({
+class CoreNetworkModel with _$CoreNetworkModel {
+  const factory CoreNetworkModel({
     String? id,
     @JsonKey(name: 'block') int? block,
     @JsonKey(name: 'reuse_count') int? reuseCount,
@@ -28,17 +28,17 @@ class CoreModel with _$CoreModel {
     @JsonKey(name: 'landing_success') bool? landingSuccess,
     @JsonKey(name: 'landing_type') String? landingType,
     @JsonKey(name: 'landpad') String? landpad,
-  }) = _CoreModel;
+  }) = _CoreNetworkModel;
 
-  const CoreModel._();
+  const CoreNetworkModel._();
 
-  factory CoreModel.fromJson(Map<String, dynamic> json) =>
-      _$CoreModelFromJson(json);
+  factory CoreNetworkModel.fromJson(Map<String, dynamic> json) =>
+      _$CoreNetworkModelFromJson(json);
 }
 
 @freezed
-class CoreFullModel with _$CoreFullModel {
-  const factory CoreFullModel({
+class CoreNetworkFullModel with _$CoreNetworkFullModel {
+  const factory CoreNetworkFullModel({
     String? id,
     @JsonKey(name: 'block') int? block,
     @JsonKey(name: 'reuse_count') int? reuseCount,
@@ -61,10 +61,10 @@ class CoreFullModel with _$CoreFullModel {
     @JsonKey(name: 'landing_success') @Default(false) bool? landingSuccess,
     @JsonKey(name: 'landing_type') String? landingType,
     @JsonKey(name: 'landpad') String? landpad,
-  }) = _CoreFullModel;
+  }) = _CoreNetworkFullModel;
 
-  const CoreFullModel._();
+  const CoreNetworkFullModel._();
 
-  factory CoreFullModel.fromJson(Map<String, dynamic> json) =>
-      _$CoreFullModelFromJson(json);
+  factory CoreNetworkFullModel.fromJson(Map<String, dynamic> json) =>
+      _$CoreNetworkFullModelFromJson(json);
 }

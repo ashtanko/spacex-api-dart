@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'core_model.dart';
+part of 'core_network_model.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -14,12 +14,12 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
-CoreModel _$CoreModelFromJson(Map<String, dynamic> json) {
-  return _CoreModel.fromJson(json);
+CoreNetworkModel _$CoreNetworkModelFromJson(Map<String, dynamic> json) {
+  return _CoreNetworkModel.fromJson(json);
 }
 
 /// @nodoc
-mixin _$CoreModel {
+mixin _$CoreNetworkModel {
   String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'block')
   int? get block => throw _privateConstructorUsedError;
@@ -62,14 +62,15 @@ mixin _$CoreModel {
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $CoreModelCopyWith<CoreModel> get copyWith =>
+  $CoreNetworkModelCopyWith<CoreNetworkModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $CoreModelCopyWith<$Res> {
-  factory $CoreModelCopyWith(CoreModel value, $Res Function(CoreModel) then) =
-      _$CoreModelCopyWithImpl<$Res, CoreModel>;
+abstract class $CoreNetworkModelCopyWith<$Res> {
+  factory $CoreNetworkModelCopyWith(
+          CoreNetworkModel value, $Res Function(CoreNetworkModel) then) =
+      _$CoreNetworkModelCopyWithImpl<$Res, CoreNetworkModel>;
   @useResult
   $Res call(
       {String? id,
@@ -95,9 +96,9 @@ abstract class $CoreModelCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$CoreModelCopyWithImpl<$Res, $Val extends CoreModel>
-    implements $CoreModelCopyWith<$Res> {
-  _$CoreModelCopyWithImpl(this._value, this._then);
+class _$CoreNetworkModelCopyWithImpl<$Res, $Val extends CoreNetworkModel>
+    implements $CoreNetworkModelCopyWith<$Res> {
+  _$CoreNetworkModelCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -214,10 +215,11 @@ class _$CoreModelCopyWithImpl<$Res, $Val extends CoreModel>
 }
 
 /// @nodoc
-abstract class _$$_CoreModelCopyWith<$Res> implements $CoreModelCopyWith<$Res> {
-  factory _$$_CoreModelCopyWith(
-          _$_CoreModel value, $Res Function(_$_CoreModel) then) =
-      __$$_CoreModelCopyWithImpl<$Res>;
+abstract class _$$_CoreNetworkModelCopyWith<$Res>
+    implements $CoreNetworkModelCopyWith<$Res> {
+  factory _$$_CoreNetworkModelCopyWith(
+          _$_CoreNetworkModel value, $Res Function(_$_CoreNetworkModel) then) =
+      __$$_CoreNetworkModelCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -244,11 +246,11 @@ abstract class _$$_CoreModelCopyWith<$Res> implements $CoreModelCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_CoreModelCopyWithImpl<$Res>
-    extends _$CoreModelCopyWithImpl<$Res, _$_CoreModel>
-    implements _$$_CoreModelCopyWith<$Res> {
-  __$$_CoreModelCopyWithImpl(
-      _$_CoreModel _value, $Res Function(_$_CoreModel) _then)
+class __$$_CoreNetworkModelCopyWithImpl<$Res>
+    extends _$CoreNetworkModelCopyWithImpl<$Res, _$_CoreNetworkModel>
+    implements _$$_CoreNetworkModelCopyWith<$Res> {
+  __$$_CoreNetworkModelCopyWithImpl(
+      _$_CoreNetworkModel _value, $Res Function(_$_CoreNetworkModel) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -275,7 +277,7 @@ class __$$_CoreModelCopyWithImpl<$Res>
     Object? landingType = freezed,
     Object? landpad = freezed,
   }) {
-    return _then(_$_CoreModel(
+    return _then(_$_CoreNetworkModel(
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -362,8 +364,8 @@ class __$$_CoreModelCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_CoreModel extends _CoreModel {
-  const _$_CoreModel(
+class _$_CoreNetworkModel extends _CoreNetworkModel {
+  const _$_CoreNetworkModel(
       {this.id,
       @JsonKey(name: 'block') this.block,
       @JsonKey(name: 'reuse_count') this.reuseCount,
@@ -387,8 +389,8 @@ class _$_CoreModel extends _CoreModel {
       : _launches = launches,
         super._();
 
-  factory _$_CoreModel.fromJson(Map<String, dynamic> json) =>
-      _$$_CoreModelFromJson(json);
+  factory _$_CoreNetworkModel.fromJson(Map<String, dynamic> json) =>
+      _$$_CoreNetworkModelFromJson(json);
 
   @override
   final String? id;
@@ -458,14 +460,14 @@ class _$_CoreModel extends _CoreModel {
 
   @override
   String toString() {
-    return 'CoreModel(id: $id, block: $block, reuseCount: $reuseCount, rtlsAttempts: $rtlsAttempts, rtlsLandings: $rtlsLandings, asdsAttempts: $asdsAttempts, asdsLandings: $asdsLandings, lastUpdate: $lastUpdate, launches: $launches, serial: $serial, status: $status, core: $core, flight: $flight, hasGridfins: $hasGridfins, hasLegs: $hasLegs, reused: $reused, landingAttempt: $landingAttempt, landingSuccess: $landingSuccess, landingType: $landingType, landpad: $landpad)';
+    return 'CoreNetworkModel(id: $id, block: $block, reuseCount: $reuseCount, rtlsAttempts: $rtlsAttempts, rtlsLandings: $rtlsLandings, asdsAttempts: $asdsAttempts, asdsLandings: $asdsLandings, lastUpdate: $lastUpdate, launches: $launches, serial: $serial, status: $status, core: $core, flight: $flight, hasGridfins: $hasGridfins, hasLegs: $hasLegs, reused: $reused, landingAttempt: $landingAttempt, landingSuccess: $landingSuccess, landingType: $landingType, landpad: $landpad)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_CoreModel &&
+            other is _$_CoreNetworkModel &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.block, block) || other.block == block) &&
             (identical(other.reuseCount, reuseCount) ||
@@ -527,19 +529,19 @@ class _$_CoreModel extends _CoreModel {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_CoreModelCopyWith<_$_CoreModel> get copyWith =>
-      __$$_CoreModelCopyWithImpl<_$_CoreModel>(this, _$identity);
+  _$$_CoreNetworkModelCopyWith<_$_CoreNetworkModel> get copyWith =>
+      __$$_CoreNetworkModelCopyWithImpl<_$_CoreNetworkModel>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CoreModelToJson(
+    return _$$_CoreNetworkModelToJson(
       this,
     );
   }
 }
 
-abstract class _CoreModel extends CoreModel {
-  const factory _CoreModel(
+abstract class _CoreNetworkModel extends CoreNetworkModel {
+  const factory _CoreNetworkModel(
       {final String? id,
       @JsonKey(name: 'block') final int? block,
       @JsonKey(name: 'reuse_count') final int? reuseCount,
@@ -559,11 +561,11 @@ abstract class _CoreModel extends CoreModel {
       @JsonKey(name: 'landing_attempt') final bool? landingAttempt,
       @JsonKey(name: 'landing_success') final bool? landingSuccess,
       @JsonKey(name: 'landing_type') final String? landingType,
-      @JsonKey(name: 'landpad') final String? landpad}) = _$_CoreModel;
-  const _CoreModel._() : super._();
+      @JsonKey(name: 'landpad') final String? landpad}) = _$_CoreNetworkModel;
+  const _CoreNetworkModel._() : super._();
 
-  factory _CoreModel.fromJson(Map<String, dynamic> json) =
-      _$_CoreModel.fromJson;
+  factory _CoreNetworkModel.fromJson(Map<String, dynamic> json) =
+      _$_CoreNetworkModel.fromJson;
 
   @override
   String? get id;
@@ -626,16 +628,16 @@ abstract class _CoreModel extends CoreModel {
   String? get landpad;
   @override
   @JsonKey(ignore: true)
-  _$$_CoreModelCopyWith<_$_CoreModel> get copyWith =>
+  _$$_CoreNetworkModelCopyWith<_$_CoreNetworkModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
-CoreFullModel _$CoreFullModelFromJson(Map<String, dynamic> json) {
-  return _CoreFullModel.fromJson(json);
+CoreNetworkFullModel _$CoreNetworkFullModelFromJson(Map<String, dynamic> json) {
+  return _CoreNetworkFullModel.fromJson(json);
 }
 
 /// @nodoc
-mixin _$CoreFullModel {
+mixin _$CoreNetworkFullModel {
   String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'block')
   int? get block => throw _privateConstructorUsedError;
@@ -678,15 +680,15 @@ mixin _$CoreFullModel {
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $CoreFullModelCopyWith<CoreFullModel> get copyWith =>
+  $CoreNetworkFullModelCopyWith<CoreNetworkFullModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $CoreFullModelCopyWith<$Res> {
-  factory $CoreFullModelCopyWith(
-          CoreFullModel value, $Res Function(CoreFullModel) then) =
-      _$CoreFullModelCopyWithImpl<$Res, CoreFullModel>;
+abstract class $CoreNetworkFullModelCopyWith<$Res> {
+  factory $CoreNetworkFullModelCopyWith(CoreNetworkFullModel value,
+          $Res Function(CoreNetworkFullModel) then) =
+      _$CoreNetworkFullModelCopyWithImpl<$Res, CoreNetworkFullModel>;
   @useResult
   $Res call(
       {String? id,
@@ -712,9 +714,10 @@ abstract class $CoreFullModelCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$CoreFullModelCopyWithImpl<$Res, $Val extends CoreFullModel>
-    implements $CoreFullModelCopyWith<$Res> {
-  _$CoreFullModelCopyWithImpl(this._value, this._then);
+class _$CoreNetworkFullModelCopyWithImpl<$Res,
+        $Val extends CoreNetworkFullModel>
+    implements $CoreNetworkFullModelCopyWith<$Res> {
+  _$CoreNetworkFullModelCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -831,11 +834,11 @@ class _$CoreFullModelCopyWithImpl<$Res, $Val extends CoreFullModel>
 }
 
 /// @nodoc
-abstract class _$$_CoreFullModelCopyWith<$Res>
-    implements $CoreFullModelCopyWith<$Res> {
-  factory _$$_CoreFullModelCopyWith(
-          _$_CoreFullModel value, $Res Function(_$_CoreFullModel) then) =
-      __$$_CoreFullModelCopyWithImpl<$Res>;
+abstract class _$$_CoreNetworkFullModelCopyWith<$Res>
+    implements $CoreNetworkFullModelCopyWith<$Res> {
+  factory _$$_CoreNetworkFullModelCopyWith(_$_CoreNetworkFullModel value,
+          $Res Function(_$_CoreNetworkFullModel) then) =
+      __$$_CoreNetworkFullModelCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -862,11 +865,11 @@ abstract class _$$_CoreFullModelCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_CoreFullModelCopyWithImpl<$Res>
-    extends _$CoreFullModelCopyWithImpl<$Res, _$_CoreFullModel>
-    implements _$$_CoreFullModelCopyWith<$Res> {
-  __$$_CoreFullModelCopyWithImpl(
-      _$_CoreFullModel _value, $Res Function(_$_CoreFullModel) _then)
+class __$$_CoreNetworkFullModelCopyWithImpl<$Res>
+    extends _$CoreNetworkFullModelCopyWithImpl<$Res, _$_CoreNetworkFullModel>
+    implements _$$_CoreNetworkFullModelCopyWith<$Res> {
+  __$$_CoreNetworkFullModelCopyWithImpl(_$_CoreNetworkFullModel _value,
+      $Res Function(_$_CoreNetworkFullModel) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -893,7 +896,7 @@ class __$$_CoreFullModelCopyWithImpl<$Res>
     Object? landingType = freezed,
     Object? landpad = freezed,
   }) {
-    return _then(_$_CoreFullModel(
+    return _then(_$_CoreNetworkFullModel(
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -980,8 +983,8 @@ class __$$_CoreFullModelCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_CoreFullModel extends _CoreFullModel {
-  const _$_CoreFullModel(
+class _$_CoreNetworkFullModel extends _CoreNetworkFullModel {
+  const _$_CoreNetworkFullModel(
       {this.id,
       @JsonKey(name: 'block')
           this.block,
@@ -1024,8 +1027,8 @@ class _$_CoreFullModel extends _CoreFullModel {
       : _launches = launches,
         super._();
 
-  factory _$_CoreFullModel.fromJson(Map<String, dynamic> json) =>
-      _$$_CoreFullModelFromJson(json);
+  factory _$_CoreNetworkFullModel.fromJson(Map<String, dynamic> json) =>
+      _$$_CoreNetworkFullModelFromJson(json);
 
   @override
   final String? id;
@@ -1095,14 +1098,14 @@ class _$_CoreFullModel extends _CoreFullModel {
 
   @override
   String toString() {
-    return 'CoreFullModel(id: $id, block: $block, reuseCount: $reuseCount, rtlsAttempts: $rtlsAttempts, rtlsLandings: $rtlsLandings, asdsAttempts: $asdsAttempts, asdsLandings: $asdsLandings, lastUpdate: $lastUpdate, launches: $launches, serial: $serial, status: $status, core: $core, flight: $flight, hasGridfins: $hasGridfins, hasLegs: $hasLegs, reused: $reused, landingAttempt: $landingAttempt, landingSuccess: $landingSuccess, landingType: $landingType, landpad: $landpad)';
+    return 'CoreNetworkFullModel(id: $id, block: $block, reuseCount: $reuseCount, rtlsAttempts: $rtlsAttempts, rtlsLandings: $rtlsLandings, asdsAttempts: $asdsAttempts, asdsLandings: $asdsLandings, lastUpdate: $lastUpdate, launches: $launches, serial: $serial, status: $status, core: $core, flight: $flight, hasGridfins: $hasGridfins, hasLegs: $hasLegs, reused: $reused, landingAttempt: $landingAttempt, landingSuccess: $landingSuccess, landingType: $landingType, landpad: $landpad)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_CoreFullModel &&
+            other is _$_CoreNetworkFullModel &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.block, block) || other.block == block) &&
             (identical(other.reuseCount, reuseCount) ||
@@ -1164,43 +1167,45 @@ class _$_CoreFullModel extends _CoreFullModel {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_CoreFullModelCopyWith<_$_CoreFullModel> get copyWith =>
-      __$$_CoreFullModelCopyWithImpl<_$_CoreFullModel>(this, _$identity);
+  _$$_CoreNetworkFullModelCopyWith<_$_CoreNetworkFullModel> get copyWith =>
+      __$$_CoreNetworkFullModelCopyWithImpl<_$_CoreNetworkFullModel>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CoreFullModelToJson(
+    return _$$_CoreNetworkFullModelToJson(
       this,
     );
   }
 }
 
-abstract class _CoreFullModel extends CoreFullModel {
-  const factory _CoreFullModel(
-      {final String? id,
-      @JsonKey(name: 'block') final int? block,
-      @JsonKey(name: 'reuse_count') final int? reuseCount,
-      @JsonKey(name: 'rtls_attempts') final int? rtlsAttempts,
-      @JsonKey(name: 'rtls_landings') final int? rtlsLandings,
-      @JsonKey(name: 'asds_attempts') final int? asdsAttempts,
-      @JsonKey(name: 'asds_landings') final int? asdsLandings,
-      @JsonKey(name: 'last_update') final String? lastUpdate,
-      @JsonKey(name: 'launches') final List<LaunchModel> launches,
-      @JsonKey(name: 'serial') final String? serial,
-      @JsonKey(name: 'status') final String? status,
-      @JsonKey(name: 'core') final String? core,
-      @JsonKey(name: 'flight') final int flight,
-      @JsonKey(name: 'gridfins') final bool hasGridfins,
-      @JsonKey(name: 'legs') final bool hasLegs,
-      @JsonKey(name: 'reused') final bool reused,
-      @JsonKey(name: 'landing_attempt') final bool landingAttempt,
-      @JsonKey(name: 'landing_success') final bool? landingSuccess,
-      @JsonKey(name: 'landing_type') final String? landingType,
-      @JsonKey(name: 'landpad') final String? landpad}) = _$_CoreFullModel;
-  const _CoreFullModel._() : super._();
+abstract class _CoreNetworkFullModel extends CoreNetworkFullModel {
+  const factory _CoreNetworkFullModel(
+          {final String? id,
+          @JsonKey(name: 'block') final int? block,
+          @JsonKey(name: 'reuse_count') final int? reuseCount,
+          @JsonKey(name: 'rtls_attempts') final int? rtlsAttempts,
+          @JsonKey(name: 'rtls_landings') final int? rtlsLandings,
+          @JsonKey(name: 'asds_attempts') final int? asdsAttempts,
+          @JsonKey(name: 'asds_landings') final int? asdsLandings,
+          @JsonKey(name: 'last_update') final String? lastUpdate,
+          @JsonKey(name: 'launches') final List<LaunchModel> launches,
+          @JsonKey(name: 'serial') final String? serial,
+          @JsonKey(name: 'status') final String? status,
+          @JsonKey(name: 'core') final String? core,
+          @JsonKey(name: 'flight') final int flight,
+          @JsonKey(name: 'gridfins') final bool hasGridfins,
+          @JsonKey(name: 'legs') final bool hasLegs,
+          @JsonKey(name: 'reused') final bool reused,
+          @JsonKey(name: 'landing_attempt') final bool landingAttempt,
+          @JsonKey(name: 'landing_success') final bool? landingSuccess,
+          @JsonKey(name: 'landing_type') final String? landingType,
+          @JsonKey(name: 'landpad') final String? landpad}) =
+      _$_CoreNetworkFullModel;
+  const _CoreNetworkFullModel._() : super._();
 
-  factory _CoreFullModel.fromJson(Map<String, dynamic> json) =
-      _$_CoreFullModel.fromJson;
+  factory _CoreNetworkFullModel.fromJson(Map<String, dynamic> json) =
+      _$_CoreNetworkFullModel.fromJson;
 
   @override
   String? get id;
@@ -1263,6 +1268,6 @@ abstract class _CoreFullModel extends CoreFullModel {
   String? get landpad;
   @override
   @JsonKey(ignore: true)
-  _$$_CoreFullModelCopyWith<_$_CoreFullModel> get copyWith =>
+  _$$_CoreNetworkFullModelCopyWith<_$_CoreNetworkFullModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
