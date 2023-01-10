@@ -19,7 +19,7 @@ void main() {
 
   group('get all capsules', () {
     final rawJson = 'capsules/capsule.json'.toFixture();
-    final allCapsulesMockResponse = [CapsuleModel.fromJson(rawJson)];
+    final allCapsulesMockResponse = [CapsuleNetworkModel.fromJson(rawJson)];
     test(
       'should perform a GET request on /capsules',
       () async {
@@ -42,7 +42,7 @@ void main() {
   group('get one capsule', () {
     const capsuleId = '5e9e2c5bf35918ed873b2664';
     final capsuleRawJson = 'capsules/capsule.json'.toFixture();
-    final oneCapsuleMockResponse = CapsuleModel.fromJson(capsuleRawJson);
+    final oneCapsuleMockResponse = CapsuleNetworkModel.fromJson(capsuleRawJson);
     test(
       'should perform a GET request on /capsules/{$capsuleId}',
       () async {
@@ -66,7 +66,7 @@ void main() {
     final rawJson = 'capsules/capsule.json'.toFixture();
     final queryCapsulesMockResponse = ApiPaginatedList(
       results: [
-        CapsuleModel.fromJson(rawJson),
+        CapsuleNetworkModel.fromJson(rawJson),
       ],
     );
     final queryRawJson = 'query/query.json'.toFixture();
@@ -94,7 +94,7 @@ void main() {
     final rawJson = 'capsules/full_capsule.json'.toFixture();
     final queryCapsulesMockResponse = ApiPaginatedList(
       results: [
-        CapsuleFullModel.fromJson(rawJson),
+        CapsuleNetworkFullModel.fromJson(rawJson),
       ],
     );
     final queryRawJson = 'query/query.json'.toFixture();

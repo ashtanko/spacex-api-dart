@@ -6,7 +6,7 @@ class CapsulesDataSource {
 
   final CapsulesApi _api;
 
-  Future<List<CapsuleModel>> getAllCapsules() async {
+  Future<List<CapsuleNetworkModel>> getAllCapsules() async {
     try {
       return await _api.getAllCapsules();
     } on DioError catch (_) {
@@ -14,7 +14,7 @@ class CapsulesDataSource {
     }
   }
 
-  Future<CapsuleModel> getCapsule(String id) async {
+  Future<CapsuleNetworkModel> getCapsule(String id) async {
     try {
       final capsule = await _api.getCapsule(id);
       return capsule;
@@ -23,7 +23,7 @@ class CapsulesDataSource {
     }
   }
 
-  Future<ApiPaginatedList<CapsuleModel>> queryCapsules(QueryModel query) async {
+  Future<ApiPaginatedList<CapsuleNetworkModel>> queryCapsules(QueryModel query) async {
     try {
       final capsules = await _api.queryCapsules(query);
       return capsules;
@@ -32,7 +32,7 @@ class CapsulesDataSource {
     }
   }
 
-  Future<ApiPaginatedList<CapsuleFullModel>> queryFullCapsules(
+  Future<ApiPaginatedList<CapsuleNetworkFullModel>> queryFullCapsules(
     QueryModel query,
   ) async {
     try {

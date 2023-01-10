@@ -21,13 +21,13 @@ class _CapsulesApi implements CapsulesApi {
   String? baseUrl;
 
   @override
-  Future<List<CapsuleModel>> getAllCapsules() async {
+  Future<List<CapsuleNetworkModel>> getAllCapsules() async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     final _result = await _dio
-        .fetch<List<dynamic>>(_setStreamType<List<CapsuleModel>>(Options(
+        .fetch<List<dynamic>>(_setStreamType<List<CapsuleNetworkModel>>(Options(
       method: 'GET',
       headers: _headers,
       extra: _extra,
@@ -40,19 +40,20 @@ class _CapsulesApi implements CapsulesApi {
             )
             .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
     var value = _result.data!
-        .map((dynamic i) => CapsuleModel.fromJson(i as Map<String, dynamic>))
+        .map((dynamic i) =>
+            CapsuleNetworkModel.fromJson(i as Map<String, dynamic>))
         .toList();
     return value;
   }
 
   @override
-  Future<CapsuleModel> getCapsule(id) async {
+  Future<CapsuleNetworkModel> getCapsule(id) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
-    final _result = await _dio
-        .fetch<Map<String, dynamic>>(_setStreamType<CapsuleModel>(Options(
+    final _result = await _dio.fetch<Map<String, dynamic>>(
+        _setStreamType<CapsuleNetworkModel>(Options(
       method: 'GET',
       headers: _headers,
       extra: _extra,
@@ -64,19 +65,19 @@ class _CapsulesApi implements CapsulesApi {
               data: _data,
             )
             .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
-    final value = CapsuleModel.fromJson(_result.data!);
+    final value = CapsuleNetworkModel.fromJson(_result.data!);
     return value;
   }
 
   @override
-  Future<ApiPaginatedList<CapsuleModel>> queryCapsules(query) async {
+  Future<ApiPaginatedList<CapsuleNetworkModel>> queryCapsules(query) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     _data.addAll(query.toJson());
     final _result = await _dio.fetch<Map<String, dynamic>>(
-        _setStreamType<ApiPaginatedList<CapsuleModel>>(Options(
+        _setStreamType<ApiPaginatedList<CapsuleNetworkModel>>(Options(
       method: 'POST',
       headers: _headers,
       extra: _extra,
@@ -88,22 +89,23 @@ class _CapsulesApi implements CapsulesApi {
               data: _data,
             )
             .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
-    final value = ApiPaginatedList<CapsuleModel>.fromJson(
+    final value = ApiPaginatedList<CapsuleNetworkModel>.fromJson(
       _result.data!,
-      (json) => CapsuleModel.fromJson(json as Map<String, dynamic>),
+      (json) => CapsuleNetworkModel.fromJson(json as Map<String, dynamic>),
     );
     return value;
   }
 
   @override
-  Future<ApiPaginatedList<CapsuleFullModel>> queryFullCapsules(query) async {
+  Future<ApiPaginatedList<CapsuleNetworkFullModel>> queryFullCapsules(
+      query) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     _data.addAll(query.toJson());
     final _result = await _dio.fetch<Map<String, dynamic>>(
-        _setStreamType<ApiPaginatedList<CapsuleFullModel>>(Options(
+        _setStreamType<ApiPaginatedList<CapsuleNetworkFullModel>>(Options(
       method: 'POST',
       headers: _headers,
       extra: _extra,
@@ -115,9 +117,9 @@ class _CapsulesApi implements CapsulesApi {
               data: _data,
             )
             .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
-    final value = ApiPaginatedList<CapsuleFullModel>.fromJson(
+    final value = ApiPaginatedList<CapsuleNetworkFullModel>.fromJson(
       _result.data!,
-      (json) => CapsuleFullModel.fromJson(json as Map<String, dynamic>),
+      (json) => CapsuleNetworkFullModel.fromJson(json as Map<String, dynamic>),
     );
     return value;
   }

@@ -33,7 +33,7 @@ void main() {
         final Map<String, dynamic> jsonMap =
             'capsules/capsule.json'.toFixture();
         // act
-        final result = CapsuleModel.fromJson(jsonMap);
+        final result = CapsuleNetworkModel.fromJson(jsonMap);
 
         // assert
         expect(result, equals(capsule1));

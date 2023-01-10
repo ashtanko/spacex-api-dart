@@ -1,13 +1,14 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'capsule_model.dart';
+part of 'capsule_network_model.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_CapsuleModel _$$_CapsuleModelFromJson(Map<String, dynamic> json) =>
-    _$_CapsuleModel(
+_$_CapsuleNetworkModel _$$_CapsuleNetworkModelFromJson(
+        Map<String, dynamic> json) =>
+    _$_CapsuleNetworkModel(
       reuseCount: json['reuse_count'] as int? ?? 0,
       waterLandings: json['water_landings'] as int? ?? 0,
       landLandings: json['land_landings'] as int? ?? 0,
@@ -22,7 +23,8 @@ _$_CapsuleModel _$$_CapsuleModelFromJson(Map<String, dynamic> json) =>
       id: json['id'] as String,
     );
 
-Map<String, dynamic> _$$_CapsuleModelToJson(_$_CapsuleModel instance) {
+Map<String, dynamic> _$$_CapsuleNetworkModelToJson(
+    _$_CapsuleNetworkModel instance) {
   final val = <String, dynamic>{
     'reuse_count': instance.reuseCount,
     'water_landings': instance.waterLandings,
@@ -44,8 +46,9 @@ Map<String, dynamic> _$$_CapsuleModelToJson(_$_CapsuleModel instance) {
   return val;
 }
 
-_$_CapsuleFullModel _$$_CapsuleFullModelFromJson(Map<String, dynamic> json) =>
-    _$_CapsuleFullModel(
+_$_CapsuleNetworkFullModel _$$_CapsuleNetworkFullModelFromJson(
+        Map<String, dynamic> json) =>
+    _$_CapsuleNetworkFullModel(
       reuseCount: json['reuse_count'] as int? ?? 0,
       waterLandings: json['water_landings'] as int? ?? 0,
       landLandings: json['land_landings'] as int? ?? 0,
@@ -60,7 +63,8 @@ _$_CapsuleFullModel _$$_CapsuleFullModelFromJson(Map<String, dynamic> json) =>
       id: json['id'] as String,
     );
 
-Map<String, dynamic> _$$_CapsuleFullModelToJson(_$_CapsuleFullModel instance) {
+Map<String, dynamic> _$$_CapsuleNetworkFullModelToJson(
+    _$_CapsuleNetworkFullModel instance) {
   final val = <String, dynamic>{
     'reuse_count': instance.reuseCount,
     'water_landings': instance.waterLandings,

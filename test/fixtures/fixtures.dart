@@ -1,7 +1,7 @@
 import 'package:data/data.dart';
 
 ///capsules
-const capsule1 = CapsuleModel(
+const capsule1 = CapsuleNetworkModel(
   reuseCount: 1,
   waterLandings: 1,
   landLandings: 0,
@@ -15,7 +15,7 @@ const capsule1 = CapsuleModel(
   id: '5e9e2c5bf35918ed873b2664',
 );
 
-const capsule2 = CapsuleModel(
+const capsule2 = CapsuleNetworkModel(
   reuseCount: 1,
   waterLandings: 1,
   landLandings: 0,
@@ -29,7 +29,7 @@ const capsule2 = CapsuleModel(
   id: '5e9e2c5bf35918ed873b2664',
 );
 
-const capsule3 = CapsuleModel(
+const capsule3 = CapsuleNetworkModel(
   reuseCount: 0,
   waterLandings: 1,
   landLandings: 0,
@@ -42,7 +42,7 @@ const capsule3 = CapsuleModel(
   id: '5e9e2c5df359184c9a3b2672',
 );
 
-const fullCapsule1 = CapsuleFullModel(
+const fullCapsule1 = CapsuleNetworkFullModel(
   reuseCount: 1,
   waterLandings: 1,
   landLandings: 0,
@@ -56,7 +56,7 @@ const fullCapsule1 = CapsuleFullModel(
   id: '5e9e2c5bf35918ed873b2664',
 );
 
-const fullCapsule2 = CapsuleFullModel(
+const fullCapsule2 = CapsuleNetworkFullModel(
   reuseCount: 1,
   waterLandings: 1,
   landLandings: 0,
@@ -70,7 +70,7 @@ const fullCapsule2 = CapsuleFullModel(
   id: '5e9e2c5bf35918ed873b2664',
 );
 
-const fullCapsule3 = CapsuleFullModel(
+const fullCapsule3 = CapsuleNetworkFullModel(
   reuseCount: 0,
   waterLandings: 1,
   landLandings: 0,
@@ -86,8 +86,8 @@ const fullCapsule3 = CapsuleFullModel(
 );
 
 /// achievements
-const achievementModel = AchievementModel(
-  links: AchievementLinksModel(
+const achievementModel = AchievementNetworkModel(
+  links: AchievementLinksNetworkModel(
     article: 'http://www.spacex.com/news/2013/02/11/flight-4-launch-update-0',
   ),
   name: 'Falcon reaches Earth orbit',
@@ -98,9 +98,9 @@ const achievementModel = AchievementModel(
   id: '5f6fb2cfdcfdf403df37971e',
 );
 
-const achievement1 = AchievementModel(id: '0');
-const achievement2 = AchievementModel(id: '0');
-const achievement3 = AchievementModel(id: '1');
+const achievement1 = AchievementNetworkModel(id: '0');
+const achievement2 = AchievementNetworkModel(id: '0');
+const achievement3 = AchievementNetworkModel(id: '1');
 
 /// info
 const info1 = CompanyInfoModel(id: '0');

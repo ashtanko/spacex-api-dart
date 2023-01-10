@@ -19,7 +19,7 @@ void main() {
 
   group('getHistory', () {
     final rawJson = 'history/achievement.json'.toFixture();
-    final model = AchievementModel.fromJson(rawJson);
+    final model = AchievementNetworkModel.fromJson(rawJson);
     final mockResponse = [model];
     test(
       'should perform a GET request on /company',

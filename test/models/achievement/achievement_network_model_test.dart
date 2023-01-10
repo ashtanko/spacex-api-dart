@@ -25,7 +25,7 @@ void main() {
             'history/achievement.json'.toFixture();
 
         // act
-        final result = AchievementModel.fromJson(jsonMap);
+        final result = AchievementNetworkModel.fromJson(jsonMap);
 
         // assert
         expect(result, equals(achievementModel));

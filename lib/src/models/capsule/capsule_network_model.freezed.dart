@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'capsule_model.dart';
+part of 'capsule_network_model.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -14,12 +14,12 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
-CapsuleModel _$CapsuleModelFromJson(Map<String, dynamic> json) {
-  return _CapsuleModel.fromJson(json);
+CapsuleNetworkModel _$CapsuleNetworkModelFromJson(Map<String, dynamic> json) {
+  return _CapsuleNetworkModel.fromJson(json);
 }
 
 /// @nodoc
-mixin _$CapsuleModel {
+mixin _$CapsuleNetworkModel {
   @JsonKey(name: 'reuse_count')
   int get reuseCount => throw _privateConstructorUsedError;
   @JsonKey(name: 'water_landings')
@@ -37,15 +37,15 @@ mixin _$CapsuleModel {
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $CapsuleModelCopyWith<CapsuleModel> get copyWith =>
+  $CapsuleNetworkModelCopyWith<CapsuleNetworkModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $CapsuleModelCopyWith<$Res> {
-  factory $CapsuleModelCopyWith(
-          CapsuleModel value, $Res Function(CapsuleModel) then) =
-      _$CapsuleModelCopyWithImpl<$Res, CapsuleModel>;
+abstract class $CapsuleNetworkModelCopyWith<$Res> {
+  factory $CapsuleNetworkModelCopyWith(
+          CapsuleNetworkModel value, $Res Function(CapsuleNetworkModel) then) =
+      _$CapsuleNetworkModelCopyWithImpl<$Res, CapsuleNetworkModel>;
   @useResult
   $Res call(
       {@JsonKey(name: 'reuse_count') int reuseCount,
@@ -60,9 +60,9 @@ abstract class $CapsuleModelCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$CapsuleModelCopyWithImpl<$Res, $Val extends CapsuleModel>
-    implements $CapsuleModelCopyWith<$Res> {
-  _$CapsuleModelCopyWithImpl(this._value, this._then);
+class _$CapsuleNetworkModelCopyWithImpl<$Res, $Val extends CapsuleNetworkModel>
+    implements $CapsuleNetworkModelCopyWith<$Res> {
+  _$CapsuleNetworkModelCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -124,11 +124,11 @@ class _$CapsuleModelCopyWithImpl<$Res, $Val extends CapsuleModel>
 }
 
 /// @nodoc
-abstract class _$$_CapsuleModelCopyWith<$Res>
-    implements $CapsuleModelCopyWith<$Res> {
-  factory _$$_CapsuleModelCopyWith(
-          _$_CapsuleModel value, $Res Function(_$_CapsuleModel) then) =
-      __$$_CapsuleModelCopyWithImpl<$Res>;
+abstract class _$$_CapsuleNetworkModelCopyWith<$Res>
+    implements $CapsuleNetworkModelCopyWith<$Res> {
+  factory _$$_CapsuleNetworkModelCopyWith(_$_CapsuleNetworkModel value,
+          $Res Function(_$_CapsuleNetworkModel) then) =
+      __$$_CapsuleNetworkModelCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -144,11 +144,11 @@ abstract class _$$_CapsuleModelCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_CapsuleModelCopyWithImpl<$Res>
-    extends _$CapsuleModelCopyWithImpl<$Res, _$_CapsuleModel>
-    implements _$$_CapsuleModelCopyWith<$Res> {
-  __$$_CapsuleModelCopyWithImpl(
-      _$_CapsuleModel _value, $Res Function(_$_CapsuleModel) _then)
+class __$$_CapsuleNetworkModelCopyWithImpl<$Res>
+    extends _$CapsuleNetworkModelCopyWithImpl<$Res, _$_CapsuleNetworkModel>
+    implements _$$_CapsuleNetworkModelCopyWith<$Res> {
+  __$$_CapsuleNetworkModelCopyWithImpl(_$_CapsuleNetworkModel _value,
+      $Res Function(_$_CapsuleNetworkModel) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -164,7 +164,7 @@ class __$$_CapsuleModelCopyWithImpl<$Res>
     Object? type = null,
     Object? id = null,
   }) {
-    return _then(_$_CapsuleModel(
+    return _then(_$_CapsuleNetworkModel(
       reuseCount: null == reuseCount
           ? _value.reuseCount
           : reuseCount // ignore: cast_nullable_to_non_nullable
@@ -207,8 +207,8 @@ class __$$_CapsuleModelCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_CapsuleModel extends _CapsuleModel {
-  const _$_CapsuleModel(
+class _$_CapsuleNetworkModel extends _CapsuleNetworkModel {
+  const _$_CapsuleNetworkModel(
       {@JsonKey(name: 'reuse_count') this.reuseCount = 0,
       @JsonKey(name: 'water_landings') this.waterLandings = 0,
       @JsonKey(name: 'land_landings') this.landLandings = 0,
@@ -221,8 +221,8 @@ class _$_CapsuleModel extends _CapsuleModel {
       : _launches = launches,
         super._();
 
-  factory _$_CapsuleModel.fromJson(Map<String, dynamic> json) =>
-      _$$_CapsuleModelFromJson(json);
+  factory _$_CapsuleNetworkModel.fromJson(Map<String, dynamic> json) =>
+      _$$_CapsuleNetworkModelFromJson(json);
 
   @override
   @JsonKey(name: 'reuse_count')
@@ -260,14 +260,14 @@ class _$_CapsuleModel extends _CapsuleModel {
 
   @override
   String toString() {
-    return 'CapsuleModel(reuseCount: $reuseCount, waterLandings: $waterLandings, landLandings: $landLandings, lastUpdate: $lastUpdate, launches: $launches, serial: $serial, status: $status, type: $type, id: $id)';
+    return 'CapsuleNetworkModel(reuseCount: $reuseCount, waterLandings: $waterLandings, landLandings: $landLandings, lastUpdate: $lastUpdate, launches: $launches, serial: $serial, status: $status, type: $type, id: $id)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_CapsuleModel &&
+            other is _$_CapsuleNetworkModel &&
             (identical(other.reuseCount, reuseCount) ||
                 other.reuseCount == reuseCount) &&
             (identical(other.waterLandings, waterLandings) ||
@@ -300,19 +300,20 @@ class _$_CapsuleModel extends _CapsuleModel {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_CapsuleModelCopyWith<_$_CapsuleModel> get copyWith =>
-      __$$_CapsuleModelCopyWithImpl<_$_CapsuleModel>(this, _$identity);
+  _$$_CapsuleNetworkModelCopyWith<_$_CapsuleNetworkModel> get copyWith =>
+      __$$_CapsuleNetworkModelCopyWithImpl<_$_CapsuleNetworkModel>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CapsuleModelToJson(
+    return _$$_CapsuleNetworkModelToJson(
       this,
     );
   }
 }
 
-abstract class _CapsuleModel extends CapsuleModel {
-  const factory _CapsuleModel(
+abstract class _CapsuleNetworkModel extends CapsuleNetworkModel {
+  const factory _CapsuleNetworkModel(
       {@JsonKey(name: 'reuse_count') final int reuseCount,
       @JsonKey(name: 'water_landings') final int waterLandings,
       @JsonKey(name: 'land_landings') final int landLandings,
@@ -321,11 +322,11 @@ abstract class _CapsuleModel extends CapsuleModel {
       final String serial,
       final String status,
       final String type,
-      @JsonKey(name: 'id') required final String id}) = _$_CapsuleModel;
-  const _CapsuleModel._() : super._();
+      @JsonKey(name: 'id') required final String id}) = _$_CapsuleNetworkModel;
+  const _CapsuleNetworkModel._() : super._();
 
-  factory _CapsuleModel.fromJson(Map<String, dynamic> json) =
-      _$_CapsuleModel.fromJson;
+  factory _CapsuleNetworkModel.fromJson(Map<String, dynamic> json) =
+      _$_CapsuleNetworkModel.fromJson;
 
   @override
   @JsonKey(name: 'reuse_count')
@@ -352,16 +353,17 @@ abstract class _CapsuleModel extends CapsuleModel {
   String get id;
   @override
   @JsonKey(ignore: true)
-  _$$_CapsuleModelCopyWith<_$_CapsuleModel> get copyWith =>
+  _$$_CapsuleNetworkModelCopyWith<_$_CapsuleNetworkModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
-CapsuleFullModel _$CapsuleFullModelFromJson(Map<String, dynamic> json) {
-  return _CapsuleFullModel.fromJson(json);
+CapsuleNetworkFullModel _$CapsuleNetworkFullModelFromJson(
+    Map<String, dynamic> json) {
+  return _CapsuleNetworkFullModel.fromJson(json);
 }
 
 /// @nodoc
-mixin _$CapsuleFullModel {
+mixin _$CapsuleNetworkFullModel {
   @JsonKey(name: 'reuse_count')
   int get reuseCount => throw _privateConstructorUsedError;
   @JsonKey(name: 'water_landings')
@@ -380,15 +382,15 @@ mixin _$CapsuleFullModel {
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $CapsuleFullModelCopyWith<CapsuleFullModel> get copyWith =>
+  $CapsuleNetworkFullModelCopyWith<CapsuleNetworkFullModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $CapsuleFullModelCopyWith<$Res> {
-  factory $CapsuleFullModelCopyWith(
-          CapsuleFullModel value, $Res Function(CapsuleFullModel) then) =
-      _$CapsuleFullModelCopyWithImpl<$Res, CapsuleFullModel>;
+abstract class $CapsuleNetworkFullModelCopyWith<$Res> {
+  factory $CapsuleNetworkFullModelCopyWith(CapsuleNetworkFullModel value,
+          $Res Function(CapsuleNetworkFullModel) then) =
+      _$CapsuleNetworkFullModelCopyWithImpl<$Res, CapsuleNetworkFullModel>;
   @useResult
   $Res call(
       {@JsonKey(name: 'reuse_count') int reuseCount,
@@ -403,9 +405,10 @@ abstract class $CapsuleFullModelCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$CapsuleFullModelCopyWithImpl<$Res, $Val extends CapsuleFullModel>
-    implements $CapsuleFullModelCopyWith<$Res> {
-  _$CapsuleFullModelCopyWithImpl(this._value, this._then);
+class _$CapsuleNetworkFullModelCopyWithImpl<$Res,
+        $Val extends CapsuleNetworkFullModel>
+    implements $CapsuleNetworkFullModelCopyWith<$Res> {
+  _$CapsuleNetworkFullModelCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -467,11 +470,11 @@ class _$CapsuleFullModelCopyWithImpl<$Res, $Val extends CapsuleFullModel>
 }
 
 /// @nodoc
-abstract class _$$_CapsuleFullModelCopyWith<$Res>
-    implements $CapsuleFullModelCopyWith<$Res> {
-  factory _$$_CapsuleFullModelCopyWith(
-          _$_CapsuleFullModel value, $Res Function(_$_CapsuleFullModel) then) =
-      __$$_CapsuleFullModelCopyWithImpl<$Res>;
+abstract class _$$_CapsuleNetworkFullModelCopyWith<$Res>
+    implements $CapsuleNetworkFullModelCopyWith<$Res> {
+  factory _$$_CapsuleNetworkFullModelCopyWith(_$_CapsuleNetworkFullModel value,
+          $Res Function(_$_CapsuleNetworkFullModel) then) =
+      __$$_CapsuleNetworkFullModelCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -487,11 +490,12 @@ abstract class _$$_CapsuleFullModelCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_CapsuleFullModelCopyWithImpl<$Res>
-    extends _$CapsuleFullModelCopyWithImpl<$Res, _$_CapsuleFullModel>
-    implements _$$_CapsuleFullModelCopyWith<$Res> {
-  __$$_CapsuleFullModelCopyWithImpl(
-      _$_CapsuleFullModel _value, $Res Function(_$_CapsuleFullModel) _then)
+class __$$_CapsuleNetworkFullModelCopyWithImpl<$Res>
+    extends _$CapsuleNetworkFullModelCopyWithImpl<$Res,
+        _$_CapsuleNetworkFullModel>
+    implements _$$_CapsuleNetworkFullModelCopyWith<$Res> {
+  __$$_CapsuleNetworkFullModelCopyWithImpl(_$_CapsuleNetworkFullModel _value,
+      $Res Function(_$_CapsuleNetworkFullModel) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -507,7 +511,7 @@ class __$$_CapsuleFullModelCopyWithImpl<$Res>
     Object? type = null,
     Object? id = null,
   }) {
-    return _then(_$_CapsuleFullModel(
+    return _then(_$_CapsuleNetworkFullModel(
       reuseCount: null == reuseCount
           ? _value.reuseCount
           : reuseCount // ignore: cast_nullable_to_non_nullable
@@ -550,8 +554,8 @@ class __$$_CapsuleFullModelCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_CapsuleFullModel extends _CapsuleFullModel {
-  const _$_CapsuleFullModel(
+class _$_CapsuleNetworkFullModel extends _CapsuleNetworkFullModel {
+  const _$_CapsuleNetworkFullModel(
       {@JsonKey(name: 'reuse_count')
           this.reuseCount = 0,
       @JsonKey(name: 'water_landings')
@@ -570,8 +574,8 @@ class _$_CapsuleFullModel extends _CapsuleFullModel {
       : _launches = launches,
         super._();
 
-  factory _$_CapsuleFullModel.fromJson(Map<String, dynamic> json) =>
-      _$$_CapsuleFullModelFromJson(json);
+  factory _$_CapsuleNetworkFullModel.fromJson(Map<String, dynamic> json) =>
+      _$$_CapsuleNetworkFullModelFromJson(json);
 
   @override
   @JsonKey(name: 'reuse_count')
@@ -609,14 +613,14 @@ class _$_CapsuleFullModel extends _CapsuleFullModel {
 
   @override
   String toString() {
-    return 'CapsuleFullModel(reuseCount: $reuseCount, waterLandings: $waterLandings, landLandings: $landLandings, lastUpdate: $lastUpdate, launches: $launches, serial: $serial, status: $status, type: $type, id: $id)';
+    return 'CapsuleNetworkFullModel(reuseCount: $reuseCount, waterLandings: $waterLandings, landLandings: $landLandings, lastUpdate: $lastUpdate, launches: $launches, serial: $serial, status: $status, type: $type, id: $id)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_CapsuleFullModel &&
+            other is _$_CapsuleNetworkFullModel &&
             (identical(other.reuseCount, reuseCount) ||
                 other.reuseCount == reuseCount) &&
             (identical(other.waterLandings, waterLandings) ||
@@ -649,32 +653,35 @@ class _$_CapsuleFullModel extends _CapsuleFullModel {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_CapsuleFullModelCopyWith<_$_CapsuleFullModel> get copyWith =>
-      __$$_CapsuleFullModelCopyWithImpl<_$_CapsuleFullModel>(this, _$identity);
+  _$$_CapsuleNetworkFullModelCopyWith<_$_CapsuleNetworkFullModel>
+      get copyWith =>
+          __$$_CapsuleNetworkFullModelCopyWithImpl<_$_CapsuleNetworkFullModel>(
+              this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CapsuleFullModelToJson(
+    return _$$_CapsuleNetworkFullModelToJson(
       this,
     );
   }
 }
 
-abstract class _CapsuleFullModel extends CapsuleFullModel {
-  const factory _CapsuleFullModel(
-      {@JsonKey(name: 'reuse_count') final int reuseCount,
-      @JsonKey(name: 'water_landings') final int waterLandings,
-      @JsonKey(name: 'land_landings') final int landLandings,
-      @JsonKey(name: 'last_update') final String? lastUpdate,
-      @JsonKey(name: 'launches') final List<LaunchModel> launches,
-      final String serial,
-      final String status,
-      final String type,
-      @JsonKey(name: 'id') required final String id}) = _$_CapsuleFullModel;
-  const _CapsuleFullModel._() : super._();
+abstract class _CapsuleNetworkFullModel extends CapsuleNetworkFullModel {
+  const factory _CapsuleNetworkFullModel(
+          {@JsonKey(name: 'reuse_count') final int reuseCount,
+          @JsonKey(name: 'water_landings') final int waterLandings,
+          @JsonKey(name: 'land_landings') final int landLandings,
+          @JsonKey(name: 'last_update') final String? lastUpdate,
+          @JsonKey(name: 'launches') final List<LaunchModel> launches,
+          final String serial,
+          final String status,
+          final String type,
+          @JsonKey(name: 'id') required final String id}) =
+      _$_CapsuleNetworkFullModel;
+  const _CapsuleNetworkFullModel._() : super._();
 
-  factory _CapsuleFullModel.fromJson(Map<String, dynamic> json) =
-      _$_CapsuleFullModel.fromJson;
+  factory _CapsuleNetworkFullModel.fromJson(Map<String, dynamic> json) =
+      _$_CapsuleNetworkFullModel.fromJson;
 
   @override
   @JsonKey(name: 'reuse_count')
@@ -702,6 +709,6 @@ abstract class _CapsuleFullModel extends CapsuleFullModel {
   String get id;
   @override
   @JsonKey(ignore: true)
-  _$$_CapsuleFullModelCopyWith<_$_CapsuleFullModel> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$_CapsuleNetworkFullModelCopyWith<_$_CapsuleNetworkFullModel>
+      get copyWith => throw _privateConstructorUsedError;
 }

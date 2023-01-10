@@ -6,7 +6,7 @@ class HistoryDataSource {
 
   final HistoryApi _api;
 
-  Future<List<AchievementModel>> getHistory() async {
+  Future<List<AchievementNetworkModel>> getHistory() async {
     try {
       return _api.getHistory();
     } on DioError catch (_) {

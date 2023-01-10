@@ -9,20 +9,20 @@ abstract class CapsulesApi {
   factory CapsulesApi(Dio dio) = _CapsulesApi;
 
   @GET('/capsules')
-  Future<List<CapsuleModel>> getAllCapsules();
+  Future<List<CapsuleNetworkModel>> getAllCapsules();
 
   @GET('/capsules/{id}')
-  Future<CapsuleModel> getCapsule(
+  Future<CapsuleNetworkModel> getCapsule(
     @Path() String id,
   );
 
   @POST('/capsules/query')
-  Future<ApiPaginatedList<CapsuleModel>> queryCapsules(
+  Future<ApiPaginatedList<CapsuleNetworkModel>> queryCapsules(
     @Body() QueryModel query,
   );
 
   @POST('/capsules/query')
-  Future<ApiPaginatedList<CapsuleFullModel>> queryFullCapsules(
+  Future<ApiPaginatedList<CapsuleNetworkFullModel>> queryFullCapsules(
     @Body() QueryModel query,
   );
 }

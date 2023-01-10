@@ -1,14 +1,15 @@
 import 'package:data/data.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-part 'capsule_model.freezed.dart';
+part 'capsule_network_model.freezed.dart';
 
-part 'capsule_model.g.dart';
+part 'capsule_network_model.g.dart';
 
-/// Details about a specific capsule used in a CRS mission
+/// Network representation of a Details about a specific capsule used in a
+/// CRS mission
 @freezed
-class CapsuleModel with _$CapsuleModel {
-  const factory CapsuleModel({
+class CapsuleNetworkModel with _$CapsuleNetworkModel {
+  const factory CapsuleNetworkModel({
     @JsonKey(name: 'reuse_count') @Default(0) int reuseCount,
     @JsonKey(name: 'water_landings') @Default(0) int waterLandings,
     @JsonKey(name: 'land_landings') @Default(0) int landLandings,
@@ -18,18 +19,18 @@ class CapsuleModel with _$CapsuleModel {
     @Default('') String status,
     @Default('') String type,
     @JsonKey(name: 'id') required String id,
-  }) = _CapsuleModel;
+  }) = _CapsuleNetworkModel;
 
-  const CapsuleModel._();
+  const CapsuleNetworkModel._();
 
-  factory CapsuleModel.fromJson(Map<String, dynamic> json) =>
-      _$CapsuleModelFromJson(json);
+  factory CapsuleNetworkModel.fromJson(Map<String, dynamic> json) =>
+      _$CapsuleNetworkModelFromJson(json);
 }
 
 /// Details about a specific capsule used in a CRS mission
 @freezed
-class CapsuleFullModel with _$CapsuleFullModel {
-  const factory CapsuleFullModel({
+class CapsuleNetworkFullModel with _$CapsuleNetworkFullModel {
+  const factory CapsuleNetworkFullModel({
     @JsonKey(name: 'reuse_count') @Default(0) int reuseCount,
     @JsonKey(name: 'water_landings') @Default(0) int waterLandings,
     @JsonKey(name: 'land_landings') @Default(0) int landLandings,
@@ -41,10 +42,10 @@ class CapsuleFullModel with _$CapsuleFullModel {
     @Default('') String status,
     @Default('') String type,
     @JsonKey(name: 'id') required String id,
-  }) = _CapsuleFullModel;
+  }) = _CapsuleNetworkFullModel;
 
-  const CapsuleFullModel._();
+  const CapsuleNetworkFullModel._();
 
-  factory CapsuleFullModel.fromJson(Map<String, dynamic> json) =>
-      _$CapsuleFullModelFromJson(json);
+  factory CapsuleNetworkFullModel.fromJson(Map<String, dynamic> json) =>
+      _$CapsuleNetworkFullModelFromJson(json);
 }

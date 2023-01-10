@@ -1,25 +1,27 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'achievement_model.dart';
+part of 'achievement_network_model.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_AchievementModel _$$_AchievementModelFromJson(Map<String, dynamic> json) =>
-    _$_AchievementModel(
+_$_AchievementNetworkModel _$$_AchievementNetworkModelFromJson(
+        Map<String, dynamic> json) =>
+    _$_AchievementNetworkModel(
       id: json['id'] as String,
       name: json['title'] as String?,
       details: json['details'] as String?,
       links: json['links'] == null
           ? null
-          : AchievementLinksModel.fromJson(
+          : AchievementLinksNetworkModel.fromJson(
               json['links'] as Map<String, dynamic>),
       eventDateUtc: json['event_date_utc'] as String?,
       eventDateUnix: json['event_date_unix'] as int?,
     );
 
-Map<String, dynamic> _$$_AchievementModelToJson(_$_AchievementModel instance) {
+Map<String, dynamic> _$$_AchievementNetworkModelToJson(
+    _$_AchievementNetworkModel instance) {
   final val = <String, dynamic>{
     'id': instance.id,
   };
@@ -38,14 +40,14 @@ Map<String, dynamic> _$$_AchievementModelToJson(_$_AchievementModel instance) {
   return val;
 }
 
-_$_AchievementLinksModel _$$_AchievementLinksModelFromJson(
+_$_AchievementLinksNetworkModel _$$_AchievementLinksNetworkModelFromJson(
         Map<String, dynamic> json) =>
-    _$_AchievementLinksModel(
+    _$_AchievementLinksNetworkModel(
       article: json['article'] as String?,
     );
 
-Map<String, dynamic> _$$_AchievementLinksModelToJson(
-    _$_AchievementLinksModel instance) {
+Map<String, dynamic> _$$_AchievementLinksNetworkModelToJson(
+    _$_AchievementLinksNetworkModel instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {

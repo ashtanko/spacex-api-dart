@@ -30,7 +30,8 @@ _$_FullLaunchModel _$$_FullLaunchModelFromJson(Map<String, dynamic> json) =>
               .toList() ??
           const [],
       capsules: (json['capsules'] as List<dynamic>?)
-              ?.map((e) => CapsuleModel.fromJson(e as Map<String, dynamic>))
+              ?.map((e) =>
+                  CapsuleNetworkModel.fromJson(e as Map<String, dynamic>))
               .toList() ??
           const [],
       ships: (json['ships'] as List<dynamic>?)

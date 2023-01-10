@@ -9,5 +9,5 @@ abstract class HistoryApi {
   factory HistoryApi(Dio dio) = _HistoryApi;
 
   @GET('/history')
-  Future<List<AchievementModel>> getHistory();
+  Future<List<AchievementNetworkModel>> getHistory();
 }

@@ -21,7 +21,7 @@ class FullLaunchModel with _$FullLaunchModel {
     @JsonKey(name: 'flight_number') @Default(0) int flightNumber,
     @JsonKey(name: 'launchpad') LaunchpadModel? launchpad,
     @JsonKey(name: 'payloads') @Default([]) List<PayloadModel> payloads,
-    @JsonKey(name: 'capsules') @Default([]) List<CapsuleModel> capsules,
+    @JsonKey(name: 'capsules') @Default([]) List<CapsuleNetworkModel> capsules,
     @JsonKey(name: 'ships') @Default([]) List<ShipModel> ships,
     @JsonKey(name: 'crew') @Default([]) List<String> crew,
     @JsonKey(name: 'details') @Default('') String details,

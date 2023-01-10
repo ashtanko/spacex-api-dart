@@ -21,13 +21,13 @@ class _HistoryApi implements HistoryApi {
   String? baseUrl;
 
   @override
-  Future<List<AchievementModel>> getHistory() async {
+  Future<List<AchievementNetworkModel>> getHistory() async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
-    final _result = await _dio
-        .fetch<List<dynamic>>(_setStreamType<List<AchievementModel>>(Options(
+    final _result = await _dio.fetch<List<dynamic>>(
+        _setStreamType<List<AchievementNetworkModel>>(Options(
       method: 'GET',
       headers: _headers,
       extra: _extra,
@@ -40,8 +40,8 @@ class _HistoryApi implements HistoryApi {
             )
             .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
     var value = _result.data!
-        .map(
-            (dynamic i) => AchievementModel.fromJson(i as Map<String, dynamic>))
+        .map((dynamic i) =>
+            AchievementNetworkModel.fromJson(i as Map<String, dynamic>))
         .toList();
     return value;
   }

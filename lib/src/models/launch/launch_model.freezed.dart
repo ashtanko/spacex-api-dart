@@ -44,7 +44,7 @@ mixin _$FullLaunchModel {
   @JsonKey(name: 'payloads')
   List<PayloadModel> get payloads => throw _privateConstructorUsedError;
   @JsonKey(name: 'capsules')
-  List<CapsuleModel> get capsules => throw _privateConstructorUsedError;
+  List<CapsuleNetworkModel> get capsules => throw _privateConstructorUsedError;
   @JsonKey(name: 'ships')
   List<ShipModel> get ships => throw _privateConstructorUsedError;
   @JsonKey(name: 'crew')
@@ -98,7 +98,7 @@ abstract class $FullLaunchModelCopyWith<$Res> {
       @JsonKey(name: 'flight_number') int flightNumber,
       @JsonKey(name: 'launchpad') LaunchpadModel? launchpad,
       @JsonKey(name: 'payloads') List<PayloadModel> payloads,
-      @JsonKey(name: 'capsules') List<CapsuleModel> capsules,
+      @JsonKey(name: 'capsules') List<CapsuleNetworkModel> capsules,
       @JsonKey(name: 'ships') List<ShipModel> ships,
       @JsonKey(name: 'crew') List<String> crew,
       @JsonKey(name: 'details') String details,
@@ -216,7 +216,7 @@ class _$FullLaunchModelCopyWithImpl<$Res, $Val extends FullLaunchModel>
       capsules: null == capsules
           ? _value.capsules
           : capsules // ignore: cast_nullable_to_non_nullable
-              as List<CapsuleModel>,
+              as List<CapsuleNetworkModel>,
       ships: null == ships
           ? _value.ships
           : ships // ignore: cast_nullable_to_non_nullable
@@ -343,7 +343,7 @@ abstract class _$$_FullLaunchModelCopyWith<$Res>
       @JsonKey(name: 'flight_number') int flightNumber,
       @JsonKey(name: 'launchpad') LaunchpadModel? launchpad,
       @JsonKey(name: 'payloads') List<PayloadModel> payloads,
-      @JsonKey(name: 'capsules') List<CapsuleModel> capsules,
+      @JsonKey(name: 'capsules') List<CapsuleNetworkModel> capsules,
       @JsonKey(name: 'ships') List<ShipModel> ships,
       @JsonKey(name: 'crew') List<String> crew,
       @JsonKey(name: 'details') String details,
@@ -463,7 +463,7 @@ class __$$_FullLaunchModelCopyWithImpl<$Res>
       capsules: null == capsules
           ? _value._capsules
           : capsules // ignore: cast_nullable_to_non_nullable
-              as List<CapsuleModel>,
+              as List<CapsuleNetworkModel>,
       ships: null == ships
           ? _value._ships
           : ships // ignore: cast_nullable_to_non_nullable
@@ -548,7 +548,7 @@ class _$_FullLaunchModel extends _FullLaunchModel {
       @JsonKey(name: 'payloads')
           final List<PayloadModel> payloads = const [],
       @JsonKey(name: 'capsules')
-          final List<CapsuleModel> capsules = const [],
+          final List<CapsuleNetworkModel> capsules = const [],
       @JsonKey(name: 'ships')
           final List<ShipModel> ships = const [],
       @JsonKey(name: 'crew')
@@ -636,10 +636,10 @@ class _$_FullLaunchModel extends _FullLaunchModel {
     return EqualUnmodifiableListView(_payloads);
   }
 
-  final List<CapsuleModel> _capsules;
+  final List<CapsuleNetworkModel> _capsules;
   @override
   @JsonKey(name: 'capsules')
-  List<CapsuleModel> get capsules {
+  List<CapsuleNetworkModel> get capsules {
     if (_capsules is EqualUnmodifiableListView) return _capsules;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_capsules);
@@ -815,7 +815,7 @@ abstract class _FullLaunchModel extends FullLaunchModel {
           @JsonKey(name: 'flight_number') final int flightNumber,
           @JsonKey(name: 'launchpad') final LaunchpadModel? launchpad,
           @JsonKey(name: 'payloads') final List<PayloadModel> payloads,
-          @JsonKey(name: 'capsules') final List<CapsuleModel> capsules,
+          @JsonKey(name: 'capsules') final List<CapsuleNetworkModel> capsules,
           @JsonKey(name: 'ships') final List<ShipModel> ships,
           @JsonKey(name: 'crew') final List<String> crew,
           @JsonKey(name: 'details') final String details,
@@ -873,7 +873,7 @@ abstract class _FullLaunchModel extends FullLaunchModel {
   List<PayloadModel> get payloads;
   @override
   @JsonKey(name: 'capsules')
-  List<CapsuleModel> get capsules;
+  List<CapsuleNetworkModel> get capsules;
   @override
   @JsonKey(name: 'ships')
   List<ShipModel> get ships;

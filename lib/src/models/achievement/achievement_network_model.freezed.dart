@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'achievement_model.dart';
+part of 'achievement_network_model.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -14,12 +14,13 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
-AchievementModel _$AchievementModelFromJson(Map<String, dynamic> json) {
-  return _AchievementModel.fromJson(json);
+AchievementNetworkModel _$AchievementNetworkModelFromJson(
+    Map<String, dynamic> json) {
+  return _AchievementNetworkModel.fromJson(json);
 }
 
 /// @nodoc
-mixin _$AchievementModel {
+mixin _$AchievementNetworkModel {
   @JsonKey(name: 'id')
   String get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'title')
@@ -27,7 +28,7 @@ mixin _$AchievementModel {
   @JsonKey(name: 'details')
   String? get details => throw _privateConstructorUsedError;
   @JsonKey(name: 'links')
-  AchievementLinksModel? get links => throw _privateConstructorUsedError;
+  AchievementLinksNetworkModel? get links => throw _privateConstructorUsedError;
   @JsonKey(name: 'event_date_utc')
   String? get eventDateUtc => throw _privateConstructorUsedError;
   @JsonKey(name: 'event_date_unix')
@@ -35,31 +36,32 @@ mixin _$AchievementModel {
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $AchievementModelCopyWith<AchievementModel> get copyWith =>
+  $AchievementNetworkModelCopyWith<AchievementNetworkModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $AchievementModelCopyWith<$Res> {
-  factory $AchievementModelCopyWith(
-          AchievementModel value, $Res Function(AchievementModel) then) =
-      _$AchievementModelCopyWithImpl<$Res, AchievementModel>;
+abstract class $AchievementNetworkModelCopyWith<$Res> {
+  factory $AchievementNetworkModelCopyWith(AchievementNetworkModel value,
+          $Res Function(AchievementNetworkModel) then) =
+      _$AchievementNetworkModelCopyWithImpl<$Res, AchievementNetworkModel>;
   @useResult
   $Res call(
       {@JsonKey(name: 'id') String id,
       @JsonKey(name: 'title') String? name,
       @JsonKey(name: 'details') String? details,
-      @JsonKey(name: 'links') AchievementLinksModel? links,
+      @JsonKey(name: 'links') AchievementLinksNetworkModel? links,
       @JsonKey(name: 'event_date_utc') String? eventDateUtc,
       @JsonKey(name: 'event_date_unix') int? eventDateUnix});
 
-  $AchievementLinksModelCopyWith<$Res>? get links;
+  $AchievementLinksNetworkModelCopyWith<$Res>? get links;
 }
 
 /// @nodoc
-class _$AchievementModelCopyWithImpl<$Res, $Val extends AchievementModel>
-    implements $AchievementModelCopyWith<$Res> {
-  _$AchievementModelCopyWithImpl(this._value, this._then);
+class _$AchievementNetworkModelCopyWithImpl<$Res,
+        $Val extends AchievementNetworkModel>
+    implements $AchievementNetworkModelCopyWith<$Res> {
+  _$AchievementNetworkModelCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -92,7 +94,7 @@ class _$AchievementModelCopyWithImpl<$Res, $Val extends AchievementModel>
       links: freezed == links
           ? _value.links
           : links // ignore: cast_nullable_to_non_nullable
-              as AchievementLinksModel?,
+              as AchievementLinksNetworkModel?,
       eventDateUtc: freezed == eventDateUtc
           ? _value.eventDateUtc
           : eventDateUtc // ignore: cast_nullable_to_non_nullable
@@ -106,43 +108,44 @@ class _$AchievementModelCopyWithImpl<$Res, $Val extends AchievementModel>
 
   @override
   @pragma('vm:prefer-inline')
-  $AchievementLinksModelCopyWith<$Res>? get links {
+  $AchievementLinksNetworkModelCopyWith<$Res>? get links {
     if (_value.links == null) {
       return null;
     }
 
-    return $AchievementLinksModelCopyWith<$Res>(_value.links!, (value) {
+    return $AchievementLinksNetworkModelCopyWith<$Res>(_value.links!, (value) {
       return _then(_value.copyWith(links: value) as $Val);
     });
   }
 }
 
 /// @nodoc
-abstract class _$$_AchievementModelCopyWith<$Res>
-    implements $AchievementModelCopyWith<$Res> {
-  factory _$$_AchievementModelCopyWith(
-          _$_AchievementModel value, $Res Function(_$_AchievementModel) then) =
-      __$$_AchievementModelCopyWithImpl<$Res>;
+abstract class _$$_AchievementNetworkModelCopyWith<$Res>
+    implements $AchievementNetworkModelCopyWith<$Res> {
+  factory _$$_AchievementNetworkModelCopyWith(_$_AchievementNetworkModel value,
+          $Res Function(_$_AchievementNetworkModel) then) =
+      __$$_AchievementNetworkModelCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
       {@JsonKey(name: 'id') String id,
       @JsonKey(name: 'title') String? name,
       @JsonKey(name: 'details') String? details,
-      @JsonKey(name: 'links') AchievementLinksModel? links,
+      @JsonKey(name: 'links') AchievementLinksNetworkModel? links,
       @JsonKey(name: 'event_date_utc') String? eventDateUtc,
       @JsonKey(name: 'event_date_unix') int? eventDateUnix});
 
   @override
-  $AchievementLinksModelCopyWith<$Res>? get links;
+  $AchievementLinksNetworkModelCopyWith<$Res>? get links;
 }
 
 /// @nodoc
-class __$$_AchievementModelCopyWithImpl<$Res>
-    extends _$AchievementModelCopyWithImpl<$Res, _$_AchievementModel>
-    implements _$$_AchievementModelCopyWith<$Res> {
-  __$$_AchievementModelCopyWithImpl(
-      _$_AchievementModel _value, $Res Function(_$_AchievementModel) _then)
+class __$$_AchievementNetworkModelCopyWithImpl<$Res>
+    extends _$AchievementNetworkModelCopyWithImpl<$Res,
+        _$_AchievementNetworkModel>
+    implements _$$_AchievementNetworkModelCopyWith<$Res> {
+  __$$_AchievementNetworkModelCopyWithImpl(_$_AchievementNetworkModel _value,
+      $Res Function(_$_AchievementNetworkModel) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -155,7 +158,7 @@ class __$$_AchievementModelCopyWithImpl<$Res>
     Object? eventDateUtc = freezed,
     Object? eventDateUnix = freezed,
   }) {
-    return _then(_$_AchievementModel(
+    return _then(_$_AchievementNetworkModel(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -171,7 +174,7 @@ class __$$_AchievementModelCopyWithImpl<$Res>
       links: freezed == links
           ? _value.links
           : links // ignore: cast_nullable_to_non_nullable
-              as AchievementLinksModel?,
+              as AchievementLinksNetworkModel?,
       eventDateUtc: freezed == eventDateUtc
           ? _value.eventDateUtc
           : eventDateUtc // ignore: cast_nullable_to_non_nullable
@@ -186,8 +189,8 @@ class __$$_AchievementModelCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_AchievementModel extends _AchievementModel {
-  const _$_AchievementModel(
+class _$_AchievementNetworkModel extends _AchievementNetworkModel {
+  const _$_AchievementNetworkModel(
       {@JsonKey(name: 'id') required this.id,
       @JsonKey(name: 'title') this.name,
       @JsonKey(name: 'details') this.details,
@@ -196,8 +199,8 @@ class _$_AchievementModel extends _AchievementModel {
       @JsonKey(name: 'event_date_unix') this.eventDateUnix})
       : super._();
 
-  factory _$_AchievementModel.fromJson(Map<String, dynamic> json) =>
-      _$$_AchievementModelFromJson(json);
+  factory _$_AchievementNetworkModel.fromJson(Map<String, dynamic> json) =>
+      _$$_AchievementNetworkModelFromJson(json);
 
   @override
   @JsonKey(name: 'id')
@@ -210,7 +213,7 @@ class _$_AchievementModel extends _AchievementModel {
   final String? details;
   @override
   @JsonKey(name: 'links')
-  final AchievementLinksModel? links;
+  final AchievementLinksNetworkModel? links;
   @override
   @JsonKey(name: 'event_date_utc')
   final String? eventDateUtc;
@@ -220,14 +223,14 @@ class _$_AchievementModel extends _AchievementModel {
 
   @override
   String toString() {
-    return 'AchievementModel(id: $id, name: $name, details: $details, links: $links, eventDateUtc: $eventDateUtc, eventDateUnix: $eventDateUnix)';
+    return 'AchievementNetworkModel(id: $id, name: $name, details: $details, links: $links, eventDateUtc: $eventDateUtc, eventDateUnix: $eventDateUnix)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_AchievementModel &&
+            other is _$_AchievementNetworkModel &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.name, name) || other.name == name) &&
             (identical(other.details, details) || other.details == details) &&
@@ -246,30 +249,32 @@ class _$_AchievementModel extends _AchievementModel {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_AchievementModelCopyWith<_$_AchievementModel> get copyWith =>
-      __$$_AchievementModelCopyWithImpl<_$_AchievementModel>(this, _$identity);
+  _$$_AchievementNetworkModelCopyWith<_$_AchievementNetworkModel>
+      get copyWith =>
+          __$$_AchievementNetworkModelCopyWithImpl<_$_AchievementNetworkModel>(
+              this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_AchievementModelToJson(
+    return _$$_AchievementNetworkModelToJson(
       this,
     );
   }
 }
 
-abstract class _AchievementModel extends AchievementModel {
-  const factory _AchievementModel(
+abstract class _AchievementNetworkModel extends AchievementNetworkModel {
+  const factory _AchievementNetworkModel(
           {@JsonKey(name: 'id') required final String id,
           @JsonKey(name: 'title') final String? name,
           @JsonKey(name: 'details') final String? details,
-          @JsonKey(name: 'links') final AchievementLinksModel? links,
+          @JsonKey(name: 'links') final AchievementLinksNetworkModel? links,
           @JsonKey(name: 'event_date_utc') final String? eventDateUtc,
           @JsonKey(name: 'event_date_unix') final int? eventDateUnix}) =
-      _$_AchievementModel;
-  const _AchievementModel._() : super._();
+      _$_AchievementNetworkModel;
+  const _AchievementNetworkModel._() : super._();
 
-  factory _AchievementModel.fromJson(Map<String, dynamic> json) =
-      _$_AchievementModel.fromJson;
+  factory _AchievementNetworkModel.fromJson(Map<String, dynamic> json) =
+      _$_AchievementNetworkModel.fromJson;
 
   @override
   @JsonKey(name: 'id')
@@ -282,7 +287,7 @@ abstract class _AchievementModel extends AchievementModel {
   String? get details;
   @override
   @JsonKey(name: 'links')
-  AchievementLinksModel? get links;
+  AchievementLinksNetworkModel? get links;
   @override
   @JsonKey(name: 'event_date_utc')
   String? get eventDateUtc;
@@ -291,40 +296,42 @@ abstract class _AchievementModel extends AchievementModel {
   int? get eventDateUnix;
   @override
   @JsonKey(ignore: true)
-  _$$_AchievementModelCopyWith<_$_AchievementModel> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$_AchievementNetworkModelCopyWith<_$_AchievementNetworkModel>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
-AchievementLinksModel _$AchievementLinksModelFromJson(
+AchievementLinksNetworkModel _$AchievementLinksNetworkModelFromJson(
     Map<String, dynamic> json) {
-  return _AchievementLinksModel.fromJson(json);
+  return _AchievementLinksNetworkModel.fromJson(json);
 }
 
 /// @nodoc
-mixin _$AchievementLinksModel {
+mixin _$AchievementLinksNetworkModel {
   @JsonKey(name: 'article')
   String? get article => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $AchievementLinksModelCopyWith<AchievementLinksModel> get copyWith =>
-      throw _privateConstructorUsedError;
+  $AchievementLinksNetworkModelCopyWith<AchievementLinksNetworkModel>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $AchievementLinksModelCopyWith<$Res> {
-  factory $AchievementLinksModelCopyWith(AchievementLinksModel value,
-          $Res Function(AchievementLinksModel) then) =
-      _$AchievementLinksModelCopyWithImpl<$Res, AchievementLinksModel>;
+abstract class $AchievementLinksNetworkModelCopyWith<$Res> {
+  factory $AchievementLinksNetworkModelCopyWith(
+          AchievementLinksNetworkModel value,
+          $Res Function(AchievementLinksNetworkModel) then) =
+      _$AchievementLinksNetworkModelCopyWithImpl<$Res,
+          AchievementLinksNetworkModel>;
   @useResult
   $Res call({@JsonKey(name: 'article') String? article});
 }
 
 /// @nodoc
-class _$AchievementLinksModelCopyWithImpl<$Res,
-        $Val extends AchievementLinksModel>
-    implements $AchievementLinksModelCopyWith<$Res> {
-  _$AchievementLinksModelCopyWithImpl(this._value, this._then);
+class _$AchievementLinksNetworkModelCopyWithImpl<$Res,
+        $Val extends AchievementLinksNetworkModel>
+    implements $AchievementLinksNetworkModelCopyWith<$Res> {
+  _$AchievementLinksNetworkModelCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -346,22 +353,25 @@ class _$AchievementLinksModelCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_AchievementLinksModelCopyWith<$Res>
-    implements $AchievementLinksModelCopyWith<$Res> {
-  factory _$$_AchievementLinksModelCopyWith(_$_AchievementLinksModel value,
-          $Res Function(_$_AchievementLinksModel) then) =
-      __$$_AchievementLinksModelCopyWithImpl<$Res>;
+abstract class _$$_AchievementLinksNetworkModelCopyWith<$Res>
+    implements $AchievementLinksNetworkModelCopyWith<$Res> {
+  factory _$$_AchievementLinksNetworkModelCopyWith(
+          _$_AchievementLinksNetworkModel value,
+          $Res Function(_$_AchievementLinksNetworkModel) then) =
+      __$$_AchievementLinksNetworkModelCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({@JsonKey(name: 'article') String? article});
 }
 
 /// @nodoc
-class __$$_AchievementLinksModelCopyWithImpl<$Res>
-    extends _$AchievementLinksModelCopyWithImpl<$Res, _$_AchievementLinksModel>
-    implements _$$_AchievementLinksModelCopyWith<$Res> {
-  __$$_AchievementLinksModelCopyWithImpl(_$_AchievementLinksModel _value,
-      $Res Function(_$_AchievementLinksModel) _then)
+class __$$_AchievementLinksNetworkModelCopyWithImpl<$Res>
+    extends _$AchievementLinksNetworkModelCopyWithImpl<$Res,
+        _$_AchievementLinksNetworkModel>
+    implements _$$_AchievementLinksNetworkModelCopyWith<$Res> {
+  __$$_AchievementLinksNetworkModelCopyWithImpl(
+      _$_AchievementLinksNetworkModel _value,
+      $Res Function(_$_AchievementLinksNetworkModel) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -369,7 +379,7 @@ class __$$_AchievementLinksModelCopyWithImpl<$Res>
   $Res call({
     Object? article = freezed,
   }) {
-    return _then(_$_AchievementLinksModel(
+    return _then(_$_AchievementLinksNetworkModel(
       article: freezed == article
           ? _value.article
           : article // ignore: cast_nullable_to_non_nullable
@@ -380,12 +390,13 @@ class __$$_AchievementLinksModelCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_AchievementLinksModel extends _AchievementLinksModel {
-  const _$_AchievementLinksModel({@JsonKey(name: 'article') this.article})
+class _$_AchievementLinksNetworkModel extends _AchievementLinksNetworkModel {
+  const _$_AchievementLinksNetworkModel(
+      {@JsonKey(name: 'article') this.article})
       : super._();
 
-  factory _$_AchievementLinksModel.fromJson(Map<String, dynamic> json) =>
-      _$$_AchievementLinksModelFromJson(json);
+  factory _$_AchievementLinksNetworkModel.fromJson(Map<String, dynamic> json) =>
+      _$$_AchievementLinksNetworkModelFromJson(json);
 
   @override
   @JsonKey(name: 'article')
@@ -393,14 +404,14 @@ class _$_AchievementLinksModel extends _AchievementLinksModel {
 
   @override
   String toString() {
-    return 'AchievementLinksModel(article: $article)';
+    return 'AchievementLinksNetworkModel(article: $article)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_AchievementLinksModel &&
+            other is _$_AchievementLinksNetworkModel &&
             (identical(other.article, article) || other.article == article));
   }
 
@@ -411,32 +422,33 @@ class _$_AchievementLinksModel extends _AchievementLinksModel {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_AchievementLinksModelCopyWith<_$_AchievementLinksModel> get copyWith =>
-      __$$_AchievementLinksModelCopyWithImpl<_$_AchievementLinksModel>(
-          this, _$identity);
+  _$$_AchievementLinksNetworkModelCopyWith<_$_AchievementLinksNetworkModel>
+      get copyWith => __$$_AchievementLinksNetworkModelCopyWithImpl<
+          _$_AchievementLinksNetworkModel>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_AchievementLinksModelToJson(
+    return _$$_AchievementLinksNetworkModelToJson(
       this,
     );
   }
 }
 
-abstract class _AchievementLinksModel extends AchievementLinksModel {
-  const factory _AchievementLinksModel(
+abstract class _AchievementLinksNetworkModel
+    extends AchievementLinksNetworkModel {
+  const factory _AchievementLinksNetworkModel(
           {@JsonKey(name: 'article') final String? article}) =
-      _$_AchievementLinksModel;
-  const _AchievementLinksModel._() : super._();
+      _$_AchievementLinksNetworkModel;
+  const _AchievementLinksNetworkModel._() : super._();
 
-  factory _AchievementLinksModel.fromJson(Map<String, dynamic> json) =
-      _$_AchievementLinksModel.fromJson;
+  factory _AchievementLinksNetworkModel.fromJson(Map<String, dynamic> json) =
+      _$_AchievementLinksNetworkModel.fromJson;
 
   @override
   @JsonKey(name: 'article')
   String? get article;
   @override
   @JsonKey(ignore: true)
-  _$$_AchievementLinksModelCopyWith<_$_AchievementLinksModel> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$_AchievementLinksNetworkModelCopyWith<_$_AchievementLinksNetworkModel>
+      get copyWith => throw _privateConstructorUsedError;
 }
