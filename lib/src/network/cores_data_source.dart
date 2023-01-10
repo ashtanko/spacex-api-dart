@@ -23,7 +23,7 @@ class CoresDataSource {
   }
 
   Future<ApiPaginatedList<CoreNetworkModel>> queryCores(
-    QueryModel query,
+    QueryNetworkModel query,
   ) async {
     try {
       return _api.queryCores(query);
@@ -33,7 +33,7 @@ class CoresDataSource {
   }
 
   Future<ApiPaginatedList<CoreNetworkFullModel>> queryFullCores(
-    QueryModel query,
+    QueryNetworkModel query,
   ) async {
     try {
       return _api.queryFullCores(query);

@@ -26,7 +26,7 @@ void main() {
             'starlink/starlink.json'.toFixture();
 
         // act
-        final result = StarlinkModel.fromJson(jsonMap);
+        final result = StarlinkNetworkModel.fromJson(jsonMap);
 
         // assert
         expect(result, equals(starlinkModel));

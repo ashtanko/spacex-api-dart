@@ -6,7 +6,7 @@ class VehicleDataSource {
 
   final VehicleApi _api;
 
-  Future<List<DragonModel>> getAllDragons() async {
+  Future<List<DragonNetworkModel>> getAllDragons() async {
     try {
       return _api.getAllDragons();
     } on DioError catch (_) {
@@ -14,7 +14,7 @@ class VehicleDataSource {
     }
   }
 
-  Future<DragonModel> getDragon(String id) async {
+  Future<DragonNetworkModel> getDragon(String id) async {
     try {
       return _api.getDragon(id);
     } on DioError catch (_) {
@@ -22,8 +22,8 @@ class VehicleDataSource {
     }
   }
 
-  Future<ApiPaginatedList<DragonModel>> queryDragons(
-    QueryModel query,
+  Future<ApiPaginatedList<DragonNetworkModel>> queryDragons(
+    QueryNetworkModel query,
   ) async {
     try {
       return _api.queryDragons(query);
@@ -33,7 +33,7 @@ class VehicleDataSource {
   }
 
   // ships
-  Future<List<ShipModel>> getAllShips() async {
+  Future<List<ShipNetworkModel>> getAllShips() async {
     try {
       return _api.getAllShips();
     } on DioError catch (_) {
@@ -41,7 +41,7 @@ class VehicleDataSource {
     }
   }
 
-  Future<ShipModel> getShip(String id) async {
+  Future<ShipNetworkModel> getShip(String id) async {
     try {
       return _api.getShip(id);
     } on DioError catch (_) {
@@ -49,8 +49,8 @@ class VehicleDataSource {
     }
   }
 
-  Future<ApiPaginatedList<ShipModel>> queryShips(
-    QueryModel query,
+  Future<ApiPaginatedList<ShipNetworkModel>> queryShips(
+    QueryNetworkModel query,
   ) async {
     try {
       return _api.queryShips(query);
@@ -59,8 +59,8 @@ class VehicleDataSource {
     }
   }
 
-  Future<ApiPaginatedList<ShipFullModel>> queryFullShips(
-    QueryModel query,
+  Future<ApiPaginatedList<ShipNetworkFullModel>> queryFullShips(
+    QueryNetworkModel query,
   ) async {
     try {
       return _api.queryFullShips(query);
@@ -70,7 +70,7 @@ class VehicleDataSource {
   }
 
   // rockets
-  Future<List<RocketModel>> getAllRockets() async {
+  Future<List<RocketNetworkModel>> getAllRockets() async {
     try {
       return _api.getAllRockets();
     } on DioError catch (_) {
@@ -78,7 +78,7 @@ class VehicleDataSource {
     }
   }
 
-  Future<RocketModel> getRocket(String id) async {
+  Future<RocketNetworkModel> getRocket(String id) async {
     try {
       return _api.getRocket(id);
     } on DioError catch (_) {
@@ -86,8 +86,8 @@ class VehicleDataSource {
     }
   }
 
-  Future<ApiPaginatedList<RocketModel>> queryRockets(
-    QueryModel query,
+  Future<ApiPaginatedList<RocketNetworkModel>> queryRockets(
+    QueryNetworkModel query,
   ) async {
     try {
       return _api.queryRockets(query);
@@ -96,7 +96,7 @@ class VehicleDataSource {
     }
   }
 
-  Future<RoadsterVehicleModel> getRoadster() async {
+  Future<RoadsterVehicleNetworkModel> getRoadster() async {
     try {
       return _api.getRoadster();
     } on DioError catch (_) {

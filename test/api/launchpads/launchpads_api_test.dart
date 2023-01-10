@@ -19,7 +19,7 @@ void main() {
 
   group('getAllLaunchpads', () {
     final rawJson = 'launchpads/launchpad.json'.toFixture();
-    final model = LaunchpadModel.fromJson(rawJson);
+    final model = LaunchpadNetworkModel.fromJson(rawJson);
     final mockResponse = [model];
     test(
       'should perform a GET request on /launchpads',
@@ -43,7 +43,7 @@ void main() {
   group('getLaunch', () {
     const id = '5e9e4501f5090910d4566f83';
     final rawJson = 'launchpads/launchpad.json'.toFixture();
-    final mockResponse = LaunchpadModel.fromJson(rawJson);
+    final mockResponse = LaunchpadNetworkModel.fromJson(rawJson);
     test(
       'should perform a GET request on /launchpads/{$id}',
       () async {
@@ -67,11 +67,11 @@ void main() {
     final rawJson = 'launchpads/launchpad.json'.toFixture();
     final mockResponse = ApiPaginatedList(
       results: [
-        LaunchpadModel.fromJson(rawJson),
+        LaunchpadNetworkModel.fromJson(rawJson),
       ],
     );
     final queryRawJson = 'query/query.json'.toFixture();
-    final query = QueryModel.fromJson(queryRawJson);
+    final query = QueryNetworkModel.fromJson(queryRawJson);
     test(
       'should perform a POST request on /launchpads/query',
       () async {
@@ -95,11 +95,11 @@ void main() {
     final rawJson = 'launchpads/full_launchpad.json'.toFixture();
     final mockResponse = ApiPaginatedList(
       results: [
-        LaunchpadFullModel.fromJson(rawJson),
+        LaunchpadNetworkFullModel.fromJson(rawJson),
       ],
     );
     final queryRawJson = 'query/query.json'.toFixture();
-    final query = QueryModel.fromJson(queryRawJson);
+    final query = QueryNetworkModel.fromJson(queryRawJson);
     test(
       'should perform a POST request on /launchpads/query',
       () async {
@@ -157,7 +157,7 @@ void main() {
     test(
       'queryLaunchpads, should throw a ServerException when the response code is 404 or other (unsuccessful)',
       () async {
-        const q = QueryModel();
+        const q = QueryNetworkModel();
         // arrange
         when(() => api.queryLaunchpads(q)).thenThrow(
           dioException,
@@ -175,7 +175,7 @@ void main() {
     test(
       'queryFullLaunchpads, should throw a ServerException when the response code is 404 or other (unsuccessful)',
       () async {
-        const q = QueryModel();
+        const q = QueryNetworkModel();
         // arrange
         when(() => api.queryFullLaunchpads(q)).thenThrow(
           dioException,

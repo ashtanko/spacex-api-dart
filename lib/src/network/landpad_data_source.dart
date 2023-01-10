@@ -23,7 +23,7 @@ class LandPadDataSource {
   }
 
   Future<ApiPaginatedList<LandpadNetworkModel>> queryLandpads(
-    QueryModel query,
+    QueryNetworkModel query,
   ) async {
     try {
       return _api.queryLandpads(query);
@@ -33,7 +33,7 @@ class LandPadDataSource {
   }
 
   Future<ApiPaginatedList<LandpadNetworkFullModel>> queryFullLandpads(
-    QueryModel query,
+    QueryNetworkModel query,
   ) async {
     try {
       return _api.queryFullLandpads(query);

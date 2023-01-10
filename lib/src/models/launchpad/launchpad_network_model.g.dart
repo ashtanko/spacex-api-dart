@@ -1,13 +1,14 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'launchpad_model.dart';
+part of 'launchpad_network_model.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_LaunchpadModel _$$_LaunchpadModelFromJson(Map<String, dynamic> json) =>
-    _$_LaunchpadModel(
+_$_LaunchpadNetworkModel _$$_LaunchpadNetworkModelFromJson(
+        Map<String, dynamic> json) =>
+    _$_LaunchpadNetworkModel(
       id: json['id'] as String,
       details: json['details'] as String?,
       images: json['images'] == null
@@ -35,7 +36,8 @@ _$_LaunchpadModel _$$_LaunchpadModelFromJson(Map<String, dynamic> json) =>
       name: json['name'] as String?,
     );
 
-Map<String, dynamic> _$$_LaunchpadModelToJson(_$_LaunchpadModel instance) {
+Map<String, dynamic> _$$_LaunchpadNetworkModelToJson(
+    _$_LaunchpadNetworkModel instance) {
   final val = <String, dynamic>{
     'id': instance.id,
   };
@@ -69,9 +71,9 @@ const _$LaunchStatusEnumMap = {
   LaunchStatus.unknown: 'unknown',
 };
 
-_$_LaunchpadFullModel _$$_LaunchpadFullModelFromJson(
+_$_LaunchpadNetworkFullModel _$$_LaunchpadNetworkFullModelFromJson(
         Map<String, dynamic> json) =>
-    _$_LaunchpadFullModel(
+    _$_LaunchpadNetworkFullModel(
       id: json['id'] as String,
       details: json['details'] as String?,
       images: json['images'] == null
@@ -87,7 +89,8 @@ _$_LaunchpadFullModel _$$_LaunchpadFullModelFromJson(
           const [],
       timezone: json['timezone'] as String?,
       rockets: (json['rockets'] as List<dynamic>?)
-              ?.map((e) => RocketModel.fromJson(e as Map<String, dynamic>))
+              ?.map(
+                  (e) => RocketNetworkModel.fromJson(e as Map<String, dynamic>))
               .toList() ??
           const [],
       launchSuccesses: json['launch_successes'] as int?,
@@ -100,8 +103,8 @@ _$_LaunchpadFullModel _$$_LaunchpadFullModelFromJson(
       name: json['name'] as String?,
     );
 
-Map<String, dynamic> _$$_LaunchpadFullModelToJson(
-    _$_LaunchpadFullModel instance) {
+Map<String, dynamic> _$$_LaunchpadNetworkFullModelToJson(
+    _$_LaunchpadNetworkFullModel instance) {
   final val = <String, dynamic>{
     'id': instance.id,
   };

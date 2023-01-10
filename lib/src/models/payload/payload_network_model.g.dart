@@ -1,17 +1,19 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'payload_model.dart';
+part of 'payload_network_model.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_PayloadModel _$$_PayloadModelFromJson(Map<String, dynamic> json) =>
-    _$_PayloadModel(
+_$_PayloadNetworkModel _$$_PayloadNetworkModelFromJson(
+        Map<String, dynamic> json) =>
+    _$_PayloadNetworkModel(
       id: json['id'] as String,
       dragon: json['dragon'] == null
           ? null
-          : PayloadDragonModel.fromJson(json['dragon'] as Map<String, dynamic>),
+          : PayloadDragonNetworkModel.fromJson(
+              json['dragon'] as Map<String, dynamic>),
       name: json['name'] as String?,
       type: json['type'] as String?,
       reused: json['reused'] as bool? ?? false,
@@ -52,7 +54,8 @@ _$_PayloadModel _$$_PayloadModelFromJson(Map<String, dynamic> json) =>
       meanAnomaly: (json['mean_anomaly'] as num?)?.toDouble(),
     );
 
-Map<String, dynamic> _$$_PayloadModelToJson(_$_PayloadModel instance) {
+Map<String, dynamic> _$$_PayloadNetworkModelToJson(
+    _$_PayloadNetworkModel instance) {
   final val = <String, dynamic>{
     'id': instance.id,
   };
@@ -93,12 +96,14 @@ Map<String, dynamic> _$$_PayloadModelToJson(_$_PayloadModel instance) {
   return val;
 }
 
-_$_FullPayloadModel _$$_FullPayloadModelFromJson(Map<String, dynamic> json) =>
-    _$_FullPayloadModel(
+_$_PayloadNetworkFullModel _$$_PayloadNetworkFullModelFromJson(
+        Map<String, dynamic> json) =>
+    _$_PayloadNetworkFullModel(
       id: json['id'] as String,
       dragon: json['dragon'] == null
           ? null
-          : PayloadDragonModel.fromJson(json['dragon'] as Map<String, dynamic>),
+          : PayloadDragonNetworkModel.fromJson(
+              json['dragon'] as Map<String, dynamic>),
       name: json['name'] as String?,
       type: json['type'] as String?,
       reused: json['reused'] as bool? ?? false,
@@ -141,7 +146,8 @@ _$_FullPayloadModel _$$_FullPayloadModelFromJson(Map<String, dynamic> json) =>
       meanAnomaly: (json['mean_anomaly'] as num?)?.toDouble(),
     );
 
-Map<String, dynamic> _$$_FullPayloadModelToJson(_$_FullPayloadModel instance) {
+Map<String, dynamic> _$$_PayloadNetworkFullModelToJson(
+    _$_PayloadNetworkFullModel instance) {
   final val = <String, dynamic>{
     'id': instance.id,
   };
@@ -182,9 +188,9 @@ Map<String, dynamic> _$$_FullPayloadModelToJson(_$_FullPayloadModel instance) {
   return val;
 }
 
-_$_PayloadDragonModel _$$_PayloadDragonModelFromJson(
+_$_PayloadDragonNetworkModel _$$_PayloadDragonNetworkModelFromJson(
         Map<String, dynamic> json) =>
-    _$_PayloadDragonModel(
+    _$_PayloadDragonNetworkModel(
       capsule: json['capsule'] as String?,
       massReturnedKg: (json['mass_returned_kg'] as num?)?.toDouble(),
       massReturnedLbs: (json['mass_returned_lbs'] as num?)?.toDouble(),
@@ -194,8 +200,8 @@ _$_PayloadDragonModel _$$_PayloadDragonModelFromJson(
       landLanding: json['land_landing'] as bool?,
     );
 
-Map<String, dynamic> _$$_PayloadDragonModelToJson(
-    _$_PayloadDragonModel instance) {
+Map<String, dynamic> _$$_PayloadDragonNetworkModelToJson(
+    _$_PayloadDragonNetworkModel instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {

@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'query_model.dart';
+part of 'query_network_model.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -14,36 +14,36 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
-QueryModel _$QueryModelFromJson(Map<String, dynamic> json) {
-  return _QueryModel.fromJson(json);
+QueryNetworkModel _$QueryNetworkModelFromJson(Map<String, dynamic> json) {
+  return _QueryNetworkModel.fromJson(json);
 }
 
 /// @nodoc
-mixin _$QueryModel {
+mixin _$QueryNetworkModel {
   @JsonKey(name: 'options')
-  OptionsModel? get options => throw _privateConstructorUsedError;
+  OptionsNetworkModel? get options => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $QueryModelCopyWith<QueryModel> get copyWith =>
+  $QueryNetworkModelCopyWith<QueryNetworkModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $QueryModelCopyWith<$Res> {
-  factory $QueryModelCopyWith(
-          QueryModel value, $Res Function(QueryModel) then) =
-      _$QueryModelCopyWithImpl<$Res, QueryModel>;
+abstract class $QueryNetworkModelCopyWith<$Res> {
+  factory $QueryNetworkModelCopyWith(
+          QueryNetworkModel value, $Res Function(QueryNetworkModel) then) =
+      _$QueryNetworkModelCopyWithImpl<$Res, QueryNetworkModel>;
   @useResult
-  $Res call({@JsonKey(name: 'options') OptionsModel? options});
+  $Res call({@JsonKey(name: 'options') OptionsNetworkModel? options});
 
-  $OptionsModelCopyWith<$Res>? get options;
+  $OptionsNetworkModelCopyWith<$Res>? get options;
 }
 
 /// @nodoc
-class _$QueryModelCopyWithImpl<$Res, $Val extends QueryModel>
-    implements $QueryModelCopyWith<$Res> {
-  _$QueryModelCopyWithImpl(this._value, this._then);
+class _$QueryNetworkModelCopyWithImpl<$Res, $Val extends QueryNetworkModel>
+    implements $QueryNetworkModelCopyWith<$Res> {
+  _$QueryNetworkModelCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -59,43 +59,43 @@ class _$QueryModelCopyWithImpl<$Res, $Val extends QueryModel>
       options: freezed == options
           ? _value.options
           : options // ignore: cast_nullable_to_non_nullable
-              as OptionsModel?,
+              as OptionsNetworkModel?,
     ) as $Val);
   }
 
   @override
   @pragma('vm:prefer-inline')
-  $OptionsModelCopyWith<$Res>? get options {
+  $OptionsNetworkModelCopyWith<$Res>? get options {
     if (_value.options == null) {
       return null;
     }
 
-    return $OptionsModelCopyWith<$Res>(_value.options!, (value) {
+    return $OptionsNetworkModelCopyWith<$Res>(_value.options!, (value) {
       return _then(_value.copyWith(options: value) as $Val);
     });
   }
 }
 
 /// @nodoc
-abstract class _$$_QueryModelCopyWith<$Res>
-    implements $QueryModelCopyWith<$Res> {
-  factory _$$_QueryModelCopyWith(
-          _$_QueryModel value, $Res Function(_$_QueryModel) then) =
-      __$$_QueryModelCopyWithImpl<$Res>;
+abstract class _$$_QueryNetworkModelCopyWith<$Res>
+    implements $QueryNetworkModelCopyWith<$Res> {
+  factory _$$_QueryNetworkModelCopyWith(_$_QueryNetworkModel value,
+          $Res Function(_$_QueryNetworkModel) then) =
+      __$$_QueryNetworkModelCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({@JsonKey(name: 'options') OptionsModel? options});
+  $Res call({@JsonKey(name: 'options') OptionsNetworkModel? options});
 
   @override
-  $OptionsModelCopyWith<$Res>? get options;
+  $OptionsNetworkModelCopyWith<$Res>? get options;
 }
 
 /// @nodoc
-class __$$_QueryModelCopyWithImpl<$Res>
-    extends _$QueryModelCopyWithImpl<$Res, _$_QueryModel>
-    implements _$$_QueryModelCopyWith<$Res> {
-  __$$_QueryModelCopyWithImpl(
-      _$_QueryModel _value, $Res Function(_$_QueryModel) _then)
+class __$$_QueryNetworkModelCopyWithImpl<$Res>
+    extends _$QueryNetworkModelCopyWithImpl<$Res, _$_QueryNetworkModel>
+    implements _$$_QueryNetworkModelCopyWith<$Res> {
+  __$$_QueryNetworkModelCopyWithImpl(
+      _$_QueryNetworkModel _value, $Res Function(_$_QueryNetworkModel) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -103,37 +103,38 @@ class __$$_QueryModelCopyWithImpl<$Res>
   $Res call({
     Object? options = freezed,
   }) {
-    return _then(_$_QueryModel(
+    return _then(_$_QueryNetworkModel(
       options: freezed == options
           ? _value.options
           : options // ignore: cast_nullable_to_non_nullable
-              as OptionsModel?,
+              as OptionsNetworkModel?,
     ));
   }
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$_QueryModel extends _QueryModel {
-  const _$_QueryModel({@JsonKey(name: 'options') this.options}) : super._();
+class _$_QueryNetworkModel extends _QueryNetworkModel {
+  const _$_QueryNetworkModel({@JsonKey(name: 'options') this.options})
+      : super._();
 
-  factory _$_QueryModel.fromJson(Map<String, dynamic> json) =>
-      _$$_QueryModelFromJson(json);
+  factory _$_QueryNetworkModel.fromJson(Map<String, dynamic> json) =>
+      _$$_QueryNetworkModelFromJson(json);
 
   @override
   @JsonKey(name: 'options')
-  final OptionsModel? options;
+  final OptionsNetworkModel? options;
 
   @override
   String toString() {
-    return 'QueryModel(options: $options)';
+    return 'QueryNetworkModel(options: $options)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_QueryModel &&
+            other is _$_QueryNetworkModel &&
             (identical(other.options, options) || other.options == options));
   }
 
@@ -144,40 +145,42 @@ class _$_QueryModel extends _QueryModel {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_QueryModelCopyWith<_$_QueryModel> get copyWith =>
-      __$$_QueryModelCopyWithImpl<_$_QueryModel>(this, _$identity);
+  _$$_QueryNetworkModelCopyWith<_$_QueryNetworkModel> get copyWith =>
+      __$$_QueryNetworkModelCopyWithImpl<_$_QueryNetworkModel>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_QueryModelToJson(
+    return _$$_QueryNetworkModelToJson(
       this,
     );
   }
 }
 
-abstract class _QueryModel extends QueryModel {
-  const factory _QueryModel(
-      {@JsonKey(name: 'options') final OptionsModel? options}) = _$_QueryModel;
-  const _QueryModel._() : super._();
+abstract class _QueryNetworkModel extends QueryNetworkModel {
+  const factory _QueryNetworkModel(
+          {@JsonKey(name: 'options') final OptionsNetworkModel? options}) =
+      _$_QueryNetworkModel;
+  const _QueryNetworkModel._() : super._();
 
-  factory _QueryModel.fromJson(Map<String, dynamic> json) =
-      _$_QueryModel.fromJson;
+  factory _QueryNetworkModel.fromJson(Map<String, dynamic> json) =
+      _$_QueryNetworkModel.fromJson;
 
   @override
   @JsonKey(name: 'options')
-  OptionsModel? get options;
+  OptionsNetworkModel? get options;
   @override
   @JsonKey(ignore: true)
-  _$$_QueryModelCopyWith<_$_QueryModel> get copyWith =>
+  _$$_QueryNetworkModelCopyWith<_$_QueryNetworkModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
-OptionsModel _$OptionsModelFromJson(Map<String, dynamic> json) {
-  return _OptionsModel.fromJson(json);
+OptionsNetworkModel _$OptionsNetworkModelFromJson(Map<String, dynamic> json) {
+  return _OptionsNetworkModel.fromJson(json);
 }
 
 /// @nodoc
-mixin _$OptionsModel {
+mixin _$OptionsNetworkModel {
   @JsonKey(name: 'pagination')
   bool get pagination => throw _privateConstructorUsedError;
   @JsonKey(name: 'page')
@@ -191,15 +194,15 @@ mixin _$OptionsModel {
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $OptionsModelCopyWith<OptionsModel> get copyWith =>
+  $OptionsNetworkModelCopyWith<OptionsNetworkModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $OptionsModelCopyWith<$Res> {
-  factory $OptionsModelCopyWith(
-          OptionsModel value, $Res Function(OptionsModel) then) =
-      _$OptionsModelCopyWithImpl<$Res, OptionsModel>;
+abstract class $OptionsNetworkModelCopyWith<$Res> {
+  factory $OptionsNetworkModelCopyWith(
+          OptionsNetworkModel value, $Res Function(OptionsNetworkModel) then) =
+      _$OptionsNetworkModelCopyWithImpl<$Res, OptionsNetworkModel>;
   @useResult
   $Res call(
       {@JsonKey(name: 'pagination') bool pagination,
@@ -210,9 +213,9 @@ abstract class $OptionsModelCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$OptionsModelCopyWithImpl<$Res, $Val extends OptionsModel>
-    implements $OptionsModelCopyWith<$Res> {
-  _$OptionsModelCopyWithImpl(this._value, this._then);
+class _$OptionsNetworkModelCopyWithImpl<$Res, $Val extends OptionsNetworkModel>
+    implements $OptionsNetworkModelCopyWith<$Res> {
+  _$OptionsNetworkModelCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -254,11 +257,11 @@ class _$OptionsModelCopyWithImpl<$Res, $Val extends OptionsModel>
 }
 
 /// @nodoc
-abstract class _$$_OptionsModelCopyWith<$Res>
-    implements $OptionsModelCopyWith<$Res> {
-  factory _$$_OptionsModelCopyWith(
-          _$_OptionsModel value, $Res Function(_$_OptionsModel) then) =
-      __$$_OptionsModelCopyWithImpl<$Res>;
+abstract class _$$_OptionsNetworkModelCopyWith<$Res>
+    implements $OptionsNetworkModelCopyWith<$Res> {
+  factory _$$_OptionsNetworkModelCopyWith(_$_OptionsNetworkModel value,
+          $Res Function(_$_OptionsNetworkModel) then) =
+      __$$_OptionsNetworkModelCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -270,11 +273,11 @@ abstract class _$$_OptionsModelCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_OptionsModelCopyWithImpl<$Res>
-    extends _$OptionsModelCopyWithImpl<$Res, _$_OptionsModel>
-    implements _$$_OptionsModelCopyWith<$Res> {
-  __$$_OptionsModelCopyWithImpl(
-      _$_OptionsModel _value, $Res Function(_$_OptionsModel) _then)
+class __$$_OptionsNetworkModelCopyWithImpl<$Res>
+    extends _$OptionsNetworkModelCopyWithImpl<$Res, _$_OptionsNetworkModel>
+    implements _$$_OptionsNetworkModelCopyWith<$Res> {
+  __$$_OptionsNetworkModelCopyWithImpl(_$_OptionsNetworkModel _value,
+      $Res Function(_$_OptionsNetworkModel) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -286,7 +289,7 @@ class __$$_OptionsModelCopyWithImpl<$Res>
     Object? offset = null,
     Object? populate = null,
   }) {
-    return _then(_$_OptionsModel(
+    return _then(_$_OptionsNetworkModel(
       pagination: null == pagination
           ? _value.pagination
           : pagination // ignore: cast_nullable_to_non_nullable
@@ -313,8 +316,8 @@ class __$$_OptionsModelCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_OptionsModel extends _OptionsModel {
-  const _$_OptionsModel(
+class _$_OptionsNetworkModel extends _OptionsNetworkModel {
+  const _$_OptionsNetworkModel(
       {@JsonKey(name: 'pagination') this.pagination = false,
       @JsonKey(name: 'page') this.page = 0,
       @JsonKey(name: 'limit') this.limit = 5,
@@ -323,8 +326,8 @@ class _$_OptionsModel extends _OptionsModel {
       : _populate = populate,
         super._();
 
-  factory _$_OptionsModel.fromJson(Map<String, dynamic> json) =>
-      _$$_OptionsModelFromJson(json);
+  factory _$_OptionsNetworkModel.fromJson(Map<String, dynamic> json) =>
+      _$$_OptionsNetworkModelFromJson(json);
 
   @override
   @JsonKey(name: 'pagination')
@@ -349,14 +352,14 @@ class _$_OptionsModel extends _OptionsModel {
 
   @override
   String toString() {
-    return 'OptionsModel(pagination: $pagination, page: $page, limit: $limit, offset: $offset, populate: $populate)';
+    return 'OptionsNetworkModel(pagination: $pagination, page: $page, limit: $limit, offset: $offset, populate: $populate)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_OptionsModel &&
+            other is _$_OptionsNetworkModel &&
             (identical(other.pagination, pagination) ||
                 other.pagination == pagination) &&
             (identical(other.page, page) || other.page == page) &&
@@ -373,29 +376,30 @@ class _$_OptionsModel extends _OptionsModel {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_OptionsModelCopyWith<_$_OptionsModel> get copyWith =>
-      __$$_OptionsModelCopyWithImpl<_$_OptionsModel>(this, _$identity);
+  _$$_OptionsNetworkModelCopyWith<_$_OptionsNetworkModel> get copyWith =>
+      __$$_OptionsNetworkModelCopyWithImpl<_$_OptionsNetworkModel>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_OptionsModelToJson(
+    return _$$_OptionsNetworkModelToJson(
       this,
     );
   }
 }
 
-abstract class _OptionsModel extends OptionsModel {
-  const factory _OptionsModel(
+abstract class _OptionsNetworkModel extends OptionsNetworkModel {
+  const factory _OptionsNetworkModel(
           {@JsonKey(name: 'pagination') final bool pagination,
           @JsonKey(name: 'page') final int page,
           @JsonKey(name: 'limit') final int limit,
           @JsonKey(name: 'offset') final int offset,
           @JsonKey(name: 'populate') final List<String> populate}) =
-      _$_OptionsModel;
-  const _OptionsModel._() : super._();
+      _$_OptionsNetworkModel;
+  const _OptionsNetworkModel._() : super._();
 
-  factory _OptionsModel.fromJson(Map<String, dynamic> json) =
-      _$_OptionsModel.fromJson;
+  factory _OptionsNetworkModel.fromJson(Map<String, dynamic> json) =
+      _$_OptionsNetworkModel.fromJson;
 
   @override
   @JsonKey(name: 'pagination')
@@ -414,6 +418,6 @@ abstract class _OptionsModel extends OptionsModel {
   List<String> get populate;
   @override
   @JsonKey(ignore: true)
-  _$$_OptionsModelCopyWith<_$_OptionsModel> get copyWith =>
+  _$$_OptionsNetworkModelCopyWith<_$_OptionsNetworkModel> get copyWith =>
       throw _privateConstructorUsedError;
 }

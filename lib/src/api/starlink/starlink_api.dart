@@ -9,20 +9,20 @@ abstract class StarlinkApi {
   factory StarlinkApi(Dio dio) = _StarlinkApi;
 
   @GET('/starlink')
-  Future<List<StarlinkModel>> getStarlinkList();
+  Future<List<StarlinkNetworkModel>> getStarlinkList();
 
   @GET('/starlink/{id}')
-  Future<StarlinkModel> getStarlink(
+  Future<StarlinkNetworkModel> getStarlink(
     @Path() String id,
   );
 
   @POST('/starlink/query')
-  Future<ApiPaginatedList<StarlinkModel>> queryStarlinkList(
-    @Body() QueryModel query,
+  Future<ApiPaginatedList<StarlinkNetworkModel>> queryStarlinkList(
+    @Body() QueryNetworkModel query,
   );
 
   @POST('/starlink/query')
-  Future<ApiPaginatedList<StarlinkFullModel>> queryFullStarlinkList(
-    @Body() QueryModel query,
+  Future<ApiPaginatedList<StarlinkNetworkFullModel>> queryFullStarlinkList(
+    @Body() QueryNetworkModel query,
   );
 }

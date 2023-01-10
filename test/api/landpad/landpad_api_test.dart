@@ -71,7 +71,7 @@ void main() {
       ],
     );
     final queryRawJson = 'query/query.json'.toFixture();
-    final query = QueryModel.fromJson(queryRawJson);
+    final query = QueryNetworkModel.fromJson(queryRawJson);
     test(
       'should perform a POST request on /landpads/query',
       () async {
@@ -99,7 +99,7 @@ void main() {
       ],
     );
     final queryRawJson = 'query/query.json'.toFixture();
-    final query = QueryModel.fromJson(queryRawJson);
+    final query = QueryNetworkModel.fromJson(queryRawJson);
     test(
       'should perform a POST request on /landpads/query',
       () async {
@@ -157,7 +157,7 @@ void main() {
     test(
       'queryLandpads, should throw a ServerException when the response code is 404 or other (unsuccessful)',
       () async {
-        const q = QueryModel();
+        const q = QueryNetworkModel();
         // arrange
         when(() => api.queryLandpads(q)).thenThrow(
           dioException,
@@ -175,7 +175,7 @@ void main() {
     test(
       'queryFullLandpads, should throw a ServerException when the response code is 404 or other (unsuccessful)',
       () async {
-        const q = QueryModel();
+        const q = QueryNetworkModel();
         // arrange
         when(() => api.queryFullLandpads(q)).thenThrow(
           dioException,

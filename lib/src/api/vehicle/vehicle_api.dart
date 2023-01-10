@@ -9,50 +9,50 @@ abstract class VehicleApi {
   factory VehicleApi(Dio dio) = _VehicleApi;
 
   @GET('/dragons')
-  Future<List<DragonModel>> getAllDragons();
+  Future<List<DragonNetworkModel>> getAllDragons();
 
   @GET('/dragons/{id}')
-  Future<DragonModel> getDragon(
+  Future<DragonNetworkModel> getDragon(
     @Path() String id,
   );
 
   @POST('/dragons/query')
-  Future<ApiPaginatedList<DragonModel>> queryDragons(
-    @Body() QueryModel query,
+  Future<ApiPaginatedList<DragonNetworkModel>> queryDragons(
+    @Body() QueryNetworkModel query,
   );
 
   @GET('/ships')
-  Future<List<ShipModel>> getAllShips();
+  Future<List<ShipNetworkModel>> getAllShips();
 
   @GET('/ships/{id}')
-  Future<ShipModel> getShip(
+  Future<ShipNetworkModel> getShip(
     @Path() String id,
   );
 
   @POST('/ships/query')
-  Future<ApiPaginatedList<ShipModel>> queryShips(
-    @Body() QueryModel query,
+  Future<ApiPaginatedList<ShipNetworkModel>> queryShips(
+    @Body() QueryNetworkModel query,
   );
 
   @POST('/ships/query')
-  Future<ApiPaginatedList<ShipFullModel>> queryFullShips(
-    @Body() QueryModel query,
+  Future<ApiPaginatedList<ShipNetworkFullModel>> queryFullShips(
+    @Body() QueryNetworkModel query,
   );
 
   @GET('/rockets')
-  Future<List<RocketModel>> getAllRockets();
+  Future<List<RocketNetworkModel>> getAllRockets();
 
   @GET('/rockets/{id}')
-  Future<RocketModel> getRocket(
+  Future<RocketNetworkModel> getRocket(
     @Path() String id,
   );
 
   @POST('/ships/query')
-  Future<ApiPaginatedList<RocketModel>> queryRockets(
-    @Body() QueryModel query,
+  Future<ApiPaginatedList<RocketNetworkModel>> queryRockets(
+    @Body() QueryNetworkModel query,
   );
 
   // roadster
   @GET('/roadster')
-  Future<RoadsterVehicleModel> getRoadster();
+  Future<RoadsterVehicleNetworkModel> getRoadster();
 }

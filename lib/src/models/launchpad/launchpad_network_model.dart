@@ -1,9 +1,9 @@
 import 'package:data/data.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-part 'launchpad_model.freezed.dart';
+part 'launchpad_network_model.freezed.dart';
 
-part 'launchpad_model.g.dart';
+part 'launchpad_network_model.g.dart';
 
 @JsonEnum()
 enum LaunchStatus {
@@ -16,8 +16,8 @@ enum LaunchStatus {
 }
 
 @freezed
-class LaunchpadModel with _$LaunchpadModel {
-  const factory LaunchpadModel({
+class LaunchpadNetworkModel with _$LaunchpadNetworkModel {
+  const factory LaunchpadNetworkModel({
     required String id,
     @JsonKey(name: 'details') String? details,
     @JsonKey(name: 'images') ImagesNetworkModel? images,
@@ -35,17 +35,17 @@ class LaunchpadModel with _$LaunchpadModel {
     @JsonKey(name: 'locality') String? locality,
     @JsonKey(name: 'full_name') String? fullName,
     @JsonKey(name: 'name') String? name,
-  }) = _LaunchpadModel;
+  }) = _LaunchpadNetworkModel;
 
-  const LaunchpadModel._();
+  const LaunchpadNetworkModel._();
 
-  factory LaunchpadModel.fromJson(Map<String, dynamic> json) =>
-      _$LaunchpadModelFromJson(json);
+  factory LaunchpadNetworkModel.fromJson(Map<String, dynamic> json) =>
+      _$LaunchpadNetworkModelFromJson(json);
 }
 
 @freezed
-class LaunchpadFullModel with _$LaunchpadFullModel {
-  const factory LaunchpadFullModel({
+class LaunchpadNetworkFullModel with _$LaunchpadNetworkFullModel {
+  const factory LaunchpadNetworkFullModel({
     required String id,
     @JsonKey(name: 'details') String? details,
     @JsonKey(name: 'images') ImagesNetworkModel? images,
@@ -54,7 +54,7 @@ class LaunchpadFullModel with _$LaunchpadFullModel {
         LaunchStatus status,
     @JsonKey(name: 'launches') @Default([]) List<LaunchNetworkModel> launches,
     @JsonKey(name: 'timezone') String? timezone,
-    @JsonKey(name: 'rockets') @Default([]) List<RocketModel> rockets,
+    @JsonKey(name: 'rockets') @Default([]) List<RocketNetworkModel> rockets,
     @JsonKey(name: 'launch_successes') int? launchSuccesses,
     @JsonKey(name: 'launch_attempts') int? launchAttempts,
     @JsonKey(name: 'longitude') double? longitude,
@@ -63,10 +63,10 @@ class LaunchpadFullModel with _$LaunchpadFullModel {
     @JsonKey(name: 'locality') String? locality,
     @JsonKey(name: 'full_name') String? fullName,
     @JsonKey(name: 'name') String? name,
-  }) = _LaunchpadFullModel;
+  }) = _LaunchpadNetworkFullModel;
 
-  const LaunchpadFullModel._();
+  const LaunchpadNetworkFullModel._();
 
-  factory LaunchpadFullModel.fromJson(Map<String, dynamic> json) =>
-      _$LaunchpadFullModelFromJson(json);
+  factory LaunchpadNetworkFullModel.fromJson(Map<String, dynamic> json) =>
+      _$LaunchpadNetworkFullModelFromJson(json);
 }

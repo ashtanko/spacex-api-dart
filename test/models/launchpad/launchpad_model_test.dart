@@ -35,7 +35,7 @@ void main() {
         final Map<String, dynamic> jsonMap =
             'launchpads/launchpad.json'.toFixture();
         // act
-        final result = LaunchpadModel.fromJson(jsonMap);
+        final result = LaunchpadNetworkModel.fromJson(jsonMap);
         // assert
         expect(result, equals(launchpadModel));
       },
@@ -63,7 +63,7 @@ void main() {
         'id': '5e9e4501f5090910d4566f83'
       };
 
-      final actual = LaunchpadModel.fromJson(json);
+      final actual = LaunchpadNetworkModel.fromJson(json);
 
       const expected = launchpadModel;
 
@@ -78,7 +78,7 @@ void main() {
         final Map<String, dynamic> jsonMap =
             'launchpads/full_launchpad.json'.toFixture();
         // act
-        final result = LaunchpadFullModel.fromJson(jsonMap);
+        final result = LaunchpadNetworkFullModel.fromJson(jsonMap);
         // assert
         expect(result, equals(launchpadFullModel));
       },
@@ -169,7 +169,7 @@ void main() {
         'id': '5e9e4501f5090910d4566f83'
       };
 
-      final actual = LaunchpadFullModel.fromJson(json);
+      final actual = LaunchpadNetworkFullModel.fromJson(json);
 
       const expected = launchpadFullModel;
 

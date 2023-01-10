@@ -1,13 +1,13 @@
 import 'package:data/data.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-part 'starlink_model.freezed.dart';
+part 'starlink_network_model.freezed.dart';
 
-part 'starlink_model.g.dart';
+part 'starlink_network_model.g.dart';
 
 @freezed
-class StarlinkModel with _$StarlinkModel {
-  const factory StarlinkModel({
+class StarlinkNetworkModel with _$StarlinkNetworkModel {
+  const factory StarlinkNetworkModel({
     @JsonKey(name: 'id') @Default('') String id,
     @JsonKey(name: 'launch') String? launchID,
     @JsonKey(name: 'version') String? version,
@@ -15,18 +15,18 @@ class StarlinkModel with _$StarlinkModel {
     @JsonKey(name: 'latitude') double? latitude,
     @JsonKey(name: 'longitude') double? longitude,
     @JsonKey(name: 'velocity_kms') double? velocityKms,
-    @JsonKey(name: 'spaceTrack') SpaceTrackModel? spaceTrack,
-  }) = _StarlinkModel;
+    @JsonKey(name: 'spaceTrack') SpaceTrackNetworkModel? spaceTrack,
+  }) = _StarlinkNetworkModel;
 
-  const StarlinkModel._();
+  const StarlinkNetworkModel._();
 
-  factory StarlinkModel.fromJson(Map<String, dynamic> json) =>
-      _$StarlinkModelFromJson(json);
+  factory StarlinkNetworkModel.fromJson(Map<String, dynamic> json) =>
+      _$StarlinkNetworkModelFromJson(json);
 }
 
 @freezed
-class StarlinkFullModel with _$StarlinkFullModel {
-  const factory StarlinkFullModel({
+class StarlinkNetworkFullModel with _$StarlinkNetworkFullModel {
+  const factory StarlinkNetworkFullModel({
     @JsonKey(name: 'id') @Default('') String id,
     @JsonKey(name: 'launch') LaunchNetworkModel? launch,
     @JsonKey(name: 'version') @Default('') String version,
@@ -34,18 +34,18 @@ class StarlinkFullModel with _$StarlinkFullModel {
     @JsonKey(name: 'latitude') double? latitude,
     @JsonKey(name: 'longitude') double? longitude,
     @JsonKey(name: 'velocity_kms') double? velocityKms,
-    @JsonKey(name: 'spaceTrack') SpaceTrackModel? spaceTrack,
-  }) = _StarlinkFullModel;
+    @JsonKey(name: 'spaceTrack') SpaceTrackNetworkModel? spaceTrack,
+  }) = _StarlinkNetworkFullModel;
 
-  const StarlinkFullModel._();
+  const StarlinkNetworkFullModel._();
 
-  factory StarlinkFullModel.fromJson(Map<String, dynamic> json) =>
-      _$StarlinkFullModelFromJson(json);
+  factory StarlinkNetworkFullModel.fromJson(Map<String, dynamic> json) =>
+      _$StarlinkNetworkFullModelFromJson(json);
 }
 
 @freezed
-class SpaceTrackModel with _$SpaceTrackModel {
-  const factory SpaceTrackModel({
+class SpaceTrackNetworkModel with _$SpaceTrackNetworkModel {
+  const factory SpaceTrackNetworkModel({
     @JsonKey(name: 'CCSDS_OMM_VERS') String? ccsdsOmmVers,
     @JsonKey(name: 'COMMENT') String? comment,
     @JsonKey(name: 'CREATION_DATE') String? creationDate,
@@ -87,10 +87,10 @@ class SpaceTrackModel with _$SpaceTrackModel {
     @JsonKey(name: 'TLE_LINE0') String? tleLine0,
     @JsonKey(name: 'TLE_LINE1') String? tleLine1,
     @JsonKey(name: 'TLE_LINE2') String? tleLine2,
-  }) = _SpaceTrackModel;
+  }) = _SpaceTrackNetworkModel;
 
-  const SpaceTrackModel._();
+  const SpaceTrackNetworkModel._();
 
-  factory SpaceTrackModel.fromJson(Map<String, dynamic> json) =>
-      _$SpaceTrackModelFromJson(json);
+  factory SpaceTrackNetworkModel.fromJson(Map<String, dynamic> json) =>
+      _$SpaceTrackNetworkModelFromJson(json);
 }

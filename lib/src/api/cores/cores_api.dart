@@ -18,11 +18,11 @@ abstract class CoresApi {
 
   @POST('/cores/query')
   Future<ApiPaginatedList<CoreNetworkModel>> queryCores(
-    @Body() QueryModel query,
+    @Body() QueryNetworkModel query,
   );
 
   @POST('/capsules/query')
   Future<ApiPaginatedList<CoreNetworkFullModel>> queryFullCores(
-    @Body() QueryModel query,
+    @Body() QueryNetworkModel query,
   );
 }

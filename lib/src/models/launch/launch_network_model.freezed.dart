@@ -41,13 +41,13 @@ mixin _$LaunchNetworkFullModel {
   @JsonKey(name: 'flight_number')
   int get flightNumber => throw _privateConstructorUsedError;
   @JsonKey(name: 'launchpad')
-  LaunchpadModel? get launchpad => throw _privateConstructorUsedError;
+  LaunchpadNetworkModel? get launchpad => throw _privateConstructorUsedError;
   @JsonKey(name: 'payloads')
-  List<PayloadModel> get payloads => throw _privateConstructorUsedError;
+  List<PayloadNetworkModel> get payloads => throw _privateConstructorUsedError;
   @JsonKey(name: 'capsules')
   List<CapsuleNetworkModel> get capsules => throw _privateConstructorUsedError;
   @JsonKey(name: 'ships')
-  List<ShipModel> get ships => throw _privateConstructorUsedError;
+  List<ShipNetworkModel> get ships => throw _privateConstructorUsedError;
   @JsonKey(name: 'crew')
   List<String> get crew => throw _privateConstructorUsedError;
   @JsonKey(name: 'details')
@@ -58,7 +58,7 @@ mixin _$LaunchNetworkFullModel {
   @JsonKey(name: 'success')
   bool get success => throw _privateConstructorUsedError;
   @JsonKey(name: 'rocket')
-  RocketModel? get rocket => throw _privateConstructorUsedError;
+  RocketNetworkModel? get rocket => throw _privateConstructorUsedError;
   @JsonKey(name: 'window')
   int get window => throw _privateConstructorUsedError;
   @JsonKey(name: 'net')
@@ -98,15 +98,15 @@ abstract class $LaunchNetworkFullModelCopyWith<$Res> {
       @JsonKey(name: 'date_utc') String dateUtc,
       @JsonKey(name: 'name') String name,
       @JsonKey(name: 'flight_number') int flightNumber,
-      @JsonKey(name: 'launchpad') LaunchpadModel? launchpad,
-      @JsonKey(name: 'payloads') List<PayloadModel> payloads,
+      @JsonKey(name: 'launchpad') LaunchpadNetworkModel? launchpad,
+      @JsonKey(name: 'payloads') List<PayloadNetworkModel> payloads,
       @JsonKey(name: 'capsules') List<CapsuleNetworkModel> capsules,
-      @JsonKey(name: 'ships') List<ShipModel> ships,
+      @JsonKey(name: 'ships') List<ShipNetworkModel> ships,
       @JsonKey(name: 'crew') List<String> crew,
       @JsonKey(name: 'details') String details,
       @JsonKey(name: 'failures') List<LaunchFailureNetworkModel> failures,
       @JsonKey(name: 'success') bool success,
-      @JsonKey(name: 'rocket') RocketModel? rocket,
+      @JsonKey(name: 'rocket') RocketNetworkModel? rocket,
       @JsonKey(name: 'window') int window,
       @JsonKey(name: 'net') bool net,
       @JsonKey(name: 'static_fire_date_unix') int staticFireDateUnix,
@@ -115,8 +115,8 @@ abstract class $LaunchNetworkFullModelCopyWith<$Res> {
       @JsonKey(name: 'fairings') FairingsNetworkModel? fairings,
       @JsonKey(name: 'launch_library_id') String? launchLibraryId});
 
-  $LaunchpadModelCopyWith<$Res>? get launchpad;
-  $RocketModelCopyWith<$Res>? get rocket;
+  $LaunchpadNetworkModelCopyWith<$Res>? get launchpad;
+  $RocketNetworkModelCopyWith<$Res>? get rocket;
   $LaunchLinksNetworkModelCopyWith<$Res>? get links;
   $FairingsNetworkModelCopyWith<$Res>? get fairings;
 }
@@ -211,11 +211,11 @@ class _$LaunchNetworkFullModelCopyWithImpl<$Res,
       launchpad: freezed == launchpad
           ? _value.launchpad
           : launchpad // ignore: cast_nullable_to_non_nullable
-              as LaunchpadModel?,
+              as LaunchpadNetworkModel?,
       payloads: null == payloads
           ? _value.payloads
           : payloads // ignore: cast_nullable_to_non_nullable
-              as List<PayloadModel>,
+              as List<PayloadNetworkModel>,
       capsules: null == capsules
           ? _value.capsules
           : capsules // ignore: cast_nullable_to_non_nullable
@@ -223,7 +223,7 @@ class _$LaunchNetworkFullModelCopyWithImpl<$Res,
       ships: null == ships
           ? _value.ships
           : ships // ignore: cast_nullable_to_non_nullable
-              as List<ShipModel>,
+              as List<ShipNetworkModel>,
       crew: null == crew
           ? _value.crew
           : crew // ignore: cast_nullable_to_non_nullable
@@ -243,7 +243,7 @@ class _$LaunchNetworkFullModelCopyWithImpl<$Res,
       rocket: freezed == rocket
           ? _value.rocket
           : rocket // ignore: cast_nullable_to_non_nullable
-              as RocketModel?,
+              as RocketNetworkModel?,
       window: null == window
           ? _value.window
           : window // ignore: cast_nullable_to_non_nullable
@@ -277,24 +277,24 @@ class _$LaunchNetworkFullModelCopyWithImpl<$Res,
 
   @override
   @pragma('vm:prefer-inline')
-  $LaunchpadModelCopyWith<$Res>? get launchpad {
+  $LaunchpadNetworkModelCopyWith<$Res>? get launchpad {
     if (_value.launchpad == null) {
       return null;
     }
 
-    return $LaunchpadModelCopyWith<$Res>(_value.launchpad!, (value) {
+    return $LaunchpadNetworkModelCopyWith<$Res>(_value.launchpad!, (value) {
       return _then(_value.copyWith(launchpad: value) as $Val);
     });
   }
 
   @override
   @pragma('vm:prefer-inline')
-  $RocketModelCopyWith<$Res>? get rocket {
+  $RocketNetworkModelCopyWith<$Res>? get rocket {
     if (_value.rocket == null) {
       return null;
     }
 
-    return $RocketModelCopyWith<$Res>(_value.rocket!, (value) {
+    return $RocketNetworkModelCopyWith<$Res>(_value.rocket!, (value) {
       return _then(_value.copyWith(rocket: value) as $Val);
     });
   }
@@ -344,15 +344,15 @@ abstract class _$$_LaunchNetworkFullModelCopyWith<$Res>
       @JsonKey(name: 'date_utc') String dateUtc,
       @JsonKey(name: 'name') String name,
       @JsonKey(name: 'flight_number') int flightNumber,
-      @JsonKey(name: 'launchpad') LaunchpadModel? launchpad,
-      @JsonKey(name: 'payloads') List<PayloadModel> payloads,
+      @JsonKey(name: 'launchpad') LaunchpadNetworkModel? launchpad,
+      @JsonKey(name: 'payloads') List<PayloadNetworkModel> payloads,
       @JsonKey(name: 'capsules') List<CapsuleNetworkModel> capsules,
-      @JsonKey(name: 'ships') List<ShipModel> ships,
+      @JsonKey(name: 'ships') List<ShipNetworkModel> ships,
       @JsonKey(name: 'crew') List<String> crew,
       @JsonKey(name: 'details') String details,
       @JsonKey(name: 'failures') List<LaunchFailureNetworkModel> failures,
       @JsonKey(name: 'success') bool success,
-      @JsonKey(name: 'rocket') RocketModel? rocket,
+      @JsonKey(name: 'rocket') RocketNetworkModel? rocket,
       @JsonKey(name: 'window') int window,
       @JsonKey(name: 'net') bool net,
       @JsonKey(name: 'static_fire_date_unix') int staticFireDateUnix,
@@ -362,9 +362,9 @@ abstract class _$$_LaunchNetworkFullModelCopyWith<$Res>
       @JsonKey(name: 'launch_library_id') String? launchLibraryId});
 
   @override
-  $LaunchpadModelCopyWith<$Res>? get launchpad;
+  $LaunchpadNetworkModelCopyWith<$Res>? get launchpad;
   @override
-  $RocketModelCopyWith<$Res>? get rocket;
+  $RocketNetworkModelCopyWith<$Res>? get rocket;
   @override
   $LaunchLinksNetworkModelCopyWith<$Res>? get links;
   @override
@@ -459,11 +459,11 @@ class __$$_LaunchNetworkFullModelCopyWithImpl<$Res>
       launchpad: freezed == launchpad
           ? _value.launchpad
           : launchpad // ignore: cast_nullable_to_non_nullable
-              as LaunchpadModel?,
+              as LaunchpadNetworkModel?,
       payloads: null == payloads
           ? _value._payloads
           : payloads // ignore: cast_nullable_to_non_nullable
-              as List<PayloadModel>,
+              as List<PayloadNetworkModel>,
       capsules: null == capsules
           ? _value._capsules
           : capsules // ignore: cast_nullable_to_non_nullable
@@ -471,7 +471,7 @@ class __$$_LaunchNetworkFullModelCopyWithImpl<$Res>
       ships: null == ships
           ? _value._ships
           : ships // ignore: cast_nullable_to_non_nullable
-              as List<ShipModel>,
+              as List<ShipNetworkModel>,
       crew: null == crew
           ? _value._crew
           : crew // ignore: cast_nullable_to_non_nullable
@@ -491,7 +491,7 @@ class __$$_LaunchNetworkFullModelCopyWithImpl<$Res>
       rocket: freezed == rocket
           ? _value.rocket
           : rocket // ignore: cast_nullable_to_non_nullable
-              as RocketModel?,
+              as RocketNetworkModel?,
       window: null == window
           ? _value.window
           : window // ignore: cast_nullable_to_non_nullable
@@ -550,11 +550,11 @@ class _$_LaunchNetworkFullModel extends _LaunchNetworkFullModel {
       @JsonKey(name: 'launchpad')
           this.launchpad,
       @JsonKey(name: 'payloads')
-          final List<PayloadModel> payloads = const [],
+          final List<PayloadNetworkModel> payloads = const [],
       @JsonKey(name: 'capsules')
           final List<CapsuleNetworkModel> capsules = const [],
       @JsonKey(name: 'ships')
-          final List<ShipModel> ships = const [],
+          final List<ShipNetworkModel> ships = const [],
       @JsonKey(name: 'crew')
           final List<String> crew = const [],
       @JsonKey(name: 'details')
@@ -630,11 +630,11 @@ class _$_LaunchNetworkFullModel extends _LaunchNetworkFullModel {
   final int flightNumber;
   @override
   @JsonKey(name: 'launchpad')
-  final LaunchpadModel? launchpad;
-  final List<PayloadModel> _payloads;
+  final LaunchpadNetworkModel? launchpad;
+  final List<PayloadNetworkModel> _payloads;
   @override
   @JsonKey(name: 'payloads')
-  List<PayloadModel> get payloads {
+  List<PayloadNetworkModel> get payloads {
     if (_payloads is EqualUnmodifiableListView) return _payloads;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_payloads);
@@ -649,10 +649,10 @@ class _$_LaunchNetworkFullModel extends _LaunchNetworkFullModel {
     return EqualUnmodifiableListView(_capsules);
   }
 
-  final List<ShipModel> _ships;
+  final List<ShipNetworkModel> _ships;
   @override
   @JsonKey(name: 'ships')
-  List<ShipModel> get ships {
+  List<ShipNetworkModel> get ships {
     if (_ships is EqualUnmodifiableListView) return _ships;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_ships);
@@ -684,7 +684,7 @@ class _$_LaunchNetworkFullModel extends _LaunchNetworkFullModel {
   final bool success;
   @override
   @JsonKey(name: 'rocket')
-  final RocketModel? rocket;
+  final RocketNetworkModel? rocket;
   @override
   @JsonKey(name: 'window')
   final int window;
@@ -827,13 +827,13 @@ abstract class _LaunchNetworkFullModel extends LaunchNetworkFullModel {
       @JsonKey(name: 'flight_number')
           final int flightNumber,
       @JsonKey(name: 'launchpad')
-          final LaunchpadModel? launchpad,
+          final LaunchpadNetworkModel? launchpad,
       @JsonKey(name: 'payloads')
-          final List<PayloadModel> payloads,
+          final List<PayloadNetworkModel> payloads,
       @JsonKey(name: 'capsules')
           final List<CapsuleNetworkModel> capsules,
       @JsonKey(name: 'ships')
-          final List<ShipModel> ships,
+          final List<ShipNetworkModel> ships,
       @JsonKey(name: 'crew')
           final List<String> crew,
       @JsonKey(name: 'details')
@@ -843,7 +843,7 @@ abstract class _LaunchNetworkFullModel extends LaunchNetworkFullModel {
       @JsonKey(name: 'success')
           final bool success,
       @JsonKey(name: 'rocket')
-          final RocketModel? rocket,
+          final RocketNetworkModel? rocket,
       @JsonKey(name: 'window')
           final int window,
       @JsonKey(name: 'net')
@@ -895,16 +895,16 @@ abstract class _LaunchNetworkFullModel extends LaunchNetworkFullModel {
   int get flightNumber;
   @override
   @JsonKey(name: 'launchpad')
-  LaunchpadModel? get launchpad;
+  LaunchpadNetworkModel? get launchpad;
   @override
   @JsonKey(name: 'payloads')
-  List<PayloadModel> get payloads;
+  List<PayloadNetworkModel> get payloads;
   @override
   @JsonKey(name: 'capsules')
   List<CapsuleNetworkModel> get capsules;
   @override
   @JsonKey(name: 'ships')
-  List<ShipModel> get ships;
+  List<ShipNetworkModel> get ships;
   @override
   @JsonKey(name: 'crew')
   List<String> get crew;
@@ -919,7 +919,7 @@ abstract class _LaunchNetworkFullModel extends LaunchNetworkFullModel {
   bool get success;
   @override
   @JsonKey(name: 'rocket')
-  RocketModel? get rocket;
+  RocketNetworkModel? get rocket;
   @override
   @JsonKey(name: 'window')
   int get window;

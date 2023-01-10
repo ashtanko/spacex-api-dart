@@ -1,14 +1,14 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'vehicle_model.dart';
+part of 'vehicle_network_model.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_RoadsterVehicleModel _$$_RoadsterVehicleModelFromJson(
+_$_RoadsterVehicleNetworkModel _$$_RoadsterVehicleNetworkModelFromJson(
         Map<String, dynamic> json) =>
-    _$_RoadsterVehicleModel(
+    _$_RoadsterVehicleNetworkModel(
       id: json['id'] as String,
       details: json['details'] as String?,
       video: json['video'] as String?,
@@ -42,8 +42,8 @@ _$_RoadsterVehicleModel _$$_RoadsterVehicleModelFromJson(
       name: json['name'] as String? ?? "Elon Musk's Tesla Roadster",
     );
 
-Map<String, dynamic> _$$_RoadsterVehicleModelToJson(
-    _$_RoadsterVehicleModel instance) {
+Map<String, dynamic> _$$_RoadsterVehicleNetworkModelToJson(
+    _$_RoadsterVehicleNetworkModel instance) {
   final val = <String, dynamic>{
     'id': instance.id,
   };
@@ -83,8 +83,9 @@ Map<String, dynamic> _$$_RoadsterVehicleModelToJson(
   return val;
 }
 
-_$_RocketModel _$$_RocketModelFromJson(Map<String, dynamic> json) =>
-    _$_RocketModel(
+_$_RocketNetworkModel _$$_RocketNetworkModelFromJson(
+        Map<String, dynamic> json) =>
+    _$_RocketNetworkModel(
       id: json['id'] as String,
       description: json['description'] as String?,
       wikipedia: json['wikipedia'] as String?,
@@ -109,7 +110,8 @@ _$_RocketModel _$$_RocketModelFromJson(Map<String, dynamic> json) =>
           const <PayloadWeightModel>[],
       engines: json['engines'] == null
           ? null
-          : EngineModel.fromJson(json['engines'] as Map<String, dynamic>),
+          : EngineNetworkModel.fromJson(
+              json['engines'] as Map<String, dynamic>),
       height: json['height'] == null
           ? null
           : HeightModel.fromJson(json['height'] as Map<String, dynamic>),
@@ -121,19 +123,20 @@ _$_RocketModel _$$_RocketModelFromJson(Map<String, dynamic> json) =>
           : MassModel.fromJson(json['mass'] as Map<String, dynamic>),
       firstStage: json['first_stage'] == null
           ? null
-          : FirstStageModel.fromJson(
+          : FirstStageNetworkModel.fromJson(
               json['first_stage'] as Map<String, dynamic>),
       secondStage: json['second_stage'] == null
           ? null
-          : SecondStageModel.fromJson(
+          : SecondStageNetworkModel.fromJson(
               json['second_stage'] as Map<String, dynamic>),
       landingLegs: json['landing_legs'] == null
           ? null
-          : LandingLegsModel.fromJson(
+          : LandingLegsNetworkModel.fromJson(
               json['landing_legs'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_RocketModelToJson(_$_RocketModel instance) {
+Map<String, dynamic> _$$_RocketNetworkModelToJson(
+    _$_RocketNetworkModel instance) {
   final val = <String, dynamic>{
     'id': instance.id,
   };
@@ -169,8 +172,9 @@ Map<String, dynamic> _$$_RocketModelToJson(_$_RocketModel instance) {
   return val;
 }
 
-_$_EngineModel _$$_EngineModelFromJson(Map<String, dynamic> json) =>
-    _$_EngineModel(
+_$_EngineNetworkModel _$$_EngineNetworkModelFromJson(
+        Map<String, dynamic> json) =>
+    _$_EngineNetworkModel(
       isp: json['isp'] == null
           ? null
           : IspModel.fromJson(json['isp'] as Map<String, dynamic>),
@@ -192,7 +196,8 @@ _$_EngineModel _$$_EngineModelFromJson(Map<String, dynamic> json) =>
       thrustToWeight: json['thrust_to_weight'] as num?,
     );
 
-Map<String, dynamic> _$$_EngineModelToJson(_$_EngineModel instance) {
+Map<String, dynamic> _$$_EngineNetworkModelToJson(
+    _$_EngineNetworkModel instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -215,13 +220,15 @@ Map<String, dynamic> _$$_EngineModelToJson(_$_EngineModel instance) {
   return val;
 }
 
-_$_LandingLegsModel _$$_LandingLegsModelFromJson(Map<String, dynamic> json) =>
-    _$_LandingLegsModel(
+_$_LandingLegsNetworkModel _$$_LandingLegsNetworkModelFromJson(
+        Map<String, dynamic> json) =>
+    _$_LandingLegsNetworkModel(
       number: json['number'] as num?,
       material: json['material'] as String?,
     );
 
-Map<String, dynamic> _$$_LandingLegsModelToJson(_$_LandingLegsModel instance) {
+Map<String, dynamic> _$$_LandingLegsNetworkModelToJson(
+    _$_LandingLegsNetworkModel instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -235,9 +242,9 @@ Map<String, dynamic> _$$_LandingLegsModelToJson(_$_LandingLegsModel instance) {
   return val;
 }
 
-_$_RocketPayloadModel _$$_RocketPayloadModelFromJson(
+_$_RocketPayloadNetworkModel _$$_RocketPayloadNetworkModelFromJson(
         Map<String, dynamic> json) =>
-    _$_RocketPayloadModel(
+    _$_RocketPayloadNetworkModel(
       compositeFairing: json['composite_fairing'] == null
           ? null
           : CompositeFairingModel.fromJson(
@@ -245,8 +252,8 @@ _$_RocketPayloadModel _$$_RocketPayloadModelFromJson(
       option1: json['option_1'] as String?,
     );
 
-Map<String, dynamic> _$$_RocketPayloadModelToJson(
-    _$_RocketPayloadModel instance) {
+Map<String, dynamic> _$$_RocketPayloadNetworkModelToJson(
+    _$_RocketPayloadNetworkModel instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -260,8 +267,9 @@ Map<String, dynamic> _$$_RocketPayloadModelToJson(
   return val;
 }
 
-_$_FirstStageModel _$$_FirstStageModelFromJson(Map<String, dynamic> json) =>
-    _$_FirstStageModel(
+_$_FirstStageNetworkModel _$$_FirstStageNetworkModelFromJson(
+        Map<String, dynamic> json) =>
+    _$_FirstStageNetworkModel(
       thrustSeaLevel: json['thrust_sea_level'] == null
           ? null
           : KnotPoundModel.fromJson(
@@ -276,7 +284,8 @@ _$_FirstStageModel _$$_FirstStageModelFromJson(Map<String, dynamic> json) =>
       burnTimeSec: json['burn_time_sec'] as int?,
     );
 
-Map<String, dynamic> _$$_FirstStageModelToJson(_$_FirstStageModel instance) {
+Map<String, dynamic> _$$_FirstStageNetworkModelToJson(
+    _$_FirstStageNetworkModel instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -294,14 +303,15 @@ Map<String, dynamic> _$$_FirstStageModelToJson(_$_FirstStageModel instance) {
   return val;
 }
 
-_$_SecondStageModel _$$_SecondStageModelFromJson(Map<String, dynamic> json) =>
-    _$_SecondStageModel(
+_$_SecondStageNetworkModel _$$_SecondStageNetworkModelFromJson(
+        Map<String, dynamic> json) =>
+    _$_SecondStageNetworkModel(
       thrust: json['thrust'] == null
           ? null
           : ThrustModel.fromJson(json['thrust'] as Map<String, dynamic>),
       payloads: json['payloads'] == null
           ? null
-          : RocketPayloadModel.fromJson(
+          : RocketPayloadNetworkModel.fromJson(
               json['payloads'] as Map<String, dynamic>),
       reusable: json['reusable'] as bool? ?? false,
       engines: json['engines'] as num?,
@@ -309,7 +319,8 @@ _$_SecondStageModel _$$_SecondStageModelFromJson(Map<String, dynamic> json) =>
       burnTimeSec: json['burn_time_sec'] as int?,
     );
 
-Map<String, dynamic> _$$_SecondStageModelToJson(_$_SecondStageModel instance) {
+Map<String, dynamic> _$$_SecondStageNetworkModelToJson(
+    _$_SecondStageNetworkModel instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -327,7 +338,8 @@ Map<String, dynamic> _$$_SecondStageModelToJson(_$_SecondStageModel instance) {
   return val;
 }
 
-_$_ShipModel _$$_ShipModelFromJson(Map<String, dynamic> json) => _$_ShipModel(
+_$_ShipNetworkModel _$$_ShipNetworkModelFromJson(Map<String, dynamic> json) =>
+    _$_ShipNetworkModel(
       id: json['id'] as String,
       launches: (json['launches'] as List<dynamic>?)
               ?.map((e) => e as String)
@@ -358,7 +370,7 @@ _$_ShipModel _$$_ShipModelFromJson(Map<String, dynamic> json) => _$_ShipModel(
       legacyId: json['legacy_id'] as String?,
     );
 
-Map<String, dynamic> _$$_ShipModelToJson(_$_ShipModel instance) {
+Map<String, dynamic> _$$_ShipNetworkModelToJson(_$_ShipNetworkModel instance) {
   final val = <String, dynamic>{
     'id': instance.id,
     'launches': instance.launches,
@@ -394,8 +406,9 @@ Map<String, dynamic> _$$_ShipModelToJson(_$_ShipModel instance) {
   return val;
 }
 
-_$_ShipFullModel _$$_ShipFullModelFromJson(Map<String, dynamic> json) =>
-    _$_ShipFullModel(
+_$_ShipNetworkFullModel _$$_ShipNetworkFullModelFromJson(
+        Map<String, dynamic> json) =>
+    _$_ShipNetworkFullModel(
       id: json['id'] as String,
       lastAisUpdate: json['last_ais_update'],
       launches: (json['launches'] as List<dynamic>?)
@@ -428,7 +441,8 @@ _$_ShipFullModel _$$_ShipFullModelFromJson(Map<String, dynamic> json) =>
       legacyId: json['legacy_id'] as String?,
     );
 
-Map<String, dynamic> _$$_ShipFullModelToJson(_$_ShipFullModel instance) {
+Map<String, dynamic> _$$_ShipNetworkFullModelToJson(
+    _$_ShipNetworkFullModel instance) {
   final val = <String, dynamic>{
     'id': instance.id,
   };
@@ -465,13 +479,14 @@ Map<String, dynamic> _$$_ShipFullModelToJson(_$_ShipFullModel instance) {
   return val;
 }
 
-_$_DragonModel _$$_DragonModelFromJson(Map<String, dynamic> json) =>
-    _$_DragonModel(
+_$_DragonNetworkModel _$$_DragonNetworkModelFromJson(
+        Map<String, dynamic> json) =>
+    _$_DragonNetworkModel(
       id: json['id'] as String,
       description: json['description'] as String?,
       heatShield: json['heat_shield'] == null
           ? null
-          : HeatShieldModel.fromJson(
+          : HeatShieldNetworkModel.fromJson(
               json['heat_shield'] as Map<String, dynamic>),
       launchPayloadMass: json['launch_payload_mass'] == null
           ? null
@@ -491,13 +506,14 @@ _$_DragonModel _$$_DragonModelFromJson(Map<String, dynamic> json) =>
               json['return_payload_vol'] as Map<String, dynamic>),
       pressurizedCapsule: json['pressurized_capsule'] == null
           ? null
-          : PressurizedCapsuleModel.fromJson(
+          : PressurizedCapsuleNetworkModel.fromJson(
               json['pressurized_capsule'] as Map<String, dynamic>),
       wiki: json['wikipedia'] as String?,
       thrusters: (json['thrusters'] as List<dynamic>?)
-              ?.map((e) => ThrusterModel.fromJson(e as Map<String, dynamic>))
+              ?.map((e) =>
+                  ThrusterNetworkModel.fromJson(e as Map<String, dynamic>))
               .toList() ??
-          const <ThrusterModel>[],
+          const <ThrusterNetworkModel>[],
       dryMassLb: json['dry_mass_lb'] as int?,
       dryMassKg: json['dry_mass_kg'] as int?,
       orbitDurationYr: json['orbit_duration_yr'] as int?,
@@ -520,10 +536,11 @@ _$_DragonModel _$$_DragonModelFromJson(Map<String, dynamic> json) =>
               json['height_w_trunk'] as Map<String, dynamic>),
       trunk: json['trunk'] == null
           ? null
-          : TrunkModel.fromJson(json['trunk'] as Map<String, dynamic>),
+          : TrunkNetworkModel.fromJson(json['trunk'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_DragonModelToJson(_$_DragonModel instance) {
+Map<String, dynamic> _$$_DragonNetworkModelToJson(
+    _$_DragonNetworkModel instance) {
   final val = <String, dynamic>{
     'id': instance.id,
   };
@@ -559,17 +576,17 @@ Map<String, dynamic> _$$_DragonModelToJson(_$_DragonModel instance) {
   return val;
 }
 
-_$_PressurizedCapsuleModel _$$_PressurizedCapsuleModelFromJson(
+_$_PressurizedCapsuleNetworkModel _$$_PressurizedCapsuleNetworkModelFromJson(
         Map<String, dynamic> json) =>
-    _$_PressurizedCapsuleModel(
+    _$_PressurizedCapsuleNetworkModel(
       payloadVolume: json['payload_volume'] == null
           ? null
           : CubicLenModel.fromJson(
               json['payload_volume'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_PressurizedCapsuleModelToJson(
-    _$_PressurizedCapsuleModel instance) {
+Map<String, dynamic> _$$_PressurizedCapsuleNetworkModelToJson(
+    _$_PressurizedCapsuleNetworkModel instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -582,15 +599,17 @@ Map<String, dynamic> _$$_PressurizedCapsuleModelToJson(
   return val;
 }
 
-_$_HeatShieldModel _$$_HeatShieldModelFromJson(Map<String, dynamic> json) =>
-    _$_HeatShieldModel(
+_$_HeatShieldNetworkModel _$$_HeatShieldNetworkModelFromJson(
+        Map<String, dynamic> json) =>
+    _$_HeatShieldNetworkModel(
       material: json['material'] as String?,
       sizeMeters: json['size_meters'] as num?,
       tempDegrees: json['temp_degrees'] as int?,
       devPartner: json['dev_partner'] as String?,
     );
 
-Map<String, dynamic> _$$_HeatShieldModelToJson(_$_HeatShieldModel instance) {
+Map<String, dynamic> _$$_HeatShieldNetworkModelToJson(
+    _$_HeatShieldNetworkModel instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -606,8 +625,9 @@ Map<String, dynamic> _$$_HeatShieldModelToJson(_$_HeatShieldModel instance) {
   return val;
 }
 
-_$_ThrusterModel _$$_ThrusterModelFromJson(Map<String, dynamic> json) =>
-    _$_ThrusterModel(
+_$_ThrusterNetworkModel _$$_ThrusterNetworkModelFromJson(
+        Map<String, dynamic> json) =>
+    _$_ThrusterNetworkModel(
       type: json['type'] as String?,
       amount: json['amount'] as int?,
       pods: json['pods'] as int?,
@@ -619,7 +639,8 @@ _$_ThrusterModel _$$_ThrusterModelFromJson(Map<String, dynamic> json) =>
           : ThrustModel.fromJson(json['thrust'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_ThrusterModelToJson(_$_ThrusterModel instance) {
+Map<String, dynamic> _$$_ThrusterNetworkModelToJson(
+    _$_ThrusterNetworkModel instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -638,18 +659,19 @@ Map<String, dynamic> _$$_ThrusterModelToJson(_$_ThrusterModel instance) {
   return val;
 }
 
-_$_TrunkModel _$$_TrunkModelFromJson(Map<String, dynamic> json) =>
-    _$_TrunkModel(
+_$_TrunkNetworkModel _$$_TrunkNetworkModelFromJson(Map<String, dynamic> json) =>
+    _$_TrunkNetworkModel(
       volume: json['trunk_volume'] == null
           ? null
           : CubicLenModel.fromJson(
               json['trunk_volume'] as Map<String, dynamic>),
       cargo: json['cargo'] == null
           ? null
-          : CargoModel.fromJson(json['cargo'] as Map<String, dynamic>),
+          : CargoNetworkModel.fromJson(json['cargo'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_TrunkModelToJson(_$_TrunkModel instance) {
+Map<String, dynamic> _$$_TrunkNetworkModelToJson(
+    _$_TrunkNetworkModel instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -663,13 +685,14 @@ Map<String, dynamic> _$$_TrunkModelToJson(_$_TrunkModel instance) {
   return val;
 }
 
-_$_CargoModel _$$_CargoModelFromJson(Map<String, dynamic> json) =>
-    _$_CargoModel(
+_$_CargoNetworkModel _$$_CargoNetworkModelFromJson(Map<String, dynamic> json) =>
+    _$_CargoNetworkModel(
       solarArray: json['solar_array'] as num?,
       isUnpressurizedCargo: json['unpressurized_cargo'] as bool? ?? false,
     );
 
-Map<String, dynamic> _$$_CargoModelToJson(_$_CargoModel instance) {
+Map<String, dynamic> _$$_CargoNetworkModelToJson(
+    _$_CargoNetworkModel instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {

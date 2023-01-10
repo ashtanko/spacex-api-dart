@@ -24,7 +24,7 @@ class CapsulesDataSource {
   }
 
   Future<ApiPaginatedList<CapsuleNetworkModel>> queryCapsules(
-    QueryModel query,
+    QueryNetworkModel query,
   ) async {
     try {
       final capsules = await _api.queryCapsules(query);
@@ -35,7 +35,7 @@ class CapsulesDataSource {
   }
 
   Future<ApiPaginatedList<CapsuleNetworkFullModel>> queryFullCapsules(
-    QueryModel query,
+    QueryNetworkModel query,
   ) async {
     try {
       final capsules = await _api.queryFullCapsules(query);

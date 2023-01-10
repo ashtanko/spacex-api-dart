@@ -71,7 +71,7 @@ void main() {
       ],
     );
     final queryRawJson = 'query/query.json'.toFixture();
-    final query = QueryModel.fromJson(queryRawJson);
+    final query = QueryNetworkModel.fromJson(queryRawJson);
     test(
       'should perform a POST request on /cores/query',
       () async {
@@ -99,7 +99,7 @@ void main() {
       ],
     );
     final queryRawJson = 'query/query.json'.toFixture();
-    final query = QueryModel.fromJson(queryRawJson);
+    final query = QueryNetworkModel.fromJson(queryRawJson);
     test(
       'should perform a POST request on /cores/query',
       () async {
@@ -157,7 +157,7 @@ void main() {
     test(
       'queryCores, should throw a ServerException when the response code is 404 or other (unsuccessful)',
       () async {
-        const q = QueryModel();
+        const q = QueryNetworkModel();
         // arrange
         when(() => coresApi.queryCores(q)).thenThrow(
           dioException,
@@ -175,7 +175,7 @@ void main() {
     test(
       'queryFullCores, should throw a ServerException when the response code is 404 or other (unsuccessful)',
       () async {
-        const q = QueryModel();
+        const q = QueryNetworkModel();
         // arrange
         when(() => coresApi.queryFullCores(q)).thenThrow(
           dioException,

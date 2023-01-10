@@ -1,13 +1,14 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'starlink_model.dart';
+part of 'starlink_network_model.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_StarlinkModel _$$_StarlinkModelFromJson(Map<String, dynamic> json) =>
-    _$_StarlinkModel(
+_$_StarlinkNetworkModel _$$_StarlinkNetworkModelFromJson(
+        Map<String, dynamic> json) =>
+    _$_StarlinkNetworkModel(
       id: json['id'] as String? ?? '',
       launchID: json['launch'] as String?,
       version: json['version'] as String?,
@@ -17,11 +18,12 @@ _$_StarlinkModel _$$_StarlinkModelFromJson(Map<String, dynamic> json) =>
       velocityKms: (json['velocity_kms'] as num?)?.toDouble(),
       spaceTrack: json['spaceTrack'] == null
           ? null
-          : SpaceTrackModel.fromJson(
+          : SpaceTrackNetworkModel.fromJson(
               json['spaceTrack'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_StarlinkModelToJson(_$_StarlinkModel instance) {
+Map<String, dynamic> _$$_StarlinkNetworkModelToJson(
+    _$_StarlinkNetworkModel instance) {
   final val = <String, dynamic>{
     'id': instance.id,
   };
@@ -42,8 +44,9 @@ Map<String, dynamic> _$$_StarlinkModelToJson(_$_StarlinkModel instance) {
   return val;
 }
 
-_$_StarlinkFullModel _$$_StarlinkFullModelFromJson(Map<String, dynamic> json) =>
-    _$_StarlinkFullModel(
+_$_StarlinkNetworkFullModel _$$_StarlinkNetworkFullModelFromJson(
+        Map<String, dynamic> json) =>
+    _$_StarlinkNetworkFullModel(
       id: json['id'] as String? ?? '',
       launch: json['launch'] == null
           ? null
@@ -55,12 +58,12 @@ _$_StarlinkFullModel _$$_StarlinkFullModelFromJson(Map<String, dynamic> json) =>
       velocityKms: (json['velocity_kms'] as num?)?.toDouble(),
       spaceTrack: json['spaceTrack'] == null
           ? null
-          : SpaceTrackModel.fromJson(
+          : SpaceTrackNetworkModel.fromJson(
               json['spaceTrack'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_StarlinkFullModelToJson(
-    _$_StarlinkFullModel instance) {
+Map<String, dynamic> _$$_StarlinkNetworkFullModelToJson(
+    _$_StarlinkNetworkFullModel instance) {
   final val = <String, dynamic>{
     'id': instance.id,
   };
@@ -81,8 +84,9 @@ Map<String, dynamic> _$$_StarlinkFullModelToJson(
   return val;
 }
 
-_$_SpaceTrackModel _$$_SpaceTrackModelFromJson(Map<String, dynamic> json) =>
-    _$_SpaceTrackModel(
+_$_SpaceTrackNetworkModel _$$_SpaceTrackNetworkModelFromJson(
+        Map<String, dynamic> json) =>
+    _$_SpaceTrackNetworkModel(
       ccsdsOmmVers: json['CCSDS_OMM_VERS'] as String?,
       comment: json['COMMENT'] as String?,
       creationDate: json['CREATION_DATE'] as String?,
@@ -126,7 +130,8 @@ _$_SpaceTrackModel _$$_SpaceTrackModelFromJson(Map<String, dynamic> json) =>
       tleLine2: json['TLE_LINE2'] as String?,
     );
 
-Map<String, dynamic> _$$_SpaceTrackModelToJson(_$_SpaceTrackModel instance) {
+Map<String, dynamic> _$$_SpaceTrackNetworkModelToJson(
+    _$_SpaceTrackNetworkModel instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {

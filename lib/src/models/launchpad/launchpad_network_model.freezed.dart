@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'launchpad_model.dart';
+part of 'launchpad_network_model.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -14,12 +14,13 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
-LaunchpadModel _$LaunchpadModelFromJson(Map<String, dynamic> json) {
-  return _LaunchpadModel.fromJson(json);
+LaunchpadNetworkModel _$LaunchpadNetworkModelFromJson(
+    Map<String, dynamic> json) {
+  return _LaunchpadNetworkModel.fromJson(json);
 }
 
 /// @nodoc
-mixin _$LaunchpadModel {
+mixin _$LaunchpadNetworkModel {
   String get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'details')
   String? get details => throw _privateConstructorUsedError;
@@ -52,15 +53,15 @@ mixin _$LaunchpadModel {
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $LaunchpadModelCopyWith<LaunchpadModel> get copyWith =>
+  $LaunchpadNetworkModelCopyWith<LaunchpadNetworkModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $LaunchpadModelCopyWith<$Res> {
-  factory $LaunchpadModelCopyWith(
-          LaunchpadModel value, $Res Function(LaunchpadModel) then) =
-      _$LaunchpadModelCopyWithImpl<$Res, LaunchpadModel>;
+abstract class $LaunchpadNetworkModelCopyWith<$Res> {
+  factory $LaunchpadNetworkModelCopyWith(LaunchpadNetworkModel value,
+          $Res Function(LaunchpadNetworkModel) then) =
+      _$LaunchpadNetworkModelCopyWithImpl<$Res, LaunchpadNetworkModel>;
   @useResult
   $Res call(
       {String id,
@@ -97,9 +98,10 @@ abstract class $LaunchpadModelCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$LaunchpadModelCopyWithImpl<$Res, $Val extends LaunchpadModel>
-    implements $LaunchpadModelCopyWith<$Res> {
-  _$LaunchpadModelCopyWithImpl(this._value, this._then);
+class _$LaunchpadNetworkModelCopyWithImpl<$Res,
+        $Val extends LaunchpadNetworkModel>
+    implements $LaunchpadNetworkModelCopyWith<$Res> {
+  _$LaunchpadNetworkModelCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -203,11 +205,11 @@ class _$LaunchpadModelCopyWithImpl<$Res, $Val extends LaunchpadModel>
 }
 
 /// @nodoc
-abstract class _$$_LaunchpadModelCopyWith<$Res>
-    implements $LaunchpadModelCopyWith<$Res> {
-  factory _$$_LaunchpadModelCopyWith(
-          _$_LaunchpadModel value, $Res Function(_$_LaunchpadModel) then) =
-      __$$_LaunchpadModelCopyWithImpl<$Res>;
+abstract class _$$_LaunchpadNetworkModelCopyWith<$Res>
+    implements $LaunchpadNetworkModelCopyWith<$Res> {
+  factory _$$_LaunchpadNetworkModelCopyWith(_$_LaunchpadNetworkModel value,
+          $Res Function(_$_LaunchpadNetworkModel) then) =
+      __$$_LaunchpadNetworkModelCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -246,11 +248,11 @@ abstract class _$$_LaunchpadModelCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_LaunchpadModelCopyWithImpl<$Res>
-    extends _$LaunchpadModelCopyWithImpl<$Res, _$_LaunchpadModel>
-    implements _$$_LaunchpadModelCopyWith<$Res> {
-  __$$_LaunchpadModelCopyWithImpl(
-      _$_LaunchpadModel _value, $Res Function(_$_LaunchpadModel) _then)
+class __$$_LaunchpadNetworkModelCopyWithImpl<$Res>
+    extends _$LaunchpadNetworkModelCopyWithImpl<$Res, _$_LaunchpadNetworkModel>
+    implements _$$_LaunchpadNetworkModelCopyWith<$Res> {
+  __$$_LaunchpadNetworkModelCopyWithImpl(_$_LaunchpadNetworkModel _value,
+      $Res Function(_$_LaunchpadNetworkModel) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -272,7 +274,7 @@ class __$$_LaunchpadModelCopyWithImpl<$Res>
     Object? fullName = freezed,
     Object? name = freezed,
   }) {
-    return _then(_$_LaunchpadModel(
+    return _then(_$_LaunchpadNetworkModel(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -339,8 +341,8 @@ class __$$_LaunchpadModelCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_LaunchpadModel extends _LaunchpadModel {
-  const _$_LaunchpadModel(
+class _$_LaunchpadNetworkModel extends _LaunchpadNetworkModel {
+  const _$_LaunchpadNetworkModel(
       {required this.id,
       @JsonKey(name: 'details')
           this.details,
@@ -374,8 +376,8 @@ class _$_LaunchpadModel extends _LaunchpadModel {
         _rockets = rockets,
         super._();
 
-  factory _$_LaunchpadModel.fromJson(Map<String, dynamic> json) =>
-      _$$_LaunchpadModelFromJson(json);
+  factory _$_LaunchpadNetworkModel.fromJson(Map<String, dynamic> json) =>
+      _$$_LaunchpadNetworkModelFromJson(json);
 
   @override
   final String id;
@@ -436,14 +438,14 @@ class _$_LaunchpadModel extends _LaunchpadModel {
 
   @override
   String toString() {
-    return 'LaunchpadModel(id: $id, details: $details, images: $images, status: $status, launches: $launches, timezone: $timezone, rockets: $rockets, launchSuccesses: $launchSuccesses, launchAttempts: $launchAttempts, longitude: $longitude, latitude: $latitude, region: $region, locality: $locality, fullName: $fullName, name: $name)';
+    return 'LaunchpadNetworkModel(id: $id, details: $details, images: $images, status: $status, launches: $launches, timezone: $timezone, rockets: $rockets, launchSuccesses: $launchSuccesses, launchAttempts: $launchAttempts, longitude: $longitude, latitude: $latitude, region: $region, locality: $locality, fullName: $fullName, name: $name)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_LaunchpadModel &&
+            other is _$_LaunchpadNetworkModel &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.details, details) || other.details == details) &&
             (identical(other.images, images) || other.images == images) &&
@@ -491,19 +493,20 @@ class _$_LaunchpadModel extends _LaunchpadModel {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_LaunchpadModelCopyWith<_$_LaunchpadModel> get copyWith =>
-      __$$_LaunchpadModelCopyWithImpl<_$_LaunchpadModel>(this, _$identity);
+  _$$_LaunchpadNetworkModelCopyWith<_$_LaunchpadNetworkModel> get copyWith =>
+      __$$_LaunchpadNetworkModelCopyWithImpl<_$_LaunchpadNetworkModel>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_LaunchpadModelToJson(
+    return _$$_LaunchpadNetworkModelToJson(
       this,
     );
   }
 }
 
-abstract class _LaunchpadModel extends LaunchpadModel {
-  const factory _LaunchpadModel(
+abstract class _LaunchpadNetworkModel extends LaunchpadNetworkModel {
+  const factory _LaunchpadNetworkModel(
       {required final String id,
       @JsonKey(name: 'details')
           final String? details,
@@ -532,11 +535,11 @@ abstract class _LaunchpadModel extends LaunchpadModel {
       @JsonKey(name: 'full_name')
           final String? fullName,
       @JsonKey(name: 'name')
-          final String? name}) = _$_LaunchpadModel;
-  const _LaunchpadModel._() : super._();
+          final String? name}) = _$_LaunchpadNetworkModel;
+  const _LaunchpadNetworkModel._() : super._();
 
-  factory _LaunchpadModel.fromJson(Map<String, dynamic> json) =
-      _$_LaunchpadModel.fromJson;
+  factory _LaunchpadNetworkModel.fromJson(Map<String, dynamic> json) =
+      _$_LaunchpadNetworkModel.fromJson;
 
   @override
   String get id;
@@ -584,16 +587,17 @@ abstract class _LaunchpadModel extends LaunchpadModel {
   String? get name;
   @override
   @JsonKey(ignore: true)
-  _$$_LaunchpadModelCopyWith<_$_LaunchpadModel> get copyWith =>
+  _$$_LaunchpadNetworkModelCopyWith<_$_LaunchpadNetworkModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
-LaunchpadFullModel _$LaunchpadFullModelFromJson(Map<String, dynamic> json) {
-  return _LaunchpadFullModel.fromJson(json);
+LaunchpadNetworkFullModel _$LaunchpadNetworkFullModelFromJson(
+    Map<String, dynamic> json) {
+  return _LaunchpadNetworkFullModel.fromJson(json);
 }
 
 /// @nodoc
-mixin _$LaunchpadFullModel {
+mixin _$LaunchpadNetworkFullModel {
   String get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'details')
   String? get details => throw _privateConstructorUsedError;
@@ -606,7 +610,7 @@ mixin _$LaunchpadFullModel {
   @JsonKey(name: 'timezone')
   String? get timezone => throw _privateConstructorUsedError;
   @JsonKey(name: 'rockets')
-  List<RocketModel> get rockets => throw _privateConstructorUsedError;
+  List<RocketNetworkModel> get rockets => throw _privateConstructorUsedError;
   @JsonKey(name: 'launch_successes')
   int? get launchSuccesses => throw _privateConstructorUsedError;
   @JsonKey(name: 'launch_attempts')
@@ -626,15 +630,15 @@ mixin _$LaunchpadFullModel {
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $LaunchpadFullModelCopyWith<LaunchpadFullModel> get copyWith =>
+  $LaunchpadNetworkFullModelCopyWith<LaunchpadNetworkFullModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $LaunchpadFullModelCopyWith<$Res> {
-  factory $LaunchpadFullModelCopyWith(
-          LaunchpadFullModel value, $Res Function(LaunchpadFullModel) then) =
-      _$LaunchpadFullModelCopyWithImpl<$Res, LaunchpadFullModel>;
+abstract class $LaunchpadNetworkFullModelCopyWith<$Res> {
+  factory $LaunchpadNetworkFullModelCopyWith(LaunchpadNetworkFullModel value,
+          $Res Function(LaunchpadNetworkFullModel) then) =
+      _$LaunchpadNetworkFullModelCopyWithImpl<$Res, LaunchpadNetworkFullModel>;
   @useResult
   $Res call(
       {String id,
@@ -649,7 +653,7 @@ abstract class $LaunchpadFullModelCopyWith<$Res> {
       @JsonKey(name: 'timezone')
           String? timezone,
       @JsonKey(name: 'rockets')
-          List<RocketModel> rockets,
+          List<RocketNetworkModel> rockets,
       @JsonKey(name: 'launch_successes')
           int? launchSuccesses,
       @JsonKey(name: 'launch_attempts')
@@ -671,9 +675,10 @@ abstract class $LaunchpadFullModelCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$LaunchpadFullModelCopyWithImpl<$Res, $Val extends LaunchpadFullModel>
-    implements $LaunchpadFullModelCopyWith<$Res> {
-  _$LaunchpadFullModelCopyWithImpl(this._value, this._then);
+class _$LaunchpadNetworkFullModelCopyWithImpl<$Res,
+        $Val extends LaunchpadNetworkFullModel>
+    implements $LaunchpadNetworkFullModelCopyWith<$Res> {
+  _$LaunchpadNetworkFullModelCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -727,7 +732,7 @@ class _$LaunchpadFullModelCopyWithImpl<$Res, $Val extends LaunchpadFullModel>
       rockets: null == rockets
           ? _value.rockets
           : rockets // ignore: cast_nullable_to_non_nullable
-              as List<RocketModel>,
+              as List<RocketNetworkModel>,
       launchSuccesses: freezed == launchSuccesses
           ? _value.launchSuccesses
           : launchSuccesses // ignore: cast_nullable_to_non_nullable
@@ -777,11 +782,12 @@ class _$LaunchpadFullModelCopyWithImpl<$Res, $Val extends LaunchpadFullModel>
 }
 
 /// @nodoc
-abstract class _$$_LaunchpadFullModelCopyWith<$Res>
-    implements $LaunchpadFullModelCopyWith<$Res> {
-  factory _$$_LaunchpadFullModelCopyWith(_$_LaunchpadFullModel value,
-          $Res Function(_$_LaunchpadFullModel) then) =
-      __$$_LaunchpadFullModelCopyWithImpl<$Res>;
+abstract class _$$_LaunchpadNetworkFullModelCopyWith<$Res>
+    implements $LaunchpadNetworkFullModelCopyWith<$Res> {
+  factory _$$_LaunchpadNetworkFullModelCopyWith(
+          _$_LaunchpadNetworkFullModel value,
+          $Res Function(_$_LaunchpadNetworkFullModel) then) =
+      __$$_LaunchpadNetworkFullModelCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -797,7 +803,7 @@ abstract class _$$_LaunchpadFullModelCopyWith<$Res>
       @JsonKey(name: 'timezone')
           String? timezone,
       @JsonKey(name: 'rockets')
-          List<RocketModel> rockets,
+          List<RocketNetworkModel> rockets,
       @JsonKey(name: 'launch_successes')
           int? launchSuccesses,
       @JsonKey(name: 'launch_attempts')
@@ -820,11 +826,13 @@ abstract class _$$_LaunchpadFullModelCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_LaunchpadFullModelCopyWithImpl<$Res>
-    extends _$LaunchpadFullModelCopyWithImpl<$Res, _$_LaunchpadFullModel>
-    implements _$$_LaunchpadFullModelCopyWith<$Res> {
-  __$$_LaunchpadFullModelCopyWithImpl(
-      _$_LaunchpadFullModel _value, $Res Function(_$_LaunchpadFullModel) _then)
+class __$$_LaunchpadNetworkFullModelCopyWithImpl<$Res>
+    extends _$LaunchpadNetworkFullModelCopyWithImpl<$Res,
+        _$_LaunchpadNetworkFullModel>
+    implements _$$_LaunchpadNetworkFullModelCopyWith<$Res> {
+  __$$_LaunchpadNetworkFullModelCopyWithImpl(
+      _$_LaunchpadNetworkFullModel _value,
+      $Res Function(_$_LaunchpadNetworkFullModel) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -846,7 +854,7 @@ class __$$_LaunchpadFullModelCopyWithImpl<$Res>
     Object? fullName = freezed,
     Object? name = freezed,
   }) {
-    return _then(_$_LaunchpadFullModel(
+    return _then(_$_LaunchpadNetworkFullModel(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -874,7 +882,7 @@ class __$$_LaunchpadFullModelCopyWithImpl<$Res>
       rockets: null == rockets
           ? _value._rockets
           : rockets // ignore: cast_nullable_to_non_nullable
-              as List<RocketModel>,
+              as List<RocketNetworkModel>,
       launchSuccesses: freezed == launchSuccesses
           ? _value.launchSuccesses
           : launchSuccesses // ignore: cast_nullable_to_non_nullable
@@ -913,8 +921,8 @@ class __$$_LaunchpadFullModelCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_LaunchpadFullModel extends _LaunchpadFullModel {
-  const _$_LaunchpadFullModel(
+class _$_LaunchpadNetworkFullModel extends _LaunchpadNetworkFullModel {
+  const _$_LaunchpadNetworkFullModel(
       {required this.id,
       @JsonKey(name: 'details')
           this.details,
@@ -927,7 +935,7 @@ class _$_LaunchpadFullModel extends _LaunchpadFullModel {
       @JsonKey(name: 'timezone')
           this.timezone,
       @JsonKey(name: 'rockets')
-          final List<RocketModel> rockets = const [],
+          final List<RocketNetworkModel> rockets = const [],
       @JsonKey(name: 'launch_successes')
           this.launchSuccesses,
       @JsonKey(name: 'launch_attempts')
@@ -948,8 +956,8 @@ class _$_LaunchpadFullModel extends _LaunchpadFullModel {
         _rockets = rockets,
         super._();
 
-  factory _$_LaunchpadFullModel.fromJson(Map<String, dynamic> json) =>
-      _$$_LaunchpadFullModelFromJson(json);
+  factory _$_LaunchpadNetworkFullModel.fromJson(Map<String, dynamic> json) =>
+      _$$_LaunchpadNetworkFullModelFromJson(json);
 
   @override
   final String id;
@@ -974,10 +982,10 @@ class _$_LaunchpadFullModel extends _LaunchpadFullModel {
   @override
   @JsonKey(name: 'timezone')
   final String? timezone;
-  final List<RocketModel> _rockets;
+  final List<RocketNetworkModel> _rockets;
   @override
   @JsonKey(name: 'rockets')
-  List<RocketModel> get rockets {
+  List<RocketNetworkModel> get rockets {
     if (_rockets is EqualUnmodifiableListView) return _rockets;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_rockets);
@@ -1010,14 +1018,14 @@ class _$_LaunchpadFullModel extends _LaunchpadFullModel {
 
   @override
   String toString() {
-    return 'LaunchpadFullModel(id: $id, details: $details, images: $images, status: $status, launches: $launches, timezone: $timezone, rockets: $rockets, launchSuccesses: $launchSuccesses, launchAttempts: $launchAttempts, longitude: $longitude, latitude: $latitude, region: $region, locality: $locality, fullName: $fullName, name: $name)';
+    return 'LaunchpadNetworkFullModel(id: $id, details: $details, images: $images, status: $status, launches: $launches, timezone: $timezone, rockets: $rockets, launchSuccesses: $launchSuccesses, launchAttempts: $launchAttempts, longitude: $longitude, latitude: $latitude, region: $region, locality: $locality, fullName: $fullName, name: $name)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_LaunchpadFullModel &&
+            other is _$_LaunchpadNetworkFullModel &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.details, details) || other.details == details) &&
             (identical(other.images, images) || other.images == images) &&
@@ -1065,20 +1073,20 @@ class _$_LaunchpadFullModel extends _LaunchpadFullModel {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_LaunchpadFullModelCopyWith<_$_LaunchpadFullModel> get copyWith =>
-      __$$_LaunchpadFullModelCopyWithImpl<_$_LaunchpadFullModel>(
-          this, _$identity);
+  _$$_LaunchpadNetworkFullModelCopyWith<_$_LaunchpadNetworkFullModel>
+      get copyWith => __$$_LaunchpadNetworkFullModelCopyWithImpl<
+          _$_LaunchpadNetworkFullModel>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_LaunchpadFullModelToJson(
+    return _$$_LaunchpadNetworkFullModelToJson(
       this,
     );
   }
 }
 
-abstract class _LaunchpadFullModel extends LaunchpadFullModel {
-  const factory _LaunchpadFullModel(
+abstract class _LaunchpadNetworkFullModel extends LaunchpadNetworkFullModel {
+  const factory _LaunchpadNetworkFullModel(
       {required final String id,
       @JsonKey(name: 'details')
           final String? details,
@@ -1091,7 +1099,7 @@ abstract class _LaunchpadFullModel extends LaunchpadFullModel {
       @JsonKey(name: 'timezone')
           final String? timezone,
       @JsonKey(name: 'rockets')
-          final List<RocketModel> rockets,
+          final List<RocketNetworkModel> rockets,
       @JsonKey(name: 'launch_successes')
           final int? launchSuccesses,
       @JsonKey(name: 'launch_attempts')
@@ -1107,11 +1115,11 @@ abstract class _LaunchpadFullModel extends LaunchpadFullModel {
       @JsonKey(name: 'full_name')
           final String? fullName,
       @JsonKey(name: 'name')
-          final String? name}) = _$_LaunchpadFullModel;
-  const _LaunchpadFullModel._() : super._();
+          final String? name}) = _$_LaunchpadNetworkFullModel;
+  const _LaunchpadNetworkFullModel._() : super._();
 
-  factory _LaunchpadFullModel.fromJson(Map<String, dynamic> json) =
-      _$_LaunchpadFullModel.fromJson;
+  factory _LaunchpadNetworkFullModel.fromJson(Map<String, dynamic> json) =
+      _$_LaunchpadNetworkFullModel.fromJson;
 
   @override
   String get id;
@@ -1132,7 +1140,7 @@ abstract class _LaunchpadFullModel extends LaunchpadFullModel {
   String? get timezone;
   @override
   @JsonKey(name: 'rockets')
-  List<RocketModel> get rockets;
+  List<RocketNetworkModel> get rockets;
   @override
   @JsonKey(name: 'launch_successes')
   int? get launchSuccesses;
@@ -1159,6 +1167,6 @@ abstract class _LaunchpadFullModel extends LaunchpadFullModel {
   String? get name;
   @override
   @JsonKey(ignore: true)
-  _$$_LaunchpadFullModelCopyWith<_$_LaunchpadFullModel> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$_LaunchpadNetworkFullModelCopyWith<_$_LaunchpadNetworkFullModel>
+      get copyWith => throw _privateConstructorUsedError;
 }

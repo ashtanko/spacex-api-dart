@@ -64,7 +64,7 @@ void main() {
           final Map<String, dynamic> jsonMap =
               'vehicle/roadster.json'.toFixture();
           // act
-          final result = RoadsterVehicleModel.fromJson(jsonMap);
+          final result = RoadsterVehicleNetworkModel.fromJson(jsonMap);
           // assert
           expect(result, equals(roadsterVehicleModel));
         },
@@ -77,7 +77,7 @@ void main() {
           final Map<String, dynamic> jsonMap =
               'vehicle/rocket.json'.toFixture();
           // act
-          final result = RocketModel.fromJson(jsonMap);
+          final result = RocketNetworkModel.fromJson(jsonMap);
           // assert
           expect(result, equals(rocketModel));
         },
@@ -89,7 +89,7 @@ void main() {
           // arrange
           final Map<String, dynamic> jsonMap = 'vehicle/ship.json'.toFixture();
           // act
-          final result = ShipModel.fromJson(jsonMap);
+          final result = ShipNetworkModel.fromJson(jsonMap);
           // assert
           expect(result, equals(shipModel));
         },
@@ -102,7 +102,7 @@ void main() {
           final Map<String, dynamic> jsonMap =
               'vehicle/full_ship.json'.toFixture();
           // act
-          final result = ShipFullModel.fromJson(jsonMap);
+          final result = ShipNetworkFullModel.fromJson(jsonMap);
           // assert
           expect(result, equals(shipFullModel));
         },
@@ -115,7 +115,7 @@ void main() {
           final Map<String, dynamic> jsonMap =
               'vehicle/dragon.json'.toFixture();
           // act
-          final result = DragonModel.fromJson(jsonMap);
+          final result = DragonNetworkModel.fromJson(jsonMap);
           // assert
           expect(result, equals(dragonModel));
         },

@@ -6,7 +6,7 @@ class LaunchpadsDataSource {
 
   final LaunchpadsApi _api;
 
-  Future<List<LaunchpadModel>> getAllLaunchpads() async {
+  Future<List<LaunchpadNetworkModel>> getAllLaunchpads() async {
     try {
       return _api.getAllLaunchpads();
     } on DioError catch (_) {
@@ -14,7 +14,7 @@ class LaunchpadsDataSource {
     }
   }
 
-  Future<LaunchpadModel> getLaunchpad(String id) async {
+  Future<LaunchpadNetworkModel> getLaunchpad(String id) async {
     try {
       return _api.getLaunchpad(id);
     } on DioError catch (_) {
@@ -22,8 +22,8 @@ class LaunchpadsDataSource {
     }
   }
 
-  Future<ApiPaginatedList<LaunchpadModel>> queryLaunchpads(
-    QueryModel query,
+  Future<ApiPaginatedList<LaunchpadNetworkModel>> queryLaunchpads(
+    QueryNetworkModel query,
   ) async {
     try {
       return _api.queryLaunchpads(query);
@@ -32,8 +32,8 @@ class LaunchpadsDataSource {
     }
   }
 
-  Future<ApiPaginatedList<LaunchpadFullModel>> queryFullLaunchpads(
-    QueryModel query,
+  Future<ApiPaginatedList<LaunchpadNetworkFullModel>> queryFullLaunchpads(
+    QueryNetworkModel query,
   ) async {
     try {
       return _api.queryFullLaunchpads(query);

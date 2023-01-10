@@ -19,7 +19,7 @@ void main() {
 
   group('getStarlinkList', () {
     final rawJson = 'starlink/starlink.json'.toFixture();
-    final model = StarlinkModel.fromJson(rawJson);
+    final model = StarlinkNetworkModel.fromJson(rawJson);
     final mockResponse = [model];
     test(
       'should perform a GET request on /starlink',
@@ -43,7 +43,7 @@ void main() {
   group('getStarlink', () {
     const id = '5eed770f096e59000698560d';
     final rawJson = 'starlink/starlink.json'.toFixture();
-    final mockResponse = StarlinkModel.fromJson(rawJson);
+    final mockResponse = StarlinkNetworkModel.fromJson(rawJson);
     test(
       'should perform a GET request on /starlink/{$id}',
       () async {
@@ -67,11 +67,11 @@ void main() {
     final rawJson = 'starlink/starlink.json'.toFixture();
     final mockResponse = ApiPaginatedList(
       results: [
-        StarlinkModel.fromJson(rawJson),
+        StarlinkNetworkModel.fromJson(rawJson),
       ],
     );
     final queryRawJson = 'query/query.json'.toFixture();
-    final query = QueryModel.fromJson(queryRawJson);
+    final query = QueryNetworkModel.fromJson(queryRawJson);
     test(
       'should perform a POST request on /starlink/query',
       () async {
@@ -95,11 +95,11 @@ void main() {
     final rawJson = 'starlink/full_starlink.json'.toFixture();
     final mockResponse = ApiPaginatedList(
       results: [
-        StarlinkFullModel.fromJson(rawJson),
+        StarlinkNetworkFullModel.fromJson(rawJson),
       ],
     );
     final queryRawJson = 'query/query.json'.toFixture();
-    final query = QueryModel.fromJson(queryRawJson);
+    final query = QueryNetworkModel.fromJson(queryRawJson);
     test(
       'should perform a POST request on /starlink/query',
       () async {
@@ -157,7 +157,7 @@ void main() {
     test(
       'queryStarlinkList, should throw a ServerException when the response code is 404 or other (unsuccessful)',
       () async {
-        const q = QueryModel();
+        const q = QueryNetworkModel();
         // arrange
         when(() => api.queryStarlinkList(q)).thenThrow(
           dioException,
@@ -175,7 +175,7 @@ void main() {
     test(
       'queryFullStarlinkList, should throw a ServerException when the response code is 404 or other (unsuccessful)',
       () async {
-        const q = QueryModel();
+        const q = QueryNetworkModel();
         // arrange
         when(() => api.queryFullStarlinkList(q)).thenThrow(
           dioException,

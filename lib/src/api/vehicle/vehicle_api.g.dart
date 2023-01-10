@@ -21,13 +21,13 @@ class _VehicleApi implements VehicleApi {
   String? baseUrl;
 
   @override
-  Future<List<DragonModel>> getAllDragons() async {
+  Future<List<DragonNetworkModel>> getAllDragons() async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     final _result = await _dio
-        .fetch<List<dynamic>>(_setStreamType<List<DragonModel>>(Options(
+        .fetch<List<dynamic>>(_setStreamType<List<DragonNetworkModel>>(Options(
       method: 'GET',
       headers: _headers,
       extra: _extra,
@@ -40,19 +40,20 @@ class _VehicleApi implements VehicleApi {
             )
             .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
     var value = _result.data!
-        .map((dynamic i) => DragonModel.fromJson(i as Map<String, dynamic>))
+        .map((dynamic i) =>
+            DragonNetworkModel.fromJson(i as Map<String, dynamic>))
         .toList();
     return value;
   }
 
   @override
-  Future<DragonModel> getDragon(id) async {
+  Future<DragonNetworkModel> getDragon(id) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     final _result = await _dio
-        .fetch<Map<String, dynamic>>(_setStreamType<DragonModel>(Options(
+        .fetch<Map<String, dynamic>>(_setStreamType<DragonNetworkModel>(Options(
       method: 'GET',
       headers: _headers,
       extra: _extra,
@@ -64,19 +65,19 @@ class _VehicleApi implements VehicleApi {
               data: _data,
             )
             .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
-    final value = DragonModel.fromJson(_result.data!);
+    final value = DragonNetworkModel.fromJson(_result.data!);
     return value;
   }
 
   @override
-  Future<ApiPaginatedList<DragonModel>> queryDragons(query) async {
+  Future<ApiPaginatedList<DragonNetworkModel>> queryDragons(query) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     _data.addAll(query.toJson());
     final _result = await _dio.fetch<Map<String, dynamic>>(
-        _setStreamType<ApiPaginatedList<DragonModel>>(Options(
+        _setStreamType<ApiPaginatedList<DragonNetworkModel>>(Options(
       method: 'POST',
       headers: _headers,
       extra: _extra,
@@ -88,21 +89,21 @@ class _VehicleApi implements VehicleApi {
               data: _data,
             )
             .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
-    final value = ApiPaginatedList<DragonModel>.fromJson(
+    final value = ApiPaginatedList<DragonNetworkModel>.fromJson(
       _result.data!,
-      (json) => DragonModel.fromJson(json as Map<String, dynamic>),
+      (json) => DragonNetworkModel.fromJson(json as Map<String, dynamic>),
     );
     return value;
   }
 
   @override
-  Future<List<ShipModel>> getAllShips() async {
+  Future<List<ShipNetworkModel>> getAllShips() async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
-    final _result =
-        await _dio.fetch<List<dynamic>>(_setStreamType<List<ShipModel>>(Options(
+    final _result = await _dio
+        .fetch<List<dynamic>>(_setStreamType<List<ShipNetworkModel>>(Options(
       method: 'GET',
       headers: _headers,
       extra: _extra,
@@ -115,19 +116,20 @@ class _VehicleApi implements VehicleApi {
             )
             .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
     var value = _result.data!
-        .map((dynamic i) => ShipModel.fromJson(i as Map<String, dynamic>))
+        .map(
+            (dynamic i) => ShipNetworkModel.fromJson(i as Map<String, dynamic>))
         .toList();
     return value;
   }
 
   @override
-  Future<ShipModel> getShip(id) async {
+  Future<ShipNetworkModel> getShip(id) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     final _result = await _dio
-        .fetch<Map<String, dynamic>>(_setStreamType<ShipModel>(Options(
+        .fetch<Map<String, dynamic>>(_setStreamType<ShipNetworkModel>(Options(
       method: 'GET',
       headers: _headers,
       extra: _extra,
@@ -139,19 +141,19 @@ class _VehicleApi implements VehicleApi {
               data: _data,
             )
             .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
-    final value = ShipModel.fromJson(_result.data!);
+    final value = ShipNetworkModel.fromJson(_result.data!);
     return value;
   }
 
   @override
-  Future<ApiPaginatedList<ShipModel>> queryShips(query) async {
+  Future<ApiPaginatedList<ShipNetworkModel>> queryShips(query) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     _data.addAll(query.toJson());
     final _result = await _dio.fetch<Map<String, dynamic>>(
-        _setStreamType<ApiPaginatedList<ShipModel>>(Options(
+        _setStreamType<ApiPaginatedList<ShipNetworkModel>>(Options(
       method: 'POST',
       headers: _headers,
       extra: _extra,
@@ -163,22 +165,22 @@ class _VehicleApi implements VehicleApi {
               data: _data,
             )
             .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
-    final value = ApiPaginatedList<ShipModel>.fromJson(
+    final value = ApiPaginatedList<ShipNetworkModel>.fromJson(
       _result.data!,
-      (json) => ShipModel.fromJson(json as Map<String, dynamic>),
+      (json) => ShipNetworkModel.fromJson(json as Map<String, dynamic>),
     );
     return value;
   }
 
   @override
-  Future<ApiPaginatedList<ShipFullModel>> queryFullShips(query) async {
+  Future<ApiPaginatedList<ShipNetworkFullModel>> queryFullShips(query) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     _data.addAll(query.toJson());
     final _result = await _dio.fetch<Map<String, dynamic>>(
-        _setStreamType<ApiPaginatedList<ShipFullModel>>(Options(
+        _setStreamType<ApiPaginatedList<ShipNetworkFullModel>>(Options(
       method: 'POST',
       headers: _headers,
       extra: _extra,
@@ -190,21 +192,21 @@ class _VehicleApi implements VehicleApi {
               data: _data,
             )
             .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
-    final value = ApiPaginatedList<ShipFullModel>.fromJson(
+    final value = ApiPaginatedList<ShipNetworkFullModel>.fromJson(
       _result.data!,
-      (json) => ShipFullModel.fromJson(json as Map<String, dynamic>),
+      (json) => ShipNetworkFullModel.fromJson(json as Map<String, dynamic>),
     );
     return value;
   }
 
   @override
-  Future<List<RocketModel>> getAllRockets() async {
+  Future<List<RocketNetworkModel>> getAllRockets() async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     final _result = await _dio
-        .fetch<List<dynamic>>(_setStreamType<List<RocketModel>>(Options(
+        .fetch<List<dynamic>>(_setStreamType<List<RocketNetworkModel>>(Options(
       method: 'GET',
       headers: _headers,
       extra: _extra,
@@ -217,19 +219,20 @@ class _VehicleApi implements VehicleApi {
             )
             .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
     var value = _result.data!
-        .map((dynamic i) => RocketModel.fromJson(i as Map<String, dynamic>))
+        .map((dynamic i) =>
+            RocketNetworkModel.fromJson(i as Map<String, dynamic>))
         .toList();
     return value;
   }
 
   @override
-  Future<RocketModel> getRocket(id) async {
+  Future<RocketNetworkModel> getRocket(id) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     final _result = await _dio
-        .fetch<Map<String, dynamic>>(_setStreamType<RocketModel>(Options(
+        .fetch<Map<String, dynamic>>(_setStreamType<RocketNetworkModel>(Options(
       method: 'GET',
       headers: _headers,
       extra: _extra,
@@ -241,19 +244,19 @@ class _VehicleApi implements VehicleApi {
               data: _data,
             )
             .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
-    final value = RocketModel.fromJson(_result.data!);
+    final value = RocketNetworkModel.fromJson(_result.data!);
     return value;
   }
 
   @override
-  Future<ApiPaginatedList<RocketModel>> queryRockets(query) async {
+  Future<ApiPaginatedList<RocketNetworkModel>> queryRockets(query) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     _data.addAll(query.toJson());
     final _result = await _dio.fetch<Map<String, dynamic>>(
-        _setStreamType<ApiPaginatedList<RocketModel>>(Options(
+        _setStreamType<ApiPaginatedList<RocketNetworkModel>>(Options(
       method: 'POST',
       headers: _headers,
       extra: _extra,
@@ -265,21 +268,21 @@ class _VehicleApi implements VehicleApi {
               data: _data,
             )
             .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
-    final value = ApiPaginatedList<RocketModel>.fromJson(
+    final value = ApiPaginatedList<RocketNetworkModel>.fromJson(
       _result.data!,
-      (json) => RocketModel.fromJson(json as Map<String, dynamic>),
+      (json) => RocketNetworkModel.fromJson(json as Map<String, dynamic>),
     );
     return value;
   }
 
   @override
-  Future<RoadsterVehicleModel> getRoadster() async {
+  Future<RoadsterVehicleNetworkModel> getRoadster() async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     final _result = await _dio.fetch<Map<String, dynamic>>(
-        _setStreamType<RoadsterVehicleModel>(Options(
+        _setStreamType<RoadsterVehicleNetworkModel>(Options(
       method: 'GET',
       headers: _headers,
       extra: _extra,
@@ -291,7 +294,7 @@ class _VehicleApi implements VehicleApi {
               data: _data,
             )
             .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
-    final value = RoadsterVehicleModel.fromJson(_result.data!);
+    final value = RoadsterVehicleNetworkModel.fromJson(_result.data!);
     return value;
   }
 

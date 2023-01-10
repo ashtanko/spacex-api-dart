@@ -25,7 +25,7 @@ void main() {
         final Map<String, dynamic> jsonMap = 'query/query.json'.toFixture();
 
         // act
-        final result = QueryModel.fromJson(jsonMap);
+        final result = QueryNetworkModel.fromJson(jsonMap);
 
         // assert
         expect(result, equals(queryModel));

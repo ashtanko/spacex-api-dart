@@ -35,7 +35,7 @@ void main() {
         final Map<String, dynamic> jsonMap =
             'payloads/payload.json'.toFixture();
         // act
-        final result = PayloadModel.fromJson(jsonMap);
+        final result = PayloadNetworkModel.fromJson(jsonMap);
         // assert
         expect(result, equals(payloadModel));
       },
@@ -48,7 +48,7 @@ void main() {
         final Map<String, dynamic> jsonMap =
             'payloads/full_payload.json'.toFixture();
         // act
-        final result = FullPayloadModel.fromJson(jsonMap);
+        final result = PayloadNetworkFullModel.fromJson(jsonMap);
         // assert
         expect(result, equals(payloadFullModel));
       },

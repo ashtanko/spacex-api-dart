@@ -55,7 +55,7 @@ class LaunchDataSource {
   }
 
   Future<ApiPaginatedList<LaunchNetworkSimpleModel>> queryLaunches(
-    QueryModel query,
+    QueryNetworkModel query,
   ) async {
     try {
       return _api.queryLaunches(query);
@@ -65,7 +65,7 @@ class LaunchDataSource {
   }
 
   Future<ApiPaginatedList<LaunchNetworkFullModel>> queryFullLaunches(
-    QueryModel query,
+    QueryNetworkModel query,
   ) async {
     try {
       return _api.queryFullLaunches(query);

@@ -311,9 +311,9 @@ const fullCrew = FullCrewNetworkModel(
   id: '5ebf1a6e23a9a60006e03a7a',
 );
 
-const roadsterVehicleModel1 = RoadsterVehicleModel(id: '0');
-const roadsterVehicleModel2 = RoadsterVehicleModel(id: '0');
-const roadsterVehicleModel = RoadsterVehicleModel(
+const roadsterVehicleModel1 = RoadsterVehicleNetworkModel(id: '0');
+const roadsterVehicleModel2 = RoadsterVehicleNetworkModel(id: '0');
+const roadsterVehicleModel = RoadsterVehicleNetworkModel(
   name: "Elon Musk's Tesla Roadster",
   launchDateUtc: '2018-02-06T20:45:00.000Z',
   launchDateUnix: 1517949900,
@@ -349,13 +349,13 @@ const roadsterVehicleModel = RoadsterVehicleModel(
   id: '5eb75f0842fea42237d7f3f4',
 );
 
-const rocketModel1 = RocketModel(id: '0');
-const rocketModel2 = RocketModel(id: '0');
-const rocketModel = RocketModel(
+const rocketModel1 = RocketNetworkModel(id: '0');
+const rocketModel2 = RocketNetworkModel(id: '0');
+const rocketModel = RocketNetworkModel(
   height: HeightModel(meters: 22.25, feet: 73),
   diameter: DiameterModel(meters: 1.68, feet: 5.5),
   mass: MassModel(kg: 30146, lb: 66460),
-  firstStage: FirstStageModel(
+  firstStage: FirstStageNetworkModel(
     thrustSeaLevel: KnotPoundModel(kN: 420, lbf: 94000),
     thrustVacuum: KnotPoundModel(kN: 480, lbf: 110000),
     reusable: false,
@@ -363,9 +363,9 @@ const rocketModel = RocketModel(
     fuelAmountTons: 44.3,
     burnTimeSec: 169,
   ),
-  secondStage: SecondStageModel(
+  secondStage: SecondStageNetworkModel(
     thrust: ThrustModel(kN: 31, lbf: 7000),
-    payloads: RocketPayloadModel(
+    payloads: RocketPayloadNetworkModel(
       compositeFairing: CompositeFairingModel(
         height: HeightModel(meters: 3.5, feet: 11.5),
         diameter: DiameterModel(meters: 1.5, feet: 4.9),
@@ -377,7 +377,7 @@ const rocketModel = RocketModel(
     fuelAmountTons: 3.38,
     burnTimeSec: 378,
   ),
-  engines: EngineModel(
+  engines: EngineNetworkModel(
     isp: IspModel(seaLevel: 267, vacuum: 304),
     thrustSeaLevel: KnotPoundModel(kN: 420, lbf: 94000),
     thrustVacuum: KnotPoundModel(kN: 480, lbf: 110000),
@@ -390,7 +390,7 @@ const rocketModel = RocketModel(
     secondPropellant: 'RP-1 kerosene',
     thrustToWeight: 96,
   ),
-  landingLegs: LandingLegsModel(number: 0),
+  landingLegs: LandingLegsNetworkModel(number: 0),
   payloadWeights: [
     PayloadWeightModel(id: 'leo', name: 'Low Earth Orbit', kg: 450, lb: 992)
   ],
@@ -411,9 +411,9 @@ const rocketModel = RocketModel(
   id: '5e9d0d95eda69955f709d1eb',
 );
 
-const shipModel1 = ShipModel(id: '0');
-const shipModel2 = ShipModel(id: '0');
-const shipModel = ShipModel(
+const shipModel1 = ShipNetworkModel(id: '0');
+const shipModel2 = ShipNetworkModel(id: '0');
+const shipModel = ShipNetworkModel(
   legacyId: 'AMERICANCHAMPION',
   type: 'Tug',
   roles: ['Support Ship', 'Barge Tug'],
@@ -435,9 +435,9 @@ const shipModel = ShipModel(
   id: '5ea6ed2d080df4000697c901',
 );
 
-const shipFullModel1 = ShipFullModel(id: '0');
-const shipFullModel2 = ShipFullModel(id: '0');
-const shipFullModel = ShipFullModel(
+const shipFullModel1 = ShipNetworkFullModel(id: '0');
+const shipFullModel2 = ShipNetworkFullModel(id: '0');
+const shipFullModel = ShipNetworkFullModel(
   legacyId: 'AMERICANCHAMPION',
   type: 'Tug',
   roles: ['Support Ship', 'Barge Tug'],
@@ -507,10 +507,10 @@ const shipFullModel = ShipFullModel(
   id: '5ea6ed2d080df4000697c901',
 );
 
-const dragonModel1 = DragonModel(id: '0');
-const dragonModel2 = DragonModel(id: '0');
-const dragonModel = DragonModel(
-  heatShield: HeatShieldModel(
+const dragonModel1 = DragonNetworkModel(id: '0');
+const dragonModel2 = DragonNetworkModel(id: '0');
+const dragonModel = DragonNetworkModel(
+  heatShield: HeatShieldNetworkModel(
     material: 'PICA-X',
     sizeMeters: 3.6,
     tempDegrees: 3000,
@@ -520,12 +520,12 @@ const dragonModel = DragonModel(
   launchPayloadVol: CubicLenModel(meters: 25, feet: 883),
   returnPayloadMass: MassModel(kg: 3000, lb: 6614),
   returnPayloadVol: CubicLenModel(meters: 11, feet: 388),
-  pressurizedCapsule: PressurizedCapsuleModel(
+  pressurizedCapsule: PressurizedCapsuleNetworkModel(
     payloadVolume: CubicLenModel(meters: 11, feet: 388),
   ),
-  trunk: TrunkModel(
+  trunk: TrunkNetworkModel(
     volume: CubicLenModel(meters: 14, feet: 494),
-    cargo: CargoModel(solarArray: 2, isUnpressurizedCargo: true),
+    cargo: CargoNetworkModel(solarArray: 2, isUnpressurizedCargo: true),
   ),
   heightWTrunk: DiameterModel(meters: 7.2, feet: 23.6),
   diameter: DiameterModel(meters: 3.7, feet: 12),
@@ -545,7 +545,7 @@ const dragonModel = DragonModel(
   dryMassKg: 4200,
   dryMassLb: 9300,
   thrusters: [
-    ThrusterModel(
+    ThrusterNetworkModel(
       type: 'Draco',
       amount: 18,
       pods: 4,
@@ -755,11 +755,11 @@ const fullLaunchModel = LaunchNetworkFullModel(
   staticFireDateUnix: 1142553600,
   net: false,
   window: 0,
-  rocket: RocketModel(
+  rocket: RocketNetworkModel(
     height: HeightModel(meters: 22.25, feet: 73),
     diameter: DiameterModel(meters: 1.68, feet: 5.5),
     mass: MassModel(kg: 30146, lb: 66460),
-    firstStage: FirstStageModel(
+    firstStage: FirstStageNetworkModel(
       thrustSeaLevel: KnotPoundModel(kN: 420, lbf: 94000),
       thrustVacuum: KnotPoundModel(kN: 480, lbf: 110000),
       reusable: false,
@@ -767,9 +767,9 @@ const fullLaunchModel = LaunchNetworkFullModel(
       fuelAmountTons: 44.3,
       burnTimeSec: 169,
     ),
-    secondStage: SecondStageModel(
+    secondStage: SecondStageNetworkModel(
       thrust: ThrustModel(kN: 31, lbf: 7000),
-      payloads: RocketPayloadModel(
+      payloads: RocketPayloadNetworkModel(
         compositeFairing: CompositeFairingModel(
           height: HeightModel(meters: 3.5, feet: 11.5),
           diameter: DiameterModel(meters: 1.5, feet: 4.9),
@@ -781,7 +781,7 @@ const fullLaunchModel = LaunchNetworkFullModel(
       fuelAmountTons: 3.38,
       burnTimeSec: 378,
     ),
-    engines: EngineModel(
+    engines: EngineNetworkModel(
       isp: IspModel(seaLevel: 267, vacuum: 304),
       thrustSeaLevel: KnotPoundModel(kN: 420, lbf: 94000),
       thrustVacuum: KnotPoundModel(kN: 480, lbf: 110000),
@@ -794,7 +794,7 @@ const fullLaunchModel = LaunchNetworkFullModel(
       secondPropellant: 'RP-1 kerosene',
       thrustToWeight: 96,
     ),
-    landingLegs: LandingLegsModel(
+    landingLegs: LandingLegsNetworkModel(
       number: 0,
     ),
     payloadWeights: [
@@ -830,8 +830,8 @@ const fullLaunchModel = LaunchNetworkFullModel(
   ships: [],
   capsules: [],
   payloads: [
-    PayloadModel(
-      dragon: PayloadDragonModel(),
+    PayloadNetworkModel(
+      dragon: PayloadDragonNetworkModel(),
       name: 'FalconSAT-2',
       type: 'Satellite',
       reused: false,
@@ -851,7 +851,7 @@ const fullLaunchModel = LaunchNetworkFullModel(
       id: '5eb0e4b5b6c3bb0006eeb1e1',
     )
   ],
-  launchpad: LaunchpadModel(
+  launchpad: LaunchpadNetworkModel(
     images: ImagesNetworkModel(large: ['https://i.imgur.com/GGPgsVs.png']),
     name: 'Kwajalein Atoll',
     fullName: 'Kwajalein Atoll Omelek Island',
@@ -897,9 +897,9 @@ const fullLaunchModel = LaunchNetworkFullModel(
   id: '5eb87cd9ffd86e000604b32a',
 );
 
-const launchpadModel1 = LaunchpadModel(id: '0');
-const launchpadModel2 = LaunchpadModel(id: '0');
-const launchpadModel = LaunchpadModel(
+const launchpadModel1 = LaunchpadNetworkModel(id: '0');
+const launchpadModel2 = LaunchpadNetworkModel(id: '0');
+const launchpadModel = LaunchpadNetworkModel(
   images: ImagesNetworkModel(large: ['https://i.imgur.com/7uXe1Kv.png']),
   name: 'VAFB SLC 3W',
   fullName: 'Vandenberg Space Force Base Space Launch Complex 3W',
@@ -918,9 +918,9 @@ const launchpadModel = LaunchpadModel(
   id: '5e9e4501f5090910d4566f83',
 );
 
-const launchpadFullModel1 = LaunchpadFullModel(id: '0');
-const launchpadFullModel2 = LaunchpadFullModel(id: '0');
-const launchpadFullModel = LaunchpadFullModel(
+const launchpadFullModel1 = LaunchpadNetworkFullModel(id: '0');
+const launchpadFullModel2 = LaunchpadNetworkFullModel(id: '0');
+const launchpadFullModel = LaunchpadNetworkFullModel(
   images: ImagesNetworkModel(large: ['https://i.imgur.com/7uXe1Kv.png']),
   name: 'VAFB SLC 3W',
   fullName: 'Vandenberg Space Force Base Space Launch Complex 3W',
@@ -931,11 +931,11 @@ const launchpadFullModel = LaunchpadFullModel(
   launchAttempts: 0,
   launchSuccesses: 0,
   rockets: [
-    RocketModel(
+    RocketNetworkModel(
       height: HeightModel(meters: 22.25, feet: 73),
       diameter: DiameterModel(meters: 1.68, feet: 5.5),
       mass: MassModel(kg: 30146, lb: 66460),
-      firstStage: FirstStageModel(
+      firstStage: FirstStageNetworkModel(
         thrustSeaLevel: KnotPoundModel(kN: 420, lbf: 94000),
         thrustVacuum: KnotPoundModel(kN: 480, lbf: 110000),
         reusable: false,
@@ -943,9 +943,9 @@ const launchpadFullModel = LaunchpadFullModel(
         fuelAmountTons: 44.3,
         burnTimeSec: 169,
       ),
-      secondStage: SecondStageModel(
+      secondStage: SecondStageNetworkModel(
         thrust: ThrustModel(kN: 31, lbf: 7000),
-        payloads: RocketPayloadModel(
+        payloads: RocketPayloadNetworkModel(
           compositeFairing: CompositeFairingModel(
             height: HeightModel(meters: 3.5, feet: 11.5),
             diameter: DiameterModel(meters: 1.5, feet: 4.9),
@@ -957,7 +957,7 @@ const launchpadFullModel = LaunchpadFullModel(
         fuelAmountTons: 3.38,
         burnTimeSec: 378,
       ),
-      engines: EngineModel(
+      engines: EngineNetworkModel(
         isp: IspModel(seaLevel: 267, vacuum: 304),
         thrustSeaLevel: KnotPoundModel(kN: 420, lbf: 94000),
         thrustVacuum: KnotPoundModel(kN: 480, lbf: 110000),
@@ -970,7 +970,7 @@ const launchpadFullModel = LaunchpadFullModel(
         secondPropellant: 'RP-1 kerosene',
         thrustToWeight: 96,
       ),
-      landingLegs: LandingLegsModel(
+      landingLegs: LandingLegsNetworkModel(
         number: 0,
       ),
       payloadWeights: [
@@ -1009,10 +1009,10 @@ const launchpadFullModel = LaunchpadFullModel(
   id: '5e9e4501f5090910d4566f83',
 );
 
-const payloadModel1 = PayloadModel(id: '0');
-const payloadModel2 = PayloadModel(id: '0');
-const payloadModel = PayloadModel(
-  dragon: PayloadDragonModel(),
+const payloadModel1 = PayloadNetworkModel(id: '0');
+const payloadModel2 = PayloadNetworkModel(id: '0');
+const payloadModel = PayloadNetworkModel(
+  dragon: PayloadDragonNetworkModel(),
   name: 'FalconSAT-2',
   type: 'Satellite',
   reused: false,
@@ -1032,10 +1032,10 @@ const payloadModel = PayloadModel(
   id: '5eb0e4b5b6c3bb0006eeb1e1',
 );
 
-const payloadFullModel1 = FullPayloadModel(id: '0');
-const payloadFullModel2 = FullPayloadModel(id: '0');
-const payloadFullModel = FullPayloadModel(
-  dragon: PayloadDragonModel(),
+const payloadFullModel1 = PayloadNetworkFullModel(id: '0');
+const payloadFullModel2 = PayloadNetworkFullModel(id: '0');
+const payloadFullModel = PayloadNetworkFullModel(
+  dragon: PayloadDragonNetworkModel(),
   name: 'FalconSAT-2',
   type: 'Satellite',
   reused: false,
@@ -1055,10 +1055,10 @@ const payloadFullModel = FullPayloadModel(
   id: '5eb0e4b5b6c3bb0006eeb1e1',
 );
 
-const queryModel1 = QueryModel();
-const queryModel2 = QueryModel();
-const queryModel = QueryModel(
-  options: OptionsModel(
+const queryModel1 = QueryNetworkModel();
+const queryModel2 = QueryNetworkModel();
+const queryModel = QueryNetworkModel(
+  options: OptionsNetworkModel(
     pagination: true,
     page: 1,
     limit: 5,
@@ -1083,7 +1083,7 @@ const paginatedList = ApiPaginatedList(
   nextPage: 1,
 );
 
-const spaceTrackModel = SpaceTrackModel(
+const spaceTrackModel = SpaceTrackNetworkModel(
   ccsdsOmmVers: '2.0',
   comment: 'GENERATED VIA SPACE-TRACK.ORG API',
   creationDate: '2020-10-13T04:16:08',
@@ -1129,9 +1129,9 @@ const spaceTrackModel = SpaceTrackModel(
       '2 44244  52.9708 332.0356 0003711 120.7278 242.0157 16.43170483 77756',
 );
 
-const starlinkModel1 = StarlinkModel();
-const starlinkModel2 = StarlinkModel();
-const starlinkModel = StarlinkModel(
+const starlinkModel1 = StarlinkNetworkModel();
+const starlinkModel2 = StarlinkNetworkModel();
+const starlinkModel = StarlinkNetworkModel(
   spaceTrack: spaceTrackModel,
   launchID: '5eb87d30ffd86e000604b378',
   version: 'v0.9',

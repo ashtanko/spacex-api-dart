@@ -9,20 +9,20 @@ abstract class LaunchpadsApi {
   factory LaunchpadsApi(Dio dio) = _LaunchpadsApi;
 
   @GET('/launchpads')
-  Future<List<LaunchpadModel>> getAllLaunchpads();
+  Future<List<LaunchpadNetworkModel>> getAllLaunchpads();
 
   @GET('/launchpads/{id}')
-  Future<LaunchpadModel> getLaunchpad(
+  Future<LaunchpadNetworkModel> getLaunchpad(
     @Path() String id,
   );
 
   @POST('/launchpads/query')
-  Future<ApiPaginatedList<LaunchpadModel>> queryLaunchpads(
-    @Body() QueryModel query,
+  Future<ApiPaginatedList<LaunchpadNetworkModel>> queryLaunchpads(
+    @Body() QueryNetworkModel query,
   );
 
   @POST('/launchpads/query')
-  Future<ApiPaginatedList<LaunchpadFullModel>> queryFullLaunchpads(
-    @Body() QueryModel query,
+  Future<ApiPaginatedList<LaunchpadNetworkFullModel>> queryFullLaunchpads(
+    @Body() QueryNetworkModel query,
   );
 }

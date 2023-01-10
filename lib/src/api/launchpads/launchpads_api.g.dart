@@ -21,13 +21,13 @@ class _LaunchpadsApi implements LaunchpadsApi {
   String? baseUrl;
 
   @override
-  Future<List<LaunchpadModel>> getAllLaunchpads() async {
+  Future<List<LaunchpadNetworkModel>> getAllLaunchpads() async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
-    final _result = await _dio
-        .fetch<List<dynamic>>(_setStreamType<List<LaunchpadModel>>(Options(
+    final _result = await _dio.fetch<List<dynamic>>(
+        _setStreamType<List<LaunchpadNetworkModel>>(Options(
       method: 'GET',
       headers: _headers,
       extra: _extra,
@@ -40,19 +40,20 @@ class _LaunchpadsApi implements LaunchpadsApi {
             )
             .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
     var value = _result.data!
-        .map((dynamic i) => LaunchpadModel.fromJson(i as Map<String, dynamic>))
+        .map((dynamic i) =>
+            LaunchpadNetworkModel.fromJson(i as Map<String, dynamic>))
         .toList();
     return value;
   }
 
   @override
-  Future<LaunchpadModel> getLaunchpad(id) async {
+  Future<LaunchpadNetworkModel> getLaunchpad(id) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
-    final _result = await _dio
-        .fetch<Map<String, dynamic>>(_setStreamType<LaunchpadModel>(Options(
+    final _result = await _dio.fetch<Map<String, dynamic>>(
+        _setStreamType<LaunchpadNetworkModel>(Options(
       method: 'GET',
       headers: _headers,
       extra: _extra,
@@ -64,19 +65,19 @@ class _LaunchpadsApi implements LaunchpadsApi {
               data: _data,
             )
             .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
-    final value = LaunchpadModel.fromJson(_result.data!);
+    final value = LaunchpadNetworkModel.fromJson(_result.data!);
     return value;
   }
 
   @override
-  Future<ApiPaginatedList<LaunchpadModel>> queryLaunchpads(query) async {
+  Future<ApiPaginatedList<LaunchpadNetworkModel>> queryLaunchpads(query) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     _data.addAll(query.toJson());
     final _result = await _dio.fetch<Map<String, dynamic>>(
-        _setStreamType<ApiPaginatedList<LaunchpadModel>>(Options(
+        _setStreamType<ApiPaginatedList<LaunchpadNetworkModel>>(Options(
       method: 'POST',
       headers: _headers,
       extra: _extra,
@@ -88,15 +89,15 @@ class _LaunchpadsApi implements LaunchpadsApi {
               data: _data,
             )
             .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
-    final value = ApiPaginatedList<LaunchpadModel>.fromJson(
+    final value = ApiPaginatedList<LaunchpadNetworkModel>.fromJson(
       _result.data!,
-      (json) => LaunchpadModel.fromJson(json as Map<String, dynamic>),
+      (json) => LaunchpadNetworkModel.fromJson(json as Map<String, dynamic>),
     );
     return value;
   }
 
   @override
-  Future<ApiPaginatedList<LaunchpadFullModel>> queryFullLaunchpads(
+  Future<ApiPaginatedList<LaunchpadNetworkFullModel>> queryFullLaunchpads(
       query) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
@@ -104,7 +105,7 @@ class _LaunchpadsApi implements LaunchpadsApi {
     final _data = <String, dynamic>{};
     _data.addAll(query.toJson());
     final _result = await _dio.fetch<Map<String, dynamic>>(
-        _setStreamType<ApiPaginatedList<LaunchpadFullModel>>(Options(
+        _setStreamType<ApiPaginatedList<LaunchpadNetworkFullModel>>(Options(
       method: 'POST',
       headers: _headers,
       extra: _extra,
@@ -116,9 +117,10 @@ class _LaunchpadsApi implements LaunchpadsApi {
               data: _data,
             )
             .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
-    final value = ApiPaginatedList<LaunchpadFullModel>.fromJson(
+    final value = ApiPaginatedList<LaunchpadNetworkFullModel>.fromJson(
       _result.data!,
-      (json) => LaunchpadFullModel.fromJson(json as Map<String, dynamic>),
+      (json) =>
+          LaunchpadNetworkFullModel.fromJson(json as Map<String, dynamic>),
     );
     return value;
   }

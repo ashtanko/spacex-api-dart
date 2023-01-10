@@ -21,13 +21,13 @@ class _StarlinkApi implements StarlinkApi {
   String? baseUrl;
 
   @override
-  Future<List<StarlinkModel>> getStarlinkList() async {
+  Future<List<StarlinkNetworkModel>> getStarlinkList() async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
-    final _result = await _dio
-        .fetch<List<dynamic>>(_setStreamType<List<StarlinkModel>>(Options(
+    final _result = await _dio.fetch<List<dynamic>>(
+        _setStreamType<List<StarlinkNetworkModel>>(Options(
       method: 'GET',
       headers: _headers,
       extra: _extra,
@@ -40,19 +40,20 @@ class _StarlinkApi implements StarlinkApi {
             )
             .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
     var value = _result.data!
-        .map((dynamic i) => StarlinkModel.fromJson(i as Map<String, dynamic>))
+        .map((dynamic i) =>
+            StarlinkNetworkModel.fromJson(i as Map<String, dynamic>))
         .toList();
     return value;
   }
 
   @override
-  Future<StarlinkModel> getStarlink(id) async {
+  Future<StarlinkNetworkModel> getStarlink(id) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
-    final _result = await _dio
-        .fetch<Map<String, dynamic>>(_setStreamType<StarlinkModel>(Options(
+    final _result = await _dio.fetch<Map<String, dynamic>>(
+        _setStreamType<StarlinkNetworkModel>(Options(
       method: 'GET',
       headers: _headers,
       extra: _extra,
@@ -64,39 +65,12 @@ class _StarlinkApi implements StarlinkApi {
               data: _data,
             )
             .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
-    final value = StarlinkModel.fromJson(_result.data!);
+    final value = StarlinkNetworkModel.fromJson(_result.data!);
     return value;
   }
 
   @override
-  Future<ApiPaginatedList<StarlinkModel>> queryStarlinkList(query) async {
-    const _extra = <String, dynamic>{};
-    final queryParameters = <String, dynamic>{};
-    final _headers = <String, dynamic>{};
-    final _data = <String, dynamic>{};
-    _data.addAll(query.toJson());
-    final _result = await _dio.fetch<Map<String, dynamic>>(
-        _setStreamType<ApiPaginatedList<StarlinkModel>>(Options(
-      method: 'POST',
-      headers: _headers,
-      extra: _extra,
-    )
-            .compose(
-              _dio.options,
-              '/starlink/query',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
-    final value = ApiPaginatedList<StarlinkModel>.fromJson(
-      _result.data!,
-      (json) => StarlinkModel.fromJson(json as Map<String, dynamic>),
-    );
-    return value;
-  }
-
-  @override
-  Future<ApiPaginatedList<StarlinkFullModel>> queryFullStarlinkList(
+  Future<ApiPaginatedList<StarlinkNetworkModel>> queryStarlinkList(
       query) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
@@ -104,7 +78,7 @@ class _StarlinkApi implements StarlinkApi {
     final _data = <String, dynamic>{};
     _data.addAll(query.toJson());
     final _result = await _dio.fetch<Map<String, dynamic>>(
-        _setStreamType<ApiPaginatedList<StarlinkFullModel>>(Options(
+        _setStreamType<ApiPaginatedList<StarlinkNetworkModel>>(Options(
       method: 'POST',
       headers: _headers,
       extra: _extra,
@@ -116,9 +90,37 @@ class _StarlinkApi implements StarlinkApi {
               data: _data,
             )
             .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
-    final value = ApiPaginatedList<StarlinkFullModel>.fromJson(
+    final value = ApiPaginatedList<StarlinkNetworkModel>.fromJson(
       _result.data!,
-      (json) => StarlinkFullModel.fromJson(json as Map<String, dynamic>),
+      (json) => StarlinkNetworkModel.fromJson(json as Map<String, dynamic>),
+    );
+    return value;
+  }
+
+  @override
+  Future<ApiPaginatedList<StarlinkNetworkFullModel>> queryFullStarlinkList(
+      query) async {
+    const _extra = <String, dynamic>{};
+    final queryParameters = <String, dynamic>{};
+    final _headers = <String, dynamic>{};
+    final _data = <String, dynamic>{};
+    _data.addAll(query.toJson());
+    final _result = await _dio.fetch<Map<String, dynamic>>(
+        _setStreamType<ApiPaginatedList<StarlinkNetworkFullModel>>(Options(
+      method: 'POST',
+      headers: _headers,
+      extra: _extra,
+    )
+            .compose(
+              _dio.options,
+              '/starlink/query',
+              queryParameters: queryParameters,
+              data: _data,
+            )
+            .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
+    final value = ApiPaginatedList<StarlinkNetworkFullModel>.fromJson(
+      _result.data!,
+      (json) => StarlinkNetworkFullModel.fromJson(json as Map<String, dynamic>),
     );
     return value;
   }

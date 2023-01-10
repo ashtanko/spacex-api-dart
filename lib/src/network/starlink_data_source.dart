@@ -6,7 +6,7 @@ class StarlinkDataSource {
 
   final StarlinkApi _api;
 
-  Future<List<StarlinkModel>> getStarlinkList() async {
+  Future<List<StarlinkNetworkModel>> getStarlinkList() async {
     try {
       return _api.getStarlinkList();
     } on DioError catch (_) {
@@ -14,7 +14,7 @@ class StarlinkDataSource {
     }
   }
 
-  Future<StarlinkModel> getStarlink(String id) async {
+  Future<StarlinkNetworkModel> getStarlink(String id) async {
     try {
       return _api.getStarlink(id);
     } on DioError catch (_) {
@@ -22,8 +22,8 @@ class StarlinkDataSource {
     }
   }
 
-  Future<ApiPaginatedList<StarlinkModel>> queryStarlinkList(
-    QueryModel query,
+  Future<ApiPaginatedList<StarlinkNetworkModel>> queryStarlinkList(
+    QueryNetworkModel query,
   ) async {
     try {
       return _api.queryStarlinkList(query);
@@ -32,8 +32,8 @@ class StarlinkDataSource {
     }
   }
 
-  Future<ApiPaginatedList<StarlinkFullModel>> queryFullStarlinkList(
-    QueryModel query,
+  Future<ApiPaginatedList<StarlinkNetworkFullModel>> queryFullStarlinkList(
+    QueryNetworkModel query,
   ) async {
     try {
       return _api.queryFullStarlinkList(query);

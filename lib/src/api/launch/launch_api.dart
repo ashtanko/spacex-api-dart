@@ -30,11 +30,11 @@ abstract class LaunchApi {
 
   @POST('/launches/query')
   Future<ApiPaginatedList<LaunchNetworkSimpleModel>> queryLaunches(
-    @Body() QueryModel query,
+    @Body() QueryNetworkModel query,
   );
 
   @POST('/launches/query')
   Future<ApiPaginatedList<LaunchNetworkFullModel>> queryFullLaunches(
-    @Body() QueryModel query,
+    @Body() QueryNetworkModel query,
   );
 }

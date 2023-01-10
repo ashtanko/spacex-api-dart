@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'payload_model.dart';
+part of 'payload_network_model.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -14,16 +14,16 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
-PayloadModel _$PayloadModelFromJson(Map<String, dynamic> json) {
-  return _PayloadModel.fromJson(json);
+PayloadNetworkModel _$PayloadNetworkModelFromJson(Map<String, dynamic> json) {
+  return _PayloadNetworkModel.fromJson(json);
 }
 
 /// @nodoc
-mixin _$PayloadModel {
+mixin _$PayloadNetworkModel {
   @JsonKey(name: 'id')
   String get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'dragon')
-  PayloadDragonModel? get dragon => throw _privateConstructorUsedError;
+  PayloadDragonNetworkModel? get dragon => throw _privateConstructorUsedError;
   @JsonKey(name: 'name')
   String? get name => throw _privateConstructorUsedError;
   @JsonKey(name: 'type')
@@ -79,19 +79,19 @@ mixin _$PayloadModel {
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $PayloadModelCopyWith<PayloadModel> get copyWith =>
+  $PayloadNetworkModelCopyWith<PayloadNetworkModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $PayloadModelCopyWith<$Res> {
-  factory $PayloadModelCopyWith(
-          PayloadModel value, $Res Function(PayloadModel) then) =
-      _$PayloadModelCopyWithImpl<$Res, PayloadModel>;
+abstract class $PayloadNetworkModelCopyWith<$Res> {
+  factory $PayloadNetworkModelCopyWith(
+          PayloadNetworkModel value, $Res Function(PayloadNetworkModel) then) =
+      _$PayloadNetworkModelCopyWithImpl<$Res, PayloadNetworkModel>;
   @useResult
   $Res call(
       {@JsonKey(name: 'id') String id,
-      @JsonKey(name: 'dragon') PayloadDragonModel? dragon,
+      @JsonKey(name: 'dragon') PayloadDragonNetworkModel? dragon,
       @JsonKey(name: 'name') String? name,
       @JsonKey(name: 'type') String? type,
       @JsonKey(name: 'reused') bool reused,
@@ -119,13 +119,13 @@ abstract class $PayloadModelCopyWith<$Res> {
       @JsonKey(name: 'arg_of_pericenter') double? argOfPericenter,
       @JsonKey(name: 'mean_anomaly') double? meanAnomaly});
 
-  $PayloadDragonModelCopyWith<$Res>? get dragon;
+  $PayloadDragonNetworkModelCopyWith<$Res>? get dragon;
 }
 
 /// @nodoc
-class _$PayloadModelCopyWithImpl<$Res, $Val extends PayloadModel>
-    implements $PayloadModelCopyWith<$Res> {
-  _$PayloadModelCopyWithImpl(this._value, this._then);
+class _$PayloadNetworkModelCopyWithImpl<$Res, $Val extends PayloadNetworkModel>
+    implements $PayloadNetworkModelCopyWith<$Res> {
+  _$PayloadNetworkModelCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -172,7 +172,7 @@ class _$PayloadModelCopyWithImpl<$Res, $Val extends PayloadModel>
       dragon: freezed == dragon
           ? _value.dragon
           : dragon // ignore: cast_nullable_to_non_nullable
-              as PayloadDragonModel?,
+              as PayloadDragonNetworkModel?,
       name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -282,28 +282,28 @@ class _$PayloadModelCopyWithImpl<$Res, $Val extends PayloadModel>
 
   @override
   @pragma('vm:prefer-inline')
-  $PayloadDragonModelCopyWith<$Res>? get dragon {
+  $PayloadDragonNetworkModelCopyWith<$Res>? get dragon {
     if (_value.dragon == null) {
       return null;
     }
 
-    return $PayloadDragonModelCopyWith<$Res>(_value.dragon!, (value) {
+    return $PayloadDragonNetworkModelCopyWith<$Res>(_value.dragon!, (value) {
       return _then(_value.copyWith(dragon: value) as $Val);
     });
   }
 }
 
 /// @nodoc
-abstract class _$$_PayloadModelCopyWith<$Res>
-    implements $PayloadModelCopyWith<$Res> {
-  factory _$$_PayloadModelCopyWith(
-          _$_PayloadModel value, $Res Function(_$_PayloadModel) then) =
-      __$$_PayloadModelCopyWithImpl<$Res>;
+abstract class _$$_PayloadNetworkModelCopyWith<$Res>
+    implements $PayloadNetworkModelCopyWith<$Res> {
+  factory _$$_PayloadNetworkModelCopyWith(_$_PayloadNetworkModel value,
+          $Res Function(_$_PayloadNetworkModel) then) =
+      __$$_PayloadNetworkModelCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
       {@JsonKey(name: 'id') String id,
-      @JsonKey(name: 'dragon') PayloadDragonModel? dragon,
+      @JsonKey(name: 'dragon') PayloadDragonNetworkModel? dragon,
       @JsonKey(name: 'name') String? name,
       @JsonKey(name: 'type') String? type,
       @JsonKey(name: 'reused') bool reused,
@@ -332,15 +332,15 @@ abstract class _$$_PayloadModelCopyWith<$Res>
       @JsonKey(name: 'mean_anomaly') double? meanAnomaly});
 
   @override
-  $PayloadDragonModelCopyWith<$Res>? get dragon;
+  $PayloadDragonNetworkModelCopyWith<$Res>? get dragon;
 }
 
 /// @nodoc
-class __$$_PayloadModelCopyWithImpl<$Res>
-    extends _$PayloadModelCopyWithImpl<$Res, _$_PayloadModel>
-    implements _$$_PayloadModelCopyWith<$Res> {
-  __$$_PayloadModelCopyWithImpl(
-      _$_PayloadModel _value, $Res Function(_$_PayloadModel) _then)
+class __$$_PayloadNetworkModelCopyWithImpl<$Res>
+    extends _$PayloadNetworkModelCopyWithImpl<$Res, _$_PayloadNetworkModel>
+    implements _$$_PayloadNetworkModelCopyWith<$Res> {
+  __$$_PayloadNetworkModelCopyWithImpl(_$_PayloadNetworkModel _value,
+      $Res Function(_$_PayloadNetworkModel) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -375,7 +375,7 @@ class __$$_PayloadModelCopyWithImpl<$Res>
     Object? argOfPericenter = freezed,
     Object? meanAnomaly = freezed,
   }) {
-    return _then(_$_PayloadModel(
+    return _then(_$_PayloadNetworkModel(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -383,7 +383,7 @@ class __$$_PayloadModelCopyWithImpl<$Res>
       dragon: freezed == dragon
           ? _value.dragon
           : dragon // ignore: cast_nullable_to_non_nullable
-              as PayloadDragonModel?,
+              as PayloadDragonNetworkModel?,
       name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -494,8 +494,8 @@ class __$$_PayloadModelCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_PayloadModel extends _PayloadModel {
-  const _$_PayloadModel(
+class _$_PayloadNetworkModel extends _PayloadNetworkModel {
+  const _$_PayloadNetworkModel(
       {@JsonKey(name: 'id')
           required this.id,
       @JsonKey(name: 'dragon')
@@ -558,15 +558,15 @@ class _$_PayloadModel extends _PayloadModel {
         _manufacturers = manufacturers,
         super._();
 
-  factory _$_PayloadModel.fromJson(Map<String, dynamic> json) =>
-      _$$_PayloadModelFromJson(json);
+  factory _$_PayloadNetworkModel.fromJson(Map<String, dynamic> json) =>
+      _$$_PayloadNetworkModelFromJson(json);
 
   @override
   @JsonKey(name: 'id')
   final String id;
   @override
   @JsonKey(name: 'dragon')
-  final PayloadDragonModel? dragon;
+  final PayloadDragonNetworkModel? dragon;
   @override
   @JsonKey(name: 'name')
   final String? name;
@@ -672,14 +672,14 @@ class _$_PayloadModel extends _PayloadModel {
 
   @override
   String toString() {
-    return 'PayloadModel(id: $id, dragon: $dragon, name: $name, type: $type, reused: $reused, launch: $launch, customers: $customers, noradIds: $noradIds, nationalities: $nationalities, manufacturers: $manufacturers, massKg: $massKg, massLbs: $massLbs, orbit: $orbit, referenceSystem: $referenceSystem, regime: $regime, longitude: $longitude, semiMajorAxisKm: $semiMajorAxisKm, eccentricity: $eccentricity, periapsisKm: $periapsisKm, apoapsisKm: $apoapsisKm, inclinationDeg: $inclinationDeg, periodMin: $periodMin, lifespanYears: $lifespanYears, epoch: $epoch, meanMotion: $meanMotion, raan: $raan, argOfPericenter: $argOfPericenter, meanAnomaly: $meanAnomaly)';
+    return 'PayloadNetworkModel(id: $id, dragon: $dragon, name: $name, type: $type, reused: $reused, launch: $launch, customers: $customers, noradIds: $noradIds, nationalities: $nationalities, manufacturers: $manufacturers, massKg: $massKg, massLbs: $massLbs, orbit: $orbit, referenceSystem: $referenceSystem, regime: $regime, longitude: $longitude, semiMajorAxisKm: $semiMajorAxisKm, eccentricity: $eccentricity, periapsisKm: $periapsisKm, apoapsisKm: $apoapsisKm, inclinationDeg: $inclinationDeg, periodMin: $periodMin, lifespanYears: $lifespanYears, epoch: $epoch, meanMotion: $meanMotion, raan: $raan, argOfPericenter: $argOfPericenter, meanAnomaly: $meanAnomaly)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_PayloadModel &&
+            other is _$_PayloadNetworkModel &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.dragon, dragon) || other.dragon == dragon) &&
             (identical(other.name, name) || other.name == name) &&
@@ -762,21 +762,22 @@ class _$_PayloadModel extends _PayloadModel {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_PayloadModelCopyWith<_$_PayloadModel> get copyWith =>
-      __$$_PayloadModelCopyWithImpl<_$_PayloadModel>(this, _$identity);
+  _$$_PayloadNetworkModelCopyWith<_$_PayloadNetworkModel> get copyWith =>
+      __$$_PayloadNetworkModelCopyWithImpl<_$_PayloadNetworkModel>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PayloadModelToJson(
+    return _$$_PayloadNetworkModelToJson(
       this,
     );
   }
 }
 
-abstract class _PayloadModel extends PayloadModel {
-  const factory _PayloadModel(
+abstract class _PayloadNetworkModel extends PayloadNetworkModel {
+  const factory _PayloadNetworkModel(
           {@JsonKey(name: 'id') required final String id,
-          @JsonKey(name: 'dragon') final PayloadDragonModel? dragon,
+          @JsonKey(name: 'dragon') final PayloadDragonNetworkModel? dragon,
           @JsonKey(name: 'name') final String? name,
           @JsonKey(name: 'type') final String? type,
           @JsonKey(name: 'reused') final bool reused,
@@ -803,18 +804,18 @@ abstract class _PayloadModel extends PayloadModel {
           @JsonKey(name: 'raan') final double? raan,
           @JsonKey(name: 'arg_of_pericenter') final double? argOfPericenter,
           @JsonKey(name: 'mean_anomaly') final double? meanAnomaly}) =
-      _$_PayloadModel;
-  const _PayloadModel._() : super._();
+      _$_PayloadNetworkModel;
+  const _PayloadNetworkModel._() : super._();
 
-  factory _PayloadModel.fromJson(Map<String, dynamic> json) =
-      _$_PayloadModel.fromJson;
+  factory _PayloadNetworkModel.fromJson(Map<String, dynamic> json) =
+      _$_PayloadNetworkModel.fromJson;
 
   @override
   @JsonKey(name: 'id')
   String get id;
   @override
   @JsonKey(name: 'dragon')
-  PayloadDragonModel? get dragon;
+  PayloadDragonNetworkModel? get dragon;
   @override
   @JsonKey(name: 'name')
   String? get name;
@@ -895,20 +896,21 @@ abstract class _PayloadModel extends PayloadModel {
   double? get meanAnomaly;
   @override
   @JsonKey(ignore: true)
-  _$$_PayloadModelCopyWith<_$_PayloadModel> get copyWith =>
+  _$$_PayloadNetworkModelCopyWith<_$_PayloadNetworkModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
-FullPayloadModel _$FullPayloadModelFromJson(Map<String, dynamic> json) {
-  return _FullPayloadModel.fromJson(json);
+PayloadNetworkFullModel _$PayloadNetworkFullModelFromJson(
+    Map<String, dynamic> json) {
+  return _PayloadNetworkFullModel.fromJson(json);
 }
 
 /// @nodoc
-mixin _$FullPayloadModel {
+mixin _$PayloadNetworkFullModel {
   @JsonKey(name: 'id')
   String get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'dragon')
-  PayloadDragonModel? get dragon => throw _privateConstructorUsedError;
+  PayloadDragonNetworkModel? get dragon => throw _privateConstructorUsedError;
   @JsonKey(name: 'name')
   String? get name => throw _privateConstructorUsedError;
   @JsonKey(name: 'type')
@@ -964,19 +966,19 @@ mixin _$FullPayloadModel {
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $FullPayloadModelCopyWith<FullPayloadModel> get copyWith =>
+  $PayloadNetworkFullModelCopyWith<PayloadNetworkFullModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $FullPayloadModelCopyWith<$Res> {
-  factory $FullPayloadModelCopyWith(
-          FullPayloadModel value, $Res Function(FullPayloadModel) then) =
-      _$FullPayloadModelCopyWithImpl<$Res, FullPayloadModel>;
+abstract class $PayloadNetworkFullModelCopyWith<$Res> {
+  factory $PayloadNetworkFullModelCopyWith(PayloadNetworkFullModel value,
+          $Res Function(PayloadNetworkFullModel) then) =
+      _$PayloadNetworkFullModelCopyWithImpl<$Res, PayloadNetworkFullModel>;
   @useResult
   $Res call(
       {@JsonKey(name: 'id') String id,
-      @JsonKey(name: 'dragon') PayloadDragonModel? dragon,
+      @JsonKey(name: 'dragon') PayloadDragonNetworkModel? dragon,
       @JsonKey(name: 'name') String? name,
       @JsonKey(name: 'type') String? type,
       @JsonKey(name: 'reused') bool reused,
@@ -1004,14 +1006,15 @@ abstract class $FullPayloadModelCopyWith<$Res> {
       @JsonKey(name: 'arg_of_pericenter') double? argOfPericenter,
       @JsonKey(name: 'mean_anomaly') double? meanAnomaly});
 
-  $PayloadDragonModelCopyWith<$Res>? get dragon;
+  $PayloadDragonNetworkModelCopyWith<$Res>? get dragon;
   $LaunchNetworkModelCopyWith<$Res>? get launch;
 }
 
 /// @nodoc
-class _$FullPayloadModelCopyWithImpl<$Res, $Val extends FullPayloadModel>
-    implements $FullPayloadModelCopyWith<$Res> {
-  _$FullPayloadModelCopyWithImpl(this._value, this._then);
+class _$PayloadNetworkFullModelCopyWithImpl<$Res,
+        $Val extends PayloadNetworkFullModel>
+    implements $PayloadNetworkFullModelCopyWith<$Res> {
+  _$PayloadNetworkFullModelCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -1058,7 +1061,7 @@ class _$FullPayloadModelCopyWithImpl<$Res, $Val extends FullPayloadModel>
       dragon: freezed == dragon
           ? _value.dragon
           : dragon // ignore: cast_nullable_to_non_nullable
-              as PayloadDragonModel?,
+              as PayloadDragonNetworkModel?,
       name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -1168,12 +1171,12 @@ class _$FullPayloadModelCopyWithImpl<$Res, $Val extends FullPayloadModel>
 
   @override
   @pragma('vm:prefer-inline')
-  $PayloadDragonModelCopyWith<$Res>? get dragon {
+  $PayloadDragonNetworkModelCopyWith<$Res>? get dragon {
     if (_value.dragon == null) {
       return null;
     }
 
-    return $PayloadDragonModelCopyWith<$Res>(_value.dragon!, (value) {
+    return $PayloadDragonNetworkModelCopyWith<$Res>(_value.dragon!, (value) {
       return _then(_value.copyWith(dragon: value) as $Val);
     });
   }
@@ -1192,16 +1195,16 @@ class _$FullPayloadModelCopyWithImpl<$Res, $Val extends FullPayloadModel>
 }
 
 /// @nodoc
-abstract class _$$_FullPayloadModelCopyWith<$Res>
-    implements $FullPayloadModelCopyWith<$Res> {
-  factory _$$_FullPayloadModelCopyWith(
-          _$_FullPayloadModel value, $Res Function(_$_FullPayloadModel) then) =
-      __$$_FullPayloadModelCopyWithImpl<$Res>;
+abstract class _$$_PayloadNetworkFullModelCopyWith<$Res>
+    implements $PayloadNetworkFullModelCopyWith<$Res> {
+  factory _$$_PayloadNetworkFullModelCopyWith(_$_PayloadNetworkFullModel value,
+          $Res Function(_$_PayloadNetworkFullModel) then) =
+      __$$_PayloadNetworkFullModelCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
       {@JsonKey(name: 'id') String id,
-      @JsonKey(name: 'dragon') PayloadDragonModel? dragon,
+      @JsonKey(name: 'dragon') PayloadDragonNetworkModel? dragon,
       @JsonKey(name: 'name') String? name,
       @JsonKey(name: 'type') String? type,
       @JsonKey(name: 'reused') bool reused,
@@ -1230,17 +1233,18 @@ abstract class _$$_FullPayloadModelCopyWith<$Res>
       @JsonKey(name: 'mean_anomaly') double? meanAnomaly});
 
   @override
-  $PayloadDragonModelCopyWith<$Res>? get dragon;
+  $PayloadDragonNetworkModelCopyWith<$Res>? get dragon;
   @override
   $LaunchNetworkModelCopyWith<$Res>? get launch;
 }
 
 /// @nodoc
-class __$$_FullPayloadModelCopyWithImpl<$Res>
-    extends _$FullPayloadModelCopyWithImpl<$Res, _$_FullPayloadModel>
-    implements _$$_FullPayloadModelCopyWith<$Res> {
-  __$$_FullPayloadModelCopyWithImpl(
-      _$_FullPayloadModel _value, $Res Function(_$_FullPayloadModel) _then)
+class __$$_PayloadNetworkFullModelCopyWithImpl<$Res>
+    extends _$PayloadNetworkFullModelCopyWithImpl<$Res,
+        _$_PayloadNetworkFullModel>
+    implements _$$_PayloadNetworkFullModelCopyWith<$Res> {
+  __$$_PayloadNetworkFullModelCopyWithImpl(_$_PayloadNetworkFullModel _value,
+      $Res Function(_$_PayloadNetworkFullModel) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -1275,7 +1279,7 @@ class __$$_FullPayloadModelCopyWithImpl<$Res>
     Object? argOfPericenter = freezed,
     Object? meanAnomaly = freezed,
   }) {
-    return _then(_$_FullPayloadModel(
+    return _then(_$_PayloadNetworkFullModel(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -1283,7 +1287,7 @@ class __$$_FullPayloadModelCopyWithImpl<$Res>
       dragon: freezed == dragon
           ? _value.dragon
           : dragon // ignore: cast_nullable_to_non_nullable
-              as PayloadDragonModel?,
+              as PayloadDragonNetworkModel?,
       name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -1394,8 +1398,8 @@ class __$$_FullPayloadModelCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_FullPayloadModel extends _FullPayloadModel {
-  const _$_FullPayloadModel(
+class _$_PayloadNetworkFullModel extends _PayloadNetworkFullModel {
+  const _$_PayloadNetworkFullModel(
       {@JsonKey(name: 'id')
           required this.id,
       @JsonKey(name: 'dragon')
@@ -1458,15 +1462,15 @@ class _$_FullPayloadModel extends _FullPayloadModel {
         _manufacturers = manufacturers,
         super._();
 
-  factory _$_FullPayloadModel.fromJson(Map<String, dynamic> json) =>
-      _$$_FullPayloadModelFromJson(json);
+  factory _$_PayloadNetworkFullModel.fromJson(Map<String, dynamic> json) =>
+      _$$_PayloadNetworkFullModelFromJson(json);
 
   @override
   @JsonKey(name: 'id')
   final String id;
   @override
   @JsonKey(name: 'dragon')
-  final PayloadDragonModel? dragon;
+  final PayloadDragonNetworkModel? dragon;
   @override
   @JsonKey(name: 'name')
   final String? name;
@@ -1572,14 +1576,14 @@ class _$_FullPayloadModel extends _FullPayloadModel {
 
   @override
   String toString() {
-    return 'FullPayloadModel(id: $id, dragon: $dragon, name: $name, type: $type, reused: $reused, launch: $launch, customers: $customers, noradIds: $noradIds, nationalities: $nationalities, manufacturers: $manufacturers, massKg: $massKg, massLbs: $massLbs, orbit: $orbit, referenceSystem: $referenceSystem, regime: $regime, longitude: $longitude, semiMajorAxisKm: $semiMajorAxisKm, eccentricity: $eccentricity, periapsisKm: $periapsisKm, apoapsisKm: $apoapsisKm, inclinationDeg: $inclinationDeg, periodMin: $periodMin, lifespanYears: $lifespanYears, epoch: $epoch, meanMotion: $meanMotion, raan: $raan, argOfPericenter: $argOfPericenter, meanAnomaly: $meanAnomaly)';
+    return 'PayloadNetworkFullModel(id: $id, dragon: $dragon, name: $name, type: $type, reused: $reused, launch: $launch, customers: $customers, noradIds: $noradIds, nationalities: $nationalities, manufacturers: $manufacturers, massKg: $massKg, massLbs: $massLbs, orbit: $orbit, referenceSystem: $referenceSystem, regime: $regime, longitude: $longitude, semiMajorAxisKm: $semiMajorAxisKm, eccentricity: $eccentricity, periapsisKm: $periapsisKm, apoapsisKm: $apoapsisKm, inclinationDeg: $inclinationDeg, periodMin: $periodMin, lifespanYears: $lifespanYears, epoch: $epoch, meanMotion: $meanMotion, raan: $raan, argOfPericenter: $argOfPericenter, meanAnomaly: $meanAnomaly)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_FullPayloadModel &&
+            other is _$_PayloadNetworkFullModel &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.dragon, dragon) || other.dragon == dragon) &&
             (identical(other.name, name) || other.name == name) &&
@@ -1662,21 +1666,23 @@ class _$_FullPayloadModel extends _FullPayloadModel {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_FullPayloadModelCopyWith<_$_FullPayloadModel> get copyWith =>
-      __$$_FullPayloadModelCopyWithImpl<_$_FullPayloadModel>(this, _$identity);
+  _$$_PayloadNetworkFullModelCopyWith<_$_PayloadNetworkFullModel>
+      get copyWith =>
+          __$$_PayloadNetworkFullModelCopyWithImpl<_$_PayloadNetworkFullModel>(
+              this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_FullPayloadModelToJson(
+    return _$$_PayloadNetworkFullModelToJson(
       this,
     );
   }
 }
 
-abstract class _FullPayloadModel extends FullPayloadModel {
-  const factory _FullPayloadModel(
+abstract class _PayloadNetworkFullModel extends PayloadNetworkFullModel {
+  const factory _PayloadNetworkFullModel(
           {@JsonKey(name: 'id') required final String id,
-          @JsonKey(name: 'dragon') final PayloadDragonModel? dragon,
+          @JsonKey(name: 'dragon') final PayloadDragonNetworkModel? dragon,
           @JsonKey(name: 'name') final String? name,
           @JsonKey(name: 'type') final String? type,
           @JsonKey(name: 'reused') final bool reused,
@@ -1703,18 +1709,18 @@ abstract class _FullPayloadModel extends FullPayloadModel {
           @JsonKey(name: 'raan') final double? raan,
           @JsonKey(name: 'arg_of_pericenter') final double? argOfPericenter,
           @JsonKey(name: 'mean_anomaly') final double? meanAnomaly}) =
-      _$_FullPayloadModel;
-  const _FullPayloadModel._() : super._();
+      _$_PayloadNetworkFullModel;
+  const _PayloadNetworkFullModel._() : super._();
 
-  factory _FullPayloadModel.fromJson(Map<String, dynamic> json) =
-      _$_FullPayloadModel.fromJson;
+  factory _PayloadNetworkFullModel.fromJson(Map<String, dynamic> json) =
+      _$_PayloadNetworkFullModel.fromJson;
 
   @override
   @JsonKey(name: 'id')
   String get id;
   @override
   @JsonKey(name: 'dragon')
-  PayloadDragonModel? get dragon;
+  PayloadDragonNetworkModel? get dragon;
   @override
   @JsonKey(name: 'name')
   String? get name;
@@ -1795,16 +1801,17 @@ abstract class _FullPayloadModel extends FullPayloadModel {
   double? get meanAnomaly;
   @override
   @JsonKey(ignore: true)
-  _$$_FullPayloadModelCopyWith<_$_FullPayloadModel> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$_PayloadNetworkFullModelCopyWith<_$_PayloadNetworkFullModel>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
-PayloadDragonModel _$PayloadDragonModelFromJson(Map<String, dynamic> json) {
-  return _PayloadDragonModel.fromJson(json);
+PayloadDragonNetworkModel _$PayloadDragonNetworkModelFromJson(
+    Map<String, dynamic> json) {
+  return _PayloadDragonNetworkModel.fromJson(json);
 }
 
 /// @nodoc
-mixin _$PayloadDragonModel {
+mixin _$PayloadDragonNetworkModel {
   @JsonKey(name: 'capsule')
   String? get capsule => throw _privateConstructorUsedError;
   @JsonKey(name: 'mass_returned_kg')
@@ -1822,15 +1829,15 @@ mixin _$PayloadDragonModel {
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $PayloadDragonModelCopyWith<PayloadDragonModel> get copyWith =>
+  $PayloadDragonNetworkModelCopyWith<PayloadDragonNetworkModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $PayloadDragonModelCopyWith<$Res> {
-  factory $PayloadDragonModelCopyWith(
-          PayloadDragonModel value, $Res Function(PayloadDragonModel) then) =
-      _$PayloadDragonModelCopyWithImpl<$Res, PayloadDragonModel>;
+abstract class $PayloadDragonNetworkModelCopyWith<$Res> {
+  factory $PayloadDragonNetworkModelCopyWith(PayloadDragonNetworkModel value,
+          $Res Function(PayloadDragonNetworkModel) then) =
+      _$PayloadDragonNetworkModelCopyWithImpl<$Res, PayloadDragonNetworkModel>;
   @useResult
   $Res call(
       {@JsonKey(name: 'capsule') String? capsule,
@@ -1843,9 +1850,10 @@ abstract class $PayloadDragonModelCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$PayloadDragonModelCopyWithImpl<$Res, $Val extends PayloadDragonModel>
-    implements $PayloadDragonModelCopyWith<$Res> {
-  _$PayloadDragonModelCopyWithImpl(this._value, this._then);
+class _$PayloadDragonNetworkModelCopyWithImpl<$Res,
+        $Val extends PayloadDragonNetworkModel>
+    implements $PayloadDragonNetworkModelCopyWith<$Res> {
+  _$PayloadDragonNetworkModelCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -1897,11 +1905,12 @@ class _$PayloadDragonModelCopyWithImpl<$Res, $Val extends PayloadDragonModel>
 }
 
 /// @nodoc
-abstract class _$$_PayloadDragonModelCopyWith<$Res>
-    implements $PayloadDragonModelCopyWith<$Res> {
-  factory _$$_PayloadDragonModelCopyWith(_$_PayloadDragonModel value,
-          $Res Function(_$_PayloadDragonModel) then) =
-      __$$_PayloadDragonModelCopyWithImpl<$Res>;
+abstract class _$$_PayloadDragonNetworkModelCopyWith<$Res>
+    implements $PayloadDragonNetworkModelCopyWith<$Res> {
+  factory _$$_PayloadDragonNetworkModelCopyWith(
+          _$_PayloadDragonNetworkModel value,
+          $Res Function(_$_PayloadDragonNetworkModel) then) =
+      __$$_PayloadDragonNetworkModelCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -1915,11 +1924,13 @@ abstract class _$$_PayloadDragonModelCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_PayloadDragonModelCopyWithImpl<$Res>
-    extends _$PayloadDragonModelCopyWithImpl<$Res, _$_PayloadDragonModel>
-    implements _$$_PayloadDragonModelCopyWith<$Res> {
-  __$$_PayloadDragonModelCopyWithImpl(
-      _$_PayloadDragonModel _value, $Res Function(_$_PayloadDragonModel) _then)
+class __$$_PayloadDragonNetworkModelCopyWithImpl<$Res>
+    extends _$PayloadDragonNetworkModelCopyWithImpl<$Res,
+        _$_PayloadDragonNetworkModel>
+    implements _$$_PayloadDragonNetworkModelCopyWith<$Res> {
+  __$$_PayloadDragonNetworkModelCopyWithImpl(
+      _$_PayloadDragonNetworkModel _value,
+      $Res Function(_$_PayloadDragonNetworkModel) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -1933,7 +1944,7 @@ class __$$_PayloadDragonModelCopyWithImpl<$Res>
     Object? waterLanding = freezed,
     Object? landLanding = freezed,
   }) {
-    return _then(_$_PayloadDragonModel(
+    return _then(_$_PayloadDragonNetworkModel(
       capsule: freezed == capsule
           ? _value.capsule
           : capsule // ignore: cast_nullable_to_non_nullable
@@ -1968,8 +1979,8 @@ class __$$_PayloadDragonModelCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_PayloadDragonModel extends _PayloadDragonModel {
-  const _$_PayloadDragonModel(
+class _$_PayloadDragonNetworkModel extends _PayloadDragonNetworkModel {
+  const _$_PayloadDragonNetworkModel(
       {@JsonKey(name: 'capsule') this.capsule,
       @JsonKey(name: 'mass_returned_kg') this.massReturnedKg,
       @JsonKey(name: 'mass_returned_lbs') this.massReturnedLbs,
@@ -1979,8 +1990,8 @@ class _$_PayloadDragonModel extends _PayloadDragonModel {
       @JsonKey(name: 'land_landing') this.landLanding})
       : super._();
 
-  factory _$_PayloadDragonModel.fromJson(Map<String, dynamic> json) =>
-      _$$_PayloadDragonModelFromJson(json);
+  factory _$_PayloadDragonNetworkModel.fromJson(Map<String, dynamic> json) =>
+      _$$_PayloadDragonNetworkModelFromJson(json);
 
   @override
   @JsonKey(name: 'capsule')
@@ -2006,14 +2017,14 @@ class _$_PayloadDragonModel extends _PayloadDragonModel {
 
   @override
   String toString() {
-    return 'PayloadDragonModel(capsule: $capsule, massReturnedKg: $massReturnedKg, massReturnedLbs: $massReturnedLbs, flightTimeSec: $flightTimeSec, manifest: $manifest, waterLanding: $waterLanding, landLanding: $landLanding)';
+    return 'PayloadDragonNetworkModel(capsule: $capsule, massReturnedKg: $massReturnedKg, massReturnedLbs: $massReturnedLbs, flightTimeSec: $flightTimeSec, manifest: $manifest, waterLanding: $waterLanding, landLanding: $landLanding)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_PayloadDragonModel &&
+            other is _$_PayloadDragonNetworkModel &&
             (identical(other.capsule, capsule) || other.capsule == capsule) &&
             (identical(other.massReturnedKg, massReturnedKg) ||
                 other.massReturnedKg == massReturnedKg) &&
@@ -2037,20 +2048,20 @@ class _$_PayloadDragonModel extends _PayloadDragonModel {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_PayloadDragonModelCopyWith<_$_PayloadDragonModel> get copyWith =>
-      __$$_PayloadDragonModelCopyWithImpl<_$_PayloadDragonModel>(
-          this, _$identity);
+  _$$_PayloadDragonNetworkModelCopyWith<_$_PayloadDragonNetworkModel>
+      get copyWith => __$$_PayloadDragonNetworkModelCopyWithImpl<
+          _$_PayloadDragonNetworkModel>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PayloadDragonModelToJson(
+    return _$$_PayloadDragonNetworkModelToJson(
       this,
     );
   }
 }
 
-abstract class _PayloadDragonModel extends PayloadDragonModel {
-  const factory _PayloadDragonModel(
+abstract class _PayloadDragonNetworkModel extends PayloadDragonNetworkModel {
+  const factory _PayloadDragonNetworkModel(
           {@JsonKey(name: 'capsule') final String? capsule,
           @JsonKey(name: 'mass_returned_kg') final double? massReturnedKg,
           @JsonKey(name: 'mass_returned_lbs') final double? massReturnedLbs,
@@ -2058,11 +2069,11 @@ abstract class _PayloadDragonModel extends PayloadDragonModel {
           @JsonKey(name: 'manifest') final String? manifest,
           @JsonKey(name: 'water_landing') final bool? waterLanding,
           @JsonKey(name: 'land_landing') final bool? landLanding}) =
-      _$_PayloadDragonModel;
-  const _PayloadDragonModel._() : super._();
+      _$_PayloadDragonNetworkModel;
+  const _PayloadDragonNetworkModel._() : super._();
 
-  factory _PayloadDragonModel.fromJson(Map<String, dynamic> json) =
-      _$_PayloadDragonModel.fromJson;
+  factory _PayloadDragonNetworkModel.fromJson(Map<String, dynamic> json) =
+      _$_PayloadDragonNetworkModel.fromJson;
 
   @override
   @JsonKey(name: 'capsule')
@@ -2087,6 +2098,6 @@ abstract class _PayloadDragonModel extends PayloadDragonModel {
   bool? get landLanding;
   @override
   @JsonKey(ignore: true)
-  _$$_PayloadDragonModelCopyWith<_$_PayloadDragonModel> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$_PayloadDragonNetworkModelCopyWith<_$_PayloadDragonNetworkModel>
+      get copyWith => throw _privateConstructorUsedError;
 }

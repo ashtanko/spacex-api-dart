@@ -25,9 +25,11 @@ _$_LaunchNetworkFullModel _$$_LaunchNetworkFullModelFromJson(
       flightNumber: json['flight_number'] as int? ?? 0,
       launchpad: json['launchpad'] == null
           ? null
-          : LaunchpadModel.fromJson(json['launchpad'] as Map<String, dynamic>),
+          : LaunchpadNetworkModel.fromJson(
+              json['launchpad'] as Map<String, dynamic>),
       payloads: (json['payloads'] as List<dynamic>?)
-              ?.map((e) => PayloadModel.fromJson(e as Map<String, dynamic>))
+              ?.map((e) =>
+                  PayloadNetworkModel.fromJson(e as Map<String, dynamic>))
               .toList() ??
           const [],
       capsules: (json['capsules'] as List<dynamic>?)
@@ -36,7 +38,7 @@ _$_LaunchNetworkFullModel _$$_LaunchNetworkFullModelFromJson(
               .toList() ??
           const [],
       ships: (json['ships'] as List<dynamic>?)
-              ?.map((e) => ShipModel.fromJson(e as Map<String, dynamic>))
+              ?.map((e) => ShipNetworkModel.fromJson(e as Map<String, dynamic>))
               .toList() ??
           const [],
       crew:
@@ -51,7 +53,7 @@ _$_LaunchNetworkFullModel _$$_LaunchNetworkFullModelFromJson(
       success: json['success'] as bool? ?? false,
       rocket: json['rocket'] == null
           ? null
-          : RocketModel.fromJson(json['rocket'] as Map<String, dynamic>),
+          : RocketNetworkModel.fromJson(json['rocket'] as Map<String, dynamic>),
       window: json['window'] as int? ?? 0,
       net: json['net'] as bool? ?? false,
       staticFireDateUnix: json['static_fire_date_unix'] as int? ?? 0,

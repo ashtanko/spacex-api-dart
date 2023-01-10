@@ -19,7 +19,7 @@ void main() {
 
   group('getAllPayloads', () {
     final rawJson = 'payloads/payload.json'.toFixture();
-    final model = PayloadModel.fromJson(rawJson);
+    final model = PayloadNetworkModel.fromJson(rawJson);
     final mockResponse = [model];
     test(
       'should perform a GET request on /payloads',
@@ -43,7 +43,7 @@ void main() {
   group('getOnePayload', () {
     const id = '5eb0e4b5b6c3bb0006eeb1e1';
     final rawJson = 'payloads/payload.json'.toFixture();
-    final mockResponse = PayloadModel.fromJson(rawJson);
+    final mockResponse = PayloadNetworkModel.fromJson(rawJson);
     test(
       'should perform a GET request on /payloads/{$id}',
       () async {
@@ -67,11 +67,11 @@ void main() {
     final rawJson = 'payloads/payload.json'.toFixture();
     final mockResponse = ApiPaginatedList(
       results: [
-        PayloadModel.fromJson(rawJson),
+        PayloadNetworkModel.fromJson(rawJson),
       ],
     );
     final queryRawJson = 'query/query.json'.toFixture();
-    final query = QueryModel.fromJson(queryRawJson);
+    final query = QueryNetworkModel.fromJson(queryRawJson);
     test(
       'should perform a POST request on /payloads/query',
       () async {
@@ -95,11 +95,11 @@ void main() {
     final rawJson = 'payloads/full_payload.json'.toFixture();
     final mockResponse = ApiPaginatedList(
       results: [
-        FullPayloadModel.fromJson(rawJson),
+        PayloadNetworkFullModel.fromJson(rawJson),
       ],
     );
     final queryRawJson = 'query/query.json'.toFixture();
-    final query = QueryModel.fromJson(queryRawJson);
+    final query = QueryNetworkModel.fromJson(queryRawJson);
     test(
       'should perform a POST request on /payloads/query',
       () async {
@@ -157,7 +157,7 @@ void main() {
     test(
       'queryPayloads, should throw a ServerException when the response code is 404 or other (unsuccessful)',
       () async {
-        const q = QueryModel();
+        const q = QueryNetworkModel();
         // arrange
         when(() => api.queryPayloads(q)).thenThrow(
           dioException,
@@ -175,7 +175,7 @@ void main() {
     test(
       'queryFullPayloads, should throw a ServerException when the response code is 404 or other (unsuccessful)',
       () async {
-        const q = QueryModel();
+        const q = QueryNetworkModel();
         // arrange
         when(() => api.queryFullPayloads(q)).thenThrow(
           dioException,

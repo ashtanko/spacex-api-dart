@@ -21,13 +21,13 @@ class _PayloadApi implements PayloadApi {
   String? baseUrl;
 
   @override
-  Future<List<PayloadModel>> getAllPayloads() async {
+  Future<List<PayloadNetworkModel>> getAllPayloads() async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     final _result = await _dio
-        .fetch<List<dynamic>>(_setStreamType<List<PayloadModel>>(Options(
+        .fetch<List<dynamic>>(_setStreamType<List<PayloadNetworkModel>>(Options(
       method: 'GET',
       headers: _headers,
       extra: _extra,
@@ -40,19 +40,20 @@ class _PayloadApi implements PayloadApi {
             )
             .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
     var value = _result.data!
-        .map((dynamic i) => PayloadModel.fromJson(i as Map<String, dynamic>))
+        .map((dynamic i) =>
+            PayloadNetworkModel.fromJson(i as Map<String, dynamic>))
         .toList();
     return value;
   }
 
   @override
-  Future<PayloadModel> getOnePayload(id) async {
+  Future<PayloadNetworkModel> getOnePayload(id) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
-    final _result = await _dio
-        .fetch<Map<String, dynamic>>(_setStreamType<PayloadModel>(Options(
+    final _result = await _dio.fetch<Map<String, dynamic>>(
+        _setStreamType<PayloadNetworkModel>(Options(
       method: 'GET',
       headers: _headers,
       extra: _extra,
@@ -64,19 +65,19 @@ class _PayloadApi implements PayloadApi {
               data: _data,
             )
             .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
-    final value = PayloadModel.fromJson(_result.data!);
+    final value = PayloadNetworkModel.fromJson(_result.data!);
     return value;
   }
 
   @override
-  Future<ApiPaginatedList<PayloadModel>> queryPayloads(query) async {
+  Future<ApiPaginatedList<PayloadNetworkModel>> queryPayloads(query) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     _data.addAll(query.toJson());
     final _result = await _dio.fetch<Map<String, dynamic>>(
-        _setStreamType<ApiPaginatedList<PayloadModel>>(Options(
+        _setStreamType<ApiPaginatedList<PayloadNetworkModel>>(Options(
       method: 'POST',
       headers: _headers,
       extra: _extra,
@@ -88,22 +89,23 @@ class _PayloadApi implements PayloadApi {
               data: _data,
             )
             .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
-    final value = ApiPaginatedList<PayloadModel>.fromJson(
+    final value = ApiPaginatedList<PayloadNetworkModel>.fromJson(
       _result.data!,
-      (json) => PayloadModel.fromJson(json as Map<String, dynamic>),
+      (json) => PayloadNetworkModel.fromJson(json as Map<String, dynamic>),
     );
     return value;
   }
 
   @override
-  Future<ApiPaginatedList<FullPayloadModel>> queryFullPayloads(query) async {
+  Future<ApiPaginatedList<PayloadNetworkFullModel>> queryFullPayloads(
+      query) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     _data.addAll(query.toJson());
     final _result = await _dio.fetch<Map<String, dynamic>>(
-        _setStreamType<ApiPaginatedList<FullPayloadModel>>(Options(
+        _setStreamType<ApiPaginatedList<PayloadNetworkFullModel>>(Options(
       method: 'POST',
       headers: _headers,
       extra: _extra,
@@ -115,9 +117,9 @@ class _PayloadApi implements PayloadApi {
               data: _data,
             )
             .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
-    final value = ApiPaginatedList<FullPayloadModel>.fromJson(
+    final value = ApiPaginatedList<PayloadNetworkFullModel>.fromJson(
       _result.data!,
-      (json) => FullPayloadModel.fromJson(json as Map<String, dynamic>),
+      (json) => PayloadNetworkFullModel.fromJson(json as Map<String, dynamic>),
     );
     return value;
   }

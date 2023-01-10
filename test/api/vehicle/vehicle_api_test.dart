@@ -19,7 +19,7 @@ void main() {
 
   group('getAllDragons', () {
     final rawJson = 'vehicle/dragon.json'.toFixture();
-    final model = DragonModel.fromJson(rawJson);
+    final model = DragonNetworkModel.fromJson(rawJson);
     final mockResponse = [model];
     test(
       'should perform a GET request on /dragons',
@@ -43,7 +43,7 @@ void main() {
   group('getDragon', () {
     const id = '5e9d058759b1ff74a7ad5f8f';
     final rawJson = 'vehicle/dragon.json'.toFixture();
-    final mockResponse = DragonModel.fromJson(rawJson);
+    final mockResponse = DragonNetworkModel.fromJson(rawJson);
     test(
       'should perform a GET request on /dragons/{$id}',
       () async {
@@ -67,11 +67,11 @@ void main() {
     final rawJson = 'vehicle/dragon.json'.toFixture();
     final mockResponse = ApiPaginatedList(
       results: [
-        DragonModel.fromJson(rawJson),
+        DragonNetworkModel.fromJson(rawJson),
       ],
     );
     final queryRawJson = 'query/query.json'.toFixture();
-    final query = QueryModel.fromJson(queryRawJson);
+    final query = QueryNetworkModel.fromJson(queryRawJson);
     test(
       'should perform a POST request on /dragons/query',
       () async {
@@ -93,7 +93,7 @@ void main() {
 
   group('getAllShips', () {
     final rawJson = 'vehicle/ship.json'.toFixture();
-    final model = ShipModel.fromJson(rawJson);
+    final model = ShipNetworkModel.fromJson(rawJson);
     final mockResponse = [model];
     test(
       'should perform a GET request on /ships',
@@ -117,7 +117,7 @@ void main() {
   group('getShip', () {
     const id = '5e9d058759b1ff74a7ad5f8f';
     final rawJson = 'vehicle/ship.json'.toFixture();
-    final mockResponse = ShipModel.fromJson(rawJson);
+    final mockResponse = ShipNetworkModel.fromJson(rawJson);
     test(
       'should perform a GET request on /ships/{$id}',
       () async {
@@ -141,11 +141,11 @@ void main() {
     final rawJson = 'vehicle/ship.json'.toFixture();
     final mockResponse = ApiPaginatedList(
       results: [
-        ShipModel.fromJson(rawJson),
+        ShipNetworkModel.fromJson(rawJson),
       ],
     );
     final queryRawJson = 'query/query.json'.toFixture();
-    final query = QueryModel.fromJson(queryRawJson);
+    final query = QueryNetworkModel.fromJson(queryRawJson);
     test(
       'should perform a POST request on /ships/query',
       () async {
@@ -169,11 +169,11 @@ void main() {
     final rawJson = 'vehicle/full_ship.json'.toFixture();
     final mockResponse = ApiPaginatedList(
       results: [
-        ShipFullModel.fromJson(rawJson),
+        ShipNetworkFullModel.fromJson(rawJson),
       ],
     );
     final queryRawJson = 'query/query.json'.toFixture();
-    final query = QueryModel.fromJson(queryRawJson);
+    final query = QueryNetworkModel.fromJson(queryRawJson);
     test(
       'should perform a POST request on /ships/query',
       () async {
@@ -195,7 +195,7 @@ void main() {
 
   group('getAllRockets', () {
     final rawJson = 'vehicle/rocket.json'.toFixture();
-    final model = RocketModel.fromJson(rawJson);
+    final model = RocketNetworkModel.fromJson(rawJson);
     final mockResponse = [model];
     test(
       'should perform a GET request on /rockets',
@@ -219,7 +219,7 @@ void main() {
   group('getRocket', () {
     const id = '5e9d0d95eda69955f709d1eb';
     final rawJson = 'vehicle/rocket.json'.toFixture();
-    final mockResponse = RocketModel.fromJson(rawJson);
+    final mockResponse = RocketNetworkModel.fromJson(rawJson);
     test(
       'should perform a GET request on /rockets/{$id}',
       () async {
@@ -243,11 +243,11 @@ void main() {
     final rawJson = 'vehicle/rocket.json'.toFixture();
     final mockResponse = ApiPaginatedList(
       results: [
-        RocketModel.fromJson(rawJson),
+        RocketNetworkModel.fromJson(rawJson),
       ],
     );
     final queryRawJson = 'query/query.json'.toFixture();
-    final query = QueryModel.fromJson(queryRawJson);
+    final query = QueryNetworkModel.fromJson(queryRawJson);
     test(
       'should perform a POST request on /rockets/query',
       () async {
@@ -269,7 +269,7 @@ void main() {
 
   group('getRoadster', () {
     final rawJson = 'vehicle/roadster.json'.toFixture();
-    final mockResponse = RoadsterVehicleModel.fromJson(rawJson);
+    final mockResponse = RoadsterVehicleNetworkModel.fromJson(rawJson);
     test(
       'should perform a GET request on /roadster',
       () async {
@@ -327,7 +327,7 @@ void main() {
     test(
       'queryDragons, should throw a ServerException when the response code is 404 or other (unsuccessful)',
       () async {
-        const q = QueryModel();
+        const q = QueryNetworkModel();
         // arrange
         when(() => api.queryDragons(q)).thenThrow(
           dioException,
@@ -379,7 +379,7 @@ void main() {
     test(
       'queryShips, should throw a ServerException when the response code is 404 or other (unsuccessful)',
       () async {
-        const q = QueryModel();
+        const q = QueryNetworkModel();
         // arrange
         when(() => api.queryShips(q)).thenThrow(
           dioException,
@@ -397,7 +397,7 @@ void main() {
     test(
       'queryFullShips, should throw a ServerException when the response code is 404 or other (unsuccessful)',
       () async {
-        const q = QueryModel();
+        const q = QueryNetworkModel();
         // arrange
         when(() => api.queryFullShips(q)).thenThrow(
           dioException,
@@ -449,7 +449,7 @@ void main() {
     test(
       'queryRockets, should throw a ServerException when the response code is 404 or other (unsuccessful)',
       () async {
-        const q = QueryModel();
+        const q = QueryNetworkModel();
         // arrange
         when(() => api.queryRockets(q)).thenThrow(
           dioException,

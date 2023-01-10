@@ -1,14 +1,14 @@
 import 'package:data/data.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-part 'vehicle_model.freezed.dart';
+part 'vehicle_network_model.freezed.dart';
 
-part 'vehicle_model.g.dart';
+part 'vehicle_network_model.g.dart';
 
 /// Roadster model
 @freezed
-class RoadsterVehicleModel with _$RoadsterVehicleModel {
-  const factory RoadsterVehicleModel({
+class RoadsterVehicleNetworkModel with _$RoadsterVehicleNetworkModel {
+  const factory RoadsterVehicleNetworkModel({
     @JsonKey(name: 'id') required String id,
     @JsonKey(name: 'details') String? details,
     @JsonKey(name: 'video') String? video,
@@ -52,18 +52,18 @@ class RoadsterVehicleModel with _$RoadsterVehicleModel {
     @Default('2018-02-06T20:45:00.000Z')
         String launchDateUtc,
     @JsonKey(name: 'name') @Default("Elon Musk's Tesla Roadster") String name,
-  }) = _RoadsterVehicleModel;
+  }) = _RoadsterVehicleNetworkModel;
 
-  const RoadsterVehicleModel._();
+  const RoadsterVehicleNetworkModel._();
 
-  factory RoadsterVehicleModel.fromJson(Map<String, dynamic> json) =>
-      _$RoadsterVehicleModelFromJson(json);
+  factory RoadsterVehicleNetworkModel.fromJson(Map<String, dynamic> json) =>
+      _$RoadsterVehicleNetworkModelFromJson(json);
 }
 
 /// Rocket model
 @freezed
-class RocketModel with _$RocketModel {
-  const factory RocketModel({
+class RocketNetworkModel with _$RocketNetworkModel {
+  const factory RocketNetworkModel({
     @JsonKey(name: 'id') required String id,
     @JsonKey(name: 'description') String? description,
     @JsonKey(name: 'wikipedia') String? wikipedia,
@@ -81,24 +81,24 @@ class RocketModel with _$RocketModel {
     @JsonKey(name: 'payload_weights')
     @Default(<PayloadWeightModel>[])
         List<PayloadWeightModel> payloadWeights,
-    @JsonKey(name: 'engines') EngineModel? engines,
+    @JsonKey(name: 'engines') EngineNetworkModel? engines,
     @JsonKey(name: 'height') HeightModel? height,
     @JsonKey(name: 'diameter') DiameterModel? diameter,
     @JsonKey(name: 'mass') MassModel? mass,
-    @JsonKey(name: 'first_stage') FirstStageModel? firstStage,
-    @JsonKey(name: 'second_stage') SecondStageModel? secondStage,
-    @JsonKey(name: 'landing_legs') LandingLegsModel? landingLegs,
-  }) = _RocketModel;
+    @JsonKey(name: 'first_stage') FirstStageNetworkModel? firstStage,
+    @JsonKey(name: 'second_stage') SecondStageNetworkModel? secondStage,
+    @JsonKey(name: 'landing_legs') LandingLegsNetworkModel? landingLegs,
+  }) = _RocketNetworkModel;
 
-  const RocketModel._();
+  const RocketNetworkModel._();
 
-  factory RocketModel.fromJson(Map<String, dynamic> json) =>
-      _$RocketModelFromJson(json);
+  factory RocketNetworkModel.fromJson(Map<String, dynamic> json) =>
+      _$RocketNetworkModelFromJson(json);
 }
 
 @freezed
-class EngineModel with _$EngineModel {
-  const factory EngineModel({
+class EngineNetworkModel with _$EngineNetworkModel {
+  const factory EngineNetworkModel({
     @JsonKey(name: 'isp') IspModel? isp,
     @JsonKey(name: 'thrust_sea_level') KnotPoundModel? thrustSeaLevel,
     @JsonKey(name: 'thrust_vacuum') KnotPoundModel? thrustVacuum,
@@ -110,78 +110,78 @@ class EngineModel with _$EngineModel {
     @JsonKey(name: 'propellant_1') String? firstPropellant,
     @JsonKey(name: 'propellant_2') String? secondPropellant,
     @JsonKey(name: 'thrust_to_weight') num? thrustToWeight,
-  }) = _EngineModel;
+  }) = _EngineNetworkModel;
 
-  const EngineModel._();
+  const EngineNetworkModel._();
 
-  factory EngineModel.fromJson(Map<String, dynamic> json) =>
-      _$EngineModelFromJson(json);
+  factory EngineNetworkModel.fromJson(Map<String, dynamic> json) =>
+      _$EngineNetworkModelFromJson(json);
 }
 
 @freezed
-class LandingLegsModel with _$LandingLegsModel {
-  const factory LandingLegsModel({
+class LandingLegsNetworkModel with _$LandingLegsNetworkModel {
+  const factory LandingLegsNetworkModel({
     @JsonKey(name: 'number') num? number,
     @JsonKey(name: 'material') String? material,
-  }) = _LandingLegsModel;
+  }) = _LandingLegsNetworkModel;
 
-  const LandingLegsModel._();
+  const LandingLegsNetworkModel._();
 
-  factory LandingLegsModel.fromJson(Map<String, dynamic> json) =>
-      _$LandingLegsModelFromJson(json);
+  factory LandingLegsNetworkModel.fromJson(Map<String, dynamic> json) =>
+      _$LandingLegsNetworkModelFromJson(json);
 }
 
 @freezed
-class RocketPayloadModel with _$RocketPayloadModel {
-  const factory RocketPayloadModel({
+class RocketPayloadNetworkModel with _$RocketPayloadNetworkModel {
+  const factory RocketPayloadNetworkModel({
     @JsonKey(name: 'composite_fairing') CompositeFairingModel? compositeFairing,
     @JsonKey(name: 'option_1') String? option1,
-  }) = _RocketPayloadModel;
+  }) = _RocketPayloadNetworkModel;
 
-  const RocketPayloadModel._();
+  const RocketPayloadNetworkModel._();
 
-  factory RocketPayloadModel.fromJson(Map<String, dynamic> json) =>
-      _$RocketPayloadModelFromJson(json);
+  factory RocketPayloadNetworkModel.fromJson(Map<String, dynamic> json) =>
+      _$RocketPayloadNetworkModelFromJson(json);
 }
 
 @freezed
-class FirstStageModel with _$FirstStageModel {
-  const factory FirstStageModel({
+class FirstStageNetworkModel with _$FirstStageNetworkModel {
+  const factory FirstStageNetworkModel({
     @JsonKey(name: 'thrust_sea_level') KnotPoundModel? thrustSeaLevel,
     @JsonKey(name: 'thrust_vacuum') KnotPoundModel? thrustVacuum,
     @JsonKey(name: 'reusable') @Default(false) bool reusable,
     @JsonKey(name: 'engines') num? engines,
     @JsonKey(name: 'fuel_amount_tons') num? fuelAmountTons,
     @JsonKey(name: 'burn_time_sec') int? burnTimeSec,
-  }) = _FirstStageModel;
+  }) = _FirstStageNetworkModel;
 
-  const FirstStageModel._();
+  const FirstStageNetworkModel._();
 
-  factory FirstStageModel.fromJson(Map<String, dynamic> json) =>
-      _$FirstStageModelFromJson(json);
+  factory FirstStageNetworkModel.fromJson(Map<String, dynamic> json) =>
+      _$FirstStageNetworkModelFromJson(json);
 }
 
 @freezed
-class SecondStageModel with _$SecondStageModel {
-  const factory SecondStageModel({
+class SecondStageNetworkModel with _$SecondStageNetworkModel {
+  const factory SecondStageNetworkModel({
     @JsonKey(name: 'thrust') ThrustModel? thrust,
-    @JsonKey(name: 'payloads') RocketPayloadModel? payloads,
+    @JsonKey(name: 'payloads') RocketPayloadNetworkModel? payloads,
     @JsonKey(name: 'reusable') @Default(false) bool reusable,
     @JsonKey(name: 'engines') num? engines,
     @JsonKey(name: 'fuel_amount_tons') num? fuelAmountTons,
     @JsonKey(name: 'burn_time_sec') int? burnTimeSec,
-  }) = _SecondStageModel;
+  }) = _SecondStageNetworkModel;
 
-  const SecondStageModel._();
+  const SecondStageNetworkModel._();
 
-  factory SecondStageModel.fromJson(Map<String, dynamic> json) =>
-      _$SecondStageModelFromJson(json);
+  factory SecondStageNetworkModel.fromJson(Map<String, dynamic> json) =>
+      _$SecondStageNetworkModelFromJson(json);
 }
 
 /// Ship model
 @freezed
-class ShipModel with _$ShipModel {
-  const factory ShipModel({
+class ShipNetworkModel with _$ShipNetworkModel {
+  const factory ShipNetworkModel({
     @JsonKey(name: 'id') required String id,
     @JsonKey(name: 'launches') @Default(<String>[]) List<String> launches,
     @JsonKey(name: 'active') @Default(false) bool isActive,
@@ -205,18 +205,18 @@ class ShipModel with _$ShipModel {
     @JsonKey(name: 'type') String? type,
     @JsonKey(name: 'model') String? model,
     @JsonKey(name: 'legacy_id') String? legacyId,
-  }) = _ShipModel;
+  }) = _ShipNetworkModel;
 
-  const ShipModel._();
+  const ShipNetworkModel._();
 
-  factory ShipModel.fromJson(Map<String, dynamic> json) =>
-      _$ShipModelFromJson(json);
+  factory ShipNetworkModel.fromJson(Map<String, dynamic> json) =>
+      _$ShipNetworkModelFromJson(json);
 }
 
 /// Ship full model
 @freezed
-class ShipFullModel with _$ShipFullModel {
-  const factory ShipFullModel({
+class ShipNetworkFullModel with _$ShipNetworkFullModel {
+  const factory ShipNetworkFullModel({
     @JsonKey(name: 'id') required String id,
     @JsonKey(name: 'last_ais_update') dynamic lastAisUpdate,
     @JsonKey(name: 'launches')
@@ -243,31 +243,31 @@ class ShipFullModel with _$ShipFullModel {
     @JsonKey(name: 'type') String? type,
     @JsonKey(name: 'model') String? model,
     @JsonKey(name: 'legacy_id') String? legacyId,
-  }) = _ShipFullModel;
+  }) = _ShipNetworkFullModel;
 
-  const ShipFullModel._();
+  const ShipNetworkFullModel._();
 
-  factory ShipFullModel.fromJson(Map<String, dynamic> json) =>
-      _$ShipFullModelFromJson(json);
+  factory ShipNetworkFullModel.fromJson(Map<String, dynamic> json) =>
+      _$ShipNetworkFullModelFromJson(json);
 }
 
 /// Dragon model
 @freezed
-class DragonModel with _$DragonModel {
-  const factory DragonModel({
+class DragonNetworkModel with _$DragonNetworkModel {
+  const factory DragonNetworkModel({
     @JsonKey(name: 'id') required String id,
     @JsonKey(name: 'description') String? description,
-    @JsonKey(name: 'heat_shield') HeatShieldModel? heatShield,
+    @JsonKey(name: 'heat_shield') HeatShieldNetworkModel? heatShield,
     @JsonKey(name: 'launch_payload_mass') MassModel? launchPayloadMass,
     @JsonKey(name: 'launch_payload_vol') CubicLenModel? launchPayloadVol,
     @JsonKey(name: 'return_payload_mass') MassModel? returnPayloadMass,
     @JsonKey(name: 'return_payload_vol') CubicLenModel? returnPayloadVol,
     @JsonKey(name: 'pressurized_capsule')
-        PressurizedCapsuleModel? pressurizedCapsule,
+        PressurizedCapsuleNetworkModel? pressurizedCapsule,
     @JsonKey(name: 'wikipedia') String? wiki,
     @JsonKey(name: 'thrusters')
-    @Default(<ThrusterModel>[])
-        List<ThrusterModel> thrusters,
+    @Default(<ThrusterNetworkModel>[])
+        List<ThrusterNetworkModel> thrusters,
     @JsonKey(name: 'dry_mass_lb') int? dryMassLb,
     @JsonKey(name: 'dry_mass_kg') int? dryMassKg,
     @JsonKey(name: 'orbit_duration_yr') int? orbitDurationYr,
@@ -280,45 +280,45 @@ class DragonModel with _$DragonModel {
     @JsonKey(name: 'first_flight') String? firstFlight,
     @JsonKey(name: 'diameter') DiameterModel? diameter,
     @JsonKey(name: 'height_w_trunk') DiameterModel? heightWTrunk,
-    @JsonKey(name: 'trunk') TrunkModel? trunk,
-  }) = _DragonModel;
+    @JsonKey(name: 'trunk') TrunkNetworkModel? trunk,
+  }) = _DragonNetworkModel;
 
-  const DragonModel._();
+  const DragonNetworkModel._();
 
-  factory DragonModel.fromJson(Map<String, dynamic> json) =>
-      _$DragonModelFromJson(json);
+  factory DragonNetworkModel.fromJson(Map<String, dynamic> json) =>
+      _$DragonNetworkModelFromJson(json);
 }
 
 @freezed
-class PressurizedCapsuleModel with _$PressurizedCapsuleModel {
-  const factory PressurizedCapsuleModel({
+class PressurizedCapsuleNetworkModel with _$PressurizedCapsuleNetworkModel {
+  const factory PressurizedCapsuleNetworkModel({
     @JsonKey(name: 'payload_volume') CubicLenModel? payloadVolume,
-  }) = _PressurizedCapsuleModel;
+  }) = _PressurizedCapsuleNetworkModel;
 
-  const PressurizedCapsuleModel._();
+  const PressurizedCapsuleNetworkModel._();
 
-  factory PressurizedCapsuleModel.fromJson(Map<String, dynamic> json) =>
-      _$PressurizedCapsuleModelFromJson(json);
+  factory PressurizedCapsuleNetworkModel.fromJson(Map<String, dynamic> json) =>
+      _$PressurizedCapsuleNetworkModelFromJson(json);
 }
 
 @freezed
-class HeatShieldModel with _$HeatShieldModel {
-  const factory HeatShieldModel({
+class HeatShieldNetworkModel with _$HeatShieldNetworkModel {
+  const factory HeatShieldNetworkModel({
     @JsonKey(name: 'material') String? material,
     @JsonKey(name: 'size_meters') num? sizeMeters,
     @JsonKey(name: 'temp_degrees') int? tempDegrees,
     @JsonKey(name: 'dev_partner') String? devPartner,
-  }) = _HeatShieldModel;
+  }) = _HeatShieldNetworkModel;
 
-  const HeatShieldModel._();
+  const HeatShieldNetworkModel._();
 
-  factory HeatShieldModel.fromJson(Map<String, dynamic> json) =>
-      _$HeatShieldModelFromJson(json);
+  factory HeatShieldNetworkModel.fromJson(Map<String, dynamic> json) =>
+      _$HeatShieldNetworkModelFromJson(json);
 }
 
 @freezed
-class ThrusterModel with _$ThrusterModel {
-  const factory ThrusterModel({
+class ThrusterNetworkModel with _$ThrusterNetworkModel {
+  const factory ThrusterNetworkModel({
     @JsonKey(name: 'type') String? type,
     @JsonKey(name: 'amount') int? amount,
     @JsonKey(name: 'pods') int? pods,
@@ -326,38 +326,38 @@ class ThrusterModel with _$ThrusterModel {
     @JsonKey(name: 'fuel_2') String? secondFuel,
     @JsonKey(name: 'isp') int? isp,
     @JsonKey(name: 'thrust') ThrustModel? thrust,
-  }) = _ThrusterModel;
+  }) = _ThrusterNetworkModel;
 
-  const ThrusterModel._();
+  const ThrusterNetworkModel._();
 
-  factory ThrusterModel.fromJson(Map<String, dynamic> json) =>
-      _$ThrusterModelFromJson(json);
+  factory ThrusterNetworkModel.fromJson(Map<String, dynamic> json) =>
+      _$ThrusterNetworkModelFromJson(json);
 }
 
 @freezed
-class TrunkModel with _$TrunkModel {
-  const factory TrunkModel({
+class TrunkNetworkModel with _$TrunkNetworkModel {
+  const factory TrunkNetworkModel({
     @JsonKey(name: 'trunk_volume') CubicLenModel? volume,
-    @JsonKey(name: 'cargo') CargoModel? cargo,
-  }) = _TrunkModel;
+    @JsonKey(name: 'cargo') CargoNetworkModel? cargo,
+  }) = _TrunkNetworkModel;
 
-  const TrunkModel._();
+  const TrunkNetworkModel._();
 
-  factory TrunkModel.fromJson(Map<String, dynamic> json) =>
-      _$TrunkModelFromJson(json);
+  factory TrunkNetworkModel.fromJson(Map<String, dynamic> json) =>
+      _$TrunkNetworkModelFromJson(json);
 }
 
 @freezed
-class CargoModel with _$CargoModel {
-  const factory CargoModel({
+class CargoNetworkModel with _$CargoNetworkModel {
+  const factory CargoNetworkModel({
     @JsonKey(name: 'solar_array') num? solarArray,
     @JsonKey(name: 'unpressurized_cargo')
     @Default(false)
         bool isUnpressurizedCargo,
-  }) = _CargoModel;
+  }) = _CargoNetworkModel;
 
-  const CargoModel._();
+  const CargoNetworkModel._();
 
-  factory CargoModel.fromJson(Map<String, dynamic> json) =>
-      _$CargoModelFromJson(json);
+  factory CargoNetworkModel.fromJson(Map<String, dynamic> json) =>
+      _$CargoNetworkModelFromJson(json);
 }

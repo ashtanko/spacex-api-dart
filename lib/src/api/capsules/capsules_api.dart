@@ -18,11 +18,11 @@ abstract class CapsulesApi {
 
   @POST('/capsules/query')
   Future<ApiPaginatedList<CapsuleNetworkModel>> queryCapsules(
-    @Body() QueryModel query,
+    @Body() QueryNetworkModel query,
   );
 
   @POST('/capsules/query')
   Future<ApiPaginatedList<CapsuleNetworkFullModel>> queryFullCapsules(
-    @Body() QueryModel query,
+    @Body() QueryNetworkModel query,
   );
 }

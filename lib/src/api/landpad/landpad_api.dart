@@ -18,11 +18,11 @@ abstract class LandpadApi {
 
   @POST('/landpads/query')
   Future<ApiPaginatedList<LandpadNetworkModel>> queryLandpads(
-    @Body() QueryModel query,
+    @Body() QueryNetworkModel query,
   );
 
   @POST('/landpads/query')
   Future<ApiPaginatedList<LandpadNetworkFullModel>> queryFullLandpads(
-    @Body() QueryModel query,
+    @Body() QueryNetworkModel query,
   );
 }

@@ -22,7 +22,9 @@ class CrewDataSource {
     }
   }
 
-  Future<ApiPaginatedList<CrewNetworkModel>> queryCrew(QueryModel query) async {
+  Future<ApiPaginatedList<CrewNetworkModel>> queryCrew(
+    QueryNetworkModel query,
+  ) async {
     try {
       return _api.queryCrew(query);
     } on DioError catch (_) {
@@ -31,7 +33,7 @@ class CrewDataSource {
   }
 
   Future<ApiPaginatedList<FullCrewNetworkModel>> queryFullCrew(
-    QueryModel query,
+    QueryNetworkModel query,
   ) async {
     try {
       return _api.queryFullCrew(query);

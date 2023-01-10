@@ -6,7 +6,7 @@ class PayloadDataSource {
 
   final PayloadApi _api;
 
-  Future<List<PayloadModel>> getAllPayloads() async {
+  Future<List<PayloadNetworkModel>> getAllPayloads() async {
     try {
       return _api.getAllPayloads();
     } on DioError catch (_) {
@@ -14,7 +14,7 @@ class PayloadDataSource {
     }
   }
 
-  Future<PayloadModel> getOnePayload(String id) async {
+  Future<PayloadNetworkModel> getOnePayload(String id) async {
     try {
       return _api.getOnePayload(id);
     } on DioError catch (_) {
@@ -22,7 +22,9 @@ class PayloadDataSource {
     }
   }
 
-  Future<ApiPaginatedList<PayloadModel>> queryPayloads(QueryModel query) async {
+  Future<ApiPaginatedList<PayloadNetworkModel>> queryPayloads(
+    QueryNetworkModel query,
+  ) async {
     try {
       return _api.queryPayloads(query);
     } on DioError catch (_) {
@@ -30,8 +32,8 @@ class PayloadDataSource {
     }
   }
 
-  Future<ApiPaginatedList<FullPayloadModel>> queryFullPayloads(
-    QueryModel query,
+  Future<ApiPaginatedList<PayloadNetworkFullModel>> queryFullPayloads(
+    QueryNetworkModel query,
   ) async {
     try {
       return _api.queryFullPayloads(query);

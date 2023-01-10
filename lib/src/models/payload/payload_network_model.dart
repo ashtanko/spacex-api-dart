@@ -1,15 +1,15 @@
 import 'package:data/data.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-part 'payload_model.freezed.dart';
+part 'payload_network_model.freezed.dart';
 
-part 'payload_model.g.dart';
+part 'payload_network_model.g.dart';
 
 @freezed
-class PayloadModel with _$PayloadModel {
-  const factory PayloadModel({
+class PayloadNetworkModel with _$PayloadNetworkModel {
+  const factory PayloadNetworkModel({
     @JsonKey(name: 'id') required String id,
-    @JsonKey(name: 'dragon') PayloadDragonModel? dragon,
+    @JsonKey(name: 'dragon') PayloadDragonNetworkModel? dragon,
     @JsonKey(name: 'name') String? name,
     @JsonKey(name: 'type') String? type,
     @JsonKey(name: 'reused') @Default(false) bool reused,
@@ -40,19 +40,19 @@ class PayloadModel with _$PayloadModel {
     @JsonKey(name: 'raan') double? raan,
     @JsonKey(name: 'arg_of_pericenter') double? argOfPericenter,
     @JsonKey(name: 'mean_anomaly') double? meanAnomaly,
-  }) = _PayloadModel;
+  }) = _PayloadNetworkModel;
 
-  const PayloadModel._();
+  const PayloadNetworkModel._();
 
-  factory PayloadModel.fromJson(Map<String, dynamic> json) =>
-      _$PayloadModelFromJson(json);
+  factory PayloadNetworkModel.fromJson(Map<String, dynamic> json) =>
+      _$PayloadNetworkModelFromJson(json);
 }
 
 @freezed
-class FullPayloadModel with _$FullPayloadModel {
-  const factory FullPayloadModel({
+class PayloadNetworkFullModel with _$PayloadNetworkFullModel {
+  const factory PayloadNetworkFullModel({
     @JsonKey(name: 'id') required String id,
-    @JsonKey(name: 'dragon') PayloadDragonModel? dragon,
+    @JsonKey(name: 'dragon') PayloadDragonNetworkModel? dragon,
     @JsonKey(name: 'name') String? name,
     @JsonKey(name: 'type') String? type,
     @JsonKey(name: 'reused') @Default(false) bool reused,
@@ -83,17 +83,17 @@ class FullPayloadModel with _$FullPayloadModel {
     @JsonKey(name: 'raan') double? raan,
     @JsonKey(name: 'arg_of_pericenter') double? argOfPericenter,
     @JsonKey(name: 'mean_anomaly') double? meanAnomaly,
-  }) = _FullPayloadModel;
+  }) = _PayloadNetworkFullModel;
 
-  const FullPayloadModel._();
+  const PayloadNetworkFullModel._();
 
-  factory FullPayloadModel.fromJson(Map<String, dynamic> json) =>
-      _$FullPayloadModelFromJson(json);
+  factory PayloadNetworkFullModel.fromJson(Map<String, dynamic> json) =>
+      _$PayloadNetworkFullModelFromJson(json);
 }
 
 @freezed
-class PayloadDragonModel with _$PayloadDragonModel {
-  const factory PayloadDragonModel({
+class PayloadDragonNetworkModel with _$PayloadDragonNetworkModel {
+  const factory PayloadDragonNetworkModel({
     @JsonKey(name: 'capsule') String? capsule,
     @JsonKey(name: 'mass_returned_kg') double? massReturnedKg,
     @JsonKey(name: 'mass_returned_lbs') double? massReturnedLbs,
@@ -101,10 +101,10 @@ class PayloadDragonModel with _$PayloadDragonModel {
     @JsonKey(name: 'manifest') String? manifest,
     @JsonKey(name: 'water_landing') bool? waterLanding,
     @JsonKey(name: 'land_landing') bool? landLanding,
-  }) = _PayloadDragonModel;
+  }) = _PayloadDragonNetworkModel;
 
-  const PayloadDragonModel._();
+  const PayloadDragonNetworkModel._();
 
-  factory PayloadDragonModel.fromJson(Map<String, dynamic> json) =>
-      _$PayloadDragonModelFromJson(json);
+  factory PayloadDragonNetworkModel.fromJson(Map<String, dynamic> json) =>
+      _$PayloadDragonNetworkModelFromJson(json);
 }

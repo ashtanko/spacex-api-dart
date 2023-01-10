@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'starlink_model.dart';
+part of 'starlink_network_model.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -14,12 +14,12 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
-StarlinkModel _$StarlinkModelFromJson(Map<String, dynamic> json) {
-  return _StarlinkModel.fromJson(json);
+StarlinkNetworkModel _$StarlinkNetworkModelFromJson(Map<String, dynamic> json) {
+  return _StarlinkNetworkModel.fromJson(json);
 }
 
 /// @nodoc
-mixin _$StarlinkModel {
+mixin _$StarlinkNetworkModel {
   @JsonKey(name: 'id')
   String get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'launch')
@@ -35,19 +35,19 @@ mixin _$StarlinkModel {
   @JsonKey(name: 'velocity_kms')
   double? get velocityKms => throw _privateConstructorUsedError;
   @JsonKey(name: 'spaceTrack')
-  SpaceTrackModel? get spaceTrack => throw _privateConstructorUsedError;
+  SpaceTrackNetworkModel? get spaceTrack => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $StarlinkModelCopyWith<StarlinkModel> get copyWith =>
+  $StarlinkNetworkModelCopyWith<StarlinkNetworkModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $StarlinkModelCopyWith<$Res> {
-  factory $StarlinkModelCopyWith(
-          StarlinkModel value, $Res Function(StarlinkModel) then) =
-      _$StarlinkModelCopyWithImpl<$Res, StarlinkModel>;
+abstract class $StarlinkNetworkModelCopyWith<$Res> {
+  factory $StarlinkNetworkModelCopyWith(StarlinkNetworkModel value,
+          $Res Function(StarlinkNetworkModel) then) =
+      _$StarlinkNetworkModelCopyWithImpl<$Res, StarlinkNetworkModel>;
   @useResult
   $Res call(
       {@JsonKey(name: 'id') String id,
@@ -57,15 +57,16 @@ abstract class $StarlinkModelCopyWith<$Res> {
       @JsonKey(name: 'latitude') double? latitude,
       @JsonKey(name: 'longitude') double? longitude,
       @JsonKey(name: 'velocity_kms') double? velocityKms,
-      @JsonKey(name: 'spaceTrack') SpaceTrackModel? spaceTrack});
+      @JsonKey(name: 'spaceTrack') SpaceTrackNetworkModel? spaceTrack});
 
-  $SpaceTrackModelCopyWith<$Res>? get spaceTrack;
+  $SpaceTrackNetworkModelCopyWith<$Res>? get spaceTrack;
 }
 
 /// @nodoc
-class _$StarlinkModelCopyWithImpl<$Res, $Val extends StarlinkModel>
-    implements $StarlinkModelCopyWith<$Res> {
-  _$StarlinkModelCopyWithImpl(this._value, this._then);
+class _$StarlinkNetworkModelCopyWithImpl<$Res,
+        $Val extends StarlinkNetworkModel>
+    implements $StarlinkNetworkModelCopyWith<$Res> {
+  _$StarlinkNetworkModelCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -116,29 +117,29 @@ class _$StarlinkModelCopyWithImpl<$Res, $Val extends StarlinkModel>
       spaceTrack: freezed == spaceTrack
           ? _value.spaceTrack
           : spaceTrack // ignore: cast_nullable_to_non_nullable
-              as SpaceTrackModel?,
+              as SpaceTrackNetworkModel?,
     ) as $Val);
   }
 
   @override
   @pragma('vm:prefer-inline')
-  $SpaceTrackModelCopyWith<$Res>? get spaceTrack {
+  $SpaceTrackNetworkModelCopyWith<$Res>? get spaceTrack {
     if (_value.spaceTrack == null) {
       return null;
     }
 
-    return $SpaceTrackModelCopyWith<$Res>(_value.spaceTrack!, (value) {
+    return $SpaceTrackNetworkModelCopyWith<$Res>(_value.spaceTrack!, (value) {
       return _then(_value.copyWith(spaceTrack: value) as $Val);
     });
   }
 }
 
 /// @nodoc
-abstract class _$$_StarlinkModelCopyWith<$Res>
-    implements $StarlinkModelCopyWith<$Res> {
-  factory _$$_StarlinkModelCopyWith(
-          _$_StarlinkModel value, $Res Function(_$_StarlinkModel) then) =
-      __$$_StarlinkModelCopyWithImpl<$Res>;
+abstract class _$$_StarlinkNetworkModelCopyWith<$Res>
+    implements $StarlinkNetworkModelCopyWith<$Res> {
+  factory _$$_StarlinkNetworkModelCopyWith(_$_StarlinkNetworkModel value,
+          $Res Function(_$_StarlinkNetworkModel) then) =
+      __$$_StarlinkNetworkModelCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -149,18 +150,18 @@ abstract class _$$_StarlinkModelCopyWith<$Res>
       @JsonKey(name: 'latitude') double? latitude,
       @JsonKey(name: 'longitude') double? longitude,
       @JsonKey(name: 'velocity_kms') double? velocityKms,
-      @JsonKey(name: 'spaceTrack') SpaceTrackModel? spaceTrack});
+      @JsonKey(name: 'spaceTrack') SpaceTrackNetworkModel? spaceTrack});
 
   @override
-  $SpaceTrackModelCopyWith<$Res>? get spaceTrack;
+  $SpaceTrackNetworkModelCopyWith<$Res>? get spaceTrack;
 }
 
 /// @nodoc
-class __$$_StarlinkModelCopyWithImpl<$Res>
-    extends _$StarlinkModelCopyWithImpl<$Res, _$_StarlinkModel>
-    implements _$$_StarlinkModelCopyWith<$Res> {
-  __$$_StarlinkModelCopyWithImpl(
-      _$_StarlinkModel _value, $Res Function(_$_StarlinkModel) _then)
+class __$$_StarlinkNetworkModelCopyWithImpl<$Res>
+    extends _$StarlinkNetworkModelCopyWithImpl<$Res, _$_StarlinkNetworkModel>
+    implements _$$_StarlinkNetworkModelCopyWith<$Res> {
+  __$$_StarlinkNetworkModelCopyWithImpl(_$_StarlinkNetworkModel _value,
+      $Res Function(_$_StarlinkNetworkModel) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -175,7 +176,7 @@ class __$$_StarlinkModelCopyWithImpl<$Res>
     Object? velocityKms = freezed,
     Object? spaceTrack = freezed,
   }) {
-    return _then(_$_StarlinkModel(
+    return _then(_$_StarlinkNetworkModel(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -207,15 +208,15 @@ class __$$_StarlinkModelCopyWithImpl<$Res>
       spaceTrack: freezed == spaceTrack
           ? _value.spaceTrack
           : spaceTrack // ignore: cast_nullable_to_non_nullable
-              as SpaceTrackModel?,
+              as SpaceTrackNetworkModel?,
     ));
   }
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$_StarlinkModel extends _StarlinkModel {
-  const _$_StarlinkModel(
+class _$_StarlinkNetworkModel extends _StarlinkNetworkModel {
+  const _$_StarlinkNetworkModel(
       {@JsonKey(name: 'id') this.id = '',
       @JsonKey(name: 'launch') this.launchID,
       @JsonKey(name: 'version') this.version,
@@ -226,8 +227,8 @@ class _$_StarlinkModel extends _StarlinkModel {
       @JsonKey(name: 'spaceTrack') this.spaceTrack})
       : super._();
 
-  factory _$_StarlinkModel.fromJson(Map<String, dynamic> json) =>
-      _$$_StarlinkModelFromJson(json);
+  factory _$_StarlinkNetworkModel.fromJson(Map<String, dynamic> json) =>
+      _$$_StarlinkNetworkModelFromJson(json);
 
   @override
   @JsonKey(name: 'id')
@@ -252,18 +253,18 @@ class _$_StarlinkModel extends _StarlinkModel {
   final double? velocityKms;
   @override
   @JsonKey(name: 'spaceTrack')
-  final SpaceTrackModel? spaceTrack;
+  final SpaceTrackNetworkModel? spaceTrack;
 
   @override
   String toString() {
-    return 'StarlinkModel(id: $id, launchID: $launchID, version: $version, heightKm: $heightKm, latitude: $latitude, longitude: $longitude, velocityKms: $velocityKms, spaceTrack: $spaceTrack)';
+    return 'StarlinkNetworkModel(id: $id, launchID: $launchID, version: $version, heightKm: $heightKm, latitude: $latitude, longitude: $longitude, velocityKms: $velocityKms, spaceTrack: $spaceTrack)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_StarlinkModel &&
+            other is _$_StarlinkNetworkModel &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.launchID, launchID) ||
                 other.launchID == launchID) &&
@@ -288,32 +289,40 @@ class _$_StarlinkModel extends _StarlinkModel {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_StarlinkModelCopyWith<_$_StarlinkModel> get copyWith =>
-      __$$_StarlinkModelCopyWithImpl<_$_StarlinkModel>(this, _$identity);
+  _$$_StarlinkNetworkModelCopyWith<_$_StarlinkNetworkModel> get copyWith =>
+      __$$_StarlinkNetworkModelCopyWithImpl<_$_StarlinkNetworkModel>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_StarlinkModelToJson(
+    return _$$_StarlinkNetworkModelToJson(
       this,
     );
   }
 }
 
-abstract class _StarlinkModel extends StarlinkModel {
-  const factory _StarlinkModel(
-          {@JsonKey(name: 'id') final String id,
-          @JsonKey(name: 'launch') final String? launchID,
-          @JsonKey(name: 'version') final String? version,
-          @JsonKey(name: 'height_km') final double? heightKm,
-          @JsonKey(name: 'latitude') final double? latitude,
-          @JsonKey(name: 'longitude') final double? longitude,
-          @JsonKey(name: 'velocity_kms') final double? velocityKms,
-          @JsonKey(name: 'spaceTrack') final SpaceTrackModel? spaceTrack}) =
-      _$_StarlinkModel;
-  const _StarlinkModel._() : super._();
+abstract class _StarlinkNetworkModel extends StarlinkNetworkModel {
+  const factory _StarlinkNetworkModel(
+      {@JsonKey(name: 'id')
+          final String id,
+      @JsonKey(name: 'launch')
+          final String? launchID,
+      @JsonKey(name: 'version')
+          final String? version,
+      @JsonKey(name: 'height_km')
+          final double? heightKm,
+      @JsonKey(name: 'latitude')
+          final double? latitude,
+      @JsonKey(name: 'longitude')
+          final double? longitude,
+      @JsonKey(name: 'velocity_kms')
+          final double? velocityKms,
+      @JsonKey(name: 'spaceTrack')
+          final SpaceTrackNetworkModel? spaceTrack}) = _$_StarlinkNetworkModel;
+  const _StarlinkNetworkModel._() : super._();
 
-  factory _StarlinkModel.fromJson(Map<String, dynamic> json) =
-      _$_StarlinkModel.fromJson;
+  factory _StarlinkNetworkModel.fromJson(Map<String, dynamic> json) =
+      _$_StarlinkNetworkModel.fromJson;
 
   @override
   @JsonKey(name: 'id')
@@ -338,19 +347,20 @@ abstract class _StarlinkModel extends StarlinkModel {
   double? get velocityKms;
   @override
   @JsonKey(name: 'spaceTrack')
-  SpaceTrackModel? get spaceTrack;
+  SpaceTrackNetworkModel? get spaceTrack;
   @override
   @JsonKey(ignore: true)
-  _$$_StarlinkModelCopyWith<_$_StarlinkModel> get copyWith =>
+  _$$_StarlinkNetworkModelCopyWith<_$_StarlinkNetworkModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
-StarlinkFullModel _$StarlinkFullModelFromJson(Map<String, dynamic> json) {
-  return _StarlinkFullModel.fromJson(json);
+StarlinkNetworkFullModel _$StarlinkNetworkFullModelFromJson(
+    Map<String, dynamic> json) {
+  return _StarlinkNetworkFullModel.fromJson(json);
 }
 
 /// @nodoc
-mixin _$StarlinkFullModel {
+mixin _$StarlinkNetworkFullModel {
   @JsonKey(name: 'id')
   String get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'launch')
@@ -366,19 +376,19 @@ mixin _$StarlinkFullModel {
   @JsonKey(name: 'velocity_kms')
   double? get velocityKms => throw _privateConstructorUsedError;
   @JsonKey(name: 'spaceTrack')
-  SpaceTrackModel? get spaceTrack => throw _privateConstructorUsedError;
+  SpaceTrackNetworkModel? get spaceTrack => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $StarlinkFullModelCopyWith<StarlinkFullModel> get copyWith =>
+  $StarlinkNetworkFullModelCopyWith<StarlinkNetworkFullModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $StarlinkFullModelCopyWith<$Res> {
-  factory $StarlinkFullModelCopyWith(
-          StarlinkFullModel value, $Res Function(StarlinkFullModel) then) =
-      _$StarlinkFullModelCopyWithImpl<$Res, StarlinkFullModel>;
+abstract class $StarlinkNetworkFullModelCopyWith<$Res> {
+  factory $StarlinkNetworkFullModelCopyWith(StarlinkNetworkFullModel value,
+          $Res Function(StarlinkNetworkFullModel) then) =
+      _$StarlinkNetworkFullModelCopyWithImpl<$Res, StarlinkNetworkFullModel>;
   @useResult
   $Res call(
       {@JsonKey(name: 'id') String id,
@@ -388,16 +398,17 @@ abstract class $StarlinkFullModelCopyWith<$Res> {
       @JsonKey(name: 'latitude') double? latitude,
       @JsonKey(name: 'longitude') double? longitude,
       @JsonKey(name: 'velocity_kms') double? velocityKms,
-      @JsonKey(name: 'spaceTrack') SpaceTrackModel? spaceTrack});
+      @JsonKey(name: 'spaceTrack') SpaceTrackNetworkModel? spaceTrack});
 
   $LaunchNetworkModelCopyWith<$Res>? get launch;
-  $SpaceTrackModelCopyWith<$Res>? get spaceTrack;
+  $SpaceTrackNetworkModelCopyWith<$Res>? get spaceTrack;
 }
 
 /// @nodoc
-class _$StarlinkFullModelCopyWithImpl<$Res, $Val extends StarlinkFullModel>
-    implements $StarlinkFullModelCopyWith<$Res> {
-  _$StarlinkFullModelCopyWithImpl(this._value, this._then);
+class _$StarlinkNetworkFullModelCopyWithImpl<$Res,
+        $Val extends StarlinkNetworkFullModel>
+    implements $StarlinkNetworkFullModelCopyWith<$Res> {
+  _$StarlinkNetworkFullModelCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -448,7 +459,7 @@ class _$StarlinkFullModelCopyWithImpl<$Res, $Val extends StarlinkFullModel>
       spaceTrack: freezed == spaceTrack
           ? _value.spaceTrack
           : spaceTrack // ignore: cast_nullable_to_non_nullable
-              as SpaceTrackModel?,
+              as SpaceTrackNetworkModel?,
     ) as $Val);
   }
 
@@ -466,23 +477,24 @@ class _$StarlinkFullModelCopyWithImpl<$Res, $Val extends StarlinkFullModel>
 
   @override
   @pragma('vm:prefer-inline')
-  $SpaceTrackModelCopyWith<$Res>? get spaceTrack {
+  $SpaceTrackNetworkModelCopyWith<$Res>? get spaceTrack {
     if (_value.spaceTrack == null) {
       return null;
     }
 
-    return $SpaceTrackModelCopyWith<$Res>(_value.spaceTrack!, (value) {
+    return $SpaceTrackNetworkModelCopyWith<$Res>(_value.spaceTrack!, (value) {
       return _then(_value.copyWith(spaceTrack: value) as $Val);
     });
   }
 }
 
 /// @nodoc
-abstract class _$$_StarlinkFullModelCopyWith<$Res>
-    implements $StarlinkFullModelCopyWith<$Res> {
-  factory _$$_StarlinkFullModelCopyWith(_$_StarlinkFullModel value,
-          $Res Function(_$_StarlinkFullModel) then) =
-      __$$_StarlinkFullModelCopyWithImpl<$Res>;
+abstract class _$$_StarlinkNetworkFullModelCopyWith<$Res>
+    implements $StarlinkNetworkFullModelCopyWith<$Res> {
+  factory _$$_StarlinkNetworkFullModelCopyWith(
+          _$_StarlinkNetworkFullModel value,
+          $Res Function(_$_StarlinkNetworkFullModel) then) =
+      __$$_StarlinkNetworkFullModelCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -493,20 +505,21 @@ abstract class _$$_StarlinkFullModelCopyWith<$Res>
       @JsonKey(name: 'latitude') double? latitude,
       @JsonKey(name: 'longitude') double? longitude,
       @JsonKey(name: 'velocity_kms') double? velocityKms,
-      @JsonKey(name: 'spaceTrack') SpaceTrackModel? spaceTrack});
+      @JsonKey(name: 'spaceTrack') SpaceTrackNetworkModel? spaceTrack});
 
   @override
   $LaunchNetworkModelCopyWith<$Res>? get launch;
   @override
-  $SpaceTrackModelCopyWith<$Res>? get spaceTrack;
+  $SpaceTrackNetworkModelCopyWith<$Res>? get spaceTrack;
 }
 
 /// @nodoc
-class __$$_StarlinkFullModelCopyWithImpl<$Res>
-    extends _$StarlinkFullModelCopyWithImpl<$Res, _$_StarlinkFullModel>
-    implements _$$_StarlinkFullModelCopyWith<$Res> {
-  __$$_StarlinkFullModelCopyWithImpl(
-      _$_StarlinkFullModel _value, $Res Function(_$_StarlinkFullModel) _then)
+class __$$_StarlinkNetworkFullModelCopyWithImpl<$Res>
+    extends _$StarlinkNetworkFullModelCopyWithImpl<$Res,
+        _$_StarlinkNetworkFullModel>
+    implements _$$_StarlinkNetworkFullModelCopyWith<$Res> {
+  __$$_StarlinkNetworkFullModelCopyWithImpl(_$_StarlinkNetworkFullModel _value,
+      $Res Function(_$_StarlinkNetworkFullModel) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -521,7 +534,7 @@ class __$$_StarlinkFullModelCopyWithImpl<$Res>
     Object? velocityKms = freezed,
     Object? spaceTrack = freezed,
   }) {
-    return _then(_$_StarlinkFullModel(
+    return _then(_$_StarlinkNetworkFullModel(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -553,15 +566,15 @@ class __$$_StarlinkFullModelCopyWithImpl<$Res>
       spaceTrack: freezed == spaceTrack
           ? _value.spaceTrack
           : spaceTrack // ignore: cast_nullable_to_non_nullable
-              as SpaceTrackModel?,
+              as SpaceTrackNetworkModel?,
     ));
   }
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$_StarlinkFullModel extends _StarlinkFullModel {
-  const _$_StarlinkFullModel(
+class _$_StarlinkNetworkFullModel extends _StarlinkNetworkFullModel {
+  const _$_StarlinkNetworkFullModel(
       {@JsonKey(name: 'id') this.id = '',
       @JsonKey(name: 'launch') this.launch,
       @JsonKey(name: 'version') this.version = '',
@@ -572,8 +585,8 @@ class _$_StarlinkFullModel extends _StarlinkFullModel {
       @JsonKey(name: 'spaceTrack') this.spaceTrack})
       : super._();
 
-  factory _$_StarlinkFullModel.fromJson(Map<String, dynamic> json) =>
-      _$$_StarlinkFullModelFromJson(json);
+  factory _$_StarlinkNetworkFullModel.fromJson(Map<String, dynamic> json) =>
+      _$$_StarlinkNetworkFullModelFromJson(json);
 
   @override
   @JsonKey(name: 'id')
@@ -598,18 +611,18 @@ class _$_StarlinkFullModel extends _StarlinkFullModel {
   final double? velocityKms;
   @override
   @JsonKey(name: 'spaceTrack')
-  final SpaceTrackModel? spaceTrack;
+  final SpaceTrackNetworkModel? spaceTrack;
 
   @override
   String toString() {
-    return 'StarlinkFullModel(id: $id, launch: $launch, version: $version, heightKm: $heightKm, latitude: $latitude, longitude: $longitude, velocityKms: $velocityKms, spaceTrack: $spaceTrack)';
+    return 'StarlinkNetworkFullModel(id: $id, launch: $launch, version: $version, heightKm: $heightKm, latitude: $latitude, longitude: $longitude, velocityKms: $velocityKms, spaceTrack: $spaceTrack)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_StarlinkFullModel &&
+            other is _$_StarlinkNetworkFullModel &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.launch, launch) || other.launch == launch) &&
             (identical(other.version, version) || other.version == version) &&
@@ -633,33 +646,41 @@ class _$_StarlinkFullModel extends _StarlinkFullModel {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_StarlinkFullModelCopyWith<_$_StarlinkFullModel> get copyWith =>
-      __$$_StarlinkFullModelCopyWithImpl<_$_StarlinkFullModel>(
-          this, _$identity);
+  _$$_StarlinkNetworkFullModelCopyWith<_$_StarlinkNetworkFullModel>
+      get copyWith => __$$_StarlinkNetworkFullModelCopyWithImpl<
+          _$_StarlinkNetworkFullModel>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_StarlinkFullModelToJson(
+    return _$$_StarlinkNetworkFullModelToJson(
       this,
     );
   }
 }
 
-abstract class _StarlinkFullModel extends StarlinkFullModel {
-  const factory _StarlinkFullModel(
-          {@JsonKey(name: 'id') final String id,
-          @JsonKey(name: 'launch') final LaunchNetworkModel? launch,
-          @JsonKey(name: 'version') final String version,
-          @JsonKey(name: 'height_km') final double? heightKm,
-          @JsonKey(name: 'latitude') final double? latitude,
-          @JsonKey(name: 'longitude') final double? longitude,
-          @JsonKey(name: 'velocity_kms') final double? velocityKms,
-          @JsonKey(name: 'spaceTrack') final SpaceTrackModel? spaceTrack}) =
-      _$_StarlinkFullModel;
-  const _StarlinkFullModel._() : super._();
+abstract class _StarlinkNetworkFullModel extends StarlinkNetworkFullModel {
+  const factory _StarlinkNetworkFullModel(
+          {@JsonKey(name: 'id')
+              final String id,
+          @JsonKey(name: 'launch')
+              final LaunchNetworkModel? launch,
+          @JsonKey(name: 'version')
+              final String version,
+          @JsonKey(name: 'height_km')
+              final double? heightKm,
+          @JsonKey(name: 'latitude')
+              final double? latitude,
+          @JsonKey(name: 'longitude')
+              final double? longitude,
+          @JsonKey(name: 'velocity_kms')
+              final double? velocityKms,
+          @JsonKey(name: 'spaceTrack')
+              final SpaceTrackNetworkModel? spaceTrack}) =
+      _$_StarlinkNetworkFullModel;
+  const _StarlinkNetworkFullModel._() : super._();
 
-  factory _StarlinkFullModel.fromJson(Map<String, dynamic> json) =
-      _$_StarlinkFullModel.fromJson;
+  factory _StarlinkNetworkFullModel.fromJson(Map<String, dynamic> json) =
+      _$_StarlinkNetworkFullModel.fromJson;
 
   @override
   @JsonKey(name: 'id')
@@ -684,19 +705,20 @@ abstract class _StarlinkFullModel extends StarlinkFullModel {
   double? get velocityKms;
   @override
   @JsonKey(name: 'spaceTrack')
-  SpaceTrackModel? get spaceTrack;
+  SpaceTrackNetworkModel? get spaceTrack;
   @override
   @JsonKey(ignore: true)
-  _$$_StarlinkFullModelCopyWith<_$_StarlinkFullModel> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$_StarlinkNetworkFullModelCopyWith<_$_StarlinkNetworkFullModel>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
-SpaceTrackModel _$SpaceTrackModelFromJson(Map<String, dynamic> json) {
-  return _SpaceTrackModel.fromJson(json);
+SpaceTrackNetworkModel _$SpaceTrackNetworkModelFromJson(
+    Map<String, dynamic> json) {
+  return _SpaceTrackNetworkModel.fromJson(json);
 }
 
 /// @nodoc
-mixin _$SpaceTrackModel {
+mixin _$SpaceTrackNetworkModel {
   @JsonKey(name: 'CCSDS_OMM_VERS')
   String? get ccsdsOmmVers => throw _privateConstructorUsedError;
   @JsonKey(name: 'COMMENT')
@@ -782,15 +804,15 @@ mixin _$SpaceTrackModel {
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $SpaceTrackModelCopyWith<SpaceTrackModel> get copyWith =>
+  $SpaceTrackNetworkModelCopyWith<SpaceTrackNetworkModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $SpaceTrackModelCopyWith<$Res> {
-  factory $SpaceTrackModelCopyWith(
-          SpaceTrackModel value, $Res Function(SpaceTrackModel) then) =
-      _$SpaceTrackModelCopyWithImpl<$Res, SpaceTrackModel>;
+abstract class $SpaceTrackNetworkModelCopyWith<$Res> {
+  factory $SpaceTrackNetworkModelCopyWith(SpaceTrackNetworkModel value,
+          $Res Function(SpaceTrackNetworkModel) then) =
+      _$SpaceTrackNetworkModelCopyWithImpl<$Res, SpaceTrackNetworkModel>;
   @useResult
   $Res call(
       {@JsonKey(name: 'CCSDS_OMM_VERS') String? ccsdsOmmVers,
@@ -837,9 +859,10 @@ abstract class $SpaceTrackModelCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$SpaceTrackModelCopyWithImpl<$Res, $Val extends SpaceTrackModel>
-    implements $SpaceTrackModelCopyWith<$Res> {
-  _$SpaceTrackModelCopyWithImpl(this._value, this._then);
+class _$SpaceTrackNetworkModelCopyWithImpl<$Res,
+        $Val extends SpaceTrackNetworkModel>
+    implements $SpaceTrackNetworkModelCopyWith<$Res> {
+  _$SpaceTrackNetworkModelCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -1061,11 +1084,11 @@ class _$SpaceTrackModelCopyWithImpl<$Res, $Val extends SpaceTrackModel>
 }
 
 /// @nodoc
-abstract class _$$_SpaceTrackModelCopyWith<$Res>
-    implements $SpaceTrackModelCopyWith<$Res> {
-  factory _$$_SpaceTrackModelCopyWith(
-          _$_SpaceTrackModel value, $Res Function(_$_SpaceTrackModel) then) =
-      __$$_SpaceTrackModelCopyWithImpl<$Res>;
+abstract class _$$_SpaceTrackNetworkModelCopyWith<$Res>
+    implements $SpaceTrackNetworkModelCopyWith<$Res> {
+  factory _$$_SpaceTrackNetworkModelCopyWith(_$_SpaceTrackNetworkModel value,
+          $Res Function(_$_SpaceTrackNetworkModel) then) =
+      __$$_SpaceTrackNetworkModelCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -1113,11 +1136,12 @@ abstract class _$$_SpaceTrackModelCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_SpaceTrackModelCopyWithImpl<$Res>
-    extends _$SpaceTrackModelCopyWithImpl<$Res, _$_SpaceTrackModel>
-    implements _$$_SpaceTrackModelCopyWith<$Res> {
-  __$$_SpaceTrackModelCopyWithImpl(
-      _$_SpaceTrackModel _value, $Res Function(_$_SpaceTrackModel) _then)
+class __$$_SpaceTrackNetworkModelCopyWithImpl<$Res>
+    extends _$SpaceTrackNetworkModelCopyWithImpl<$Res,
+        _$_SpaceTrackNetworkModel>
+    implements _$$_SpaceTrackNetworkModelCopyWith<$Res> {
+  __$$_SpaceTrackNetworkModelCopyWithImpl(_$_SpaceTrackNetworkModel _value,
+      $Res Function(_$_SpaceTrackNetworkModel) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -1165,7 +1189,7 @@ class __$$_SpaceTrackModelCopyWithImpl<$Res>
     Object? tleLine1 = freezed,
     Object? tleLine2 = freezed,
   }) {
-    return _then(_$_SpaceTrackModel(
+    return _then(_$_SpaceTrackNetworkModel(
       ccsdsOmmVers: freezed == ccsdsOmmVers
           ? _value.ccsdsOmmVers
           : ccsdsOmmVers // ignore: cast_nullable_to_non_nullable
@@ -1336,8 +1360,8 @@ class __$$_SpaceTrackModelCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_SpaceTrackModel extends _SpaceTrackModel {
-  const _$_SpaceTrackModel(
+class _$_SpaceTrackNetworkModel extends _SpaceTrackNetworkModel {
+  const _$_SpaceTrackNetworkModel(
       {@JsonKey(name: 'CCSDS_OMM_VERS') this.ccsdsOmmVers,
       @JsonKey(name: 'COMMENT') this.comment,
       @JsonKey(name: 'CREATION_DATE') this.creationDate,
@@ -1381,8 +1405,8 @@ class _$_SpaceTrackModel extends _SpaceTrackModel {
       @JsonKey(name: 'TLE_LINE2') this.tleLine2})
       : super._();
 
-  factory _$_SpaceTrackModel.fromJson(Map<String, dynamic> json) =>
-      _$$_SpaceTrackModelFromJson(json);
+  factory _$_SpaceTrackNetworkModel.fromJson(Map<String, dynamic> json) =>
+      _$$_SpaceTrackNetworkModelFromJson(json);
 
   @override
   @JsonKey(name: 'CCSDS_OMM_VERS')
@@ -1510,14 +1534,14 @@ class _$_SpaceTrackModel extends _SpaceTrackModel {
 
   @override
   String toString() {
-    return 'SpaceTrackModel(ccsdsOmmVers: $ccsdsOmmVers, comment: $comment, creationDate: $creationDate, originator: $originator, objName: $objName, objId: $objId, centerName: $centerName, refFrame: $refFrame, timeSystem: $timeSystem, meanElementTheory: $meanElementTheory, epoch: $epoch, meanMotion: $meanMotion, eccentricity: $eccentricity, inclination: $inclination, raOfAscNode: $raOfAscNode, argOfPericenter: $argOfPericenter, meanAnomaly: $meanAnomaly, ephemerisType: $ephemerisType, classificationType: $classificationType, noradCatId: $noradCatId, elementSetNo: $elementSetNo, revAtEpoch: $revAtEpoch, bstar: $bstar, meanMotionDot: $meanMotionDot, meanMotionDdot: $meanMotionDdot, semimajorAxis: $semimajorAxis, period: $period, apoapsis: $apoapsis, periapsis: $periapsis, objectType: $objectType, rcsSize: $rcsSize, countryCode: $countryCode, launchDate: $launchDate, site: $site, decayDate: $decayDate, decayed: $decayed, file: $file, gpId: $gpId, tleLine0: $tleLine0, tleLine1: $tleLine1, tleLine2: $tleLine2)';
+    return 'SpaceTrackNetworkModel(ccsdsOmmVers: $ccsdsOmmVers, comment: $comment, creationDate: $creationDate, originator: $originator, objName: $objName, objId: $objId, centerName: $centerName, refFrame: $refFrame, timeSystem: $timeSystem, meanElementTheory: $meanElementTheory, epoch: $epoch, meanMotion: $meanMotion, eccentricity: $eccentricity, inclination: $inclination, raOfAscNode: $raOfAscNode, argOfPericenter: $argOfPericenter, meanAnomaly: $meanAnomaly, ephemerisType: $ephemerisType, classificationType: $classificationType, noradCatId: $noradCatId, elementSetNo: $elementSetNo, revAtEpoch: $revAtEpoch, bstar: $bstar, meanMotionDot: $meanMotionDot, meanMotionDdot: $meanMotionDdot, semimajorAxis: $semimajorAxis, period: $period, apoapsis: $apoapsis, periapsis: $periapsis, objectType: $objectType, rcsSize: $rcsSize, countryCode: $countryCode, launchDate: $launchDate, site: $site, decayDate: $decayDate, decayed: $decayed, file: $file, gpId: $gpId, tleLine0: $tleLine0, tleLine1: $tleLine1, tleLine2: $tleLine2)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_SpaceTrackModel &&
+            other is _$_SpaceTrackNetworkModel &&
             (identical(other.ccsdsOmmVers, ccsdsOmmVers) ||
                 other.ccsdsOmmVers == ccsdsOmmVers) &&
             (identical(other.comment, comment) || other.comment == comment) &&
@@ -1641,64 +1665,106 @@ class _$_SpaceTrackModel extends _SpaceTrackModel {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_SpaceTrackModelCopyWith<_$_SpaceTrackModel> get copyWith =>
-      __$$_SpaceTrackModelCopyWithImpl<_$_SpaceTrackModel>(this, _$identity);
+  _$$_SpaceTrackNetworkModelCopyWith<_$_SpaceTrackNetworkModel> get copyWith =>
+      __$$_SpaceTrackNetworkModelCopyWithImpl<_$_SpaceTrackNetworkModel>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SpaceTrackModelToJson(
+    return _$$_SpaceTrackNetworkModelToJson(
       this,
     );
   }
 }
 
-abstract class _SpaceTrackModel extends SpaceTrackModel {
-  const factory _SpaceTrackModel(
-      {@JsonKey(name: 'CCSDS_OMM_VERS') final String? ccsdsOmmVers,
-      @JsonKey(name: 'COMMENT') final String? comment,
-      @JsonKey(name: 'CREATION_DATE') final String? creationDate,
-      @JsonKey(name: 'ORIGINATOR') final String? originator,
-      @JsonKey(name: 'OBJECT_NAME') final String? objName,
-      @JsonKey(name: 'OBJECT_ID') final String? objId,
-      @JsonKey(name: 'CENTER_NAME') final String? centerName,
-      @JsonKey(name: 'REF_FRAME') final String? refFrame,
-      @JsonKey(name: 'TIME_SYSTEM') final String? timeSystem,
-      @JsonKey(name: 'MEAN_ELEMENT_THEORY') final String? meanElementTheory,
-      @JsonKey(name: 'EPOCH') final String? epoch,
-      @JsonKey(name: 'MEAN_MOTION') final double? meanMotion,
-      @JsonKey(name: 'ECCENTRICITY') final double? eccentricity,
-      @JsonKey(name: 'INCLINATION') final double? inclination,
-      @JsonKey(name: 'RA_OF_ASC_NODE') final double? raOfAscNode,
-      @JsonKey(name: 'ARG_OF_PERICENTER') final double? argOfPericenter,
-      @JsonKey(name: 'MEAN_ANOMALY') final double? meanAnomaly,
-      @JsonKey(name: 'EPHEMERIS_TYPE') final double? ephemerisType,
-      @JsonKey(name: 'CLASSIFICATION_TYPE') final String? classificationType,
-      @JsonKey(name: 'NORAD_CAT_ID') final int? noradCatId,
-      @JsonKey(name: 'ELEMENT_SET_NO') final int? elementSetNo,
-      @JsonKey(name: 'REV_AT_EPOCH') final int? revAtEpoch,
-      @JsonKey(name: 'BSTAR') final double? bstar,
-      @JsonKey(name: 'MEAN_MOTION_DOT') final double? meanMotionDot,
-      @JsonKey(name: 'MEAN_MOTION_DDOT') final double? meanMotionDdot,
-      @JsonKey(name: 'SEMIMAJOR_AXIS') final double? semimajorAxis,
-      @JsonKey(name: 'PERIOD') final double? period,
-      @JsonKey(name: 'APOAPSIS') final double? apoapsis,
-      @JsonKey(name: 'PERIAPSIS') final double? periapsis,
-      @JsonKey(name: 'OBJECT_TYPE') final String? objectType,
-      @JsonKey(name: 'RCS_SIZE') final String? rcsSize,
-      @JsonKey(name: 'COUNTRY_CODE') final String? countryCode,
-      @JsonKey(name: 'LAUNCH_DATE') final String? launchDate,
-      @JsonKey(name: 'SITE') final String? site,
-      @JsonKey(name: 'DECAY_DATE') final String? decayDate,
-      @JsonKey(name: 'DECAYED') final int? decayed,
-      @JsonKey(name: 'FILE') final int? file,
-      @JsonKey(name: 'GP_ID') final int? gpId,
-      @JsonKey(name: 'TLE_LINE0') final String? tleLine0,
-      @JsonKey(name: 'TLE_LINE1') final String? tleLine1,
-      @JsonKey(name: 'TLE_LINE2') final String? tleLine2}) = _$_SpaceTrackModel;
-  const _SpaceTrackModel._() : super._();
+abstract class _SpaceTrackNetworkModel extends SpaceTrackNetworkModel {
+  const factory _SpaceTrackNetworkModel(
+      {@JsonKey(name: 'CCSDS_OMM_VERS')
+          final String? ccsdsOmmVers,
+      @JsonKey(name: 'COMMENT')
+          final String? comment,
+      @JsonKey(name: 'CREATION_DATE')
+          final String? creationDate,
+      @JsonKey(name: 'ORIGINATOR')
+          final String? originator,
+      @JsonKey(name: 'OBJECT_NAME')
+          final String? objName,
+      @JsonKey(name: 'OBJECT_ID')
+          final String? objId,
+      @JsonKey(name: 'CENTER_NAME')
+          final String? centerName,
+      @JsonKey(name: 'REF_FRAME')
+          final String? refFrame,
+      @JsonKey(name: 'TIME_SYSTEM')
+          final String? timeSystem,
+      @JsonKey(name: 'MEAN_ELEMENT_THEORY')
+          final String? meanElementTheory,
+      @JsonKey(name: 'EPOCH')
+          final String? epoch,
+      @JsonKey(name: 'MEAN_MOTION')
+          final double? meanMotion,
+      @JsonKey(name: 'ECCENTRICITY')
+          final double? eccentricity,
+      @JsonKey(name: 'INCLINATION')
+          final double? inclination,
+      @JsonKey(name: 'RA_OF_ASC_NODE')
+          final double? raOfAscNode,
+      @JsonKey(name: 'ARG_OF_PERICENTER')
+          final double? argOfPericenter,
+      @JsonKey(name: 'MEAN_ANOMALY')
+          final double? meanAnomaly,
+      @JsonKey(name: 'EPHEMERIS_TYPE')
+          final double? ephemerisType,
+      @JsonKey(name: 'CLASSIFICATION_TYPE')
+          final String? classificationType,
+      @JsonKey(name: 'NORAD_CAT_ID')
+          final int? noradCatId,
+      @JsonKey(name: 'ELEMENT_SET_NO')
+          final int? elementSetNo,
+      @JsonKey(name: 'REV_AT_EPOCH')
+          final int? revAtEpoch,
+      @JsonKey(name: 'BSTAR')
+          final double? bstar,
+      @JsonKey(name: 'MEAN_MOTION_DOT')
+          final double? meanMotionDot,
+      @JsonKey(name: 'MEAN_MOTION_DDOT')
+          final double? meanMotionDdot,
+      @JsonKey(name: 'SEMIMAJOR_AXIS')
+          final double? semimajorAxis,
+      @JsonKey(name: 'PERIOD')
+          final double? period,
+      @JsonKey(name: 'APOAPSIS')
+          final double? apoapsis,
+      @JsonKey(name: 'PERIAPSIS')
+          final double? periapsis,
+      @JsonKey(name: 'OBJECT_TYPE')
+          final String? objectType,
+      @JsonKey(name: 'RCS_SIZE')
+          final String? rcsSize,
+      @JsonKey(name: 'COUNTRY_CODE')
+          final String? countryCode,
+      @JsonKey(name: 'LAUNCH_DATE')
+          final String? launchDate,
+      @JsonKey(name: 'SITE')
+          final String? site,
+      @JsonKey(name: 'DECAY_DATE')
+          final String? decayDate,
+      @JsonKey(name: 'DECAYED')
+          final int? decayed,
+      @JsonKey(name: 'FILE')
+          final int? file,
+      @JsonKey(name: 'GP_ID')
+          final int? gpId,
+      @JsonKey(name: 'TLE_LINE0')
+          final String? tleLine0,
+      @JsonKey(name: 'TLE_LINE1')
+          final String? tleLine1,
+      @JsonKey(name: 'TLE_LINE2')
+          final String? tleLine2}) = _$_SpaceTrackNetworkModel;
+  const _SpaceTrackNetworkModel._() : super._();
 
-  factory _SpaceTrackModel.fromJson(Map<String, dynamic> json) =
-      _$_SpaceTrackModel.fromJson;
+  factory _SpaceTrackNetworkModel.fromJson(Map<String, dynamic> json) =
+      _$_SpaceTrackNetworkModel.fromJson;
 
   @override
   @JsonKey(name: 'CCSDS_OMM_VERS')
@@ -1825,6 +1891,6 @@ abstract class _SpaceTrackModel extends SpaceTrackModel {
   String? get tleLine2;
   @override
   @JsonKey(ignore: true)
-  _$$_SpaceTrackModelCopyWith<_$_SpaceTrackModel> get copyWith =>
+  _$$_SpaceTrackNetworkModelCopyWith<_$_SpaceTrackNetworkModel> get copyWith =>
       throw _privateConstructorUsedError;
 }

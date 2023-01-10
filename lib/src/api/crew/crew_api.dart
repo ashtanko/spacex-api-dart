@@ -18,11 +18,11 @@ abstract class CrewApi {
 
   @POST('/crew/query')
   Future<ApiPaginatedList<CrewNetworkModel>> queryCrew(
-    @Body() QueryModel query,
+    @Body() QueryNetworkModel query,
   );
 
   @POST('/crew/query')
   Future<ApiPaginatedList<FullCrewNetworkModel>> queryFullCrew(
-    @Body() QueryModel query,
+    @Body() QueryNetworkModel query,
   );
 }
