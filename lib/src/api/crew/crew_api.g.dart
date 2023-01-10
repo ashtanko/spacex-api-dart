@@ -97,14 +97,14 @@ class _CrewApi implements CrewApi {
   }
 
   @override
-  Future<ApiPaginatedList<dynamic>> queryFullCrew(query) async {
+  Future<ApiPaginatedList<FullCrewNetworkModel>> queryFullCrew(query) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     _data.addAll(query.toJson());
     final _result = await _dio.fetch<Map<String, dynamic>>(
-        _setStreamType<ApiPaginatedList<dynamic>>(Options(
+        _setStreamType<ApiPaginatedList<FullCrewNetworkModel>>(Options(
       method: 'POST',
       headers: _headers,
       extra: _extra,
@@ -116,9 +116,9 @@ class _CrewApi implements CrewApi {
               data: _data,
             )
             .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
-    final value = ApiPaginatedList<dynamic>.fromJson(
+    final value = ApiPaginatedList<FullCrewNetworkModel>.fromJson(
       _result.data!,
-      (json) => json as dynamic,
+      (json) => FullCrewNetworkModel.fromJson(json as Map<String, dynamic>),
     );
     return value;
   }

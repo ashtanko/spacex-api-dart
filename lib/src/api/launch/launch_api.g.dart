@@ -21,13 +21,13 @@ class _LaunchApi implements LaunchApi {
   String? baseUrl;
 
   @override
-  Future<List<LaunchSimpleModel>> getAllLaunches() async {
+  Future<List<LaunchNetworkSimpleModel>> getAllLaunches() async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
-    final _result = await _dio
-        .fetch<List<dynamic>>(_setStreamType<List<LaunchSimpleModel>>(Options(
+    final _result = await _dio.fetch<List<dynamic>>(
+        _setStreamType<List<LaunchNetworkSimpleModel>>(Options(
       method: 'GET',
       headers: _headers,
       extra: _extra,
@@ -41,19 +41,19 @@ class _LaunchApi implements LaunchApi {
             .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
     var value = _result.data!
         .map((dynamic i) =>
-            LaunchSimpleModel.fromJson(i as Map<String, dynamic>))
+            LaunchNetworkSimpleModel.fromJson(i as Map<String, dynamic>))
         .toList();
     return value;
   }
 
   @override
-  Future<List<LaunchSimpleModel>> getUpcomingLaunches() async {
+  Future<List<LaunchNetworkSimpleModel>> getUpcomingLaunches() async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
-    final _result = await _dio
-        .fetch<List<dynamic>>(_setStreamType<List<LaunchSimpleModel>>(Options(
+    final _result = await _dio.fetch<List<dynamic>>(
+        _setStreamType<List<LaunchNetworkSimpleModel>>(Options(
       method: 'GET',
       headers: _headers,
       extra: _extra,
@@ -67,19 +67,19 @@ class _LaunchApi implements LaunchApi {
             .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
     var value = _result.data!
         .map((dynamic i) =>
-            LaunchSimpleModel.fromJson(i as Map<String, dynamic>))
+            LaunchNetworkSimpleModel.fromJson(i as Map<String, dynamic>))
         .toList();
     return value;
   }
 
   @override
-  Future<List<LaunchSimpleModel>> getPastLaunches() async {
+  Future<List<LaunchNetworkSimpleModel>> getPastLaunches() async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
-    final _result = await _dio
-        .fetch<List<dynamic>>(_setStreamType<List<LaunchSimpleModel>>(Options(
+    final _result = await _dio.fetch<List<dynamic>>(
+        _setStreamType<List<LaunchNetworkSimpleModel>>(Options(
       method: 'GET',
       headers: _headers,
       extra: _extra,
@@ -93,19 +93,19 @@ class _LaunchApi implements LaunchApi {
             .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
     var value = _result.data!
         .map((dynamic i) =>
-            LaunchSimpleModel.fromJson(i as Map<String, dynamic>))
+            LaunchNetworkSimpleModel.fromJson(i as Map<String, dynamic>))
         .toList();
     return value;
   }
 
   @override
-  Future<LaunchSimpleModel> getLatestLaunch() async {
+  Future<LaunchNetworkSimpleModel> getLatestLaunch() async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
-    final _result = await _dio
-        .fetch<Map<String, dynamic>>(_setStreamType<LaunchSimpleModel>(Options(
+    final _result = await _dio.fetch<Map<String, dynamic>>(
+        _setStreamType<LaunchNetworkSimpleModel>(Options(
       method: 'GET',
       headers: _headers,
       extra: _extra,
@@ -117,18 +117,18 @@ class _LaunchApi implements LaunchApi {
               data: _data,
             )
             .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
-    final value = LaunchSimpleModel.fromJson(_result.data!);
+    final value = LaunchNetworkSimpleModel.fromJson(_result.data!);
     return value;
   }
 
   @override
-  Future<LaunchSimpleModel> getNextLaunch() async {
+  Future<LaunchNetworkSimpleModel> getNextLaunch() async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
-    final _result = await _dio
-        .fetch<Map<String, dynamic>>(_setStreamType<LaunchSimpleModel>(Options(
+    final _result = await _dio.fetch<Map<String, dynamic>>(
+        _setStreamType<LaunchNetworkSimpleModel>(Options(
       method: 'GET',
       headers: _headers,
       extra: _extra,
@@ -140,18 +140,18 @@ class _LaunchApi implements LaunchApi {
               data: _data,
             )
             .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
-    final value = LaunchSimpleModel.fromJson(_result.data!);
+    final value = LaunchNetworkSimpleModel.fromJson(_result.data!);
     return value;
   }
 
   @override
-  Future<LaunchModel> getLaunch(id) async {
+  Future<LaunchNetworkModel> getLaunch(id) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     final _result = await _dio
-        .fetch<Map<String, dynamic>>(_setStreamType<LaunchModel>(Options(
+        .fetch<Map<String, dynamic>>(_setStreamType<LaunchNetworkModel>(Options(
       method: 'GET',
       headers: _headers,
       extra: _extra,
@@ -163,19 +163,20 @@ class _LaunchApi implements LaunchApi {
               data: _data,
             )
             .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
-    final value = LaunchModel.fromJson(_result.data!);
+    final value = LaunchNetworkModel.fromJson(_result.data!);
     return value;
   }
 
   @override
-  Future<ApiPaginatedList<LaunchSimpleModel>> queryLaunches(query) async {
+  Future<ApiPaginatedList<LaunchNetworkSimpleModel>> queryLaunches(
+      query) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     _data.addAll(query.toJson());
     final _result = await _dio.fetch<Map<String, dynamic>>(
-        _setStreamType<ApiPaginatedList<LaunchSimpleModel>>(Options(
+        _setStreamType<ApiPaginatedList<LaunchNetworkSimpleModel>>(Options(
       method: 'POST',
       headers: _headers,
       extra: _extra,
@@ -187,22 +188,23 @@ class _LaunchApi implements LaunchApi {
               data: _data,
             )
             .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
-    final value = ApiPaginatedList<LaunchSimpleModel>.fromJson(
+    final value = ApiPaginatedList<LaunchNetworkSimpleModel>.fromJson(
       _result.data!,
-      (json) => LaunchSimpleModel.fromJson(json as Map<String, dynamic>),
+      (json) => LaunchNetworkSimpleModel.fromJson(json as Map<String, dynamic>),
     );
     return value;
   }
 
   @override
-  Future<ApiPaginatedList<FullLaunchModel>> queryFullLaunches(query) async {
+  Future<ApiPaginatedList<LaunchNetworkFullModel>> queryFullLaunches(
+      query) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     _data.addAll(query.toJson());
     final _result = await _dio.fetch<Map<String, dynamic>>(
-        _setStreamType<ApiPaginatedList<FullLaunchModel>>(Options(
+        _setStreamType<ApiPaginatedList<LaunchNetworkFullModel>>(Options(
       method: 'POST',
       headers: _headers,
       extra: _extra,
@@ -214,9 +216,9 @@ class _LaunchApi implements LaunchApi {
               data: _data,
             )
             .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
-    final value = ApiPaginatedList<FullLaunchModel>.fromJson(
+    final value = ApiPaginatedList<LaunchNetworkFullModel>.fromJson(
       _result.data!,
-      (json) => FullLaunchModel.fromJson(json as Map<String, dynamic>),
+      (json) => LaunchNetworkFullModel.fromJson(json as Map<String, dynamic>),
     );
     return value;
   }

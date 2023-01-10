@@ -220,8 +220,8 @@ class ShipFullModel with _$ShipFullModel {
     @JsonKey(name: 'id') required String id,
     @JsonKey(name: 'last_ais_update') dynamic lastAisUpdate,
     @JsonKey(name: 'launches')
-    @Default(<LaunchModel>[])
-        List<LaunchModel> launches,
+    @Default(<LaunchNetworkModel>[])
+        List<LaunchNetworkModel> launches,
     @JsonKey(name: 'active') @Default(false) bool isActive,
     @JsonKey(name: 'name') String? name,
     @JsonKey(name: 'image') String? image,

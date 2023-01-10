@@ -654,7 +654,7 @@ mixin _$CoreNetworkFullModel {
   @JsonKey(name: 'last_update')
   String? get lastUpdate => throw _privateConstructorUsedError;
   @JsonKey(name: 'launches')
-  List<LaunchModel> get launches => throw _privateConstructorUsedError;
+  List<LaunchNetworkModel> get launches => throw _privateConstructorUsedError;
   @JsonKey(name: 'serial')
   String? get serial => throw _privateConstructorUsedError;
   @JsonKey(name: 'status')
@@ -699,7 +699,7 @@ abstract class $CoreNetworkFullModelCopyWith<$Res> {
       @JsonKey(name: 'asds_attempts') int? asdsAttempts,
       @JsonKey(name: 'asds_landings') int? asdsLandings,
       @JsonKey(name: 'last_update') String? lastUpdate,
-      @JsonKey(name: 'launches') List<LaunchModel> launches,
+      @JsonKey(name: 'launches') List<LaunchNetworkModel> launches,
       @JsonKey(name: 'serial') String? serial,
       @JsonKey(name: 'status') String? status,
       @JsonKey(name: 'core') String? core,
@@ -784,7 +784,7 @@ class _$CoreNetworkFullModelCopyWithImpl<$Res,
       launches: null == launches
           ? _value.launches
           : launches // ignore: cast_nullable_to_non_nullable
-              as List<LaunchModel>,
+              as List<LaunchNetworkModel>,
       serial: freezed == serial
           ? _value.serial
           : serial // ignore: cast_nullable_to_non_nullable
@@ -850,7 +850,7 @@ abstract class _$$_CoreNetworkFullModelCopyWith<$Res>
       @JsonKey(name: 'asds_attempts') int? asdsAttempts,
       @JsonKey(name: 'asds_landings') int? asdsLandings,
       @JsonKey(name: 'last_update') String? lastUpdate,
-      @JsonKey(name: 'launches') List<LaunchModel> launches,
+      @JsonKey(name: 'launches') List<LaunchNetworkModel> launches,
       @JsonKey(name: 'serial') String? serial,
       @JsonKey(name: 'status') String? status,
       @JsonKey(name: 'core') String? core,
@@ -932,7 +932,7 @@ class __$$_CoreNetworkFullModelCopyWithImpl<$Res>
       launches: null == launches
           ? _value._launches
           : launches // ignore: cast_nullable_to_non_nullable
-              as List<LaunchModel>,
+              as List<LaunchNetworkModel>,
       serial: freezed == serial
           ? _value.serial
           : serial // ignore: cast_nullable_to_non_nullable
@@ -986,44 +986,26 @@ class __$$_CoreNetworkFullModelCopyWithImpl<$Res>
 class _$_CoreNetworkFullModel extends _CoreNetworkFullModel {
   const _$_CoreNetworkFullModel(
       {this.id,
-      @JsonKey(name: 'block')
-          this.block,
-      @JsonKey(name: 'reuse_count')
-          this.reuseCount,
-      @JsonKey(name: 'rtls_attempts')
-          this.rtlsAttempts,
-      @JsonKey(name: 'rtls_landings')
-          this.rtlsLandings,
-      @JsonKey(name: 'asds_attempts')
-          this.asdsAttempts,
-      @JsonKey(name: 'asds_landings')
-          this.asdsLandings,
-      @JsonKey(name: 'last_update')
-          this.lastUpdate,
-      @JsonKey(name: 'launches')
-          final List<LaunchModel> launches = const <LaunchModel>[],
-      @JsonKey(name: 'serial')
-          this.serial,
-      @JsonKey(name: 'status')
-          this.status,
-      @JsonKey(name: 'core')
-          this.core,
-      @JsonKey(name: 'flight')
-          this.flight = 0,
-      @JsonKey(name: 'gridfins')
-          this.hasGridfins = false,
-      @JsonKey(name: 'legs')
-          this.hasLegs = false,
-      @JsonKey(name: 'reused')
-          this.reused = false,
-      @JsonKey(name: 'landing_attempt')
-          this.landingAttempt = false,
-      @JsonKey(name: 'landing_success')
-          this.landingSuccess = false,
-      @JsonKey(name: 'landing_type')
-          this.landingType,
-      @JsonKey(name: 'landpad')
-          this.landpad})
+      @JsonKey(name: 'block') this.block,
+      @JsonKey(name: 'reuse_count') this.reuseCount,
+      @JsonKey(name: 'rtls_attempts') this.rtlsAttempts,
+      @JsonKey(name: 'rtls_landings') this.rtlsLandings,
+      @JsonKey(name: 'asds_attempts') this.asdsAttempts,
+      @JsonKey(name: 'asds_landings') this.asdsLandings,
+      @JsonKey(name: 'last_update') this.lastUpdate,
+      @JsonKey(name: 'launches') final List<LaunchNetworkModel> launches =
+          const <LaunchNetworkModel>[],
+      @JsonKey(name: 'serial') this.serial,
+      @JsonKey(name: 'status') this.status,
+      @JsonKey(name: 'core') this.core,
+      @JsonKey(name: 'flight') this.flight = 0,
+      @JsonKey(name: 'gridfins') this.hasGridfins = false,
+      @JsonKey(name: 'legs') this.hasLegs = false,
+      @JsonKey(name: 'reused') this.reused = false,
+      @JsonKey(name: 'landing_attempt') this.landingAttempt = false,
+      @JsonKey(name: 'landing_success') this.landingSuccess = false,
+      @JsonKey(name: 'landing_type') this.landingType,
+      @JsonKey(name: 'landpad') this.landpad})
       : _launches = launches,
         super._();
 
@@ -1053,10 +1035,10 @@ class _$_CoreNetworkFullModel extends _CoreNetworkFullModel {
   @override
   @JsonKey(name: 'last_update')
   final String? lastUpdate;
-  final List<LaunchModel> _launches;
+  final List<LaunchNetworkModel> _launches;
   @override
   @JsonKey(name: 'launches')
-  List<LaunchModel> get launches {
+  List<LaunchNetworkModel> get launches {
     if (_launches is EqualUnmodifiableListView) return _launches;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_launches);
@@ -1189,7 +1171,7 @@ abstract class _CoreNetworkFullModel extends CoreNetworkFullModel {
           @JsonKey(name: 'asds_attempts') final int? asdsAttempts,
           @JsonKey(name: 'asds_landings') final int? asdsLandings,
           @JsonKey(name: 'last_update') final String? lastUpdate,
-          @JsonKey(name: 'launches') final List<LaunchModel> launches,
+          @JsonKey(name: 'launches') final List<LaunchNetworkModel> launches,
           @JsonKey(name: 'serial') final String? serial,
           @JsonKey(name: 'status') final String? status,
           @JsonKey(name: 'core') final String? core,
@@ -1232,7 +1214,7 @@ abstract class _CoreNetworkFullModel extends CoreNetworkFullModel {
   String? get lastUpdate;
   @override
   @JsonKey(name: 'launches')
-  List<LaunchModel> get launches;
+  List<LaunchNetworkModel> get launches;
   @override
   @JsonKey(name: 'serial')
   String? get serial;

@@ -12,7 +12,7 @@ _$_LaunchpadModel _$$_LaunchpadModelFromJson(Map<String, dynamic> json) =>
       details: json['details'] as String?,
       images: json['images'] == null
           ? null
-          : ImagesModel.fromJson(json['images'] as Map<String, dynamic>),
+          : ImagesNetworkModel.fromJson(json['images'] as Map<String, dynamic>),
       status: $enumDecodeNullable(_$LaunchStatusEnumMap, json['status'],
               unknownValue: LaunchStatus.unknown) ??
           LaunchStatus.unknown,
@@ -76,12 +76,13 @@ _$_LaunchpadFullModel _$$_LaunchpadFullModelFromJson(
       details: json['details'] as String?,
       images: json['images'] == null
           ? null
-          : ImagesModel.fromJson(json['images'] as Map<String, dynamic>),
+          : ImagesNetworkModel.fromJson(json['images'] as Map<String, dynamic>),
       status: $enumDecodeNullable(_$LaunchStatusEnumMap, json['status'],
               unknownValue: LaunchStatus.unknown) ??
           LaunchStatus.unknown,
       launches: (json['launches'] as List<dynamic>?)
-              ?.map((e) => LaunchModel.fromJson(e as Map<String, dynamic>))
+              ?.map(
+                  (e) => LaunchNetworkModel.fromJson(e as Map<String, dynamic>))
               .toList() ??
           const [],
       timezone: json['timezone'] as String?,

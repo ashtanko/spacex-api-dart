@@ -21,13 +21,13 @@ class _LandpadApi implements LandpadApi {
   String? baseUrl;
 
   @override
-  Future<List<LandpadModel>> getAllLandpads() async {
+  Future<List<LandpadNetworkModel>> getAllLandpads() async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     final _result = await _dio
-        .fetch<List<dynamic>>(_setStreamType<List<LandpadModel>>(Options(
+        .fetch<List<dynamic>>(_setStreamType<List<LandpadNetworkModel>>(Options(
       method: 'GET',
       headers: _headers,
       extra: _extra,
@@ -40,19 +40,20 @@ class _LandpadApi implements LandpadApi {
             )
             .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
     var value = _result.data!
-        .map((dynamic i) => LandpadModel.fromJson(i as Map<String, dynamic>))
+        .map((dynamic i) =>
+            LandpadNetworkModel.fromJson(i as Map<String, dynamic>))
         .toList();
     return value;
   }
 
   @override
-  Future<LandpadModel> getLandpad(id) async {
+  Future<LandpadNetworkModel> getLandpad(id) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
-    final _result = await _dio
-        .fetch<Map<String, dynamic>>(_setStreamType<LandpadModel>(Options(
+    final _result = await _dio.fetch<Map<String, dynamic>>(
+        _setStreamType<LandpadNetworkModel>(Options(
       method: 'GET',
       headers: _headers,
       extra: _extra,
@@ -64,19 +65,19 @@ class _LandpadApi implements LandpadApi {
               data: _data,
             )
             .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
-    final value = LandpadModel.fromJson(_result.data!);
+    final value = LandpadNetworkModel.fromJson(_result.data!);
     return value;
   }
 
   @override
-  Future<ApiPaginatedList<LandpadModel>> queryLandpads(query) async {
+  Future<ApiPaginatedList<LandpadNetworkModel>> queryLandpads(query) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     _data.addAll(query.toJson());
     final _result = await _dio.fetch<Map<String, dynamic>>(
-        _setStreamType<ApiPaginatedList<LandpadModel>>(Options(
+        _setStreamType<ApiPaginatedList<LandpadNetworkModel>>(Options(
       method: 'POST',
       headers: _headers,
       extra: _extra,
@@ -88,22 +89,23 @@ class _LandpadApi implements LandpadApi {
               data: _data,
             )
             .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
-    final value = ApiPaginatedList<LandpadModel>.fromJson(
+    final value = ApiPaginatedList<LandpadNetworkModel>.fromJson(
       _result.data!,
-      (json) => LandpadModel.fromJson(json as Map<String, dynamic>),
+      (json) => LandpadNetworkModel.fromJson(json as Map<String, dynamic>),
     );
     return value;
   }
 
   @override
-  Future<ApiPaginatedList<LandpadFullModel>> queryFullLandpads(query) async {
+  Future<ApiPaginatedList<LandpadNetworkFullModel>> queryFullLandpads(
+      query) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     _data.addAll(query.toJson());
     final _result = await _dio.fetch<Map<String, dynamic>>(
-        _setStreamType<ApiPaginatedList<LandpadFullModel>>(Options(
+        _setStreamType<ApiPaginatedList<LandpadNetworkFullModel>>(Options(
       method: 'POST',
       headers: _headers,
       extra: _extra,
@@ -115,9 +117,9 @@ class _LandpadApi implements LandpadApi {
               data: _data,
             )
             .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
-    final value = ApiPaginatedList<LandpadFullModel>.fromJson(
+    final value = ApiPaginatedList<LandpadNetworkFullModel>.fromJson(
       _result.data!,
-      (json) => LandpadFullModel.fromJson(json as Map<String, dynamic>),
+      (json) => LandpadNetworkFullModel.fromJson(json as Map<String, dynamic>),
     );
     return value;
   }

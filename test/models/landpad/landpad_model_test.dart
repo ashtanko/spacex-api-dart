@@ -34,7 +34,7 @@ void main() {
         // arrange
         final Map<String, dynamic> jsonMap = 'landpad/landpad.json'.toFixture();
         // act
-        final result = LandpadModel.fromJson(jsonMap);
+        final result = LandpadNetworkModel.fromJson(jsonMap);
         // assert
         expect(result, equals(landpadModel));
       },
@@ -47,7 +47,7 @@ void main() {
         final Map<String, dynamic> jsonMap =
             'landpad/landpad_full.json'.toFixture();
         // act
-        final result = LandpadFullModel.fromJson(jsonMap);
+        final result = LandpadNetworkFullModel.fromJson(jsonMap);
         // assert
         expect(result, equals(landpadFullModel));
       },

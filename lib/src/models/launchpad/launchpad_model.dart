@@ -20,7 +20,7 @@ class LaunchpadModel with _$LaunchpadModel {
   const factory LaunchpadModel({
     required String id,
     @JsonKey(name: 'details') String? details,
-    @JsonKey(name: 'images') ImagesModel? images,
+    @JsonKey(name: 'images') ImagesNetworkModel? images,
     @JsonKey(name: 'status', unknownEnumValue: LaunchStatus.unknown)
     @Default(LaunchStatus.unknown)
         LaunchStatus status,
@@ -48,11 +48,11 @@ class LaunchpadFullModel with _$LaunchpadFullModel {
   const factory LaunchpadFullModel({
     required String id,
     @JsonKey(name: 'details') String? details,
-    @JsonKey(name: 'images') ImagesModel? images,
+    @JsonKey(name: 'images') ImagesNetworkModel? images,
     @JsonKey(name: 'status', unknownEnumValue: LaunchStatus.unknown)
     @Default(LaunchStatus.unknown)
         LaunchStatus status,
-    @JsonKey(name: 'launches') @Default([]) List<LaunchModel> launches,
+    @JsonKey(name: 'launches') @Default([]) List<LaunchNetworkModel> launches,
     @JsonKey(name: 'timezone') String? timezone,
     @JsonKey(name: 'rockets') @Default([]) List<RocketModel> rockets,
     @JsonKey(name: 'launch_successes') int? launchSuccesses,

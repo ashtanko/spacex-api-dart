@@ -48,7 +48,7 @@ const fullCapsule1 = CapsuleNetworkFullModel(
   landLandings: 0,
   lastUpdate: 'Hanging in atrium at SpaceX HQ in Hawthorne',
   launches: [
-    LaunchModel(id: '0'),
+    LaunchNetworkModel(id: '0'),
   ],
   serial: 'C101',
   status: 'retired',
@@ -62,7 +62,7 @@ const fullCapsule2 = CapsuleNetworkFullModel(
   landLandings: 0,
   lastUpdate: 'Hanging in atrium at SpaceX HQ in Hawthorne',
   launches: [
-    LaunchModel(id: '0'),
+    LaunchNetworkModel(id: '0'),
   ],
   serial: 'C101',
   status: 'retired',
@@ -77,7 +77,7 @@ const fullCapsule3 = CapsuleNetworkFullModel(
   lastUpdate:
       'In Cape Canaveral, FL as of January 19, 2020. "Successfully performed the IFA test." ',
   launches: [
-    LaunchModel(id: '5eb87d3dffd86e000604b381'),
+    LaunchNetworkModel(id: '5eb87d3dffd86e000604b381'),
   ],
   serial: 'C205',
   status: 'active',
@@ -212,13 +212,13 @@ const fullCrew = FullCrewNetworkModel(
   image: 'https://imgur.com/0smMgMH.png',
   wikipedia: 'https://en.wikipedia.org/wiki/Robert_L._Behnken',
   launches: [
-    LaunchModel(
-      links: LaunchLinksModel(
-        patch: LaunchPatchModel(
+    LaunchNetworkModel(
+      links: LaunchLinksNetworkModel(
+        patch: LaunchPatchNetworkModel(
           small: 'https://images2.imgbox.com/48/a8/LTqq8OrE_o.png',
           large: 'https://images2.imgbox.com/e3/b7/DeT7QTkx_o.png',
         ),
-        reddit: LaunchRedditModel(
+        reddit: LaunchRedditNetworkModel(
           campaign:
               'https://www.reddit.com/r/spacex/comments/fjf6rr/dm2_launch_campaign_thread/',
           launch:
@@ -228,7 +228,7 @@ const fullCrew = FullCrewNetworkModel(
           recovery:
               'https://www.reddit.com/r/spacex/comments/gu5gkd/cctcap_demonstration_mission_2_stage_1_recovery/',
         ),
-        flickr: LaunchFlickrModel(
+        flickr: LaunchFlickrNetworkModel(
           small: [],
           original: [
             'https://live.staticflickr.com/65535/49927519643_b43c6d4c44_o.jpg',
@@ -456,14 +456,14 @@ const shipFullModel = ShipFullModel(
   name: 'American Champion',
   isActive: false,
   launches: [
-    LaunchModel(
-      links: LaunchLinksModel(
-        patch: LaunchPatchModel(
+    LaunchNetworkModel(
+      links: LaunchLinksNetworkModel(
+        patch: LaunchPatchNetworkModel(
           small: 'https://images2.imgbox.com/fa/dc/FOUDQ0Sn_o.png',
           large: 'https://images2.imgbox.com/04/6e/kniggvWD_o.png',
         ),
-        reddit: LaunchRedditModel(),
-        flickr: LaunchFlickrModel(small: [], original: []),
+        reddit: LaunchRedditNetworkModel(),
+        flickr: LaunchFlickrNetworkModel(small: [], original: []),
         presskit: 'http://www.spacex.com/files/downloads/cots1-20101206.pdf',
         webcast: 'https://www.youtube.com/watch?v=cdLITgWKe_0',
         youtubeId: 'cdLITgWKe_0',
@@ -561,10 +561,10 @@ const dragonModel = DragonModel(
   id: '5e9d058759b1ff74a7ad5f8f',
 );
 
-const landpadModel1 = LandpadModel(id: '0');
-const landpadModel2 = LandpadModel(id: '0');
-const landpadModel = LandpadModel(
-  images: ImagesModel(large: ['https://i.imgur.com/KHBk6jO.png']),
+const landpadModel1 = LandpadNetworkModel(id: '0');
+const landpadModel2 = LandpadNetworkModel(id: '0');
+const landpadModel = LandpadNetworkModel(
+  images: ImagesNetworkModel(large: ['https://i.imgur.com/KHBk6jO.png']),
   name: 'LZ-1',
   fullName: 'Landing Zone 1',
   status: 'active',
@@ -603,10 +603,10 @@ const landpadModel = LandpadModel(
   id: '5e9e3032383ecb267a34e7c7',
 );
 
-const landpadFullModel1 = LandpadFullModel(id: '0');
-const landpadFullModel2 = LandpadFullModel(id: '0');
-const landpadFullModel = LandpadFullModel(
-  images: ImagesModel(large: ['https://i.imgur.com/KHBk6jO.png']),
+const landpadFullModel1 = LandpadNetworkFullModel(id: '0');
+const landpadFullModel2 = LandpadNetworkFullModel(id: '0');
+const landpadFullModel = LandpadNetworkFullModel(
+  images: ImagesNetworkModel(large: ['https://i.imgur.com/KHBk6jO.png']),
   name: 'LZ-1',
   fullName: 'Landing Zone 1',
   status: 'active',
@@ -621,14 +621,14 @@ const landpadFullModel = LandpadFullModel(
   details:
       "SpaceX's first east coast landing pad is Landing Zone 1, where the historic first Falcon 9 landing occurred in December 2015. LC-13 was originally used as a launch pad for early Atlas missiles and rockets from Lockheed Martin. LC-1 was later expanded to include Landing Zone 2 for side booster RTLS Falcon Heavy missions, and it was first used in February 2018 for that purpose.",
   launches: [
-    LaunchModel(
-      links: LaunchLinksModel(
-        patch: LaunchPatchModel(
+    LaunchNetworkModel(
+      links: LaunchLinksNetworkModel(
+        patch: LaunchPatchNetworkModel(
           small: 'https://images2.imgbox.com/fa/dc/FOUDQ0Sn_o.png',
           large: 'https://images2.imgbox.com/04/6e/kniggvWD_o.png',
         ),
-        reddit: LaunchRedditModel(),
-        flickr: LaunchFlickrModel(small: [], original: []),
+        reddit: LaunchRedditNetworkModel(),
+        flickr: LaunchFlickrNetworkModel(small: [], original: []),
         presskit: 'http://www.spacex.com/files/downloads/cots1-20101206.pdf',
         webcast: 'https://www.youtube.com/watch?v=cdLITgWKe_0',
         youtubeId: 'cdLITgWKe_0',
@@ -672,24 +672,24 @@ const landpadFullModel = LandpadFullModel(
   id: '5e9e3032383ecb267a34e7c7',
 );
 
-const launchModel1 = LaunchModel(id: '0');
-const launchModel2 = LaunchModel(id: '0');
-const launchModel = LaunchModel(
+const launchModel1 = LaunchNetworkModel(id: '0');
+const launchModel2 = LaunchNetworkModel(id: '0');
+const launchModel = LaunchNetworkModel(
   id: '5eb87cd9ffd86e000604b32a',
-  fairings: FairingsModel(
+  fairings: FairingsNetworkModel(
     reused: false,
     recoveryAttempt: false,
     recovered: false,
     ships: [],
   ),
   capsules: [],
-  links: LaunchLinksModel(
-    patch: LaunchPatchModel(
+  links: LaunchLinksNetworkModel(
+    patch: LaunchPatchNetworkModel(
       small: 'https://images2.imgbox.com/94/f2/NN6Ph45r_o.png',
       large: 'https://images2.imgbox.com/5b/02/QcxHUb5V_o.png',
     ),
-    reddit: LaunchRedditModel(),
-    flickr: LaunchFlickrModel(),
+    reddit: LaunchRedditNetworkModel(),
+    flickr: LaunchFlickrNetworkModel(),
     webcast: 'https://www.youtube.com/watch?v=0a_00nJ_Y88',
     youtubeId: '0a_00nJ_Y88',
     article:
@@ -703,7 +703,7 @@ const launchModel = LaunchModel(
   rocket: '5e9d0d95eda69955f709d1eb',
   success: false,
   failures: [
-    LaunchFailureModel(time: 33, reason: 'merlin engine failure'),
+    LaunchFailureNetworkModel(time: 33, reason: 'merlin engine failure'),
   ],
   details: 'Engine failure at 33 seconds and loss of vehicle',
   payloads: ['5eb0e4b5b6c3bb0006eeb1e1'],
@@ -729,22 +729,22 @@ const launchModel = LaunchModel(
   tbd: false,
 );
 
-const fullLaunchModel1 = FullLaunchModel(id: '0');
-const fullLaunchModel2 = FullLaunchModel(id: '0');
-const fullLaunchModel = FullLaunchModel(
-  fairings: FairingsModel(
+const fullLaunchModel1 = LaunchNetworkFullModel(id: '0');
+const fullLaunchModel2 = LaunchNetworkFullModel(id: '0');
+const fullLaunchModel = LaunchNetworkFullModel(
+  fairings: FairingsNetworkModel(
     reused: false,
     recoveryAttempt: false,
     recovered: false,
     ships: [],
   ),
-  links: LaunchLinksModel(
-    patch: LaunchPatchModel(
+  links: LaunchLinksNetworkModel(
+    patch: LaunchPatchNetworkModel(
       small: 'https://images2.imgbox.com/94/f2/NN6Ph45r_o.png',
       large: 'https://images2.imgbox.com/5b/02/QcxHUb5V_o.png',
     ),
-    reddit: LaunchRedditModel(),
-    flickr: LaunchFlickrModel(small: [], original: []),
+    reddit: LaunchRedditNetworkModel(),
+    flickr: LaunchFlickrNetworkModel(small: [], original: []),
     webcast: 'https://www.youtube.com/watch?v=0a_00nJ_Y88',
     youtubeId: '0a_00nJ_Y88',
     article:
@@ -822,7 +822,9 @@ const fullLaunchModel = FullLaunchModel(
     id: '5e9d0d95eda69955f709d1eb',
   ),
   success: false,
-  failures: [LaunchFailureModel(time: 33, reason: 'merlin engine failure')],
+  failures: [
+    LaunchFailureNetworkModel(time: 33, reason: 'merlin engine failure')
+  ],
   details: 'Engine failure at 33 seconds and loss of vehicle',
   crew: [],
   ships: [],
@@ -850,7 +852,7 @@ const fullLaunchModel = FullLaunchModel(
     )
   ],
   launchpad: LaunchpadModel(
-    images: ImagesModel(large: ['https://i.imgur.com/GGPgsVs.png']),
+    images: ImagesNetworkModel(large: ['https://i.imgur.com/GGPgsVs.png']),
     name: 'Kwajalein Atoll',
     fullName: 'Kwajalein Atoll Omelek Island',
     locality: 'Omelek Island',
@@ -898,7 +900,7 @@ const fullLaunchModel = FullLaunchModel(
 const launchpadModel1 = LaunchpadModel(id: '0');
 const launchpadModel2 = LaunchpadModel(id: '0');
 const launchpadModel = LaunchpadModel(
-  images: ImagesModel(large: ['https://i.imgur.com/7uXe1Kv.png']),
+  images: ImagesNetworkModel(large: ['https://i.imgur.com/7uXe1Kv.png']),
   name: 'VAFB SLC 3W',
   fullName: 'Vandenberg Space Force Base Space Launch Complex 3W',
   locality: 'Vandenberg Space Force Base',
@@ -919,7 +921,7 @@ const launchpadModel = LaunchpadModel(
 const launchpadFullModel1 = LaunchpadFullModel(id: '0');
 const launchpadFullModel2 = LaunchpadFullModel(id: '0');
 const launchpadFullModel = LaunchpadFullModel(
-  images: ImagesModel(large: ['https://i.imgur.com/7uXe1Kv.png']),
+  images: ImagesNetworkModel(large: ['https://i.imgur.com/7uXe1Kv.png']),
   name: 'VAFB SLC 3W',
   fullName: 'Vandenberg Space Force Base Space Launch Complex 3W',
   locality: 'Vandenberg Space Force Base',

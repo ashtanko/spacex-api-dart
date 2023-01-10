@@ -1,17 +1,19 @@
 import 'package:data/data.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-part 'launch_model.freezed.dart';
+part 'launch_network_model.freezed.dart';
 
-part 'launch_model.g.dart';
+part 'launch_network_model.g.dart';
 
 @freezed
-class FullLaunchModel with _$FullLaunchModel {
-  const factory FullLaunchModel({
+class LaunchNetworkFullModel with _$LaunchNetworkFullModel {
+  const factory LaunchNetworkFullModel({
     required String id,
     @Default(false) bool tbd,
     @JsonKey(name: 'auto_update') @Default(false) bool autoUpdate,
-    @JsonKey(name: 'cores') @Default(<CoreNetworkModel>[]) List<CoreNetworkModel> cores,
+    @JsonKey(name: 'cores')
+    @Default(<CoreNetworkModel>[])
+        List<CoreNetworkModel> cores,
     @Default(false) bool upcoming,
     @JsonKey(name: 'date_precision') @Default('') String datePrecision,
     @JsonKey(name: 'date_local') @Default('') String dateLocal,
@@ -25,7 +27,9 @@ class FullLaunchModel with _$FullLaunchModel {
     @JsonKey(name: 'ships') @Default([]) List<ShipModel> ships,
     @JsonKey(name: 'crew') @Default([]) List<String> crew,
     @JsonKey(name: 'details') @Default('') String details,
-    @JsonKey(name: 'failures') @Default([]) List<LaunchFailureModel> failures,
+    @JsonKey(name: 'failures')
+    @Default([])
+        List<LaunchFailureNetworkModel> failures,
     @JsonKey(name: 'success') @Default(false) bool success,
     @JsonKey(name: 'rocket') RocketModel? rocket,
     @JsonKey(name: 'window') @Default(0) int window,
@@ -34,24 +38,26 @@ class FullLaunchModel with _$FullLaunchModel {
     @JsonKey(name: 'static_fire_date_utc')
     @Default('')
         String staticFireDateUtc,
-    @JsonKey(name: 'links') LaunchLinksModel? links,
-    @JsonKey(name: 'fairings') FairingsModel? fairings,
+    @JsonKey(name: 'links') LaunchLinksNetworkModel? links,
+    @JsonKey(name: 'fairings') FairingsNetworkModel? fairings,
     @JsonKey(name: 'launch_library_id') String? launchLibraryId,
-  }) = _FullLaunchModel;
+  }) = _LaunchNetworkFullModel;
 
-  const FullLaunchModel._();
+  const LaunchNetworkFullModel._();
 
-  factory FullLaunchModel.fromJson(Map<String, dynamic> json) =>
-      _$FullLaunchModelFromJson(json);
+  factory LaunchNetworkFullModel.fromJson(Map<String, dynamic> json) =>
+      _$LaunchNetworkFullModelFromJson(json);
 }
 
 @freezed
-class LaunchSimpleModel with _$LaunchSimpleModel {
-  const factory LaunchSimpleModel({
+class LaunchNetworkSimpleModel with _$LaunchNetworkSimpleModel {
+  const factory LaunchNetworkSimpleModel({
     @JsonKey(name: 'id') required String id,
     @Default(false) bool tbd,
     @JsonKey(name: 'auto_update') @Default(false) bool autoUpdate,
-    @JsonKey(name: 'cores') @Default(<CoreNetworkModel>[]) List<CoreNetworkModel> cores,
+    @JsonKey(name: 'cores')
+    @Default(<CoreNetworkModel>[])
+        List<CoreNetworkModel> cores,
     @Default(false) bool upcoming,
     @JsonKey(name: 'date_precision') @Default('') String datePrecision,
     @JsonKey(name: 'date_local') @Default('') String dateLocal,
@@ -65,7 +71,9 @@ class LaunchSimpleModel with _$LaunchSimpleModel {
     @JsonKey(name: 'ships') @Default([]) List<String> ships,
     @JsonKey(name: 'crew') @Default(<String>[]) List<String> crew,
     @JsonKey(name: 'details') @Default('') String details,
-    @JsonKey(name: 'failures') @Default([]) List<LaunchFailureModel> failures,
+    @JsonKey(name: 'failures')
+    @Default([])
+        List<LaunchFailureNetworkModel> failures,
     @JsonKey(name: 'success') @Default(false) bool success,
     @JsonKey(name: 'rocket') @Default('') String rocket,
     @JsonKey(name: 'window') @Default(0) int window,
@@ -74,24 +82,26 @@ class LaunchSimpleModel with _$LaunchSimpleModel {
     @JsonKey(name: 'static_fire_date_utc')
     @Default('')
         String staticFireDateUtc,
-    @JsonKey(name: 'links') LaunchLinksModel? links,
-    @JsonKey(name: 'fairings') FairingsModel? fairings,
+    @JsonKey(name: 'links') LaunchLinksNetworkModel? links,
+    @JsonKey(name: 'fairings') FairingsNetworkModel? fairings,
     @JsonKey(name: 'launch_library_id') String? launchLibraryId,
-  }) = _LaunchSimpleModel;
+  }) = _LaunchNetworkSimpleModel;
 
-  const LaunchSimpleModel._();
+  const LaunchNetworkSimpleModel._();
 
-  factory LaunchSimpleModel.fromJson(Map<String, dynamic> json) =>
-      _$LaunchSimpleModelFromJson(json);
+  factory LaunchNetworkSimpleModel.fromJson(Map<String, dynamic> json) =>
+      _$LaunchNetworkSimpleModelFromJson(json);
 }
 
 @freezed
-class LaunchModel with _$LaunchModel {
-  const factory LaunchModel({
+class LaunchNetworkModel with _$LaunchNetworkModel {
+  const factory LaunchNetworkModel({
     @JsonKey(name: 'id') required String id,
     @Default(false) bool tbd,
     @JsonKey(name: 'auto_update') @Default(false) bool autoUpdate,
-    @JsonKey(name: 'cores') @Default(<CoreNetworkModel>[]) List<CoreNetworkModel> cores,
+    @JsonKey(name: 'cores')
+    @Default(<CoreNetworkModel>[])
+        List<CoreNetworkModel> cores,
     @Default(false) bool upcoming,
     @JsonKey(name: 'date_precision') @Default('') String datePrecision,
     @JsonKey(name: 'date_local') @Default('') String dateLocal,
@@ -107,7 +117,9 @@ class LaunchModel with _$LaunchModel {
     @Default(<ShortCrewNetworkModel>[])
         List<ShortCrewNetworkModel> crew,
     @JsonKey(name: 'details') String? details,
-    @JsonKey(name: 'failures') @Default([]) List<LaunchFailureModel> failures,
+    @JsonKey(name: 'failures')
+    @Default([])
+        List<LaunchFailureNetworkModel> failures,
     @JsonKey(name: 'success') @Default(false) bool success,
     @JsonKey(name: 'rocket') @Default('') String rocket,
     @JsonKey(name: 'window') @Default(0) int window,
@@ -116,106 +128,106 @@ class LaunchModel with _$LaunchModel {
     @JsonKey(name: 'static_fire_date_utc')
     @Default('')
         String staticFireDateUtc,
-    @JsonKey(name: 'links') LaunchLinksModel? links,
-    @JsonKey(name: 'fairings') FairingsModel? fairings,
+    @JsonKey(name: 'links') LaunchLinksNetworkModel? links,
+    @JsonKey(name: 'fairings') FairingsNetworkModel? fairings,
     @JsonKey(name: 'launch_library_id') String? launchLibraryId,
-  }) = _LaunchModel;
+  }) = _LaunchNetworkModel;
 
-  const LaunchModel._();
+  const LaunchNetworkModel._();
 
-  factory LaunchModel.fromJson(Map<String, dynamic> json) =>
-      _$LaunchModelFromJson(json);
+  factory LaunchNetworkModel.fromJson(Map<String, dynamic> json) =>
+      _$LaunchNetworkModelFromJson(json);
 }
 
 @freezed
-class LaunchLinksModel with _$LaunchLinksModel {
-  const factory LaunchLinksModel({
-    LaunchPatchModel? patch,
-    LaunchRedditModel? reddit,
-    LaunchFlickrModel? flickr,
+class LaunchLinksNetworkModel with _$LaunchLinksNetworkModel {
+  const factory LaunchLinksNetworkModel({
+    LaunchPatchNetworkModel? patch,
+    LaunchRedditNetworkModel? reddit,
+    LaunchFlickrNetworkModel? flickr,
     String? presskit,
     String? webcast,
     @JsonKey(name: 'youtube_id') String? youtubeId,
     @JsonKey(name: 'article') String? article,
     @JsonKey(name: 'wikipedia') String? wikipedia,
-  }) = _LaunchLinksModel;
+  }) = _LaunchLinksNetworkModel;
 
-  const LaunchLinksModel._();
+  const LaunchLinksNetworkModel._();
 
-  factory LaunchLinksModel.fromJson(Map<String, dynamic> json) =>
-      _$LaunchLinksModelFromJson(json);
+  factory LaunchLinksNetworkModel.fromJson(Map<String, dynamic> json) =>
+      _$LaunchLinksNetworkModelFromJson(json);
 }
 
 @freezed
-class LaunchFailureModel with _$LaunchFailureModel {
-  const factory LaunchFailureModel({
+class LaunchFailureNetworkModel with _$LaunchFailureNetworkModel {
+  const factory LaunchFailureNetworkModel({
     int? time,
     int? altitude,
     String? reason,
-  }) = _LaunchFailureModel;
+  }) = _LaunchFailureNetworkModel;
 
-  const LaunchFailureModel._();
+  const LaunchFailureNetworkModel._();
 
-  factory LaunchFailureModel.fromJson(Map<String, dynamic> json) =>
-      _$LaunchFailureModelFromJson(json);
+  factory LaunchFailureNetworkModel.fromJson(Map<String, dynamic> json) =>
+      _$LaunchFailureNetworkModelFromJson(json);
 }
 
 /// Storages basic details about a rocket launch.
 /// It serves as a direct link to its details.
 @freezed
-class LaunchDetailsModel with _$LaunchDetailsModel {
-  const factory LaunchDetailsModel({
+class LaunchDetailsNetworkModel with _$LaunchDetailsNetworkModel {
+  const factory LaunchDetailsNetworkModel({
     required int flightNumber,
     required String name,
     required DateTime date,
     required String id,
-  }) = _LaunchDetailsModel;
+  }) = _LaunchDetailsNetworkModel;
 
-  const LaunchDetailsModel._();
+  const LaunchDetailsNetworkModel._();
 
-  factory LaunchDetailsModel.fromJson(Map<String, dynamic> json) =>
-      _$LaunchDetailsModelFromJson(json);
+  factory LaunchDetailsNetworkModel.fromJson(Map<String, dynamic> json) =>
+      _$LaunchDetailsNetworkModelFromJson(json);
 
   DateTime get localDate => date.toLocal();
 }
 
 @freezed
-class LaunchFlickrModel with _$LaunchFlickrModel {
-  const factory LaunchFlickrModel({
+class LaunchFlickrNetworkModel with _$LaunchFlickrNetworkModel {
+  const factory LaunchFlickrNetworkModel({
     @Default([]) List<String> original,
     @Default([]) List<String> small,
-  }) = _LaunchFlickrModel;
+  }) = _LaunchFlickrNetworkModel;
 
-  const LaunchFlickrModel._();
+  const LaunchFlickrNetworkModel._();
 
-  factory LaunchFlickrModel.fromJson(Map<String, dynamic> json) =>
-      _$LaunchFlickrModelFromJson(json);
+  factory LaunchFlickrNetworkModel.fromJson(Map<String, dynamic> json) =>
+      _$LaunchFlickrNetworkModelFromJson(json);
 }
 
 @freezed
-class LaunchPatchModel with _$LaunchPatchModel {
-  const factory LaunchPatchModel({
+class LaunchPatchNetworkModel with _$LaunchPatchNetworkModel {
+  const factory LaunchPatchNetworkModel({
     String? small,
     String? large,
-  }) = _LaunchPatchModel;
+  }) = _LaunchPatchNetworkModel;
 
-  const LaunchPatchModel._();
+  const LaunchPatchNetworkModel._();
 
-  factory LaunchPatchModel.fromJson(Map<String, dynamic> json) =>
-      _$LaunchPatchModelFromJson(json);
+  factory LaunchPatchNetworkModel.fromJson(Map<String, dynamic> json) =>
+      _$LaunchPatchNetworkModelFromJson(json);
 }
 
 @freezed
-class LaunchRedditModel with _$LaunchRedditModel {
-  const factory LaunchRedditModel({
+class LaunchRedditNetworkModel with _$LaunchRedditNetworkModel {
+  const factory LaunchRedditNetworkModel({
     String? campaign,
     String? launch,
     String? media,
     String? recovery,
-  }) = _LaunchRedditModel;
+  }) = _LaunchRedditNetworkModel;
 
-  const LaunchRedditModel._();
+  const LaunchRedditNetworkModel._();
 
-  factory LaunchRedditModel.fromJson(Map<String, dynamic> json) =>
-      _$LaunchRedditModelFromJson(json);
+  factory LaunchRedditNetworkModel.fromJson(Map<String, dynamic> json) =>
+      _$LaunchRedditNetworkModelFromJson(json);
 }

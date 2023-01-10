@@ -1,13 +1,14 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'launch_model.dart';
+part of 'launch_network_model.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_FullLaunchModel _$$_FullLaunchModelFromJson(Map<String, dynamic> json) =>
-    _$_FullLaunchModel(
+_$_LaunchNetworkFullModel _$$_LaunchNetworkFullModelFromJson(
+        Map<String, dynamic> json) =>
+    _$_LaunchNetworkFullModel(
       id: json['id'] as String,
       tbd: json['tbd'] as bool? ?? false,
       autoUpdate: json['auto_update'] as bool? ?? false,
@@ -43,8 +44,8 @@ _$_FullLaunchModel _$$_FullLaunchModelFromJson(Map<String, dynamic> json) =>
               const [],
       details: json['details'] as String? ?? '',
       failures: (json['failures'] as List<dynamic>?)
-              ?.map(
-                  (e) => LaunchFailureModel.fromJson(e as Map<String, dynamic>))
+              ?.map((e) =>
+                  LaunchFailureNetworkModel.fromJson(e as Map<String, dynamic>))
               .toList() ??
           const [],
       success: json['success'] as bool? ?? false,
@@ -57,14 +58,17 @@ _$_FullLaunchModel _$$_FullLaunchModelFromJson(Map<String, dynamic> json) =>
       staticFireDateUtc: json['static_fire_date_utc'] as String? ?? '',
       links: json['links'] == null
           ? null
-          : LaunchLinksModel.fromJson(json['links'] as Map<String, dynamic>),
+          : LaunchLinksNetworkModel.fromJson(
+              json['links'] as Map<String, dynamic>),
       fairings: json['fairings'] == null
           ? null
-          : FairingsModel.fromJson(json['fairings'] as Map<String, dynamic>),
+          : FairingsNetworkModel.fromJson(
+              json['fairings'] as Map<String, dynamic>),
       launchLibraryId: json['launch_library_id'] as String?,
     );
 
-Map<String, dynamic> _$$_FullLaunchModelToJson(_$_FullLaunchModel instance) {
+Map<String, dynamic> _$$_LaunchNetworkFullModelToJson(
+    _$_LaunchNetworkFullModel instance) {
   final val = <String, dynamic>{
     'id': instance.id,
     'tbd': instance.tbd,
@@ -104,8 +108,9 @@ Map<String, dynamic> _$$_FullLaunchModelToJson(_$_FullLaunchModel instance) {
   return val;
 }
 
-_$_LaunchSimpleModel _$$_LaunchSimpleModelFromJson(Map<String, dynamic> json) =>
-    _$_LaunchSimpleModel(
+_$_LaunchNetworkSimpleModel _$$_LaunchNetworkSimpleModelFromJson(
+        Map<String, dynamic> json) =>
+    _$_LaunchNetworkSimpleModel(
       id: json['id'] as String,
       tbd: json['tbd'] as bool? ?? false,
       autoUpdate: json['auto_update'] as bool? ?? false,
@@ -137,8 +142,8 @@ _$_LaunchSimpleModel _$$_LaunchSimpleModelFromJson(Map<String, dynamic> json) =>
               const <String>[],
       details: json['details'] as String? ?? '',
       failures: (json['failures'] as List<dynamic>?)
-              ?.map(
-                  (e) => LaunchFailureModel.fromJson(e as Map<String, dynamic>))
+              ?.map((e) =>
+                  LaunchFailureNetworkModel.fromJson(e as Map<String, dynamic>))
               .toList() ??
           const [],
       success: json['success'] as bool? ?? false,
@@ -149,15 +154,17 @@ _$_LaunchSimpleModel _$$_LaunchSimpleModelFromJson(Map<String, dynamic> json) =>
       staticFireDateUtc: json['static_fire_date_utc'] as String? ?? '',
       links: json['links'] == null
           ? null
-          : LaunchLinksModel.fromJson(json['links'] as Map<String, dynamic>),
+          : LaunchLinksNetworkModel.fromJson(
+              json['links'] as Map<String, dynamic>),
       fairings: json['fairings'] == null
           ? null
-          : FairingsModel.fromJson(json['fairings'] as Map<String, dynamic>),
+          : FairingsNetworkModel.fromJson(
+              json['fairings'] as Map<String, dynamic>),
       launchLibraryId: json['launch_library_id'] as String?,
     );
 
-Map<String, dynamic> _$$_LaunchSimpleModelToJson(
-    _$_LaunchSimpleModel instance) {
+Map<String, dynamic> _$$_LaunchNetworkSimpleModelToJson(
+    _$_LaunchNetworkSimpleModel instance) {
   final val = <String, dynamic>{
     'id': instance.id,
     'tbd': instance.tbd,
@@ -197,8 +204,9 @@ Map<String, dynamic> _$$_LaunchSimpleModelToJson(
   return val;
 }
 
-_$_LaunchModel _$$_LaunchModelFromJson(Map<String, dynamic> json) =>
-    _$_LaunchModel(
+_$_LaunchNetworkModel _$$_LaunchNetworkModelFromJson(
+        Map<String, dynamic> json) =>
+    _$_LaunchNetworkModel(
       id: json['id'] as String,
       tbd: json['tbd'] as bool? ?? false,
       autoUpdate: json['auto_update'] as bool? ?? false,
@@ -232,8 +240,8 @@ _$_LaunchModel _$$_LaunchModelFromJson(Map<String, dynamic> json) =>
           const <ShortCrewNetworkModel>[],
       details: json['details'] as String?,
       failures: (json['failures'] as List<dynamic>?)
-              ?.map(
-                  (e) => LaunchFailureModel.fromJson(e as Map<String, dynamic>))
+              ?.map((e) =>
+                  LaunchFailureNetworkModel.fromJson(e as Map<String, dynamic>))
               .toList() ??
           const [],
       success: json['success'] as bool? ?? false,
@@ -244,14 +252,17 @@ _$_LaunchModel _$$_LaunchModelFromJson(Map<String, dynamic> json) =>
       staticFireDateUtc: json['static_fire_date_utc'] as String? ?? '',
       links: json['links'] == null
           ? null
-          : LaunchLinksModel.fromJson(json['links'] as Map<String, dynamic>),
+          : LaunchLinksNetworkModel.fromJson(
+              json['links'] as Map<String, dynamic>),
       fairings: json['fairings'] == null
           ? null
-          : FairingsModel.fromJson(json['fairings'] as Map<String, dynamic>),
+          : FairingsNetworkModel.fromJson(
+              json['fairings'] as Map<String, dynamic>),
       launchLibraryId: json['launch_library_id'] as String?,
     );
 
-Map<String, dynamic> _$$_LaunchModelToJson(_$_LaunchModel instance) {
+Map<String, dynamic> _$$_LaunchNetworkModelToJson(
+    _$_LaunchNetworkModel instance) {
   final val = <String, dynamic>{
     'id': instance.id,
     'tbd': instance.tbd,
@@ -291,17 +302,21 @@ Map<String, dynamic> _$$_LaunchModelToJson(_$_LaunchModel instance) {
   return val;
 }
 
-_$_LaunchLinksModel _$$_LaunchLinksModelFromJson(Map<String, dynamic> json) =>
-    _$_LaunchLinksModel(
+_$_LaunchLinksNetworkModel _$$_LaunchLinksNetworkModelFromJson(
+        Map<String, dynamic> json) =>
+    _$_LaunchLinksNetworkModel(
       patch: json['patch'] == null
           ? null
-          : LaunchPatchModel.fromJson(json['patch'] as Map<String, dynamic>),
+          : LaunchPatchNetworkModel.fromJson(
+              json['patch'] as Map<String, dynamic>),
       reddit: json['reddit'] == null
           ? null
-          : LaunchRedditModel.fromJson(json['reddit'] as Map<String, dynamic>),
+          : LaunchRedditNetworkModel.fromJson(
+              json['reddit'] as Map<String, dynamic>),
       flickr: json['flickr'] == null
           ? null
-          : LaunchFlickrModel.fromJson(json['flickr'] as Map<String, dynamic>),
+          : LaunchFlickrNetworkModel.fromJson(
+              json['flickr'] as Map<String, dynamic>),
       presskit: json['presskit'] as String?,
       webcast: json['webcast'] as String?,
       youtubeId: json['youtube_id'] as String?,
@@ -309,7 +324,8 @@ _$_LaunchLinksModel _$$_LaunchLinksModelFromJson(Map<String, dynamic> json) =>
       wikipedia: json['wikipedia'] as String?,
     );
 
-Map<String, dynamic> _$$_LaunchLinksModelToJson(_$_LaunchLinksModel instance) {
+Map<String, dynamic> _$$_LaunchLinksNetworkModelToJson(
+    _$_LaunchLinksNetworkModel instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -329,16 +345,16 @@ Map<String, dynamic> _$$_LaunchLinksModelToJson(_$_LaunchLinksModel instance) {
   return val;
 }
 
-_$_LaunchFailureModel _$$_LaunchFailureModelFromJson(
+_$_LaunchFailureNetworkModel _$$_LaunchFailureNetworkModelFromJson(
         Map<String, dynamic> json) =>
-    _$_LaunchFailureModel(
+    _$_LaunchFailureNetworkModel(
       time: json['time'] as int?,
       altitude: json['altitude'] as int?,
       reason: json['reason'] as String?,
     );
 
-Map<String, dynamic> _$$_LaunchFailureModelToJson(
-    _$_LaunchFailureModel instance) {
+Map<String, dynamic> _$$_LaunchFailureNetworkModelToJson(
+    _$_LaunchFailureNetworkModel instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -353,17 +369,17 @@ Map<String, dynamic> _$$_LaunchFailureModelToJson(
   return val;
 }
 
-_$_LaunchDetailsModel _$$_LaunchDetailsModelFromJson(
+_$_LaunchDetailsNetworkModel _$$_LaunchDetailsNetworkModelFromJson(
         Map<String, dynamic> json) =>
-    _$_LaunchDetailsModel(
+    _$_LaunchDetailsNetworkModel(
       flightNumber: json['flightNumber'] as int,
       name: json['name'] as String,
       date: DateTime.parse(json['date'] as String),
       id: json['id'] as String,
     );
 
-Map<String, dynamic> _$$_LaunchDetailsModelToJson(
-        _$_LaunchDetailsModel instance) =>
+Map<String, dynamic> _$$_LaunchDetailsNetworkModelToJson(
+        _$_LaunchDetailsNetworkModel instance) =>
     <String, dynamic>{
       'flightNumber': instance.flightNumber,
       'name': instance.name,
@@ -371,8 +387,9 @@ Map<String, dynamic> _$$_LaunchDetailsModelToJson(
       'id': instance.id,
     };
 
-_$_LaunchFlickrModel _$$_LaunchFlickrModelFromJson(Map<String, dynamic> json) =>
-    _$_LaunchFlickrModel(
+_$_LaunchFlickrNetworkModel _$$_LaunchFlickrNetworkModelFromJson(
+        Map<String, dynamic> json) =>
+    _$_LaunchFlickrNetworkModel(
       original: (json['original'] as List<dynamic>?)
               ?.map((e) => e as String)
               .toList() ??
@@ -382,20 +399,22 @@ _$_LaunchFlickrModel _$$_LaunchFlickrModelFromJson(Map<String, dynamic> json) =>
               const [],
     );
 
-Map<String, dynamic> _$$_LaunchFlickrModelToJson(
-        _$_LaunchFlickrModel instance) =>
+Map<String, dynamic> _$$_LaunchFlickrNetworkModelToJson(
+        _$_LaunchFlickrNetworkModel instance) =>
     <String, dynamic>{
       'original': instance.original,
       'small': instance.small,
     };
 
-_$_LaunchPatchModel _$$_LaunchPatchModelFromJson(Map<String, dynamic> json) =>
-    _$_LaunchPatchModel(
+_$_LaunchPatchNetworkModel _$$_LaunchPatchNetworkModelFromJson(
+        Map<String, dynamic> json) =>
+    _$_LaunchPatchNetworkModel(
       small: json['small'] as String?,
       large: json['large'] as String?,
     );
 
-Map<String, dynamic> _$$_LaunchPatchModelToJson(_$_LaunchPatchModel instance) {
+Map<String, dynamic> _$$_LaunchPatchNetworkModelToJson(
+    _$_LaunchPatchNetworkModel instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -409,16 +428,17 @@ Map<String, dynamic> _$$_LaunchPatchModelToJson(_$_LaunchPatchModel instance) {
   return val;
 }
 
-_$_LaunchRedditModel _$$_LaunchRedditModelFromJson(Map<String, dynamic> json) =>
-    _$_LaunchRedditModel(
+_$_LaunchRedditNetworkModel _$$_LaunchRedditNetworkModelFromJson(
+        Map<String, dynamic> json) =>
+    _$_LaunchRedditNetworkModel(
       campaign: json['campaign'] as String?,
       launch: json['launch'] as String?,
       media: json['media'] as String?,
       recovery: json['recovery'] as String?,
     );
 
-Map<String, dynamic> _$$_LaunchRedditModelToJson(
-    _$_LaunchRedditModel instance) {
+Map<String, dynamic> _$$_LaunchRedditNetworkModelToJson(
+    _$_LaunchRedditNetworkModel instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {

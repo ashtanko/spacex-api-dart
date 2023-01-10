@@ -3795,7 +3795,7 @@ mixin _$ShipFullModel {
   @JsonKey(name: 'last_ais_update')
   dynamic get lastAisUpdate => throw _privateConstructorUsedError;
   @JsonKey(name: 'launches')
-  List<LaunchModel> get launches => throw _privateConstructorUsedError;
+  List<LaunchNetworkModel> get launches => throw _privateConstructorUsedError;
   @JsonKey(name: 'active')
   bool get isActive => throw _privateConstructorUsedError;
   @JsonKey(name: 'name')
@@ -3853,7 +3853,7 @@ abstract class $ShipFullModelCopyWith<$Res> {
   $Res call(
       {@JsonKey(name: 'id') String id,
       @JsonKey(name: 'last_ais_update') dynamic lastAisUpdate,
-      @JsonKey(name: 'launches') List<LaunchModel> launches,
+      @JsonKey(name: 'launches') List<LaunchNetworkModel> launches,
       @JsonKey(name: 'active') bool isActive,
       @JsonKey(name: 'name') String? name,
       @JsonKey(name: 'image') String? image,
@@ -3927,7 +3927,7 @@ class _$ShipFullModelCopyWithImpl<$Res, $Val extends ShipFullModel>
       launches: null == launches
           ? _value.launches
           : launches // ignore: cast_nullable_to_non_nullable
-              as List<LaunchModel>,
+              as List<LaunchNetworkModel>,
       isActive: null == isActive
           ? _value.isActive
           : isActive // ignore: cast_nullable_to_non_nullable
@@ -4027,7 +4027,7 @@ abstract class _$$_ShipFullModelCopyWith<$Res>
   $Res call(
       {@JsonKey(name: 'id') String id,
       @JsonKey(name: 'last_ais_update') dynamic lastAisUpdate,
-      @JsonKey(name: 'launches') List<LaunchModel> launches,
+      @JsonKey(name: 'launches') List<LaunchNetworkModel> launches,
       @JsonKey(name: 'active') bool isActive,
       @JsonKey(name: 'name') String? name,
       @JsonKey(name: 'image') String? image,
@@ -4099,7 +4099,7 @@ class __$$_ShipFullModelCopyWithImpl<$Res>
       launches: null == launches
           ? _value._launches
           : launches // ignore: cast_nullable_to_non_nullable
-              as List<LaunchModel>,
+              as List<LaunchNetworkModel>,
       isActive: null == isActive
           ? _value.isActive
           : isActive // ignore: cast_nullable_to_non_nullable
@@ -4192,53 +4192,31 @@ class __$$_ShipFullModelCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_ShipFullModel extends _ShipFullModel {
   const _$_ShipFullModel(
-      {@JsonKey(name: 'id')
-          required this.id,
-      @JsonKey(name: 'last_ais_update')
-          this.lastAisUpdate,
-      @JsonKey(name: 'launches')
-          final List<LaunchModel> launches = const <LaunchModel>[],
-      @JsonKey(name: 'active')
-          this.isActive = false,
-      @JsonKey(name: 'name')
-          this.name,
-      @JsonKey(name: 'image')
-          this.image,
-      @JsonKey(name: 'link')
-          this.link,
-      @JsonKey(name: 'longitude')
-          this.longitude,
-      @JsonKey(name: 'latitude')
-          this.latitude,
-      @JsonKey(name: 'course_deg')
-          this.courseDeg,
-      @JsonKey(name: 'speed_kn')
-          this.speedKn,
-      @JsonKey(name: 'status')
-          this.status,
-      @JsonKey(name: 'home_port')
-          this.homePort,
-      @JsonKey(name: 'year_built')
-          this.yearBuilt,
-      @JsonKey(name: 'mass_lbs')
-          this.massLbs,
-      @JsonKey(name: 'mass_kg')
-          this.massKg,
-      @JsonKey(name: 'class')
-          this.vehicleClass,
-      @JsonKey(name: 'abs')
-          this.abs,
-      @JsonKey(name: 'imo')
-          this.imo,
-      @JsonKey(name: 'mmsi')
-          this.mmsi,
+      {@JsonKey(name: 'id') required this.id,
+      @JsonKey(name: 'last_ais_update') this.lastAisUpdate,
+      @JsonKey(name: 'launches') final List<LaunchNetworkModel> launches =
+          const <LaunchNetworkModel>[],
+      @JsonKey(name: 'active') this.isActive = false,
+      @JsonKey(name: 'name') this.name,
+      @JsonKey(name: 'image') this.image,
+      @JsonKey(name: 'link') this.link,
+      @JsonKey(name: 'longitude') this.longitude,
+      @JsonKey(name: 'latitude') this.latitude,
+      @JsonKey(name: 'course_deg') this.courseDeg,
+      @JsonKey(name: 'speed_kn') this.speedKn,
+      @JsonKey(name: 'status') this.status,
+      @JsonKey(name: 'home_port') this.homePort,
+      @JsonKey(name: 'year_built') this.yearBuilt,
+      @JsonKey(name: 'mass_lbs') this.massLbs,
+      @JsonKey(name: 'mass_kg') this.massKg,
+      @JsonKey(name: 'class') this.vehicleClass,
+      @JsonKey(name: 'abs') this.abs,
+      @JsonKey(name: 'imo') this.imo,
+      @JsonKey(name: 'mmsi') this.mmsi,
       final List<String> roles = const <String>[],
-      @JsonKey(name: 'type')
-          this.type,
-      @JsonKey(name: 'model')
-          this.model,
-      @JsonKey(name: 'legacy_id')
-          this.legacyId})
+      @JsonKey(name: 'type') this.type,
+      @JsonKey(name: 'model') this.model,
+      @JsonKey(name: 'legacy_id') this.legacyId})
       : _launches = launches,
         _roles = roles,
         super._();
@@ -4252,10 +4230,10 @@ class _$_ShipFullModel extends _ShipFullModel {
   @override
   @JsonKey(name: 'last_ais_update')
   final dynamic lastAisUpdate;
-  final List<LaunchModel> _launches;
+  final List<LaunchNetworkModel> _launches;
   @override
   @JsonKey(name: 'launches')
-  List<LaunchModel> get launches {
+  List<LaunchNetworkModel> get launches {
     if (_launches is EqualUnmodifiableListView) return _launches;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_launches);
@@ -4422,7 +4400,7 @@ abstract class _ShipFullModel extends ShipFullModel {
   const factory _ShipFullModel(
       {@JsonKey(name: 'id') required final String id,
       @JsonKey(name: 'last_ais_update') final dynamic lastAisUpdate,
-      @JsonKey(name: 'launches') final List<LaunchModel> launches,
+      @JsonKey(name: 'launches') final List<LaunchNetworkModel> launches,
       @JsonKey(name: 'active') final bool isActive,
       @JsonKey(name: 'name') final String? name,
       @JsonKey(name: 'image') final String? image,
@@ -4457,7 +4435,7 @@ abstract class _ShipFullModel extends ShipFullModel {
   dynamic get lastAisUpdate;
   @override
   @JsonKey(name: 'launches')
-  List<LaunchModel> get launches;
+  List<LaunchNetworkModel> get launches;
   @override
   @JsonKey(name: 'active')
   bool get isActive;

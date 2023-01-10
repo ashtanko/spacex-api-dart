@@ -399,9 +399,10 @@ _$_ShipFullModel _$$_ShipFullModelFromJson(Map<String, dynamic> json) =>
       id: json['id'] as String,
       lastAisUpdate: json['last_ais_update'],
       launches: (json['launches'] as List<dynamic>?)
-              ?.map((e) => LaunchModel.fromJson(e as Map<String, dynamic>))
+              ?.map(
+                  (e) => LaunchNetworkModel.fromJson(e as Map<String, dynamic>))
               .toList() ??
-          const <LaunchModel>[],
+          const <LaunchNetworkModel>[],
       isActive: json['active'] as bool? ?? false,
       name: json['name'] as String?,
       image: json['image'] as String?,

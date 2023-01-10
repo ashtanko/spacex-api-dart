@@ -6,7 +6,7 @@ class LaunchDataSource {
 
   final LaunchApi _api;
 
-  Future<List<LaunchSimpleModel>> getAllLaunches() async {
+  Future<List<LaunchNetworkSimpleModel>> getAllLaunches() async {
     try {
       return _api.getAllLaunches();
     } on DioError catch (_) {
@@ -14,7 +14,7 @@ class LaunchDataSource {
     }
   }
 
-  Future<List<LaunchSimpleModel>> getUpcomingLaunches() async {
+  Future<List<LaunchNetworkSimpleModel>> getUpcomingLaunches() async {
     try {
       return _api.getUpcomingLaunches();
     } on DioError catch (_) {
@@ -22,7 +22,7 @@ class LaunchDataSource {
     }
   }
 
-  Future<List<LaunchSimpleModel>> getPastLaunches() async {
+  Future<List<LaunchNetworkSimpleModel>> getPastLaunches() async {
     try {
       return _api.getPastLaunches();
     } on DioError catch (_) {
@@ -30,7 +30,7 @@ class LaunchDataSource {
     }
   }
 
-  Future<LaunchSimpleModel> getLatestLaunch() async {
+  Future<LaunchNetworkSimpleModel> getLatestLaunch() async {
     try {
       return _api.getLatestLaunch();
     } on DioError catch (_) {
@@ -38,7 +38,7 @@ class LaunchDataSource {
     }
   }
 
-  Future<LaunchSimpleModel> getNextLaunch() async {
+  Future<LaunchNetworkSimpleModel> getNextLaunch() async {
     try {
       return _api.getNextLaunch();
     } on DioError catch (_) {
@@ -46,7 +46,7 @@ class LaunchDataSource {
     }
   }
 
-  Future<LaunchModel> getLaunch(String id) async {
+  Future<LaunchNetworkModel> getLaunch(String id) async {
     try {
       return _api.getLaunch(id);
     } on DioError catch (_) {
@@ -54,7 +54,7 @@ class LaunchDataSource {
     }
   }
 
-  Future<ApiPaginatedList<LaunchSimpleModel>> queryLaunches(
+  Future<ApiPaginatedList<LaunchNetworkSimpleModel>> queryLaunches(
     QueryModel query,
   ) async {
     try {
@@ -64,7 +64,7 @@ class LaunchDataSource {
     }
   }
 
-  Future<ApiPaginatedList<FullLaunchModel>> queryFullLaunches(
+  Future<ApiPaginatedList<LaunchNetworkFullModel>> queryFullLaunches(
     QueryModel query,
   ) async {
     try {

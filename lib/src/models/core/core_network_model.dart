@@ -48,8 +48,8 @@ class CoreNetworkFullModel with _$CoreNetworkFullModel {
     @JsonKey(name: 'asds_landings') int? asdsLandings,
     @JsonKey(name: 'last_update') String? lastUpdate,
     @JsonKey(name: 'launches')
-    @Default(<LaunchModel>[])
-        List<LaunchModel> launches,
+    @Default(<LaunchNetworkModel>[])
+        List<LaunchNetworkModel> launches,
     @JsonKey(name: 'serial') String? serial,
     @JsonKey(name: 'status') String? status,
     @JsonKey(name: 'core') String? core,

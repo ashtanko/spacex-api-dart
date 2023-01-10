@@ -15,7 +15,8 @@ _$_FullCrewNetworkModel _$$_FullCrewNetworkModelFromJson(
       image: json['image'] as String? ?? '',
       wikipedia: json['wikipedia'] as String? ?? '',
       launches: (json['launches'] as List<dynamic>?)
-              ?.map((e) => LaunchModel.fromJson(e as Map<String, dynamic>))
+              ?.map(
+                  (e) => LaunchNetworkModel.fromJson(e as Map<String, dynamic>))
               .toList() ??
           const [],
       status: $enumDecodeNullable(_$CrewStatusEnumMap, json['status'],

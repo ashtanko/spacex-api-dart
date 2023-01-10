@@ -28,7 +28,7 @@ class StarlinkModel with _$StarlinkModel {
 class StarlinkFullModel with _$StarlinkFullModel {
   const factory StarlinkFullModel({
     @JsonKey(name: 'id') @Default('') String id,
-    @JsonKey(name: 'launch') LaunchModel? launch,
+    @JsonKey(name: 'launch') LaunchNetworkModel? launch,
     @JsonKey(name: 'version') @Default('') String version,
     @JsonKey(name: 'height_km') double? heightKm,
     @JsonKey(name: 'latitude') double? latitude,

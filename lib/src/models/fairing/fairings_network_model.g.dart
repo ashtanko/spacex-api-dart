@@ -1,13 +1,14 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'fairings_model.dart';
+part of 'fairings_network_model.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_FairingsModel _$$_FairingsModelFromJson(Map<String, dynamic> json) =>
-    _$_FairingsModel(
+_$_FairingsNetworkModel _$$_FairingsNetworkModelFromJson(
+        Map<String, dynamic> json) =>
+    _$_FairingsNetworkModel(
       reused: json['reused'] as bool? ?? false,
       recoveryAttempt: json['recovery_attempt'] as bool? ?? false,
       recovered: json['recovered'] as bool? ?? false,
@@ -16,7 +17,8 @@ _$_FairingsModel _$$_FairingsModelFromJson(Map<String, dynamic> json) =>
               const [],
     );
 
-Map<String, dynamic> _$$_FairingsModelToJson(_$_FairingsModel instance) =>
+Map<String, dynamic> _$$_FairingsNetworkModelToJson(
+        _$_FairingsNetworkModel instance) =>
     <String, dynamic>{
       'reused': instance.reused,
       'recovery_attempt': instance.recoveryAttempt,

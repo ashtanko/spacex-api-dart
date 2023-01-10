@@ -56,7 +56,7 @@ class FullPayloadModel with _$FullPayloadModel {
     @JsonKey(name: 'name') String? name,
     @JsonKey(name: 'type') String? type,
     @JsonKey(name: 'reused') @Default(false) bool reused,
-    @JsonKey(name: 'launch') LaunchModel? launch,
+    @JsonKey(name: 'launch') LaunchNetworkModel? launch,
     @JsonKey(name: 'customers') @Default(<String>[]) List<String> customers,
     @JsonKey(name: 'norad_ids') @Default(<int>[]) List<int> noradIds,
     @JsonKey(name: 'nationalities')

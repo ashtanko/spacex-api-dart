@@ -354,7 +354,7 @@ mixin _$StarlinkFullModel {
   @JsonKey(name: 'id')
   String get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'launch')
-  LaunchModel? get launch => throw _privateConstructorUsedError;
+  LaunchNetworkModel? get launch => throw _privateConstructorUsedError;
   @JsonKey(name: 'version')
   String get version => throw _privateConstructorUsedError;
   @JsonKey(name: 'height_km')
@@ -382,7 +382,7 @@ abstract class $StarlinkFullModelCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(name: 'id') String id,
-      @JsonKey(name: 'launch') LaunchModel? launch,
+      @JsonKey(name: 'launch') LaunchNetworkModel? launch,
       @JsonKey(name: 'version') String version,
       @JsonKey(name: 'height_km') double? heightKm,
       @JsonKey(name: 'latitude') double? latitude,
@@ -390,7 +390,7 @@ abstract class $StarlinkFullModelCopyWith<$Res> {
       @JsonKey(name: 'velocity_kms') double? velocityKms,
       @JsonKey(name: 'spaceTrack') SpaceTrackModel? spaceTrack});
 
-  $LaunchModelCopyWith<$Res>? get launch;
+  $LaunchNetworkModelCopyWith<$Res>? get launch;
   $SpaceTrackModelCopyWith<$Res>? get spaceTrack;
 }
 
@@ -424,7 +424,7 @@ class _$StarlinkFullModelCopyWithImpl<$Res, $Val extends StarlinkFullModel>
       launch: freezed == launch
           ? _value.launch
           : launch // ignore: cast_nullable_to_non_nullable
-              as LaunchModel?,
+              as LaunchNetworkModel?,
       version: null == version
           ? _value.version
           : version // ignore: cast_nullable_to_non_nullable
@@ -454,12 +454,12 @@ class _$StarlinkFullModelCopyWithImpl<$Res, $Val extends StarlinkFullModel>
 
   @override
   @pragma('vm:prefer-inline')
-  $LaunchModelCopyWith<$Res>? get launch {
+  $LaunchNetworkModelCopyWith<$Res>? get launch {
     if (_value.launch == null) {
       return null;
     }
 
-    return $LaunchModelCopyWith<$Res>(_value.launch!, (value) {
+    return $LaunchNetworkModelCopyWith<$Res>(_value.launch!, (value) {
       return _then(_value.copyWith(launch: value) as $Val);
     });
   }
@@ -487,7 +487,7 @@ abstract class _$$_StarlinkFullModelCopyWith<$Res>
   @useResult
   $Res call(
       {@JsonKey(name: 'id') String id,
-      @JsonKey(name: 'launch') LaunchModel? launch,
+      @JsonKey(name: 'launch') LaunchNetworkModel? launch,
       @JsonKey(name: 'version') String version,
       @JsonKey(name: 'height_km') double? heightKm,
       @JsonKey(name: 'latitude') double? latitude,
@@ -496,7 +496,7 @@ abstract class _$$_StarlinkFullModelCopyWith<$Res>
       @JsonKey(name: 'spaceTrack') SpaceTrackModel? spaceTrack});
 
   @override
-  $LaunchModelCopyWith<$Res>? get launch;
+  $LaunchNetworkModelCopyWith<$Res>? get launch;
   @override
   $SpaceTrackModelCopyWith<$Res>? get spaceTrack;
 }
@@ -529,7 +529,7 @@ class __$$_StarlinkFullModelCopyWithImpl<$Res>
       launch: freezed == launch
           ? _value.launch
           : launch // ignore: cast_nullable_to_non_nullable
-              as LaunchModel?,
+              as LaunchNetworkModel?,
       version: null == version
           ? _value.version
           : version // ignore: cast_nullable_to_non_nullable
@@ -580,7 +580,7 @@ class _$_StarlinkFullModel extends _StarlinkFullModel {
   final String id;
   @override
   @JsonKey(name: 'launch')
-  final LaunchModel? launch;
+  final LaunchNetworkModel? launch;
   @override
   @JsonKey(name: 'version')
   final String version;
@@ -648,7 +648,7 @@ class _$_StarlinkFullModel extends _StarlinkFullModel {
 abstract class _StarlinkFullModel extends StarlinkFullModel {
   const factory _StarlinkFullModel(
           {@JsonKey(name: 'id') final String id,
-          @JsonKey(name: 'launch') final LaunchModel? launch,
+          @JsonKey(name: 'launch') final LaunchNetworkModel? launch,
           @JsonKey(name: 'version') final String version,
           @JsonKey(name: 'height_km') final double? heightKm,
           @JsonKey(name: 'latitude') final double? latitude,
@@ -666,7 +666,7 @@ abstract class _StarlinkFullModel extends StarlinkFullModel {
   String get id;
   @override
   @JsonKey(name: 'launch')
-  LaunchModel? get launch;
+  LaunchNetworkModel? get launch;
   @override
   @JsonKey(name: 'version')
   String get version;

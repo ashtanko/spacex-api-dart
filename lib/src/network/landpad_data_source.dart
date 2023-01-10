@@ -6,7 +6,7 @@ class LandPadDataSource {
 
   final LandpadApi _api;
 
-  Future<List<LandpadModel>> getAllLandpads() async {
+  Future<List<LandpadNetworkModel>> getAllLandpads() async {
     try {
       return _api.getAllLandpads();
     } on DioError catch (_) {
@@ -14,7 +14,7 @@ class LandPadDataSource {
     }
   }
 
-  Future<LandpadModel> getLandpad(String id) async {
+  Future<LandpadNetworkModel> getLandpad(String id) async {
     try {
       return _api.getLandpad(id);
     } on DioError catch (_) {
@@ -22,7 +22,7 @@ class LandPadDataSource {
     }
   }
 
-  Future<ApiPaginatedList<LandpadModel>> queryLandpads(
+  Future<ApiPaginatedList<LandpadNetworkModel>> queryLandpads(
     QueryModel query,
   ) async {
     try {
@@ -32,7 +32,7 @@ class LandPadDataSource {
     }
   }
 
-  Future<ApiPaginatedList<LandpadFullModel>> queryFullLandpads(
+  Future<ApiPaginatedList<LandpadNetworkFullModel>> queryFullLandpads(
     QueryModel query,
   ) async {
     try {

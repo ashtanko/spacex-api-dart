@@ -47,7 +47,7 @@ _$_StarlinkFullModel _$$_StarlinkFullModelFromJson(Map<String, dynamic> json) =>
       id: json['id'] as String? ?? '',
       launch: json['launch'] == null
           ? null
-          : LaunchModel.fromJson(json['launch'] as Map<String, dynamic>),
+          : LaunchNetworkModel.fromJson(json['launch'] as Map<String, dynamic>),
       version: json['version'] as String? ?? '',
       heightKm: (json['height_km'] as num?)?.toDouble(),
       latitude: (json['latitude'] as num?)?.toDouble(),

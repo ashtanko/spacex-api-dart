@@ -54,9 +54,10 @@ _$_CapsuleNetworkFullModel _$$_CapsuleNetworkFullModelFromJson(
       landLandings: json['land_landings'] as int? ?? 0,
       lastUpdate: json['last_update'] as String? ?? '',
       launches: (json['launches'] as List<dynamic>?)
-              ?.map((e) => LaunchModel.fromJson(e as Map<String, dynamic>))
+              ?.map(
+                  (e) => LaunchNetworkModel.fromJson(e as Map<String, dynamic>))
               .toList() ??
-          const <LaunchModel>[],
+          const <LaunchNetworkModel>[],
       serial: json['serial'] as String? ?? '',
       status: json['status'] as String? ?? '',
       type: json['type'] as String? ?? '',

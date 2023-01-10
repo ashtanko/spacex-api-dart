@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'landpad_model.dart';
+part of 'landpad_network_model.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -14,16 +14,16 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
-LandpadModel _$LandpadModelFromJson(Map<String, dynamic> json) {
-  return _LandpadModel.fromJson(json);
+LandpadNetworkModel _$LandpadNetworkModelFromJson(Map<String, dynamic> json) {
+  return _LandpadNetworkModel.fromJson(json);
 }
 
 /// @nodoc
-mixin _$LandpadModel {
+mixin _$LandpadNetworkModel {
   @JsonKey(name: 'id')
   String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'images')
-  ImagesModel? get images => throw _privateConstructorUsedError;
+  ImagesNetworkModel? get images => throw _privateConstructorUsedError;
   @JsonKey(name: 'name')
   String? get name => throw _privateConstructorUsedError;
   @JsonKey(name: 'full_name')
@@ -53,19 +53,19 @@ mixin _$LandpadModel {
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $LandpadModelCopyWith<LandpadModel> get copyWith =>
+  $LandpadNetworkModelCopyWith<LandpadNetworkModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $LandpadModelCopyWith<$Res> {
-  factory $LandpadModelCopyWith(
-          LandpadModel value, $Res Function(LandpadModel) then) =
-      _$LandpadModelCopyWithImpl<$Res, LandpadModel>;
+abstract class $LandpadNetworkModelCopyWith<$Res> {
+  factory $LandpadNetworkModelCopyWith(
+          LandpadNetworkModel value, $Res Function(LandpadNetworkModel) then) =
+      _$LandpadNetworkModelCopyWithImpl<$Res, LandpadNetworkModel>;
   @useResult
   $Res call(
       {@JsonKey(name: 'id') String? id,
-      @JsonKey(name: 'images') ImagesModel? images,
+      @JsonKey(name: 'images') ImagesNetworkModel? images,
       @JsonKey(name: 'name') String? name,
       @JsonKey(name: 'full_name') String? fullName,
       @JsonKey(name: 'status') String? status,
@@ -80,13 +80,13 @@ abstract class $LandpadModelCopyWith<$Res> {
       @JsonKey(name: 'details') String? details,
       @JsonKey(name: 'launches') List<String> launches});
 
-  $ImagesModelCopyWith<$Res>? get images;
+  $ImagesNetworkModelCopyWith<$Res>? get images;
 }
 
 /// @nodoc
-class _$LandpadModelCopyWithImpl<$Res, $Val extends LandpadModel>
-    implements $LandpadModelCopyWith<$Res> {
-  _$LandpadModelCopyWithImpl(this._value, this._then);
+class _$LandpadNetworkModelCopyWithImpl<$Res, $Val extends LandpadNetworkModel>
+    implements $LandpadNetworkModelCopyWith<$Res> {
+  _$LandpadNetworkModelCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -120,7 +120,7 @@ class _$LandpadModelCopyWithImpl<$Res, $Val extends LandpadModel>
       images: freezed == images
           ? _value.images
           : images // ignore: cast_nullable_to_non_nullable
-              as ImagesModel?,
+              as ImagesNetworkModel?,
       name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -178,28 +178,28 @@ class _$LandpadModelCopyWithImpl<$Res, $Val extends LandpadModel>
 
   @override
   @pragma('vm:prefer-inline')
-  $ImagesModelCopyWith<$Res>? get images {
+  $ImagesNetworkModelCopyWith<$Res>? get images {
     if (_value.images == null) {
       return null;
     }
 
-    return $ImagesModelCopyWith<$Res>(_value.images!, (value) {
+    return $ImagesNetworkModelCopyWith<$Res>(_value.images!, (value) {
       return _then(_value.copyWith(images: value) as $Val);
     });
   }
 }
 
 /// @nodoc
-abstract class _$$_LandpadModelCopyWith<$Res>
-    implements $LandpadModelCopyWith<$Res> {
-  factory _$$_LandpadModelCopyWith(
-          _$_LandpadModel value, $Res Function(_$_LandpadModel) then) =
-      __$$_LandpadModelCopyWithImpl<$Res>;
+abstract class _$$_LandpadNetworkModelCopyWith<$Res>
+    implements $LandpadNetworkModelCopyWith<$Res> {
+  factory _$$_LandpadNetworkModelCopyWith(_$_LandpadNetworkModel value,
+          $Res Function(_$_LandpadNetworkModel) then) =
+      __$$_LandpadNetworkModelCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
       {@JsonKey(name: 'id') String? id,
-      @JsonKey(name: 'images') ImagesModel? images,
+      @JsonKey(name: 'images') ImagesNetworkModel? images,
       @JsonKey(name: 'name') String? name,
       @JsonKey(name: 'full_name') String? fullName,
       @JsonKey(name: 'status') String? status,
@@ -215,15 +215,15 @@ abstract class _$$_LandpadModelCopyWith<$Res>
       @JsonKey(name: 'launches') List<String> launches});
 
   @override
-  $ImagesModelCopyWith<$Res>? get images;
+  $ImagesNetworkModelCopyWith<$Res>? get images;
 }
 
 /// @nodoc
-class __$$_LandpadModelCopyWithImpl<$Res>
-    extends _$LandpadModelCopyWithImpl<$Res, _$_LandpadModel>
-    implements _$$_LandpadModelCopyWith<$Res> {
-  __$$_LandpadModelCopyWithImpl(
-      _$_LandpadModel _value, $Res Function(_$_LandpadModel) _then)
+class __$$_LandpadNetworkModelCopyWithImpl<$Res>
+    extends _$LandpadNetworkModelCopyWithImpl<$Res, _$_LandpadNetworkModel>
+    implements _$$_LandpadNetworkModelCopyWith<$Res> {
+  __$$_LandpadNetworkModelCopyWithImpl(_$_LandpadNetworkModel _value,
+      $Res Function(_$_LandpadNetworkModel) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -245,7 +245,7 @@ class __$$_LandpadModelCopyWithImpl<$Res>
     Object? details = freezed,
     Object? launches = null,
   }) {
-    return _then(_$_LandpadModel(
+    return _then(_$_LandpadNetworkModel(
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -253,7 +253,7 @@ class __$$_LandpadModelCopyWithImpl<$Res>
       images: freezed == images
           ? _value.images
           : images // ignore: cast_nullable_to_non_nullable
-              as ImagesModel?,
+              as ImagesNetworkModel?,
       name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -312,8 +312,8 @@ class __$$_LandpadModelCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_LandpadModel extends _LandpadModel {
-  const _$_LandpadModel(
+class _$_LandpadNetworkModel extends _LandpadNetworkModel {
+  const _$_LandpadNetworkModel(
       {@JsonKey(name: 'id')
           this.id,
       @JsonKey(name: 'images')
@@ -347,15 +347,15 @@ class _$_LandpadModel extends _LandpadModel {
       : _launches = launches,
         super._();
 
-  factory _$_LandpadModel.fromJson(Map<String, dynamic> json) =>
-      _$$_LandpadModelFromJson(json);
+  factory _$_LandpadNetworkModel.fromJson(Map<String, dynamic> json) =>
+      _$$_LandpadNetworkModelFromJson(json);
 
   @override
   @JsonKey(name: 'id')
   final String? id;
   @override
   @JsonKey(name: 'images')
-  final ImagesModel? images;
+  final ImagesNetworkModel? images;
   @override
   @JsonKey(name: 'name')
   final String? name;
@@ -403,14 +403,14 @@ class _$_LandpadModel extends _LandpadModel {
 
   @override
   String toString() {
-    return 'LandpadModel(id: $id, images: $images, name: $name, fullName: $fullName, status: $status, type: $type, locality: $locality, region: $region, latitude: $latitude, longitude: $longitude, landingAttempts: $landingAttempts, landingSuccesses: $landingSuccesses, wikipedia: $wikipedia, details: $details, launches: $launches)';
+    return 'LandpadNetworkModel(id: $id, images: $images, name: $name, fullName: $fullName, status: $status, type: $type, locality: $locality, region: $region, latitude: $latitude, longitude: $longitude, landingAttempts: $landingAttempts, landingSuccesses: $landingSuccesses, wikipedia: $wikipedia, details: $details, launches: $launches)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_LandpadModel &&
+            other is _$_LandpadNetworkModel &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.images, images) || other.images == images) &&
             (identical(other.name, name) || other.name == name) &&
@@ -458,21 +458,22 @@ class _$_LandpadModel extends _LandpadModel {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_LandpadModelCopyWith<_$_LandpadModel> get copyWith =>
-      __$$_LandpadModelCopyWithImpl<_$_LandpadModel>(this, _$identity);
+  _$$_LandpadNetworkModelCopyWith<_$_LandpadNetworkModel> get copyWith =>
+      __$$_LandpadNetworkModelCopyWithImpl<_$_LandpadNetworkModel>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_LandpadModelToJson(
+    return _$$_LandpadNetworkModelToJson(
       this,
     );
   }
 }
 
-abstract class _LandpadModel extends LandpadModel {
-  const factory _LandpadModel(
+abstract class _LandpadNetworkModel extends LandpadNetworkModel {
+  const factory _LandpadNetworkModel(
           {@JsonKey(name: 'id') final String? id,
-          @JsonKey(name: 'images') final ImagesModel? images,
+          @JsonKey(name: 'images') final ImagesNetworkModel? images,
           @JsonKey(name: 'name') final String? name,
           @JsonKey(name: 'full_name') final String? fullName,
           @JsonKey(name: 'status') final String? status,
@@ -486,18 +487,18 @@ abstract class _LandpadModel extends LandpadModel {
           @JsonKey(name: 'wikipedia') final String? wikipedia,
           @JsonKey(name: 'details') final String? details,
           @JsonKey(name: 'launches') final List<String> launches}) =
-      _$_LandpadModel;
-  const _LandpadModel._() : super._();
+      _$_LandpadNetworkModel;
+  const _LandpadNetworkModel._() : super._();
 
-  factory _LandpadModel.fromJson(Map<String, dynamic> json) =
-      _$_LandpadModel.fromJson;
+  factory _LandpadNetworkModel.fromJson(Map<String, dynamic> json) =
+      _$_LandpadNetworkModel.fromJson;
 
   @override
   @JsonKey(name: 'id')
   String? get id;
   @override
   @JsonKey(name: 'images')
-  ImagesModel? get images;
+  ImagesNetworkModel? get images;
   @override
   @JsonKey(name: 'name')
   String? get name;
@@ -539,20 +540,21 @@ abstract class _LandpadModel extends LandpadModel {
   List<String> get launches;
   @override
   @JsonKey(ignore: true)
-  _$$_LandpadModelCopyWith<_$_LandpadModel> get copyWith =>
+  _$$_LandpadNetworkModelCopyWith<_$_LandpadNetworkModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
-LandpadFullModel _$LandpadFullModelFromJson(Map<String, dynamic> json) {
-  return _LandpadFullModel.fromJson(json);
+LandpadNetworkFullModel _$LandpadNetworkFullModelFromJson(
+    Map<String, dynamic> json) {
+  return _LandpadNetworkFullModel.fromJson(json);
 }
 
 /// @nodoc
-mixin _$LandpadFullModel {
+mixin _$LandpadNetworkFullModel {
   @JsonKey(name: 'id')
   String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'images')
-  ImagesModel? get images => throw _privateConstructorUsedError;
+  ImagesNetworkModel? get images => throw _privateConstructorUsedError;
   @JsonKey(name: 'name')
   String? get name => throw _privateConstructorUsedError;
   @JsonKey(name: 'full_name')
@@ -578,23 +580,23 @@ mixin _$LandpadFullModel {
   @JsonKey(name: 'details')
   String? get details => throw _privateConstructorUsedError;
   @JsonKey(name: 'launches')
-  List<LaunchModel> get launches => throw _privateConstructorUsedError;
+  List<LaunchNetworkModel> get launches => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $LandpadFullModelCopyWith<LandpadFullModel> get copyWith =>
+  $LandpadNetworkFullModelCopyWith<LandpadNetworkFullModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $LandpadFullModelCopyWith<$Res> {
-  factory $LandpadFullModelCopyWith(
-          LandpadFullModel value, $Res Function(LandpadFullModel) then) =
-      _$LandpadFullModelCopyWithImpl<$Res, LandpadFullModel>;
+abstract class $LandpadNetworkFullModelCopyWith<$Res> {
+  factory $LandpadNetworkFullModelCopyWith(LandpadNetworkFullModel value,
+          $Res Function(LandpadNetworkFullModel) then) =
+      _$LandpadNetworkFullModelCopyWithImpl<$Res, LandpadNetworkFullModel>;
   @useResult
   $Res call(
       {@JsonKey(name: 'id') String? id,
-      @JsonKey(name: 'images') ImagesModel? images,
+      @JsonKey(name: 'images') ImagesNetworkModel? images,
       @JsonKey(name: 'name') String? name,
       @JsonKey(name: 'full_name') String? fullName,
       @JsonKey(name: 'status') String? status,
@@ -607,15 +609,16 @@ abstract class $LandpadFullModelCopyWith<$Res> {
       @JsonKey(name: 'landing_successes') int? landingSuccesses,
       @JsonKey(name: 'wikipedia') String? wikipedia,
       @JsonKey(name: 'details') String? details,
-      @JsonKey(name: 'launches') List<LaunchModel> launches});
+      @JsonKey(name: 'launches') List<LaunchNetworkModel> launches});
 
-  $ImagesModelCopyWith<$Res>? get images;
+  $ImagesNetworkModelCopyWith<$Res>? get images;
 }
 
 /// @nodoc
-class _$LandpadFullModelCopyWithImpl<$Res, $Val extends LandpadFullModel>
-    implements $LandpadFullModelCopyWith<$Res> {
-  _$LandpadFullModelCopyWithImpl(this._value, this._then);
+class _$LandpadNetworkFullModelCopyWithImpl<$Res,
+        $Val extends LandpadNetworkFullModel>
+    implements $LandpadNetworkFullModelCopyWith<$Res> {
+  _$LandpadNetworkFullModelCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -649,7 +652,7 @@ class _$LandpadFullModelCopyWithImpl<$Res, $Val extends LandpadFullModel>
       images: freezed == images
           ? _value.images
           : images // ignore: cast_nullable_to_non_nullable
-              as ImagesModel?,
+              as ImagesNetworkModel?,
       name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -701,34 +704,34 @@ class _$LandpadFullModelCopyWithImpl<$Res, $Val extends LandpadFullModel>
       launches: null == launches
           ? _value.launches
           : launches // ignore: cast_nullable_to_non_nullable
-              as List<LaunchModel>,
+              as List<LaunchNetworkModel>,
     ) as $Val);
   }
 
   @override
   @pragma('vm:prefer-inline')
-  $ImagesModelCopyWith<$Res>? get images {
+  $ImagesNetworkModelCopyWith<$Res>? get images {
     if (_value.images == null) {
       return null;
     }
 
-    return $ImagesModelCopyWith<$Res>(_value.images!, (value) {
+    return $ImagesNetworkModelCopyWith<$Res>(_value.images!, (value) {
       return _then(_value.copyWith(images: value) as $Val);
     });
   }
 }
 
 /// @nodoc
-abstract class _$$_LandpadFullModelCopyWith<$Res>
-    implements $LandpadFullModelCopyWith<$Res> {
-  factory _$$_LandpadFullModelCopyWith(
-          _$_LandpadFullModel value, $Res Function(_$_LandpadFullModel) then) =
-      __$$_LandpadFullModelCopyWithImpl<$Res>;
+abstract class _$$_LandpadNetworkFullModelCopyWith<$Res>
+    implements $LandpadNetworkFullModelCopyWith<$Res> {
+  factory _$$_LandpadNetworkFullModelCopyWith(_$_LandpadNetworkFullModel value,
+          $Res Function(_$_LandpadNetworkFullModel) then) =
+      __$$_LandpadNetworkFullModelCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
       {@JsonKey(name: 'id') String? id,
-      @JsonKey(name: 'images') ImagesModel? images,
+      @JsonKey(name: 'images') ImagesNetworkModel? images,
       @JsonKey(name: 'name') String? name,
       @JsonKey(name: 'full_name') String? fullName,
       @JsonKey(name: 'status') String? status,
@@ -741,18 +744,19 @@ abstract class _$$_LandpadFullModelCopyWith<$Res>
       @JsonKey(name: 'landing_successes') int? landingSuccesses,
       @JsonKey(name: 'wikipedia') String? wikipedia,
       @JsonKey(name: 'details') String? details,
-      @JsonKey(name: 'launches') List<LaunchModel> launches});
+      @JsonKey(name: 'launches') List<LaunchNetworkModel> launches});
 
   @override
-  $ImagesModelCopyWith<$Res>? get images;
+  $ImagesNetworkModelCopyWith<$Res>? get images;
 }
 
 /// @nodoc
-class __$$_LandpadFullModelCopyWithImpl<$Res>
-    extends _$LandpadFullModelCopyWithImpl<$Res, _$_LandpadFullModel>
-    implements _$$_LandpadFullModelCopyWith<$Res> {
-  __$$_LandpadFullModelCopyWithImpl(
-      _$_LandpadFullModel _value, $Res Function(_$_LandpadFullModel) _then)
+class __$$_LandpadNetworkFullModelCopyWithImpl<$Res>
+    extends _$LandpadNetworkFullModelCopyWithImpl<$Res,
+        _$_LandpadNetworkFullModel>
+    implements _$$_LandpadNetworkFullModelCopyWith<$Res> {
+  __$$_LandpadNetworkFullModelCopyWithImpl(_$_LandpadNetworkFullModel _value,
+      $Res Function(_$_LandpadNetworkFullModel) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -774,7 +778,7 @@ class __$$_LandpadFullModelCopyWithImpl<$Res>
     Object? details = freezed,
     Object? launches = null,
   }) {
-    return _then(_$_LandpadFullModel(
+    return _then(_$_LandpadNetworkFullModel(
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -782,7 +786,7 @@ class __$$_LandpadFullModelCopyWithImpl<$Res>
       images: freezed == images
           ? _value.images
           : images // ignore: cast_nullable_to_non_nullable
-              as ImagesModel?,
+              as ImagesNetworkModel?,
       name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -834,57 +838,43 @@ class __$$_LandpadFullModelCopyWithImpl<$Res>
       launches: null == launches
           ? _value._launches
           : launches // ignore: cast_nullable_to_non_nullable
-              as List<LaunchModel>,
+              as List<LaunchNetworkModel>,
     ));
   }
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$_LandpadFullModel extends _LandpadFullModel {
-  const _$_LandpadFullModel(
-      {@JsonKey(name: 'id')
-          this.id,
-      @JsonKey(name: 'images')
-          this.images,
-      @JsonKey(name: 'name')
-          this.name,
-      @JsonKey(name: 'full_name')
-          this.fullName,
-      @JsonKey(name: 'status')
-          this.status,
-      @JsonKey(name: 'type')
-          this.type,
-      @JsonKey(name: 'locality')
-          this.locality,
-      @JsonKey(name: 'region')
-          this.region,
-      @JsonKey(name: 'latitude')
-          this.latitude,
-      @JsonKey(name: 'longitude')
-          this.longitude,
-      @JsonKey(name: 'landing_attempts')
-          this.landingAttempts,
-      @JsonKey(name: 'landing_successes')
-          this.landingSuccesses,
-      @JsonKey(name: 'wikipedia')
-          this.wikipedia,
-      @JsonKey(name: 'details')
-          this.details,
-      @JsonKey(name: 'launches')
-          final List<LaunchModel> launches = const <LaunchModel>[]})
+class _$_LandpadNetworkFullModel extends _LandpadNetworkFullModel {
+  const _$_LandpadNetworkFullModel(
+      {@JsonKey(name: 'id') this.id,
+      @JsonKey(name: 'images') this.images,
+      @JsonKey(name: 'name') this.name,
+      @JsonKey(name: 'full_name') this.fullName,
+      @JsonKey(name: 'status') this.status,
+      @JsonKey(name: 'type') this.type,
+      @JsonKey(name: 'locality') this.locality,
+      @JsonKey(name: 'region') this.region,
+      @JsonKey(name: 'latitude') this.latitude,
+      @JsonKey(name: 'longitude') this.longitude,
+      @JsonKey(name: 'landing_attempts') this.landingAttempts,
+      @JsonKey(name: 'landing_successes') this.landingSuccesses,
+      @JsonKey(name: 'wikipedia') this.wikipedia,
+      @JsonKey(name: 'details') this.details,
+      @JsonKey(name: 'launches') final List<LaunchNetworkModel> launches =
+          const <LaunchNetworkModel>[]})
       : _launches = launches,
         super._();
 
-  factory _$_LandpadFullModel.fromJson(Map<String, dynamic> json) =>
-      _$$_LandpadFullModelFromJson(json);
+  factory _$_LandpadNetworkFullModel.fromJson(Map<String, dynamic> json) =>
+      _$$_LandpadNetworkFullModelFromJson(json);
 
   @override
   @JsonKey(name: 'id')
   final String? id;
   @override
   @JsonKey(name: 'images')
-  final ImagesModel? images;
+  final ImagesNetworkModel? images;
   @override
   @JsonKey(name: 'name')
   final String? name;
@@ -921,10 +911,10 @@ class _$_LandpadFullModel extends _LandpadFullModel {
   @override
   @JsonKey(name: 'details')
   final String? details;
-  final List<LaunchModel> _launches;
+  final List<LaunchNetworkModel> _launches;
   @override
   @JsonKey(name: 'launches')
-  List<LaunchModel> get launches {
+  List<LaunchNetworkModel> get launches {
     if (_launches is EqualUnmodifiableListView) return _launches;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_launches);
@@ -932,14 +922,14 @@ class _$_LandpadFullModel extends _LandpadFullModel {
 
   @override
   String toString() {
-    return 'LandpadFullModel(id: $id, images: $images, name: $name, fullName: $fullName, status: $status, type: $type, locality: $locality, region: $region, latitude: $latitude, longitude: $longitude, landingAttempts: $landingAttempts, landingSuccesses: $landingSuccesses, wikipedia: $wikipedia, details: $details, launches: $launches)';
+    return 'LandpadNetworkFullModel(id: $id, images: $images, name: $name, fullName: $fullName, status: $status, type: $type, locality: $locality, region: $region, latitude: $latitude, longitude: $longitude, landingAttempts: $landingAttempts, landingSuccesses: $landingSuccesses, wikipedia: $wikipedia, details: $details, launches: $launches)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_LandpadFullModel &&
+            other is _$_LandpadNetworkFullModel &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.images, images) || other.images == images) &&
             (identical(other.name, name) || other.name == name) &&
@@ -987,21 +977,23 @@ class _$_LandpadFullModel extends _LandpadFullModel {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_LandpadFullModelCopyWith<_$_LandpadFullModel> get copyWith =>
-      __$$_LandpadFullModelCopyWithImpl<_$_LandpadFullModel>(this, _$identity);
+  _$$_LandpadNetworkFullModelCopyWith<_$_LandpadNetworkFullModel>
+      get copyWith =>
+          __$$_LandpadNetworkFullModelCopyWithImpl<_$_LandpadNetworkFullModel>(
+              this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_LandpadFullModelToJson(
+    return _$$_LandpadNetworkFullModelToJson(
       this,
     );
   }
 }
 
-abstract class _LandpadFullModel extends LandpadFullModel {
-  const factory _LandpadFullModel(
+abstract class _LandpadNetworkFullModel extends LandpadNetworkFullModel {
+  const factory _LandpadNetworkFullModel(
           {@JsonKey(name: 'id') final String? id,
-          @JsonKey(name: 'images') final ImagesModel? images,
+          @JsonKey(name: 'images') final ImagesNetworkModel? images,
           @JsonKey(name: 'name') final String? name,
           @JsonKey(name: 'full_name') final String? fullName,
           @JsonKey(name: 'status') final String? status,
@@ -1014,19 +1006,19 @@ abstract class _LandpadFullModel extends LandpadFullModel {
           @JsonKey(name: 'landing_successes') final int? landingSuccesses,
           @JsonKey(name: 'wikipedia') final String? wikipedia,
           @JsonKey(name: 'details') final String? details,
-          @JsonKey(name: 'launches') final List<LaunchModel> launches}) =
-      _$_LandpadFullModel;
-  const _LandpadFullModel._() : super._();
+          @JsonKey(name: 'launches') final List<LaunchNetworkModel> launches}) =
+      _$_LandpadNetworkFullModel;
+  const _LandpadNetworkFullModel._() : super._();
 
-  factory _LandpadFullModel.fromJson(Map<String, dynamic> json) =
-      _$_LandpadFullModel.fromJson;
+  factory _LandpadNetworkFullModel.fromJson(Map<String, dynamic> json) =
+      _$_LandpadNetworkFullModel.fromJson;
 
   @override
   @JsonKey(name: 'id')
   String? get id;
   @override
   @JsonKey(name: 'images')
-  ImagesModel? get images;
+  ImagesNetworkModel? get images;
   @override
   @JsonKey(name: 'name')
   String? get name;
@@ -1065,9 +1057,9 @@ abstract class _LandpadFullModel extends LandpadFullModel {
   String? get details;
   @override
   @JsonKey(name: 'launches')
-  List<LaunchModel> get launches;
+  List<LaunchNetworkModel> get launches;
   @override
   @JsonKey(ignore: true)
-  _$$_LandpadFullModelCopyWith<_$_LandpadFullModel> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$_LandpadNetworkFullModelCopyWith<_$_LandpadNetworkFullModel>
+      get copyWith => throw _privateConstructorUsedError;
 }

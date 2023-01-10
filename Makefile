@@ -12,3 +12,4 @@ rebuild:
 
 check:
 	dart analyze --fatal-infos
+	dart format --output=none --set-exit-if-changed .

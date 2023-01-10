@@ -13,7 +13,7 @@ class FullCrewNetworkModel with _$FullCrewNetworkModel {
     @JsonKey(name: 'agency') @Default('') String agency,
     @JsonKey(name: 'image') @Default('') String image,
     @JsonKey(name: 'wikipedia') @Default('') String wikipedia,
-    @JsonKey(name: 'launches') @Default([]) List<LaunchModel> launches,
+    @JsonKey(name: 'launches') @Default([]) List<LaunchNetworkModel> launches,
     @JsonKey(name: 'status', unknownEnumValue: CrewStatus.unknown)
     @Default(CrewStatus.unknown)
         CrewStatus status,

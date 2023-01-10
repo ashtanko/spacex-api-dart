@@ -19,7 +19,7 @@ void main() {
 
   group('getAllLandpads', () {
     final rawJson = 'landpad/landpad.json'.toFixture();
-    final model = LandpadModel.fromJson(rawJson);
+    final model = LandpadNetworkModel.fromJson(rawJson);
     final mockResponse = [model];
     test(
       'should perform a GET request on /landpads',
@@ -43,7 +43,7 @@ void main() {
   group('getLandpad', () {
     const id = '5e9e3032383ecb267a34e7c7';
     final rawJson = 'landpad/landpad.json'.toFixture();
-    final mockResponse = LandpadModel.fromJson(rawJson);
+    final mockResponse = LandpadNetworkModel.fromJson(rawJson);
     test(
       'should perform a GET request on /landpads/{$id}',
       () async {
@@ -67,7 +67,7 @@ void main() {
     final rawJson = 'landpad/landpad.json'.toFixture();
     final mockResponse = ApiPaginatedList(
       results: [
-        LandpadModel.fromJson(rawJson),
+        LandpadNetworkModel.fromJson(rawJson),
       ],
     );
     final queryRawJson = 'query/query.json'.toFixture();
@@ -95,7 +95,7 @@ void main() {
     final rawJson = 'landpad/landpad_full.json'.toFixture();
     final mockResponse = ApiPaginatedList(
       results: [
-        LandpadFullModel.fromJson(rawJson),
+        LandpadNetworkFullModel.fromJson(rawJson),
       ],
     );
     final queryRawJson = 'query/query.json'.toFixture();

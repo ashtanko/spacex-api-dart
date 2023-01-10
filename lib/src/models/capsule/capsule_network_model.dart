@@ -36,8 +36,8 @@ class CapsuleNetworkFullModel with _$CapsuleNetworkFullModel {
     @JsonKey(name: 'land_landings') @Default(0) int landLandings,
     @JsonKey(name: 'last_update') @Default('') String? lastUpdate,
     @JsonKey(name: 'launches')
-    @Default(<LaunchModel>[])
-        List<LaunchModel> launches,
+    @Default(<LaunchNetworkModel>[])
+        List<LaunchNetworkModel> launches,
     @Default('') String serial,
     @Default('') String status,
     @Default('') String type,

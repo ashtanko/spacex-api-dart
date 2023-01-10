@@ -1,17 +1,18 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'landpad_model.dart';
+part of 'landpad_network_model.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_LandpadModel _$$_LandpadModelFromJson(Map<String, dynamic> json) =>
-    _$_LandpadModel(
+_$_LandpadNetworkModel _$$_LandpadNetworkModelFromJson(
+        Map<String, dynamic> json) =>
+    _$_LandpadNetworkModel(
       id: json['id'] as String?,
       images: json['images'] == null
           ? null
-          : ImagesModel.fromJson(json['images'] as Map<String, dynamic>),
+          : ImagesNetworkModel.fromJson(json['images'] as Map<String, dynamic>),
       name: json['name'] as String?,
       fullName: json['full_name'] as String?,
       status: json['status'] as String?,
@@ -30,7 +31,8 @@ _$_LandpadModel _$$_LandpadModelFromJson(Map<String, dynamic> json) =>
           const <String>[],
     );
 
-Map<String, dynamic> _$$_LandpadModelToJson(_$_LandpadModel instance) {
+Map<String, dynamic> _$$_LandpadNetworkModelToJson(
+    _$_LandpadNetworkModel instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -57,12 +59,13 @@ Map<String, dynamic> _$$_LandpadModelToJson(_$_LandpadModel instance) {
   return val;
 }
 
-_$_LandpadFullModel _$$_LandpadFullModelFromJson(Map<String, dynamic> json) =>
-    _$_LandpadFullModel(
+_$_LandpadNetworkFullModel _$$_LandpadNetworkFullModelFromJson(
+        Map<String, dynamic> json) =>
+    _$_LandpadNetworkFullModel(
       id: json['id'] as String?,
       images: json['images'] == null
           ? null
-          : ImagesModel.fromJson(json['images'] as Map<String, dynamic>),
+          : ImagesNetworkModel.fromJson(json['images'] as Map<String, dynamic>),
       name: json['name'] as String?,
       fullName: json['full_name'] as String?,
       status: json['status'] as String?,
@@ -76,12 +79,14 @@ _$_LandpadFullModel _$$_LandpadFullModelFromJson(Map<String, dynamic> json) =>
       wikipedia: json['wikipedia'] as String?,
       details: json['details'] as String?,
       launches: (json['launches'] as List<dynamic>?)
-              ?.map((e) => LaunchModel.fromJson(e as Map<String, dynamic>))
+              ?.map(
+                  (e) => LaunchNetworkModel.fromJson(e as Map<String, dynamic>))
               .toList() ??
-          const <LaunchModel>[],
+          const <LaunchNetworkModel>[],
     );
 
-Map<String, dynamic> _$$_LandpadFullModelToJson(_$_LandpadFullModel instance) {
+Map<String, dynamic> _$$_LandpadNetworkFullModelToJson(
+    _$_LandpadNetworkFullModel instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {

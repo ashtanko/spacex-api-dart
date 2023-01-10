@@ -916,7 +916,7 @@ mixin _$FullPayloadModel {
   @JsonKey(name: 'reused')
   bool get reused => throw _privateConstructorUsedError;
   @JsonKey(name: 'launch')
-  LaunchModel? get launch => throw _privateConstructorUsedError;
+  LaunchNetworkModel? get launch => throw _privateConstructorUsedError;
   @JsonKey(name: 'customers')
   List<String> get customers => throw _privateConstructorUsedError;
   @JsonKey(name: 'norad_ids')
@@ -980,7 +980,7 @@ abstract class $FullPayloadModelCopyWith<$Res> {
       @JsonKey(name: 'name') String? name,
       @JsonKey(name: 'type') String? type,
       @JsonKey(name: 'reused') bool reused,
-      @JsonKey(name: 'launch') LaunchModel? launch,
+      @JsonKey(name: 'launch') LaunchNetworkModel? launch,
       @JsonKey(name: 'customers') List<String> customers,
       @JsonKey(name: 'norad_ids') List<int> noradIds,
       @JsonKey(name: 'nationalities') List<String> nationalities,
@@ -1005,7 +1005,7 @@ abstract class $FullPayloadModelCopyWith<$Res> {
       @JsonKey(name: 'mean_anomaly') double? meanAnomaly});
 
   $PayloadDragonModelCopyWith<$Res>? get dragon;
-  $LaunchModelCopyWith<$Res>? get launch;
+  $LaunchNetworkModelCopyWith<$Res>? get launch;
 }
 
 /// @nodoc
@@ -1074,7 +1074,7 @@ class _$FullPayloadModelCopyWithImpl<$Res, $Val extends FullPayloadModel>
       launch: freezed == launch
           ? _value.launch
           : launch // ignore: cast_nullable_to_non_nullable
-              as LaunchModel?,
+              as LaunchNetworkModel?,
       customers: null == customers
           ? _value.customers
           : customers // ignore: cast_nullable_to_non_nullable
@@ -1180,12 +1180,12 @@ class _$FullPayloadModelCopyWithImpl<$Res, $Val extends FullPayloadModel>
 
   @override
   @pragma('vm:prefer-inline')
-  $LaunchModelCopyWith<$Res>? get launch {
+  $LaunchNetworkModelCopyWith<$Res>? get launch {
     if (_value.launch == null) {
       return null;
     }
 
-    return $LaunchModelCopyWith<$Res>(_value.launch!, (value) {
+    return $LaunchNetworkModelCopyWith<$Res>(_value.launch!, (value) {
       return _then(_value.copyWith(launch: value) as $Val);
     });
   }
@@ -1205,7 +1205,7 @@ abstract class _$$_FullPayloadModelCopyWith<$Res>
       @JsonKey(name: 'name') String? name,
       @JsonKey(name: 'type') String? type,
       @JsonKey(name: 'reused') bool reused,
-      @JsonKey(name: 'launch') LaunchModel? launch,
+      @JsonKey(name: 'launch') LaunchNetworkModel? launch,
       @JsonKey(name: 'customers') List<String> customers,
       @JsonKey(name: 'norad_ids') List<int> noradIds,
       @JsonKey(name: 'nationalities') List<String> nationalities,
@@ -1232,7 +1232,7 @@ abstract class _$$_FullPayloadModelCopyWith<$Res>
   @override
   $PayloadDragonModelCopyWith<$Res>? get dragon;
   @override
-  $LaunchModelCopyWith<$Res>? get launch;
+  $LaunchNetworkModelCopyWith<$Res>? get launch;
 }
 
 /// @nodoc
@@ -1299,7 +1299,7 @@ class __$$_FullPayloadModelCopyWithImpl<$Res>
       launch: freezed == launch
           ? _value.launch
           : launch // ignore: cast_nullable_to_non_nullable
-              as LaunchModel?,
+              as LaunchNetworkModel?,
       customers: null == customers
           ? _value._customers
           : customers // ignore: cast_nullable_to_non_nullable
@@ -1478,7 +1478,7 @@ class _$_FullPayloadModel extends _FullPayloadModel {
   final bool reused;
   @override
   @JsonKey(name: 'launch')
-  final LaunchModel? launch;
+  final LaunchNetworkModel? launch;
   final List<String> _customers;
   @override
   @JsonKey(name: 'customers')
@@ -1680,7 +1680,7 @@ abstract class _FullPayloadModel extends FullPayloadModel {
           @JsonKey(name: 'name') final String? name,
           @JsonKey(name: 'type') final String? type,
           @JsonKey(name: 'reused') final bool reused,
-          @JsonKey(name: 'launch') final LaunchModel? launch,
+          @JsonKey(name: 'launch') final LaunchNetworkModel? launch,
           @JsonKey(name: 'customers') final List<String> customers,
           @JsonKey(name: 'norad_ids') final List<int> noradIds,
           @JsonKey(name: 'nationalities') final List<String> nationalities,
@@ -1726,7 +1726,7 @@ abstract class _FullPayloadModel extends FullPayloadModel {
   bool get reused;
   @override
   @JsonKey(name: 'launch')
-  LaunchModel? get launch;
+  LaunchNetworkModel? get launch;
   @override
   @JsonKey(name: 'customers')
   List<String> get customers;

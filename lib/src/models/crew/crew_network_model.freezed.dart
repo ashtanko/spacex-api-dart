@@ -31,7 +31,7 @@ mixin _$FullCrewNetworkModel {
   @JsonKey(name: 'wikipedia')
   String get wikipedia => throw _privateConstructorUsedError;
   @JsonKey(name: 'launches')
-  List<LaunchModel> get launches => throw _privateConstructorUsedError;
+  List<LaunchNetworkModel> get launches => throw _privateConstructorUsedError;
   @JsonKey(name: 'status', unknownEnumValue: CrewStatus.unknown)
   CrewStatus get status => throw _privateConstructorUsedError;
 
@@ -59,7 +59,7 @@ abstract class $FullCrewNetworkModelCopyWith<$Res> {
       @JsonKey(name: 'wikipedia')
           String wikipedia,
       @JsonKey(name: 'launches')
-          List<LaunchModel> launches,
+          List<LaunchNetworkModel> launches,
       @JsonKey(name: 'status', unknownEnumValue: CrewStatus.unknown)
           CrewStatus status});
 }
@@ -110,7 +110,7 @@ class _$FullCrewNetworkModelCopyWithImpl<$Res,
       launches: null == launches
           ? _value.launches
           : launches // ignore: cast_nullable_to_non_nullable
-              as List<LaunchModel>,
+              as List<LaunchNetworkModel>,
       status: null == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
@@ -139,7 +139,7 @@ abstract class _$$_FullCrewNetworkModelCopyWith<$Res>
       @JsonKey(name: 'wikipedia')
           String wikipedia,
       @JsonKey(name: 'launches')
-          List<LaunchModel> launches,
+          List<LaunchNetworkModel> launches,
       @JsonKey(name: 'status', unknownEnumValue: CrewStatus.unknown)
           CrewStatus status});
 }
@@ -187,7 +187,7 @@ class __$$_FullCrewNetworkModelCopyWithImpl<$Res>
       launches: null == launches
           ? _value._launches
           : launches // ignore: cast_nullable_to_non_nullable
-              as List<LaunchModel>,
+              as List<LaunchNetworkModel>,
       status: null == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
@@ -211,7 +211,7 @@ class _$_FullCrewNetworkModel extends _FullCrewNetworkModel {
       @JsonKey(name: 'wikipedia')
           this.wikipedia = '',
       @JsonKey(name: 'launches')
-          final List<LaunchModel> launches = const [],
+          final List<LaunchNetworkModel> launches = const [],
       @JsonKey(name: 'status', unknownEnumValue: CrewStatus.unknown)
           this.status = CrewStatus.unknown})
       : _launches = launches,
@@ -235,10 +235,10 @@ class _$_FullCrewNetworkModel extends _FullCrewNetworkModel {
   @override
   @JsonKey(name: 'wikipedia')
   final String wikipedia;
-  final List<LaunchModel> _launches;
+  final List<LaunchNetworkModel> _launches;
   @override
   @JsonKey(name: 'launches')
-  List<LaunchModel> get launches {
+  List<LaunchNetworkModel> get launches {
     if (_launches is EqualUnmodifiableListView) return _launches;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_launches);
@@ -301,7 +301,7 @@ abstract class _FullCrewNetworkModel extends FullCrewNetworkModel {
       @JsonKey(name: 'wikipedia')
           final String wikipedia,
       @JsonKey(name: 'launches')
-          final List<LaunchModel> launches,
+          final List<LaunchNetworkModel> launches,
       @JsonKey(name: 'status', unknownEnumValue: CrewStatus.unknown)
           final CrewStatus status}) = _$_FullCrewNetworkModel;
   const _FullCrewNetworkModel._() : super._();
@@ -326,7 +326,7 @@ abstract class _FullCrewNetworkModel extends FullCrewNetworkModel {
   String get wikipedia;
   @override
   @JsonKey(name: 'launches')
-  List<LaunchModel> get launches;
+  List<LaunchNetworkModel> get launches;
   @override
   @JsonKey(name: 'status', unknownEnumValue: CrewStatus.unknown)
   CrewStatus get status;

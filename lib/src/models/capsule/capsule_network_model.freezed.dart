@@ -373,7 +373,7 @@ mixin _$CapsuleNetworkFullModel {
   @JsonKey(name: 'last_update')
   String? get lastUpdate => throw _privateConstructorUsedError;
   @JsonKey(name: 'launches')
-  List<LaunchModel> get launches => throw _privateConstructorUsedError;
+  List<LaunchNetworkModel> get launches => throw _privateConstructorUsedError;
   String get serial => throw _privateConstructorUsedError;
   String get status => throw _privateConstructorUsedError;
   String get type => throw _privateConstructorUsedError;
@@ -397,7 +397,7 @@ abstract class $CapsuleNetworkFullModelCopyWith<$Res> {
       @JsonKey(name: 'water_landings') int waterLandings,
       @JsonKey(name: 'land_landings') int landLandings,
       @JsonKey(name: 'last_update') String? lastUpdate,
-      @JsonKey(name: 'launches') List<LaunchModel> launches,
+      @JsonKey(name: 'launches') List<LaunchNetworkModel> launches,
       String serial,
       String status,
       String type,
@@ -448,7 +448,7 @@ class _$CapsuleNetworkFullModelCopyWithImpl<$Res,
       launches: null == launches
           ? _value.launches
           : launches // ignore: cast_nullable_to_non_nullable
-              as List<LaunchModel>,
+              as List<LaunchNetworkModel>,
       serial: null == serial
           ? _value.serial
           : serial // ignore: cast_nullable_to_non_nullable
@@ -482,7 +482,7 @@ abstract class _$$_CapsuleNetworkFullModelCopyWith<$Res>
       @JsonKey(name: 'water_landings') int waterLandings,
       @JsonKey(name: 'land_landings') int landLandings,
       @JsonKey(name: 'last_update') String? lastUpdate,
-      @JsonKey(name: 'launches') List<LaunchModel> launches,
+      @JsonKey(name: 'launches') List<LaunchNetworkModel> launches,
       String serial,
       String status,
       String type,
@@ -531,7 +531,7 @@ class __$$_CapsuleNetworkFullModelCopyWithImpl<$Res>
       launches: null == launches
           ? _value._launches
           : launches // ignore: cast_nullable_to_non_nullable
-              as List<LaunchModel>,
+              as List<LaunchNetworkModel>,
       serial: null == serial
           ? _value.serial
           : serial // ignore: cast_nullable_to_non_nullable
@@ -556,21 +556,16 @@ class __$$_CapsuleNetworkFullModelCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_CapsuleNetworkFullModel extends _CapsuleNetworkFullModel {
   const _$_CapsuleNetworkFullModel(
-      {@JsonKey(name: 'reuse_count')
-          this.reuseCount = 0,
-      @JsonKey(name: 'water_landings')
-          this.waterLandings = 0,
-      @JsonKey(name: 'land_landings')
-          this.landLandings = 0,
-      @JsonKey(name: 'last_update')
-          this.lastUpdate = '',
-      @JsonKey(name: 'launches')
-          final List<LaunchModel> launches = const <LaunchModel>[],
+      {@JsonKey(name: 'reuse_count') this.reuseCount = 0,
+      @JsonKey(name: 'water_landings') this.waterLandings = 0,
+      @JsonKey(name: 'land_landings') this.landLandings = 0,
+      @JsonKey(name: 'last_update') this.lastUpdate = '',
+      @JsonKey(name: 'launches') final List<LaunchNetworkModel> launches =
+          const <LaunchNetworkModel>[],
       this.serial = '',
       this.status = '',
       this.type = '',
-      @JsonKey(name: 'id')
-          required this.id})
+      @JsonKey(name: 'id') required this.id})
       : _launches = launches,
         super._();
 
@@ -589,10 +584,10 @@ class _$_CapsuleNetworkFullModel extends _CapsuleNetworkFullModel {
   @override
   @JsonKey(name: 'last_update')
   final String? lastUpdate;
-  final List<LaunchModel> _launches;
+  final List<LaunchNetworkModel> _launches;
   @override
   @JsonKey(name: 'launches')
-  List<LaunchModel> get launches {
+  List<LaunchNetworkModel> get launches {
     if (_launches is EqualUnmodifiableListView) return _launches;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_launches);
@@ -672,7 +667,7 @@ abstract class _CapsuleNetworkFullModel extends CapsuleNetworkFullModel {
           @JsonKey(name: 'water_landings') final int waterLandings,
           @JsonKey(name: 'land_landings') final int landLandings,
           @JsonKey(name: 'last_update') final String? lastUpdate,
-          @JsonKey(name: 'launches') final List<LaunchModel> launches,
+          @JsonKey(name: 'launches') final List<LaunchNetworkModel> launches,
           final String serial,
           final String status,
           final String type,
@@ -697,7 +692,7 @@ abstract class _CapsuleNetworkFullModel extends CapsuleNetworkFullModel {
   String? get lastUpdate;
   @override
   @JsonKey(name: 'launches')
-  List<LaunchModel> get launches;
+  List<LaunchNetworkModel> get launches;
   @override
   String get serial;
   @override

@@ -77,9 +77,10 @@ _$_CoreNetworkFullModel _$$_CoreNetworkFullModelFromJson(
       asdsLandings: json['asds_landings'] as int?,
       lastUpdate: json['last_update'] as String?,
       launches: (json['launches'] as List<dynamic>?)
-              ?.map((e) => LaunchModel.fromJson(e as Map<String, dynamic>))
+              ?.map(
+                  (e) => LaunchNetworkModel.fromJson(e as Map<String, dynamic>))
               .toList() ??
-          const <LaunchModel>[],
+          const <LaunchNetworkModel>[],
       serial: json['serial'] as String?,
       status: json['status'] as String?,
       core: json['core'] as String?,

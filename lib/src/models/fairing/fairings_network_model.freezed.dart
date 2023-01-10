@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'fairings_model.dart';
+part of 'fairings_network_model.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -14,12 +14,12 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
-FairingsModel _$FairingsModelFromJson(Map<String, dynamic> json) {
-  return _FairingsModel.fromJson(json);
+FairingsNetworkModel _$FairingsNetworkModelFromJson(Map<String, dynamic> json) {
+  return _FairingsNetworkModel.fromJson(json);
 }
 
 /// @nodoc
-mixin _$FairingsModel {
+mixin _$FairingsNetworkModel {
   bool get reused => throw _privateConstructorUsedError;
   @JsonKey(name: 'recovery_attempt')
   bool get recoveryAttempt => throw _privateConstructorUsedError;
@@ -30,15 +30,15 @@ mixin _$FairingsModel {
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $FairingsModelCopyWith<FairingsModel> get copyWith =>
+  $FairingsNetworkModelCopyWith<FairingsNetworkModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $FairingsModelCopyWith<$Res> {
-  factory $FairingsModelCopyWith(
-          FairingsModel value, $Res Function(FairingsModel) then) =
-      _$FairingsModelCopyWithImpl<$Res, FairingsModel>;
+abstract class $FairingsNetworkModelCopyWith<$Res> {
+  factory $FairingsNetworkModelCopyWith(FairingsNetworkModel value,
+          $Res Function(FairingsNetworkModel) then) =
+      _$FairingsNetworkModelCopyWithImpl<$Res, FairingsNetworkModel>;
   @useResult
   $Res call(
       {bool reused,
@@ -48,9 +48,10 @@ abstract class $FairingsModelCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$FairingsModelCopyWithImpl<$Res, $Val extends FairingsModel>
-    implements $FairingsModelCopyWith<$Res> {
-  _$FairingsModelCopyWithImpl(this._value, this._then);
+class _$FairingsNetworkModelCopyWithImpl<$Res,
+        $Val extends FairingsNetworkModel>
+    implements $FairingsNetworkModelCopyWith<$Res> {
+  _$FairingsNetworkModelCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -87,11 +88,11 @@ class _$FairingsModelCopyWithImpl<$Res, $Val extends FairingsModel>
 }
 
 /// @nodoc
-abstract class _$$_FairingsModelCopyWith<$Res>
-    implements $FairingsModelCopyWith<$Res> {
-  factory _$$_FairingsModelCopyWith(
-          _$_FairingsModel value, $Res Function(_$_FairingsModel) then) =
-      __$$_FairingsModelCopyWithImpl<$Res>;
+abstract class _$$_FairingsNetworkModelCopyWith<$Res>
+    implements $FairingsNetworkModelCopyWith<$Res> {
+  factory _$$_FairingsNetworkModelCopyWith(_$_FairingsNetworkModel value,
+          $Res Function(_$_FairingsNetworkModel) then) =
+      __$$_FairingsNetworkModelCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -102,11 +103,11 @@ abstract class _$$_FairingsModelCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_FairingsModelCopyWithImpl<$Res>
-    extends _$FairingsModelCopyWithImpl<$Res, _$_FairingsModel>
-    implements _$$_FairingsModelCopyWith<$Res> {
-  __$$_FairingsModelCopyWithImpl(
-      _$_FairingsModel _value, $Res Function(_$_FairingsModel) _then)
+class __$$_FairingsNetworkModelCopyWithImpl<$Res>
+    extends _$FairingsNetworkModelCopyWithImpl<$Res, _$_FairingsNetworkModel>
+    implements _$$_FairingsNetworkModelCopyWith<$Res> {
+  __$$_FairingsNetworkModelCopyWithImpl(_$_FairingsNetworkModel _value,
+      $Res Function(_$_FairingsNetworkModel) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -117,7 +118,7 @@ class __$$_FairingsModelCopyWithImpl<$Res>
     Object? recovered = null,
     Object? ships = null,
   }) {
-    return _then(_$_FairingsModel(
+    return _then(_$_FairingsNetworkModel(
       reused: null == reused
           ? _value.reused
           : reused // ignore: cast_nullable_to_non_nullable
@@ -140,8 +141,8 @@ class __$$_FairingsModelCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_FairingsModel extends _FairingsModel {
-  const _$_FairingsModel(
+class _$_FairingsNetworkModel extends _FairingsNetworkModel {
+  const _$_FairingsNetworkModel(
       {this.reused = false,
       @JsonKey(name: 'recovery_attempt') this.recoveryAttempt = false,
       @JsonKey(name: 'recovered') this.recovered = false,
@@ -149,8 +150,8 @@ class _$_FairingsModel extends _FairingsModel {
       : _ships = ships,
         super._();
 
-  factory _$_FairingsModel.fromJson(Map<String, dynamic> json) =>
-      _$$_FairingsModelFromJson(json);
+  factory _$_FairingsNetworkModel.fromJson(Map<String, dynamic> json) =>
+      _$$_FairingsNetworkModelFromJson(json);
 
   @override
   @JsonKey()
@@ -172,14 +173,14 @@ class _$_FairingsModel extends _FairingsModel {
 
   @override
   String toString() {
-    return 'FairingsModel(reused: $reused, recoveryAttempt: $recoveryAttempt, recovered: $recovered, ships: $ships)';
+    return 'FairingsNetworkModel(reused: $reused, recoveryAttempt: $recoveryAttempt, recovered: $recovered, ships: $ships)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_FairingsModel &&
+            other is _$_FairingsNetworkModel &&
             (identical(other.reused, reused) || other.reused == reused) &&
             (identical(other.recoveryAttempt, recoveryAttempt) ||
                 other.recoveryAttempt == recoveryAttempt) &&
@@ -196,27 +197,29 @@ class _$_FairingsModel extends _FairingsModel {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_FairingsModelCopyWith<_$_FairingsModel> get copyWith =>
-      __$$_FairingsModelCopyWithImpl<_$_FairingsModel>(this, _$identity);
+  _$$_FairingsNetworkModelCopyWith<_$_FairingsNetworkModel> get copyWith =>
+      __$$_FairingsNetworkModelCopyWithImpl<_$_FairingsNetworkModel>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_FairingsModelToJson(
+    return _$$_FairingsNetworkModelToJson(
       this,
     );
   }
 }
 
-abstract class _FairingsModel extends FairingsModel {
-  const factory _FairingsModel(
-      {final bool reused,
-      @JsonKey(name: 'recovery_attempt') final bool recoveryAttempt,
-      @JsonKey(name: 'recovered') final bool recovered,
-      @JsonKey(name: 'ships') final List<String> ships}) = _$_FairingsModel;
-  const _FairingsModel._() : super._();
+abstract class _FairingsNetworkModel extends FairingsNetworkModel {
+  const factory _FairingsNetworkModel(
+          {final bool reused,
+          @JsonKey(name: 'recovery_attempt') final bool recoveryAttempt,
+          @JsonKey(name: 'recovered') final bool recovered,
+          @JsonKey(name: 'ships') final List<String> ships}) =
+      _$_FairingsNetworkModel;
+  const _FairingsNetworkModel._() : super._();
 
-  factory _FairingsModel.fromJson(Map<String, dynamic> json) =
-      _$_FairingsModel.fromJson;
+  factory _FairingsNetworkModel.fromJson(Map<String, dynamic> json) =
+      _$_FairingsNetworkModel.fromJson;
 
   @override
   bool get reused;
@@ -231,6 +234,6 @@ abstract class _FairingsModel extends FairingsModel {
   List<String> get ships;
   @override
   @JsonKey(ignore: true)
-  _$$_FairingsModelCopyWith<_$_FairingsModel> get copyWith =>
+  _$$_FairingsNetworkModelCopyWith<_$_FairingsNetworkModel> get copyWith =>
       throw _privateConstructorUsedError;
 }

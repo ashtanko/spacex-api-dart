@@ -9,20 +9,20 @@ abstract class LandpadApi {
   factory LandpadApi(Dio dio) = _LandpadApi;
 
   @GET('/landpads')
-  Future<List<LandpadModel>> getAllLandpads();
+  Future<List<LandpadNetworkModel>> getAllLandpads();
 
   @GET('/landpads/{id}')
-  Future<LandpadModel> getLandpad(
+  Future<LandpadNetworkModel> getLandpad(
     @Path() String id,
   );
 
   @POST('/landpads/query')
-  Future<ApiPaginatedList<LandpadModel>> queryLandpads(
+  Future<ApiPaginatedList<LandpadNetworkModel>> queryLandpads(
     @Body() QueryModel query,
   );
 
   @POST('/landpads/query')
-  Future<ApiPaginatedList<LandpadFullModel>> queryFullLandpads(
+  Future<ApiPaginatedList<LandpadNetworkFullModel>> queryFullLandpads(
     @Body() QueryModel query,
   );
 }

@@ -1,15 +1,15 @@
 import 'package:data/data.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-part 'landpad_model.freezed.dart';
+part 'landpad_network_model.freezed.dart';
 
-part 'landpad_model.g.dart';
+part 'landpad_network_model.g.dart';
 
 @freezed
-class LandpadModel with _$LandpadModel {
-  const factory LandpadModel({
+class LandpadNetworkModel with _$LandpadNetworkModel {
+  const factory LandpadNetworkModel({
     @JsonKey(name: 'id') String? id,
-    @JsonKey(name: 'images') ImagesModel? images,
+    @JsonKey(name: 'images') ImagesNetworkModel? images,
     @JsonKey(name: 'name') String? name,
     @JsonKey(name: 'full_name') String? fullName,
     @JsonKey(name: 'status') String? status,
@@ -23,19 +23,19 @@ class LandpadModel with _$LandpadModel {
     @JsonKey(name: 'wikipedia') String? wikipedia,
     @JsonKey(name: 'details') String? details,
     @JsonKey(name: 'launches') @Default(<String>[]) List<String> launches,
-  }) = _LandpadModel;
+  }) = _LandpadNetworkModel;
 
-  const LandpadModel._();
+  const LandpadNetworkModel._();
 
-  factory LandpadModel.fromJson(Map<String, dynamic> json) =>
-      _$LandpadModelFromJson(json);
+  factory LandpadNetworkModel.fromJson(Map<String, dynamic> json) =>
+      _$LandpadNetworkModelFromJson(json);
 }
 
 @freezed
-class LandpadFullModel with _$LandpadFullModel {
-  const factory LandpadFullModel({
+class LandpadNetworkFullModel with _$LandpadNetworkFullModel {
+  const factory LandpadNetworkFullModel({
     @JsonKey(name: 'id') String? id,
-    @JsonKey(name: 'images') ImagesModel? images,
+    @JsonKey(name: 'images') ImagesNetworkModel? images,
     @JsonKey(name: 'name') String? name,
     @JsonKey(name: 'full_name') String? fullName,
     @JsonKey(name: 'status') String? status,
@@ -49,12 +49,12 @@ class LandpadFullModel with _$LandpadFullModel {
     @JsonKey(name: 'wikipedia') String? wikipedia,
     @JsonKey(name: 'details') String? details,
     @JsonKey(name: 'launches')
-    @Default(<LaunchModel>[])
-        List<LaunchModel> launches,
-  }) = _LandpadFullModel;
+    @Default(<LaunchNetworkModel>[])
+        List<LaunchNetworkModel> launches,
+  }) = _LandpadNetworkFullModel;
 
-  const LandpadFullModel._();
+  const LandpadNetworkFullModel._();
 
-  factory LandpadFullModel.fromJson(Map<String, dynamic> json) =>
-      _$LandpadFullModelFromJson(json);
+  factory LandpadNetworkFullModel.fromJson(Map<String, dynamic> json) =>
+      _$LandpadNetworkFullModelFromJson(json);
 }

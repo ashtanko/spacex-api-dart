@@ -24,7 +24,7 @@ mixin _$LaunchpadModel {
   @JsonKey(name: 'details')
   String? get details => throw _privateConstructorUsedError;
   @JsonKey(name: 'images')
-  ImagesModel? get images => throw _privateConstructorUsedError;
+  ImagesNetworkModel? get images => throw _privateConstructorUsedError;
   @JsonKey(name: 'status', unknownEnumValue: LaunchStatus.unknown)
   LaunchStatus get status => throw _privateConstructorUsedError;
   @JsonKey(name: 'launches')
@@ -67,7 +67,7 @@ abstract class $LaunchpadModelCopyWith<$Res> {
       @JsonKey(name: 'details')
           String? details,
       @JsonKey(name: 'images')
-          ImagesModel? images,
+          ImagesNetworkModel? images,
       @JsonKey(name: 'status', unknownEnumValue: LaunchStatus.unknown)
           LaunchStatus status,
       @JsonKey(name: 'launches')
@@ -93,7 +93,7 @@ abstract class $LaunchpadModelCopyWith<$Res> {
       @JsonKey(name: 'name')
           String? name});
 
-  $ImagesModelCopyWith<$Res>? get images;
+  $ImagesNetworkModelCopyWith<$Res>? get images;
 }
 
 /// @nodoc
@@ -137,7 +137,7 @@ class _$LaunchpadModelCopyWithImpl<$Res, $Val extends LaunchpadModel>
       images: freezed == images
           ? _value.images
           : images // ignore: cast_nullable_to_non_nullable
-              as ImagesModel?,
+              as ImagesNetworkModel?,
       status: null == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
@@ -191,12 +191,12 @@ class _$LaunchpadModelCopyWithImpl<$Res, $Val extends LaunchpadModel>
 
   @override
   @pragma('vm:prefer-inline')
-  $ImagesModelCopyWith<$Res>? get images {
+  $ImagesNetworkModelCopyWith<$Res>? get images {
     if (_value.images == null) {
       return null;
     }
 
-    return $ImagesModelCopyWith<$Res>(_value.images!, (value) {
+    return $ImagesNetworkModelCopyWith<$Res>(_value.images!, (value) {
       return _then(_value.copyWith(images: value) as $Val);
     });
   }
@@ -215,7 +215,7 @@ abstract class _$$_LaunchpadModelCopyWith<$Res>
       @JsonKey(name: 'details')
           String? details,
       @JsonKey(name: 'images')
-          ImagesModel? images,
+          ImagesNetworkModel? images,
       @JsonKey(name: 'status', unknownEnumValue: LaunchStatus.unknown)
           LaunchStatus status,
       @JsonKey(name: 'launches')
@@ -242,7 +242,7 @@ abstract class _$$_LaunchpadModelCopyWith<$Res>
           String? name});
 
   @override
-  $ImagesModelCopyWith<$Res>? get images;
+  $ImagesNetworkModelCopyWith<$Res>? get images;
 }
 
 /// @nodoc
@@ -284,7 +284,7 @@ class __$$_LaunchpadModelCopyWithImpl<$Res>
       images: freezed == images
           ? _value.images
           : images // ignore: cast_nullable_to_non_nullable
-              as ImagesModel?,
+              as ImagesNetworkModel?,
       status: null == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
@@ -384,7 +384,7 @@ class _$_LaunchpadModel extends _LaunchpadModel {
   final String? details;
   @override
   @JsonKey(name: 'images')
-  final ImagesModel? images;
+  final ImagesNetworkModel? images;
   @override
   @JsonKey(name: 'status', unknownEnumValue: LaunchStatus.unknown)
   final LaunchStatus status;
@@ -508,7 +508,7 @@ abstract class _LaunchpadModel extends LaunchpadModel {
       @JsonKey(name: 'details')
           final String? details,
       @JsonKey(name: 'images')
-          final ImagesModel? images,
+          final ImagesNetworkModel? images,
       @JsonKey(name: 'status', unknownEnumValue: LaunchStatus.unknown)
           final LaunchStatus status,
       @JsonKey(name: 'launches')
@@ -545,7 +545,7 @@ abstract class _LaunchpadModel extends LaunchpadModel {
   String? get details;
   @override
   @JsonKey(name: 'images')
-  ImagesModel? get images;
+  ImagesNetworkModel? get images;
   @override
   @JsonKey(name: 'status', unknownEnumValue: LaunchStatus.unknown)
   LaunchStatus get status;
@@ -598,11 +598,11 @@ mixin _$LaunchpadFullModel {
   @JsonKey(name: 'details')
   String? get details => throw _privateConstructorUsedError;
   @JsonKey(name: 'images')
-  ImagesModel? get images => throw _privateConstructorUsedError;
+  ImagesNetworkModel? get images => throw _privateConstructorUsedError;
   @JsonKey(name: 'status', unknownEnumValue: LaunchStatus.unknown)
   LaunchStatus get status => throw _privateConstructorUsedError;
   @JsonKey(name: 'launches')
-  List<LaunchModel> get launches => throw _privateConstructorUsedError;
+  List<LaunchNetworkModel> get launches => throw _privateConstructorUsedError;
   @JsonKey(name: 'timezone')
   String? get timezone => throw _privateConstructorUsedError;
   @JsonKey(name: 'rockets')
@@ -641,11 +641,11 @@ abstract class $LaunchpadFullModelCopyWith<$Res> {
       @JsonKey(name: 'details')
           String? details,
       @JsonKey(name: 'images')
-          ImagesModel? images,
+          ImagesNetworkModel? images,
       @JsonKey(name: 'status', unknownEnumValue: LaunchStatus.unknown)
           LaunchStatus status,
       @JsonKey(name: 'launches')
-          List<LaunchModel> launches,
+          List<LaunchNetworkModel> launches,
       @JsonKey(name: 'timezone')
           String? timezone,
       @JsonKey(name: 'rockets')
@@ -667,7 +667,7 @@ abstract class $LaunchpadFullModelCopyWith<$Res> {
       @JsonKey(name: 'name')
           String? name});
 
-  $ImagesModelCopyWith<$Res>? get images;
+  $ImagesNetworkModelCopyWith<$Res>? get images;
 }
 
 /// @nodoc
@@ -711,7 +711,7 @@ class _$LaunchpadFullModelCopyWithImpl<$Res, $Val extends LaunchpadFullModel>
       images: freezed == images
           ? _value.images
           : images // ignore: cast_nullable_to_non_nullable
-              as ImagesModel?,
+              as ImagesNetworkModel?,
       status: null == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
@@ -719,7 +719,7 @@ class _$LaunchpadFullModelCopyWithImpl<$Res, $Val extends LaunchpadFullModel>
       launches: null == launches
           ? _value.launches
           : launches // ignore: cast_nullable_to_non_nullable
-              as List<LaunchModel>,
+              as List<LaunchNetworkModel>,
       timezone: freezed == timezone
           ? _value.timezone
           : timezone // ignore: cast_nullable_to_non_nullable
@@ -765,12 +765,12 @@ class _$LaunchpadFullModelCopyWithImpl<$Res, $Val extends LaunchpadFullModel>
 
   @override
   @pragma('vm:prefer-inline')
-  $ImagesModelCopyWith<$Res>? get images {
+  $ImagesNetworkModelCopyWith<$Res>? get images {
     if (_value.images == null) {
       return null;
     }
 
-    return $ImagesModelCopyWith<$Res>(_value.images!, (value) {
+    return $ImagesNetworkModelCopyWith<$Res>(_value.images!, (value) {
       return _then(_value.copyWith(images: value) as $Val);
     });
   }
@@ -789,11 +789,11 @@ abstract class _$$_LaunchpadFullModelCopyWith<$Res>
       @JsonKey(name: 'details')
           String? details,
       @JsonKey(name: 'images')
-          ImagesModel? images,
+          ImagesNetworkModel? images,
       @JsonKey(name: 'status', unknownEnumValue: LaunchStatus.unknown)
           LaunchStatus status,
       @JsonKey(name: 'launches')
-          List<LaunchModel> launches,
+          List<LaunchNetworkModel> launches,
       @JsonKey(name: 'timezone')
           String? timezone,
       @JsonKey(name: 'rockets')
@@ -816,7 +816,7 @@ abstract class _$$_LaunchpadFullModelCopyWith<$Res>
           String? name});
 
   @override
-  $ImagesModelCopyWith<$Res>? get images;
+  $ImagesNetworkModelCopyWith<$Res>? get images;
 }
 
 /// @nodoc
@@ -858,7 +858,7 @@ class __$$_LaunchpadFullModelCopyWithImpl<$Res>
       images: freezed == images
           ? _value.images
           : images // ignore: cast_nullable_to_non_nullable
-              as ImagesModel?,
+              as ImagesNetworkModel?,
       status: null == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
@@ -866,7 +866,7 @@ class __$$_LaunchpadFullModelCopyWithImpl<$Res>
       launches: null == launches
           ? _value._launches
           : launches // ignore: cast_nullable_to_non_nullable
-              as List<LaunchModel>,
+              as List<LaunchNetworkModel>,
       timezone: freezed == timezone
           ? _value.timezone
           : timezone // ignore: cast_nullable_to_non_nullable
@@ -923,7 +923,7 @@ class _$_LaunchpadFullModel extends _LaunchpadFullModel {
       @JsonKey(name: 'status', unknownEnumValue: LaunchStatus.unknown)
           this.status = LaunchStatus.unknown,
       @JsonKey(name: 'launches')
-          final List<LaunchModel> launches = const [],
+          final List<LaunchNetworkModel> launches = const [],
       @JsonKey(name: 'timezone')
           this.timezone,
       @JsonKey(name: 'rockets')
@@ -958,14 +958,14 @@ class _$_LaunchpadFullModel extends _LaunchpadFullModel {
   final String? details;
   @override
   @JsonKey(name: 'images')
-  final ImagesModel? images;
+  final ImagesNetworkModel? images;
   @override
   @JsonKey(name: 'status', unknownEnumValue: LaunchStatus.unknown)
   final LaunchStatus status;
-  final List<LaunchModel> _launches;
+  final List<LaunchNetworkModel> _launches;
   @override
   @JsonKey(name: 'launches')
-  List<LaunchModel> get launches {
+  List<LaunchNetworkModel> get launches {
     if (_launches is EqualUnmodifiableListView) return _launches;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_launches);
@@ -1083,11 +1083,11 @@ abstract class _LaunchpadFullModel extends LaunchpadFullModel {
       @JsonKey(name: 'details')
           final String? details,
       @JsonKey(name: 'images')
-          final ImagesModel? images,
+          final ImagesNetworkModel? images,
       @JsonKey(name: 'status', unknownEnumValue: LaunchStatus.unknown)
           final LaunchStatus status,
       @JsonKey(name: 'launches')
-          final List<LaunchModel> launches,
+          final List<LaunchNetworkModel> launches,
       @JsonKey(name: 'timezone')
           final String? timezone,
       @JsonKey(name: 'rockets')
@@ -1120,13 +1120,13 @@ abstract class _LaunchpadFullModel extends LaunchpadFullModel {
   String? get details;
   @override
   @JsonKey(name: 'images')
-  ImagesModel? get images;
+  ImagesNetworkModel? get images;
   @override
   @JsonKey(name: 'status', unknownEnumValue: LaunchStatus.unknown)
   LaunchStatus get status;
   @override
   @JsonKey(name: 'launches')
-  List<LaunchModel> get launches;
+  List<LaunchNetworkModel> get launches;
   @override
   @JsonKey(name: 'timezone')
   String? get timezone;

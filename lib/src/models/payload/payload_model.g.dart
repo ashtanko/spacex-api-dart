@@ -104,7 +104,7 @@ _$_FullPayloadModel _$$_FullPayloadModelFromJson(Map<String, dynamic> json) =>
       reused: json['reused'] as bool? ?? false,
       launch: json['launch'] == null
           ? null
-          : LaunchModel.fromJson(json['launch'] as Map<String, dynamic>),
+          : LaunchNetworkModel.fromJson(json['launch'] as Map<String, dynamic>),
       customers: (json['customers'] as List<dynamic>?)
               ?.map((e) => e as String)
               .toList() ??

@@ -24,7 +24,7 @@ void main() {
         // arrange
         final Map<String, dynamic> jsonMap = 'launch/launch.json'.toFixture();
         // act
-        final result = LaunchModel.fromJson(jsonMap);
+        final result = LaunchNetworkModel.fromJson(jsonMap);
         // assert
         expect(result, equals(launchModel));
       },
@@ -98,7 +98,7 @@ void main() {
         'id': '5eb87cd9ffd86e000604b32a'
       };
 
-      final actual = LaunchModel.fromJson(json);
+      final actual = LaunchNetworkModel.fromJson(json);
       // assert
       expect(actual, equals(launchModel));
     });
@@ -109,7 +109,7 @@ void main() {
         // arrange
         final Map<String, dynamic> jsonMap = 'launch/full.json'.toFixture();
         // act
-        final result = FullLaunchModel.fromJson(jsonMap);
+        final result = LaunchNetworkFullModel.fromJson(jsonMap);
         // assert
         expect(result, equals(fullLaunchModel));
       },

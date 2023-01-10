@@ -19,7 +19,7 @@ void main() {
 
   group('getAllLaunches', () {
     final rawJson = 'launch/launch.json'.toFixture();
-    final model = LaunchSimpleModel.fromJson(rawJson);
+    final model = LaunchNetworkSimpleModel.fromJson(rawJson);
     final mockResponse = [model];
     test(
       'should perform a GET request on /launches',
@@ -42,7 +42,7 @@ void main() {
 
   group('getUpcomingLaunches', () {
     final rawJson = 'launch/upcoming.json'.toFixture();
-    final model = LaunchSimpleModel.fromJson(rawJson);
+    final model = LaunchNetworkSimpleModel.fromJson(rawJson);
     final mockResponse = [model];
     test(
       'should perform a GET request on /launches/upcoming',
@@ -65,7 +65,7 @@ void main() {
 
   group('getPastLaunches', () {
     final rawJson = 'launch/past.json'.toFixture();
-    final model = LaunchSimpleModel.fromJson(rawJson);
+    final model = LaunchNetworkSimpleModel.fromJson(rawJson);
     final mockResponse = [model];
     test(
       'should perform a GET request on /launches/past',
@@ -88,7 +88,7 @@ void main() {
 
   group('getLatestLaunch', () {
     final rawJson = 'launch/latest.json'.toFixture();
-    final mockResponse = LaunchSimpleModel.fromJson(rawJson);
+    final mockResponse = LaunchNetworkSimpleModel.fromJson(rawJson);
     test(
       'should perform a GET request on /launches/latest',
       () async {
@@ -110,7 +110,7 @@ void main() {
 
   group('getNextLaunch', () {
     final rawJson = 'launch/next.json'.toFixture();
-    final mockResponse = LaunchSimpleModel.fromJson(rawJson);
+    final mockResponse = LaunchNetworkSimpleModel.fromJson(rawJson);
     test(
       'should perform a GET request on /launches/next',
       () async {
@@ -133,7 +133,7 @@ void main() {
   group('getLaunch', () {
     const id = '5eb87cdaffd86e000604b32b';
     final rawJson = 'launch/launch.json'.toFixture();
-    final mockResponse = LaunchModel.fromJson(rawJson);
+    final mockResponse = LaunchNetworkModel.fromJson(rawJson);
     test(
       'should perform a GET request on /launches/{$id}',
       () async {
@@ -157,7 +157,7 @@ void main() {
     final rawJson = 'launch/launch.json'.toFixture();
     final mockResponse = ApiPaginatedList(
       results: [
-        LaunchSimpleModel.fromJson(rawJson),
+        LaunchNetworkSimpleModel.fromJson(rawJson),
       ],
     );
     final queryRawJson = 'query/query.json'.toFixture();
@@ -185,7 +185,7 @@ void main() {
     final rawJson = 'launch/full.json'.toFixture();
     final mockResponse = ApiPaginatedList(
       results: [
-        FullLaunchModel.fromJson(rawJson),
+        LaunchNetworkFullModel.fromJson(rawJson),
       ],
     );
     final queryRawJson = 'query/query.json'.toFixture();

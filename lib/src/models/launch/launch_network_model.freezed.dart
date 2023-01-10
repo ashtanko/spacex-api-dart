@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'launch_model.dart';
+part of 'launch_network_model.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -14,12 +14,13 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
-FullLaunchModel _$FullLaunchModelFromJson(Map<String, dynamic> json) {
-  return _FullLaunchModel.fromJson(json);
+LaunchNetworkFullModel _$LaunchNetworkFullModelFromJson(
+    Map<String, dynamic> json) {
+  return _LaunchNetworkFullModel.fromJson(json);
 }
 
 /// @nodoc
-mixin _$FullLaunchModel {
+mixin _$LaunchNetworkFullModel {
   String get id => throw _privateConstructorUsedError;
   bool get tbd => throw _privateConstructorUsedError;
   @JsonKey(name: 'auto_update')
@@ -52,7 +53,8 @@ mixin _$FullLaunchModel {
   @JsonKey(name: 'details')
   String get details => throw _privateConstructorUsedError;
   @JsonKey(name: 'failures')
-  List<LaunchFailureModel> get failures => throw _privateConstructorUsedError;
+  List<LaunchFailureNetworkModel> get failures =>
+      throw _privateConstructorUsedError;
   @JsonKey(name: 'success')
   bool get success => throw _privateConstructorUsedError;
   @JsonKey(name: 'rocket')
@@ -66,23 +68,23 @@ mixin _$FullLaunchModel {
   @JsonKey(name: 'static_fire_date_utc')
   String get staticFireDateUtc => throw _privateConstructorUsedError;
   @JsonKey(name: 'links')
-  LaunchLinksModel? get links => throw _privateConstructorUsedError;
+  LaunchLinksNetworkModel? get links => throw _privateConstructorUsedError;
   @JsonKey(name: 'fairings')
-  FairingsModel? get fairings => throw _privateConstructorUsedError;
+  FairingsNetworkModel? get fairings => throw _privateConstructorUsedError;
   @JsonKey(name: 'launch_library_id')
   String? get launchLibraryId => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $FullLaunchModelCopyWith<FullLaunchModel> get copyWith =>
+  $LaunchNetworkFullModelCopyWith<LaunchNetworkFullModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $FullLaunchModelCopyWith<$Res> {
-  factory $FullLaunchModelCopyWith(
-          FullLaunchModel value, $Res Function(FullLaunchModel) then) =
-      _$FullLaunchModelCopyWithImpl<$Res, FullLaunchModel>;
+abstract class $LaunchNetworkFullModelCopyWith<$Res> {
+  factory $LaunchNetworkFullModelCopyWith(LaunchNetworkFullModel value,
+          $Res Function(LaunchNetworkFullModel) then) =
+      _$LaunchNetworkFullModelCopyWithImpl<$Res, LaunchNetworkFullModel>;
   @useResult
   $Res call(
       {String id,
@@ -102,27 +104,28 @@ abstract class $FullLaunchModelCopyWith<$Res> {
       @JsonKey(name: 'ships') List<ShipModel> ships,
       @JsonKey(name: 'crew') List<String> crew,
       @JsonKey(name: 'details') String details,
-      @JsonKey(name: 'failures') List<LaunchFailureModel> failures,
+      @JsonKey(name: 'failures') List<LaunchFailureNetworkModel> failures,
       @JsonKey(name: 'success') bool success,
       @JsonKey(name: 'rocket') RocketModel? rocket,
       @JsonKey(name: 'window') int window,
       @JsonKey(name: 'net') bool net,
       @JsonKey(name: 'static_fire_date_unix') int staticFireDateUnix,
       @JsonKey(name: 'static_fire_date_utc') String staticFireDateUtc,
-      @JsonKey(name: 'links') LaunchLinksModel? links,
-      @JsonKey(name: 'fairings') FairingsModel? fairings,
+      @JsonKey(name: 'links') LaunchLinksNetworkModel? links,
+      @JsonKey(name: 'fairings') FairingsNetworkModel? fairings,
       @JsonKey(name: 'launch_library_id') String? launchLibraryId});
 
   $LaunchpadModelCopyWith<$Res>? get launchpad;
   $RocketModelCopyWith<$Res>? get rocket;
-  $LaunchLinksModelCopyWith<$Res>? get links;
-  $FairingsModelCopyWith<$Res>? get fairings;
+  $LaunchLinksNetworkModelCopyWith<$Res>? get links;
+  $FairingsNetworkModelCopyWith<$Res>? get fairings;
 }
 
 /// @nodoc
-class _$FullLaunchModelCopyWithImpl<$Res, $Val extends FullLaunchModel>
-    implements $FullLaunchModelCopyWith<$Res> {
-  _$FullLaunchModelCopyWithImpl(this._value, this._then);
+class _$LaunchNetworkFullModelCopyWithImpl<$Res,
+        $Val extends LaunchNetworkFullModel>
+    implements $LaunchNetworkFullModelCopyWith<$Res> {
+  _$LaunchNetworkFullModelCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -232,7 +235,7 @@ class _$FullLaunchModelCopyWithImpl<$Res, $Val extends FullLaunchModel>
       failures: null == failures
           ? _value.failures
           : failures // ignore: cast_nullable_to_non_nullable
-              as List<LaunchFailureModel>,
+              as List<LaunchFailureNetworkModel>,
       success: null == success
           ? _value.success
           : success // ignore: cast_nullable_to_non_nullable
@@ -260,11 +263,11 @@ class _$FullLaunchModelCopyWithImpl<$Res, $Val extends FullLaunchModel>
       links: freezed == links
           ? _value.links
           : links // ignore: cast_nullable_to_non_nullable
-              as LaunchLinksModel?,
+              as LaunchLinksNetworkModel?,
       fairings: freezed == fairings
           ? _value.fairings
           : fairings // ignore: cast_nullable_to_non_nullable
-              as FairingsModel?,
+              as FairingsNetworkModel?,
       launchLibraryId: freezed == launchLibraryId
           ? _value.launchLibraryId
           : launchLibraryId // ignore: cast_nullable_to_non_nullable
@@ -298,35 +301,35 @@ class _$FullLaunchModelCopyWithImpl<$Res, $Val extends FullLaunchModel>
 
   @override
   @pragma('vm:prefer-inline')
-  $LaunchLinksModelCopyWith<$Res>? get links {
+  $LaunchLinksNetworkModelCopyWith<$Res>? get links {
     if (_value.links == null) {
       return null;
     }
 
-    return $LaunchLinksModelCopyWith<$Res>(_value.links!, (value) {
+    return $LaunchLinksNetworkModelCopyWith<$Res>(_value.links!, (value) {
       return _then(_value.copyWith(links: value) as $Val);
     });
   }
 
   @override
   @pragma('vm:prefer-inline')
-  $FairingsModelCopyWith<$Res>? get fairings {
+  $FairingsNetworkModelCopyWith<$Res>? get fairings {
     if (_value.fairings == null) {
       return null;
     }
 
-    return $FairingsModelCopyWith<$Res>(_value.fairings!, (value) {
+    return $FairingsNetworkModelCopyWith<$Res>(_value.fairings!, (value) {
       return _then(_value.copyWith(fairings: value) as $Val);
     });
   }
 }
 
 /// @nodoc
-abstract class _$$_FullLaunchModelCopyWith<$Res>
-    implements $FullLaunchModelCopyWith<$Res> {
-  factory _$$_FullLaunchModelCopyWith(
-          _$_FullLaunchModel value, $Res Function(_$_FullLaunchModel) then) =
-      __$$_FullLaunchModelCopyWithImpl<$Res>;
+abstract class _$$_LaunchNetworkFullModelCopyWith<$Res>
+    implements $LaunchNetworkFullModelCopyWith<$Res> {
+  factory _$$_LaunchNetworkFullModelCopyWith(_$_LaunchNetworkFullModel value,
+          $Res Function(_$_LaunchNetworkFullModel) then) =
+      __$$_LaunchNetworkFullModelCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -347,15 +350,15 @@ abstract class _$$_FullLaunchModelCopyWith<$Res>
       @JsonKey(name: 'ships') List<ShipModel> ships,
       @JsonKey(name: 'crew') List<String> crew,
       @JsonKey(name: 'details') String details,
-      @JsonKey(name: 'failures') List<LaunchFailureModel> failures,
+      @JsonKey(name: 'failures') List<LaunchFailureNetworkModel> failures,
       @JsonKey(name: 'success') bool success,
       @JsonKey(name: 'rocket') RocketModel? rocket,
       @JsonKey(name: 'window') int window,
       @JsonKey(name: 'net') bool net,
       @JsonKey(name: 'static_fire_date_unix') int staticFireDateUnix,
       @JsonKey(name: 'static_fire_date_utc') String staticFireDateUtc,
-      @JsonKey(name: 'links') LaunchLinksModel? links,
-      @JsonKey(name: 'fairings') FairingsModel? fairings,
+      @JsonKey(name: 'links') LaunchLinksNetworkModel? links,
+      @JsonKey(name: 'fairings') FairingsNetworkModel? fairings,
       @JsonKey(name: 'launch_library_id') String? launchLibraryId});
 
   @override
@@ -363,17 +366,18 @@ abstract class _$$_FullLaunchModelCopyWith<$Res>
   @override
   $RocketModelCopyWith<$Res>? get rocket;
   @override
-  $LaunchLinksModelCopyWith<$Res>? get links;
+  $LaunchLinksNetworkModelCopyWith<$Res>? get links;
   @override
-  $FairingsModelCopyWith<$Res>? get fairings;
+  $FairingsNetworkModelCopyWith<$Res>? get fairings;
 }
 
 /// @nodoc
-class __$$_FullLaunchModelCopyWithImpl<$Res>
-    extends _$FullLaunchModelCopyWithImpl<$Res, _$_FullLaunchModel>
-    implements _$$_FullLaunchModelCopyWith<$Res> {
-  __$$_FullLaunchModelCopyWithImpl(
-      _$_FullLaunchModel _value, $Res Function(_$_FullLaunchModel) _then)
+class __$$_LaunchNetworkFullModelCopyWithImpl<$Res>
+    extends _$LaunchNetworkFullModelCopyWithImpl<$Res,
+        _$_LaunchNetworkFullModel>
+    implements _$$_LaunchNetworkFullModelCopyWith<$Res> {
+  __$$_LaunchNetworkFullModelCopyWithImpl(_$_LaunchNetworkFullModel _value,
+      $Res Function(_$_LaunchNetworkFullModel) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -407,7 +411,7 @@ class __$$_FullLaunchModelCopyWithImpl<$Res>
     Object? fairings = freezed,
     Object? launchLibraryId = freezed,
   }) {
-    return _then(_$_FullLaunchModel(
+    return _then(_$_LaunchNetworkFullModel(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -479,7 +483,7 @@ class __$$_FullLaunchModelCopyWithImpl<$Res>
       failures: null == failures
           ? _value._failures
           : failures // ignore: cast_nullable_to_non_nullable
-              as List<LaunchFailureModel>,
+              as List<LaunchFailureNetworkModel>,
       success: null == success
           ? _value.success
           : success // ignore: cast_nullable_to_non_nullable
@@ -507,11 +511,11 @@ class __$$_FullLaunchModelCopyWithImpl<$Res>
       links: freezed == links
           ? _value.links
           : links // ignore: cast_nullable_to_non_nullable
-              as LaunchLinksModel?,
+              as LaunchLinksNetworkModel?,
       fairings: freezed == fairings
           ? _value.fairings
           : fairings // ignore: cast_nullable_to_non_nullable
-              as FairingsModel?,
+              as FairingsNetworkModel?,
       launchLibraryId: freezed == launchLibraryId
           ? _value.launchLibraryId
           : launchLibraryId // ignore: cast_nullable_to_non_nullable
@@ -522,8 +526,8 @@ class __$$_FullLaunchModelCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_FullLaunchModel extends _FullLaunchModel {
-  const _$_FullLaunchModel(
+class _$_LaunchNetworkFullModel extends _LaunchNetworkFullModel {
+  const _$_LaunchNetworkFullModel(
       {required this.id,
       this.tbd = false,
       @JsonKey(name: 'auto_update')
@@ -556,7 +560,7 @@ class _$_FullLaunchModel extends _FullLaunchModel {
       @JsonKey(name: 'details')
           this.details = '',
       @JsonKey(name: 'failures')
-          final List<LaunchFailureModel> failures = const [],
+          final List<LaunchFailureNetworkModel> failures = const [],
       @JsonKey(name: 'success')
           this.success = false,
       @JsonKey(name: 'rocket')
@@ -583,8 +587,8 @@ class _$_FullLaunchModel extends _FullLaunchModel {
         _failures = failures,
         super._();
 
-  factory _$_FullLaunchModel.fromJson(Map<String, dynamic> json) =>
-      _$$_FullLaunchModelFromJson(json);
+  factory _$_LaunchNetworkFullModel.fromJson(Map<String, dynamic> json) =>
+      _$$_LaunchNetworkFullModelFromJson(json);
 
   @override
   final String id;
@@ -666,10 +670,10 @@ class _$_FullLaunchModel extends _FullLaunchModel {
   @override
   @JsonKey(name: 'details')
   final String details;
-  final List<LaunchFailureModel> _failures;
+  final List<LaunchFailureNetworkModel> _failures;
   @override
   @JsonKey(name: 'failures')
-  List<LaunchFailureModel> get failures {
+  List<LaunchFailureNetworkModel> get failures {
     if (_failures is EqualUnmodifiableListView) return _failures;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_failures);
@@ -695,24 +699,24 @@ class _$_FullLaunchModel extends _FullLaunchModel {
   final String staticFireDateUtc;
   @override
   @JsonKey(name: 'links')
-  final LaunchLinksModel? links;
+  final LaunchLinksNetworkModel? links;
   @override
   @JsonKey(name: 'fairings')
-  final FairingsModel? fairings;
+  final FairingsNetworkModel? fairings;
   @override
   @JsonKey(name: 'launch_library_id')
   final String? launchLibraryId;
 
   @override
   String toString() {
-    return 'FullLaunchModel(id: $id, tbd: $tbd, autoUpdate: $autoUpdate, cores: $cores, upcoming: $upcoming, datePrecision: $datePrecision, dateLocal: $dateLocal, dateUnix: $dateUnix, dateUtc: $dateUtc, name: $name, flightNumber: $flightNumber, launchpad: $launchpad, payloads: $payloads, capsules: $capsules, ships: $ships, crew: $crew, details: $details, failures: $failures, success: $success, rocket: $rocket, window: $window, net: $net, staticFireDateUnix: $staticFireDateUnix, staticFireDateUtc: $staticFireDateUtc, links: $links, fairings: $fairings, launchLibraryId: $launchLibraryId)';
+    return 'LaunchNetworkFullModel(id: $id, tbd: $tbd, autoUpdate: $autoUpdate, cores: $cores, upcoming: $upcoming, datePrecision: $datePrecision, dateLocal: $dateLocal, dateUnix: $dateUnix, dateUtc: $dateUtc, name: $name, flightNumber: $flightNumber, launchpad: $launchpad, payloads: $payloads, capsules: $capsules, ships: $ships, crew: $crew, details: $details, failures: $failures, success: $success, rocket: $rocket, window: $window, net: $net, staticFireDateUnix: $staticFireDateUnix, staticFireDateUtc: $staticFireDateUtc, links: $links, fairings: $fairings, launchLibraryId: $launchLibraryId)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_FullLaunchModel &&
+            other is _$_LaunchNetworkFullModel &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.tbd, tbd) || other.tbd == tbd) &&
             (identical(other.autoUpdate, autoUpdate) ||
@@ -789,51 +793,75 @@ class _$_FullLaunchModel extends _FullLaunchModel {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_FullLaunchModelCopyWith<_$_FullLaunchModel> get copyWith =>
-      __$$_FullLaunchModelCopyWithImpl<_$_FullLaunchModel>(this, _$identity);
+  _$$_LaunchNetworkFullModelCopyWith<_$_LaunchNetworkFullModel> get copyWith =>
+      __$$_LaunchNetworkFullModelCopyWithImpl<_$_LaunchNetworkFullModel>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_FullLaunchModelToJson(
+    return _$$_LaunchNetworkFullModelToJson(
       this,
     );
   }
 }
 
-abstract class _FullLaunchModel extends FullLaunchModel {
-  const factory _FullLaunchModel(
-          {required final String id,
-          final bool tbd,
-          @JsonKey(name: 'auto_update') final bool autoUpdate,
-          @JsonKey(name: 'cores') final List<CoreNetworkModel> cores,
-          final bool upcoming,
-          @JsonKey(name: 'date_precision') final String datePrecision,
-          @JsonKey(name: 'date_local') final String dateLocal,
-          @JsonKey(name: 'date_unix') final int dateUnix,
-          @JsonKey(name: 'date_utc') final String dateUtc,
-          @JsonKey(name: 'name') final String name,
-          @JsonKey(name: 'flight_number') final int flightNumber,
-          @JsonKey(name: 'launchpad') final LaunchpadModel? launchpad,
-          @JsonKey(name: 'payloads') final List<PayloadModel> payloads,
-          @JsonKey(name: 'capsules') final List<CapsuleNetworkModel> capsules,
-          @JsonKey(name: 'ships') final List<ShipModel> ships,
-          @JsonKey(name: 'crew') final List<String> crew,
-          @JsonKey(name: 'details') final String details,
-          @JsonKey(name: 'failures') final List<LaunchFailureModel> failures,
-          @JsonKey(name: 'success') final bool success,
-          @JsonKey(name: 'rocket') final RocketModel? rocket,
-          @JsonKey(name: 'window') final int window,
-          @JsonKey(name: 'net') final bool net,
-          @JsonKey(name: 'static_fire_date_unix') final int staticFireDateUnix,
-          @JsonKey(name: 'static_fire_date_utc') final String staticFireDateUtc,
-          @JsonKey(name: 'links') final LaunchLinksModel? links,
-          @JsonKey(name: 'fairings') final FairingsModel? fairings,
-          @JsonKey(name: 'launch_library_id') final String? launchLibraryId}) =
-      _$_FullLaunchModel;
-  const _FullLaunchModel._() : super._();
+abstract class _LaunchNetworkFullModel extends LaunchNetworkFullModel {
+  const factory _LaunchNetworkFullModel(
+      {required final String id,
+      final bool tbd,
+      @JsonKey(name: 'auto_update')
+          final bool autoUpdate,
+      @JsonKey(name: 'cores')
+          final List<CoreNetworkModel> cores,
+      final bool upcoming,
+      @JsonKey(name: 'date_precision')
+          final String datePrecision,
+      @JsonKey(name: 'date_local')
+          final String dateLocal,
+      @JsonKey(name: 'date_unix')
+          final int dateUnix,
+      @JsonKey(name: 'date_utc')
+          final String dateUtc,
+      @JsonKey(name: 'name')
+          final String name,
+      @JsonKey(name: 'flight_number')
+          final int flightNumber,
+      @JsonKey(name: 'launchpad')
+          final LaunchpadModel? launchpad,
+      @JsonKey(name: 'payloads')
+          final List<PayloadModel> payloads,
+      @JsonKey(name: 'capsules')
+          final List<CapsuleNetworkModel> capsules,
+      @JsonKey(name: 'ships')
+          final List<ShipModel> ships,
+      @JsonKey(name: 'crew')
+          final List<String> crew,
+      @JsonKey(name: 'details')
+          final String details,
+      @JsonKey(name: 'failures')
+          final List<LaunchFailureNetworkModel> failures,
+      @JsonKey(name: 'success')
+          final bool success,
+      @JsonKey(name: 'rocket')
+          final RocketModel? rocket,
+      @JsonKey(name: 'window')
+          final int window,
+      @JsonKey(name: 'net')
+          final bool net,
+      @JsonKey(name: 'static_fire_date_unix')
+          final int staticFireDateUnix,
+      @JsonKey(name: 'static_fire_date_utc')
+          final String staticFireDateUtc,
+      @JsonKey(name: 'links')
+          final LaunchLinksNetworkModel? links,
+      @JsonKey(name: 'fairings')
+          final FairingsNetworkModel? fairings,
+      @JsonKey(name: 'launch_library_id')
+          final String? launchLibraryId}) = _$_LaunchNetworkFullModel;
+  const _LaunchNetworkFullModel._() : super._();
 
-  factory _FullLaunchModel.fromJson(Map<String, dynamic> json) =
-      _$_FullLaunchModel.fromJson;
+  factory _LaunchNetworkFullModel.fromJson(Map<String, dynamic> json) =
+      _$_LaunchNetworkFullModel.fromJson;
 
   @override
   String get id;
@@ -885,7 +913,7 @@ abstract class _FullLaunchModel extends FullLaunchModel {
   String get details;
   @override
   @JsonKey(name: 'failures')
-  List<LaunchFailureModel> get failures;
+  List<LaunchFailureNetworkModel> get failures;
   @override
   @JsonKey(name: 'success')
   bool get success;
@@ -906,25 +934,26 @@ abstract class _FullLaunchModel extends FullLaunchModel {
   String get staticFireDateUtc;
   @override
   @JsonKey(name: 'links')
-  LaunchLinksModel? get links;
+  LaunchLinksNetworkModel? get links;
   @override
   @JsonKey(name: 'fairings')
-  FairingsModel? get fairings;
+  FairingsNetworkModel? get fairings;
   @override
   @JsonKey(name: 'launch_library_id')
   String? get launchLibraryId;
   @override
   @JsonKey(ignore: true)
-  _$$_FullLaunchModelCopyWith<_$_FullLaunchModel> get copyWith =>
+  _$$_LaunchNetworkFullModelCopyWith<_$_LaunchNetworkFullModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
-LaunchSimpleModel _$LaunchSimpleModelFromJson(Map<String, dynamic> json) {
-  return _LaunchSimpleModel.fromJson(json);
+LaunchNetworkSimpleModel _$LaunchNetworkSimpleModelFromJson(
+    Map<String, dynamic> json) {
+  return _LaunchNetworkSimpleModel.fromJson(json);
 }
 
 /// @nodoc
-mixin _$LaunchSimpleModel {
+mixin _$LaunchNetworkSimpleModel {
   @JsonKey(name: 'id')
   String get id => throw _privateConstructorUsedError;
   bool get tbd => throw _privateConstructorUsedError;
@@ -958,7 +987,8 @@ mixin _$LaunchSimpleModel {
   @JsonKey(name: 'details')
   String get details => throw _privateConstructorUsedError;
   @JsonKey(name: 'failures')
-  List<LaunchFailureModel> get failures => throw _privateConstructorUsedError;
+  List<LaunchFailureNetworkModel> get failures =>
+      throw _privateConstructorUsedError;
   @JsonKey(name: 'success')
   bool get success => throw _privateConstructorUsedError;
   @JsonKey(name: 'rocket')
@@ -972,23 +1002,23 @@ mixin _$LaunchSimpleModel {
   @JsonKey(name: 'static_fire_date_utc')
   String get staticFireDateUtc => throw _privateConstructorUsedError;
   @JsonKey(name: 'links')
-  LaunchLinksModel? get links => throw _privateConstructorUsedError;
+  LaunchLinksNetworkModel? get links => throw _privateConstructorUsedError;
   @JsonKey(name: 'fairings')
-  FairingsModel? get fairings => throw _privateConstructorUsedError;
+  FairingsNetworkModel? get fairings => throw _privateConstructorUsedError;
   @JsonKey(name: 'launch_library_id')
   String? get launchLibraryId => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $LaunchSimpleModelCopyWith<LaunchSimpleModel> get copyWith =>
+  $LaunchNetworkSimpleModelCopyWith<LaunchNetworkSimpleModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $LaunchSimpleModelCopyWith<$Res> {
-  factory $LaunchSimpleModelCopyWith(
-          LaunchSimpleModel value, $Res Function(LaunchSimpleModel) then) =
-      _$LaunchSimpleModelCopyWithImpl<$Res, LaunchSimpleModel>;
+abstract class $LaunchNetworkSimpleModelCopyWith<$Res> {
+  factory $LaunchNetworkSimpleModelCopyWith(LaunchNetworkSimpleModel value,
+          $Res Function(LaunchNetworkSimpleModel) then) =
+      _$LaunchNetworkSimpleModelCopyWithImpl<$Res, LaunchNetworkSimpleModel>;
   @useResult
   $Res call(
       {@JsonKey(name: 'id') String id,
@@ -1008,25 +1038,26 @@ abstract class $LaunchSimpleModelCopyWith<$Res> {
       @JsonKey(name: 'ships') List<String> ships,
       @JsonKey(name: 'crew') List<String> crew,
       @JsonKey(name: 'details') String details,
-      @JsonKey(name: 'failures') List<LaunchFailureModel> failures,
+      @JsonKey(name: 'failures') List<LaunchFailureNetworkModel> failures,
       @JsonKey(name: 'success') bool success,
       @JsonKey(name: 'rocket') String rocket,
       @JsonKey(name: 'window') int window,
       @JsonKey(name: 'net') bool net,
       @JsonKey(name: 'static_fire_date_unix') int staticFireDateUnix,
       @JsonKey(name: 'static_fire_date_utc') String staticFireDateUtc,
-      @JsonKey(name: 'links') LaunchLinksModel? links,
-      @JsonKey(name: 'fairings') FairingsModel? fairings,
+      @JsonKey(name: 'links') LaunchLinksNetworkModel? links,
+      @JsonKey(name: 'fairings') FairingsNetworkModel? fairings,
       @JsonKey(name: 'launch_library_id') String? launchLibraryId});
 
-  $LaunchLinksModelCopyWith<$Res>? get links;
-  $FairingsModelCopyWith<$Res>? get fairings;
+  $LaunchLinksNetworkModelCopyWith<$Res>? get links;
+  $FairingsNetworkModelCopyWith<$Res>? get fairings;
 }
 
 /// @nodoc
-class _$LaunchSimpleModelCopyWithImpl<$Res, $Val extends LaunchSimpleModel>
-    implements $LaunchSimpleModelCopyWith<$Res> {
-  _$LaunchSimpleModelCopyWithImpl(this._value, this._then);
+class _$LaunchNetworkSimpleModelCopyWithImpl<$Res,
+        $Val extends LaunchNetworkSimpleModel>
+    implements $LaunchNetworkSimpleModelCopyWith<$Res> {
+  _$LaunchNetworkSimpleModelCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -1136,7 +1167,7 @@ class _$LaunchSimpleModelCopyWithImpl<$Res, $Val extends LaunchSimpleModel>
       failures: null == failures
           ? _value.failures
           : failures // ignore: cast_nullable_to_non_nullable
-              as List<LaunchFailureModel>,
+              as List<LaunchFailureNetworkModel>,
       success: null == success
           ? _value.success
           : success // ignore: cast_nullable_to_non_nullable
@@ -1164,11 +1195,11 @@ class _$LaunchSimpleModelCopyWithImpl<$Res, $Val extends LaunchSimpleModel>
       links: freezed == links
           ? _value.links
           : links // ignore: cast_nullable_to_non_nullable
-              as LaunchLinksModel?,
+              as LaunchLinksNetworkModel?,
       fairings: freezed == fairings
           ? _value.fairings
           : fairings // ignore: cast_nullable_to_non_nullable
-              as FairingsModel?,
+              as FairingsNetworkModel?,
       launchLibraryId: freezed == launchLibraryId
           ? _value.launchLibraryId
           : launchLibraryId // ignore: cast_nullable_to_non_nullable
@@ -1178,35 +1209,36 @@ class _$LaunchSimpleModelCopyWithImpl<$Res, $Val extends LaunchSimpleModel>
 
   @override
   @pragma('vm:prefer-inline')
-  $LaunchLinksModelCopyWith<$Res>? get links {
+  $LaunchLinksNetworkModelCopyWith<$Res>? get links {
     if (_value.links == null) {
       return null;
     }
 
-    return $LaunchLinksModelCopyWith<$Res>(_value.links!, (value) {
+    return $LaunchLinksNetworkModelCopyWith<$Res>(_value.links!, (value) {
       return _then(_value.copyWith(links: value) as $Val);
     });
   }
 
   @override
   @pragma('vm:prefer-inline')
-  $FairingsModelCopyWith<$Res>? get fairings {
+  $FairingsNetworkModelCopyWith<$Res>? get fairings {
     if (_value.fairings == null) {
       return null;
     }
 
-    return $FairingsModelCopyWith<$Res>(_value.fairings!, (value) {
+    return $FairingsNetworkModelCopyWith<$Res>(_value.fairings!, (value) {
       return _then(_value.copyWith(fairings: value) as $Val);
     });
   }
 }
 
 /// @nodoc
-abstract class _$$_LaunchSimpleModelCopyWith<$Res>
-    implements $LaunchSimpleModelCopyWith<$Res> {
-  factory _$$_LaunchSimpleModelCopyWith(_$_LaunchSimpleModel value,
-          $Res Function(_$_LaunchSimpleModel) then) =
-      __$$_LaunchSimpleModelCopyWithImpl<$Res>;
+abstract class _$$_LaunchNetworkSimpleModelCopyWith<$Res>
+    implements $LaunchNetworkSimpleModelCopyWith<$Res> {
+  factory _$$_LaunchNetworkSimpleModelCopyWith(
+          _$_LaunchNetworkSimpleModel value,
+          $Res Function(_$_LaunchNetworkSimpleModel) then) =
+      __$$_LaunchNetworkSimpleModelCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -1227,29 +1259,30 @@ abstract class _$$_LaunchSimpleModelCopyWith<$Res>
       @JsonKey(name: 'ships') List<String> ships,
       @JsonKey(name: 'crew') List<String> crew,
       @JsonKey(name: 'details') String details,
-      @JsonKey(name: 'failures') List<LaunchFailureModel> failures,
+      @JsonKey(name: 'failures') List<LaunchFailureNetworkModel> failures,
       @JsonKey(name: 'success') bool success,
       @JsonKey(name: 'rocket') String rocket,
       @JsonKey(name: 'window') int window,
       @JsonKey(name: 'net') bool net,
       @JsonKey(name: 'static_fire_date_unix') int staticFireDateUnix,
       @JsonKey(name: 'static_fire_date_utc') String staticFireDateUtc,
-      @JsonKey(name: 'links') LaunchLinksModel? links,
-      @JsonKey(name: 'fairings') FairingsModel? fairings,
+      @JsonKey(name: 'links') LaunchLinksNetworkModel? links,
+      @JsonKey(name: 'fairings') FairingsNetworkModel? fairings,
       @JsonKey(name: 'launch_library_id') String? launchLibraryId});
 
   @override
-  $LaunchLinksModelCopyWith<$Res>? get links;
+  $LaunchLinksNetworkModelCopyWith<$Res>? get links;
   @override
-  $FairingsModelCopyWith<$Res>? get fairings;
+  $FairingsNetworkModelCopyWith<$Res>? get fairings;
 }
 
 /// @nodoc
-class __$$_LaunchSimpleModelCopyWithImpl<$Res>
-    extends _$LaunchSimpleModelCopyWithImpl<$Res, _$_LaunchSimpleModel>
-    implements _$$_LaunchSimpleModelCopyWith<$Res> {
-  __$$_LaunchSimpleModelCopyWithImpl(
-      _$_LaunchSimpleModel _value, $Res Function(_$_LaunchSimpleModel) _then)
+class __$$_LaunchNetworkSimpleModelCopyWithImpl<$Res>
+    extends _$LaunchNetworkSimpleModelCopyWithImpl<$Res,
+        _$_LaunchNetworkSimpleModel>
+    implements _$$_LaunchNetworkSimpleModelCopyWith<$Res> {
+  __$$_LaunchNetworkSimpleModelCopyWithImpl(_$_LaunchNetworkSimpleModel _value,
+      $Res Function(_$_LaunchNetworkSimpleModel) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -1283,7 +1316,7 @@ class __$$_LaunchSimpleModelCopyWithImpl<$Res>
     Object? fairings = freezed,
     Object? launchLibraryId = freezed,
   }) {
-    return _then(_$_LaunchSimpleModel(
+    return _then(_$_LaunchNetworkSimpleModel(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -1355,7 +1388,7 @@ class __$$_LaunchSimpleModelCopyWithImpl<$Res>
       failures: null == failures
           ? _value._failures
           : failures // ignore: cast_nullable_to_non_nullable
-              as List<LaunchFailureModel>,
+              as List<LaunchFailureNetworkModel>,
       success: null == success
           ? _value.success
           : success // ignore: cast_nullable_to_non_nullable
@@ -1383,11 +1416,11 @@ class __$$_LaunchSimpleModelCopyWithImpl<$Res>
       links: freezed == links
           ? _value.links
           : links // ignore: cast_nullable_to_non_nullable
-              as LaunchLinksModel?,
+              as LaunchLinksNetworkModel?,
       fairings: freezed == fairings
           ? _value.fairings
           : fairings // ignore: cast_nullable_to_non_nullable
-              as FairingsModel?,
+              as FairingsNetworkModel?,
       launchLibraryId: freezed == launchLibraryId
           ? _value.launchLibraryId
           : launchLibraryId // ignore: cast_nullable_to_non_nullable
@@ -1398,8 +1431,8 @@ class __$$_LaunchSimpleModelCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_LaunchSimpleModel extends _LaunchSimpleModel {
-  const _$_LaunchSimpleModel(
+class _$_LaunchNetworkSimpleModel extends _LaunchNetworkSimpleModel {
+  const _$_LaunchNetworkSimpleModel(
       {@JsonKey(name: 'id')
           required this.id,
       this.tbd = false,
@@ -1433,7 +1466,7 @@ class _$_LaunchSimpleModel extends _LaunchSimpleModel {
       @JsonKey(name: 'details')
           this.details = '',
       @JsonKey(name: 'failures')
-          final List<LaunchFailureModel> failures = const [],
+          final List<LaunchFailureNetworkModel> failures = const [],
       @JsonKey(name: 'success')
           this.success = false,
       @JsonKey(name: 'rocket')
@@ -1460,8 +1493,8 @@ class _$_LaunchSimpleModel extends _LaunchSimpleModel {
         _failures = failures,
         super._();
 
-  factory _$_LaunchSimpleModel.fromJson(Map<String, dynamic> json) =>
-      _$$_LaunchSimpleModelFromJson(json);
+  factory _$_LaunchNetworkSimpleModel.fromJson(Map<String, dynamic> json) =>
+      _$$_LaunchNetworkSimpleModelFromJson(json);
 
   @override
   @JsonKey(name: 'id')
@@ -1544,10 +1577,10 @@ class _$_LaunchSimpleModel extends _LaunchSimpleModel {
   @override
   @JsonKey(name: 'details')
   final String details;
-  final List<LaunchFailureModel> _failures;
+  final List<LaunchFailureNetworkModel> _failures;
   @override
   @JsonKey(name: 'failures')
-  List<LaunchFailureModel> get failures {
+  List<LaunchFailureNetworkModel> get failures {
     if (_failures is EqualUnmodifiableListView) return _failures;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_failures);
@@ -1573,24 +1606,24 @@ class _$_LaunchSimpleModel extends _LaunchSimpleModel {
   final String staticFireDateUtc;
   @override
   @JsonKey(name: 'links')
-  final LaunchLinksModel? links;
+  final LaunchLinksNetworkModel? links;
   @override
   @JsonKey(name: 'fairings')
-  final FairingsModel? fairings;
+  final FairingsNetworkModel? fairings;
   @override
   @JsonKey(name: 'launch_library_id')
   final String? launchLibraryId;
 
   @override
   String toString() {
-    return 'LaunchSimpleModel(id: $id, tbd: $tbd, autoUpdate: $autoUpdate, cores: $cores, upcoming: $upcoming, datePrecision: $datePrecision, dateLocal: $dateLocal, dateUnix: $dateUnix, dateUtc: $dateUtc, name: $name, flightNumber: $flightNumber, launchpad: $launchpad, payloads: $payloads, capsules: $capsules, ships: $ships, crew: $crew, details: $details, failures: $failures, success: $success, rocket: $rocket, window: $window, net: $net, staticFireDateUnix: $staticFireDateUnix, staticFireDateUtc: $staticFireDateUtc, links: $links, fairings: $fairings, launchLibraryId: $launchLibraryId)';
+    return 'LaunchNetworkSimpleModel(id: $id, tbd: $tbd, autoUpdate: $autoUpdate, cores: $cores, upcoming: $upcoming, datePrecision: $datePrecision, dateLocal: $dateLocal, dateUnix: $dateUnix, dateUtc: $dateUtc, name: $name, flightNumber: $flightNumber, launchpad: $launchpad, payloads: $payloads, capsules: $capsules, ships: $ships, crew: $crew, details: $details, failures: $failures, success: $success, rocket: $rocket, window: $window, net: $net, staticFireDateUnix: $staticFireDateUnix, staticFireDateUtc: $staticFireDateUtc, links: $links, fairings: $fairings, launchLibraryId: $launchLibraryId)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_LaunchSimpleModel &&
+            other is _$_LaunchNetworkSimpleModel &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.tbd, tbd) || other.tbd == tbd) &&
             (identical(other.autoUpdate, autoUpdate) ||
@@ -1667,52 +1700,76 @@ class _$_LaunchSimpleModel extends _LaunchSimpleModel {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_LaunchSimpleModelCopyWith<_$_LaunchSimpleModel> get copyWith =>
-      __$$_LaunchSimpleModelCopyWithImpl<_$_LaunchSimpleModel>(
-          this, _$identity);
+  _$$_LaunchNetworkSimpleModelCopyWith<_$_LaunchNetworkSimpleModel>
+      get copyWith => __$$_LaunchNetworkSimpleModelCopyWithImpl<
+          _$_LaunchNetworkSimpleModel>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_LaunchSimpleModelToJson(
+    return _$$_LaunchNetworkSimpleModelToJson(
       this,
     );
   }
 }
 
-abstract class _LaunchSimpleModel extends LaunchSimpleModel {
-  const factory _LaunchSimpleModel(
-          {@JsonKey(name: 'id') required final String id,
-          final bool tbd,
-          @JsonKey(name: 'auto_update') final bool autoUpdate,
-          @JsonKey(name: 'cores') final List<CoreNetworkModel> cores,
-          final bool upcoming,
-          @JsonKey(name: 'date_precision') final String datePrecision,
-          @JsonKey(name: 'date_local') final String dateLocal,
-          @JsonKey(name: 'date_unix') final int dateUnix,
-          @JsonKey(name: 'date_utc') final String dateUtc,
-          @JsonKey(name: 'name') final String name,
-          @JsonKey(name: 'flight_number') final int flightNumber,
-          @JsonKey(name: 'launchpad') final String launchpad,
-          @JsonKey(name: 'payloads') final List<String> payloads,
-          @JsonKey(name: 'capsules') final List<String> capsules,
-          @JsonKey(name: 'ships') final List<String> ships,
-          @JsonKey(name: 'crew') final List<String> crew,
-          @JsonKey(name: 'details') final String details,
-          @JsonKey(name: 'failures') final List<LaunchFailureModel> failures,
-          @JsonKey(name: 'success') final bool success,
-          @JsonKey(name: 'rocket') final String rocket,
-          @JsonKey(name: 'window') final int window,
-          @JsonKey(name: 'net') final bool net,
-          @JsonKey(name: 'static_fire_date_unix') final int staticFireDateUnix,
-          @JsonKey(name: 'static_fire_date_utc') final String staticFireDateUtc,
-          @JsonKey(name: 'links') final LaunchLinksModel? links,
-          @JsonKey(name: 'fairings') final FairingsModel? fairings,
-          @JsonKey(name: 'launch_library_id') final String? launchLibraryId}) =
-      _$_LaunchSimpleModel;
-  const _LaunchSimpleModel._() : super._();
+abstract class _LaunchNetworkSimpleModel extends LaunchNetworkSimpleModel {
+  const factory _LaunchNetworkSimpleModel(
+      {@JsonKey(name: 'id')
+          required final String id,
+      final bool tbd,
+      @JsonKey(name: 'auto_update')
+          final bool autoUpdate,
+      @JsonKey(name: 'cores')
+          final List<CoreNetworkModel> cores,
+      final bool upcoming,
+      @JsonKey(name: 'date_precision')
+          final String datePrecision,
+      @JsonKey(name: 'date_local')
+          final String dateLocal,
+      @JsonKey(name: 'date_unix')
+          final int dateUnix,
+      @JsonKey(name: 'date_utc')
+          final String dateUtc,
+      @JsonKey(name: 'name')
+          final String name,
+      @JsonKey(name: 'flight_number')
+          final int flightNumber,
+      @JsonKey(name: 'launchpad')
+          final String launchpad,
+      @JsonKey(name: 'payloads')
+          final List<String> payloads,
+      @JsonKey(name: 'capsules')
+          final List<String> capsules,
+      @JsonKey(name: 'ships')
+          final List<String> ships,
+      @JsonKey(name: 'crew')
+          final List<String> crew,
+      @JsonKey(name: 'details')
+          final String details,
+      @JsonKey(name: 'failures')
+          final List<LaunchFailureNetworkModel> failures,
+      @JsonKey(name: 'success')
+          final bool success,
+      @JsonKey(name: 'rocket')
+          final String rocket,
+      @JsonKey(name: 'window')
+          final int window,
+      @JsonKey(name: 'net')
+          final bool net,
+      @JsonKey(name: 'static_fire_date_unix')
+          final int staticFireDateUnix,
+      @JsonKey(name: 'static_fire_date_utc')
+          final String staticFireDateUtc,
+      @JsonKey(name: 'links')
+          final LaunchLinksNetworkModel? links,
+      @JsonKey(name: 'fairings')
+          final FairingsNetworkModel? fairings,
+      @JsonKey(name: 'launch_library_id')
+          final String? launchLibraryId}) = _$_LaunchNetworkSimpleModel;
+  const _LaunchNetworkSimpleModel._() : super._();
 
-  factory _LaunchSimpleModel.fromJson(Map<String, dynamic> json) =
-      _$_LaunchSimpleModel.fromJson;
+  factory _LaunchNetworkSimpleModel.fromJson(Map<String, dynamic> json) =
+      _$_LaunchNetworkSimpleModel.fromJson;
 
   @override
   @JsonKey(name: 'id')
@@ -1765,7 +1822,7 @@ abstract class _LaunchSimpleModel extends LaunchSimpleModel {
   String get details;
   @override
   @JsonKey(name: 'failures')
-  List<LaunchFailureModel> get failures;
+  List<LaunchFailureNetworkModel> get failures;
   @override
   @JsonKey(name: 'success')
   bool get success;
@@ -1786,25 +1843,25 @@ abstract class _LaunchSimpleModel extends LaunchSimpleModel {
   String get staticFireDateUtc;
   @override
   @JsonKey(name: 'links')
-  LaunchLinksModel? get links;
+  LaunchLinksNetworkModel? get links;
   @override
   @JsonKey(name: 'fairings')
-  FairingsModel? get fairings;
+  FairingsNetworkModel? get fairings;
   @override
   @JsonKey(name: 'launch_library_id')
   String? get launchLibraryId;
   @override
   @JsonKey(ignore: true)
-  _$$_LaunchSimpleModelCopyWith<_$_LaunchSimpleModel> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$_LaunchNetworkSimpleModelCopyWith<_$_LaunchNetworkSimpleModel>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
-LaunchModel _$LaunchModelFromJson(Map<String, dynamic> json) {
-  return _LaunchModel.fromJson(json);
+LaunchNetworkModel _$LaunchNetworkModelFromJson(Map<String, dynamic> json) {
+  return _LaunchNetworkModel.fromJson(json);
 }
 
 /// @nodoc
-mixin _$LaunchModel {
+mixin _$LaunchNetworkModel {
   @JsonKey(name: 'id')
   String get id => throw _privateConstructorUsedError;
   bool get tbd => throw _privateConstructorUsedError;
@@ -1838,7 +1895,8 @@ mixin _$LaunchModel {
   @JsonKey(name: 'details')
   String? get details => throw _privateConstructorUsedError;
   @JsonKey(name: 'failures')
-  List<LaunchFailureModel> get failures => throw _privateConstructorUsedError;
+  List<LaunchFailureNetworkModel> get failures =>
+      throw _privateConstructorUsedError;
   @JsonKey(name: 'success')
   bool get success => throw _privateConstructorUsedError;
   @JsonKey(name: 'rocket')
@@ -1852,23 +1910,23 @@ mixin _$LaunchModel {
   @JsonKey(name: 'static_fire_date_utc')
   String get staticFireDateUtc => throw _privateConstructorUsedError;
   @JsonKey(name: 'links')
-  LaunchLinksModel? get links => throw _privateConstructorUsedError;
+  LaunchLinksNetworkModel? get links => throw _privateConstructorUsedError;
   @JsonKey(name: 'fairings')
-  FairingsModel? get fairings => throw _privateConstructorUsedError;
+  FairingsNetworkModel? get fairings => throw _privateConstructorUsedError;
   @JsonKey(name: 'launch_library_id')
   String? get launchLibraryId => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $LaunchModelCopyWith<LaunchModel> get copyWith =>
+  $LaunchNetworkModelCopyWith<LaunchNetworkModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $LaunchModelCopyWith<$Res> {
-  factory $LaunchModelCopyWith(
-          LaunchModel value, $Res Function(LaunchModel) then) =
-      _$LaunchModelCopyWithImpl<$Res, LaunchModel>;
+abstract class $LaunchNetworkModelCopyWith<$Res> {
+  factory $LaunchNetworkModelCopyWith(
+          LaunchNetworkModel value, $Res Function(LaunchNetworkModel) then) =
+      _$LaunchNetworkModelCopyWithImpl<$Res, LaunchNetworkModel>;
   @useResult
   $Res call(
       {@JsonKey(name: 'id') String id,
@@ -1888,25 +1946,25 @@ abstract class $LaunchModelCopyWith<$Res> {
       @JsonKey(name: 'ships') List<String> ships,
       @JsonKey(name: 'crew') List<ShortCrewNetworkModel> crew,
       @JsonKey(name: 'details') String? details,
-      @JsonKey(name: 'failures') List<LaunchFailureModel> failures,
+      @JsonKey(name: 'failures') List<LaunchFailureNetworkModel> failures,
       @JsonKey(name: 'success') bool success,
       @JsonKey(name: 'rocket') String rocket,
       @JsonKey(name: 'window') int window,
       @JsonKey(name: 'net') bool net,
       @JsonKey(name: 'static_fire_date_unix') int staticFireDateUnix,
       @JsonKey(name: 'static_fire_date_utc') String staticFireDateUtc,
-      @JsonKey(name: 'links') LaunchLinksModel? links,
-      @JsonKey(name: 'fairings') FairingsModel? fairings,
+      @JsonKey(name: 'links') LaunchLinksNetworkModel? links,
+      @JsonKey(name: 'fairings') FairingsNetworkModel? fairings,
       @JsonKey(name: 'launch_library_id') String? launchLibraryId});
 
-  $LaunchLinksModelCopyWith<$Res>? get links;
-  $FairingsModelCopyWith<$Res>? get fairings;
+  $LaunchLinksNetworkModelCopyWith<$Res>? get links;
+  $FairingsNetworkModelCopyWith<$Res>? get fairings;
 }
 
 /// @nodoc
-class _$LaunchModelCopyWithImpl<$Res, $Val extends LaunchModel>
-    implements $LaunchModelCopyWith<$Res> {
-  _$LaunchModelCopyWithImpl(this._value, this._then);
+class _$LaunchNetworkModelCopyWithImpl<$Res, $Val extends LaunchNetworkModel>
+    implements $LaunchNetworkModelCopyWith<$Res> {
+  _$LaunchNetworkModelCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -2016,7 +2074,7 @@ class _$LaunchModelCopyWithImpl<$Res, $Val extends LaunchModel>
       failures: null == failures
           ? _value.failures
           : failures // ignore: cast_nullable_to_non_nullable
-              as List<LaunchFailureModel>,
+              as List<LaunchFailureNetworkModel>,
       success: null == success
           ? _value.success
           : success // ignore: cast_nullable_to_non_nullable
@@ -2044,11 +2102,11 @@ class _$LaunchModelCopyWithImpl<$Res, $Val extends LaunchModel>
       links: freezed == links
           ? _value.links
           : links // ignore: cast_nullable_to_non_nullable
-              as LaunchLinksModel?,
+              as LaunchLinksNetworkModel?,
       fairings: freezed == fairings
           ? _value.fairings
           : fairings // ignore: cast_nullable_to_non_nullable
-              as FairingsModel?,
+              as FairingsNetworkModel?,
       launchLibraryId: freezed == launchLibraryId
           ? _value.launchLibraryId
           : launchLibraryId // ignore: cast_nullable_to_non_nullable
@@ -2058,35 +2116,35 @@ class _$LaunchModelCopyWithImpl<$Res, $Val extends LaunchModel>
 
   @override
   @pragma('vm:prefer-inline')
-  $LaunchLinksModelCopyWith<$Res>? get links {
+  $LaunchLinksNetworkModelCopyWith<$Res>? get links {
     if (_value.links == null) {
       return null;
     }
 
-    return $LaunchLinksModelCopyWith<$Res>(_value.links!, (value) {
+    return $LaunchLinksNetworkModelCopyWith<$Res>(_value.links!, (value) {
       return _then(_value.copyWith(links: value) as $Val);
     });
   }
 
   @override
   @pragma('vm:prefer-inline')
-  $FairingsModelCopyWith<$Res>? get fairings {
+  $FairingsNetworkModelCopyWith<$Res>? get fairings {
     if (_value.fairings == null) {
       return null;
     }
 
-    return $FairingsModelCopyWith<$Res>(_value.fairings!, (value) {
+    return $FairingsNetworkModelCopyWith<$Res>(_value.fairings!, (value) {
       return _then(_value.copyWith(fairings: value) as $Val);
     });
   }
 }
 
 /// @nodoc
-abstract class _$$_LaunchModelCopyWith<$Res>
-    implements $LaunchModelCopyWith<$Res> {
-  factory _$$_LaunchModelCopyWith(
-          _$_LaunchModel value, $Res Function(_$_LaunchModel) then) =
-      __$$_LaunchModelCopyWithImpl<$Res>;
+abstract class _$$_LaunchNetworkModelCopyWith<$Res>
+    implements $LaunchNetworkModelCopyWith<$Res> {
+  factory _$$_LaunchNetworkModelCopyWith(_$_LaunchNetworkModel value,
+          $Res Function(_$_LaunchNetworkModel) then) =
+      __$$_LaunchNetworkModelCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -2107,29 +2165,29 @@ abstract class _$$_LaunchModelCopyWith<$Res>
       @JsonKey(name: 'ships') List<String> ships,
       @JsonKey(name: 'crew') List<ShortCrewNetworkModel> crew,
       @JsonKey(name: 'details') String? details,
-      @JsonKey(name: 'failures') List<LaunchFailureModel> failures,
+      @JsonKey(name: 'failures') List<LaunchFailureNetworkModel> failures,
       @JsonKey(name: 'success') bool success,
       @JsonKey(name: 'rocket') String rocket,
       @JsonKey(name: 'window') int window,
       @JsonKey(name: 'net') bool net,
       @JsonKey(name: 'static_fire_date_unix') int staticFireDateUnix,
       @JsonKey(name: 'static_fire_date_utc') String staticFireDateUtc,
-      @JsonKey(name: 'links') LaunchLinksModel? links,
-      @JsonKey(name: 'fairings') FairingsModel? fairings,
+      @JsonKey(name: 'links') LaunchLinksNetworkModel? links,
+      @JsonKey(name: 'fairings') FairingsNetworkModel? fairings,
       @JsonKey(name: 'launch_library_id') String? launchLibraryId});
 
   @override
-  $LaunchLinksModelCopyWith<$Res>? get links;
+  $LaunchLinksNetworkModelCopyWith<$Res>? get links;
   @override
-  $FairingsModelCopyWith<$Res>? get fairings;
+  $FairingsNetworkModelCopyWith<$Res>? get fairings;
 }
 
 /// @nodoc
-class __$$_LaunchModelCopyWithImpl<$Res>
-    extends _$LaunchModelCopyWithImpl<$Res, _$_LaunchModel>
-    implements _$$_LaunchModelCopyWith<$Res> {
-  __$$_LaunchModelCopyWithImpl(
-      _$_LaunchModel _value, $Res Function(_$_LaunchModel) _then)
+class __$$_LaunchNetworkModelCopyWithImpl<$Res>
+    extends _$LaunchNetworkModelCopyWithImpl<$Res, _$_LaunchNetworkModel>
+    implements _$$_LaunchNetworkModelCopyWith<$Res> {
+  __$$_LaunchNetworkModelCopyWithImpl(
+      _$_LaunchNetworkModel _value, $Res Function(_$_LaunchNetworkModel) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -2163,7 +2221,7 @@ class __$$_LaunchModelCopyWithImpl<$Res>
     Object? fairings = freezed,
     Object? launchLibraryId = freezed,
   }) {
-    return _then(_$_LaunchModel(
+    return _then(_$_LaunchNetworkModel(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -2235,7 +2293,7 @@ class __$$_LaunchModelCopyWithImpl<$Res>
       failures: null == failures
           ? _value._failures
           : failures // ignore: cast_nullable_to_non_nullable
-              as List<LaunchFailureModel>,
+              as List<LaunchFailureNetworkModel>,
       success: null == success
           ? _value.success
           : success // ignore: cast_nullable_to_non_nullable
@@ -2263,11 +2321,11 @@ class __$$_LaunchModelCopyWithImpl<$Res>
       links: freezed == links
           ? _value.links
           : links // ignore: cast_nullable_to_non_nullable
-              as LaunchLinksModel?,
+              as LaunchLinksNetworkModel?,
       fairings: freezed == fairings
           ? _value.fairings
           : fairings // ignore: cast_nullable_to_non_nullable
-              as FairingsModel?,
+              as FairingsNetworkModel?,
       launchLibraryId: freezed == launchLibraryId
           ? _value.launchLibraryId
           : launchLibraryId // ignore: cast_nullable_to_non_nullable
@@ -2278,8 +2336,8 @@ class __$$_LaunchModelCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_LaunchModel extends _LaunchModel {
-  const _$_LaunchModel(
+class _$_LaunchNetworkModel extends _LaunchNetworkModel {
+  const _$_LaunchNetworkModel(
       {@JsonKey(name: 'id')
           required this.id,
       this.tbd = false,
@@ -2314,7 +2372,7 @@ class _$_LaunchModel extends _LaunchModel {
       @JsonKey(name: 'details')
           this.details,
       @JsonKey(name: 'failures')
-          final List<LaunchFailureModel> failures = const [],
+          final List<LaunchFailureNetworkModel> failures = const [],
       @JsonKey(name: 'success')
           this.success = false,
       @JsonKey(name: 'rocket')
@@ -2341,8 +2399,8 @@ class _$_LaunchModel extends _LaunchModel {
         _failures = failures,
         super._();
 
-  factory _$_LaunchModel.fromJson(Map<String, dynamic> json) =>
-      _$$_LaunchModelFromJson(json);
+  factory _$_LaunchNetworkModel.fromJson(Map<String, dynamic> json) =>
+      _$$_LaunchNetworkModelFromJson(json);
 
   @override
   @JsonKey(name: 'id')
@@ -2425,10 +2483,10 @@ class _$_LaunchModel extends _LaunchModel {
   @override
   @JsonKey(name: 'details')
   final String? details;
-  final List<LaunchFailureModel> _failures;
+  final List<LaunchFailureNetworkModel> _failures;
   @override
   @JsonKey(name: 'failures')
-  List<LaunchFailureModel> get failures {
+  List<LaunchFailureNetworkModel> get failures {
     if (_failures is EqualUnmodifiableListView) return _failures;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_failures);
@@ -2454,24 +2512,24 @@ class _$_LaunchModel extends _LaunchModel {
   final String staticFireDateUtc;
   @override
   @JsonKey(name: 'links')
-  final LaunchLinksModel? links;
+  final LaunchLinksNetworkModel? links;
   @override
   @JsonKey(name: 'fairings')
-  final FairingsModel? fairings;
+  final FairingsNetworkModel? fairings;
   @override
   @JsonKey(name: 'launch_library_id')
   final String? launchLibraryId;
 
   @override
   String toString() {
-    return 'LaunchModel(id: $id, tbd: $tbd, autoUpdate: $autoUpdate, cores: $cores, upcoming: $upcoming, datePrecision: $datePrecision, dateLocal: $dateLocal, dateUnix: $dateUnix, dateUtc: $dateUtc, name: $name, flightNumber: $flightNumber, launchpad: $launchpad, payloads: $payloads, capsules: $capsules, ships: $ships, crew: $crew, details: $details, failures: $failures, success: $success, rocket: $rocket, window: $window, net: $net, staticFireDateUnix: $staticFireDateUnix, staticFireDateUtc: $staticFireDateUtc, links: $links, fairings: $fairings, launchLibraryId: $launchLibraryId)';
+    return 'LaunchNetworkModel(id: $id, tbd: $tbd, autoUpdate: $autoUpdate, cores: $cores, upcoming: $upcoming, datePrecision: $datePrecision, dateLocal: $dateLocal, dateUnix: $dateUnix, dateUtc: $dateUtc, name: $name, flightNumber: $flightNumber, launchpad: $launchpad, payloads: $payloads, capsules: $capsules, ships: $ships, crew: $crew, details: $details, failures: $failures, success: $success, rocket: $rocket, window: $window, net: $net, staticFireDateUnix: $staticFireDateUnix, staticFireDateUtc: $staticFireDateUtc, links: $links, fairings: $fairings, launchLibraryId: $launchLibraryId)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_LaunchModel &&
+            other is _$_LaunchNetworkModel &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.tbd, tbd) || other.tbd == tbd) &&
             (identical(other.autoUpdate, autoUpdate) ||
@@ -2548,51 +2606,76 @@ class _$_LaunchModel extends _LaunchModel {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_LaunchModelCopyWith<_$_LaunchModel> get copyWith =>
-      __$$_LaunchModelCopyWithImpl<_$_LaunchModel>(this, _$identity);
+  _$$_LaunchNetworkModelCopyWith<_$_LaunchNetworkModel> get copyWith =>
+      __$$_LaunchNetworkModelCopyWithImpl<_$_LaunchNetworkModel>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_LaunchModelToJson(
+    return _$$_LaunchNetworkModelToJson(
       this,
     );
   }
 }
 
-abstract class _LaunchModel extends LaunchModel {
-  const factory _LaunchModel(
-          {@JsonKey(name: 'id') required final String id,
-          final bool tbd,
-          @JsonKey(name: 'auto_update') final bool autoUpdate,
-          @JsonKey(name: 'cores') final List<CoreNetworkModel> cores,
-          final bool upcoming,
-          @JsonKey(name: 'date_precision') final String datePrecision,
-          @JsonKey(name: 'date_local') final String dateLocal,
-          @JsonKey(name: 'date_unix') final int dateUnix,
-          @JsonKey(name: 'date_utc') final String dateUtc,
-          @JsonKey(name: 'name') final String name,
-          @JsonKey(name: 'flight_number') final int flightNumber,
-          @JsonKey(name: 'launchpad') final String launchpad,
-          @JsonKey(name: 'payloads') final List<String> payloads,
-          @JsonKey(name: 'capsules') final List<String> capsules,
-          @JsonKey(name: 'ships') final List<String> ships,
-          @JsonKey(name: 'crew') final List<ShortCrewNetworkModel> crew,
-          @JsonKey(name: 'details') final String? details,
-          @JsonKey(name: 'failures') final List<LaunchFailureModel> failures,
-          @JsonKey(name: 'success') final bool success,
-          @JsonKey(name: 'rocket') final String rocket,
-          @JsonKey(name: 'window') final int window,
-          @JsonKey(name: 'net') final bool net,
-          @JsonKey(name: 'static_fire_date_unix') final int staticFireDateUnix,
-          @JsonKey(name: 'static_fire_date_utc') final String staticFireDateUtc,
-          @JsonKey(name: 'links') final LaunchLinksModel? links,
-          @JsonKey(name: 'fairings') final FairingsModel? fairings,
-          @JsonKey(name: 'launch_library_id') final String? launchLibraryId}) =
-      _$_LaunchModel;
-  const _LaunchModel._() : super._();
+abstract class _LaunchNetworkModel extends LaunchNetworkModel {
+  const factory _LaunchNetworkModel(
+      {@JsonKey(name: 'id')
+          required final String id,
+      final bool tbd,
+      @JsonKey(name: 'auto_update')
+          final bool autoUpdate,
+      @JsonKey(name: 'cores')
+          final List<CoreNetworkModel> cores,
+      final bool upcoming,
+      @JsonKey(name: 'date_precision')
+          final String datePrecision,
+      @JsonKey(name: 'date_local')
+          final String dateLocal,
+      @JsonKey(name: 'date_unix')
+          final int dateUnix,
+      @JsonKey(name: 'date_utc')
+          final String dateUtc,
+      @JsonKey(name: 'name')
+          final String name,
+      @JsonKey(name: 'flight_number')
+          final int flightNumber,
+      @JsonKey(name: 'launchpad')
+          final String launchpad,
+      @JsonKey(name: 'payloads')
+          final List<String> payloads,
+      @JsonKey(name: 'capsules')
+          final List<String> capsules,
+      @JsonKey(name: 'ships')
+          final List<String> ships,
+      @JsonKey(name: 'crew')
+          final List<ShortCrewNetworkModel> crew,
+      @JsonKey(name: 'details')
+          final String? details,
+      @JsonKey(name: 'failures')
+          final List<LaunchFailureNetworkModel> failures,
+      @JsonKey(name: 'success')
+          final bool success,
+      @JsonKey(name: 'rocket')
+          final String rocket,
+      @JsonKey(name: 'window')
+          final int window,
+      @JsonKey(name: 'net')
+          final bool net,
+      @JsonKey(name: 'static_fire_date_unix')
+          final int staticFireDateUnix,
+      @JsonKey(name: 'static_fire_date_utc')
+          final String staticFireDateUtc,
+      @JsonKey(name: 'links')
+          final LaunchLinksNetworkModel? links,
+      @JsonKey(name: 'fairings')
+          final FairingsNetworkModel? fairings,
+      @JsonKey(name: 'launch_library_id')
+          final String? launchLibraryId}) = _$_LaunchNetworkModel;
+  const _LaunchNetworkModel._() : super._();
 
-  factory _LaunchModel.fromJson(Map<String, dynamic> json) =
-      _$_LaunchModel.fromJson;
+  factory _LaunchNetworkModel.fromJson(Map<String, dynamic> json) =
+      _$_LaunchNetworkModel.fromJson;
 
   @override
   @JsonKey(name: 'id')
@@ -2645,7 +2728,7 @@ abstract class _LaunchModel extends LaunchModel {
   String? get details;
   @override
   @JsonKey(name: 'failures')
-  List<LaunchFailureModel> get failures;
+  List<LaunchFailureNetworkModel> get failures;
   @override
   @JsonKey(name: 'success')
   bool get success;
@@ -2666,28 +2749,29 @@ abstract class _LaunchModel extends LaunchModel {
   String get staticFireDateUtc;
   @override
   @JsonKey(name: 'links')
-  LaunchLinksModel? get links;
+  LaunchLinksNetworkModel? get links;
   @override
   @JsonKey(name: 'fairings')
-  FairingsModel? get fairings;
+  FairingsNetworkModel? get fairings;
   @override
   @JsonKey(name: 'launch_library_id')
   String? get launchLibraryId;
   @override
   @JsonKey(ignore: true)
-  _$$_LaunchModelCopyWith<_$_LaunchModel> get copyWith =>
+  _$$_LaunchNetworkModelCopyWith<_$_LaunchNetworkModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
-LaunchLinksModel _$LaunchLinksModelFromJson(Map<String, dynamic> json) {
-  return _LaunchLinksModel.fromJson(json);
+LaunchLinksNetworkModel _$LaunchLinksNetworkModelFromJson(
+    Map<String, dynamic> json) {
+  return _LaunchLinksNetworkModel.fromJson(json);
 }
 
 /// @nodoc
-mixin _$LaunchLinksModel {
-  LaunchPatchModel? get patch => throw _privateConstructorUsedError;
-  LaunchRedditModel? get reddit => throw _privateConstructorUsedError;
-  LaunchFlickrModel? get flickr => throw _privateConstructorUsedError;
+mixin _$LaunchLinksNetworkModel {
+  LaunchPatchNetworkModel? get patch => throw _privateConstructorUsedError;
+  LaunchRedditNetworkModel? get reddit => throw _privateConstructorUsedError;
+  LaunchFlickrNetworkModel? get flickr => throw _privateConstructorUsedError;
   String? get presskit => throw _privateConstructorUsedError;
   String? get webcast => throw _privateConstructorUsedError;
   @JsonKey(name: 'youtube_id')
@@ -2699,35 +2783,36 @@ mixin _$LaunchLinksModel {
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $LaunchLinksModelCopyWith<LaunchLinksModel> get copyWith =>
+  $LaunchLinksNetworkModelCopyWith<LaunchLinksNetworkModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $LaunchLinksModelCopyWith<$Res> {
-  factory $LaunchLinksModelCopyWith(
-          LaunchLinksModel value, $Res Function(LaunchLinksModel) then) =
-      _$LaunchLinksModelCopyWithImpl<$Res, LaunchLinksModel>;
+abstract class $LaunchLinksNetworkModelCopyWith<$Res> {
+  factory $LaunchLinksNetworkModelCopyWith(LaunchLinksNetworkModel value,
+          $Res Function(LaunchLinksNetworkModel) then) =
+      _$LaunchLinksNetworkModelCopyWithImpl<$Res, LaunchLinksNetworkModel>;
   @useResult
   $Res call(
-      {LaunchPatchModel? patch,
-      LaunchRedditModel? reddit,
-      LaunchFlickrModel? flickr,
+      {LaunchPatchNetworkModel? patch,
+      LaunchRedditNetworkModel? reddit,
+      LaunchFlickrNetworkModel? flickr,
       String? presskit,
       String? webcast,
       @JsonKey(name: 'youtube_id') String? youtubeId,
       @JsonKey(name: 'article') String? article,
       @JsonKey(name: 'wikipedia') String? wikipedia});
 
-  $LaunchPatchModelCopyWith<$Res>? get patch;
-  $LaunchRedditModelCopyWith<$Res>? get reddit;
-  $LaunchFlickrModelCopyWith<$Res>? get flickr;
+  $LaunchPatchNetworkModelCopyWith<$Res>? get patch;
+  $LaunchRedditNetworkModelCopyWith<$Res>? get reddit;
+  $LaunchFlickrNetworkModelCopyWith<$Res>? get flickr;
 }
 
 /// @nodoc
-class _$LaunchLinksModelCopyWithImpl<$Res, $Val extends LaunchLinksModel>
-    implements $LaunchLinksModelCopyWith<$Res> {
-  _$LaunchLinksModelCopyWithImpl(this._value, this._then);
+class _$LaunchLinksNetworkModelCopyWithImpl<$Res,
+        $Val extends LaunchLinksNetworkModel>
+    implements $LaunchLinksNetworkModelCopyWith<$Res> {
+  _$LaunchLinksNetworkModelCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -2750,15 +2835,15 @@ class _$LaunchLinksModelCopyWithImpl<$Res, $Val extends LaunchLinksModel>
       patch: freezed == patch
           ? _value.patch
           : patch // ignore: cast_nullable_to_non_nullable
-              as LaunchPatchModel?,
+              as LaunchPatchNetworkModel?,
       reddit: freezed == reddit
           ? _value.reddit
           : reddit // ignore: cast_nullable_to_non_nullable
-              as LaunchRedditModel?,
+              as LaunchRedditNetworkModel?,
       flickr: freezed == flickr
           ? _value.flickr
           : flickr // ignore: cast_nullable_to_non_nullable
-              as LaunchFlickrModel?,
+              as LaunchFlickrNetworkModel?,
       presskit: freezed == presskit
           ? _value.presskit
           : presskit // ignore: cast_nullable_to_non_nullable
@@ -2784,53 +2869,53 @@ class _$LaunchLinksModelCopyWithImpl<$Res, $Val extends LaunchLinksModel>
 
   @override
   @pragma('vm:prefer-inline')
-  $LaunchPatchModelCopyWith<$Res>? get patch {
+  $LaunchPatchNetworkModelCopyWith<$Res>? get patch {
     if (_value.patch == null) {
       return null;
     }
 
-    return $LaunchPatchModelCopyWith<$Res>(_value.patch!, (value) {
+    return $LaunchPatchNetworkModelCopyWith<$Res>(_value.patch!, (value) {
       return _then(_value.copyWith(patch: value) as $Val);
     });
   }
 
   @override
   @pragma('vm:prefer-inline')
-  $LaunchRedditModelCopyWith<$Res>? get reddit {
+  $LaunchRedditNetworkModelCopyWith<$Res>? get reddit {
     if (_value.reddit == null) {
       return null;
     }
 
-    return $LaunchRedditModelCopyWith<$Res>(_value.reddit!, (value) {
+    return $LaunchRedditNetworkModelCopyWith<$Res>(_value.reddit!, (value) {
       return _then(_value.copyWith(reddit: value) as $Val);
     });
   }
 
   @override
   @pragma('vm:prefer-inline')
-  $LaunchFlickrModelCopyWith<$Res>? get flickr {
+  $LaunchFlickrNetworkModelCopyWith<$Res>? get flickr {
     if (_value.flickr == null) {
       return null;
     }
 
-    return $LaunchFlickrModelCopyWith<$Res>(_value.flickr!, (value) {
+    return $LaunchFlickrNetworkModelCopyWith<$Res>(_value.flickr!, (value) {
       return _then(_value.copyWith(flickr: value) as $Val);
     });
   }
 }
 
 /// @nodoc
-abstract class _$$_LaunchLinksModelCopyWith<$Res>
-    implements $LaunchLinksModelCopyWith<$Res> {
-  factory _$$_LaunchLinksModelCopyWith(
-          _$_LaunchLinksModel value, $Res Function(_$_LaunchLinksModel) then) =
-      __$$_LaunchLinksModelCopyWithImpl<$Res>;
+abstract class _$$_LaunchLinksNetworkModelCopyWith<$Res>
+    implements $LaunchLinksNetworkModelCopyWith<$Res> {
+  factory _$$_LaunchLinksNetworkModelCopyWith(_$_LaunchLinksNetworkModel value,
+          $Res Function(_$_LaunchLinksNetworkModel) then) =
+      __$$_LaunchLinksNetworkModelCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
-      {LaunchPatchModel? patch,
-      LaunchRedditModel? reddit,
-      LaunchFlickrModel? flickr,
+      {LaunchPatchNetworkModel? patch,
+      LaunchRedditNetworkModel? reddit,
+      LaunchFlickrNetworkModel? flickr,
       String? presskit,
       String? webcast,
       @JsonKey(name: 'youtube_id') String? youtubeId,
@@ -2838,19 +2923,20 @@ abstract class _$$_LaunchLinksModelCopyWith<$Res>
       @JsonKey(name: 'wikipedia') String? wikipedia});
 
   @override
-  $LaunchPatchModelCopyWith<$Res>? get patch;
+  $LaunchPatchNetworkModelCopyWith<$Res>? get patch;
   @override
-  $LaunchRedditModelCopyWith<$Res>? get reddit;
+  $LaunchRedditNetworkModelCopyWith<$Res>? get reddit;
   @override
-  $LaunchFlickrModelCopyWith<$Res>? get flickr;
+  $LaunchFlickrNetworkModelCopyWith<$Res>? get flickr;
 }
 
 /// @nodoc
-class __$$_LaunchLinksModelCopyWithImpl<$Res>
-    extends _$LaunchLinksModelCopyWithImpl<$Res, _$_LaunchLinksModel>
-    implements _$$_LaunchLinksModelCopyWith<$Res> {
-  __$$_LaunchLinksModelCopyWithImpl(
-      _$_LaunchLinksModel _value, $Res Function(_$_LaunchLinksModel) _then)
+class __$$_LaunchLinksNetworkModelCopyWithImpl<$Res>
+    extends _$LaunchLinksNetworkModelCopyWithImpl<$Res,
+        _$_LaunchLinksNetworkModel>
+    implements _$$_LaunchLinksNetworkModelCopyWith<$Res> {
+  __$$_LaunchLinksNetworkModelCopyWithImpl(_$_LaunchLinksNetworkModel _value,
+      $Res Function(_$_LaunchLinksNetworkModel) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -2865,19 +2951,19 @@ class __$$_LaunchLinksModelCopyWithImpl<$Res>
     Object? article = freezed,
     Object? wikipedia = freezed,
   }) {
-    return _then(_$_LaunchLinksModel(
+    return _then(_$_LaunchLinksNetworkModel(
       patch: freezed == patch
           ? _value.patch
           : patch // ignore: cast_nullable_to_non_nullable
-              as LaunchPatchModel?,
+              as LaunchPatchNetworkModel?,
       reddit: freezed == reddit
           ? _value.reddit
           : reddit // ignore: cast_nullable_to_non_nullable
-              as LaunchRedditModel?,
+              as LaunchRedditNetworkModel?,
       flickr: freezed == flickr
           ? _value.flickr
           : flickr // ignore: cast_nullable_to_non_nullable
-              as LaunchFlickrModel?,
+              as LaunchFlickrNetworkModel?,
       presskit: freezed == presskit
           ? _value.presskit
           : presskit // ignore: cast_nullable_to_non_nullable
@@ -2904,8 +2990,8 @@ class __$$_LaunchLinksModelCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_LaunchLinksModel extends _LaunchLinksModel {
-  const _$_LaunchLinksModel(
+class _$_LaunchLinksNetworkModel extends _LaunchLinksNetworkModel {
+  const _$_LaunchLinksNetworkModel(
       {this.patch,
       this.reddit,
       this.flickr,
@@ -2916,15 +3002,15 @@ class _$_LaunchLinksModel extends _LaunchLinksModel {
       @JsonKey(name: 'wikipedia') this.wikipedia})
       : super._();
 
-  factory _$_LaunchLinksModel.fromJson(Map<String, dynamic> json) =>
-      _$$_LaunchLinksModelFromJson(json);
+  factory _$_LaunchLinksNetworkModel.fromJson(Map<String, dynamic> json) =>
+      _$$_LaunchLinksNetworkModelFromJson(json);
 
   @override
-  final LaunchPatchModel? patch;
+  final LaunchPatchNetworkModel? patch;
   @override
-  final LaunchRedditModel? reddit;
+  final LaunchRedditNetworkModel? reddit;
   @override
-  final LaunchFlickrModel? flickr;
+  final LaunchFlickrNetworkModel? flickr;
   @override
   final String? presskit;
   @override
@@ -2941,14 +3027,14 @@ class _$_LaunchLinksModel extends _LaunchLinksModel {
 
   @override
   String toString() {
-    return 'LaunchLinksModel(patch: $patch, reddit: $reddit, flickr: $flickr, presskit: $presskit, webcast: $webcast, youtubeId: $youtubeId, article: $article, wikipedia: $wikipedia)';
+    return 'LaunchLinksNetworkModel(patch: $patch, reddit: $reddit, flickr: $flickr, presskit: $presskit, webcast: $webcast, youtubeId: $youtubeId, article: $article, wikipedia: $wikipedia)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_LaunchLinksModel &&
+            other is _$_LaunchLinksNetworkModel &&
             (identical(other.patch, patch) || other.patch == patch) &&
             (identical(other.reddit, reddit) || other.reddit == reddit) &&
             (identical(other.flickr, flickr) || other.flickr == flickr) &&
@@ -2970,39 +3056,41 @@ class _$_LaunchLinksModel extends _LaunchLinksModel {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_LaunchLinksModelCopyWith<_$_LaunchLinksModel> get copyWith =>
-      __$$_LaunchLinksModelCopyWithImpl<_$_LaunchLinksModel>(this, _$identity);
+  _$$_LaunchLinksNetworkModelCopyWith<_$_LaunchLinksNetworkModel>
+      get copyWith =>
+          __$$_LaunchLinksNetworkModelCopyWithImpl<_$_LaunchLinksNetworkModel>(
+              this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_LaunchLinksModelToJson(
+    return _$$_LaunchLinksNetworkModelToJson(
       this,
     );
   }
 }
 
-abstract class _LaunchLinksModel extends LaunchLinksModel {
-  const factory _LaunchLinksModel(
-          {final LaunchPatchModel? patch,
-          final LaunchRedditModel? reddit,
-          final LaunchFlickrModel? flickr,
+abstract class _LaunchLinksNetworkModel extends LaunchLinksNetworkModel {
+  const factory _LaunchLinksNetworkModel(
+          {final LaunchPatchNetworkModel? patch,
+          final LaunchRedditNetworkModel? reddit,
+          final LaunchFlickrNetworkModel? flickr,
           final String? presskit,
           final String? webcast,
           @JsonKey(name: 'youtube_id') final String? youtubeId,
           @JsonKey(name: 'article') final String? article,
           @JsonKey(name: 'wikipedia') final String? wikipedia}) =
-      _$_LaunchLinksModel;
-  const _LaunchLinksModel._() : super._();
+      _$_LaunchLinksNetworkModel;
+  const _LaunchLinksNetworkModel._() : super._();
 
-  factory _LaunchLinksModel.fromJson(Map<String, dynamic> json) =
-      _$_LaunchLinksModel.fromJson;
+  factory _LaunchLinksNetworkModel.fromJson(Map<String, dynamic> json) =
+      _$_LaunchLinksNetworkModel.fromJson;
 
   @override
-  LaunchPatchModel? get patch;
+  LaunchPatchNetworkModel? get patch;
   @override
-  LaunchRedditModel? get reddit;
+  LaunchRedditNetworkModel? get reddit;
   @override
-  LaunchFlickrModel? get flickr;
+  LaunchFlickrNetworkModel? get flickr;
   @override
   String? get presskit;
   @override
@@ -3018,39 +3106,41 @@ abstract class _LaunchLinksModel extends LaunchLinksModel {
   String? get wikipedia;
   @override
   @JsonKey(ignore: true)
-  _$$_LaunchLinksModelCopyWith<_$_LaunchLinksModel> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$_LaunchLinksNetworkModelCopyWith<_$_LaunchLinksNetworkModel>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
-LaunchFailureModel _$LaunchFailureModelFromJson(Map<String, dynamic> json) {
-  return _LaunchFailureModel.fromJson(json);
+LaunchFailureNetworkModel _$LaunchFailureNetworkModelFromJson(
+    Map<String, dynamic> json) {
+  return _LaunchFailureNetworkModel.fromJson(json);
 }
 
 /// @nodoc
-mixin _$LaunchFailureModel {
+mixin _$LaunchFailureNetworkModel {
   int? get time => throw _privateConstructorUsedError;
   int? get altitude => throw _privateConstructorUsedError;
   String? get reason => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $LaunchFailureModelCopyWith<LaunchFailureModel> get copyWith =>
+  $LaunchFailureNetworkModelCopyWith<LaunchFailureNetworkModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $LaunchFailureModelCopyWith<$Res> {
-  factory $LaunchFailureModelCopyWith(
-          LaunchFailureModel value, $Res Function(LaunchFailureModel) then) =
-      _$LaunchFailureModelCopyWithImpl<$Res, LaunchFailureModel>;
+abstract class $LaunchFailureNetworkModelCopyWith<$Res> {
+  factory $LaunchFailureNetworkModelCopyWith(LaunchFailureNetworkModel value,
+          $Res Function(LaunchFailureNetworkModel) then) =
+      _$LaunchFailureNetworkModelCopyWithImpl<$Res, LaunchFailureNetworkModel>;
   @useResult
   $Res call({int? time, int? altitude, String? reason});
 }
 
 /// @nodoc
-class _$LaunchFailureModelCopyWithImpl<$Res, $Val extends LaunchFailureModel>
-    implements $LaunchFailureModelCopyWith<$Res> {
-  _$LaunchFailureModelCopyWithImpl(this._value, this._then);
+class _$LaunchFailureNetworkModelCopyWithImpl<$Res,
+        $Val extends LaunchFailureNetworkModel>
+    implements $LaunchFailureNetworkModelCopyWith<$Res> {
+  _$LaunchFailureNetworkModelCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -3082,22 +3172,25 @@ class _$LaunchFailureModelCopyWithImpl<$Res, $Val extends LaunchFailureModel>
 }
 
 /// @nodoc
-abstract class _$$_LaunchFailureModelCopyWith<$Res>
-    implements $LaunchFailureModelCopyWith<$Res> {
-  factory _$$_LaunchFailureModelCopyWith(_$_LaunchFailureModel value,
-          $Res Function(_$_LaunchFailureModel) then) =
-      __$$_LaunchFailureModelCopyWithImpl<$Res>;
+abstract class _$$_LaunchFailureNetworkModelCopyWith<$Res>
+    implements $LaunchFailureNetworkModelCopyWith<$Res> {
+  factory _$$_LaunchFailureNetworkModelCopyWith(
+          _$_LaunchFailureNetworkModel value,
+          $Res Function(_$_LaunchFailureNetworkModel) then) =
+      __$$_LaunchFailureNetworkModelCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({int? time, int? altitude, String? reason});
 }
 
 /// @nodoc
-class __$$_LaunchFailureModelCopyWithImpl<$Res>
-    extends _$LaunchFailureModelCopyWithImpl<$Res, _$_LaunchFailureModel>
-    implements _$$_LaunchFailureModelCopyWith<$Res> {
-  __$$_LaunchFailureModelCopyWithImpl(
-      _$_LaunchFailureModel _value, $Res Function(_$_LaunchFailureModel) _then)
+class __$$_LaunchFailureNetworkModelCopyWithImpl<$Res>
+    extends _$LaunchFailureNetworkModelCopyWithImpl<$Res,
+        _$_LaunchFailureNetworkModel>
+    implements _$$_LaunchFailureNetworkModelCopyWith<$Res> {
+  __$$_LaunchFailureNetworkModelCopyWithImpl(
+      _$_LaunchFailureNetworkModel _value,
+      $Res Function(_$_LaunchFailureNetworkModel) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -3107,7 +3200,7 @@ class __$$_LaunchFailureModelCopyWithImpl<$Res>
     Object? altitude = freezed,
     Object? reason = freezed,
   }) {
-    return _then(_$_LaunchFailureModel(
+    return _then(_$_LaunchFailureNetworkModel(
       time: freezed == time
           ? _value.time
           : time // ignore: cast_nullable_to_non_nullable
@@ -3126,12 +3219,12 @@ class __$$_LaunchFailureModelCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_LaunchFailureModel extends _LaunchFailureModel {
-  const _$_LaunchFailureModel({this.time, this.altitude, this.reason})
+class _$_LaunchFailureNetworkModel extends _LaunchFailureNetworkModel {
+  const _$_LaunchFailureNetworkModel({this.time, this.altitude, this.reason})
       : super._();
 
-  factory _$_LaunchFailureModel.fromJson(Map<String, dynamic> json) =>
-      _$$_LaunchFailureModelFromJson(json);
+  factory _$_LaunchFailureNetworkModel.fromJson(Map<String, dynamic> json) =>
+      _$$_LaunchFailureNetworkModelFromJson(json);
 
   @override
   final int? time;
@@ -3142,14 +3235,14 @@ class _$_LaunchFailureModel extends _LaunchFailureModel {
 
   @override
   String toString() {
-    return 'LaunchFailureModel(time: $time, altitude: $altitude, reason: $reason)';
+    return 'LaunchFailureNetworkModel(time: $time, altitude: $altitude, reason: $reason)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_LaunchFailureModel &&
+            other is _$_LaunchFailureNetworkModel &&
             (identical(other.time, time) || other.time == time) &&
             (identical(other.altitude, altitude) ||
                 other.altitude == altitude) &&
@@ -3163,27 +3256,27 @@ class _$_LaunchFailureModel extends _LaunchFailureModel {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_LaunchFailureModelCopyWith<_$_LaunchFailureModel> get copyWith =>
-      __$$_LaunchFailureModelCopyWithImpl<_$_LaunchFailureModel>(
-          this, _$identity);
+  _$$_LaunchFailureNetworkModelCopyWith<_$_LaunchFailureNetworkModel>
+      get copyWith => __$$_LaunchFailureNetworkModelCopyWithImpl<
+          _$_LaunchFailureNetworkModel>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_LaunchFailureModelToJson(
+    return _$$_LaunchFailureNetworkModelToJson(
       this,
     );
   }
 }
 
-abstract class _LaunchFailureModel extends LaunchFailureModel {
-  const factory _LaunchFailureModel(
+abstract class _LaunchFailureNetworkModel extends LaunchFailureNetworkModel {
+  const factory _LaunchFailureNetworkModel(
       {final int? time,
       final int? altitude,
-      final String? reason}) = _$_LaunchFailureModel;
-  const _LaunchFailureModel._() : super._();
+      final String? reason}) = _$_LaunchFailureNetworkModel;
+  const _LaunchFailureNetworkModel._() : super._();
 
-  factory _LaunchFailureModel.fromJson(Map<String, dynamic> json) =
-      _$_LaunchFailureModel.fromJson;
+  factory _LaunchFailureNetworkModel.fromJson(Map<String, dynamic> json) =
+      _$_LaunchFailureNetworkModel.fromJson;
 
   @override
   int? get time;
@@ -3193,16 +3286,17 @@ abstract class _LaunchFailureModel extends LaunchFailureModel {
   String? get reason;
   @override
   @JsonKey(ignore: true)
-  _$$_LaunchFailureModelCopyWith<_$_LaunchFailureModel> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$_LaunchFailureNetworkModelCopyWith<_$_LaunchFailureNetworkModel>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
-LaunchDetailsModel _$LaunchDetailsModelFromJson(Map<String, dynamic> json) {
-  return _LaunchDetailsModel.fromJson(json);
+LaunchDetailsNetworkModel _$LaunchDetailsNetworkModelFromJson(
+    Map<String, dynamic> json) {
+  return _LaunchDetailsNetworkModel.fromJson(json);
 }
 
 /// @nodoc
-mixin _$LaunchDetailsModel {
+mixin _$LaunchDetailsNetworkModel {
   int get flightNumber => throw _privateConstructorUsedError;
   String get name => throw _privateConstructorUsedError;
   DateTime get date => throw _privateConstructorUsedError;
@@ -3210,23 +3304,24 @@ mixin _$LaunchDetailsModel {
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $LaunchDetailsModelCopyWith<LaunchDetailsModel> get copyWith =>
+  $LaunchDetailsNetworkModelCopyWith<LaunchDetailsNetworkModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $LaunchDetailsModelCopyWith<$Res> {
-  factory $LaunchDetailsModelCopyWith(
-          LaunchDetailsModel value, $Res Function(LaunchDetailsModel) then) =
-      _$LaunchDetailsModelCopyWithImpl<$Res, LaunchDetailsModel>;
+abstract class $LaunchDetailsNetworkModelCopyWith<$Res> {
+  factory $LaunchDetailsNetworkModelCopyWith(LaunchDetailsNetworkModel value,
+          $Res Function(LaunchDetailsNetworkModel) then) =
+      _$LaunchDetailsNetworkModelCopyWithImpl<$Res, LaunchDetailsNetworkModel>;
   @useResult
   $Res call({int flightNumber, String name, DateTime date, String id});
 }
 
 /// @nodoc
-class _$LaunchDetailsModelCopyWithImpl<$Res, $Val extends LaunchDetailsModel>
-    implements $LaunchDetailsModelCopyWith<$Res> {
-  _$LaunchDetailsModelCopyWithImpl(this._value, this._then);
+class _$LaunchDetailsNetworkModelCopyWithImpl<$Res,
+        $Val extends LaunchDetailsNetworkModel>
+    implements $LaunchDetailsNetworkModelCopyWith<$Res> {
+  _$LaunchDetailsNetworkModelCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -3263,22 +3358,25 @@ class _$LaunchDetailsModelCopyWithImpl<$Res, $Val extends LaunchDetailsModel>
 }
 
 /// @nodoc
-abstract class _$$_LaunchDetailsModelCopyWith<$Res>
-    implements $LaunchDetailsModelCopyWith<$Res> {
-  factory _$$_LaunchDetailsModelCopyWith(_$_LaunchDetailsModel value,
-          $Res Function(_$_LaunchDetailsModel) then) =
-      __$$_LaunchDetailsModelCopyWithImpl<$Res>;
+abstract class _$$_LaunchDetailsNetworkModelCopyWith<$Res>
+    implements $LaunchDetailsNetworkModelCopyWith<$Res> {
+  factory _$$_LaunchDetailsNetworkModelCopyWith(
+          _$_LaunchDetailsNetworkModel value,
+          $Res Function(_$_LaunchDetailsNetworkModel) then) =
+      __$$_LaunchDetailsNetworkModelCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({int flightNumber, String name, DateTime date, String id});
 }
 
 /// @nodoc
-class __$$_LaunchDetailsModelCopyWithImpl<$Res>
-    extends _$LaunchDetailsModelCopyWithImpl<$Res, _$_LaunchDetailsModel>
-    implements _$$_LaunchDetailsModelCopyWith<$Res> {
-  __$$_LaunchDetailsModelCopyWithImpl(
-      _$_LaunchDetailsModel _value, $Res Function(_$_LaunchDetailsModel) _then)
+class __$$_LaunchDetailsNetworkModelCopyWithImpl<$Res>
+    extends _$LaunchDetailsNetworkModelCopyWithImpl<$Res,
+        _$_LaunchDetailsNetworkModel>
+    implements _$$_LaunchDetailsNetworkModelCopyWith<$Res> {
+  __$$_LaunchDetailsNetworkModelCopyWithImpl(
+      _$_LaunchDetailsNetworkModel _value,
+      $Res Function(_$_LaunchDetailsNetworkModel) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -3289,7 +3387,7 @@ class __$$_LaunchDetailsModelCopyWithImpl<$Res>
     Object? date = null,
     Object? id = null,
   }) {
-    return _then(_$_LaunchDetailsModel(
+    return _then(_$_LaunchDetailsNetworkModel(
       flightNumber: null == flightNumber
           ? _value.flightNumber
           : flightNumber // ignore: cast_nullable_to_non_nullable
@@ -3312,16 +3410,16 @@ class __$$_LaunchDetailsModelCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_LaunchDetailsModel extends _LaunchDetailsModel {
-  const _$_LaunchDetailsModel(
+class _$_LaunchDetailsNetworkModel extends _LaunchDetailsNetworkModel {
+  const _$_LaunchDetailsNetworkModel(
       {required this.flightNumber,
       required this.name,
       required this.date,
       required this.id})
       : super._();
 
-  factory _$_LaunchDetailsModel.fromJson(Map<String, dynamic> json) =>
-      _$$_LaunchDetailsModelFromJson(json);
+  factory _$_LaunchDetailsNetworkModel.fromJson(Map<String, dynamic> json) =>
+      _$$_LaunchDetailsNetworkModelFromJson(json);
 
   @override
   final int flightNumber;
@@ -3334,14 +3432,14 @@ class _$_LaunchDetailsModel extends _LaunchDetailsModel {
 
   @override
   String toString() {
-    return 'LaunchDetailsModel(flightNumber: $flightNumber, name: $name, date: $date, id: $id)';
+    return 'LaunchDetailsNetworkModel(flightNumber: $flightNumber, name: $name, date: $date, id: $id)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_LaunchDetailsModel &&
+            other is _$_LaunchDetailsNetworkModel &&
             (identical(other.flightNumber, flightNumber) ||
                 other.flightNumber == flightNumber) &&
             (identical(other.name, name) || other.name == name) &&
@@ -3356,28 +3454,28 @@ class _$_LaunchDetailsModel extends _LaunchDetailsModel {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_LaunchDetailsModelCopyWith<_$_LaunchDetailsModel> get copyWith =>
-      __$$_LaunchDetailsModelCopyWithImpl<_$_LaunchDetailsModel>(
-          this, _$identity);
+  _$$_LaunchDetailsNetworkModelCopyWith<_$_LaunchDetailsNetworkModel>
+      get copyWith => __$$_LaunchDetailsNetworkModelCopyWithImpl<
+          _$_LaunchDetailsNetworkModel>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_LaunchDetailsModelToJson(
+    return _$$_LaunchDetailsNetworkModelToJson(
       this,
     );
   }
 }
 
-abstract class _LaunchDetailsModel extends LaunchDetailsModel {
-  const factory _LaunchDetailsModel(
+abstract class _LaunchDetailsNetworkModel extends LaunchDetailsNetworkModel {
+  const factory _LaunchDetailsNetworkModel(
       {required final int flightNumber,
       required final String name,
       required final DateTime date,
-      required final String id}) = _$_LaunchDetailsModel;
-  const _LaunchDetailsModel._() : super._();
+      required final String id}) = _$_LaunchDetailsNetworkModel;
+  const _LaunchDetailsNetworkModel._() : super._();
 
-  factory _LaunchDetailsModel.fromJson(Map<String, dynamic> json) =
-      _$_LaunchDetailsModel.fromJson;
+  factory _LaunchDetailsNetworkModel.fromJson(Map<String, dynamic> json) =
+      _$_LaunchDetailsNetworkModel.fromJson;
 
   @override
   int get flightNumber;
@@ -3389,38 +3487,40 @@ abstract class _LaunchDetailsModel extends LaunchDetailsModel {
   String get id;
   @override
   @JsonKey(ignore: true)
-  _$$_LaunchDetailsModelCopyWith<_$_LaunchDetailsModel> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$_LaunchDetailsNetworkModelCopyWith<_$_LaunchDetailsNetworkModel>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
-LaunchFlickrModel _$LaunchFlickrModelFromJson(Map<String, dynamic> json) {
-  return _LaunchFlickrModel.fromJson(json);
+LaunchFlickrNetworkModel _$LaunchFlickrNetworkModelFromJson(
+    Map<String, dynamic> json) {
+  return _LaunchFlickrNetworkModel.fromJson(json);
 }
 
 /// @nodoc
-mixin _$LaunchFlickrModel {
+mixin _$LaunchFlickrNetworkModel {
   List<String> get original => throw _privateConstructorUsedError;
   List<String> get small => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $LaunchFlickrModelCopyWith<LaunchFlickrModel> get copyWith =>
+  $LaunchFlickrNetworkModelCopyWith<LaunchFlickrNetworkModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $LaunchFlickrModelCopyWith<$Res> {
-  factory $LaunchFlickrModelCopyWith(
-          LaunchFlickrModel value, $Res Function(LaunchFlickrModel) then) =
-      _$LaunchFlickrModelCopyWithImpl<$Res, LaunchFlickrModel>;
+abstract class $LaunchFlickrNetworkModelCopyWith<$Res> {
+  factory $LaunchFlickrNetworkModelCopyWith(LaunchFlickrNetworkModel value,
+          $Res Function(LaunchFlickrNetworkModel) then) =
+      _$LaunchFlickrNetworkModelCopyWithImpl<$Res, LaunchFlickrNetworkModel>;
   @useResult
   $Res call({List<String> original, List<String> small});
 }
 
 /// @nodoc
-class _$LaunchFlickrModelCopyWithImpl<$Res, $Val extends LaunchFlickrModel>
-    implements $LaunchFlickrModelCopyWith<$Res> {
-  _$LaunchFlickrModelCopyWithImpl(this._value, this._then);
+class _$LaunchFlickrNetworkModelCopyWithImpl<$Res,
+        $Val extends LaunchFlickrNetworkModel>
+    implements $LaunchFlickrNetworkModelCopyWith<$Res> {
+  _$LaunchFlickrNetworkModelCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -3447,22 +3547,24 @@ class _$LaunchFlickrModelCopyWithImpl<$Res, $Val extends LaunchFlickrModel>
 }
 
 /// @nodoc
-abstract class _$$_LaunchFlickrModelCopyWith<$Res>
-    implements $LaunchFlickrModelCopyWith<$Res> {
-  factory _$$_LaunchFlickrModelCopyWith(_$_LaunchFlickrModel value,
-          $Res Function(_$_LaunchFlickrModel) then) =
-      __$$_LaunchFlickrModelCopyWithImpl<$Res>;
+abstract class _$$_LaunchFlickrNetworkModelCopyWith<$Res>
+    implements $LaunchFlickrNetworkModelCopyWith<$Res> {
+  factory _$$_LaunchFlickrNetworkModelCopyWith(
+          _$_LaunchFlickrNetworkModel value,
+          $Res Function(_$_LaunchFlickrNetworkModel) then) =
+      __$$_LaunchFlickrNetworkModelCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({List<String> original, List<String> small});
 }
 
 /// @nodoc
-class __$$_LaunchFlickrModelCopyWithImpl<$Res>
-    extends _$LaunchFlickrModelCopyWithImpl<$Res, _$_LaunchFlickrModel>
-    implements _$$_LaunchFlickrModelCopyWith<$Res> {
-  __$$_LaunchFlickrModelCopyWithImpl(
-      _$_LaunchFlickrModel _value, $Res Function(_$_LaunchFlickrModel) _then)
+class __$$_LaunchFlickrNetworkModelCopyWithImpl<$Res>
+    extends _$LaunchFlickrNetworkModelCopyWithImpl<$Res,
+        _$_LaunchFlickrNetworkModel>
+    implements _$$_LaunchFlickrNetworkModelCopyWith<$Res> {
+  __$$_LaunchFlickrNetworkModelCopyWithImpl(_$_LaunchFlickrNetworkModel _value,
+      $Res Function(_$_LaunchFlickrNetworkModel) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -3471,7 +3573,7 @@ class __$$_LaunchFlickrModelCopyWithImpl<$Res>
     Object? original = null,
     Object? small = null,
   }) {
-    return _then(_$_LaunchFlickrModel(
+    return _then(_$_LaunchFlickrNetworkModel(
       original: null == original
           ? _value._original
           : original // ignore: cast_nullable_to_non_nullable
@@ -3486,16 +3588,16 @@ class __$$_LaunchFlickrModelCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_LaunchFlickrModel extends _LaunchFlickrModel {
-  const _$_LaunchFlickrModel(
+class _$_LaunchFlickrNetworkModel extends _LaunchFlickrNetworkModel {
+  const _$_LaunchFlickrNetworkModel(
       {final List<String> original = const [],
       final List<String> small = const []})
       : _original = original,
         _small = small,
         super._();
 
-  factory _$_LaunchFlickrModel.fromJson(Map<String, dynamic> json) =>
-      _$$_LaunchFlickrModelFromJson(json);
+  factory _$_LaunchFlickrNetworkModel.fromJson(Map<String, dynamic> json) =>
+      _$$_LaunchFlickrNetworkModelFromJson(json);
 
   final List<String> _original;
   @override
@@ -3517,14 +3619,14 @@ class _$_LaunchFlickrModel extends _LaunchFlickrModel {
 
   @override
   String toString() {
-    return 'LaunchFlickrModel(original: $original, small: $small)';
+    return 'LaunchFlickrNetworkModel(original: $original, small: $small)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_LaunchFlickrModel &&
+            other is _$_LaunchFlickrNetworkModel &&
             const DeepCollectionEquality().equals(other._original, _original) &&
             const DeepCollectionEquality().equals(other._small, _small));
   }
@@ -3539,26 +3641,26 @@ class _$_LaunchFlickrModel extends _LaunchFlickrModel {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_LaunchFlickrModelCopyWith<_$_LaunchFlickrModel> get copyWith =>
-      __$$_LaunchFlickrModelCopyWithImpl<_$_LaunchFlickrModel>(
-          this, _$identity);
+  _$$_LaunchFlickrNetworkModelCopyWith<_$_LaunchFlickrNetworkModel>
+      get copyWith => __$$_LaunchFlickrNetworkModelCopyWithImpl<
+          _$_LaunchFlickrNetworkModel>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_LaunchFlickrModelToJson(
+    return _$$_LaunchFlickrNetworkModelToJson(
       this,
     );
   }
 }
 
-abstract class _LaunchFlickrModel extends LaunchFlickrModel {
-  const factory _LaunchFlickrModel(
+abstract class _LaunchFlickrNetworkModel extends LaunchFlickrNetworkModel {
+  const factory _LaunchFlickrNetworkModel(
       {final List<String> original,
-      final List<String> small}) = _$_LaunchFlickrModel;
-  const _LaunchFlickrModel._() : super._();
+      final List<String> small}) = _$_LaunchFlickrNetworkModel;
+  const _LaunchFlickrNetworkModel._() : super._();
 
-  factory _LaunchFlickrModel.fromJson(Map<String, dynamic> json) =
-      _$_LaunchFlickrModel.fromJson;
+  factory _LaunchFlickrNetworkModel.fromJson(Map<String, dynamic> json) =
+      _$_LaunchFlickrNetworkModel.fromJson;
 
   @override
   List<String> get original;
@@ -3566,38 +3668,40 @@ abstract class _LaunchFlickrModel extends LaunchFlickrModel {
   List<String> get small;
   @override
   @JsonKey(ignore: true)
-  _$$_LaunchFlickrModelCopyWith<_$_LaunchFlickrModel> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$_LaunchFlickrNetworkModelCopyWith<_$_LaunchFlickrNetworkModel>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
-LaunchPatchModel _$LaunchPatchModelFromJson(Map<String, dynamic> json) {
-  return _LaunchPatchModel.fromJson(json);
+LaunchPatchNetworkModel _$LaunchPatchNetworkModelFromJson(
+    Map<String, dynamic> json) {
+  return _LaunchPatchNetworkModel.fromJson(json);
 }
 
 /// @nodoc
-mixin _$LaunchPatchModel {
+mixin _$LaunchPatchNetworkModel {
   String? get small => throw _privateConstructorUsedError;
   String? get large => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $LaunchPatchModelCopyWith<LaunchPatchModel> get copyWith =>
+  $LaunchPatchNetworkModelCopyWith<LaunchPatchNetworkModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $LaunchPatchModelCopyWith<$Res> {
-  factory $LaunchPatchModelCopyWith(
-          LaunchPatchModel value, $Res Function(LaunchPatchModel) then) =
-      _$LaunchPatchModelCopyWithImpl<$Res, LaunchPatchModel>;
+abstract class $LaunchPatchNetworkModelCopyWith<$Res> {
+  factory $LaunchPatchNetworkModelCopyWith(LaunchPatchNetworkModel value,
+          $Res Function(LaunchPatchNetworkModel) then) =
+      _$LaunchPatchNetworkModelCopyWithImpl<$Res, LaunchPatchNetworkModel>;
   @useResult
   $Res call({String? small, String? large});
 }
 
 /// @nodoc
-class _$LaunchPatchModelCopyWithImpl<$Res, $Val extends LaunchPatchModel>
-    implements $LaunchPatchModelCopyWith<$Res> {
-  _$LaunchPatchModelCopyWithImpl(this._value, this._then);
+class _$LaunchPatchNetworkModelCopyWithImpl<$Res,
+        $Val extends LaunchPatchNetworkModel>
+    implements $LaunchPatchNetworkModelCopyWith<$Res> {
+  _$LaunchPatchNetworkModelCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -3624,22 +3728,23 @@ class _$LaunchPatchModelCopyWithImpl<$Res, $Val extends LaunchPatchModel>
 }
 
 /// @nodoc
-abstract class _$$_LaunchPatchModelCopyWith<$Res>
-    implements $LaunchPatchModelCopyWith<$Res> {
-  factory _$$_LaunchPatchModelCopyWith(
-          _$_LaunchPatchModel value, $Res Function(_$_LaunchPatchModel) then) =
-      __$$_LaunchPatchModelCopyWithImpl<$Res>;
+abstract class _$$_LaunchPatchNetworkModelCopyWith<$Res>
+    implements $LaunchPatchNetworkModelCopyWith<$Res> {
+  factory _$$_LaunchPatchNetworkModelCopyWith(_$_LaunchPatchNetworkModel value,
+          $Res Function(_$_LaunchPatchNetworkModel) then) =
+      __$$_LaunchPatchNetworkModelCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String? small, String? large});
 }
 
 /// @nodoc
-class __$$_LaunchPatchModelCopyWithImpl<$Res>
-    extends _$LaunchPatchModelCopyWithImpl<$Res, _$_LaunchPatchModel>
-    implements _$$_LaunchPatchModelCopyWith<$Res> {
-  __$$_LaunchPatchModelCopyWithImpl(
-      _$_LaunchPatchModel _value, $Res Function(_$_LaunchPatchModel) _then)
+class __$$_LaunchPatchNetworkModelCopyWithImpl<$Res>
+    extends _$LaunchPatchNetworkModelCopyWithImpl<$Res,
+        _$_LaunchPatchNetworkModel>
+    implements _$$_LaunchPatchNetworkModelCopyWith<$Res> {
+  __$$_LaunchPatchNetworkModelCopyWithImpl(_$_LaunchPatchNetworkModel _value,
+      $Res Function(_$_LaunchPatchNetworkModel) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -3648,7 +3753,7 @@ class __$$_LaunchPatchModelCopyWithImpl<$Res>
     Object? small = freezed,
     Object? large = freezed,
   }) {
-    return _then(_$_LaunchPatchModel(
+    return _then(_$_LaunchPatchNetworkModel(
       small: freezed == small
           ? _value.small
           : small // ignore: cast_nullable_to_non_nullable
@@ -3663,11 +3768,11 @@ class __$$_LaunchPatchModelCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_LaunchPatchModel extends _LaunchPatchModel {
-  const _$_LaunchPatchModel({this.small, this.large}) : super._();
+class _$_LaunchPatchNetworkModel extends _LaunchPatchNetworkModel {
+  const _$_LaunchPatchNetworkModel({this.small, this.large}) : super._();
 
-  factory _$_LaunchPatchModel.fromJson(Map<String, dynamic> json) =>
-      _$$_LaunchPatchModelFromJson(json);
+  factory _$_LaunchPatchNetworkModel.fromJson(Map<String, dynamic> json) =>
+      _$$_LaunchPatchNetworkModelFromJson(json);
 
   @override
   final String? small;
@@ -3676,14 +3781,14 @@ class _$_LaunchPatchModel extends _LaunchPatchModel {
 
   @override
   String toString() {
-    return 'LaunchPatchModel(small: $small, large: $large)';
+    return 'LaunchPatchNetworkModel(small: $small, large: $large)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_LaunchPatchModel &&
+            other is _$_LaunchPatchNetworkModel &&
             (identical(other.small, small) || other.small == small) &&
             (identical(other.large, large) || other.large == large));
   }
@@ -3695,24 +3800,26 @@ class _$_LaunchPatchModel extends _LaunchPatchModel {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_LaunchPatchModelCopyWith<_$_LaunchPatchModel> get copyWith =>
-      __$$_LaunchPatchModelCopyWithImpl<_$_LaunchPatchModel>(this, _$identity);
+  _$$_LaunchPatchNetworkModelCopyWith<_$_LaunchPatchNetworkModel>
+      get copyWith =>
+          __$$_LaunchPatchNetworkModelCopyWithImpl<_$_LaunchPatchNetworkModel>(
+              this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_LaunchPatchModelToJson(
+    return _$$_LaunchPatchNetworkModelToJson(
       this,
     );
   }
 }
 
-abstract class _LaunchPatchModel extends LaunchPatchModel {
-  const factory _LaunchPatchModel({final String? small, final String? large}) =
-      _$_LaunchPatchModel;
-  const _LaunchPatchModel._() : super._();
+abstract class _LaunchPatchNetworkModel extends LaunchPatchNetworkModel {
+  const factory _LaunchPatchNetworkModel(
+      {final String? small, final String? large}) = _$_LaunchPatchNetworkModel;
+  const _LaunchPatchNetworkModel._() : super._();
 
-  factory _LaunchPatchModel.fromJson(Map<String, dynamic> json) =
-      _$_LaunchPatchModel.fromJson;
+  factory _LaunchPatchNetworkModel.fromJson(Map<String, dynamic> json) =
+      _$_LaunchPatchNetworkModel.fromJson;
 
   @override
   String? get small;
@@ -3720,16 +3827,17 @@ abstract class _LaunchPatchModel extends LaunchPatchModel {
   String? get large;
   @override
   @JsonKey(ignore: true)
-  _$$_LaunchPatchModelCopyWith<_$_LaunchPatchModel> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$_LaunchPatchNetworkModelCopyWith<_$_LaunchPatchNetworkModel>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
-LaunchRedditModel _$LaunchRedditModelFromJson(Map<String, dynamic> json) {
-  return _LaunchRedditModel.fromJson(json);
+LaunchRedditNetworkModel _$LaunchRedditNetworkModelFromJson(
+    Map<String, dynamic> json) {
+  return _LaunchRedditNetworkModel.fromJson(json);
 }
 
 /// @nodoc
-mixin _$LaunchRedditModel {
+mixin _$LaunchRedditNetworkModel {
   String? get campaign => throw _privateConstructorUsedError;
   String? get launch => throw _privateConstructorUsedError;
   String? get media => throw _privateConstructorUsedError;
@@ -3737,24 +3845,25 @@ mixin _$LaunchRedditModel {
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $LaunchRedditModelCopyWith<LaunchRedditModel> get copyWith =>
+  $LaunchRedditNetworkModelCopyWith<LaunchRedditNetworkModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $LaunchRedditModelCopyWith<$Res> {
-  factory $LaunchRedditModelCopyWith(
-          LaunchRedditModel value, $Res Function(LaunchRedditModel) then) =
-      _$LaunchRedditModelCopyWithImpl<$Res, LaunchRedditModel>;
+abstract class $LaunchRedditNetworkModelCopyWith<$Res> {
+  factory $LaunchRedditNetworkModelCopyWith(LaunchRedditNetworkModel value,
+          $Res Function(LaunchRedditNetworkModel) then) =
+      _$LaunchRedditNetworkModelCopyWithImpl<$Res, LaunchRedditNetworkModel>;
   @useResult
   $Res call(
       {String? campaign, String? launch, String? media, String? recovery});
 }
 
 /// @nodoc
-class _$LaunchRedditModelCopyWithImpl<$Res, $Val extends LaunchRedditModel>
-    implements $LaunchRedditModelCopyWith<$Res> {
-  _$LaunchRedditModelCopyWithImpl(this._value, this._then);
+class _$LaunchRedditNetworkModelCopyWithImpl<$Res,
+        $Val extends LaunchRedditNetworkModel>
+    implements $LaunchRedditNetworkModelCopyWith<$Res> {
+  _$LaunchRedditNetworkModelCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -3791,11 +3900,12 @@ class _$LaunchRedditModelCopyWithImpl<$Res, $Val extends LaunchRedditModel>
 }
 
 /// @nodoc
-abstract class _$$_LaunchRedditModelCopyWith<$Res>
-    implements $LaunchRedditModelCopyWith<$Res> {
-  factory _$$_LaunchRedditModelCopyWith(_$_LaunchRedditModel value,
-          $Res Function(_$_LaunchRedditModel) then) =
-      __$$_LaunchRedditModelCopyWithImpl<$Res>;
+abstract class _$$_LaunchRedditNetworkModelCopyWith<$Res>
+    implements $LaunchRedditNetworkModelCopyWith<$Res> {
+  factory _$$_LaunchRedditNetworkModelCopyWith(
+          _$_LaunchRedditNetworkModel value,
+          $Res Function(_$_LaunchRedditNetworkModel) then) =
+      __$$_LaunchRedditNetworkModelCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -3803,11 +3913,12 @@ abstract class _$$_LaunchRedditModelCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_LaunchRedditModelCopyWithImpl<$Res>
-    extends _$LaunchRedditModelCopyWithImpl<$Res, _$_LaunchRedditModel>
-    implements _$$_LaunchRedditModelCopyWith<$Res> {
-  __$$_LaunchRedditModelCopyWithImpl(
-      _$_LaunchRedditModel _value, $Res Function(_$_LaunchRedditModel) _then)
+class __$$_LaunchRedditNetworkModelCopyWithImpl<$Res>
+    extends _$LaunchRedditNetworkModelCopyWithImpl<$Res,
+        _$_LaunchRedditNetworkModel>
+    implements _$$_LaunchRedditNetworkModelCopyWith<$Res> {
+  __$$_LaunchRedditNetworkModelCopyWithImpl(_$_LaunchRedditNetworkModel _value,
+      $Res Function(_$_LaunchRedditNetworkModel) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -3818,7 +3929,7 @@ class __$$_LaunchRedditModelCopyWithImpl<$Res>
     Object? media = freezed,
     Object? recovery = freezed,
   }) {
-    return _then(_$_LaunchRedditModel(
+    return _then(_$_LaunchRedditNetworkModel(
       campaign: freezed == campaign
           ? _value.campaign
           : campaign // ignore: cast_nullable_to_non_nullable
@@ -3841,13 +3952,13 @@ class __$$_LaunchRedditModelCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_LaunchRedditModel extends _LaunchRedditModel {
-  const _$_LaunchRedditModel(
+class _$_LaunchRedditNetworkModel extends _LaunchRedditNetworkModel {
+  const _$_LaunchRedditNetworkModel(
       {this.campaign, this.launch, this.media, this.recovery})
       : super._();
 
-  factory _$_LaunchRedditModel.fromJson(Map<String, dynamic> json) =>
-      _$$_LaunchRedditModelFromJson(json);
+  factory _$_LaunchRedditNetworkModel.fromJson(Map<String, dynamic> json) =>
+      _$$_LaunchRedditNetworkModelFromJson(json);
 
   @override
   final String? campaign;
@@ -3860,14 +3971,14 @@ class _$_LaunchRedditModel extends _LaunchRedditModel {
 
   @override
   String toString() {
-    return 'LaunchRedditModel(campaign: $campaign, launch: $launch, media: $media, recovery: $recovery)';
+    return 'LaunchRedditNetworkModel(campaign: $campaign, launch: $launch, media: $media, recovery: $recovery)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_LaunchRedditModel &&
+            other is _$_LaunchRedditNetworkModel &&
             (identical(other.campaign, campaign) ||
                 other.campaign == campaign) &&
             (identical(other.launch, launch) || other.launch == launch) &&
@@ -3884,28 +3995,28 @@ class _$_LaunchRedditModel extends _LaunchRedditModel {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_LaunchRedditModelCopyWith<_$_LaunchRedditModel> get copyWith =>
-      __$$_LaunchRedditModelCopyWithImpl<_$_LaunchRedditModel>(
-          this, _$identity);
+  _$$_LaunchRedditNetworkModelCopyWith<_$_LaunchRedditNetworkModel>
+      get copyWith => __$$_LaunchRedditNetworkModelCopyWithImpl<
+          _$_LaunchRedditNetworkModel>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_LaunchRedditModelToJson(
+    return _$$_LaunchRedditNetworkModelToJson(
       this,
     );
   }
 }
 
-abstract class _LaunchRedditModel extends LaunchRedditModel {
-  const factory _LaunchRedditModel(
+abstract class _LaunchRedditNetworkModel extends LaunchRedditNetworkModel {
+  const factory _LaunchRedditNetworkModel(
       {final String? campaign,
       final String? launch,
       final String? media,
-      final String? recovery}) = _$_LaunchRedditModel;
-  const _LaunchRedditModel._() : super._();
+      final String? recovery}) = _$_LaunchRedditNetworkModel;
+  const _LaunchRedditNetworkModel._() : super._();
 
-  factory _LaunchRedditModel.fromJson(Map<String, dynamic> json) =
-      _$_LaunchRedditModel.fromJson;
+  factory _LaunchRedditNetworkModel.fromJson(Map<String, dynamic> json) =
+      _$_LaunchRedditNetworkModel.fromJson;
 
   @override
   String? get campaign;
@@ -3917,6 +4028,6 @@ abstract class _LaunchRedditModel extends LaunchRedditModel {
   String? get recovery;
   @override
   @JsonKey(ignore: true)
-  _$$_LaunchRedditModelCopyWith<_$_LaunchRedditModel> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$_LaunchRedditNetworkModelCopyWith<_$_LaunchRedditNetworkModel>
+      get copyWith => throw _privateConstructorUsedError;
 }
