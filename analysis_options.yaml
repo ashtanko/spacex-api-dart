@@ -11,4 +11,5 @@ analyzer:
   exclude:
     - lib/**/*.freezed.dart
     - lib/**/*.g.dart
+    - lib/src/di/data_injectable.config.dart
     - test/mocks.mocks.dart
