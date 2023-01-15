@@ -3,6 +3,8 @@ description: A data module.
 version: 1.0.0+1
 # homepage: https://www.example.com
 
+publish_to: none
+
 environment:
   sdk: '>=2.18.6 <3.0.0'
 
