@@ -13,7 +13,7 @@ abstract class NetworkModule {
 
   @factoryMethod
   @Named('PrettyLoggingInterceptor')
-  Interceptor provideLoggingNewInterceptor(Logger logger) {
+  Interceptor provideLoggingInterceptor(Logger logger) {
     return PrettyLoggingInterceptor(logger: logger);
   }
 
